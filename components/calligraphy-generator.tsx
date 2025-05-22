@@ -1285,7 +1285,7 @@ export function CalligraphyGenerator() {
                 </div>
 
                 <Button variant="link" className="mt-4 text-amber-600 hover:text-amber-700" asChild>
-                  <a href="/templates">View All Templates</a>
+                  <a href="#features">View All Templates</a>
                 </Button>
               </CardContent>
             </Card>

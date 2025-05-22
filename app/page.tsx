@@ -292,7 +292,7 @@ export default function Home() {
                       <div className="flex items-center justify-center">
                         <div className="relative w-[300px] h-[200px] rounded-lg border border-amber-200">
                           <Image
-                            src="/placeholder.svg?height=200&width=300"
+                            src="/website-with-arabic-typography.png?height=200&width=300"
                             alt="Web examples"
                             fill
                             style={{ objectFit: 'cover' }}
@@ -336,8 +336,8 @@ export default function Home() {
                       <div className="flex items-center justify-center">
                         <div className="relative w-[300px] h-[200px] rounded-lg border border-amber-200">
                           <Image
-                            src="/placeholder.svg?height=200&width=300"
-                            alt="Art examples"
+                            src="/arabic-calligraphy-flat-lay-composition.png"
+                            alt="Art composition examples"
                             fill
                             style={{ objectFit: 'cover' }}
                             className="rounded-lg"
@@ -436,7 +436,7 @@ export default function Home() {
                         <ChevronRight className="h-4 w-4 mr-1" />
                         <span>Explore our blog</span>
                       </Link>
-                      <Link href="/templates" className="flex items-center text-amber-600 hover:text-amber-800">
+                      <Link href="#features" className="flex items-center text-amber-600 hover:text-amber-800">
                         <ChevronRight className="h-4 w-4 mr-1" />
                         <span>Browse templates</span>
                       </Link>

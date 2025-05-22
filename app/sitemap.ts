@@ -34,7 +34,7 @@ const BLOG_POSTS = [
   'beginners-guide-to-arabic-calligraphy',
   'famous-arabic-calligraphers-through-history',
   'modern-arabic-typography',
-  'the-quran-and-calligraphy'
+  'quran-and-calligraphy'
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
