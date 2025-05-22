@@ -9,11 +9,11 @@ import { ScrollToTop } from "@/components/scroll-to-top"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Arabic Calligraphy Generator | Create Beautiful Arabic Art",
+  title: "Arabic Calligraphy Generator | Online Arabic Art Creator",
   description:
-    "Create stunning Arabic calligraphy with our elegant generator. Customize fonts, styles, colors and download your designs. Perfect for social media, print, and web projects.",
+    "Create beautiful Arabic calligraphy online. Customize fonts, styles, and colors. Download designs for social media, print, or web. Free and easy to use!",
   keywords:
-    "Arabic calligraphy, Arabic font generator, Islamic art, Arabic typography, الخط العربي, Arabic design tool, Arabic text generator",
+    "Arabic calligraphy, calligraphy generator, Arabic fonts, Islamic art, online design tool",
     generator: 'v0.dev'
 }
 
