@@ -1,12 +1,26 @@
 import type React from "react"
 import "@/app/globals.css"
-import { Inter } from "next/font/google"
+import { Inter, Noto_Naskh_Arabic, Amiri, Aref_Ruqaa, Cairo, Harmattan, Jomhuria, Lateef, Mada, Mirza, Rakkas, Reem_Kufi, Scheherazade_New, Tajawal } from "next/font/google"
 import Script from "next/script"
 import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ScrollToTop } from "@/components/scroll-to-top"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"], display: 'swap', variable: "--font-inter" })
+const notoNaskhArabic = Noto_Naskh_Arabic({ display: 'swap', weight: ["400", "700"], variable: "--font-noto-naskh-arabic", preload: false })
+const amiri = Amiri({ display: 'swap', weight: ["400", "700"], variable: "--font-amiri", preload: false })
+const arefRuqaa = Aref_Ruqaa({ display: 'swap', weight: ["400", "700"], variable: "--font-aref-ruqaa", preload: false })
+const cairo = Cairo({ display: 'swap', weight: ["400", "700"], variable: "--font-cairo", preload: false })
+const harmattan = Harmattan({ display: 'swap', weight: ["400", "700"], variable: "--font-harmattan", preload: false })
+const jomhuria = Jomhuria({ display: 'swap', weight: ["400"], variable: "--font-jomhuria", preload: false })
+const lateef = Lateef({ display: 'swap', weight: ["200", "300", "400", "500", "600", "700", "800"], variable: "--font-lateef", preload: false })
+const mada = Mada({ display: 'swap', weight: ["400", "700"], variable: "--font-mada", preload: false })
+const mirza = Mirza({ display: 'swap', weight: ["400", "700"], variable: "--font-mirza", preload: false })
+const rakkas = Rakkas({ display: 'swap', weight: ["400"], variable: "--font-rakkas", preload: false })
+const reemKufi = Reem_Kufi({ display: 'swap', weight: ["400", "700"], variable: "--font-reem-kufi", preload: false })
+const scheherazadeNew = Scheherazade_New({ display: 'swap', weight: ["400", "700"], variable: "--font-scheherazade-new", preload: false })
+const tajawal = Tajawal({ display: 'swap', weight: ["400", "700"], variable: "--font-tajawal", preload: false })
+
 
 export const metadata = {
   title: "Arabic Calligraphy Generator | Online Arabic Art Creator",
@@ -23,17 +37,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" dir="ltr">
+    <html lang="en" dir="ltr" className={`${inter.variable} ${notoNaskhArabic.variable} ${amiri.variable} ${arefRuqaa.variable} ${cairo.variable} ${harmattan.variable} ${jomhuria.variable} ${lateef.variable} ${mada.variable} ${mirza.variable} ${rakkas.variable} ${reemKufi.variable} ${scheherazadeNew.variable} ${tajawal.variable}`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@400;700&family=Harmattan:wght@400;700&family=Jomhuria&family=Lateef&family=Mada:wght@400;700&family=Mirza:wght@400;700&family=Noto+Naskh+Arabic:wght@400;700&family=Rakkas&family=Reem+Kufi:wght@400;700&family=Scheherazade+New:wght@400;700&family=Tajawal:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
+        {/* Google Fonts <link> tags removed */}
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} ${notoNaskhArabic.className} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="system">
           {children}
           <Toaster />
