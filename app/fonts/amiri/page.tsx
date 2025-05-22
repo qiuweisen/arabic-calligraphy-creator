@@ -1,18 +1,31 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, BookOpen, Feather, Layers, PenTool, Sparkles, Type } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
 
 export const metadata: Metadata = {
-  title: "Amiri Font | Traditional Arabic Typography | Arabic Calligraphy",
-  description: "Explore the Amiri font, a traditional Arabic typeface inspired by classical Naskh calligraphy with elegant proportions and exceptional legibility.",
-  keywords: "Amiri font, Arabic typography, traditional Naskh, Islamic calligraphy, Arabic fonts, digital Arabic typography",
+  title: "Amiri Font: Masterpiece of Classical Naskh Arabic Typography | Arabic Calligraphy",
+  description: "Delve into the Amiri font, a revival of classical Naskh calligraphy by Dr. Khaled Hosny. Perfect for Quranic text, academic publishing, and designs requiring authentic Arabic heritage.",
+  keywords: "Amiri font, classical Naskh, Dr. Khaled Hosny, Bulaq Press, Arabic typography, Quranic font, Islamic calligraphy, Arabic fonts, traditional Arabic typeface, academic Arabic font",
+  openGraph: {
+    title: "Amiri Font: Reviving Classical Naskh Beauty | Arabic Calligraphy Generator",
+    description: "Discover Amiri, a Naskh typeface by Dr. Khaled Hosny, ideal for traditional and academic Arabic texts. Explore its features and use cases.",
+    images: [
+      {
+        url: "/og-images/amiri-font-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Amiri Font Showcase",
+      },
+    ],
+  },
 }
 
 // Sample alphabet for demonstration
@@ -21,44 +34,130 @@ const ARABIC_ALPHABET = "ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع �
 // Sample text examples for demonstration
 const TEXT_EXAMPLES = [
   {
-    text: "بسم الله الرحمن الرحيم",
+    id: "bismillah",
+    text: "بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ",
     translation: "In the name of God, the Most Gracious, the Most Merciful",
-    context: "Opening phrase of the Quran"
+    context: "The Basmala, a ubiquitous phrase in Islamic tradition, opening most chapters of the Quran. Amiri's clarity and traditional Naskh style make it ideal for such foundational texts."
   },
   {
-    text: "الحمد لله رب العالمين",
+    id: "al-fatiha",
+    text: "الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمِينَ",
     translation: "Praise be to God, Lord of the Worlds",
-    context: "First verse of Al-Fatiha"
+    context: "The first verse of Surah Al-Fatiha, the opening chapter of the Quran. Amiri's legibility ensures reverence and readability for sacred scriptures."
   },
   {
-    text: "العلم نور والجهل ظلام",
-    translation: "Knowledge is light and ignorance is darkness",
-    context: "Traditional Arabic proverb"
+    id: "poetry-mutanabbi",
+    text: "الخَيْلُ وَاللّيْلُ وَالبَيْداءُ تَعرِفُني \n وَالسّيفُ والرُمحُ والقِرطاسُ والقَلَمُ",
+    translation: "The steeds, the night, and the desert know me; \n And the sword, the spear, the paper, and the pen.",
+    context: "A famous verse by Al-Mutanabbi (915-965 AD), one of the greatest Arab poets. Amiri's classical elegance befits the richness of classical Arabic poetry."
   },
   {
-    text: "كن جميلاً ترى الوجود جميلا",
-    translation: "Be beautiful and you will see the world as beautiful",
-    context: "Line from poet Eliya Abu Madi"
+    id: "proverb-knowledge",
+    text: "اُطْلُبُوا العِلْمَ مِنَ الْمَهْدِ إِلى اللَّحْدِ",
+    translation: "Seek knowledge from the cradle to the grave.",
+    context: "A well-known Arabic proverb emphasizing the lifelong pursuit of knowledge. Amiri's formal yet clear style suits educational and wisdom literature."
   }
 ];
 
 // Font features to showcase
 const FONT_FEATURES = [
   {
-    title: "Classical Proportions",
-    description: "Follows traditional Naskh proportional rules established by Ibn Muqla and refined by Ottoman calligraphers"
+    icon: <PenTool className="h-8 w-8 text-amber-600 mb-2" />,
+    title: "Faithful Naskh Revival",
+    description: "Meticulously revives the beauty of early 20th-century Naskh typefaces, notably those from the Bulaq Press, ensuring authenticity."
   },
   {
-    title: "Elegant Transitions",
-    description: "Smooth and flowing connections between letters that maintain the rhythm of traditional calligraphy"
+    icon: <BookOpen className="h-8 w-8 text-amber-600 mb-2" />,
+    title: "Optimized for Readability",
+    description: "Designed for extended reading, making it a prime choice for books, academic papers, and religious texts like the Quran."
   },
   {
+    icon: <Layers className="h-8 w-8 text-amber-600 mb-2" />,
     title: "Comprehensive Glyph Set",
-    description: "Includes all necessary letter forms, ligatures, and diacritical marks for complete Arabic typography"
+    description: "Includes a vast range of characters, ligatures, contextual alternates, and diacritics for accurate Arabic and Quranic typesetting."
   },
   {
-    title: "Balanced Weight",
-    description: "Maintains consistent stroke thickness and balanced negative space for optimal readability"
+    icon: <Feather className="h-8 w-8 text-amber-600 mb-2" />,
+    title: "Elegant & Balanced",
+    description: "Maintains consistent stroke thickness and balanced negative space, reflecting the grace of traditional calligraphy."
+  },
+  {
+    icon: <Sparkles className="h-8 w-8 text-amber-600 mb-2" />,
+    title: "Quranic Support",
+    description: "Features specific glyphs and OpenType features tailored for rendering Quranic text with accuracy and reverence."
+  },
+  {
+    icon: <Type className="h-8 w-8 text-amber-600 mb-2" />,
+    title: "Multiple Weights & Styles",
+    description: "Available in Regular, Bold, Slanted, and Bold Slanted, offering versatility for complex typographic hierarchies."
+  }
+];
+
+// Ideal use cases for Amiri
+const IDEAL_USE_CASES = [
+  {
+    title: "Religious Texts & Quranic Publications",
+    description: "Its traditional Naskh forms and dedicated Quranic features make it the gold standard for rendering sacred Islamic texts.",
+    icon: <BookOpen className="h-5 w-5 text-amber-700" />
+  },
+  {
+    title: "Academic Publishing & Scholarly Works",
+    description: "Excellent legibility and formal tone are ideal for books, journals, and research papers in Arabic studies.",
+    icon: <Feather className="h-5 w-5 text-amber-700" />
+  },
+  {
+    title: "Formal Documents & Certificates",
+    description: "Lends an air of authenticity and gravitas to official documents, diplomas, and invitations.",
+    icon: <PenTool className="h-5 w-5 text-amber-700" />
+  },
+  {
+    title: "Classical Literature & Poetry",
+    description: "The elegant proportions beautifully complement the richness of classical Arabic prose and poetry.",
+    icon: <Sparkles className="h-5 w-5 text-amber-700" />
+  },
+  {
+    title: "Projects Requiring Cultural Authenticity",
+    description: "Perfect for designs that aim to convey a strong sense of Arabic heritage and tradition.",
+    icon: <Layers className="h-5 w-5 text-amber-700" />
+  },
+  {
+    title: "Digital Content with a Traditional Feel",
+    description: "Despite its classical roots, Amiri is highly readable on screens for websites and e-books needing a traditional touch.",
+    icon: <Type className="h-5 w-5 text-amber-700" />
+  }
+];
+
+// Technical details for Amiri
+const TECHNICAL_DETAILS = [
+  { 
+    title: "Designer", 
+    value: "Dr. Khaled Hosny",
+    description: "An Egyptian physician and type designer, renowned for his contributions to Arabic open-source fonts. Dr. Hosny is also involved with the HarfBuzz text shaping engine."
+  },
+  { 
+    title: "Foundry/Publisher", 
+    value: "Open Source (The Amiri Project)",
+    description: "Amiri is a free and open-source project, encouraging widespread adoption and contributions from the community."
+  },
+  { 
+    title: "Release Year", 
+    value: "2011 (Initial)",
+    description: "The font has undergone continuous development and improvement since its first release."
+  },
+  { 
+    title: "Key OpenType Features", 
+    value: "liga, dlig, calt, salt, fina, medi, init, mset, ss01-ssXX, quran (for Quranic marks), numr (Mashriq digits), etc.",
+    description: "Extensive OpenType support allows for precise typographic control and culturally accurate text rendering."
+  },
+  { 
+    title: "Supported Scripts", 
+    value: "Arabic (including extended characters for Persian, Urdu, etc.), Latin (basic support for compatibility)",
+    description: "Primarily an Arabic typeface but includes basic Latin glyphs for multilingual contexts."
+  },
+  {
+    title: "License",
+    value: "SIL Open Font License 1.1",
+    description: "Permits free use, modification, and distribution, fostering its use in diverse projects globally."
   }
 ];
 
@@ -76,172 +175,139 @@ export default function AmiriFontPage() {
               </Link>
             </Button>
             
-            <span className="text-xs text-amber-600 font-medium px-2 py-1 bg-amber-50 rounded-full">Traditional</span>
-            <h1 className="text-3xl md:text-4xl font-bold text-amber-800 mt-4 mb-2">Amiri Font</h1>
-            <p className="text-lg text-amber-700 mb-8">An elegant typeface inspired by classical Arabic typography</p>
-            
-            <div className="prose prose-amber max-w-none">
-              <div className="mb-8">
-                <div className="rounded-lg overflow-hidden border border-amber-200 mb-4">
-                  <div 
-                    className="bg-amber-50 p-8 flex items-center justify-center"
-                    style={{ fontFamily: "'Amiri', serif", fontSize: "48px", direction: "rtl" }}
-                  >
-                    بسم الله الرحمن الرحيم
+            <Card className="mb-8 border-amber-200 shadow-lg">
+              <CardContent className="p-6 md:p-8">
+                <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center">
+                  <div className="w-full md:w-1/3 flex items-center justify-center rounded-lg bg-gradient-to-br from-amber-100 to-amber-200 p-6 aspect-square">
+                    <div style={{ fontFamily: "'Amiri', serif", fontSize: "clamp(3rem, 15vw, 6rem)", color: "#854d0e", lineHeight: 1.2, direction: 'rtl' }}>
+                      أبجد
+                    </div>
+                  </div>
+                  <div className="w-full md:w-2/3">
+                    <span className="text-xs text-amber-600 font-medium px-2 py-1 bg-amber-50 rounded-full mb-2 inline-block">Traditional Naskh</span>
+                    <h1 className="text-4xl md:text-5xl font-bold text-amber-800 mt-1 mb-3">Amiri Font</h1>
+                    <p className="text-lg text-amber-700 mb-6 leading-relaxed">
+                      A masterpiece of digital Arabic typography, the Amiri font revives the elegance of classical Naskh script. Designed by Dr. Khaled Hosny, it is inspired by the Bulaq Press typefaces of the early 20th century, offering unparalleled authenticity and readability for traditional and contemporary use.
+                    </p>
+                    <Button asChild size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
+                      <Link href="/?font=Amiri">Try Amiri in Our Generator</Link>
+                    </Button>
                   </div>
                 </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Origin</h3>
-                    <p className="text-amber-700">Traditional Naskh style based on classical Arabic manuscripts</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Designer</h3>
-                    <p className="text-amber-700">Khaled Hosny, released in 2010</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Best Uses</h3>
-                    <p className="text-amber-700">Religious texts, books, formal documents</p>
-                  </CardContent>
-                </Card>
-              </div>
-              
-              <h2 id="history-and-background" className="text-2xl font-bold text-amber-800 mb-4">History and Background</h2>
-              <p>
-                Amiri is a classical Arabic typeface in Naskh style designed by Khaled Hosny. The font was designed with careful attention to the rich tradition of Arabic typography and named after Amiri Press in Cairo, Egypt, which was established in the early 20th century. The press was known for its high-quality printed materials, particularly religious texts.
-              </p>
-              <p>
-                The design draws inspiration from the beautiful typefaces created by the Bulaq Press in Cairo in the early 20th century. These typefaces were themselves based on traditional Ottoman calligraphy, creating a direct link to centuries of Arabic calligraphic tradition. Amiri aims to capture the elegance and aesthetic qualities of traditional hand-written Naskh while adapting it for modern digital use.
-              </p>
-              
-              <h2 id="distinctive-features" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Distinctive Features</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                {FONT_FEATURES.map((feature, index) => (
-                  <Card key={index} className="border-amber-200">
-                    <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold text-amber-800 mb-2">{feature.title}</h3>
-                      <p className="text-amber-700">{feature.description}</p>
+              </CardContent>
+            </Card>
+            
+            <div className="prose prose-amber max-w-none">
+              <h2 id="distinctive-features" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Distinctive Features of Amiri</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                {FONT_FEATURES.map((feature) => (
+                  <Card key={feature.title} className="border-amber-200 flex flex-col">
+                    <CardHeader className="items-center text-center">
+                      {feature.icon}
+                      <CardTitle className="text-xl text-amber-800">{feature.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-center flex-grow">
+                      <p className="text-amber-700 text-sm">{feature.description}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
+
+              <h2 id="history-and-background" className="text-3xl font-bold text-amber-800 mt-12 mb-6">The Story of Amiri: A Legacy Reborn</h2>
+              <Card className="border-amber-200 mb-12">
+                <CardContent className="p-6 md:p-8 space-y-4 text-amber-700 leading-relaxed">
+                  <p>
+                    The Amiri font, released by Dr. Khaled Hosny in 2011, is not merely a digital typeface but a dedicated effort to revive and preserve the rich heritage of Arabic Naskh calligraphy. Its name pays homage to the <strong className="text-amber-800">Amiri Press (Al-Matba'a Al-Amiriya)</strong> in Bulaq, Cairo, established by Muhammad Ali Pasha in 1820. This historic press was pivotal in the modernization of Arabic printing and became renowned for the beauty and quality of its Naskh typefaces.
+                  </p>
+                  <p>
+                    Dr. Hosny meticulously studied the letterforms produced by the Bulaq Press, which were themselves rooted in the aesthetics of Ottoman Naskh calligraphy. The goal was to create a font that captures the spirit and elegance of this tradition while leveraging modern OpenType technology for sophisticated typographic control. Amiri successfully bridges this gap, offering features for complex script requirements, including full vowelization, a wide range of ligatures, and specialized glyphs for Quranic text.
+                  </p>
+                  <p>
+                    As an open-source project, Amiri has benefited from community contributions and has become a cornerstone for high-quality Arabic digital text, widely used in academic publishing, religious texts, and by designers seeking authentic Arabic typography.
+                  </p>
+                </CardContent>
+              </Card>
               
-              <h2 id="alphabet-showcase" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Alphabet Showcase</h2>
-              <Card className="border-amber-200 mb-8">
+              <h2 id="alphabet-showcase" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Amiri Alphabet Showcase</h2>
+              <Card className="border-amber-200 mb-12">
+                <CardHeader>
+                  <CardTitle className="text-xl text-amber-800">Individual Letterforms</CardTitle>
+                  <CardDescription className="text-amber-600">Observe the distinct shapes and balanced proportions of Amiri's Naskh characters.</CardDescription>
+                </CardHeader>
                 <CardContent className="p-6">
                   <div 
-                    className="text-center"
-                    style={{ fontFamily: "'Amiri', serif", fontSize: "36px", direction: "rtl", lineHeight: 1.8 }}
+                    className="text-center leading-loose"
+                    style={{ fontFamily: "'Amiri', serif", fontSize: "40px", direction: "rtl" }}
                   >
-                    {ARABIC_ALPHABET}
+                    ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي ء ى ة آ أ إ
                   </div>
                 </CardContent>
               </Card>
               
-              <h2 id="text-examples" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Text Examples</h2>
-              
-              <Tabs defaultValue="sample1" className="w-full">
-                <TabsList className="grid" style={{ gridTemplateColumns: `repeat(${TEXT_EXAMPLES.length}, 1fr)` }}>
-                  {TEXT_EXAMPLES.map((_, index) => (
-                    <TabsTrigger key={index} value={`sample${index + 1}`}>
+              <h2 id="text-examples" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Amiri in Action: Text Examples</h2>
+              <Tabs defaultValue={TEXT_EXAMPLES[0].id} className="w-full mb-12">
+                <TabsList className="grid w-full" style={{ gridTemplateColumns: `repeat(${TEXT_EXAMPLES.length}, 1fr)` }}>
+                  {TEXT_EXAMPLES.map((example, index) => (
+                    <TabsTrigger key={example.id} value={example.id}>
                       Example {index + 1}
                     </TabsTrigger>
                   ))}
                 </TabsList>
-                
-                {TEXT_EXAMPLES.map((example, index) => (
-                  <TabsContent key={index} value={`sample${index + 1}`}>
+                {TEXT_EXAMPLES.map((example) => (
+                  <TabsContent key={example.id} value={example.id}>
                     <Card className="border-amber-200">
                       <CardContent className="p-6">
                         <div 
-                          className="mb-4 text-center"
-                          style={{ fontFamily: "'Amiri', serif", fontSize: "32px", direction: "rtl" }}
+                          className="mb-4 text-center whitespace-pre-line"
+                          style={{ fontFamily: "'Amiri', serif", fontSize: "32px", direction: "rtl", lineHeight: 1.7 }}
                         >
                           {example.text}
                         </div>
-                        <p className="text-center italic text-amber-700 mb-2">{example.translation}</p>
+                        <p className="text-center font-medium text-amber-700 mb-2">{example.translation}</p>
                         <p className="text-center text-sm text-amber-600">{example.context}</p>
                       </CardContent>
                     </Card>
                   </TabsContent>
                 ))}
               </Tabs>
-              
-              <h2 id="use-cases" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Ideal Use Cases</h2>
-              <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">Religious Texts:</strong> Amiri's traditional design makes it perfect for Quranic texts and religious publications</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">Book Typography:</strong> Excellent readability for long-form text in books and scholarly publications</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">Formal Documents:</strong> Certificates, invitations, and other formal texts benefit from its elegant, traditional style</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">Classical Poetry:</strong> The balanced proportions complement classical Arabic poetry beautifully</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">Digital Publications:</strong> Despite its traditional roots, Amiri works well in digital formats with excellent screen readability</span>
-                  </li>
-                </ul>
+
+              <h2 id="use-cases" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Ideal Use Cases for Amiri</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                {IDEAL_USE_CASES.map((useCase) => (
+                  <Card key={useCase.title} className="border-amber-200 flex">
+                    <div className="p-6 pr-0 flex items-center">{useCase.icon}</div>
+                    <CardContent className="p-6">
+                      <h3 className="text-lg font-semibold text-amber-800 mb-1">{useCase.title}</h3>
+                      <p className="text-amber-700 text-sm">{useCase.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
               
-              <h2 id="technical-details" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Technical Details</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Font Format</h3>
-                    <p className="text-amber-700">OpenType with advanced typographic features</p>
-                    <p className="text-amber-700 mt-2">Unicode compliant with extensive Arabic character support</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Weights & Styles</h3>
-                    <p className="text-amber-700">Regular, Bold, Italic, and Bold Italic</p>
-                    <p className="text-amber-700 mt-2">Comprehensive set of weights suitable for various typographic needs</p>
-                  </CardContent>
-                </Card>
+              <h2 id="technical-details" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Technical Specifications</h2>
+              <div className="space-y-6 mb-12">
+                {TECHNICAL_DETAILS.map((detail) => (
+                  <Card key={detail.title} className="border-amber-200">
+                    <CardHeader>
+                      <CardTitle className="text-xl text-amber-800">{detail.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-lg text-amber-700 mb-1">{detail.value}</p>
+                      {detail.description && <p className="text-sm text-amber-600">{detail.description}</p>}
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
               
-              <h2 id="try-it-out" className="text-2xl font-bold text-amber-800 mt-10 mb-4">Try Amiri in Our Calligraphy Generator</h2>
-              <p className="mb-6">
-                Experience the elegance of Amiri font firsthand by using our Arabic Calligraphy Generator. Create beautiful compositions with customizable text, colors, and styling options.
-              </p>
-              
-              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-between items-center">
-                <Button asChild variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
-                  <Link href="/fonts">
-                    <ArrowLeft className="mr-2 h-4 w-4" />
-                    Explore More Fonts
-                  </Link>
-                </Button>
-                
-                <Button asChild className="bg-amber-600 hover:bg-amber-700">
-                  <Link href="/">Try Amiri in Our Generator</Link>
+              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center p-6 bg-amber-50 rounded-lg border border-amber-200">
+                 <h3 className="text-2xl font-semibold text-amber-800 text-center sm:text-left">Experience Amiri's Elegance</h3>
+                <Button asChild size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
+                  <Link href="/?font=Amiri">Use Amiri in Calligraphy Generator</Link>
                 </Button>
               </div>
               
-              {/* 相关内容链接 */}
               <RelatedContent 
-                title="You May Also Like"
+                title="Explore Similar Traditional Fonts"
                 links={getContentSpecificLinks('font', 'amiri')}
               />
             </div>

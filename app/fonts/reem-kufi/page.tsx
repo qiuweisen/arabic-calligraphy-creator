@@ -1,66 +1,160 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, Ruler, Sparkles, PenTool, Layers, Palette, Blend, DraftingCompass } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
 
 export const metadata: Metadata = {
-  title: "Reem Kufi Font | Modern Arabic Kufi Typography | Arabic Calligraphy",
-  description: "Discover the Reem Kufi font, a modern Arabic Kufi typeface known for its geometric precision and contemporary feel, suitable for headlines and branding.",
-  keywords: "Reem Kufi font, Arabic typography, Kufi font, modern Arabic fonts, Islamic calligraphy, geometric Arabic fonts, Arabic design",
+  title: "Reem Kufi Font: Geometric Precision in Modern Arabic Kufi | Arabic Calligraphy",
+  description: "Explore Reem Kufi, a contemporary Arabic Kufi typeface by Khaled Hosny, celebrated for its sharp geometric forms and modern appeal. Ideal for headlines, logos, and impactful branding.",
+  keywords: "Reem Kufi font, modern Kufi, Khaled Hosny, geometric Arabic font, Arabic branding font, Kufi logo font, contemporary Arabic design, Arabic display typeface, Arabic typography",
+  openGraph: {
+    title: "Reem Kufi: Sharp, Modern, Geometric Arabic Typography",
+    description: "Discover the striking Reem Kufi font. Its geometric precision and modern Kufi style make it perfect for bold statements in design and branding.",
+    images: [
+      {
+        url: "/og-images/reem-kufi-og.jpg", // Hypothetical OG image path
+        width: 1200,
+        height: 630,
+        alt: "Reem Kufi Font Showcase",
+      },
+    ],
+  },
 }
 
-// Sample alphabet for demonstration
-const ARABIC_ALPHABET = "ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي";
-
-// Sample text examples for demonstration
 const TEXT_EXAMPLES = [
   {
-    text: "بسم الله الرحمن الرحيم",
-    translation: "In the name of God, the Most Gracious, the Most Merciful",
-    context: "Opening phrase of the Quran"
+    id: "brand-name-kufi",
+    text: "هوية بصرية", // Visual Identity
+    translation: "Visual Identity",
+    context: "A common term in branding, where Reem Kufi's strong presence is effective."
   },
   {
-    text: "الفن الكوفي الحديث",
-    translation: "Modern Kufi Art",
-    context: "Descriptive phrase"
+    id: "modern-art-title",
+    text: "فن معاصر", // Contemporary Art
+    translation: "Contemporary Art",
+    context: "Titles for art exhibitions or modern designs benefit from its stylish geometry."
   },
   {
-    text: "تصميم شعار عربي",
-    translation: "Arabic Logo Design",
-    context: "Branding context"
+    id: "tech-company-logo",
+    text: "تقنية", // Technology
+    translation: "Technology",
+    context: "Short, impactful words like 'Technology' are ideal for logos using Reem Kufi."
   },
   {
-    text: "هندسة معمارية إسلامية",
-    translation: "Islamic Architecture",
-    context: "Design and architecture"
+    id: "event-headline",
+    text: "مهرجان الثقافة", // Culture Festival
+    translation: "Culture Festival",
+    context: "Headlines for events requiring a modern and distinct Arabic typographic feel."
   }
 ];
 
-// Font features to showcase
 const FONT_FEATURES = [
   {
-    title: "Geometric Precision",
-    description: "Characterized by its straight lines, sharp angles, and carefully constructed geometric forms."
+    icon: <DraftingCompass className="h-8 w-8 text-amber-600 mb-2" />,
+    title: "Geometric Foundation",
+    description: "Built on precise geometric principles, featuring clean lines, defined angles, and a structured, contemporary Kufi aesthetic."
   },
   {
-    title: "Modern Aesthetic",
-    description: "Offers a contemporary interpretation of the traditional Kufi script, ideal for modern design projects."
+    icon: <Sparkles className="h-8 w-8 text-amber-600 mb-2" />,
+    title: "Modern & Bold Appeal",
+    description: "A fresh interpretation of the Kufi script, offering a bold and stylish character perfect for modern visual communication."
   },
   {
-    title: "Strong Visual Impact",
-    description: "Excellent for headlines, titles, logos, and other display purposes where a bold statement is needed."
+    icon: <PenTool className="h-8 w-8 text-amber-600 mb-2" />,
+    title: "Sharp & Clean Edges",
+    description: "Letterforms are characterized by their crisp, sharp edges, contributing to a highly impactful and defined look."
   },
   {
-    title: "Versatile Weights",
-    description: "Often available in multiple weights, providing flexibility for various design applications."
+    icon: <Layers className="h-8 w-8 text-amber-600 mb-2" />,
+    title: "Multiple Weights",
+    description: "Often available in several weights (e.g., Regular, Bold), providing versatility for typographic hierarchy in display settings."
+  },
+  {
+    icon: <Blend className="h-8 w-8 text-amber-600 mb-2" />,
+    title: "Balanced Negative Space",
+    description: "Careful attention to negative space ensures clarity and visual harmony, even with its strong geometric forms."
+  },
+  {
+    icon: <Palette className="h-8 w-8 text-amber-600 mb-2" />,
+    title: "Ideal for Display",
+    description: "Excels in headlines, logos, posters, and any application needing a strong, memorable Arabic typographic statement."
   }
 ];
+
+const IDEAL_USE_CASES = [
+  {
+    title: "Logos & Brand Identities",
+    description: "Its unique geometric Kufi style creates memorable and modern Arabic logos and branding elements.",
+    icon: <Sparkles className="h-5 w-5 text-amber-700" />
+  },
+  {
+    title: "Headlines & Titles",
+    description: "Makes a strong visual impact for titles in print, web, and video, capturing attention effectively.",
+    icon: <Ruler className="h-5 w-5 text-amber-700" /> // Ruler for measurement/display
+  },
+  {
+    title: "Poster & Packaging Design",
+    description: "Well-suited for bold typographic statements on posters, packaging, and other promotional materials.",
+    icon: <Layers className="h-5 w-5 text-amber-700" />
+  },
+  {
+    title: "Digital Media & Social Graphics",
+    description: "Creates eye-catching text for social media posts, web banners, and digital advertisements.",
+    icon: <Blend className="h-5 w-5 text-amber-700" />
+  },
+  {
+    title: "Contemporary Islamic Art & Decor",
+    description: "Used by artists and designers for modern interpretations of Kufi calligraphy in art and decor.",
+    icon: <Palette className="h-5 w-5 text-amber-700" />
+  },
+  {
+    title: "Architectural & Signage Applications",
+    description: "Its clarity and geometric nature make it suitable for architectural lettering and modern signage.",
+    icon: <DraftingCompass className="h-5 w-5 text-amber-700" />
+  }
+];
+
+const TECHNICAL_DETAILS = [
+  {
+    title: "Designer",
+    value: "Khaled Hosny (Principal designer)",
+    description: "An Egyptian typographer and font engineer known for his significant contributions to Arabic open-source fonts, including Amiri and Scheherazade (as contributor)."
+  },
+  {
+    title: "Foundry/Publisher",
+    value: "Open Source / Google Fonts",
+    description: "Reem Kufi is available as an open-source font, notably distributed via Google Fonts, making it widely accessible."
+  },
+  {
+    title: "Release Year",
+    value: "Circa 2015 (Initial widespread availability)",
+    description: "Gained popularity and wider distribution around this period."
+  },
+  {
+    title: "Key OpenType Features",
+    value: "May include ligatures (liga), kerning (kern). Specific features can vary by version.",
+    description: "Designed with modern typographic needs in mind, though Kufi styles often have fewer complex OpenType features than Naskh."
+  },
+  {
+    title: "Supported Scripts",
+    value: "Arabic (primarily). May have basic Latin support in some versions for compatibility.",
+    description: "Focused on providing a robust solution for modern Arabic Kufi typography."
+  },
+  {
+    title: "License",
+    value: "SIL Open Font License 1.1 (OFL-1.1)",
+    description: "Allows for free use, modification, and redistribution, encouraging its adoption in various projects."
+  }
+];
+
+const ARABIC_ALPHABET = "ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي";
 
 export default function ReemKufiFontPage() {
   return (
@@ -75,173 +169,140 @@ export default function ReemKufiFontPage() {
                 Back to Fonts
               </Link>
             </Button>
-            
-            <span className="text-xs text-amber-600 font-medium px-2 py-1 bg-amber-50 rounded-full">Kufi</span>
-            <h1 className="text-3xl md:text-4xl font-bold text-amber-800 mt-4 mb-2">Reem Kufi Font</h1>
-            <p className="text-lg text-amber-700 mb-8">A modern Kufi typeface with geometric precision</p>
-            
-            <div className="prose prose-amber max-w-none">
-              <div className="mb-8">
-                <div className="rounded-lg overflow-hidden border border-amber-200 mb-4">
-                  <div 
-                    className="bg-amber-50 p-8 flex items-center justify-center"
-                    style={{ fontFamily: "'Reem Kufi', sans-serif", fontSize: "48px", direction: "rtl" }}
-                  >
-                    بسم الله الرحمن الرحيم
+
+            <Card className="mb-8 border-amber-200 shadow-lg">
+              <CardContent className="p-6 md:p-8">
+                <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center">
+                  <div className="w-full md:w-1/3 flex items-center justify-center rounded-lg bg-gradient-to-br from-amber-100 to-amber-200 p-6 aspect-square">
+                    <div style={{ fontFamily: "'Reem Kufi', sans-serif", fontSize: "clamp(3rem, 15vw, 6rem)", color: "#854d0e", lineHeight: 1.1, direction: 'rtl' }}>
+                      كوفي
+                    </div>
+                  </div>
+                  <div className="w-full md:w-2/3">
+                    <span className="text-xs text-amber-600 font-medium px-2 py-1 bg-amber-50 rounded-full mb-2 inline-block">Modern Kufi (Geometric)</span>
+                    <h1 className="text-4xl md:text-5xl font-bold text-amber-800 mt-1 mb-3">Reem Kufi</h1>
+                    <p className="text-lg text-amber-700 mb-6 leading-relaxed">
+                      Reem Kufi is a contemporary Arabic typeface celebrated for its bold geometric precision and modern Kufi aesthetic. Designed by Khaled Hosny, it's perfect for impactful headlines, striking logos, and modern branding.
+                    </p>
+                    <Button asChild size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
+                      <Link href="/?font=Reem%20Kufi">Try Reem Kufi Now</Link>
+                    </Button>
                   </div>
                 </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Origin</h3>
-                    <p className="text-amber-700">Modern Kufi style, characterized by geometric shapes</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Designer</h3>
-                    <p className="text-amber-700">Khaled Hosny (often credited for Reem Kufi)</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Best Uses</h3>
-                    <p className="text-amber-700">Headlines, logos, posters, branding, modern Islamic art</p>
-                  </CardContent>
-                </Card>
-              </div>
-              
-              <h2 id="history-and-background" className="text-2xl font-bold text-amber-800 mb-4">History and Background</h2>
-              <p>
-                Reem Kufi is a contemporary Arabic typeface that embodies the characteristics of the Kufi script, one of the oldest forms of Arabic calligraphy. Traditional Kufi is known for its angular, rectilinear letterforms. Reem Kufi takes these foundational elements and adapts them for modern usage, emphasizing geometric precision and a clean aesthetic.
-              </p>
-              <p>
-                Developed by typeface designer Khaled Hosny, Reem Kufi is designed to be versatile for a range of applications, particularly where a strong, modern Arabic typographic presence is desired. It often features in branding, digital media, and contemporary art.
-              </p>
-              
-              <h2 id="distinctive-features" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Distinctive Features</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                {FONT_FEATURES.map((feature, index) => (
-                  <Card key={index} className="border-amber-200">
-                    <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold text-amber-800 mb-2">{feature.title}</h3>
-                      <p className="text-amber-700">{feature.description}</p>
+              </CardContent>
+            </Card>
+
+            <div className="prose prose-amber max-w-none">
+              <h2 id="distinctive-features" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Distinctive Features of Reem Kufi</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                {FONT_FEATURES.map((feature) => (
+                  <Card key={feature.title} className="border-amber-200 flex flex-col bg-white">
+                    <CardHeader className="items-center text-center">
+                      {feature.icon}
+                      <CardTitle className="text-xl text-amber-800">{feature.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-center flex-grow">
+                      <p className="text-amber-700 text-sm">{feature.description}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
-              
-              <h2 id="alphabet-showcase" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Alphabet Showcase</h2>
-              <Card className="border-amber-200 mb-8">
+
+              <h2 id="history-and-background" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Reem Kufi: A Modern Take on Ancient Script</h2>
+              <Card className="border-amber-200 mb-12 bg-white">
+                <CardContent className="p-6 md:p-8 space-y-4 text-amber-700 leading-relaxed">
+                  <p>
+                    The Kufi script, one of the oldest calligraphic forms of the Arabic alphabet, originated in Kufa, Iraq, in the late 7th century. It is characterized by its angular, rectilinear letterforms. <strong className="text-amber-800">Reem Kufi</strong>, designed by the renowned Egyptian typographer Khaled Hosny, is a vibrant contemporary interpretation of this ancient script.
+                  </p>
+                  <p>
+                    Reem Kufi masterfully blends the historical gravitas of traditional Kufi with a clean, geometric, and modern sensibility. It strips down the letterforms to their essential geometric shapes, emphasizing clarity, balance, and a strong visual presence. This makes it exceptionally well-suited for display purposes in an era that values minimalism and impactful design.
+                  </p>
+                  <p>
+                    Available as an open-source font, often via Google Fonts, Reem Kufi has gained popularity for its versatility in branding, headlines, and digital media, offering a fresh and stylish voice for Arabic typography.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <h2 id="alphabet-showcase" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Reem Kufi Alphabet: Geometric Forms</h2>
+              <Card className="border-amber-200 mb-12 bg-white">
+                 <CardHeader>
+                  <CardTitle className="text-xl text-amber-800">Individual Letterforms</CardTitle>
+                  <CardDescription className="text-amber-600">Observe the sharp angles and clean lines of Reem Kufi's characters.</CardDescription>
+                </CardHeader>
                 <CardContent className="p-6">
                   <div 
-                    className="text-center"
-                    style={{ fontFamily: "'Reem Kufi', sans-serif", fontSize: "36px", direction: "rtl", lineHeight: 1.8 }}
+                    className="text-center leading-loose"
+                    style={{ fontFamily: "'Reem Kufi', sans-serif", fontSize: "40px", direction: "rtl" }}
                   >
                     {ARABIC_ALPHABET}
                   </div>
                 </CardContent>
               </Card>
               
-              <h2 id="text-examples" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Text Examples</h2>
-              
-              <Tabs defaultValue="sample1" className="w-full">
-                <TabsList className="grid" style={{ gridTemplateColumns: `repeat(${TEXT_EXAMPLES.length}, 1fr)` }}>
-                  {TEXT_EXAMPLES.map((_, index) => (
-                    <TabsTrigger key={index} value={`sample${index + 1}`}>
+              <h2 id="text-examples" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Reem Kufi in Action: Design Examples</h2>
+              <Tabs defaultValue={TEXT_EXAMPLES[0].id} className="w-full mb-12">
+                <TabsList className="grid w-full" style={{ gridTemplateColumns: `repeat(${TEXT_EXAMPLES.length}, 1fr)` }}>
+                  {TEXT_EXAMPLES.map((example, index) => (
+                    <TabsTrigger key={example.id} value={example.id}>
                       Example {index + 1}
                     </TabsTrigger>
                   ))}
                 </TabsList>
-                
-                {TEXT_EXAMPLES.map((example, index) => (
-                  <TabsContent key={index} value={`sample${index + 1}`}>
-                    <Card className="border-amber-200">
+                {TEXT_EXAMPLES.map((example) => (
+                  <TabsContent key={example.id} value={example.id}>
+                    <Card className="border-amber-200 bg-white">
                       <CardContent className="p-6">
                         <div 
-                          className="mb-4 text-center"
-                          style={{ fontFamily: "'Reem Kufi', sans-serif", fontSize: "32px", direction: "rtl" }}
+                          className="mb-4 text-center whitespace-pre-line"
+                          style={{ fontFamily: "'Reem Kufi', sans-serif", fontSize: "32px", direction: "rtl", lineHeight: 1.7 }}
                         >
                           {example.text}
                         </div>
-                        <p className="text-center italic text-amber-700 mb-2">{example.translation}</p>
+                        <p className="text-center font-medium text-amber-700 mb-2">{example.translation}</p>
                         <p className="text-center text-sm text-amber-600">{example.context}</p>
                       </CardContent>
                     </Card>
                   </TabsContent>
                 ))}
               </Tabs>
-              
-              <h2 id="use-cases" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Ideal Use Cases</h2>
-              <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">Headlines & Titles:</strong> Its bold and geometric nature makes it stand out for titles.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">Logo Design:</strong> Creates memorable and impactful logos with a modern Arabic feel.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">Branding & Identity:</strong> Suitable for companies and projects aiming for a contemporary Arabic identity.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">Posters & Banners:</strong> Effective for display purposes in both print and digital media.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">Modern Islamic Art:</strong> Used by artists for contemporary calligraphy pieces.</span>
-                  </li>
-                </ul>
+
+              <h2 id="use-cases" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Ideal Applications for Reem Kufi</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                {IDEAL_USE_CASES.map((useCase) => (
+                  <Card key={useCase.title} className="border-amber-200 flex bg-white">
+                    <div className="p-6 pr-0 flex items-center">{useCase.icon}</div>
+                    <CardContent className="p-6">
+                      <h3 className="text-lg font-semibold text-amber-800 mb-1">{useCase.title}</h3>
+                      <p className="text-amber-700 text-sm">{useCase.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
               
-              <h2 id="technical-details" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Technical Details</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Font Format</h3>
-                    <p className="text-amber-700">Typically available as OpenType (OTF) or TrueType (TTF).</p>
-                    <p className="text-amber-700 mt-2">Often supports various OpenType features.</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Weights & Styles</h3>
-                    <p className="text-amber-700">Available in several weights, allowing for design flexibility.</p>
-                    <p className="text-amber-700 mt-2">May include regular, bold, and sometimes other variations.</p>
-                  </CardContent>
-                </Card>
+              <h2 id="technical-details" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Technical Specifications</h2>
+              <div className="space-y-6 mb-12">
+                {TECHNICAL_DETAILS.map((detail) => (
+                  <Card key={detail.title} className="border-amber-200 bg-white">
+                    <CardHeader>
+                      <CardTitle className="text-xl text-amber-800">{detail.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-lg text-amber-700 mb-1">{detail.value}</p>
+                      {detail.description && <p className="text-sm text-amber-600">{detail.description}</p>}
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
               
-              <h2 id="try-it-out" className="text-2xl font-bold text-amber-800 mt-10 mb-4">Try Reem Kufi in Our Calligraphy Generator</h2>
-              <p className="mb-6">
-                Explore the geometric elegance of Reem Kufi with our Arabic Calligraphy Generator. Design striking headlines, logos, and modern Kufi art with ease.
-              </p>
-              
-              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-between items-center">
-                <Button asChild variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
-                  <Link href="/fonts">
-                    <ArrowLeft className="mr-2 h-4 w-4" />
-                    Explore More Fonts
-                  </Link>
-                </Button>
-                
-                <Button asChild className="bg-amber-600 hover:bg-amber-700">
-                  <Link href="/?font=Reem%20Kufi">Try Reem Kufi in Our Generator</Link>
+              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center p-6 bg-amber-50 rounded-lg border border-amber-200">
+                 <h3 className="text-2xl font-semibold text-amber-800 text-center sm:text-left">Craft Bold Designs with Reem Kufi</h3>
+                <Button asChild size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
+                  <Link href="/?font=Reem%20Kufi">Use Reem Kufi in Generator</Link>
                 </Button>
               </div>
               
-              {/* 相关内容链接 */}
               <RelatedContent 
-                title="You May Also Like"
+                title="Discover Other Modern & Kufi Fonts"
                 links={getContentSpecificLinks('font', 'reem-kufi')}
               />
             </div>
