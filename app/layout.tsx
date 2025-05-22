@@ -6,7 +6,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ScrollToTop } from "@/components/scroll-to-top"
 
-const inter = Inter({ subsets: ["latin"], display: 'swap', variable: "--font-inter" })
+const inter = Inter({ subsets: ["latin"], display: 'optional', variable: "--font-inter" })
 const notoNaskhArabic = Noto_Naskh_Arabic({ display: 'swap', weight: ["400", "700"], variable: "--font-noto-naskh-arabic", preload: false })
 const amiri = Amiri({ display: 'swap', weight: ["400", "700"], variable: "--font-amiri", preload: false })
 const arefRuqaa = Aref_Ruqaa({ display: 'swap', weight: ["400", "700"], variable: "--font-aref-ruqaa", preload: false })
