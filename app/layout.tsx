@@ -1,8 +1,10 @@
 import type React from "react"
 import "@/app/globals.css"
 import { Inter } from "next/font/google"
+import Script from "next/script"
 import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from "@/components/theme-provider"
+import { ScrollToTop } from "@/components/scroll-to-top"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -23,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -34,7 +37,24 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system">
           {children}
           <Toaster />
+          <ScrollToTop />
         </ThemeProvider>
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-33BV8X0BYE"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-33BV8X0BYE');
+            `,
+          }}
+        />
       </body>
     </html>
   )

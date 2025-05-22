@@ -3,6 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 interface UseCaseGalleryProps {
   category: string
@@ -115,7 +116,16 @@ export function UseCaseGallery({ category, title, description }: UseCaseGalleryP
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {currentUseCases.map((useCase, index) => (
           <Card key={index} className="overflow-hidden border-amber-200 hover:shadow-md transition-shadow">
-            <img src={useCase.image || "/placeholder.svg"} alt={useCase.title} className="w-full h-48 object-cover" />
+            <div className="relative w-full h-48">
+              <Image 
+                src={useCase.image || "/placeholder.svg"} 
+                alt={useCase.title} 
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                style={{ objectFit: 'cover' }}
+                priority={index < 2}
+              />
+            </div>
             <CardContent className="p-4">
               <h4 className="font-bold text-amber-800 mb-1">{useCase.title}</h4>
               <p className="text-sm text-amber-700 mb-3">{useCase.description}</p>

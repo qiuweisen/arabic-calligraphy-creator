@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight } from "lucide-react"
@@ -82,7 +83,16 @@ export default function BlogPage() {
               key={post.id}
               className="overflow-hidden border-amber-200 bg-white/80 backdrop-blur-sm hover:shadow-md transition-shadow"
             >
-              <img src={post.image || "/placeholder.svg"} alt={post.title} className="w-full h-48 object-cover" />
+              <div className="relative w-full h-48">
+                <Image 
+                  src={post.image || "/placeholder.svg"} 
+                  alt={post.title} 
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  style={{ objectFit: 'cover' }}
+                  priority={blogPosts.indexOf(post) < 3}
+                />
+              </div>
               <CardHeader>
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-xs text-amber-600 font-medium px-2 py-1 bg-amber-50 rounded-full">

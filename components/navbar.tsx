@@ -57,28 +57,32 @@ export function Navbar() {
             ))}
           </nav>
 
-          {/* Mobile Menu Trigger */}
+          {/* Mobile Menu Trigger - Increased touch area */}
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-5 w-5 text-amber-800" />
+              <Button 
+                variant="ghost" 
+                size="lg" 
+                className="md:hidden p-3 h-auto w-auto touch-manipulation"
+              >
+                <Menu className="h-6 w-6 text-amber-800" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[250px]">
-              <div className="flex flex-col h-full py-6">
-                <Link href="/" className="flex items-center gap-2 mb-6" onClick={() => setIsMobileMenuOpen(false)}>
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-white font-bold text-lg">
+            <SheetContent side="right" className="w-[280px] sm:w-[320px]">
+              <div className="flex flex-col h-full py-8">
+                <Link href="/" className="flex items-center gap-2 mb-8 px-2" onClick={() => setIsMobileMenuOpen(false)}>
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-white font-bold text-lg">
                     خط
                   </div>
-                  <span className="font-bold text-amber-800">ArabicCalligraphy</span>
+                  <span className="font-bold text-amber-800 text-xl">ArabicCalligraphy</span>
                 </Link>
 
-                <nav className="flex flex-col space-y-1">
+                <nav className="flex flex-col">
                   {navItems.map((item, index) => (
                     <Link
                       key={index}
                       href={item.href}
-                      className="px-4 py-2 text-amber-800 hover:bg-amber-50 rounded-md"
+                      className="px-4 py-4 text-lg text-amber-800 hover:bg-amber-50 active:bg-amber-100 transition-colors rounded-md flex items-center"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.label}

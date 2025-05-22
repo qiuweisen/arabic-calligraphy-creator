@@ -1,4 +1,6 @@
+import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { CalligraphyGenerator } from "@/components/calligraphy-generator"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -27,10 +29,8 @@ export default function Home() {
           </header>
 
           {/* Main Tool Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-            <div className="lg:col-span-3">
-              <CalligraphyGenerator />
-            </div>
+          <div className="mb-12">
+            <CalligraphyGenerator />
           </div>
 
           {/* Key Features Section */}
@@ -202,11 +202,16 @@ export default function Home() {
                         </ul>
                       </div>
                       <div className="flex items-center justify-center">
-                        <img
-                          src="/placeholder.svg?height=200&width=300"
-                          alt="Social media examples"
-                          className="rounded-lg border border-amber-200"
-                        />
+                        <div className="relative w-[300px] h-[200px] rounded-lg border border-amber-200">
+                          <Image
+                            src="/arabic-calligraphy-in-twitter-post.png?height=200&width=300"
+                            alt="Social media examples"
+                            fill
+                            style={{ objectFit: 'cover' }}
+                            className="rounded-lg"
+                            sizes="300px"
+                          />
+                        </div>
                       </div>
                     </div>
                   </CardContent>
@@ -241,11 +246,16 @@ export default function Home() {
                         </ul>
                       </div>
                       <div className="flex items-center justify-center">
-                        <img
-                          src="/placeholder.svg?height=200&width=300"
-                          alt="Print examples"
-                          className="rounded-lg border border-amber-200"
-                        />
+                        <div className="relative w-[300px] h-[200px] rounded-lg border border-amber-200">
+                          <Image
+                            src="/business-cards-with-arabic-typography.png?height=200&width=300"
+                            alt="Print examples"
+                            fill
+                            style={{ objectFit: 'cover' }}
+                            className="rounded-lg"
+                            sizes="300px"
+                          />
+                        </div>
                       </div>
                     </div>
                   </CardContent>
@@ -280,11 +290,16 @@ export default function Home() {
                         </ul>
                       </div>
                       <div className="flex items-center justify-center">
-                        <img
-                          src="/placeholder.svg?height=200&width=300"
-                          alt="Web examples"
-                          className="rounded-lg border border-amber-200"
-                        />
+                        <div className="relative w-[300px] h-[200px] rounded-lg border border-amber-200">
+                          <Image
+                            src="/placeholder.svg?height=200&width=300"
+                            alt="Web examples"
+                            fill
+                            style={{ objectFit: 'cover' }}
+                            className="rounded-lg"
+                            sizes="300px"
+                          />
+                        </div>
                       </div>
                     </div>
                   </CardContent>
@@ -319,11 +334,16 @@ export default function Home() {
                         </ul>
                       </div>
                       <div className="flex items-center justify-center">
-                        <img
-                          src="/placeholder.svg?height=200&width=300"
-                          alt="Art examples"
-                          className="rounded-lg border border-amber-200"
-                        />
+                        <div className="relative w-[300px] h-[200px] rounded-lg border border-amber-200">
+                          <Image
+                            src="/placeholder.svg?height=200&width=300"
+                            alt="Art examples"
+                            fill
+                            style={{ objectFit: 'cover' }}
+                            className="rounded-lg"
+                            sizes="300px"
+                          />
+                        </div>
                       </div>
                     </div>
                   </CardContent>

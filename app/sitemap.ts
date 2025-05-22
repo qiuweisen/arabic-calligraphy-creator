@@ -1,187 +1,94 @@
 import { MetadataRoute } from 'next'
 
+// Define all fonts
+const FONTS = [
+  // Traditional
+  { slug: "amiri" },
+  { slug: "scheherazade" },
+  { slug: "noto-naskh-arabic" },
+  { slug: "el-messiri" },
+  { slug: "markazi-text" },
+  // Kufi
+  { slug: "reem-kufi" },
+  // Diwani
+  { slug: "aref-ruqaa" },
+  // Nastaliq
+  { slug: "lateef" },
+  { slug: "mirza" },
+  // Modern
+  { slug: "cairo" },
+  { slug: "harmattan" },
+  { slug: "mada" },
+  { slug: "tajawal" },
+  { slug: "lemonada" },
+  // Display
+  { slug: "jomhuria" },
+  { slug: "rakkas" },
+  { slug: "marhey" },
+]
+
+// Blog posts data
+const BLOG_POSTS = [
+  'the-rich-history-of-arabic-calligraphy',
+  'understanding-the-six-major-arabic-calligraphy-styles',
+  'beginners-guide-to-arabic-calligraphy',
+  'famous-arabic-calligraphers-through-history',
+  'modern-arabic-typography',
+  'the-quran-and-calligraphy'
+]
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://arabiccalligraphygenerator.site' // 根据实际部署域名调整
+  const baseUrl = 'https://arabiccalligraphygenerator.site'
   
-  // 博客文章URL
-  const blogPosts = [
+  // Core pages
+  const staticPages = [
     {
-      url: `${baseUrl}/blog/history-of-arabic-calligraphy`,
+      url: baseUrl,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: 0.8,
+      priority: 1.0,
     },
-    {
-      url: `${baseUrl}/blog/six-major-calligraphy-styles`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/beginners-guide-to-calligraphy`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/famous-arabic-calligraphers`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/modern-arabic-typography`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/quran-and-calligraphy`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-  ]
-  
-  // 字体详情页URL
-  const fontPages = [
     {
       url: `${baseUrl}/fonts`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/fonts/amiri`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/fonts/scheherazade`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/fonts/noto-naskh-arabic`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/fonts/reem-kufi`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/fonts/aref-ruqaa`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/fonts/lateef`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/fonts/mirza`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/fonts/cairo`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/fonts/jomhuria`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/fonts/rakkas`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/fonts/harmattan`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/fonts/mada`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/fonts/tajawal`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-  ]
-  
-  // 主要页面URL
-  const mainPages = [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 1.0,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
-      priority: 0.9,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/faq`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/features`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/tutorials`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/privacy-policy`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly' as const,
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/terms-of-service`,
+      url: `${baseUrl}/templates`,
       lastModified: new Date(),
-      changeFrequency: 'yearly' as const,
-      priority: 0.7,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
     },
   ]
-  
-  return [...mainPages, ...blogPosts, ...fontPages]
+
+  // Font detail pages
+  const fontPages = FONTS.map(font => ({
+    url: `${baseUrl}/fonts/${font.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  // Blog post pages
+  const blogPages = BLOG_POSTS.map(slug => ({
+    url: `${baseUrl}/blog/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
+  return [...staticPages, ...fontPages, ...blogPages]
 } 

@@ -44,6 +44,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { TemplateBrowser } from "@/components/template-browser"
 import { Drawer, DrawerContent } from "@/components/ui/drawer"
 import { FontPreview } from "@/components/font-preview"
+import { MobileFab } from "@/components/mobile-fab"
 
 const ARABIC_FONTS = [
   { name: "Amiri", value: "'Amiri', serif", category: "Traditional" },
@@ -454,6 +455,9 @@ export function CalligraphyGenerator() {
         <Button variant="outline" size="icon" onClick={handleShare}>
           <Share2 className="h-4 w-4" />
         </Button>
+        <Button variant="outline" size="icon" onClick={handleDownloadPNG} className="bg-amber-50 hover:bg-amber-100">
+          <Download className="h-4 w-4" />
+        </Button>
       </div>
     </div>
   )
@@ -516,7 +520,7 @@ export function CalligraphyGenerator() {
             </PopoverContent>
           </Popover>
         </div>
-        <Select id="font-select" value={font} onValueChange={handleFontChange}>
+        <Select value={font} onValueChange={handleFontChange}>
           <SelectTrigger className="w-full">
             <SelectValue placeholder="Select font" />
           </SelectTrigger>
@@ -1124,7 +1128,7 @@ export function CalligraphyGenerator() {
         </div>
 
         {/* Right side - Preview Area */}
-        <div className={cn("lg:col-span-2", isMobile && "col-span-full")}>
+        <div className="lg:col-span-2">
           <div className="space-y-6">
             {/* Mobile Controls */}
             {isMobile && <MobileControls />}
@@ -1288,6 +1292,15 @@ export function CalligraphyGenerator() {
           </div>
         </div>
       </div>
+
+      {/* 移动端专用浮动操作按钮 */}
+      {isMobile && (
+        <MobileFab 
+          onDownload={handleDownloadPNG}
+          onCopy={handleCopyToClipboard}
+          onShare={handleShare}
+        />
+      )}
 
       {/* Template Browser Dialog (Mobile) */}
       {isMobile && <MobileTemplateDrawer />}

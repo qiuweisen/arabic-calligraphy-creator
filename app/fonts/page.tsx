@@ -29,6 +29,8 @@ const FONT_CATEGORIES = {
     { name: "Amiri", slug: "amiri", description: "An elegant typeface inspired by classical Arabic typography" },
     { name: "Scheherazade", slug: "scheherazade", description: "A traditional Naskh style typeface with excellent readability" },
     { name: "Noto Naskh Arabic", slug: "noto-naskh-arabic", description: "A clean and versatile Naskh font optimized for digital screens" },
+    { name: "El Messiri", slug: "el-messiri", description: "A modern Naskh-inspired typeface with a distinctive style" },
+    { name: "Markazi Text", slug: "markazi-text", description: "A classic Naskh typeface optimized for text and readability" },
   ],
   "Kufi": [
     { name: "Reem Kufi", slug: "reem-kufi", description: "A modern Kufi typeface with geometric precision" },
@@ -45,10 +47,12 @@ const FONT_CATEGORIES = {
     { name: "Harmattan", slug: "harmattan", description: "A simplified modern Arabic typeface with excellent legibility" },
     { name: "Mada", slug: "mada", description: "A geometric sans-serif with a minimalist aesthetic" },
     { name: "Tajawal", slug: "tajawal", description: "A versatile modern font designed for digital interfaces" },
+    { name: "Lemonada", slug: "lemonada", description: "A rounded and friendly sans-serif font suitable for various uses" },
   ],
   "Display": [
     { name: "Jomhuria", slug: "jomhuria", description: "A bold display font with strong visual impact" },
     { name: "Rakkas", slug: "rakkas", description: "A decorative display font with distinctive character" },
+    { name: "Marhey", slug: "marhey", description: "A playful and energetic display font" },
   ],
 }
 
