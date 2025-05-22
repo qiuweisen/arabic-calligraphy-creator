@@ -1,246 +1,308 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, Type, Layers, CheckCircle, MonitorPlay, Settings, Zap, FileText } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
 
 export const metadata: Metadata = {
-  title: "Mada Font | Geometric Arabic Sans-Serif | Arabic Calligraphy",
-  description: "Explore the Mada font, a geometric Arabic sans-serif typeface with a minimalist aesthetic, offering clarity and a modern feel for various design projects.",
-  keywords: "Mada font, Arabic typography, geometric sans-serif, modern Arabic fonts, minimalist Arabic font, Islamic calligraphy, Arabic fonts",
+  title: "Mada Font: Clear & Modern Arabic Sans-Serif | Arabic Calligraphy",
+  description: "Discover Mada, a contemporary Arabic sans-serif typeface known for its clarity, balanced proportions, and excellent readability in UI and digital content.",
+  keywords: "Mada font, modern Arabic font, sans-serif Arabic, Arabic UI font, clear Arabic font, legible Arabic typeface, Arabic web font, contemporary Arabic design",
+  openGraph: {
+    title: "Mada Font: Versatile & Legible Sans-Serif for Modern Designs | Arabic Calligraphy Generator",
+    description: "Explore Mada, a clean and balanced Arabic sans-serif font, ideal for user interfaces, web content, and projects requiring high readability.",
+    images: [
+      {
+        url: "/og-images/mada-font-og.jpg", // Placeholder - replace with actual image
+        width: 1200,
+        height: 630,
+        alt: "Mada Font Showcase",
+      },
+    ],
+  },
 }
 
-// Sample alphabet for demonstration
-const ARABIC_ALPHABET = "ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي";
-
-// Sample text examples for demonstration
 const TEXT_EXAMPLES = [
   {
-    text: "بسم الله الرحمن الرحيم",
-    translation: "In the name of God, the Most Gracious, the Most Merciful",
-    context: "Opening phrase of the Quran"
+    id: "ui-text-label",
+    text: "إعدادات الحساب", // I'dadat al-Hisab
+    translation: "Account Settings",
+    context: "A common label in a user interface, where Mada's clarity is beneficial."
   },
   {
-    text: "تصميم عصري بسيط",
-    translation: "Simple Modern Design",
-    context: "Design aesthetic"
+    id: "website-paragraph",
+    text: "مرحبًا بكم في موقعنا الجديد. نحن نقدم مجموعة واسعة من الخدمات لتلبية احتياجاتكم.", // Marhaban bikum fi mawqi'ina al-jadeed. Nahnu nuqaddimu majmoo'a wasi'a min al-khadamat litalbiyat ihtiyaajaatikum.
+    translation: "Welcome to our new website. We offer a wide range of services to meet your needs.",
+    context: "Paragraph text on a website, demonstrating Mada's readability for body copy."
   },
   {
-    text: "الهندسة في الخط العربي",
-    translation: "Geometry in Arabic Script",
-    context: "Typographic concept"
+    id: "app-notification",
+    text: "لديك رسالة جديدة", // Ladayka risala jadeeda
+    translation: "You have a new message",
+    context: "Notification text in an application, requiring quick and easy comprehension."
   },
   {
-    text: "تطبيقات الويب الحديثة",
-    translation: "Modern Web Applications",
-    context: "Digital context"
+    id: "instructional-text",
+    text: "اتبع الخطوات التالية لإكمال التسجيل.", // Ittabi' al-khutuwaat at-taaliya li-ikmaal at-tasjeel.
+    translation: "Follow the next steps to complete registration.",
+    context: "Clear instructional text, where Mada's legibility aids understanding."
   }
 ];
 
-// Font features to showcase
 const FONT_FEATURES = [
   {
-    title: "Geometric Sans-Serif",
-    description: "Characterized by its use of geometric shapes and clean lines, offering a distinctly modern and structured look."
+    icon: <CheckCircle className="h-8 w-8 text-teal-600 mb-2" />,
+    title: "High Clarity & Legibility",
+    description: "Engineered for excellent readability across various sizes, especially in digital screen environments."
   },
   {
-    title: "Minimalist Aesthetic",
-    description: "Embraces simplicity and clarity, making it suitable for designs that require an uncluttered and contemporary feel."
+    icon: <Type className="h-8 w-8 text-teal-600 mb-2" />,
+    title: "Modern Sans-Serif Design",
+    description: "Features a clean, contemporary sans-serif aesthetic with balanced proportions and open forms."
   },
   {
-    title: "Good Readability",
-    description: "Despite its geometric nature, it is designed for good legibility in both display and text settings."
-  },
-  {
+    icon: <Layers className="h-8 w-8 text-teal-600 mb-2" />,
     title: "Versatile Weights",
-    description: "Often available in a range of weights, allowing for flexibility in typographic design and hierarchy."
+    description: "Often available in a range of weights (e.g., Light, Regular, Medium, Bold, Black), suitable for diverse typographic needs."
+  },
+  {
+    icon: <Zap className="h-8 w-8 text-teal-600 mb-2" />,
+    title: "Neutral & Professional Tone",
+    description: "Its unobtrusive style lends a professional and neutral tone, making it suitable for corporate and informational content."
+  },
+  {
+    icon: <MonitorPlay className="h-8 w-8 text-teal-600 mb-2" />,
+    title: "Optimized for UI/UX",
+    description: "Well-suited for user interfaces, web content, and applications where clear communication is key."
+  },
+  {
+    icon: <FileText className="h-8 w-8 text-teal-600 mb-2" />,
+    title: "Good for Body Text",
+    description: "Maintains readability in smaller sizes, making it a solid choice for paragraphs and longer text passages."
   }
 ];
+
+const IDEAL_USE_CASES = [
+  {
+    title: "User Interfaces (Web & Mobile)",
+    description: "Excels in UI elements like buttons, menus, labels, and informational text due to its clarity.",
+    icon: <MonitorPlay className="h-5 w-5 text-teal-700" />
+  },
+  {
+    title: "Website Body Content & Articles",
+    description: "Provides a comfortable reading experience for longer articles and website text.",
+    icon: <FileText className="h-5 w-5 text-teal-700" />
+  },
+  {
+    title: "Corporate & Business Communications",
+    description: "Its professional and neutral tone is ideal for reports, presentations, and business websites.",
+    icon: <Zap className="h-5 w-5 text-teal-700" />
+  },
+  {
+    title: "Educational Materials & E-Learning",
+    description: "Ensures clear and legible text for educational content and online learning platforms.",
+    icon: <Type className="h-5 w-5 text-teal-700" />
+  },
+  {
+    title: "Application Design",
+    description: "A reliable choice for text within software applications, ensuring a clean and user-friendly experience.",
+    icon: <Settings className="h-5 w-5 text-teal-700" />
+  },
+  {
+    title: "Informational Signage",
+    description: "Works well for clear and concise signage where readability is paramount.",
+    icon: <CheckCircle className="h-5 w-5 text-teal-700" />
+  }
+];
+
+const TECHNICAL_DETAILS = [
+  {
+    title: "Designer(s)",
+    value: "Multiple contributors (often an open-source project, e.g. Noaman Kareem for the Google Fonts version)",
+    description: "Mada is typically the result of collaborative efforts in the open-source font community to create a highly legible modern Arabic sans-serif."
+  },
+  {
+    title: "Foundry/Publisher",
+    value: "Open Source (e.g., Google Fonts)",
+    description: "Widely distributed via open-source platforms, making it freely accessible for various projects."
+  },
+  {
+    title: "Typographic Style",
+    value: "Modern Sans-Serif (Humanist influences)",
+    description: "A clean sans-serif with open counters and balanced proportions, sometimes showing subtle humanist characteristics for improved readability."
+  },
+  {
+    title: "Key Strengths",
+    value: "Readability, neutrality, versatility across weights, strong UI/UX performance.",
+    description: "These attributes make Mada a dependable workhorse font for modern Arabic digital typography."
+  },
+  {
+    title: "Supported Scripts",
+    value: "Arabic (often with extended character sets for broader language support). Some versions might pair with a Latin counterpart.",
+    description: "Primarily focused on providing excellent Arabic script rendering."
+  },
+  {
+    title: "License",
+    value: "SIL Open Font License 1.1 (OFL-1.1)",
+    description: "Allows free use, modification, and distribution, fostering its global adoption."
+  }
+];
+
+const ARABIC_ALPHABET_MADA = "ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي";
 
 export default function MadaFontPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
+      <main className="min-h-screen bg-gradient-to-b from-teal-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-800 hover:bg-amber-50">
+            <Button asChild variant="ghost" className="mb-4 text-teal-600 hover:text-teal-800 hover:bg-teal-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Fonts
               </Link>
             </Button>
-            
-            <span className="text-xs text-amber-600 font-medium px-2 py-1 bg-amber-50 rounded-full">Modern</span>
-            <h1 className="text-3xl md:text-4xl font-bold text-amber-800 mt-4 mb-2">Mada Font</h1>
-            <p className="text-lg text-amber-700 mb-8">A geometric sans-serif with a minimalist aesthetic</p>
-            
-            <div className="prose prose-amber max-w-none">
-              <div className="mb-8">
-                <div className="rounded-lg overflow-hidden border border-amber-200 mb-4">
-                  <div 
-                    className="bg-amber-50 p-8 flex items-center justify-center"
-                    style={{ fontFamily: "'Mada', sans-serif", fontSize: "48px", direction: "rtl" }}
-                  >
-                    بسم الله الرحمن الرحيم
+
+            <Card className="mb-8 border-teal-200 shadow-lg">
+              <CardContent className="p-6 md:p-8">
+                <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center">
+                  <div className="w-full md:w-1/3 flex items-center justify-center rounded-lg bg-gradient-to-br from-teal-100 to-teal-200 p-6 aspect-square">
+                    <div style={{ fontFamily: "'Mada', sans-serif", fontSize: "clamp(3.5rem, 18vw, 7rem)", color: "#0d9488", lineHeight: 1.1, direction: 'rtl' }}>
+                      مدى
+                    </div>
+                  </div>
+                  <div className="w-full md:w-2/3">
+                    <span className="text-xs text-teal-600 font-medium px-2 py-1 bg-teal-50 rounded-full mb-2 inline-block">Modern Sans-Serif</span>
+                    <h1 className="text-4xl md:text-5xl font-bold text-teal-800 mt-1 mb-3">Mada Font</h1>
+                    <p className="text-lg text-teal-700 mb-6 leading-relaxed">
+                      Mada is a contemporary Arabic sans-serif typeface celebrated for its exceptional clarity and balanced proportions. It excels in user interfaces, web content, and any application demanding high readability and a clean, modern aesthetic.
+                    </p>
+                    <Button asChild size="lg" className="bg-teal-600 hover:bg-teal-700 text-white">
+                      <Link href="/?font=Mada">Try Mada in Our Generator</Link>
+                    </Button>
                   </div>
                 </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Origin</h3>
-                    <p className="text-amber-700">Modern geometric Arabic sans-serif</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Designer</h3>
-                    <p className="text-amber-700">Boutros Fonts (often associated with Mada)</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Best Uses</h3>
-                    <p className="text-amber-700">Branding, UI/UX, web design, headlines, contemporary print</p>
-                  </CardContent>
-                </Card>
-              </div>
-              
-              <h2 id="history-and-background" className="text-2xl font-bold text-amber-800 mb-4">History and Background</h2>
-              <p>
-                Mada is a modern Arabic typeface characterized by its geometric sans-serif construction and minimalist aesthetic. It was designed to provide a clean, contemporary, and highly legible option for Arabic typography. The font often draws on geometric principles, resulting in clear letterforms with a structured yet approachable feel.
-              </p>
-              <p>
-                Developed by Boutros Fonts, Mada is part of a wider effort to expand the range of high-quality Arabic typefaces suitable for modern digital and print environments. Its simplicity and clarity make it a versatile choice for branding, user interfaces, web design, and any application requiring a modern and unembellished Arabic script.
-              </p>
-              
-              <h2 id="distinctive-features" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Distinctive Features</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                {FONT_FEATURES.map((feature, index) => (
-                  <Card key={index} className="border-amber-200">
-                    <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold text-amber-800 mb-2">{feature.title}</h3>
-                      <p className="text-amber-700">{feature.description}</p>
+              </CardContent>
+            </Card>
+
+            <div className="prose prose-teal max-w-none">
+              <h2 id="distinctive-features" className="text-3xl font-bold text-teal-800 mt-12 mb-6">Distinctive Features of Mada</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                {FONT_FEATURES.map((feature) => (
+                  <Card key={feature.title} className="border-teal-200 flex flex-col bg-white">
+                    <CardHeader className="items-center text-center">
+                      {feature.icon}
+                      <CardTitle className="text-xl text-teal-800">{feature.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-center flex-grow">
+                      <p className="text-teal-700 text-sm">{feature.description}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
-              
-              <h2 id="alphabet-showcase" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Alphabet Showcase</h2>
-              <Card className="border-amber-200 mb-8">
+
+              <h2 id="design-philosophy" className="text-3xl font-bold text-teal-800 mt-12 mb-6">Design Philosophy: Clarity and Versatility</h2>
+              <Card className="border-teal-200 mb-12 bg-white">
+                <CardContent className="p-6 md:p-8 space-y-4 text-teal-700 leading-relaxed">
+                  <p>
+                    Mada (مدى, meaning "range" or "extent") is a modern Arabic sans-serif typeface designed with a primary focus on <strong className="text-teal-800">clarity, legibility, and versatility</strong>. It serves as a robust workhorse font, particularly well-suited for digital environments where on-screen readability is crucial.
+                  </p>
+                  <p>
+                    The design of Mada features clean lines, open counters, and well-balanced letterforms. It avoids excessive stylization, aiming for a neutral yet professional appearance. This makes it an excellent choice for user interfaces, body text on websites, corporate communications, and any context where information needs to be conveyed clearly and efficiently. The humanist influences often seen in its design contribute to its comfortable reading rhythm.
+                  </p>
+                  <p>
+                    Often available in a comprehensive range of weights, Mada provides designers with the flexibility to create effective typographic hierarchies. Its unobtrusive nature allows content to take center stage, making it a reliable and highly functional choice for contemporary Arabic typography.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <h2 id="alphabet-showcase" className="text-3xl font-bold text-teal-800 mt-12 mb-6">Mada Alphabet Showcase</h2>
+              <Card className="border-teal-200 mb-12 bg-white">
+                <CardHeader>
+                  <CardTitle className="text-xl text-teal-800">Clean & Legible Sans-Serif Forms</CardTitle>
+                  <CardDescription className="text-teal-600">Observe the clear, balanced, and open letterforms of Mada.</CardDescription>
+                </CardHeader>
                 <CardContent className="p-6">
-                  <div 
-                    className="text-center"
-                    style={{ fontFamily: "'Mada', sans-serif", fontSize: "36px", direction: "rtl", lineHeight: 1.8 }}
+                  <div
+                    className="text-center leading-relaxed"
+                    style={{ fontFamily: "'Mada', sans-serif", fontSize: "32px", direction: "rtl" }}
                   >
-                    {ARABIC_ALPHABET}
+                    {ARABIC_ALPHABET_MADA}
                   </div>
                 </CardContent>
               </Card>
-              
-              <h2 id="text-examples" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Text Examples</h2>
-              
-              <Tabs defaultValue="sample1" className="w-full">
-                <TabsList className="grid" style={{ gridTemplateColumns: `repeat(${TEXT_EXAMPLES.length}, 1fr)` }}>
-                  {TEXT_EXAMPLES.map((_, index) => (
-                    <TabsTrigger key={index} value={`sample${index + 1}`}>
+
+              <h2 id="text-examples" className="text-3xl font-bold text-teal-800 mt-12 mb-6">Mada in Action: Text Examples</h2>
+              <Tabs defaultValue={TEXT_EXAMPLES[0].id} className="w-full mb-12">
+                <TabsList className="grid w-full" style={{ gridTemplateColumns: `repeat(${TEXT_EXAMPLES.length}, 1fr)` }}>
+                  {TEXT_EXAMPLES.map((example, index) => (
+                    <TabsTrigger key={example.id} value={example.id} className="data-[state=active]:bg-teal-600 data-[state=active]:text-white">
                       Example {index + 1}
                     </TabsTrigger>
                   ))}
                 </TabsList>
-                
-                {TEXT_EXAMPLES.map((example, index) => (
-                  <TabsContent key={index} value={`sample${index + 1}`}>
-                    <Card className="border-amber-200">
+                {TEXT_EXAMPLES.map((example) => (
+                  <TabsContent key={example.id} value={example.id}>
+                    <Card className="border-teal-200 bg-white">
                       <CardContent className="p-6">
-                        <div 
-                          className="mb-4 text-center"
-                          style={{ fontFamily: "'Mada', sans-serif", fontSize: "32px", direction: "rtl" }}
+                        <div
+                          className="mb-4 text-left whitespace-pre-line md:text-center"
+                          style={{ fontFamily: "'Mada', sans-serif", fontSize: "22px", direction: "rtl", lineHeight: 1.8 }}
                         >
                           {example.text}
                         </div>
-                        <p className="text-center italic text-amber-700 mb-2">{example.translation}</p>
-                        <p className="text-center text-sm text-amber-600">{example.context}</p>
+                        <p className="text-center font-medium text-teal-700 mb-2">{example.translation}</p>
+                        <p className="text-center text-sm text-teal-600">{example.context}</p>
                       </CardContent>
                     </Card>
                   </TabsContent>
                 ))}
               </Tabs>
-              
-              <h2 id="use-cases" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Ideal Use Cases</h2>
-              <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">Branding & Logos:</strong> Its minimalist and modern style is effective for contemporary brand identities.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">UI/UX Design:</strong> Excellent for clear and legible text in applications and websites.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">Web Design:</strong> Well-suited for headlines, subheadings, and body text in modern web layouts.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">Headlines & Display:</strong> Its geometric nature provides a strong visual impact for titles.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">Corporate Communications:</strong> Suitable for reports, presentations, and other corporate materials requiring a clean look.</span>
-                  </li>
-                </ul>
+
+              <h2 id="use-cases" className="text-3xl font-bold text-teal-800 mt-12 mb-6">Ideal Use Cases for Mada</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                {IDEAL_USE_CASES.map((useCase) => (
+                  <Card key={useCase.title} className="border-teal-200 flex bg-white">
+                    <div className="p-6 pr-0 flex items-center">{useCase.icon}</div>
+                    <CardContent className="p-6">
+                      <h3 className="text-lg font-semibold text-teal-800 mb-1">{useCase.title}</h3>
+                      <p className="text-teal-700 text-sm">{useCase.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
-              
-              <h2 id="technical-details" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Technical Details</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Font Format</h3>
-                    <p className="text-amber-700">Available in OpenType (OTF) and TrueType (TTF) formats.</p>
-                    <p className="text-amber-700 mt-2">Supports a broad range of Arabic characters and often Latin counterparts.</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Weights & Styles</h3>
-                    <p className="text-amber-700">Comes in various weights, from light to bold, offering design versatility.</p>
-                  </CardContent>
-                </Card>
+
+              <h2 id="technical-details" className="text-3xl font-bold text-teal-800 mt-12 mb-6">Technical Specifications</h2>
+              <div className="space-y-6 mb-12">
+                {TECHNICAL_DETAILS.map((detail) => (
+                  <Card key={detail.title} className="border-teal-200 bg-white">
+                    <CardHeader>
+                      <CardTitle className="text-xl text-teal-800">{detail.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-lg text-teal-700 mb-1">{detail.value}</p>
+                      {detail.description && <p className="text-sm text-teal-600">{detail.description}</p>}
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
-              
-              <h2 id="try-it-out" className="text-2xl font-bold text-amber-800 mt-10 mb-4">Try Mada in Our Calligraphy Generator</h2>
-              <p className="mb-6">
-                Utilize the Mada font in our Arabic Calligraphy Generator to create designs with a modern, geometric, and minimalist Arabic aesthetic.
-              </p>
-              
-              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-between items-center">
-                <Button asChild variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
-                  <Link href="/fonts">
-                    <ArrowLeft className="mr-2 h-4 w-4" />
-                    Explore More Fonts
-                  </Link>
-                </Button>
-                
-                <Button asChild className="bg-amber-600 hover:bg-amber-700">
-                  <Link href="/?font=Mada">Try Mada in Our Generator</Link>
+
+              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center p-6 bg-teal-50 rounded-lg border border-teal-200">
+                 <h3 className="text-2xl font-semibold text-teal-800 text-center sm:text-left">Design with Mada's Clarity</h3>
+                <Button asChild size="lg" className="bg-teal-600 hover:bg-teal-700 text-white">
+                  <Link href="/?font=Mada">Use Mada in Calligraphy Generator</Link>
                 </Button>
               </div>
-              
-              {/* 相关内容链接 */}
-              <RelatedContent 
-                title="You May Also Like"
+
+              <RelatedContent
+                title="Explore Other Clear & Modern Sans-Serifs"
                 links={getContentSpecificLinks('font', 'mada')}
               />
             </div>
@@ -251,5 +313,3 @@ export default function MadaFontPage() {
     </>
   )
 }
-
-</rewritten_file>

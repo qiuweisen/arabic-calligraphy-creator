@@ -1,66 +1,161 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, BookOpen, Feather, Layers, PenTool, Sparkles, Type, Edit, Palette, Languages } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
 
 export const metadata: Metadata = {
-  title: "Lateef Font | Flowing Nastaliq Style Typography | Arabic Calligraphy",
-  description: "Explore the Lateef font, an Arabic typeface with Nastaliq influences, known for its flowing and elegant script, perfect for poetry and artistic expression.",
-  keywords: "Lateef font, Arabic typography, Nastaliq font, Persian calligraphy, Islamic calligraphy, Arabic fonts, Urdu font",
+  title: "Lateef Font: Graceful Cursive Script for Urdu & Arabic | Arabic Calligraphy",
+  description: "Discover the Lateef font, a beautiful and flowing cursive Arabic script primarily designed for Urdu and other South Asian languages. Ideal for literature, poetry, and elegant designs.",
+  keywords: "Lateef font, Urdu font, cursive Arabic script, SIL International, Arabic calligraphy, Nastaliq style font, South Asian languages font, elegant Arabic typeface, literary Arabic font",
+  openGraph: {
+    title: "Lateef Font: Flowing Elegance for Urdu and Arabic Texts | Arabic Calligraphy Generator",
+    description: "Explore Lateef, a SIL International font renowned for its graceful cursive style, perfect for Urdu, Sindhi, and other Arabic script languages demanding a touch of calligraphic beauty.",
+    images: [
+      {
+        url: "/og-images/lateef-font-og.jpg", // Placeholder - replace with actual image
+        width: 1200,
+        height: 630,
+        alt: "Lateef Font Showcase",
+      },
+    ],
+  },
 }
 
-// Sample alphabet for demonstration
-const ARABIC_ALPHABET = "ا ب پ ت ٹ ث ج چ ح خ د ڈ ذ ر ڑ ز ژ س ش ص ض ط ظ ع غ ف ق ک گ ل م ن ں ه و ی ے"; // Added Urdu specific characters
-
-// Sample text examples for demonstration
 const TEXT_EXAMPLES = [
   {
-    text: "بسم الله الرحمن الرحيم",
-    translation: "In the name of God, the Most Gracious, the Most Merciful",
-    context: "Opening phrase of the Quran"
+    id: "urdu-poetry-ghalib",
+    text: "نقش فریادی ہے کس کی شوخئ تحریر کا", // Naqsh faryādi hai kis kī shōkhī-e taḥrīr kā
+    translation: "Whose playful writing does this image lament?",
+    context: "A famous verse from Ghalib, a renowned Urdu poet. Lateef's cursive style beautifully complements Urdu poetry."
   },
   {
-    text: "شاعری اور ادب",
-    translation: "Poetry and Literature",
-    context: "Urdu context for Nastaliq style"
+    id: "sindhi-proverb",
+    text: "جيڪو لکندو سو پڙهندو", // Jeko likhando so parhando
+    translation: "He who writes, will read.",
+    context: "A Sindhi proverb emphasizing the importance of literacy, rendered clearly in Lateef."
   },
   {
-    text: "خط نستعلیق الجمیل",
-    translation: "Beautiful Nastaliq Script",
-    context: "Descriptive phrase"
+    id: "arabic-greeting-elegant",
+    text: "أطيب التحيات", // Atyab at-tahiyat
+    translation: "Kindest regards",
+    context: "An elegant Arabic greeting where Lateef's flowing nature adds a personal touch."
   },
   {
-    text: "گل و بلبل",
-    translation: "The Rose and the Nightingale",
-    context: "Classic poetic imagery"
+    id: "book-title-literary",
+    text: "ديوان الشعر", // Diwan ash-shi'r
+    translation: "Collection of Poetry",
+    context: "A title for a literary work, where Lateef's artistic style is highly appropriate."
   }
 ];
 
-// Font features to showcase
 const FONT_FEATURES = [
   {
-    title: "Nastaliq Influences",
-    description: "Reflects the characteristics of the Nastaliq script, known for its hanging quality and fluidity, widely used for Persian and Urdu."
+    icon: <Edit className="h-8 w-8 text-amber-600 mb-2" />,
+    title: "Graceful Cursive Forms",
+    description: "Characterized by its flowing, cursive letterforms that emulate a natural handwriting style, often associated with Nastaliq influences."
   },
   {
-    title: "Flowing and Elegant",
-    description: "Features graceful curves and a sense of movement, making it highly suitable for artistic and poetic texts."
+    icon: <Languages className="h-8 w-8 text-amber-600 mb-2" />,
+    title: "Optimized for Urdu & Sindhi",
+    description: "Specifically designed by SIL International to support the needs of Urdu, Sindhi, and other South Asian languages using the Arabic script."
   },
   {
-    title: "Wide Language Support",
-    description: "Often supports Arabic, Persian, Urdu, and other languages that use the Arabic script with Nastaliq features."
+    icon: <Feather className="h-8 w-8 text-amber-600 mb-2" />,
+    title: "Elegant & Artistic",
+    description: "Offers a sophisticated and artistic aesthetic, making it ideal for literary works, poetry, and designs requiring a touch of calligraphic beauty."
   },
   {
-    title: "Artistic Expression",
-    description: "Ideal for calligraphy, titles, and decorative elements where an expressive and traditional aesthetic is desired."
+    icon: <BookOpen className="h-8 w-8 text-amber-600 mb-2" />,
+    title: "Excellent Readability for Target Languages",
+    description: "Ensures clarity and readability for its primary target languages, even with its cursive and connected script style."
+  },
+  {
+    icon: <PenTool className="h-8 w-8 text-amber-600 mb-2" />,
+    title: "Wide Character Set",
+    description: "Includes a comprehensive set of characters and diacritics required for accurate typesetting of Urdu, Sindhi, and related languages."
+  },
+  {
+    icon: <Sparkles className="h-8 w-8 text-amber-600 mb-2" />,
+    title: "Regular & Bold Weights",
+    description: "Available in Regular and Bold weights, allowing for typographic emphasis and hierarchy in text."
   }
 ];
+
+const IDEAL_USE_CASES = [
+  {
+    title: "Urdu & Sindhi Literature",
+    description: "The primary choice for typesetting books, magazines, and digital content in Urdu, Sindhi, and similar languages.",
+    icon: <BookOpen className="h-5 w-5 text-amber-700" />
+  },
+  {
+    title: "Poetry & Calligraphic Art",
+    description: "Its flowing, artistic style beautifully renders poetry and can be used for contemporary calligraphic art pieces.",
+    icon: <Palette className="h-5 w-5 text-amber-700" />
+  },
+  {
+    title: "Personal Correspondence & Invitations",
+    description: "Adds an elegant and personal touch to letters, invitations, and greeting cards.",
+    icon: <Feather className="h-5 w-5 text-amber-700" />
+  },
+  {
+    title: "Cultural & Heritage Projects",
+    description: "Suitable for designs related to the cultural heritage of Urdu and Sindhi speaking regions.",
+    icon: <Layers className="h-5 w-5 text-amber-700" />
+  },
+  {
+    title: "Educational Materials for Target Languages",
+    description: "Can be used in textbooks and learning materials for Urdu, Sindhi, and other languages it supports.",
+    icon: <Type className="h-5 w-5 text-amber-700" />
+  },
+  {
+    title: "Branding with an Artistic Flair",
+    description: "For brands that wish to convey elegance, tradition, and artistry, especially those targeting South Asian communities.",
+    icon: <Sparkles className="h-5 w-5 text-amber-700" />
+  }
+];
+
+const TECHNICAL_DETAILS = [
+  { 
+    title: "Designer/Developer", 
+    value: "SIL International (primarily Jonathan Kew, et al.)",
+    description: "Lateef is a product of SIL International, an organization dedicated to language development and providing resources for minority languages."
+  },
+  { 
+    title: "Foundry/Publisher", 
+    value: "SIL International (Open Source)",
+    description: "Distributed freely under the SIL Open Font License, promoting wide accessibility and use."
+  },
+  { 
+    title: "Primary Language Focus", 
+    value: "Urdu, Sindhi, and other Arabic script languages of South Asia.",
+    description: "Tailored to meet the specific typographic requirements and aesthetic preferences of these language communities."
+  },
+  { 
+    title: "Key OpenType/Graphite Features", 
+    value: "Extensive support for contextual alternates (calt), ligatures (liga, dlig), kerning (kern), and mark positioning (mark, mkmk) to render the cursive script correctly and beautifully.",
+    description: "Leverages advanced font technologies for accurate and fluid script behavior."
+  },
+  { 
+    title: "Unicode Coverage", 
+    value: "Comprehensive coverage for Arabic, Arabic Supplement, and characters needed for target languages.",
+    description: "Ensures that all necessary characters for Urdu, Sindhi, etc., are available and correctly rendered."
+  },
+  {
+    title: "License",
+    value: "SIL Open Font License 1.1 (OFL-1.1)",
+    description: "Allows for free use, modification, and redistribution, fostering its global adoption."
+  }
+];
+
+// Sample alphabet for demonstration - Lateef's beauty is in connected text
+const ARABIC_ALPHABET_LATEEF = "ا ب پ ت ٹ ث ج چ ح خ د ڈ ذ ر ڑ ز ژ س ش ص ض ط ظ ع غ ف ق ک گ ل م ن ں ه و ی ے";
 
 export default function LateefFontPage() {
   return (
@@ -76,171 +171,141 @@ export default function LateefFontPage() {
               </Link>
             </Button>
             
-            <span className="text-xs text-amber-600 font-medium px-2 py-1 bg-amber-50 rounded-full">Nastaliq</span>
-            <h1 className="text-3xl md:text-4xl font-bold text-amber-800 mt-4 mb-2">Lateef Font</h1>
-            <p className="text-lg text-amber-700 mb-8">A flowing font with Nastaliq influences, perfect for poetry</p>
-            
-            <div className="prose prose-amber max-w-none">
-              <div className="mb-8">
-                <div className="rounded-lg overflow-hidden border border-amber-200 mb-4">
-                  <div 
-                    className="bg-amber-50 p-8 flex items-center justify-center"
-                    style={{ fontFamily: "'Lateef', serif", fontSize: "48px", direction: "rtl" }}
-                  >
-                    بسم الله الرحمن الرحيم
+            <Card className="mb-8 border-amber-200 shadow-lg">
+              <CardContent className="p-6 md:p-8">
+                <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center">
+                  <div className="w-full md:w-1/3 flex items-center justify-center rounded-lg bg-gradient-to-br from-amber-100 to-amber-200 p-6 aspect-square">
+                    {/* Using a placeholder text that shows some characteristic connections */}
+                    <div style={{ fontFamily: "'Lateef', cursive", fontSize: "clamp(2.5rem, 12vw, 5rem)", color: "#854d0e", lineHeight: 1.3, direction: 'rtl' }}>
+                      لطیف
+                    </div>
+                  </div>
+                  <div className="w-full md:w-2/3">
+                    <span className="text-xs text-amber-600 font-medium px-2 py-1 bg-amber-50 rounded-full mb-2 inline-block">Cursive (Urdu/Sindhi Focus)</span>
+                    <h1 className="text-4xl md:text-5xl font-bold text-amber-800 mt-1 mb-3">Lateef Font</h1>
+                    <p className="text-lg text-amber-700 mb-6 leading-relaxed">
+                      The Lateef font, from SIL International, offers a gracefully flowing cursive script primarily designed for Urdu, Sindhi, and other South Asian languages using Arabic script. It is celebrated for its elegance and readability in literary and artistic contexts.
+                    </p>
+                    <Button asChild size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
+                      <Link href="/?font=Lateef">Try Lateef in Our Generator</Link>
+                    </Button>
                   </div>
                 </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Origin</h3>
-                    <p className="text-amber-700">Inspired by Nastaliq script, commonly used for Persian and Urdu</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Designer</h3>
-                    <p className="text-amber-700">SIL International (often develops fonts like Lateef)</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Best Uses</h3>
-                    <p className="text-amber-700">Poetry, literary texts, artistic calligraphy, Urdu and Persian content</p>
-                  </CardContent>
-                </Card>
-              </div>
-              
-              <h2 id="history-and-background" className="text-2xl font-bold text-amber-800 mb-4">History and Background</h2>
-              <p>
-                The Lateef font is designed to provide a digital rendering of a script style that has strong influences from Nastaliq. Nastaliq is one of the main calligraphic hands used in writing the Persian script and traditionally the predominant style in Persian calligraphy. It is also widely used for Urdu and other languages of the region. Nastaliq is known for its characteristic sloped baseline and the flowing, elegant connections between letters, giving it a distinctive graceful appearance.
-              </p>
-              <p>
-                Lateef aims to make this beautiful script accessible for digital use, supporting a wide range of characters needed for the languages it serves. It is often favored for its readability and aesthetic appeal in contexts like poetry, literature, and artistic design.
-              </p>
-              
-              <h2 id="distinctive-features" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Distinctive Features</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                {FONT_FEATURES.map((feature, index) => (
-                  <Card key={index} className="border-amber-200">
-                    <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold text-amber-800 mb-2">{feature.title}</h3>
-                      <p className="text-amber-700">{feature.description}</p>
+              </CardContent>
+            </Card>
+            
+            <div className="prose prose-amber max-w-none">
+              <h2 id="distinctive-features" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Distinctive Features of Lateef</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                {FONT_FEATURES.map((feature) => (
+                  <Card key={feature.title} className="border-amber-200 flex flex-col">
+                    <CardHeader className="items-center text-center">
+                      {feature.icon}
+                      <CardTitle className="text-xl text-amber-800">{feature.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-center flex-grow">
+                      <p className="text-amber-700 text-sm">{feature.description}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
-              
-              <h2 id="alphabet-showcase" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Alphabet Showcase</h2>
-              <Card className="border-amber-200 mb-8">
-                <CardContent className="p-6">
-                  <div 
-                    className="text-center"
-                    style={{ fontFamily: "'Lateef', serif", fontSize: "36px", direction: "rtl", lineHeight: 1.8 }}
-                  >
-                    {ARABIC_ALPHABET}
-                  </div>
+
+              <h2 id="history-and-background" className="text-3xl font-bold text-amber-800 mt-12 mb-6">The Story of Lateef: Serving South Asian Languages</h2>
+              <Card className="border-amber-200 mb-12">
+                <CardContent className="p-6 md:p-8 space-y-4 text-amber-700 leading-relaxed">
+                  <p>
+                    The Lateef font is a significant contribution by <strong className="text-amber-800">SIL International</strong>, an organization renowned for its work in linguistic research and font development for minority languages. "Lateef" (لطیف) itself is an Arabic word meaning "gentle," "graceful," or "subtle," aptly reflecting the font's aesthetic qualities.
+                  </p>
+                  <p>
+                    Lateef was specifically developed to address the typographic needs of languages like <strong className="text-amber-800">Urdu and Sindhi</strong>, which utilize the Arabic script with additional characters and distinct calligraphic traditions, often influenced by Nastaliq and other cursive styles. While not a pure Nastaliq font (which has very complex rendering rules), Lateef provides a highly readable and aesthetically pleasing cursive style that is well-suited for extended text in these languages.
+                  </p>
+                  <p>
+                    The font incorporates advanced OpenType and Graphite features to handle the complex contextual shaping and ligatures required for connected cursive scripts. Its development ensures that literary works, educational materials, and digital content in these languages can be presented with clarity and cultural appropriateness. As an open-source font, Lateef has become a valuable resource for publishers, designers, and users in these language communities.
+                  </p>
                 </CardContent>
               </Card>
               
-              <h2 id="text-examples" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Text Examples</h2>
+              <h2 id="alphabet-showcase" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Lateef Alphabet Showcase (Urdu/Sindhi Context)</h2>
+              <Card className="border-amber-200 mb-12">
+                <CardHeader>
+                  <CardTitle className="text-xl text-amber-800">Characteristic Letterforms & Connections</CardTitle>
+                  <CardDescription className="text-amber-600">Observe the flowing, cursive nature of Lateef, particularly suited for Urdu and Sindhi characters.</CardDescription>
+                </CardHeader>
+                <CardContent className="p-6">
+                  <div 
+                    className="text-center leading-loose"
+                    style={{ fontFamily: "'Lateef', cursive", fontSize: "36px", direction: "rtl" }}
+                  >
+                    {ARABIC_ALPHABET_LATEEF}
+                  </div>
+                  <p className="text-sm text-amber-600 mt-2 text-center">Note: The true beauty of Lateef is seen in connected text where its cursive ligatures and contextual forms come alive.</p>
+                </CardContent>
+              </Card>
               
-              <Tabs defaultValue="sample1" className="w-full">
-                <TabsList className="grid" style={{ gridTemplateColumns: `repeat(${TEXT_EXAMPLES.length}, 1fr)` }}>
-                  {TEXT_EXAMPLES.map((_, index) => (
-                    <TabsTrigger key={index} value={`sample${index + 1}`}>
+              <h2 id="text-examples" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Lateef in Action: Text Examples</h2>
+              <Tabs defaultValue={TEXT_EXAMPLES[0].id} className="w-full mb-12">
+                <TabsList className="grid w-full" style={{ gridTemplateColumns: `repeat(${TEXT_EXAMPLES.length}, 1fr)` }}>
+                  {TEXT_EXAMPLES.map((example, index) => (
+                    <TabsTrigger key={example.id} value={example.id}>
                       Example {index + 1}
                     </TabsTrigger>
                   ))}
                 </TabsList>
-                
-                {TEXT_EXAMPLES.map((example, index) => (
-                  <TabsContent key={index} value={`sample${index + 1}`}>
+                {TEXT_EXAMPLES.map((example) => (
+                  <TabsContent key={example.id} value={example.id}>
                     <Card className="border-amber-200">
                       <CardContent className="p-6">
                         <div 
-                          className="mb-4 text-center"
-                          style={{ fontFamily: "'Lateef', serif", fontSize: "32px", direction: "rtl" }}
+                          className="mb-4 text-center whitespace-pre-line"
+                          style={{ fontFamily: "'Lateef', cursive", fontSize: "30px", direction: "rtl", lineHeight: 1.8 }}
                         >
                           {example.text}
                         </div>
-                        <p className="text-center italic text-amber-700 mb-2">{example.translation}</p>
+                        <p className="text-center font-medium text-amber-700 mb-2">{example.translation}</p>
                         <p className="text-center text-sm text-amber-600">{example.context}</p>
                       </CardContent>
                     </Card>
                   </TabsContent>
                 ))}
               </Tabs>
-              
-              <h2 id="use-cases" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Ideal Use Cases</h2>
-              <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">Poetry & Literature:</strong> Its elegance is perfectly suited for rendering classical and contemporary poetry and literary works.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">Urdu & Persian Texts:</strong> Ideal for any content written in Urdu or Persian, maintaining traditional typographic aesthetics.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">Artistic Calligraphy:</strong> Provides a solid base for digital calligraphic art with a Nastaliq feel.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">Titles & Headings:</strong> Can be used for expressive titles in publications and media.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-amber-600 mr-2">•</span>
-                    <span><strong className="text-amber-800">Cultural & Heritage Projects:</strong> Suitable for projects that aim to preserve or showcase Perso-Arabic cultural heritage.</span>
-                  </li>
-                </ul>
+
+              <h2 id="use-cases" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Ideal Use Cases for Lateef</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                {IDEAL_USE_CASES.map((useCase) => (
+                  <Card key={useCase.title} className="border-amber-200 flex">
+                    <div className="p-6 pr-0 flex items-center">{useCase.icon}</div>
+                    <CardContent className="p-6">
+                      <h3 className="text-lg font-semibold text-amber-800 mb-1">{useCase.title}</h3>
+                      <p className="text-amber-700 text-sm">{useCase.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
               
-              <h2 id="technical-details" className="text-2xl font-bold text-amber-800 mt-8 mb-4">Technical Details</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Font Format</h3>
-                    <p className="text-amber-700">Typically OpenType (OTF) or TrueType (TTF).</p>
-                    <p className="text-amber-700 mt-2">Often includes advanced OpenType features for ligatures and contextual alternates common in Nastaliq.</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-amber-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-amber-800 mb-2">Weights & Styles</h3>
-                    <p className="text-amber-700">Primarily available in a regular weight, as Nastaliq traditionally doesn't have multiple weights like Naskh or Kufi.</p>
-                  </CardContent>
-                </Card>
+              <h2 id="technical-details" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Technical Specifications</h2>
+              <div className="space-y-6 mb-12">
+                {TECHNICAL_DETAILS.map((detail) => (
+                  <Card key={detail.title} className="border-amber-200">
+                    <CardHeader>
+                      <CardTitle className="text-xl text-amber-800">{detail.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-lg text-amber-700 mb-1">{detail.value}</p>
+                      {detail.description && <p className="text-sm text-amber-600">{detail.description}</p>}
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
               
-              <h2 id="try-it-out" className="text-2xl font-bold text-amber-800 mt-10 mb-4">Try Lateef in Our Calligraphy Generator</h2>
-              <p className="mb-6">
-                Discover the flowing beauty of the Lateef font using our Arabic Calligraphy Generator. Create elegant Nastaliq-style calligraphy for your artistic and literary projects.
-              </p>
-              
-              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-between items-center">
-                <Button asChild variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
-                  <Link href="/fonts">
-                    <ArrowLeft className="mr-2 h-4 w-4" />
-                    Explore More Fonts
-                  </Link>
-                </Button>
-                
-                <Button asChild className="bg-amber-600 hover:bg-amber-700">
-                  <Link href="/?font=Lateef">Try Lateef in Our Generator</Link>
+              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center p-6 bg-amber-50 rounded-lg border border-amber-200">
+                 <h3 className="text-2xl font-semibold text-amber-800 text-center sm:text-left">Experience Lateef's Graceful Flow</h3>
+                <Button asChild size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
+                  <Link href="/?font=Lateef">Use Lateef in Calligraphy Generator</Link>
                 </Button>
               </div>
               
-              {/* 相关内容链接 */}
               <RelatedContent 
-                title="You May Also Like"
+                title="Explore Similar Cursive & Artistic Fonts"
                 links={getContentSpecificLinks('font', 'lateef')}
               />
             </div>
