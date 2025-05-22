@@ -6,6 +6,7 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "10 Famous Arabic Calligraphers You Should Know | Masters of the Art",
@@ -32,11 +33,14 @@ export default function FamousArabicCalligraphersPage() {
             <p className="text-sm text-muted-foreground mb-8">Published on August 28, 2023</p>
             
             <div className="prose prose-amber max-w-none">
-              <div className="mb-8 overflow-hidden rounded-lg border border-amber-200">
-                <img 
-                  src="/placeholder.svg?height=400&width=800" 
+              <div className="relative mb-8 overflow-hidden rounded-lg border border-amber-200 h-[300px] md:h-[400px]">
+                <Image 
+                  src="/placeholder.svg" 
                   alt="Collage of famous Arabic calligraphy works from different masters" 
-                  className="w-full h-[300px] md:h-[400px] object-cover"
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  className="rounded-lg"
+                  sizes="(max-width: 768px) 100vw, 800px"
                 />
               </div>
               
@@ -50,11 +54,14 @@ export default function FamousArabicCalligraphersPage() {
                 <CardContent className="p-6">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3">
-                      <div className="rounded-lg overflow-hidden border border-amber-200 mb-4">
-                        <img 
-                          src="/placeholder.svg?height=250&width=250" 
+                      <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
+                        <Image 
+                          src="/placeholder.svg" 
                           alt="Portrait or representation of Ibn Muqla" 
-                          className="w-full aspect-square object-cover"
+                          fill
+                          style={{ objectFit: 'cover' }}
+                          className="rounded-lg"
+                          sizes="(max-width: 768px) 33vw, 250px"
                         />
                       </div>
                       <h3 className="text-xl font-bold text-amber-800 mb-1">Ibn Muqla</h3>
@@ -87,11 +94,14 @@ export default function FamousArabicCalligraphersPage() {
                 <CardContent className="p-6">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3">
-                      <div className="rounded-lg overflow-hidden border border-amber-200 mb-4">
-                        <img 
-                          src="/placeholder.svg?height=250&width=250" 
+                      <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
+                        <Image 
+                          src="/placeholder.svg" 
                           alt="Manuscript by Ibn al-Bawwab" 
-                          className="w-full aspect-square object-cover"
+                          fill
+                          style={{ objectFit: 'cover' }}
+                          className="rounded-lg"
+                          sizes="(max-width: 768px) 33vw, 250px"
                         />
                       </div>
                       <h3 className="text-xl font-bold text-amber-800 mb-1">Ibn al-Bawwab</h3>
@@ -124,11 +134,14 @@ export default function FamousArabicCalligraphersPage() {
                 <CardContent className="p-6">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3">
-                      <div className="rounded-lg overflow-hidden border border-amber-200 mb-4">
-                        <img 
-                          src="/placeholder.svg?height=250&width=250" 
-                          alt="Calligraphy by Yaqut al-Musta'simi" 
-                          className="w-full aspect-square object-cover"
+                      <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
+                        <Image 
+                          src="/placeholder.svg" 
+                          alt="Calligraphy by Yaqut al-Musta\'simi" 
+                          fill
+                          style={{ objectFit: 'cover' }}
+                          className="rounded-lg"
+                          sizes="(max-width: 768px) 33vw, 250px"
                         />
                       </div>
                       <h3 className="text-xl font-bold text-amber-800 mb-1">Yaqut al-Musta'simi</h3>
@@ -163,11 +176,14 @@ export default function FamousArabicCalligraphersPage() {
                 <CardContent className="p-6">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3">
-                      <div className="rounded-lg overflow-hidden border border-amber-200 mb-4">
-                        <img 
-                          src="/placeholder.svg?height=250&width=250" 
+                      <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
+                        <Image 
+                          src="/placeholder.svg" 
                           alt="Calligraphy by Sheikh Hamdullah" 
-                          className="w-full aspect-square object-cover"
+                          fill
+                          style={{ objectFit: 'cover' }}
+                          className="rounded-lg"
+                          sizes="(max-width: 768px) 33vw, 250px"
                         />
                       </div>
                       <h3 className="text-xl font-bold text-amber-800 mb-1">Sheikh Hamdullah</h3>
@@ -200,11 +216,14 @@ export default function FamousArabicCalligraphersPage() {
                 <CardContent className="p-6">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3">
-                      <div className="rounded-lg overflow-hidden border border-amber-200 mb-4">
-                        <img 
-                          src="/placeholder.svg?height=250&width=250" 
+                      <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
+                        <Image 
+                          src="/placeholder.svg" 
                           alt="Calligraphy by Hafiz Osman" 
-                          className="w-full aspect-square object-cover"
+                          fill
+                          style={{ objectFit: 'cover' }}
+                          className="rounded-lg"
+                          sizes="(max-width: 768px) 33vw, 250px"
                         />
                       </div>
                       <h3 className="text-xl font-bold text-amber-800 mb-1">Hafiz Osman</h3>
@@ -237,11 +256,14 @@ export default function FamousArabicCalligraphersPage() {
                 <CardContent className="p-6">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3">
-                      <div className="rounded-lg overflow-hidden border border-amber-200 mb-4">
-                        <img 
-                          src="/placeholder.svg?height=250&width=250" 
+                      <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
+                        <Image 
+                          src="/placeholder.svg" 
                           alt="Calligraphy by Mustafa Rakim" 
-                          className="w-full aspect-square object-cover"
+                          fill
+                          style={{ objectFit: 'cover' }}
+                          className="rounded-lg"
+                          sizes="(max-width: 768px) 33vw, 250px"
                         />
                       </div>
                       <h3 className="text-xl font-bold text-amber-800 mb-1">Mustafa Rakim</h3>
@@ -276,11 +298,14 @@ export default function FamousArabicCalligraphersPage() {
                 <CardContent className="p-6">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3">
-                      <div className="rounded-lg overflow-hidden border border-amber-200 mb-4">
-                        <img 
-                          src="/placeholder.svg?height=250&width=250" 
+                      <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
+                        <Image 
+                          src="/placeholder.svg" 
                           alt="Calligraphy by Hamid Aytac" 
-                          className="w-full aspect-square object-cover"
+                          fill
+                          style={{ objectFit: 'cover' }}
+                          className="rounded-lg"
+                          sizes="(max-width: 768px) 33vw, 250px"
                         />
                       </div>
                       <h3 className="text-xl font-bold text-amber-800 mb-1">Hamid Aytac</h3>
@@ -313,11 +338,14 @@ export default function FamousArabicCalligraphersPage() {
                 <CardContent className="p-6">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3">
-                      <div className="rounded-lg overflow-hidden border border-amber-200 mb-4">
-                        <img 
-                          src="/placeholder.svg?height=250&width=250" 
+                      <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
+                        <Image 
+                          src="/placeholder.svg" 
                           alt="Artwork by Hassan Massoudy" 
-                          className="w-full aspect-square object-cover"
+                          fill
+                          style={{ objectFit: 'cover' }}
+                          className="rounded-lg"
+                          sizes="(max-width: 768px) 33vw, 250px"
                         />
                       </div>
                       <h3 className="text-xl font-bold text-amber-800 mb-1">Hassan Massoudy</h3>
@@ -350,11 +378,14 @@ export default function FamousArabicCalligraphersPage() {
                 <CardContent className="p-6">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3">
-                      <div className="rounded-lg overflow-hidden border border-amber-200 mb-4">
-                        <img 
-                          src="/placeholder.svg?height=250&width=250" 
+                      <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
+                        <Image 
+                          src="/placeholder.svg" 
                           alt="Artwork by Hasan Celebi" 
-                          className="w-full aspect-square object-cover"
+                          fill
+                          style={{ objectFit: 'cover' }}
+                          className="rounded-lg"
+                          sizes="(max-width: 768px) 33vw, 250px"
                         />
                       </div>
                       <h3 className="text-xl font-bold text-amber-800 mb-1">Hasan Çelebi</h3>
@@ -387,11 +418,14 @@ export default function FamousArabicCalligraphersPage() {
                 <CardContent className="p-6">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3">
-                      <div className="rounded-lg overflow-hidden border border-amber-200 mb-4">
-                        <img 
-                          src="/placeholder.svg?height=250&width=250" 
+                      <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
+                        <Image 
+                          src="/placeholder.svg" 
                           alt="Artwork by eL Seed" 
-                          className="w-full aspect-square object-cover"
+                          fill
+                          style={{ objectFit: 'cover' }}
+                          className="rounded-lg"
+                          sizes="(max-width: 768px) 33vw, 250px"
                         />
                       </div>
                       <h3 className="text-xl font-bold text-amber-800 mb-1">eL Seed</h3>

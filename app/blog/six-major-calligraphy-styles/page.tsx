@@ -6,6 +6,7 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Understanding the Six Major Arabic Calligraphy Styles | Arabic Calligraphy Guide",
@@ -32,11 +33,14 @@ export default function SixMajorCalligraphyStylesPage() {
             <p className="text-sm text-muted-foreground mb-8">Published on June 3, 2023</p>
             
             <div className="prose prose-amber max-w-none">
-              <div className="mb-8 overflow-hidden rounded-lg border border-amber-200">
-                <img 
-                  src="/placeholder.svg?height=400&width=800" 
+              <div className="relative mb-8 overflow-hidden rounded-lg border border-amber-200 h-[300px] md:h-[400px]">
+                <Image 
+                  src="/placeholder.svg" 
                   alt="Six major Arabic calligraphy styles displayed in a decorative arrangement" 
-                  className="w-full h-[300px] md:h-[400px] object-cover"
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  className="rounded-lg"
+                  sizes="(max-width: 768px) 100vw, 800px"
                 />
               </div>
               

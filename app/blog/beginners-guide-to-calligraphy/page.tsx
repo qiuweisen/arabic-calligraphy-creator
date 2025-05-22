@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Beginner's Guide to Arabic Calligraphy | Start Your Calligraphy Journey",
@@ -31,11 +32,14 @@ export default function BeginnersGuideToCalligraphyPage() {
             <p className="text-sm text-muted-foreground mb-8">Published on September 10, 2023</p>
             
             <div className="prose prose-amber max-w-none">
-              <div className="mb-8 overflow-hidden rounded-lg border border-amber-200">
-                <img 
-                  src="/placeholder.svg?height=400&width=800" 
+              <div className="relative mb-8 overflow-hidden rounded-lg border border-amber-200 h-[300px] md:h-[400px]">
+                <Image 
+                  src="/placeholder.svg" 
                   alt="Arabic calligraphy tools including reed pens, ink, and practice pages" 
-                  className="w-full h-[300px] md:h-[400px] object-cover"
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  className="rounded-lg"
+                  sizes="(max-width: 768px) 100vw, 800px"
                 />
               </div>
               
@@ -111,11 +115,16 @@ export default function BeginnersGuideToCalligraphyPage() {
               </ul>
               
               <figure className="my-8">
-                <img 
-                  src="/placeholder.svg?height=200&width=600" 
-                  alt="Naskh style Arabic alphabet with basic forms" 
-                  className="w-full rounded-lg border border-amber-200"
-                />
+                <div className="relative w-full aspect-[16/9] rounded-lg border border-amber-200 overflow-hidden">
+                  <Image 
+                    src="/placeholder.svg" 
+                    alt="Naskh style Arabic alphabet with basic forms" 
+                    fill
+                    style={{ objectFit: 'contain' }}
+                    className="rounded-lg"
+                    sizes="(max-width: 768px) 100vw, 600px"
+                  />
+                </div>
                 <figcaption className="text-sm text-center text-muted-foreground mt-2">
                   The Arabic alphabet written in Naskh style, showing basic letter forms
                 </figcaption>

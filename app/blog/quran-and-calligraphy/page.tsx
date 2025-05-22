@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "The Quran and Arabic Calligraphy: A Sacred Connection | Islamic Art",
@@ -31,11 +32,14 @@ export default function QuranAndCalligraphyPage() {
             <p className="text-sm text-muted-foreground mb-8">Published on October 5, 2023</p>
             
             <div className="prose prose-amber max-w-none">
-              <div className="mb-8 overflow-hidden rounded-lg border border-amber-200">
-                <img 
-                  src="/placeholder.svg?height=400&width=800" 
+              <div className="relative mb-8 overflow-hidden rounded-lg border border-amber-200 h-[300px] md:h-[400px]">
+                <Image 
+                  src="/placeholder.svg" 
                   alt="Illuminated Quranic manuscript with elaborate calligraphy and gold leaf decoration" 
-                  className="w-full h-[300px] md:h-[400px] object-cover"
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  className="rounded-lg"
+                  sizes="(max-width: 768px) 100vw, 800px"
                 />
               </div>
               
@@ -113,11 +117,16 @@ export default function QuranAndCalligraphyPage() {
               </ul>
               
               <figure className="my-8">
-                <img 
-                  src="/placeholder.svg?height=300&width=600" 
-                  alt="Evolution of Quranic scripts from early Kufic to Ottoman styles" 
-                  className="w-full rounded-lg border border-amber-200"
-                />
+                <div className="relative w-full aspect-[16/9] rounded-lg border border-amber-200 overflow-hidden">
+                  <Image 
+                    src="/placeholder.svg" 
+                    alt="Evolution of Quranic scripts from early Kufic to Ottoman styles" 
+                    fill
+                    style={{ objectFit: 'contain' }}
+                    className="rounded-lg"
+                    sizes="(max-width: 768px) 100vw, 600px"
+                  />
+                </div>
                 <figcaption className="text-sm text-center text-muted-foreground mt-2">
                   Evolution of major calligraphic styles used in Quranic manuscripts
                 </figcaption>
@@ -208,11 +217,16 @@ export default function QuranAndCalligraphyPage() {
               </ul>
               
               <figure className="my-8">
-                <img 
-                  src="/placeholder.svg?height=300&width=600" 
-                  alt="Interior of a mosque showing Quranic calligraphy integrated into the architecture" 
-                  className="w-full rounded-lg border border-amber-200"
-                />
+                <div className="relative w-full aspect-[16/9] rounded-lg border border-amber-200 overflow-hidden">
+                  <Image 
+                    src="/placeholder.svg" 
+                    alt="Interior of a mosque showing Quranic calligraphy integrated into the architecture" 
+                    fill
+                    style={{ objectFit: 'contain' }}
+                    className="rounded-lg"
+                    sizes="(max-width: 768px) 100vw, 600px"
+                  />
+                </div>
                 <figcaption className="text-sm text-center text-muted-foreground mt-2">
                   Quranic calligraphy integrated into mosque architecture, creating a space defined by sacred text
                 </figcaption>

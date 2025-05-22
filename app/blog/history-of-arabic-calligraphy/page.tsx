@@ -6,6 +6,7 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "The Rich History of Arabic Calligraphy | Origins to Modern Era",
@@ -44,11 +45,14 @@ export default function HistoryOfArabicCalligraphyPage() {
             <p className="text-sm text-muted-foreground mb-8">Published on May 15, 2023</p>
             
             <div className="prose prose-amber max-w-none">
-              <div className="mb-8 overflow-hidden rounded-lg border border-amber-200">
-                <img 
-                  src="/placeholder.svg?height=400&width=800" 
+              <div className="relative mb-8 overflow-hidden rounded-lg border border-amber-200 h-[300px] md:h-[400px]">
+                <Image 
+                  src="/historical-manuscript-with-kufic-script.png" 
                   alt="Historical Arabic calligraphy manuscript showing ornate Kufic script" 
-                  className="w-full h-[300px] md:h-[400px] object-cover"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  className="rounded-lg"
+                  sizes="(max-width: 768px) 100vw, 800px"
                 />
               </div>
               
@@ -103,11 +107,16 @@ export default function HistoryOfArabicCalligraphyPage() {
               </p>
               
               <figure className="my-8">
-                <img 
-                  src="/placeholder.svg?height=300&width=600" 
-                  alt="Comparison of different Arabic calligraphy styles showing Naskh, Thuluth, and Kufic scripts" 
-                  className="w-full rounded-lg border border-amber-200"
-                />
+                <div className="relative w-full aspect-[16/9] rounded-lg border border-amber-200 overflow-hidden">
+                  <Image 
+                    src="/comparison-of-different-arabic-calligraphy-styles.png" 
+                    alt="Comparison of different Arabic calligraphy styles showing Naskh, Thuluth, and Kufic scripts" 
+                    fill
+                    style={{ objectFit: 'contain' }}
+                    className="rounded-lg"
+                    sizes="(max-width: 768px) 100vw, 600px"
+                  />
+                </div>
                 <figcaption className="text-sm text-center text-muted-foreground mt-2">
                   Comparison of three major historical calligraphy styles: Kufic (top), Thuluth (middle), and Naskh (bottom)
                 </figcaption>
