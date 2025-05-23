@@ -47,7 +47,7 @@ export default function HistoryOfArabicCalligraphyPage() {
             <div className="prose prose-amber max-w-none">
               <div className="relative mb-8 overflow-hidden rounded-lg border border-amber-200 h-[300px] md:h-[400px]">
                 <Image 
-                  src="/historical-manuscript-with-kufic-script.png" 
+                  src="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/historical-manuscript-with-kufic-script.png" 
                   alt="Historical Arabic calligraphy manuscript showing ornate Kufic script" 
                   fill
                   style={{ objectFit: 'cover' }}
@@ -109,7 +109,7 @@ export default function HistoryOfArabicCalligraphyPage() {
               <figure className="my-8">
                 <div className="relative w-full aspect-[16/9] rounded-lg border border-amber-200 overflow-hidden">
                   <Image 
-                    src="/comparison-of-different-arabic-calligraphy-styles.png" 
+                    src="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/comparison-of-different-arabic-calligraphy-styles.png" 
                     alt="Comparison of different Arabic calligraphy styles showing Naskh, Thuluth, and Kufic scripts" 
                     fill
                     style={{ objectFit: 'contain' }}

@@ -34,7 +34,7 @@ export default function BeginnersGuideToCalligraphyPage() {
             <div className="prose prose-amber max-w-none">
               <div className="relative mb-8 overflow-hidden rounded-lg border border-amber-200 h-[300px] md:h-[400px]">
                 <Image 
-                  src="/arabic-calligraphy-tools-including-reed-pens.png" 
+                  src="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/arabic-calligraphy-tools-including-reed-pens.png" 
                   alt="Arabic calligraphy tools including reed pens, ink, and practice pages" 
                   fill
                   style={{ objectFit: 'contain' }}
@@ -117,7 +117,7 @@ export default function BeginnersGuideToCalligraphyPage() {
               <figure className="my-8">
                 <div className="relative w-full aspect-[16/9] rounded-lg border border-amber-200 overflow-hidden">
                   <Image 
-                    src="/naskh-style-arabic-alphabet-with-basic-forms.png" 
+                    src="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/naskh-style-arabic-alphabet-with-basic-forms.png" 
                     alt="Naskh style Arabic alphabet with basic forms" 
                     fill
                     style={{ objectFit: 'contain' }}

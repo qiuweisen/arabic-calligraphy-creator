@@ -35,7 +35,7 @@ export default function FamousArabicCalligraphersPage() {
             <div className="prose prose-amber max-w-none">
               <div className="relative mb-8 overflow-hidden rounded-lg border border-amber-200 h-[300px] md:h-[400px]">
                 <Image 
-                  src="/arabic-calligraphy-artistic-collage.png" 
+                  src="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/arabic-calligraphy-artistic-collage.png" 
                   alt="Collage of famous Arabic calligraphy works from different masters" 
                   fill
                   style={{ objectFit: 'contain' }}
@@ -56,7 +56,7 @@ export default function FamousArabicCalligraphersPage() {
                     <div className="md:w-1/3">
                       <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
                         <Image 
-                          src="/ibn-muqla-calligraphy-close-up.png" 
+                          src="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/ibn-muqla-calligraphy-close-up.png" 
                           alt="Portrait or representation of Ibn Muqla" 
                           fill
                           style={{ objectFit: 'cover' }}
@@ -96,7 +96,7 @@ export default function FamousArabicCalligraphersPage() {
                     <div className="md:w-1/3">
                       <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
                         <Image 
-                          src="/ibn-al-bawwab-quran-manuscript.png" 
+                          src="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/ibn-al-bawwab-quran-manuscript.png" 
                           alt="Manuscript by Ibn al-Bawwab" 
                           fill
                           style={{ objectFit: 'cover' }}
@@ -136,7 +136,7 @@ export default function FamousArabicCalligraphersPage() {
                     <div className="md:w-1/3">
                       <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
                         <Image 
-                          src="/calligraphy-by-yaqut-al-mustasimi.png" 
+                          src="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/calligraphy-by-yaqut-al-mustasimi.png" 
                           alt="Calligraphy by Yaqut al-Musta\'simi" 
                           fill
                           style={{ objectFit: 'cover' }}
@@ -178,7 +178,7 @@ export default function FamousArabicCalligraphersPage() {
                     <div className="md:w-1/3">
                       <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
                         <Image 
-                          src="/calligraphy-by-sheikh-hamdullah.png" 
+                          src="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/calligraphy-by-sheikh-hamdullah.png" 
                           alt="Calligraphy by Sheikh Hamdullah" 
                           fill
                           style={{ objectFit: 'cover' }}
@@ -218,7 +218,7 @@ export default function FamousArabicCalligraphersPage() {
                     <div className="md:w-1/3">
                       <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
                         <Image 
-                          src="/calligraphy-by-hafiz-osman.png" 
+                          src="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/calligraphy-by-hafiz-osman.png" 
                           alt="Calligraphy by Hafiz Osman" 
                           fill
                           style={{ objectFit: 'cover' }}
@@ -258,7 +258,7 @@ export default function FamousArabicCalligraphersPage() {
                     <div className="md:w-1/3">
                       <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
                         <Image 
-                          src="/calligraphy-by-mustafa-rakim.png" 
+                          src="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/calligraphy-by-mustafa-rakim.png" 
                           alt="Calligraphy by Mustafa Rakim" 
                           fill
                           style={{ objectFit: 'cover' }}
@@ -300,7 +300,7 @@ export default function FamousArabicCalligraphersPage() {
                     <div className="md:w-1/3">
                       <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
                         <Image 
-                          src="/calligraphy-by-hamid-aytac.png" 
+                          src="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/calligraphy-by-hamid-aytac.png" 
                           alt="Calligraphy by Hamid Aytac" 
                           fill
                           style={{ objectFit: 'cover' }}
@@ -340,7 +340,7 @@ export default function FamousArabicCalligraphersPage() {
                     <div className="md:w-1/3">
                       <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
                         <Image 
-                          src="/artwork-by-hassan-massoudy.png" 
+                          src="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/artwork-by-hassan-massoudy.png" 
                           alt="Artwork by Hassan Massoudy" 
                           fill
                           style={{ objectFit: 'cover' }}
@@ -380,7 +380,7 @@ export default function FamousArabicCalligraphersPage() {
                     <div className="md:w-1/3">
                       <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
                         <Image 
-                          src="/artwork-by-hasan-celebi.png" 
+                          src="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/artwork-by-hasan-celebi.png" 
                           alt="Artwork by Hasan Celebi" 
                           fill
                           style={{ objectFit: 'cover' }}
@@ -420,7 +420,7 @@ export default function FamousArabicCalligraphersPage() {
                     <div className="md:w-1/3">
                       <div className="relative rounded-lg overflow-hidden border border-amber-200 mb-4 aspect-square">
                         <Image 
-                          src="/artwork-by-el-seed.png" 
+                          src="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/artwork-by-el-seed.png" 
                           alt="Artwork by eL Seed" 
                           fill
                           style={{ objectFit: 'cover' }}

@@ -35,7 +35,7 @@ export default function SixMajorCalligraphyStylesPage() {
             <div className="prose prose-amber max-w-none">
               <div className="relative mb-8 overflow-hidden rounded-lg border border-amber-200 h-[300px] md:h-[400px]">
                 <Image 
-                  src="/major-arabic-calligraphy-styles-displayed-in-a-decorative-arrangement.png" 
+                  src="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/major-arabic-calligraphy-styles-displayed-in-a-decorative-arrangement.png" 
                   alt="Six major Arabic calligraphy styles displayed in a decorative arrangement" 
                   fill
                   style={{ objectFit: 'contain' }}
