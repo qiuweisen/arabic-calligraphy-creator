@@ -18,7 +18,7 @@ const blogPosts = [
     title: "The Rich History of Arabic Calligraphy",
     description: "Explore the origins and development of Arabic calligraphy from the 7th century to modern times.",
     date: "May 15, 2023",
-    image: "/placeholder.svg?height=200&width=400",
+    image: "/historical-manuscript-with-kufic-script.png",
     category: "History",
   },
   {
@@ -26,7 +26,7 @@ const blogPosts = [
     title: "Understanding the Six Major Arabic Calligraphy Styles",
     description: "A detailed guide to Naskh, Thuluth, Diwani, Kufi, Riq'a, and Nastaliq calligraphy styles.",
     date: "June 3, 2023",
-    image: "/placeholder.svg?height=200&width=400",
+    image: "/comparison-of-different-arabic-calligraphy-styles.png",
     category: "Styles",
   },
   {
@@ -34,7 +34,7 @@ const blogPosts = [
     title: "Modern Arabic Typography in Digital Design",
     description: "How traditional Arabic calligraphy influences contemporary digital typography and design.",
     date: "July 12, 2023",
-    image: "/placeholder.svg?height=200&width=400",
+    image: "/website-with-arabic-typography.png",
     category: "Digital",
   },
   {
@@ -42,7 +42,7 @@ const blogPosts = [
     title: "10 Famous Arabic Calligraphers You Should Know",
     description: "Discover the masters of Arabic calligraphy and their significant contributions to the art form.",
     date: "August 28, 2023",
-    image: "/placeholder.svg?height=200&width=400",
+    image: "/arabic-calligraphy-artistic-collage.png",
     category: "Artists",
   },
   {
@@ -50,7 +50,7 @@ const blogPosts = [
     title: "Beginner's Guide to Arabic Calligraphy",
     description: "Essential tips, tools, and techniques for those starting their journey in Arabic calligraphy.",
     date: "September 10, 2023",
-    image: "/placeholder.svg?height=200&width=400",
+    image: "/arabic-calligraphy-tools-including-reed-pens.png",
     category: "Tutorials",
   },
   {
@@ -58,7 +58,7 @@ const blogPosts = [
     title: "The Quran and Arabic Calligraphy: A Sacred Connection",
     description: "Exploring the spiritual dimension of calligraphy in Islamic sacred texts.",
     date: "October 5, 2023",
-    image: "/placeholder.svg?height=200&width=400",
+    image: "/placeholder.svg",
     category: "Religion",
   },
 ]
