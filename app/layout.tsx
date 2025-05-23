@@ -5,6 +5,7 @@ import Script from "next/script"
 import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ScrollToTop } from "@/components/scroll-to-top"
+import { CssLoader } from "@/components/css-loader"
 
 // LCP 元素和UI使用的字体，必须预加载
 const inter = Inter({ subsets: ["latin"], display: 'swap', variable: "--font-inter", preload: true })
@@ -52,6 +53,7 @@ export default function RootLayout({
           {children}
           <Toaster />
           <ScrollToTop />
+          <CssLoader />
         </ThemeProvider>
         <Script
           strategy="afterInteractive"

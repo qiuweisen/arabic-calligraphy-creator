@@ -1,3 +1,4 @@
+/* 关键CSS：首屏渲染必需的基础样式 */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

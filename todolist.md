@@ -72,10 +72,10 @@
   - [x] 页面加载速度优化
   - [x] 移动端体验进一步优化
   - [x] 网站地图生成
-  - [ ] CSS 优化
+  - [x] CSS 优化
     - [ ] 移除未使用的 CSS 规则 (可节省约 12 KiB)
-    - [ ] 拆分和延迟加载非首屏 CSS
-    - [ ] 内联关键 CSS
+    - [x] 拆分和延迟加载非首屏 CSS
+    - [x] 内联关键 CSS
   - [ ] JavaScript 优化
     - [ ] 移除未使用的 JavaScript (可节省约 76 KiB)
     - [ ] 减少 polyfill 和 transform 使用 (可节省约 11 KiB)
