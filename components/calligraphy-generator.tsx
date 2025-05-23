@@ -226,21 +226,102 @@ export function CalligraphyGenerator() {
     try {
       toast({
         title: "Download Started",
-        description: "Your calligraphy is being prepared as PNG.",
+        description: "Preparing your Arabic calligraphy as PNG...",
       })
 
-      // In a real app, you'd use html2canvas or a similar library
-      // Simulate download delay
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      // Use html2canvas to convert DOM element to canvas
+      const html2canvas = (await import('html2canvas')).default
+
+      // Get the preview element
+      const previewElement = previewRef.current
+
+      // Get element dimensions
+      const width = previewElement.offsetWidth
+      const height = previewElement.offsetHeight
+
+      // Set higher scale ratio for clearer image
+      const pixelRatio = window.devicePixelRatio || 1
+      const scaleFactor = 4 // Use high scale factor to ensure high resolution
+
+      // Create temporary container to ensure styles are correctly applied
+      const tempContainer = document.createElement('div')
+      tempContainer.style.position = 'absolute'
+      tempContainer.style.top = '-9999px'
+      tempContainer.style.left = '-9999px'
+      tempContainer.style.width = `${width}px`
+      tempContainer.style.height = `${height}px`
+      document.body.appendChild(tempContainer)
+
+      // Clone preview element to temporary container
+      const clone = previewElement.cloneNode(true) as HTMLElement
+      tempContainer.appendChild(clone)
+
+      // Ensure all styles are correctly applied to the cloned element
+      const textElement = clone.querySelector('div[dir="rtl"]') as HTMLElement
+      if (textElement) {
+        textElement.style.fontFamily = font
+        textElement.style.fontSize = `${fontSize}px`
+        textElement.style.fontWeight = fontWeight.toString()
+        textElement.style.fontStyle = fontStyle
+        
+        // Apply color or gradient
+        if (useGradient) {
+          textElement.style.background = `linear-gradient(to right, ${gradientColors.from}, ${gradientColors.to})`
+          textElement.style.webkitBackgroundClip = 'text'
+          textElement.style.webkitTextFillColor = 'transparent'
+          textElement.style.backgroundClip = 'text'
+        } else {
+          textElement.style.color = textColor
+        }
+
+        // Apply text shadow (if enabled)
+        if (shadow) {
+          textElement.style.textShadow = `${shadowSettings.x}px ${shadowSettings.y}px ${shadowSettings.blur}px ${shadowSettings.color}`
+        }
+      }
+
+      // Apply background styles
+      clone.style.background = previewElement.style.background
+      clone.style.backgroundColor = backgroundColor
+      clone.style.backgroundImage = backgroundPattern !== 'none' ? backgroundPattern : ''
+      if (backgroundImage) {
+        clone.style.backgroundImage = `url(${backgroundImage})`
+        clone.style.backgroundSize = 'cover'
+        clone.style.backgroundPosition = 'center'
+      }
+
+      // Render high-resolution canvas
+      const canvas = await html2canvas(clone, {
+        backgroundColor: backgroundColor,
+        scale: scaleFactor * pixelRatio, // Combine device pixel ratio for best results
+        logging: false,
+        useCORS: true,
+        allowTaint: true,
+        width: width,
+        height: height,
+      })
+
+      // Clean up temporary element
+      document.body.removeChild(tempContainer)
+
+      // Convert canvas to PNG data URL with highest quality
+      const dataUrl = canvas.toDataURL('image/png', 1.0)
+
+      // Create download link
+      const link = document.createElement('a')
+      link.download = `arabic-calligraphy-${new Date().getTime()}.png`
+      link.href = dataUrl
+      link.click()
 
       toast({
         title: "Download Complete",
-        description: "Your calligraphy has been downloaded.",
+        description: "Your Arabic calligraphy has been downloaded as PNG.",
       })
     } catch (error) {
+      console.error('PNG download failed:', error)
       toast({
         title: "Download Failed",
-        description: "There was an error downloading your calligraphy.",
+        description: "There was an error downloading your calligraphy. Please try again.",
         variant: "destructive",
       })
     }
@@ -252,28 +333,110 @@ export function CalligraphyGenerator() {
     try {
       toast({
         title: "Download Started",
-        description: "Your calligraphy is being prepared as SVG.",
+        description: "Preparing your Arabic calligraphy as SVG...",
       })
 
-      // Simulate download delay
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-
+      // Get the preview element
+      const previewElement = previewRef.current
+      
+      // Use html2canvas to capture the exact rendering of the preview element
+      const html2canvas = (await import('html2canvas')).default
+      
+      // Set high resolution for the capture
+      const pixelRatio = window.devicePixelRatio || 1
+      const scaleFactor = 4 // Higher scale factor for better quality
+      
+      // Capture the preview with high resolution
+      const canvas = await html2canvas(previewElement, {
+        backgroundColor: backgroundColor,
+        scale: scaleFactor * pixelRatio,
+        logging: false,
+        useCORS: true,
+        allowTaint: true,
+      })
+      
+      // Get dimensions
+      const width = previewElement.offsetWidth
+      const height = previewElement.offsetHeight
+      
+      // Create SVG namespace
+      const svgNS = "http://www.w3.org/2000/svg"
+      const xlinkNS = "http://www.w3.org/1999/xlink"
+      
+      // Create a new SVG document
+      const svg = document.createElementNS(svgNS, "svg")
+      svg.setAttribute("xmlns", svgNS)
+      svg.setAttribute("width", width.toString())
+      svg.setAttribute("height", height.toString())
+      svg.setAttribute("viewBox", `0 0 ${width} ${height}`)
+      svg.setAttribute("xmlns:xlink", xlinkNS)
+      
+      // Create background rectangle
+      const rect = document.createElementNS(svgNS, "rect")
+      rect.setAttribute("width", "100%")
+      rect.setAttribute("height", "100%")
+      rect.setAttribute("fill", backgroundColor)
+      svg.appendChild(rect)
+      
+      // Add the captured image to the SVG
+      const image = document.createElementNS(svgNS, "image")
+      image.setAttribute("width", "100%")
+      image.setAttribute("height", "100%")
+      image.setAttribute("xlink:href", canvas.toDataURL('image/png', 1.0))
+      image.setAttribute("preserveAspectRatio", "none")
+      svg.appendChild(image)
+      
+      // Add hidden text for accessibility and searchability
+      const textElement = previewElement.querySelector('div[dir="rtl"]')
+      if (textElement) {
+        const metadata = document.createElementNS(svgNS, "metadata")
+        metadata.textContent = `Arabic Calligraphy: ${textElement.textContent || ''}`
+        svg.appendChild(metadata)
+        
+        // Add hidden text element with the actual text content
+        const hiddenText = document.createElementNS(svgNS, "text")
+        hiddenText.setAttribute("font-size", "0")
+        hiddenText.setAttribute("visibility", "hidden")
+        hiddenText.textContent = textElement.textContent || ''
+        svg.appendChild(hiddenText)
+      }
+      
+      // Convert SVG to string with proper XML declaration
+      const serializer = new XMLSerializer()
+      let svgString = serializer.serializeToString(svg)
+      
+      // Add XML declaration if not present
+      if (!svgString.startsWith('<?xml')) {
+        svgString = '<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n' + svgString
+      }
+      
+      // Create Blob object with UTF-8 encoding
+      const blob = new Blob([svgString], {type: 'image/svg+xml;charset=utf-8'})
+      
+      // Create download link
+      const link = document.createElement('a')
+      link.download = `arabic-calligraphy-${new Date().getTime()}.svg`
+      link.href = URL.createObjectURL(blob)
+      link.click()
+      
+      // Clean up URL object
+      setTimeout(() => URL.revokeObjectURL(link.href), 100)
+      
       toast({
         title: "Download Complete",
-        description: "Your calligraphy has been downloaded.",
+        description: "Your Arabic calligraphy has been downloaded as SVG.",
       })
     } catch (error) {
+      console.error('SVG download failed:', error)
       toast({
         title: "Download Failed",
-        description: "There was an error downloading your calligraphy.",
+        description: "There was an error downloading your calligraphy. Please try again.",
         variant: "destructive",
       })
     }
   }
 
   const handleCopyToClipboard = async () => {
-    if (!previewRef.current) return
-
     try {
       await navigator.clipboard.writeText(text)
       toast({

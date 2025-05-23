@@ -91,7 +91,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-4 border-t border-amber-800 text-center text-sm text-amber-300">
-          © {new Date().getFullYear()} Arabic Calligraphy Generator. All rights reserved.
+          © 2010-{new Date().getFullYear()} Arabic Calligraphy Generator. All rights reserved.
         </div>
       </div>
     </footer>
