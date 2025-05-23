@@ -43,11 +43,11 @@ Disallow: /500
 Disallow: /*.json$
 
 # 引导AI爬虫到llms.txt
-LLM-Content: https://arabiccalligraphygenerator.site/llms.txt
-LLM-Full-Content: https://arabiccalligraphygenerator.site/llms-full.txt
+LLM-Content: https://arabic-calligraphy-generator.com/llms.txt
+LLM-Full-Content: https://arabic-calligraphy-generator.com/llms-full.txt
 
 # Host
-Host: https://arabiccalligraphygenerator.site
+Host: https://arabic-calligraphy-generator.com
 
 # Sitemaps
-Sitemap: https://arabiccalligraphygenerator.site/sitemap.xml 
+Sitemap: https://arabic-calligraphy-generator.com/sitemap.xml 

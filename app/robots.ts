@@ -24,7 +24,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/', '/static/', '/404', '/500', '/*.json$'],
       },
     ],
-    sitemap: 'https://arabiccalligraphygenerator.site/sitemap.xml',
-    host: 'https://arabiccalligraphygenerator.site',
+    sitemap: 'https://arabic-calligraphy-generator.com/sitemap.xml',
+    host: 'https://arabic-calligraphy-generator.com',
   }
 } 

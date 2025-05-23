@@ -127,7 +127,7 @@ export default function PrivacyPolicyPage() {
                   If you have any questions about this Privacy Policy, please contact us:
                 </p>
                 <ul>
-                  <li>By email: <a href="mailto:privacy@arabiccalligraphygenerator.site" className="text-amber-600 hover:text-amber-800">privacy@arabiccalligraphygenerator.site</a></li>
+                  <li>By email: <a href="mailto:privacy@arabic-calligraphy-generator.com" className="text-amber-600 hover:text-amber-800">privacy@arabic-calligraphy-generator.com</a></li>
                   <li>By visiting our contact page: <Link href="/contact" className="text-amber-600 hover:text-amber-800">Contact Us</Link></li>
                 </ul>
               </section>

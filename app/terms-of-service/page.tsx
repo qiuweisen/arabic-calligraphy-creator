@@ -28,7 +28,7 @@ export default function TermsOfServicePage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-amber-800 mb-4">1. Introduction</h2>
                 <p>
-                  Welcome to Arabic Calligraphy Generator. These Terms of Service govern your use of our website and services. By accessing or using our website at <Link href="/" className="text-amber-600 hover:text-amber-800">arabiccalligraphygenerator.site</Link>, you agree to be bound by these Terms of Service.
+                  Welcome to Arabic Calligraphy Generator. These Terms of Service govern your use of our website and services. By accessing or using our website at <Link href="/" className="text-amber-600 hover:text-amber-800">arabic-calligraphy-generator.com</Link>, you agree to be bound by these Terms of Service.
                 </p>
                 <p>
                   Please read these Terms carefully before using our service. If you do not agree to all the terms and conditions of this agreement, you may not access or use our services.
@@ -137,7 +137,7 @@ export default function TermsOfServicePage() {
                   If you have any questions about these Terms of Service, please contact us:
                 </p>
                 <ul>
-                  <li>By email: <a href="mailto:legal@arabiccalligraphygenerator.site" className="text-amber-600 hover:text-amber-800">legal@arabiccalligraphygenerator.site</a></li>
+                  <li>By email: <a href="mailto:legal@arabic-calligraphy-generator.com" className="text-amber-600 hover:text-amber-800">legal@arabic-calligraphy-generator.com</a></li>
                   <li>By visiting our contact page: <Link href="/contact" className="text-amber-600 hover:text-amber-800">Contact Us</Link></li>
                 </ul>
               </section>

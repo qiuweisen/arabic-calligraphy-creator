@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   description: "Explore the origins and evolution of Arabic calligraphy from the 7th century to modern times. Discover how this sacred art form has shaped Islamic culture, architecture, and artistic expression through the centuries.",
   keywords: "Arabic calligraphy history, Islamic calligraphy, Quranic script, calligraphic art, Arabic culture, Islamic art history, Kufic script, Naskh, Thuluth, Ottoman calligraphy",
   alternates: {
-    canonical: "https://arabiccalligraphygenerator.site/blog/history-of-arabic-calligraphy",
+    canonical: "https://arabic-calligraphy-generator.com/blog/history-of-arabic-calligraphy",
   },
   openGraph: {
     title: "The Rich History of Arabic Calligraphy",
     description: "Explore the origins and evolution of Arabic calligraphy from the 7th century to modern times",
-    url: "https://arabiccalligraphygenerator.site/blog/history-of-arabic-calligraphy",
+    url: "https://arabic-calligraphy-generator.com/blog/history-of-arabic-calligraphy",
     siteName: "Arabic Calligraphy Creator",
     locale: "en_US",
     type: "article",

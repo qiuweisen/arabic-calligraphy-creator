@@ -35,8 +35,8 @@ export default function ContactPage() {
                 </div>
                 <h3 className="text-xl font-semibold text-amber-800 mb-2">Email Us</h3>
                 <p className="text-amber-700 mb-4">Our team is ready to assist you</p>
-                <a href="mailto:contact@arabiccalligraphygenerator.site" className="text-amber-600 hover:text-amber-800 font-medium">
-                  contact@arabiccalligraphygenerator.site
+                <a href="mailto:contact@arabic-calligraphy-generator.com" className="text-amber-600 hover:text-amber-800 font-medium">
+                  contact@arabic-calligraphy-generator.com
                 </a>
               </div>
 

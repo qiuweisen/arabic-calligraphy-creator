@@ -38,7 +38,7 @@ const BLOG_POSTS = [
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://arabiccalligraphygenerator.site'
+  const baseUrl = 'https://arabic-calligraphy-generator.com'
   
   // Core pages
   const staticPages = [

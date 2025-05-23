@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   description: "Explore our extensive collection of Arabic calligraphy fonts, including Traditional Naskh, Kufi, Diwani, Nastaliq, Modern, and Display styles for all your Islamic art and typography projects.",
   keywords: "Arabic fonts, Arabic calligraphy styles, Islamic typography, Arabic typography, Arabic font library, Naskh font, Thuluth font, Kufi font, Diwani font, Nastaliq font, digital Arabic fonts",
   alternates: {
-    canonical: "https://arabiccalligraphygenerator.site/fonts",
+    canonical: "https://arabic-calligraphy-generator.com/fonts",
   },
   openGraph: {
     title: "Arabic Calligraphy Fonts | Complete Font Library",
     description: "Discover beautiful Arabic fonts for your calligraphy projects",
-    url: "https://arabiccalligraphygenerator.site/fonts",
+    url: "https://arabic-calligraphy-generator.com/fonts",
     siteName: "Arabic Calligraphy Creator",
     locale: "en_US",
     type: "website",
