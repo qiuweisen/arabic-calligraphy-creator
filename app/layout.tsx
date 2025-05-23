@@ -43,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" dir="ltr" style={{ colorScheme: 'light dark' }} className={`${inter.variable} ${notoNaskhArabic.variable} ${amiri.variable} ${arefRuqaa.variable} ${cairo.variable} ${harmattan.variable} ${jomhuria.variable} ${lateef.variable} ${mada.variable} ${mirza.variable} ${rakkas.variable} ${reemKufi.variable} ${scheherazadeNew.variable} ${tajawal.variable}`}>
+    <html lang="en" dir="ltr" suppressHydrationWarning className={`${inter.variable} ${notoNaskhArabic.variable} ${amiri.variable} ${arefRuqaa.variable} ${cairo.variable} ${harmattan.variable} ${jomhuria.variable} ${lateef.variable} ${mada.variable} ${mirza.variable} ${rakkas.variable} ${reemKufi.variable} ${scheherazadeNew.variable} ${tajawal.variable}`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
         {/* Google Fonts <link> tags removed as next/font handles this */}

@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import {
   Download,
   Share2,
@@ -626,7 +626,29 @@ export function CalligraphyGenerator() {
   )
 
   // Tab content components for reuse
-  const TextTabContent = () => (
+  const TextTabContent = () => {
+    // 使用useState和useEffect确保组件在客户端渲染时保持一致
+    const [mounted, setMounted] = useState(false)
+    
+    useEffect(() => {
+      setMounted(true)
+    }, [])
+    
+    // 在客户端渲染之前，返回一个简单的占位符
+    if (!mounted) {
+      return <div className="space-y-4 animate-pulse">
+        <div className="h-[100px] bg-gray-100 rounded-md"></div>
+        <div className="flex gap-4">
+          <div className="h-10 bg-gray-100 rounded-md flex-1"></div>
+          <div className="h-10 bg-gray-100 rounded-md flex-1"></div>
+        </div>
+        <div className="h-10 bg-gray-100 rounded-md"></div>
+        <div className="h-10 bg-gray-100 rounded-md"></div>
+      </div>
+    }
+    
+    // 客户端渲染后显示完整内容
+    return (
     <>
       <div className="space-y-2">
         <div className="flex items-center justify-between">
@@ -805,8 +827,28 @@ export function CalligraphyGenerator() {
       </div>
     </>
   )
+  }
 
-  const StyleTabContent = () => (
+  const StyleTabContent = () => {
+    // 使用useState和useEffect确保组件在客户端渲染时保持一致
+    const [mounted, setMounted] = useState(false)
+    
+    useEffect(() => {
+      setMounted(true)
+    }, [])
+    
+    // 在客户端渲染之前，返回一个简单的占位符
+    if (!mounted) {
+      return <div className="space-y-4 animate-pulse">
+        <div className="h-10 bg-gray-100 rounded-md"></div>
+        <div className="h-20 bg-gray-100 rounded-md"></div>
+        <div className="h-10 bg-gray-100 rounded-md"></div>
+        <div className="h-20 bg-gray-100 rounded-md"></div>
+      </div>
+    }
+    
+    // 客户端渲染后显示完整内容
+    return (
     <>
       <div className="space-y-2">
         <div className="flex items-center justify-between">
@@ -1035,6 +1077,7 @@ export function CalligraphyGenerator() {
       </div>
     </>
   )
+  }
 
   const AdvancedTabContent = () => (
     <>

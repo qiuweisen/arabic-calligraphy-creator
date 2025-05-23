@@ -135,7 +135,7 @@ export function UseCasesSection() {
                 <div className="flex items-center justify-center">
                   <div className="relative w-[300px] h-[200px] rounded-lg border border-amber-200">
                     <Image
-                      src="/website-header-with-arabic-calligraphy.png"
+                      src="/website-with-arabic-typography.png"
                       alt="Web design examples"
                       fill
                       style={{ objectFit: 'cover' }}

@@ -56,7 +56,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    color-scheme: light dark;
+    color-scheme: light;
   }
 }
 
