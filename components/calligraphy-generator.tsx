@@ -421,7 +421,7 @@ export function CalligraphyGenerator() {
       
       // Clean up URL object
       setTimeout(() => URL.revokeObjectURL(link.href), 100)
-      
+
       toast({
         title: "Download Complete",
         description: "Your Arabic calligraphy has been downloaded as SVG.",

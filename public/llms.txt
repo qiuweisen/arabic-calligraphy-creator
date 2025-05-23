@@ -1,0 +1,44 @@
+# Arabic Calligraphy Generator
+
+> A professional online Arabic calligraphy generator tool that creates beautiful Arabic text in various traditional and modern calligraphy styles. The tool offers real-time preview, extensive customization options, and educational content about Arabic calligraphy traditions.
+
+Key features:
+- Real-time Arabic calligraphy generation with 17+ authentic fonts
+- Advanced text styling including shadows, outlines, gradients, and Kashida control
+- Export options in PNG and SVG formats
+- Virtual Arabic keyboard for easy text input
+- Educational content covering calligraphy history, styles, and techniques
+- Mobile-responsive design optimized for all devices
+
+## Tool
+
+- [Arabic Calligraphy Generator](https://arabiccalligraphygenerator.site/): Main calligraphy generation tool with real-time preview, font selection, styling options, and export functionality
+- [Key Features](https://arabiccalligraphygenerator.site/features): Overview of the tool's advanced features including Kashida control, gradient support, and template library
+- [How to Use Tutorial](https://arabiccalligraphygenerator.site/tutorials): Step-by-step guide for using the calligraphy generator effectively
+
+## Docs
+
+- [FAQ](https://arabiccalligraphygenerator.site/faq): Frequently asked questions about Arabic calligraphy, fonts, and tool usage
+- [Beginner's Guide to Arabic Calligraphy](https://arabiccalligraphygenerator.site/blog/beginners-guide-to-calligraphy): Complete tutorial for beginners starting their calligraphy journey
+- [Understanding the Six Major Arabic Calligraphy Styles](https://arabiccalligraphygenerator.site/blog/six-major-calligraphy-styles): In-depth guide to Naskh, Thuluth, Kufi, Diwani, Ruq'ah, and Nastaliq styles
+
+## Fonts
+
+- [Font Library](https://arabiccalligraphygenerator.site/fonts): Complete collection of 17 Arabic fonts with previews and historical background
+- [Amiri Font](https://arabiccalligraphygenerator.site/fonts/amiri): Classical Naskh style font perfect for formal documents and traditional calligraphy
+- [Scheherazade Font](https://arabiccalligraphygenerator.site/fonts/scheherazade): Unicode-compliant font supporting extensive Arabic script variants
+- [Kufi Fonts Collection](https://arabiccalligraphygenerator.site/fonts/reem-kufi): Modern and traditional Kufi style fonts for geometric calligraphy
+
+## Blog
+
+- [The Rich History of Arabic Calligraphy](https://arabiccalligraphygenerator.site/blog/history-of-arabic-calligraphy): Comprehensive overview of Arabic calligraphy from its origins to modern times
+- [10 Famous Arabic Calligraphers You Should Know](https://arabiccalligraphygenerator.site/blog/famous-arabic-calligraphers): Profiles of influential calligraphers and their contributions to the art
+- [Modern Arabic Typography in Digital Design](https://arabiccalligraphygenerator.site/blog/modern-arabic-typography): How traditional calligraphy adapts to contemporary digital applications
+- [The Relationship Between Quranic Text and Calligraphy](https://arabiccalligraphygenerator.site/blog/quran-and-calligraphy): Exploring the spiritual and artistic connection in Islamic calligraphy
+
+## Optional
+
+- [About Us](https://arabiccalligraphygenerator.site/about-us): Information about our mission to preserve and modernize Arabic calligraphy traditions
+- [Contact](https://arabiccalligraphygenerator.site/contact): Get in touch with our team for support or collaboration
+- [Privacy Policy](https://arabiccalligraphygenerator.site/privacy-policy): Our commitment to user privacy and data protection
+- [Terms of Service](https://arabiccalligraphygenerator.site/terms-of-service): Usage terms and conditions for the calligraphy generator tool 

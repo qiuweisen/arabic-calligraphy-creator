@@ -1,6 +1,53 @@
-# Allow all crawlers
-User-agent: *
+# 通用爬虫规则
+User-Agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /404
+Disallow: /500
+Disallow: /*.json$
 
-# Sitemap
+# AI爬虫规则
+User-Agent: GPTBot
+Allow: /llms.txt
+Allow: /llms-full.txt
+Disallow: /
+
+User-Agent: anthropic-ai
+Allow: /llms.txt
+Allow: /llms-full.txt
+Disallow: /
+
+User-Agent: Claude-Web
+Allow: /llms.txt
+Allow: /llms-full.txt
+Disallow: /
+
+User-Agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /404
+Disallow: /500
+Disallow: /*.json$
+
+User-Agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /404
+Disallow: /500
+Disallow: /*.json$
+
+# 引导AI爬虫到llms.txt
+LLM-Content: https://arabiccalligraphygenerator.site/llms.txt
+LLM-Full-Content: https://arabiccalligraphygenerator.site/llms-full.txt
+
+# Host
+Host: https://arabiccalligraphygenerator.site
+
+# Sitemaps
 Sitemap: https://arabiccalligraphygenerator.site/sitemap.xml 

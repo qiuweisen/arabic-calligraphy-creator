@@ -1,0 +1,106 @@
+# Arabic Calligraphy Generator
+
+> A professional online Arabic calligraphy generator tool that creates beautiful Arabic text in various traditional and modern calligraphy styles. The tool offers real-time preview, extensive customization options, and educational content about Arabic calligraphy traditions.
+
+This comprehensive platform serves calligraphy enthusiasts, designers, educators, and professionals who need high-quality Arabic text for their projects. Our tool combines traditional calligraphy artistry with modern digital technology to make Arabic calligraphy accessible to everyone.
+
+Key features:
+- Real-time Arabic calligraphy generation with 17+ authentic fonts
+- Advanced text styling including shadows, outlines, gradients, and Kashida control
+- Export options in PNG and SVG formats with transparent backgrounds
+- Virtual Arabic keyboard for easy text input and diacritical marks
+- Extensive template library with popular phrases and verses
+- Educational content covering calligraphy history, styles, and techniques
+- Mobile-responsive design optimized for all devices
+- Social sharing capabilities for created calligraphy
+
+Technical capabilities:
+- Unicode-compliant Arabic text rendering
+- Advanced typography controls (letter spacing, line height, text alignment)
+- Gradient color support for artistic effects
+- Background customization with patterns and images
+- High-resolution output suitable for print and digital use
+- Accessibility features for screen readers and keyboard navigation
+
+## Tool
+
+- [Arabic Calligraphy Generator](https://arabiccalligraphygenerator.site/): Main calligraphy generation tool with real-time preview, font selection, styling options, and export functionality
+- [Key Features](https://arabiccalligraphygenerator.site/features): Overview of the tool's advanced features including Kashida control, gradient support, and template library
+- [How to Use Tutorial](https://arabiccalligraphygenerator.site/tutorials): Step-by-step guide for using the calligraphy generator effectively
+- [Template Library](https://arabiccalligraphygenerator.site/features#templates): Pre-designed calligraphy templates for common phrases and verses
+- [Export Options Guide](https://arabiccalligraphygenerator.site/tutorials#export): Detailed instructions for downloading and using generated calligraphy
+
+## Docs
+
+- [FAQ](https://arabiccalligraphygenerator.site/faq): Frequently asked questions about Arabic calligraphy, fonts, and tool usage
+- [Beginner's Guide to Arabic Calligraphy](https://arabiccalligraphygenerator.site/blog/beginners-guide-to-calligraphy): Complete tutorial for beginners starting their calligraphy journey
+- [Understanding the Six Major Arabic Calligraphy Styles](https://arabiccalligraphygenerator.site/blog/six-major-calligraphy-styles): In-depth guide to Naskh, Thuluth, Kufi, Diwani, Ruq'ah, and Nastaliq styles
+- [Font Selection Guide](https://arabiccalligraphygenerator.site/tutorials#fonts): How to choose the right Arabic font for your project
+- [Color Theory in Arabic Calligraphy](https://arabiccalligraphygenerator.site/tutorials#colors): Guidelines for using colors effectively in calligraphy design
+- [Typography Best Practices](https://arabiccalligraphygenerator.site/tutorials#typography): Professional tips for Arabic text layout and spacing
+
+## Fonts
+
+- [Font Library](https://arabiccalligraphygenerator.site/fonts): Complete collection of 17 Arabic fonts with previews and historical background
+- [Amiri Font](https://arabiccalligraphygenerator.site/fonts/amiri): Classical Naskh style font perfect for formal documents and traditional calligraphy
+- [Scheherazade Font](https://arabiccalligraphygenerator.site/fonts/scheherazade): Unicode-compliant font supporting extensive Arabic script variants
+- [Kufi Fonts Collection](https://arabiccalligraphygenerator.site/fonts/reem-kufi): Modern and traditional Kufi style fonts for geometric calligraphy
+- [Cairo Font](https://arabiccalligraphygenerator.site/fonts/cairo): Contemporary sans-serif Arabic font for modern designs
+- [Tajawal Font](https://arabiccalligraphygenerator.site/fonts/tajawal): Clean, readable font suitable for digital and print applications
+- [Lateef Font](https://arabiccalligraphygenerator.site/fonts/lateef): Traditional Nastaliq style font for classical poetry and literature
+- [Noto Naskh Arabic](https://arabiccalligraphygenerator.site/fonts/noto-naskh-arabic): Google's comprehensive Arabic font supporting multiple languages
+- [Mada Font](https://arabiccalligraphygenerator.site/fonts/mada): Modern geometric Arabic font with multiple weights
+- [El Messiri Font](https://arabiccalligraphygenerator.site/fonts/el-messiri): Contemporary Arabic font with distinctive character
+- [Harmattan Font](https://arabiccalligraphygenerator.site/fonts/harmattan): Unicode-compliant font optimized for African languages
+- [Jomhuria Font](https://arabiccalligraphygenerator.site/fonts/jomhuria): Display font inspired by traditional Arabic signage
+- [Lemonada Font](https://arabiccalligraphygenerator.site/fonts/lemonada): Playful, rounded Arabic font perfect for creative projects
+- [Marhey Font](https://arabiccalligraphygenerator.site/fonts/marhey): Modern Arabic font with distinctive letter shapes
+- [Markazi Text Font](https://arabiccalligraphygenerator.site/fonts/markazi-text): Hybrid Arabic-Latin font for bilingual designs
+- [Mirza Font](https://arabiccalligraphygenerator.site/fonts/mirza): Elegant Arabic font with calligraphic influences
+- [Rakkas Font](https://arabiccalligraphygenerator.site/fonts/rakkas): Ornate display font inspired by Ottoman Turkish calligraphy
+- [Aref Ruqaa Font](https://arabiccalligraphygenerator.site/fonts/aref-ruqaa): Digital adaptation of the traditional Ruqaa script
+
+## Blog
+
+- [The Rich History of Arabic Calligraphy](https://arabiccalligraphygenerator.site/blog/history-of-arabic-calligraphy): Comprehensive overview of Arabic calligraphy from its origins to modern times
+- [10 Famous Arabic Calligraphers You Should Know](https://arabiccalligraphygenerator.site/blog/famous-arabic-calligraphers): Profiles of influential calligraphers and their contributions to the art
+- [Modern Arabic Typography in Digital Design](https://arabiccalligraphygenerator.site/blog/modern-arabic-typography): How traditional calligraphy adapts to contemporary digital applications
+- [The Relationship Between Quranic Text and Calligraphy](https://arabiccalligraphygenerator.site/blog/quran-and-calligraphy): Exploring the spiritual and artistic connection in Islamic calligraphy
+
+## Educational Resources
+
+- [Calligraphy Learning Path](https://arabiccalligraphygenerator.site/tutorials#learning-path): Structured approach to mastering Arabic calligraphy
+- [Practice Exercises](https://arabiccalligraphygenerator.site/tutorials#exercises): Interactive exercises for improving calligraphy skills
+- [Historical Timeline](https://arabiccalligraphygenerator.site/blog/history-of-arabic-calligraphy#timeline): Key developments in Arabic calligraphy history
+- [Regional Variations](https://arabiccalligraphygenerator.site/blog/six-major-calligraphy-styles#regional): How calligraphy styles vary across different regions
+- [Tools and Materials](https://arabiccalligraphygenerator.site/blog/beginners-guide-to-calligraphy#tools): Traditional and modern tools for calligraphy practice
+
+## Use Cases
+
+- [Wedding Invitations](https://arabiccalligraphygenerator.site/features#use-cases): Creating elegant Arabic text for special occasions
+- [Logo Design](https://arabiccalligraphygenerator.site/features#use-cases): Incorporating Arabic calligraphy in brand identity
+- [Art Projects](https://arabiccalligraphygenerator.site/features#use-cases): Using calligraphy for artistic expression
+- [Educational Materials](https://arabiccalligraphygenerator.site/features#use-cases): Creating teaching resources with beautiful Arabic text
+- [Digital Media](https://arabiccalligraphygenerator.site/features#use-cases): Preparing Arabic text for websites and social media
+- [Print Design](https://arabiccalligraphygenerator.site/features#use-cases): High-resolution output for books, posters, and signage
+
+## Technical Documentation
+
+- [API Integration](https://arabiccalligraphygenerator.site/features#api): Developer resources for integrating calligraphy generation
+- [Font File Formats](https://arabiccalligraphygenerator.site/fonts#formats): Understanding different Arabic font technologies
+- [Unicode Support](https://arabiccalligraphygenerator.site/features#unicode): Comprehensive Arabic script support and character sets
+- [Browser Compatibility](https://arabiccalligraphygenerator.site/features#compatibility): Supported browsers and system requirements
+- [Performance Optimization](https://arabiccalligraphygenerator.site/features#performance): How we ensure fast rendering and responsive design
+
+## Optional
+
+- [About Us](https://arabiccalligraphygenerator.site/about-us): Information about our mission to preserve and modernize Arabic calligraphy traditions
+- [Contact](https://arabiccalligraphygenerator.site/contact): Get in touch with our team for support or collaboration
+- [Privacy Policy](https://arabiccalligraphygenerator.site/privacy-policy): Our commitment to user privacy and data protection
+- [Terms of Service](https://arabiccalligraphygenerator.site/terms-of-service): Usage terms and conditions for the calligraphy generator tool
+- [Accessibility Statement](https://arabiccalligraphygenerator.site/about-us#accessibility): Our commitment to making calligraphy accessible to all users
+- [Community Guidelines](https://arabiccalligraphygenerator.site/about-us#community): Standards for respectful use of Arabic calligraphy
+- [Support Center](https://arabiccalligraphygenerator.site/contact#support): Technical help and user assistance resources
+- [Feature Requests](https://arabiccalligraphygenerator.site/contact#feedback): How to suggest new features and improvements
+- [Attribution Guidelines](https://arabiccalligraphygenerator.site/terms-of-service#attribution): Proper crediting when using our generated calligraphy
+- [Commercial Usage](https://arabiccalligraphygenerator.site/terms-of-service#commercial): Terms for commercial use of generated content 
