@@ -9,6 +9,25 @@ const config = {
     "./src/**/*.{ts,tsx}",
     "*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    // Safelist for dynamically generated classes, especially from CalligraphyGenerator
+    { pattern: /^(bg|text|border|ring|fill|stroke)-amber-/ }, // Common amber shades
+    { pattern: /^(bg|text|border|ring|fill|stroke)-blue-/ }, // For new FAB
+    { pattern: /^(bg|text|border|ring|fill|stroke)-red-/ }, // For MobileFab when open
+    { pattern: /^(from|to)-amber-/ }, // Gradients
+    { pattern: /^(hover|focus|active|disabled|dark):/ }, // States and dark mode variants
+    // Specific patterns used in CalligraphyGenerator for dynamic styles if any
+    // e.g., if there are color pickers that can result in arbitrary hex like text-[#FF0000]
+    // Tailwind JIT usually handles these well if they appear directly in template files
+    // but safelisting can be a fallback.
+    "h-0", // For accordion-up animation
+    "h-screen",
+    "fixed",
+    "bottom-6", "right-6", "bottom-20", // For FAB positioning
+    "z-50",
+    "w-[300px]", "sm:w-[400px]", // For Sheet width
+    // Add any other specific classes that might be dynamically constructed and not easily found by JIT
+  ],
   prefix: "",
   theme: {
     container: {

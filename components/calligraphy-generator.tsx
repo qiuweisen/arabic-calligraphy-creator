@@ -17,7 +17,7 @@ import {
   Info,
   ImageIcon,
   Bookmark,
-  Menu,
+  SlidersHorizontal,
   BookOpen,
   HelpCircle,
   ChevronRight,
@@ -136,6 +136,7 @@ export function CalligraphyGenerator() {
   const [favorites, setFavorites] = useState<Array<string>>([])
   const [keyboardVisible, setKeyboardVisible] = useState(false)
   const [isTemplateDialogOpen, setIsTemplateDialogOpen] = useState(false)
+  const [isControlsSheetOpen, setIsControlsSheetOpen] = useState(false)
 
   const previewRef = useRef<HTMLDivElement>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
@@ -566,63 +567,65 @@ export function CalligraphyGenerator() {
 
   // Mobile UI Components
   const MobileControls = () => (
-    <div className="flex items-center justify-between mb-4">
-      <Sheet>
-        <SheetTrigger asChild>
-          <Button variant="outline" size="icon">
-            <Menu className="h-5 w-5" />
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="left" className="w-[300px] sm:w-[400px]">
-          <div className="h-full py-4">
-            <h2 className="text-xl font-semibold text-amber-800 mb-4">Calligraphy Controls</h2>
-            <Tabs defaultValue="text" className="w-full">
-              <TabsList className="grid grid-cols-3 mb-4">
-                <TabsTrigger value="text" className="flex items-center gap-2">
-                  <Type className="h-4 w-4" />
-                  <span>Text</span>
-                </TabsTrigger>
-                <TabsTrigger value="style" className="flex items-center gap-2">
-                  <Palette className="h-4 w-4" />
-                  <span>Style</span>
-                </TabsTrigger>
-                <TabsTrigger value="advanced" className="flex items-center gap-2">
-                  <Sliders className="h-4 w-4" />
-                  <span>Advanced</span>
-                </TabsTrigger>
+    <>
+      <div className="flex items-center justify-between mb-4 px-4 pt-4 md:hidden">
+        <div className="text-lg font-semibold text-amber-800">Arabic Calligraphy</div>
+        <div className="flex gap-2">
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button variant="outline" size="icon" onClick={handleCopyToClipboard}>
+                  <Copy className="h-4 w-4" />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent><p>Copy Image</p></TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button variant="outline" size="icon" onClick={handleShare}>
+                  <Share2 className="h-4 w-4" />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent><p>Share</p></TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button variant="outline" size="icon" onClick={handleDownloadPNG} className="bg-amber-50 hover:bg-amber-100">
+                  <Download className="h-4 w-4" />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent><p>Download PNG</p></TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </div>
+      </div>
+
+      <Sheet open={isControlsSheetOpen} onOpenChange={setIsControlsSheetOpen}>
+        <SheetContent side="left" className="w-[300px] sm:w-[400px] p-0 md:hidden">
+          <div className="h-full flex flex-col">
+            <div className="p-4 border-b border-amber-200">
+              <h2 className="text-xl font-semibold text-amber-800">Calligraphy Controls</h2>
+            </div>
+            <Tabs defaultValue="text" className="w-full flex-grow flex flex-col overflow-hidden">
+              <TabsList className="grid grid-cols-3 m-4 mb-0">
+                <TabsTrigger value="text" className="flex items-center gap-2"><Type className="h-4 w-4" /><span>Text</span></TabsTrigger>
+                <TabsTrigger value="style" className="flex items-center gap-2"><Palette className="h-4 w-4" /><span>Style</span></TabsTrigger>
+                <TabsTrigger value="advanced" className="flex items-center gap-2"><Sliders className="h-4 w-4" /><span>Advanced</span></TabsTrigger>
               </TabsList>
-
-              <ScrollArea className="h-[calc(100vh-180px)]">
-                {/* Tab content - reuse the desktop tab content */}
-                <TabsContent value="text" className="space-y-4">
-                  <TextTabContent />
-                </TabsContent>
-
-                <TabsContent value="style" className="space-y-4">
-                  <StyleTabContent />
-                </TabsContent>
-
-                <TabsContent value="advanced" className="space-y-4">
-                  <AdvancedTabContent />
-                </TabsContent>
+              <ScrollArea className="flex-grow p-4">
+                <TabsContent value="text" className="space-y-4 mt-0"><TextTabContent /></TabsContent>
+                <TabsContent value="style" className="space-y-4 mt-0"><StyleTabContent /></TabsContent>
+                <TabsContent value="advanced" className="space-y-4 mt-0"><AdvancedTabContent /></TabsContent>
               </ScrollArea>
             </Tabs>
           </div>
         </SheetContent>
       </Sheet>
-
-      <div className="flex gap-2">
-        <Button variant="outline" size="icon" onClick={handleCopyToClipboard}>
-          <Copy className="h-4 w-4" />
-        </Button>
-        <Button variant="outline" size="icon" onClick={handleShare}>
-          <Share2 className="h-4 w-4" />
-        </Button>
-        <Button variant="outline" size="icon" onClick={handleDownloadPNG} className="bg-amber-50 hover:bg-amber-100">
-          <Download className="h-4 w-4" />
-        </Button>
-      </div>
-    </div>
+    </>
   )
 
   // Tab content components for reuse
@@ -1336,7 +1339,7 @@ export function CalligraphyGenerator() {
         {/* Right side - Preview Area */}
         <div className="lg:col-span-2">
           <div className="space-y-6">
-            {/* Mobile Controls */}
+            {/* MobileControls component now renders the mobile top bar AND the hidden Sheet for controls */}
             {isMobile && <MobileControls />}
 
             {/* Preview Card */}
@@ -1353,12 +1356,9 @@ export function CalligraphyGenerator() {
                               <Copy className="h-4 w-4" />
                             </Button>
                           </TooltipTrigger>
-                          <TooltipContent>
-                            <p>Copy text</p>
-                          </TooltipContent>
+                          <TooltipContent><p>Copy text</p></TooltipContent>
                         </Tooltip>
                       </TooltipProvider>
-
                       <TooltipProvider>
                         <Tooltip>
                           <TooltipTrigger asChild>
@@ -1366,9 +1366,7 @@ export function CalligraphyGenerator() {
                               <Share2 className="h-4 w-4" />
                             </Button>
                           </TooltipTrigger>
-                          <TooltipContent>
-                            <p>Share</p>
-                          </TooltipContent>
+                          <TooltipContent><p>Share</p></TooltipContent>
                         </Tooltip>
                       </TooltipProvider>
                     </div>
@@ -1499,7 +1497,19 @@ export function CalligraphyGenerator() {
         </div>
       </div>
 
-      {/* 移动端专用浮动操作按钮 */}
+      {/* New FAB for opening mobile controls - only on mobile */}
+      {isMobile && (
+        <Button
+          size="icon"
+          className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full shadow-lg bg-blue-600 hover:bg-blue-700 text-white md:hidden"
+          onClick={() => setIsControlsSheetOpen(true)}
+          aria-label="Open calligraphy controls"
+        >
+          <SlidersHorizontal className="h-6 w-6" />
+        </Button>
+      )}
+
+      {/* MobileFab for quick actions (Download, Copy, Share) - only on mobile */}
       {isMobile && (
         <MobileFab 
           onDownload={handleDownloadPNG}
@@ -1508,7 +1518,7 @@ export function CalligraphyGenerator() {
         />
       )}
 
-      {/* Template Browser Dialog (Mobile) */}
+      {/* Template Browser Dialogs/Drawers */}
       {isMobile && <MobileTemplateDrawer />}
 
       {/* Template Browser (Desktop) */}
