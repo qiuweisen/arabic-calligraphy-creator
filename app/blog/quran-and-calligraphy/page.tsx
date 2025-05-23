@@ -34,7 +34,7 @@ export default function QuranAndCalligraphyPage() {
             <div className="prose prose-amber max-w-none">
               <div className="relative mb-8 overflow-hidden rounded-lg border border-amber-200 h-[300px] md:h-[400px]">
                 <Image 
-                  src="/placeholder.svg" 
+                  src="/illuminated-quranic-manuscript-with-elaborate-calligraphy-and-gold-leaf-decoration.png" 
                   alt="Illuminated Quranic manuscript with elaborate calligraphy and gold leaf decoration" 
                   fill
                   style={{ objectFit: 'contain' }}
@@ -119,7 +119,7 @@ export default function QuranAndCalligraphyPage() {
               <figure className="my-8">
                 <div className="relative w-full aspect-[16/9] rounded-lg border border-amber-200 overflow-hidden">
                   <Image 
-                    src="/placeholder.svg" 
+                    src="/evolution-of-quranic-scripts-from-early-kufic-to-ottoman-styles.png" 
                     alt="Evolution of Quranic scripts from early Kufic to Ottoman styles" 
                     fill
                     style={{ objectFit: 'contain' }}
@@ -219,7 +219,7 @@ export default function QuranAndCalligraphyPage() {
               <figure className="my-8">
                 <div className="relative w-full aspect-[16/9] rounded-lg border border-amber-200 overflow-hidden">
                   <Image 
-                    src="/placeholder.svg" 
+                    src="/interior-of-a-mosque-showing-quranic-calligraphy-integrated-into-the-architecture.png" 
                     alt="Interior of a mosque showing Quranic calligraphy integrated into the architecture" 
                     fill
                     style={{ objectFit: 'contain' }}

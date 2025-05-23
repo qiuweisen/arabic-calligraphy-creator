@@ -34,7 +34,7 @@ export default function ModernArabicTypographyPage() {
             <div className="prose prose-amber max-w-none">
               <div className="relative mb-8 overflow-hidden rounded-lg border border-amber-200 h-[300px] md:h-[400px]">
                 <Image 
-                  src="/placeholder.svg" 
+                  src="/modern-arabic-typography-in-digital-interfaces.png" 
                   alt="Modern Arabic typography in digital interfaces showing websites, apps, and branding examples" 
                   fill
                   style={{ objectFit: 'contain' }}
@@ -132,7 +132,7 @@ export default function ModernArabicTypographyPage() {
               <figure className="my-8">
                 <div className="relative w-full aspect-[16/9] rounded-lg border border-amber-200 overflow-hidden">
                   <Image 
-                    src="/placeholder.svg" 
+                    src="/timeline-showing-the-evolution-of-arabic-digital-fonts.png" 
                     alt="Timeline showing the evolution of Arabic digital fonts from 1980s to present" 
                     fill
                     style={{ objectFit: 'contain' }}

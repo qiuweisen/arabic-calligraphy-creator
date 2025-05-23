@@ -26,7 +26,7 @@ const blogPosts = [
     title: "Understanding the Six Major Arabic Calligraphy Styles",
     description: "A detailed guide to Naskh, Thuluth, Diwani, Kufi, Riq'a, and Nastaliq calligraphy styles.",
     date: "June 3, 2023",
-    image: "/comparison-of-different-arabic-calligraphy-styles.png",
+    image: "/major-arabic-calligraphy-styles-displayed-in-a-decorative-arrangement.png",
     category: "Styles",
   },
   {
@@ -34,7 +34,7 @@ const blogPosts = [
     title: "Modern Arabic Typography in Digital Design",
     description: "How traditional Arabic calligraphy influences contemporary digital typography and design.",
     date: "July 12, 2023",
-    image: "/website-with-arabic-typography.png",
+    image: "/modern-arabic-typography-in-digital-interfaces.png",
     category: "Digital",
   },
   {
@@ -58,7 +58,7 @@ const blogPosts = [
     title: "The Quran and Arabic Calligraphy: A Sacred Connection",
     description: "Exploring the spiritual dimension of calligraphy in Islamic sacred texts.",
     date: "October 5, 2023",
-    image: "/placeholder.svg",
+    image: "/illuminated-quranic-manuscript-with-elaborate-calligraphy-and-gold-leaf-decoration.png",
     category: "Religion",
   },
 ]
@@ -81,9 +81,9 @@ export default function BlogPage() {
           {blogPosts.map((post) => (
             <Card
               key={post.id}
-              className="overflow-hidden border-amber-200 bg-white/80 backdrop-blur-sm hover:shadow-md transition-shadow"
+              className="overflow-hidden border-amber-200 bg-white/80 backdrop-blur-sm hover:shadow-md transition-shadow flex flex-col"
             >
-              <div className="relative w-full h-48">
+              <div className="relative w-full" style={{ aspectRatio: '4/3' }}>
                 <Image 
                   src={post.image || "/placeholder.svg"} 
                   alt={post.title} 
@@ -93,7 +93,7 @@ export default function BlogPage() {
                   priority={blogPosts.indexOf(post) < 3}
                 />
               </div>
-              <CardHeader>
+              <CardHeader className="flex-grow">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-xs text-amber-600 font-medium px-2 py-1 bg-amber-50 rounded-full">
                     {post.category}
