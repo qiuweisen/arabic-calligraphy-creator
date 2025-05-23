@@ -42,7 +42,7 @@ export function ScrollToTop() {
       variant="outline"
       size="icon"
       className={cn(
-        "fixed bottom-6 right-6 z-50 rounded-full shadow-md bg-amber-50 border-amber-200 hover:bg-amber-100 transition-opacity duration-300",
+        "fixed bottom-6 left-6 z-50 rounded-full shadow-md bg-amber-50 border-amber-200 hover:bg-amber-100 transition-opacity duration-300",
         {
           "opacity-0 pointer-events-none": !isVisible,
           "opacity-100": isVisible,
