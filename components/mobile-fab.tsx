@@ -19,6 +19,20 @@ export function MobileFab({ onDownload, onCopy, onShare }: MobileFabProps) {
   // 如果不是移动设备，不显示FAB
   if (!isMobile) return null
 
+  // 处理更多操作菜单打开
+  const handleMenuToggle = () => {
+    const newState = !isOpen
+    setIsOpen(newState)
+    
+    // 追踪操作菜单打开事件
+    if (newState && typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
+      (window as any).trackCalligraphyEvent('Actions_Menu_Opened', {
+        step: '4_actions_menu_interaction',
+        menu_opened: true
+      });
+    }
+  }
+
   return (
     <div className="fixed bottom-6 right-6 z-50">
       {/* 子按钮，使用绝对定位，相对于主按钮 */}
@@ -75,7 +89,7 @@ export function MobileFab({ onDownload, onCopy, onShare }: MobileFabProps) {
           "h-14 w-14 rounded-full shadow-lg transition-all duration-300",
           isOpen ? "bg-red-500 hover:bg-red-600" : "bg-amber-600 hover:bg-amber-700"
         )}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={handleMenuToggle}
         aria-label={isOpen ? "Close menu" : "Open menu"}
       >
         {isOpen ? (

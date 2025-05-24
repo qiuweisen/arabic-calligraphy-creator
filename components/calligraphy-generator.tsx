@@ -242,8 +242,23 @@ export function CalligraphyGenerator() {
   const [isTemplateDialogOpen, setIsTemplateDialogOpen] = useState(false)
   const [isControlsSheetOpen, setIsControlsSheetOpen] = useState(false)
 
+  // 追踪用户是否已开始编辑（避免重复追踪）
+  const [hasStartedEditing, setHasStartedEditing] = useState(false)
+  const [hasOpenedActions, setHasOpenedActions] = useState(false)
+
   const previewRef = useRef<HTMLDivElement>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
+
+  // 页面访问和工具初始化追踪
+  useEffect(() => {
+    if (typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
+      (window as any).trackCalligraphyEvent('Tool_Initialized', {
+        step: '0_page_access',
+        user_agent: navigator.userAgent.includes('Mobile') ? 'mobile' : 'desktop',
+        initial_load: true
+      });
+    }
+  }, [])
 
   // Toggle keyboard visibility
   const toggleKeyboard = () => {
@@ -256,11 +271,33 @@ export function CalligraphyGenerator() {
   }
 
   const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setText(e.target.value || DEFAULT_TEXT)
+    const newText = e.target.value || DEFAULT_TEXT
+    setText(newText)
+    
+    // 追踪文本输入事件
+    if (typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
+      (window as any).trackCalligraphyEvent('Text_Input', {
+        step: '1_text_customization',
+        text_length: newText.length,
+        is_default: newText === DEFAULT_TEXT,
+        has_content: newText.trim().length > 0
+      });
+    }
   }
 
   const handleFontChange = (value: string) => {
     setFont(value)
+    
+    // 追踪字体选择事件
+    if (typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
+      const selectedFont = ARABIC_FONTS.find(f => f.value === value)
+      ;(window as any).trackCalligraphyEvent('Font_Selected', {
+        step: '2_font_selection',
+        font_name: selectedFont?.name || 'Unknown',
+        font_category: selectedFont?.category || 'Unknown',
+        is_favorite: favorites.includes(value)
+      });
+    }
   }
 
   const handleAlignmentChange = (value: string) => {
@@ -319,6 +356,14 @@ export function CalligraphyGenerator() {
     if (template.bg) setBackgroundColor(template.bg)
     setIsTemplateDialogOpen(false)
 
+    // 追踪模板使用事件
+    if (typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
+      (window as any).trackCalligraphyEvent('Template_Used', {
+        templateText: template.text.substring(0, 20), // 前20个字符
+        templateFont: template.font || 'default'
+      });
+    }
+
     toast({
       title: "Template Applied",
       description: "The selected template has been applied to your canvas.",
@@ -351,6 +396,19 @@ export function CalligraphyGenerator() {
       link.download = `arabic-calligraphy-${new Date().getTime()}.png`;
       link.href = dataUrl;
       link.click();
+
+      // 追踪下载事件
+      if (typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
+        (window as any).trackCalligraphyEvent('Download', {
+          step: '5_conversion_download',
+          format: 'PNG',
+          font: font,
+          fontSize: fontSize,
+          hasGradient: useGradient,
+          hasBackground: backgroundImage ? 'image' : backgroundPattern !== 'none' ? 'pattern' : 'color',
+          conversion_type: 'download_png'
+        });
+      }
 
       toast({
         title: "Download Complete",
@@ -439,6 +497,19 @@ export function CalligraphyGenerator() {
       link.href = URL.createObjectURL(blob);
       link.click();
       setTimeout(() => URL.revokeObjectURL(link.href), 100);
+
+      // 追踪SVG下载事件
+      if (typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
+        (window as any).trackCalligraphyEvent('Download', {
+          step: '5_conversion_download',
+          format: 'SVG',
+          font: font,
+          fontSize: fontSize,
+          hasGradient: useGradient,
+          hasBackground: backgroundImage ? 'image' : backgroundPattern !== 'none' ? 'pattern' : 'color',
+          conversion_type: 'download_svg'
+        });
+      }
 
       toast({
         title: "Download Complete",
@@ -582,7 +653,7 @@ export function CalligraphyGenerator() {
           const shareData: ShareData = {
             title: "Arabic Calligraphy Design",
             text: "Check out this beautiful Arabic calligraphy I created!",
-            // files: [imageFile], // Files array is optional and might not be supported by all browsers/targets
+            files: [imageFile],
           };
 
           // Check if files can be shared
@@ -604,6 +675,17 @@ export function CalligraphyGenerator() {
             title: "Shared Successfully",
             description: "Your calligraphy has been shared.",
           });
+          
+          // 追踪分享事件
+          if (typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
+            (window as any).trackCalligraphyEvent('Share', {
+              step: '5_conversion_share',
+              method: 'native',
+              font: font,
+              hasImage: !!shareData.files,
+              conversion_type: 'share'
+            });
+          }
         } else {
           throw new Error('Canvas toBlob failed for sharing.');
         }
@@ -874,7 +956,7 @@ export function CalligraphyGenerator() {
             min={12}
             max={120}
             step={1}
-            onValueChange={(value) => setFontSize(value[0])}
+            onValueChange={(value) => handleFontSizeChange(value[0])}
             className="[&>[role=slider]]:h-6 [&>[role=slider]]:w-6 [&>[role=slider]]:touch-manipulation"
           />
         </div>
@@ -981,13 +1063,13 @@ export function CalligraphyGenerator() {
               id="text-color"
               type="color"
               value={textColor}
-              onChange={(e) => setTextColor(e.target.value)}
+              onChange={(e) => handleTextColorChange(e.target.value)}
               className="w-10 h-10 rounded border border-input"
             />
             <input
               type="text"
               value={textColor}
-              onChange={(e) => setTextColor(e.target.value)}
+              onChange={(e) => handleTextColorChange(e.target.value)}
               className="flex-1 px-3 py-2 border border-input rounded-md text-sm"
             />
           </div>
@@ -1337,6 +1419,47 @@ export function CalligraphyGenerator() {
     </Drawer>
   )
 
+  // 处理编辑开始事件
+  const handleEditStart = () => {
+    setIsControlsSheetOpen(true)
+    
+    // 首次点击编辑时追踪
+    if (!hasStartedEditing && typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
+      (window as any).trackCalligraphyEvent('Edit_Start', {
+        step: '1_edit_button_clicked',
+        first_interaction: true
+      });
+      setHasStartedEditing(true)
+    }
+  }
+
+  const handleStyleChange = (changeType: string, value: any) => {
+    // 追踪样式调整事件
+    if (typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
+      (window as any).trackCalligraphyEvent('Style_Adjusted', {
+        step: '3_style_customization',
+        change_type: changeType,
+        new_value: value
+      });
+    }
+  }
+
+  // 扩展现有的处理函数
+  const handleFontSizeChange = (value: number) => {
+    setFontSize(value)
+    handleStyleChange('font_size', value)
+  }
+
+  const handleTextColorChange = (color: string) => {
+    setTextColor(color)
+    handleStyleChange('text_color', color)
+  }
+
+  const handleBackgroundColorChange = (color: string) => {
+    setBackgroundColor(color)
+    handleStyleChange('background_color', color)
+  }
+
   return (
     <>
       {/* Desktop Layout */}
@@ -1615,7 +1738,7 @@ export function CalligraphyGenerator() {
         <Button
           size="icon"
           className="fixed bottom-6 left-6 z-50 h-14 w-14 rounded-full shadow-lg bg-amber-600 hover:bg-amber-700 text-white md:hidden"
-          onClick={() => setIsControlsSheetOpen(true)}
+          onClick={handleEditStart}
           aria-label="Open Edit Panel"
         >
           <Edit className="h-6 w-6" />

@@ -55,6 +55,8 @@ export default function RootLayout({
           <ScrollToTop />
           <CssLoader />
         </ThemeProvider>
+        
+        {/* Google Analytics */}
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-33BV8X0BYE"
@@ -71,15 +73,45 @@ export default function RootLayout({
                 debug_mode: ${process.env.NODE_ENV === 'development'},
                 send_page_view: true
               });
+            `,
+          }}
+        />
+        
+        {/* Plausible Analytics */}
+        <Script
+          defer
+          data-domain="arabic-calligraphy-generator.com"
+          src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="plausible-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.plausible = window.plausible || function() { 
+                (window.plausible.q = window.plausible.q || []).push(arguments) 
+              }
               
-              // 调试信息
-              if (typeof window !== 'undefined' && window.console) {
-                console.log('Google Analytics initialized with ID: G-33BV8X0BYE');
-                gtag('event', 'page_view', {
-                  page_title: document.title,
-                  page_location: window.location.href,
-                  custom_parameter: 'test_event'
-                });
+              // 调试信息 (仅在开发环境)
+              if (${process.env.NODE_ENV === 'development'}) {
+                console.log('Plausible Analytics initialized for domain: arabic-calligraphy-generator.com');
+              }
+              
+              // 自定义事件函数 - 同时发送到GA和Plausible
+              window.trackCalligraphyEvent = function(eventName, props) {
+                // 发送到Plausible
+                if (typeof window.plausible === 'function') {
+                  window.plausible(eventName, { props: props });
+                }
+                
+                // 发送到Google Analytics
+                if (typeof gtag === 'function') {
+                  gtag('event', eventName, {
+                    event_category: 'Calligraphy_Generator',
+                    ...props
+                  });
+                }
               }
             `,
           }}
