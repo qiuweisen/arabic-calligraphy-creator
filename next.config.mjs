@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: [
       '@radix-ui/react-icons',
       '@radix-ui/themes',

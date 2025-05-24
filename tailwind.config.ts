@@ -15,7 +15,6 @@ const config = {
     { pattern: /^(bg|text|border|ring|fill|stroke)-blue-/ }, // For new FAB
     { pattern: /^(bg|text|border|ring|fill|stroke)-red-/ }, // For MobileFab when open
     { pattern: /^(from|to)-amber-/ }, // Gradients
-    { pattern: /^(hover|focus|active|disabled|dark):/ }, // States and dark mode variants
     // Specific patterns used in CalligraphyGenerator for dynamic styles if any
     // e.g., if there are color pickers that can result in arbitrary hex like text-[#FF0000]
     // Tailwind JIT usually handles these well if they appear directly in template files
