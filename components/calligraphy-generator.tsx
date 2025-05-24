@@ -570,13 +570,13 @@ export function CalligraphyGenerator() {
     <>
       <div className="flex items-center justify-between mb-4 px-4 pt-4 md:hidden">
         <div className="text-lg font-semibold text-amber-800">Arabic Calligraphy</div>
-        <div className="flex gap-2">
+      <div className="flex gap-2">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Button variant="outline" size="icon" onClick={handleCopyToClipboard}>
-                  <Copy className="h-4 w-4" />
-                </Button>
+        <Button variant="outline" size="icon" onClick={handleCopyToClipboard}>
+          <Copy className="h-4 w-4" />
+        </Button>
               </TooltipTrigger>
               <TooltipContent><p>Copy Image</p></TooltipContent>
             </Tooltip>
@@ -584,9 +584,9 @@ export function CalligraphyGenerator() {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Button variant="outline" size="icon" onClick={handleShare}>
-                  <Share2 className="h-4 w-4" />
-                </Button>
+        <Button variant="outline" size="icon" onClick={handleShare}>
+          <Share2 className="h-4 w-4" />
+        </Button>
               </TooltipTrigger>
               <TooltipContent><p>Share</p></TooltipContent>
             </Tooltip>
@@ -601,8 +601,8 @@ export function CalligraphyGenerator() {
               <TooltipContent><p>Download PNG</p></TooltipContent>
             </Tooltip>
           </TooltipProvider>
-        </div>
       </div>
+    </div>
 
       <Sheet open={isControlsSheetOpen} onOpenChange={setIsControlsSheetOpen}>
         <SheetContent side="left" className="w-[300px] sm:w-[400px] p-0 md:hidden">
@@ -610,7 +610,7 @@ export function CalligraphyGenerator() {
             <div className="p-4 border-b border-amber-200">
               <h2 className="text-xl font-semibold text-amber-800">Calligraphy Controls</h2>
             </div>
-            <Tabs defaultValue="text" className="w-full flex-grow flex flex-col overflow-hidden">
+            <Tabs defaultValue="text" className="w-full flex-grow flex flex-col">
               <TabsList className="grid grid-cols-3 m-4 mb-0">
                 <TabsTrigger value="text" className="flex items-center gap-2"><Type className="h-4 w-4" /><span>Text</span></TabsTrigger>
                 <TabsTrigger value="style" className="flex items-center gap-2"><Palette className="h-4 w-4" /><span>Style</span></TabsTrigger>
