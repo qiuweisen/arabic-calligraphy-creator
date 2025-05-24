@@ -40,11 +40,114 @@ import { Separator } from "@/components/ui/separator"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { useMobile } from "@/hooks/use-mobile"
 import { ArabicKeyboard } from "@/components/arabic-keyboard"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { TemplateBrowser } from "@/components/template-browser"
 import { Drawer, DrawerContent } from "@/components/ui/drawer"
+import { TemplateBrowser } from "@/components/template-browser"
 import { FontPreview } from "@/components/font-preview"
 import { MobileFab } from "@/components/mobile-fab"
+
+// Helper function to generate canvas from preview
+async function generatePreviewCanvas(
+  previewElement: HTMLDivElement,
+  options: {
+    font: string;
+    fontSize: number;
+    fontWeight: number;
+    fontStyle: string;
+    textColor: string;
+    useGradient: boolean;
+    gradientColors: { from: string; to: string };
+    shadow: boolean;
+    shadowSettings: { x: number; y: number; blur: number; color: string };
+    backgroundColor: string;
+    backgroundImage: string;
+    backgroundPattern: string;
+    // Add other relevant style props here
+  },
+  scaleFactor: number = 2 
+): Promise<HTMLCanvasElement | null> {
+  if (!previewElement) {
+    console.error("generatePreviewCanvas: Preview element is null.");
+    return null;
+  }
+
+  try {
+    const html2canvas = (await import('html2canvas')).default;
+    const width = previewElement.offsetWidth;
+    const height = previewElement.offsetHeight;
+    const pixelRatio = window.devicePixelRatio || 1;
+
+    const tempContainer = document.createElement('div');
+    tempContainer.style.position = 'absolute';
+    tempContainer.style.top = '-9999px'; // Off-screen
+    tempContainer.style.left = '-9999px'; // Off-screen
+    tempContainer.style.width = `${width}px`;
+    tempContainer.style.height = `${height}px`;
+    document.body.appendChild(tempContainer);
+
+    const clone = previewElement.cloneNode(true) as HTMLElement;
+    tempContainer.appendChild(clone);
+
+    // Apply styles to the cloned element based on options
+    const textElementClone = clone.querySelector('div[dir="rtl"]') as HTMLElement;
+    if (textElementClone) {
+      textElementClone.style.fontFamily = options.font;
+      textElementClone.style.fontSize = `${options.fontSize}px`;
+      textElementClone.style.fontWeight = options.fontWeight.toString();
+      textElementClone.style.fontStyle = options.fontStyle;
+
+      if (options.useGradient) {
+        textElementClone.style.background = `linear-gradient(to right, ${options.gradientColors.from}, ${options.gradientColors.to})`;
+        textElementClone.style.webkitBackgroundClip = 'text';
+        textElementClone.style.webkitTextFillColor = 'transparent';
+        textElementClone.style.backgroundClip = 'text';
+        textElementClone.style.color = 'transparent'; // Important for gradient text
+      } else {
+        textElementClone.style.color = options.textColor;
+      }
+
+      if (options.shadow) {
+        textElementClone.style.textShadow = `${options.shadowSettings.x}px ${options.shadowSettings.y}px ${options.shadowSettings.blur}px ${options.shadowSettings.color}`;
+      }
+    }
+    
+    // Background styles for the main cloned div
+    clone.style.backgroundColor = options.backgroundColor;
+    if (options.backgroundImage) {
+      clone.style.backgroundImage = `url(${options.backgroundImage})`;
+      clone.style.backgroundSize = 'cover'; // Ensure cover for uploaded images
+      clone.style.backgroundPosition = 'center';
+      clone.style.backgroundRepeat = 'no-repeat';
+    } else if (options.backgroundPattern && options.backgroundPattern !== 'none') {
+      clone.style.backgroundImage = options.backgroundPattern;
+      // For patterns, default repeat is usually fine, or set specific repeat if needed
+    } else {
+      clone.style.backgroundImage = 'none'; // Explicitly remove if no image/pattern
+    }
+
+
+    const canvas = await html2canvas(clone, {
+      backgroundColor: null, // Let the cloned element background prevail
+      scale: scaleFactor * pixelRatio,
+      logging: false,
+      useCORS: true,
+      allowTaint: true,
+      width: width,
+      height: height,
+    });
+
+    document.body.removeChild(tempContainer);
+    return canvas;
+
+  } catch (error) {
+    console.error("Error generating canvas:", error);
+    toast({ // Add toast here for generateCanvas failure
+        title: "Image Generation Failed",
+        description: "Could not generate the image. Please try again.",
+        variant: "destructive",
+    });
+    return null;
+  }
+}
 
 const ARABIC_FONTS = [
   { name: "Amiri", value: "'Amiri', serif", category: "Traditional" },
@@ -222,220 +325,203 @@ export function CalligraphyGenerator() {
   }
 
   const handleDownloadPNG = async () => {
-    if (!previewRef.current) return
+    if (!previewRef.current) return;
+
+    const currentOptions = {
+      font, fontSize, fontWeight, fontStyle, textColor, useGradient, gradientColors,
+      shadow, shadowSettings, backgroundColor, backgroundImage, backgroundPattern,
+    };
 
     try {
       toast({
         title: "Download Started",
         description: "Preparing your Arabic calligraphy as PNG...",
-      })
+      });
 
-      // Use html2canvas to convert DOM element to canvas
-      const html2canvas = (await import('html2canvas')).default
+      const canvas = await generatePreviewCanvas(previewRef.current, currentOptions, 4); // Higher scale for download
 
-      // Get the preview element
-      const previewElement = previewRef.current
-
-      // Get element dimensions
-      const width = previewElement.offsetWidth
-      const height = previewElement.offsetHeight
-
-      // Set higher scale ratio for clearer image
-      const pixelRatio = window.devicePixelRatio || 1
-      const scaleFactor = 4 // Use high scale factor to ensure high resolution
-
-      // Create temporary container to ensure styles are correctly applied
-      const tempContainer = document.createElement('div')
-      tempContainer.style.position = 'absolute'
-      tempContainer.style.top = '-9999px'
-      tempContainer.style.left = '-9999px'
-      tempContainer.style.width = `${width}px`
-      tempContainer.style.height = `${height}px`
-      document.body.appendChild(tempContainer)
-
-      // Clone preview element to temporary container
-      const clone = previewElement.cloneNode(true) as HTMLElement
-      tempContainer.appendChild(clone)
-
-      // Ensure all styles are correctly applied to the cloned element
-      const textElement = clone.querySelector('div[dir="rtl"]') as HTMLElement
-      if (textElement) {
-        textElement.style.fontFamily = font
-        textElement.style.fontSize = `${fontSize}px`
-        textElement.style.fontWeight = fontWeight.toString()
-        textElement.style.fontStyle = fontStyle
-        
-        // Apply color or gradient
-        if (useGradient) {
-          textElement.style.background = `linear-gradient(to right, ${gradientColors.from}, ${gradientColors.to})`
-          textElement.style.webkitBackgroundClip = 'text'
-          textElement.style.webkitTextFillColor = 'transparent'
-          textElement.style.backgroundClip = 'text'
-        } else {
-          textElement.style.color = textColor
-        }
-
-        // Apply text shadow (if enabled)
-        if (shadow) {
-          textElement.style.textShadow = `${shadowSettings.x}px ${shadowSettings.y}px ${shadowSettings.blur}px ${shadowSettings.color}`
-        }
+      if (!canvas) {
+        // Toast for canvas generation failure is handled in generatePreviewCanvas
+        return;
       }
 
-      // Apply background styles
-      clone.style.background = previewElement.style.background
-      clone.style.backgroundColor = backgroundColor
-      clone.style.backgroundImage = backgroundPattern !== 'none' ? backgroundPattern : ''
-      if (backgroundImage) {
-        clone.style.backgroundImage = `url(${backgroundImage})`
-        clone.style.backgroundSize = 'cover'
-        clone.style.backgroundPosition = 'center'
-      }
-
-      // Render high-resolution canvas
-      const canvas = await html2canvas(clone, {
-        backgroundColor: backgroundColor,
-        scale: scaleFactor * pixelRatio, // Combine device pixel ratio for best results
-        logging: false,
-        useCORS: true,
-        allowTaint: true,
-        width: width,
-        height: height,
-      })
-
-      // Clean up temporary element
-      document.body.removeChild(tempContainer)
-
-      // Convert canvas to PNG data URL with highest quality
-      const dataUrl = canvas.toDataURL('image/png', 1.0)
-
-      // Create download link
-      const link = document.createElement('a')
-      link.download = `arabic-calligraphy-${new Date().getTime()}.png`
-      link.href = dataUrl
-      link.click()
+      const dataUrl = canvas.toDataURL('image/png', 1.0);
+      const link = document.createElement('a');
+      link.download = `arabic-calligraphy-${new Date().getTime()}.png`;
+      link.href = dataUrl;
+      link.click();
 
       toast({
         title: "Download Complete",
         description: "Your Arabic calligraphy has been downloaded as PNG.",
-      })
+      });
     } catch (error) {
-      console.error('PNG download failed:', error)
-      toast({
-        title: "Download Failed",
-        description: "There was an error downloading your calligraphy. Please try again.",
-        variant: "destructive",
-      })
+      console.error('PNG download failed:', error);
+      // General error if canvas generation was successful but subsequent steps failed
+      if (!(error instanceof Error && error.message.includes("generatePreviewCanvas"))) {
+          toast({
+            title: "Download Failed",
+            description: "There was an error downloading your calligraphy. Please try again.",
+            variant: "destructive",
+          });
+      }
     }
-  }
+  };
 
   const handleDownloadSVG = async () => {
-    if (!previewRef.current) return
+    if (!previewRef.current) return;
+    
+    const currentOptions = {
+      font, fontSize, fontWeight, fontStyle, textColor, useGradient, gradientColors,
+      shadow, shadowSettings, backgroundColor, backgroundImage, backgroundPattern,
+    };
 
     try {
       toast({
         title: "Download Started",
         description: "Preparing your Arabic calligraphy as SVG...",
-      })
+      });
 
-      // Get the preview element
-      const previewElement = previewRef.current
-      
-      // Use html2canvas to capture the exact rendering of the preview element
-      const html2canvas = (await import('html2canvas')).default
-      
-      // Set high resolution for the capture
-      const pixelRatio = window.devicePixelRatio || 1
-      const scaleFactor = 4 // Higher scale factor for better quality
-      
-      // Capture the preview with high resolution
-      const canvas = await html2canvas(previewElement, {
-        backgroundColor: backgroundColor,
-        scale: scaleFactor * pixelRatio,
-        logging: false,
-        useCORS: true,
-        allowTaint: true,
-      })
-      
-      // Get dimensions
-      const width = previewElement.offsetWidth
-      const height = previewElement.offsetHeight
-      
-      // Create SVG namespace
-      const svgNS = "http://www.w3.org/2000/svg"
-      const xlinkNS = "http://www.w3.org/1999/xlink"
-      
-      // Create a new SVG document
-      const svg = document.createElementNS(svgNS, "svg")
-      svg.setAttribute("xmlns", svgNS)
-      svg.setAttribute("width", width.toString())
-      svg.setAttribute("height", height.toString())
-      svg.setAttribute("viewBox", `0 0 ${width} ${height}`)
-      svg.setAttribute("xmlns:xlink", xlinkNS)
-      
-      // Create background rectangle
-      const rect = document.createElementNS(svgNS, "rect")
-      rect.setAttribute("width", "100%")
-      rect.setAttribute("height", "100%")
-      rect.setAttribute("fill", backgroundColor)
-      svg.appendChild(rect)
-      
-      // Add the captured image to the SVG
-      const image = document.createElementNS(svgNS, "image")
-      image.setAttribute("width", "100%")
-      image.setAttribute("height", "100%")
-      image.setAttribute("xlink:href", canvas.toDataURL('image/png', 1.0))
-      image.setAttribute("preserveAspectRatio", "none")
-      svg.appendChild(image)
-      
-      // Add hidden text for accessibility and searchability
-      const textElement = previewElement.querySelector('div[dir="rtl"]')
-      if (textElement) {
-        const metadata = document.createElementNS(svgNS, "metadata")
-        metadata.textContent = `Arabic Calligraphy: ${textElement.textContent || ''}`
-        svg.appendChild(metadata)
-        
-        // Add hidden text element with the actual text content
-        const hiddenText = document.createElementNS(svgNS, "text")
-        hiddenText.setAttribute("font-size", "0")
-        hiddenText.setAttribute("visibility", "hidden")
-        hiddenText.textContent = textElement.textContent || ''
-        svg.appendChild(hiddenText)
+      const canvas = await generatePreviewCanvas(previewRef.current, currentOptions, 4); // Higher scale for embedded image
+
+      if (!canvas) {
+        return;
       }
       
-      // Convert SVG to string with proper XML declaration
-      const serializer = new XMLSerializer()
-      let svgString = serializer.serializeToString(svg)
+      const width = previewRef.current.offsetWidth;
+      const height = previewRef.current.offsetHeight;
+      const svgNS = "http://www.w3.org/2000/svg";
+      const xlinkNS = "http://www.w3.org/1999/xlink";
       
-      // Add XML declaration if not present
+      const svg = document.createElementNS(svgNS, "svg");
+      svg.setAttribute("xmlns", svgNS);
+      svg.setAttribute("width", width.toString());
+      svg.setAttribute("height", height.toString());
+      svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+      svg.setAttribute("xmlns:xlink", xlinkNS);
+      
+      const rect = document.createElementNS(svgNS, "rect");
+      rect.setAttribute("width", "100%");
+      rect.setAttribute("height", "100%");
+      // Use the actual background color from state for SVG background
+      rect.setAttribute("fill", backgroundColor); 
+      // If background image/pattern, it will be part of the embedded PNG from canvas
+      svg.appendChild(rect);
+      
+      const image = document.createElementNS(svgNS, "image");
+      image.setAttribute("width", "100%");
+      image.setAttribute("height", "100%");
+      image.setAttribute("xlink:href", canvas.toDataURL('image/png', 1.0));
+      image.setAttribute("preserveAspectRatio", "none");
+      svg.appendChild(image);
+      
+      const textContentForMeta = previewRef.current.querySelector('div[dir="rtl"]')?.textContent || text || DEFAULT_TEXT;
+      const metadata = document.createElementNS(svgNS, "metadata");
+      metadata.textContent = `Arabic Calligraphy: ${textContentForMeta}`;
+      svg.appendChild(metadata);
+      
+      const hiddenText = document.createElementNS(svgNS, "text");
+      hiddenText.setAttribute("font-size", "0"); // Make text invisible but selectable
+      hiddenText.setAttribute("visibility", "hidden"); // Ensure it's not rendered visually
+      hiddenText.textContent = textContentForMeta;
+      svg.appendChild(hiddenText);
+      
+      const serializer = new XMLSerializer();
+      let svgString = serializer.serializeToString(svg);
       if (!svgString.startsWith('<?xml')) {
         svgString = '<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n' + svgString
       }
       
-      // Create Blob object with UTF-8 encoding
-      const blob = new Blob([svgString], {type: 'image/svg+xml;charset=utf-8'})
-      
-      // Create download link
-      const link = document.createElement('a')
-      link.download = `arabic-calligraphy-${new Date().getTime()}.svg`
-      link.href = URL.createObjectURL(blob)
-      link.click()
-      
-      // Clean up URL object
-      setTimeout(() => URL.revokeObjectURL(link.href), 100)
+      const blob = new Blob([svgString], {type: 'image/svg+xml;charset=utf-8'});
+      const link = document.createElement('a');
+      link.download = `arabic-calligraphy-${new Date().getTime()}.svg`;
+      link.href = URL.createObjectURL(blob);
+      link.click();
+      setTimeout(() => URL.revokeObjectURL(link.href), 100);
 
       toast({
         title: "Download Complete",
         description: "Your Arabic calligraphy has been downloaded as SVG.",
-      })
+      });
     } catch (error) {
-      console.error('SVG download failed:', error)
-      toast({
-        title: "Download Failed",
-        description: "There was an error downloading your calligraphy. Please try again.",
-        variant: "destructive",
-      })
+      console.error('SVG download failed:', error);
+      if (!(error instanceof Error && error.message.includes("generatePreviewCanvas"))) {
+          toast({
+            title: "Download Failed",
+            description: "There was an error downloading your calligraphy. Please try again.",
+            variant: "destructive",
+          });
+      }
     }
-  }
+  };
+
+  const handleCopyToClipboardImage = async () => {
+    if (!previewRef.current) {
+      toast({
+        title: "Error",
+        description: "Preview element not found.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const currentOptions = {
+      font, fontSize, fontWeight, fontStyle, textColor, useGradient, gradientColors,
+      shadow, shadowSettings, backgroundColor, backgroundImage, backgroundPattern,
+    };
+
+    try {
+      toast({
+        title: "Copying Image",
+        description: "Preparing image to copy to clipboard...",
+      });
+
+      const canvas = await generatePreviewCanvas(previewRef.current, currentOptions, 2); // Moderate scale for clipboard
+
+      if (!canvas) {
+        return;
+      }
+
+      canvas.toBlob(async (blob) => {
+        if (blob) {
+          try {
+            await navigator.clipboard.write([
+              new ClipboardItem({ 'image/png': blob })
+            ]);
+            toast({
+              title: "Image Copied",
+              description: "The calligraphy image has been copied to your clipboard.",
+            });
+          } catch (clipboardError) {
+            console.error('Failed to copy image to clipboard:', clipboardError);
+            toast({
+              title: "Copy Failed",
+              description: "Could not copy image. Your browser might not support this feature or permission was denied.",
+              variant: "destructive",
+            });
+          }
+        } else {
+          // This case should ideally be caught by generatePreviewCanvas returning null
+          console.error("Image copy failed: Canvas toBlob produced null.");
+          toast({
+            title: "Copy Error",
+            description: "Failed to generate image blob for copying.",
+            variant: "destructive",
+          });
+        }
+      }, 'image/png', 0.95);
+
+    } catch (error) {
+      console.error('Image copy failed:', error);
+      if (!(error instanceof Error && error.message.includes("generatePreviewCanvas"))) {
+          toast({
+            title: "Copy Error",
+            description: "An unexpected error occurred while trying to copy the image.",
+            variant: "destructive",
+          });
+      }
+    }
+  };
 
   const handleCopyToClipboard = async () => {
     try {
@@ -454,34 +540,92 @@ export function CalligraphyGenerator() {
   }
 
   const handleShare = async () => {
+    if (!previewRef.current) {
+      toast({
+        title: "Error",
+        description: "Preview element not found. Cannot prepare image for sharing.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     if (!navigator.share) {
       toast({
         title: "Sharing Not Available",
-        description: "Your browser doesn't support the Web Share API.",
+        description: "Your browser doesn\'t support the Web Share API. Try downloading the image to share it.",
         variant: "destructive",
-      })
-      return
+      });
+      return;
     }
 
     try {
-      await navigator.share({
-        title: "Arabic Calligraphy",
-        text: "Check out this beautiful Arabic calligraphy I created!",
-      })
       toast({
-        title: "Shared Successfully",
-        description: "Your calligraphy has been shared.",
-      })
-    } catch (error) {
-      if ((error as Error).name !== "AbortError") {
-        toast({
-          title: "Share Failed",
-          description: "There was an error sharing your calligraphy.",
-          variant: "destructive",
-        })
+        title: "Preparing Image",
+        description: "Generating image for sharing...",
+      });
+
+      const currentOptions = {
+        font, fontSize, fontWeight, fontStyle, textColor, useGradient, gradientColors,
+        shadow, shadowSettings, backgroundColor, backgroundImage, backgroundPattern,
+      };
+      const canvas = await generatePreviewCanvas(previewRef.current, currentOptions, 2); // Moderate scale for sharing
+
+      if (!canvas) {
+        return;
       }
+      
+      canvas.toBlob(async (blob) => {
+        if (blob) {
+          const fileName = `arabic-calligraphy-${new Date().getTime()}.png`;
+          const imageFile = new File([blob], fileName, { type: 'image/png' });
+          const shareData: ShareData = {
+            title: "Arabic Calligraphy Design",
+            text: "Check out this beautiful Arabic calligraphy I created!",
+            // files: [imageFile], // Files array is optional and might not be supported by all browsers/targets
+          };
+
+          // Check if files can be shared
+          if (navigator.canShare && navigator.canShare({ files: [imageFile] })) {
+            shareData.files = [imageFile];
+          } else {
+            // If files cannot be shared, we can share the URL if we had one, or just text. 
+            // For now, we'll just proceed without files if not shareable, the OS might still pick up the text/title.
+            toast({
+              title: "Image Share Not Fully Supported",
+              description: "Your browser or selected share target might not support sharing images directly. Sharing text content instead.",
+              variant: "default", // Use default variant, not destructive
+              duration: 5000,
+            });
+          }
+
+          await navigator.share(shareData);
+          toast({
+            title: "Shared Successfully",
+            description: "Your calligraphy has been shared.",
+          });
+        } else {
+          throw new Error('Canvas toBlob failed for sharing.');
+        }
+      }, 'image/png', 0.95);
+
+    } catch (error) {
+      // Check if user cancelled the share operation
+      if ((error as Error).name === "AbortError" || 
+          (error as Error).message?.includes("canceled") || 
+          (error as Error).message?.includes("cancelled")) {
+        // User cancelled share, no error toast needed
+        console.log('User cancelled share operation');
+        return;
+      }
+      
+      console.error('Share failed:', error);
+      toast({
+        title: "Share Failed",
+        description: "There was an error sharing your calligraphy. Please try again or download the image.",
+        variant: "destructive",
+      });
     }
-  }
+  };
 
   const resetToDefaults = () => {
     setText(DEFAULT_TEXT)
@@ -568,47 +712,11 @@ export function CalligraphyGenerator() {
   // Mobile UI Components
   const MobileControls = () => (
     <>
-      <div className="flex items-center justify-between mb-4 px-4 pt-4 md:hidden">
-        <div className="text-lg font-semibold text-amber-800">Arabic Calligraphy</div>
-      <div className="flex gap-2">
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-        <Button variant="outline" size="icon" onClick={handleCopyToClipboard}>
-          <Copy className="h-4 w-4" />
-        </Button>
-              </TooltipTrigger>
-              <TooltipContent><p>Copy Image</p></TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-        <Button variant="outline" size="icon" onClick={handleShare}>
-          <Share2 className="h-4 w-4" />
-        </Button>
-              </TooltipTrigger>
-              <TooltipContent><p>Share</p></TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button variant="outline" size="icon" onClick={handleDownloadPNG} className="bg-amber-50 hover:bg-amber-100">
-                  <Download className="h-4 w-4" />
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent><p>Download PNG</p></TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-      </div>
-    </div>
-
-      <Sheet open={isControlsSheetOpen} onOpenChange={setIsControlsSheetOpen}>
-        <SheetContent side="left" className="w-[300px] sm:w-[400px] p-0 md:hidden">
+      <Drawer open={isControlsSheetOpen} onOpenChange={setIsControlsSheetOpen}>
+        <DrawerContent className="h-[85vh] md:hidden">
           <div className="h-full flex flex-col">
             <div className="p-4 border-b border-amber-200">
-              <h2 className="text-xl font-semibold text-amber-800">Calligraphy Controls</h2>
+              <h2 className="text-xl font-semibold text-amber-800 text-center">Calligraphy Controls</h2>
             </div>
             <Tabs defaultValue="text" className="w-full flex-grow flex flex-col">
               <TabsList className="grid grid-cols-3 m-4 mb-0">
@@ -617,14 +725,14 @@ export function CalligraphyGenerator() {
                 <TabsTrigger value="advanced" className="flex items-center gap-2"><Sliders className="h-4 w-4" /><span>Advanced</span></TabsTrigger>
               </TabsList>
               <ScrollArea className="flex-grow p-4">
-                <TabsContent value="text" className="space-y-4 mt-0"><TextTabContent /></TabsContent>
-                <TabsContent value="style" className="space-y-4 mt-0"><StyleTabContent /></TabsContent>
-                <TabsContent value="advanced" className="space-y-4 mt-0"><AdvancedTabContent /></TabsContent>
+                <TabsContent value="text" className="space-y-6 mt-0"><TextTabContent /></TabsContent>
+                <TabsContent value="style" className="space-y-6 mt-0"><StyleTabContent /></TabsContent>
+                <TabsContent value="advanced" className="space-y-6 mt-0"><AdvancedTabContent /></TabsContent>
               </ScrollArea>
             </Tabs>
           </div>
-        </SheetContent>
-      </Sheet>
+        </DrawerContent>
+      </Drawer>
     </>
   )
 
@@ -639,24 +747,24 @@ export function CalligraphyGenerator() {
     
     // 在客户端渲染之前，返回一个简单的占位符
     if (!mounted) {
-      return <div className="space-y-4 animate-pulse">
+      return <div className="space-y-6 animate-pulse">
         <div className="h-[100px] bg-gray-100 rounded-md"></div>
         <div className="flex gap-4">
-          <div className="h-10 bg-gray-100 rounded-md flex-1"></div>
-          <div className="h-10 bg-gray-100 rounded-md flex-1"></div>
+          <div className="h-12 bg-gray-100 rounded-md flex-1"></div>
+          <div className="h-12 bg-gray-100 rounded-md flex-1"></div>
         </div>
-        <div className="h-10 bg-gray-100 rounded-md"></div>
-        <div className="h-10 bg-gray-100 rounded-md"></div>
+        <div className="h-12 bg-gray-100 rounded-md"></div>
+        <div className="h-12 bg-gray-100 rounded-md"></div>
       </div>
     }
     
     // 客户端渲染后显示完整内容
     return (
     <>
-      <div className="space-y-2">
+      <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <Label htmlFor="arabic-text">Arabic Text</Label>
-          <Button variant="ghost" size="sm" onClick={toggleKeyboard} className="h-7 px-2">
+          <Label htmlFor="arabic-text" className="text-base font-medium">Arabic Text</Label>
+          <Button variant="ghost" size="sm" onClick={toggleKeyboard} className="h-8 px-3 text-sm">
             {keyboardVisible ? "Hide Keyboard" : "Show Keyboard"}
           </Button>
         </div>
@@ -666,7 +774,7 @@ export function CalligraphyGenerator() {
           placeholder="Enter Arabic text here..."
           value={text}
           onChange={handleTextChange}
-          className="min-h-[100px] font-arabic text-lg"
+          className="min-h-[120px] font-arabic text-lg p-4 touch-manipulation"
         />
         {keyboardVisible && (
           <div className="pt-2">
@@ -678,28 +786,28 @@ export function CalligraphyGenerator() {
       <div className="flex justify-between gap-4">
         <Button
           variant="outline"
-          className="flex-1 border-amber-200 hover:bg-amber-50"
+          className="flex-1 h-12 border-amber-200 hover:bg-amber-50 touch-manipulation"
           onClick={() => setIsTemplateDialogOpen(true)}
         >
-          <Sparkles className="mr-2 h-4 w-4" />
+          <Sparkles className="mr-2 h-5 w-5" />
           Templates
         </Button>
         <Button
           variant="outline"
-          className="flex-1 border-amber-200 hover:bg-amber-50"
+          className="flex-1 h-12 border-amber-200 hover:bg-amber-50 touch-manipulation"
           onClick={() => setText(DEFAULT_TEXT)}
         >
-          <RefreshCw className="mr-2 h-4 w-4" />
+          <RefreshCw className="mr-2 h-5 w-5" />
           Reset Text
         </Button>
       </div>
 
-      <div className="space-y-2">
-        <div className="flex justify-between">
-          <Label htmlFor="font-select">Font</Label>
+      <div className="space-y-3">
+        <div className="flex justify-between items-center">
+          <Label htmlFor="font-select" className="text-base font-medium">Font</Label>
           <Popover>
             <PopoverTrigger asChild>
-              <Button variant="ghost" size="sm" className="h-7 px-2">
+              <Button variant="ghost" size="sm" className="h-8 px-3 text-sm">
                 Preview
               </Button>
             </PopoverTrigger>
@@ -709,7 +817,7 @@ export function CalligraphyGenerator() {
           </Popover>
         </div>
         <Select value={font} onValueChange={handleFontChange}>
-          <SelectTrigger className="w-full">
+          <SelectTrigger className="w-full h-12 touch-manipulation">
             <SelectValue placeholder="Select font" />
           </SelectTrigger>
           <SelectContent>
@@ -719,7 +827,7 @@ export function CalligraphyGenerator() {
                 <div key={category} className="px-2 py-1">
                   <div className="text-xs font-semibold text-muted-foreground mb-1">{category}</div>
                   {ARABIC_FONTS.filter((font) => font.category === category).map((font) => (
-                    <SelectItem key={font.name} value={font.value} className="py-1.5 flex justify-between">
+                    <SelectItem key={font.name} value={font.value} className="py-3 flex justify-between min-h-[44px]">
                       <span>{font.name}</span>
                       <button
                         type="button"
@@ -727,7 +835,7 @@ export function CalligraphyGenerator() {
                           e.stopPropagation()
                           toggleFavorite(font.value)
                         }}
-                        className="text-amber-500 hover:text-amber-600"
+                        className="text-amber-500 hover:text-amber-600 p-1"
                       >
                         {favorites.includes(font.value) ? (
                           <Bookmark className="h-4 w-4 fill-current" />
@@ -744,7 +852,7 @@ export function CalligraphyGenerator() {
                 <div className="px-2 py-1">
                   <div className="text-xs font-semibold text-muted-foreground mb-1">Favorites</div>
                   {ARABIC_FONTS.filter((font) => favorites.includes(font.value)).map((font) => (
-                    <SelectItem key={`fav-${font.name}`} value={font.value}>
+                    <SelectItem key={`fav-${font.name}`} value={font.value} className="py-3 min-h-[44px]">
                       {font.name}
                     </SelectItem>
                   ))}
@@ -755,76 +863,78 @@ export function CalligraphyGenerator() {
         </Select>
       </div>
 
-      <div className="space-y-2">
-        <div className="flex justify-between">
-          <Label>Font Size: {fontSize}px</Label>
+      <div className="space-y-4">
+        <div className="flex justify-between items-center">
+          <Label className="text-base font-medium">Font Size: {fontSize}px</Label>
         </div>
-        <Slider
-          value={[fontSize]}
-          min={12}
-          max={120}
-          step={1}
-          onValueChange={(value) => setFontSize(value[0])}
-          className="[&>[role=slider]]:h-5 [&>[role=slider]]:w-5"
-        />
+        <div className="px-2">
+          <Slider
+            value={[fontSize]}
+            min={12}
+            max={120}
+            step={1}
+            onValueChange={(value) => setFontSize(value[0])}
+            className="[&>[role=slider]]:h-6 [&>[role=slider]]:w-6 [&>[role=slider]]:touch-manipulation"
+          />
+        </div>
       </div>
 
       <div className="grid grid-cols-2 gap-4">
-        <div className="space-y-2">
-          <Label>Font Weight</Label>
+        <div className="space-y-3">
+          <Label className="text-base font-medium">Font Weight</Label>
           <Select value={fontWeight.toString()} onValueChange={handleFontWeightChange}>
-            <SelectTrigger>
+            <SelectTrigger className="h-12 touch-manipulation">
               <SelectValue placeholder="Select weight" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="300">Light</SelectItem>
-              <SelectItem value="400">Regular</SelectItem>
-              <SelectItem value="500">Medium</SelectItem>
-              <SelectItem value="700">Bold</SelectItem>
+              <SelectItem value="300" className="py-3 min-h-[44px]">Light</SelectItem>
+              <SelectItem value="400" className="py-3 min-h-[44px]">Regular</SelectItem>
+              <SelectItem value="500" className="py-3 min-h-[44px]">Medium</SelectItem>
+              <SelectItem value="700" className="py-3 min-h-[44px]">Bold</SelectItem>
             </SelectContent>
           </Select>
         </div>
 
-        <div className="space-y-2">
-          <Label>Font Style</Label>
+        <div className="space-y-3">
+          <Label className="text-base font-medium">Font Style</Label>
           <Select value={fontStyle} onValueChange={handleFontStyleChange}>
-            <SelectTrigger>
+            <SelectTrigger className="h-12 touch-manipulation">
               <SelectValue placeholder="Select style" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="normal">Normal</SelectItem>
-              <SelectItem value="italic">Italic</SelectItem>
+              <SelectItem value="normal" className="py-3 min-h-[44px]">Normal</SelectItem>
+              <SelectItem value="italic" className="py-3 min-h-[44px]">Italic</SelectItem>
             </SelectContent>
           </Select>
         </div>
       </div>
 
-      <div className="space-y-2">
-        <Label>Alignment</Label>
+      <div className="space-y-3">
+        <Label className="text-base font-medium">Alignment</Label>
         <div className="flex gap-2">
           <Button
             variant={alignment === "right" ? "default" : "outline"}
-            size="icon"
+            size="lg"
             onClick={() => handleAlignmentChange("right")}
-            className={alignment === "right" ? "bg-amber-600 hover:bg-amber-700" : ""}
+            className={cn("flex-1 h-12 touch-manipulation", alignment === "right" ? "bg-amber-600 hover:bg-amber-700" : "")}
           >
-            <AlignRight className="h-4 w-4" />
+            <AlignRight className="h-5 w-5" />
           </Button>
           <Button
             variant={alignment === "center" ? "default" : "outline"}
-            size="icon"
+            size="lg"
             onClick={() => handleAlignmentChange("center")}
-            className={alignment === "center" ? "bg-amber-600 hover:bg-amber-700" : ""}
+            className={cn("flex-1 h-12 touch-manipulation", alignment === "center" ? "bg-amber-600 hover:bg-amber-700" : "")}
           >
-            <AlignCenter className="h-4 w-4" />
+            <AlignCenter className="h-5 w-5" />
           </Button>
           <Button
             variant={alignment === "left" ? "default" : "outline"}
-            size="icon"
+            size="lg"
             onClick={() => handleAlignmentChange("left")}
-            className={alignment === "left" ? "bg-amber-600 hover:bg-amber-700" : ""}
+            className={cn("flex-1 h-12 touch-manipulation", alignment === "left" ? "bg-amber-600 hover:bg-amber-700" : "")}
           >
-            <AlignLeft className="h-4 w-4" />
+            <AlignLeft className="h-5 w-5" />
           </Button>
         </div>
       </div>
@@ -1339,7 +1449,7 @@ export function CalligraphyGenerator() {
         {/* Right side - Preview Area */}
         <div className="lg:col-span-2">
           <div className="space-y-6">
-            {/* MobileControls component now renders the mobile top bar AND the hidden Sheet for controls */}
+            {/* MobileControls component now renders the mobile control drawer */}
             {isMobile && <MobileControls />}
 
             {/* Preview Card */}
@@ -1352,7 +1462,7 @@ export function CalligraphyGenerator() {
                       <TooltipProvider>
                         <Tooltip>
                           <TooltipTrigger asChild>
-                            <Button variant="outline" size="icon" onClick={handleCopyToClipboard}>
+                            <Button variant="outline" size="icon" onClick={handleCopyToClipboardImage}>
                               <Copy className="h-4 w-4" />
                             </Button>
                           </TooltipTrigger>
@@ -1497,11 +1607,11 @@ export function CalligraphyGenerator() {
         </div>
       </div>
 
-      {/* New FAB for opening mobile controls - only on mobile */}
+      {/* Control button for opening mobile controls - only on mobile, positioned at bottom left */}
       {isMobile && (
         <Button
           size="icon"
-          className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full shadow-lg bg-blue-600 hover:bg-blue-700 text-white md:hidden"
+          className="fixed bottom-6 left-6 z-50 h-14 w-14 rounded-full shadow-lg bg-amber-600 hover:bg-amber-700 text-white md:hidden"
           onClick={() => setIsControlsSheetOpen(true)}
           aria-label="Open calligraphy controls"
         >
@@ -1509,11 +1619,11 @@ export function CalligraphyGenerator() {
         </Button>
       )}
 
-      {/* MobileFab for quick actions (Download, Copy, Share) - only on mobile */}
+      {/* MobileFab for quick actions (Download, Copy, Share) - only on mobile, positioned at bottom right */}
       {isMobile && (
         <MobileFab 
           onDownload={handleDownloadPNG}
-          onCopy={handleCopyToClipboard}
+          onCopy={handleCopyToClipboardImage}
           onShare={handleShare}
         />
       )}

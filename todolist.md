@@ -183,6 +183,49 @@
 - 内容创建需注重SEO优化和教育价值
 - 确保所有页面在移动端有良好的响应式表现
 
+## 移动端操作按钮功能优化 (进行中)
+
+### 1. 问题诊断与现状确认 (已完成)
+- [x] 确认移动端复制、分享、下载按钮的事件绑定和处理函数。
+- [x] 分析 `handleCopyToClipboard`, `handleShare`, `handleDownloadPNG`, `handleDownloadSVG` 的现有逻辑。
+- [x] 总结：
+    - 复制功能 (`handleCopyToClipboard`) 当前复制文本，用户可能期望复制图像。
+    - 分享功能 (`handleShare`) 当前分享固定文本，若API不可用则无操作，用户可能期望分享图像。
+    - 下载功能 (`handleDownloadPNG`/`SVG`) 依赖 `html2canvas`，可能存在未正确提示的错误。
+    - 用户反馈的"无交互提示"表明 `toast` 通知系统可能存在问题或被覆盖。
+
+### 2. 核心功能修复与反馈增强 (待办)
+- [ ] **Toast 通知系统**
+  - [ ] 验证 `ToastProvider` 配置及全局CSS，确保 `toast` 正常显示。
+  - Action: 检查 `app/layout.tsx` 和 `app/globals.css`，测试 `toast` 可见性。
+  - Summary: 确保所有操作的反馈提示都能正确展示给用户。
+- [ ] **复制功能 (`handleCopyToClipboard`)**
+  - [ ] 方案：在移动端，修改复制按钮逻辑为复制生成的图像到剪贴板。
+  - [ ] 实现 `handleCopyToClipboardImage` 函数，使用 `html2canvas` 生成图像 `Blob`，然后使用 `navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })])`。
+  - [ ] 更新 `MobileControls` 和 `MobileFab` 中的复制按钮，调用新的图像复制函数。
+  - [ ] 调整 `toast` 提示为 "Image copied to clipboard." (成功) / "Failed to copy image." (失败)。
+  - Action: 修改 `components/calligraphy-generator.tsx`。
+  - Summary: 使移动端复制功能符合用户对图像复制的预期。
+- [ ] **分享功能 (`handleShare`)**
+  - [ ] 方案：修改为分享生成的图像，并提供API不可用时的回退提示。
+  - [ ] 实现：先调用 `html2canvas` 生成图像文件 (`File` 对象)。
+  - [ ] 使用 `navigator.share({ files: [imageFile], title: "Arabic Calligraphy Design", text: "Check out this calligraphy I created!" })`。
+  - [ ] 如果 `navigator.share` 不可用或分享 `files` 不被支持，提示 "Sharing images is not supported by your browser. You can download the image to share it."。
+  - [ ] 调整 `toast` 提示内容，确保各种场景都有清晰反馈。
+  - Action: 修改 `components/calligraphy-generator.tsx`。
+  - Summary: 实现图像分享功能，并处理浏览器兼容性问题。
+- [ ] **下载功能 (`handleDownloadPNG`, `handleDownloadSVG`)**
+  - [ ] 检查 `html2canvas` 的错误处理，确保所有潜在错误都被捕获并用 `toast` 清晰提示。
+  - [ ] 测试在不同场景下（例如复杂背景、特殊字体）的下载稳定性。
+  - Action: 审查并加固 `components/calligraphy-generator.tsx` 中的下载函数。
+  - Summary: 提高下载功能的稳定性和错误反馈。
+
+### 3. 移动端UI/UX优化 (可选，待讨论)
+- [ ] 评估移动端操作按钮的冗余问题 (顶部图标 vs MobileFab)。
+- [ ] 考虑是否移除预览区顶部的复制/分享/下载图标按钮，以 `MobileFab` 作为主要快速操作入口，简化界面。
+- Action: 讨论后决定是否修改 `components/calligraphy-generator.tsx` 中的 `MobileControls`。
+- Summary: 提升移动端界面的简洁性和易用性。
+
 ---
 
 本进度表将持续更新，记录项目实现情况。 
