@@ -18,6 +18,7 @@ import {
   ImageIcon,
   Bookmark,
   SlidersHorizontal,
+  Edit,
   BookOpen,
   HelpCircle,
   ChevronRight,
@@ -40,7 +41,7 @@ import { Separator } from "@/components/ui/separator"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { useMobile } from "@/hooks/use-mobile"
 import { ArabicKeyboard } from "@/components/arabic-keyboard"
-import { Drawer, DrawerContent } from "@/components/ui/drawer"
+import { Drawer, DrawerContent, DrawerHeader, DrawerTitle } from "@/components/ui/drawer"
 import { TemplateBrowser } from "@/components/template-browser"
 import { FontPreview } from "@/components/font-preview"
 import { MobileFab } from "@/components/mobile-fab"
@@ -715,9 +716,9 @@ export function CalligraphyGenerator() {
       <Drawer open={isControlsSheetOpen} onOpenChange={setIsControlsSheetOpen}>
         <DrawerContent className="h-[85vh] md:hidden">
           <div className="h-full flex flex-col">
-            <div className="p-4 border-b border-amber-200">
-              <h2 className="text-xl font-semibold text-amber-800 text-center">Calligraphy Controls</h2>
-            </div>
+            <DrawerHeader className="border-b border-amber-200">
+              <DrawerTitle className="text-xl font-semibold text-amber-800 text-center">Calligraphy Controls</DrawerTitle>
+            </DrawerHeader>
             <Tabs defaultValue="text" className="w-full flex-grow flex flex-col">
               <TabsList className="grid grid-cols-3 m-4 mb-0">
                 <TabsTrigger value="text" className="flex items-center gap-2"><Type className="h-4 w-4" /><span>Text</span></TabsTrigger>
@@ -1305,8 +1306,10 @@ export function CalligraphyGenerator() {
   const MobileTemplateDrawer = () => (
     <Drawer open={isTemplateDialogOpen} onOpenChange={setIsTemplateDialogOpen}>
       <DrawerContent>
-        <div className="px-4 py-6">
-          <h2 className="text-xl font-semibold text-amber-800 mb-4 text-center">Featured Templates</h2>
+        <DrawerHeader>
+          <DrawerTitle className="text-xl font-semibold text-amber-800 text-center">Featured Templates</DrawerTitle>
+        </DrawerHeader>
+        <div className="px-4 pb-6">
           <div className="grid grid-cols-1 gap-4 max-h-[60vh] overflow-y-auto pb-6">
             {COMMON_PHRASES.map((phrase, index) => (
               <div
@@ -1607,15 +1610,15 @@ export function CalligraphyGenerator() {
         </div>
       </div>
 
-      {/* Control button for opening mobile controls - only on mobile, positioned at bottom left */}
+      {/* Edit controls button - only on mobile, positioned at bottom left */}
       {isMobile && (
         <Button
           size="icon"
           className="fixed bottom-6 left-6 z-50 h-14 w-14 rounded-full shadow-lg bg-amber-600 hover:bg-amber-700 text-white md:hidden"
           onClick={() => setIsControlsSheetOpen(true)}
-          aria-label="Open calligraphy controls"
+          aria-label="编辑文字样式"
         >
-          <SlidersHorizontal className="h-6 w-6" />
+          <Edit className="h-6 w-6" />
         </Button>
       )}
 

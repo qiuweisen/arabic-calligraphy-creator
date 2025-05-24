@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Plus, Share2, Download, Copy, X } from "lucide-react"
+import { Plus, Share2, Download, Copy, X, MoreHorizontal } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useMobile } from "@/hooks/use-mobile"
 
@@ -20,7 +20,7 @@ export function MobileFab({ onDownload, onCopy, onShare }: MobileFabProps) {
   if (!isMobile) return null
 
   return (
-    <div className="fixed bottom-20 right-6 z-50 flex flex-col-reverse items-center gap-3">
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col-reverse items-center gap-3">
       {/* 子按钮，当FAB打开时显示 */}
       <div
         className={cn(
@@ -81,7 +81,7 @@ export function MobileFab({ onDownload, onCopy, onShare }: MobileFabProps) {
         {isOpen ? (
           <X className="h-6 w-6" />
         ) : (
-          <Plus className="h-6 w-6" />
+          <MoreHorizontal className="h-6 w-6" />
         )}
       </Button>
     </div>
