@@ -1614,9 +1614,9 @@ export function CalligraphyGenerator() {
       {isMobile && (
         <Button
           size="icon"
-          className="fixed bottom-6 left-6 z-50 h-14 w-14 rounded-full shadow-lg bg-amber-600 hover:bg-amber-700 text-white md:hidden"
+          className="fixed left-6 top-1/2 -translate-y-1/2 z-50 h-14 w-14 rounded-full shadow-lg bg-amber-600 hover:bg-amber-700 text-white md:hidden"
           onClick={() => setIsControlsSheetOpen(true)}
-          aria-label="编辑文字样式"
+          aria-label="Open Edit Panel"
         >
           <Edit className="h-6 w-6" />
         </Button>

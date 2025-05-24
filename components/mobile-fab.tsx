@@ -20,7 +20,7 @@ export function MobileFab({ onDownload, onCopy, onShare }: MobileFabProps) {
   if (!isMobile) return null
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col-reverse items-center gap-3">
+    <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col-reverse items-center gap-3">
       {/* 子按钮，当FAB打开时显示 */}
       <div
         className={cn(
