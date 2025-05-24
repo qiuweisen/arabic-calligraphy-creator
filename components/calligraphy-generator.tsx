@@ -1610,11 +1610,11 @@ export function CalligraphyGenerator() {
         </div>
       </div>
 
-      {/* Edit controls button - only on mobile, positioned at bottom left */}
+      {/* Edit controls button - fixed bottom left for mobile */}
       {isMobile && (
         <Button
           size="icon"
-          className="fixed left-6 top-1/2 -translate-y-1/2 z-50 h-14 w-14 rounded-full shadow-lg bg-amber-600 hover:bg-amber-700 text-white md:hidden"
+          className="fixed bottom-6 left-6 z-50 h-14 w-14 rounded-full shadow-lg bg-amber-600 hover:bg-amber-700 text-white md:hidden"
           onClick={() => setIsControlsSheetOpen(true)}
           aria-label="Open Edit Panel"
         >
@@ -1622,7 +1622,7 @@ export function CalligraphyGenerator() {
         </Button>
       )}
 
-      {/* MobileFab for quick actions (Download, Copy, Share) - only on mobile, positioned at bottom right */}
+      {/* MobileFab for quick actions - fixed bottom right for mobile */}
       {isMobile && (
         <MobileFab 
           onDownload={handleDownloadPNG}

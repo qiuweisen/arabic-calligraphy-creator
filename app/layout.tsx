@@ -67,7 +67,20 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-33BV8X0BYE');
+              gtag('config', 'G-33BV8X0BYE', {
+                debug_mode: ${process.env.NODE_ENV === 'development'},
+                send_page_view: true
+              });
+              
+              // 调试信息
+              if (typeof window !== 'undefined' && window.console) {
+                console.log('Google Analytics initialized with ID: G-33BV8X0BYE');
+                gtag('event', 'page_view', {
+                  page_title: document.title,
+                  page_location: window.location.href,
+                  custom_parameter: 'test_event'
+                });
+              }
             `,
           }}
         />

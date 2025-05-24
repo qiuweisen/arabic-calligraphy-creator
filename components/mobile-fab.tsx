@@ -20,11 +20,11 @@ export function MobileFab({ onDownload, onCopy, onShare }: MobileFabProps) {
   if (!isMobile) return null
 
   return (
-    <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col-reverse items-center gap-3">
-      {/* 子按钮，当FAB打开时显示 */}
+    <div className="fixed bottom-6 right-6 z-50">
+      {/* 子按钮，使用绝对定位，相对于主按钮 */}
       <div
         className={cn(
-          "flex flex-col gap-3 transition-all duration-300",
+          "absolute bottom-20 right-0 flex flex-col gap-3 transition-all duration-300",
           isOpen ? "scale-100 opacity-100" : "scale-0 opacity-0 pointer-events-none"
         )}
       >
@@ -68,7 +68,7 @@ export function MobileFab({ onDownload, onCopy, onShare }: MobileFabProps) {
         </Button>
       </div>
       
-      {/* 主FAB按钮 */}
+      {/* 主FAB按钮 - 现在真正固定在底部 */}
       <Button
         size="icon"
         className={cn(
