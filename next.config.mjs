@@ -37,6 +37,7 @@ const nextConfig = {
         source: '/blog/beginners-guide-to-arabic-calligraphy',
         destination: '/blog/beginners-guide-to-calligraphy',
         permanent: true, // 301 redirect
+        statusCode: 301, // Explicitly set the status code
       },
       
       // Language redirects (keeping existing ones)
