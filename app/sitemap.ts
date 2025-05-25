@@ -31,7 +31,7 @@ const FONTS = [
 const BLOG_POSTS = [
   'the-rich-history-of-arabic-calligraphy',
   'understanding-the-six-major-arabic-calligraphy-styles',
-  'beginners-guide-to-arabic-calligraphy',
+  'beginners-guide-to-calligraphy',
   'famous-arabic-calligraphers-through-history',
   'modern-arabic-typography',
   'quran-and-calligraphy'

@@ -30,27 +30,34 @@ const nextConfig = {
       // You can add other remote patterns here if needed in the future
     ],
   },
-  // async redirects() { // Re-adding redirects from previous configuration
-  //   return [
-  //     // Language redirects
-  //     { source: '/bn', destination: '/', permanent: true },
-  //     { source: '/hi', destination: '/', permanent: true },
-  //     { source: '/ar', destination: '/', permanent: true },
-  //     { source: '/id', destination: '/', permanent: true },
-  //     { source: '/bn/:path*', destination: '/:path*', permanent: true },
-  //     { source: '/hi/:path*', destination: '/:path*', permanent: true },
-  //     { source: '/ar/:path*', destination: '/:path*', permanent: true },
-  //     { source: '/id/:path*', destination: '/:path*', permanent: true },
+  async redirects() {
+    return [
+      // Blog URL correction - 301 redirect to preserve SEO
+      {
+        source: '/blog/beginners-guide-to-arabic-calligraphy',
+        destination: '/blog/beginners-guide-to-calligraphy',
+        permanent: true, // 301 redirect
+      },
       
-  //     // HTTP to HTTPS redirect
-  //     {
-  //       source: '/:path*',
-  //       has: [{ type: 'header', key: 'x-forwarded-proto', value: 'http' }],
-  //       destination: 'https://arabiccalligraphygenerator.site/:path*',
-  //       permanent: true,
-  //     },
-  //   ];
-  // },
+      // Language redirects (keeping existing ones)
+      { source: '/bn', destination: '/', permanent: true },
+      { source: '/hi', destination: '/', permanent: true },
+      { source: '/ar', destination: '/', permanent: true },
+      { source: '/id', destination: '/', permanent: true },
+      { source: '/bn/:path*', destination: '/:path*', permanent: true },
+      { source: '/hi/:path*', destination: '/:path*', permanent: true },
+      { source: '/ar/:path*', destination: '/:path*', permanent: true },
+      { source: '/id/:path*', destination: '/:path*', permanent: true },
+      
+      // HTTP to HTTPS redirect
+      {
+        source: '/:path*',
+        has: [{ type: 'header', key: 'x-forwarded-proto', value: 'http' }],
+        destination: 'https://arabic-calligraphy-generator.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig; 
