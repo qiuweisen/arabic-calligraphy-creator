@@ -56,7 +56,7 @@ export default function RootLayout({
           <CssLoader />
         </ThemeProvider>
         
-        {/* Google Analytics */}
+        {/* Google Analytics 4 */}
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-8M8QKWNMRY"
