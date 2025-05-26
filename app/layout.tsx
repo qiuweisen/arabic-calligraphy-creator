@@ -42,6 +42,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const isProduction = process.env.NODE_ENV === 'production'
+
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning className={`${inter.variable} ${notoNaskhArabic.variable} ${amiri.variable} ${arefRuqaa.variable} ${cairo.variable} ${harmattan.variable} ${jomhuria.variable} ${lateef.variable} ${mada.variable} ${mirza.variable} ${rakkas.variable} ${reemKufi.variable} ${scheherazadeNew.variable} ${tajawal.variable}`}>
       <head>
@@ -56,36 +58,42 @@ export default function RootLayout({
           <CssLoader />
         </ThemeProvider>
         
-        {/* Google Analytics 4 */}
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-8M8QKWNMRY"
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-8M8QKWNMRY', {
-                debug_mode: ${process.env.NODE_ENV === 'development'},
-                send_page_view: true
-              });
-            `,
-          }}
-        />
+        {isProduction && (
+          <>
+            {/* Google Analytics 4 */}
+            <Script
+              strategy="afterInteractive"
+              src="https://www.googletagmanager.com/gtag/js?id=G-8M8QKWNMRY"
+            />
+            <Script
+              id="google-analytics-init"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-8M8QKWNMRY', {
+                    debug_mode: false,
+                    send_page_view: true
+                  });
+                `,
+              }}
+            />
+            
+            {/* Plausible Analytics */}
+            <Script
+              defer
+              data-domain="arabic-calligraphy-generator.com"
+              src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
+              strategy="afterInteractive"
+            />
+          </>
+        )}
         
-        {/* Plausible Analytics */}
+        {/* Common Analytics Event Tracking Function and Plausible Dev Init */}
         <Script
-          defer
-          data-domain="arabic-calligraphy-generator.com"
-          src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="plausible-init"
+          id="analytics-functions"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
@@ -93,24 +101,28 @@ export default function RootLayout({
                 (window.plausible.q = window.plausible.q || []).push(arguments) 
               }
               
-              // 调试信息 (仅在开发环境)
               if (${process.env.NODE_ENV === 'development'}) {
-                console.log('Plausible Analytics initialized for domain: arabic-calligraphy-generator.com');
+                console.log('Analytics scripts (GA, Plausible) are in DEVELOPMENT mode or NOT loaded.')
+                console.log('Plausible Analytics would be initialized for domain: arabic-calligraphy-generator.com if in production.')
               }
               
-              // 自定义事件函数 - 同时发送到GA和Plausible
               window.trackCalligraphyEvent = function(eventName, props) {
-                // 发送到Plausible
-                if (typeof window.plausible === 'function') {
-                  window.plausible(eventName, { props: props });
-                }
-                
-                // 发送到Google Analytics
-                if (typeof gtag === 'function') {
-                  gtag('event', eventName, {
-                    event_category: 'Calligraphy_Generator',
-                    ...props
-                  });
+                const isProd = ${isProduction}
+                if (isProd) {
+                  // Send to Plausible if in production
+                  if (typeof window.plausible === 'function') {
+                    window.plausible(eventName, { props: props })
+                  }
+                  
+                  // Send to Google Analytics if in production
+                  if (typeof gtag === 'function') {
+                    gtag('event', eventName, {
+                      event_category: 'Calligraphy_Generator',
+                      ...props
+                    })
+                  }
+                } else {
+                  console.log('[DEV MODE] Event: ' + eventName + ', Props:', props)
                 }
               }
             `,
