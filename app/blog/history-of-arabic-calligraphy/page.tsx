@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "The Rich History of Arabic Calligraphy",
     description: "Explore the origins and evolution of Arabic calligraphy from the 7th century to modern times",
     url: "https://arabic-calligraphy-generator.com/blog/history-of-arabic-calligraphy",
-    siteName: "Arabic Calligraphy Creator",
+    siteName: "Arabic Calligraphy Generator",
     locale: "en_US",
     type: "article",
     publishedTime: "2023-05-15T00:00:00Z",

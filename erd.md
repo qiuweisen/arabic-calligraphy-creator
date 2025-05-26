@@ -1,8 +1,8 @@
-# Arabic Calligraphy Creator - Project Architecture Document
+# Arabic Calligraphy Generator - Project Architecture Document
 
 ## Project Overview
 
-This document describes the architecture, structure, and design of the Arabic Calligraphy Creator web application. The application is built using Next.js 15.2.4 and React 19, with a focus on providing a modern, responsive user interface for creating beautiful Arabic calligraphy.
+This document describes the architecture, structure, and design of the Arabic Calligraphy Generator web application. The application is built using Next.js 15.2.4 and React 19, with a focus on providing a modern, responsive user interface for creating beautiful Arabic calligraphy.
 
 ## Directory Structure
 

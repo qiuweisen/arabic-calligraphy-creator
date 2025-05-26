@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Explore Arabic Calligraphy Fonts: Naskh, Kufi, Diwani & More",
     description: "Your ultimate library of Arabic fonts for calligraphy, Islamic art, and modern typography. Find usage guides and inspiration.",
     url: "https://arabic-calligraphy-generator.com/fonts",
-    siteName: "Arabic Calligraphy Creator",
+    siteName: "Arabic Calligraphy Generator",
     locale: "en_US",
     type: "website",
   },

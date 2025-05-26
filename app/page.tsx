@@ -25,7 +25,7 @@ export default function Home() {
             <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-800 to-amber-600 mb-4">
               الخط العربي
             </h1>
-            <p className="text-xl md:text-2xl text-amber-900 font-medium">Arabic Calligraphy Creator</p>
+            <p className="text-xl md:text-2xl text-amber-900 font-medium">Arabic Calligraphy Generator</p>
             <p className="mt-4 text-amber-700 max-w-2xl mx-auto">
               Transform ordinary text into extraordinary art with our elegant Arabic calligraphy generator. Explore the
               beauty of Arabic script through customizable designs.
