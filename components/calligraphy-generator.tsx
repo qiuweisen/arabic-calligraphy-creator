@@ -215,7 +215,7 @@ export function CalligraphyGenerator() {
     from: "#8B5A2B",
     to: "#D4AF37",
   })
-  const [backgroundColor, setBackgroundColor] = useState("#FFFBF0") // Light cream
+  const [backgroundColor, setBackgroundColor] = useState("#FFFFFF") // Light cream -> Default to white
   const [backgroundImage, setBackgroundImage] = useState("")
   const [backgroundPattern, setBackgroundPattern] = useState(BACKGROUND_PATTERNS[0].value)
   const [alignment, setAlignment] = useState("center")
@@ -717,7 +717,7 @@ export function CalligraphyGenerator() {
     setTextColor("#8B5A2B")
     setUseGradient(false)
     setGradientColors({ from: "#8B5A2B", to: "#D4AF37" })
-    setBackgroundColor("#FFFBF0")
+    setBackgroundColor("#FFFFFF") // Light cream -> Default to white
     setBackgroundImage("")
     setBackgroundPattern(BACKGROUND_PATTERNS[0].value)
     setAlignment("center")
