@@ -48,6 +48,7 @@ export default function RootLayout({
     <html lang="en" dir="ltr" suppressHydrationWarning className={`${inter.variable} ${notoNaskhArabic.variable} ${amiri.variable} ${arefRuqaa.variable} ${cairo.variable} ${harmattan.variable} ${jomhuria.variable} ${lateef.variable} ${mada.variable} ${mirza.variable} ${rakkas.variable} ${reemKufi.variable} ${scheherazadeNew.variable} ${tajawal.variable}`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+        <link rel="icon" href="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/favicon.ico" sizes="any" />
         {/* Google Fonts <link> tags removed as next/font handles this */}
       </head>
       <body className={`${inter.className} ${notoNaskhArabic.className} font-sans`}>

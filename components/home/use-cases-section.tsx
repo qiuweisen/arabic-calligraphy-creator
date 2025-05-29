@@ -5,6 +5,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Check } from "lucide-react";
 
+const cdnBaseUrl = 'https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev';
+
 export function UseCasesSection() {
   return (
     <section className="mb-12">
@@ -47,7 +49,7 @@ export function UseCasesSection() {
                 <div className="flex items-center justify-center">
                   <div className="relative w-[300px] h-[200px] rounded-lg border border-amber-200">
                     <Image
-                      src="/arabic-calligraphy-in-twitter-post.png"
+                      src={`${cdnBaseUrl}/arabic-calligraphy-in-twitter-post.png`}
                       alt="Social media examples"
                       fill
                       style={{ objectFit: 'cover' }}
@@ -91,7 +93,7 @@ export function UseCasesSection() {
                 <div className="flex items-center justify-center">
                   <div className="relative w-[300px] h-[200px] rounded-lg border border-amber-200">
                     <Image
-                      src="/business-cards-with-arabic-typography.png"
+                      src={`${cdnBaseUrl}/business-cards-with-arabic-typography.png`}
                       alt="Print examples"
                       fill
                       style={{ objectFit: 'cover' }}
@@ -135,7 +137,7 @@ export function UseCasesSection() {
                 <div className="flex items-center justify-center">
                   <div className="relative w-[300px] h-[200px] rounded-lg border border-amber-200">
                     <Image
-                      src="/website-with-arabic-typography.png"
+                      src={`${cdnBaseUrl}/website-with-arabic-typography.png`}
                       alt="Web design examples"
                       fill
                       style={{ objectFit: 'cover' }}
@@ -179,7 +181,7 @@ export function UseCasesSection() {
                 <div className="flex items-center justify-center">
                   <div className="relative w-[300px] h-[200px] rounded-lg border border-amber-200">
                     <Image
-                      src="/arabic-calligraphy-flat-lay-composition.png" 
+                      src={`${cdnBaseUrl}/arabic-calligraphy-flat-lay-composition.png`}
                       alt="Art examples"
                       fill
                       style={{ objectFit: 'cover' }}

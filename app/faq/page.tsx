@@ -6,8 +6,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 export const metadata: Metadata = {
   title: "FAQ | Arabic Calligraphy Generator",
-  description: "Frequently asked questions about Arabic calligraphy, our generator tool, and typography techniques.",
-  keywords: "Arabic calligraphy FAQ, Arabic typography help, calligraphy questions, Arabic font generator help",
+  description: "Frequently asked questions about our Arabic calligraphy generator, Arabic typography, font choices, commercial use, and creating specific styles like Kufic calligraphy or name art.",
+  keywords: "Arabic calligraphy FAQ, Arabic calligraphy generator FAQ, Kufic calligraphy generator, Arabic name art, Harakat support, free calligraphy tool questions, Arabic typography help, calligraphy questions, Arabic font generator help",
 }
 
 const faqs = [
@@ -19,41 +19,70 @@ const faqs = [
   {
     question: "How many styles of Arabic calligraphy exist?",
     answer:
-      "There are six major classical styles of Arabic calligraphy: Naskh, Thuluth, Diwani, Kufi, Riq'a, and Nastaliq. Each has distinct characteristics and uses. Naskh is commonly used for body text, Thuluth for decorative purposes, Kufi for architectural decoration, Diwani for official documents, Riq'a for everyday writing, and Nastaliq is popular in Persian and Urdu calligraphy.",
+      "There are six major classical styles of Arabic calligraphy: Naskh, Thuluth, Diwani, Kufi, Riq'a, and Nastaliq. Each has distinct characteristics and uses. Naskh is commonly used for body text, Thuluth for decorative purposes, Kufi for architectural decoration, Diwani for official documents, Riq'a for everyday writing, and Nastaliq is popular in Persian and Urdu calligraphy. Our generator helps you explore some of these styles, particularly Kufic and others suitable for digital representation.",
   },
   {
     question: "What is Kashida in Arabic typography?",
     answer:
-      "Kashida (كشيدة), also known as tatweel, is a typographic feature in Arabic writing that involves elongating certain characters by inserting a straight line between connected letters. It's used for text justification, aesthetic enhancement, and emphasis. Our calligraphy generator allows you to adjust Kashida length to create more elegant text arrangements.",
+      "Kashida (كشيدة), also known as tatweel, is a typographic feature in Arabic writing that involves elongating certain characters by inserting a straight line between connected letters. It's used for text justification, aesthetic enhancement, and emphasis. Our <strong>Arabic calligraphy generator</strong> allows you to adjust Kashida length to create more elegant text arrangements.",
   },
   {
-    question: "Can I use the generated calligraphy commercially?",
+    question: "What is an Arabic calligraphy generator?",
     answer:
-      "Yes, you can use the calligraphy you create with our generator for both personal and commercial projects. We don't claim any rights to the artwork you create. However, if you're using specific premium fonts, please check their individual licenses as some may have restrictions on commercial use.",
+      "An <strong>Arabic calligraphy generator</strong> is an online tool that transforms standard Arabic text into various artistic calligraphy styles. It allows users to customize fonts, colors, sizes, and other elements to create beautiful, stylized Arabic script art without needing manual calligraphy skills. Our platform is a user-friendly <strong>arabic calligraphy generator</strong>.",
+  },
+  {
+    question: "Is this Arabic calligraphy generator free to use?",
+    answer:
+      "Yes, our <strong>online Arabic calligraphy generator</strong> is completely free for all users. All core features, including access to various fonts, customization tools, and standard downloads (PNG, SVG), are available at no cost. We aim to provide an accessible <strong>free Arabic calligraphy generator</strong>.",
+  },
+  {
+    question: "What types of Arabic fonts are available in the generator?",
+    answer:
+      "Our <strong>Arabic calligraphy generator</strong> includes over 13 premium Arabic fonts. These span traditional styles like Kufic, Naskh, Thuluth, and Diwani, as well as modern and decorative script options to suit various artistic preferences for your calligraphy work.",
+  },
+  {
+    question: "Can I use the calligraphy generated with this tool commercially?",
+    answer:
+      "Generally, yes. The calligraphy designs you create with our <strong>Arabic calligraphy generator</strong> can typically be used for both personal and commercial projects. However, always check the license terms for any specific premium fonts you choose, as some may have their own usage restrictions independent of our generator tool.",
+  },
+  {
+    question: "How can I create a name with this Arabic calligraphy generator?",
+    answer:
+      "To create name art, simply type the desired name into the text input field of our <strong>Arabic calligraphy generator</strong>. Then, experiment with different fonts—like Diwani or Thuluth for flowing name designs—adjust sizes, and add colors or effects until you achieve the perfect artistic representation of the name. This is a popular use for an <strong>arabic calligraphy generator for names</strong>.",
+  },
+  {
+    question: "Does this tool support Arabic text with Harakat (vowel marks)?",
+    answer:
+      "Yes, our <strong>Arabic calligraphy generator</strong> generally supports text with Harakat (اعراب). You can type or paste Arabic text that includes these vowel marks, and the generator will render them along with the letters according to the chosen font's capabilities. Font support for Harakat can vary, so previewing is recommended.",
+  },
+  {
+    question: "What makes this a good Kufic Arabic calligraphy generator?",
+    answer:
+      "Our tool serves as an excellent <strong>Kufic Arabic calligraphy generator</strong> because it includes authentic Kufic style fonts and provides customization options that allow you to refine the geometric and angular aesthetics characteristic of Kufic script. You can adjust letter spacing and size to perfect your Kufic designs.",
   },
   {
     question: "Why doesn't my downloaded image match what I see in the preview?",
     answer:
-      "This could happen for several reasons: 1) Some browsers may render Arabic text differently than others, 2) The export process might not capture certain advanced CSS effects perfectly, or 3) Custom fonts might not be properly embedded in the exported file. For best results, we recommend using the latest versions of Chrome or Firefox, and if you need a perfect reproduction, consider taking a screenshot or using the SVG export option.",
+      "This could happen for several reasons: 1) Some browsers may render Arabic text differently than others, 2) The export process might not capture certain advanced CSS effects perfectly, or 3) Custom fonts might not be properly embedded in the exported file. For best results with our <strong>arabic calligraphy generator</strong>, we recommend using the latest versions of Chrome or Firefox, and if you need a perfect reproduction, consider taking a screenshot or using the SVG export option.",
   },
   {
     question: "How can I learn Arabic calligraphy beyond using this generator?",
     answer:
-      "While our generator is great for creating digital calligraphy, learning traditional Arabic calligraphy requires practice with proper tools. We recommend: 1) Taking courses from certified calligraphers, 2) Starting with basic letter forms in the Naskh style, 3) Practicing with traditional reed pens (qalam) and ink, 4) Studying historical manuscripts, and 5) Following our blog for tutorials and resources. Check our <a href='/blog/beginners-guide-to-calligraphy' class='text-amber-600 hover:underline'>Beginner's Guide to Arabic Calligraphy</a> for more information.",
+      "While our <strong>arabic calligraphy generator</strong> is great for creating digital calligraphy, learning traditional Arabic calligraphy requires practice with proper tools. We recommend: 1) Taking courses from certified calligraphers, 2) Starting with basic letter forms in the Naskh style, 3) Practicing with traditional reed pens (qalam) and ink, 4) Studying historical manuscripts, and 5) Following our blog for tutorials and resources. Check our <a href='/blog/beginners-guide-to-calligraphy' class='text-amber-600 hover:underline'>Beginner's Guide to Arabic Calligraphy</a> for more information.",
   },
   {
-    question: "What are the best fonts for Arabic text?",
+    question: "How do I fix Arabic text appearing disconnected or reversed (outside the generator)?",
     answer:
-      "The 'best' font depends on your purpose. For readability in body text, Naskh-style fonts like Amiri or Scheherazade New work well. For headlines, display fonts like Jomhuria or Rakkas create impact. For a modern look, sans-serif fonts like Cairo or Tajawal are excellent choices. Our generator includes a curated selection of high-quality Arabic fonts suitable for different purposes.",
-  },
-  {
-    question: "How do I fix Arabic text appearing disconnected or reversed?",
-    answer:
-      "If Arabic letters appear disconnected or in the wrong order, make sure: 1) You've set the text direction to right-to-left (RTL) using the 'dir=\"rtl\"' attribute, 2) You're using a proper Arabic font that supports letter connections, 3) Your system has proper Arabic language support installed. Our generator handles these settings automatically, but if you're using the exported text elsewhere, you'll need to ensure proper RTL formatting.",
+      "If Arabic letters appear disconnected or in the wrong order when using text outside of our <strong>arabic calligraphy generator</strong> (e.g., in other software), make sure: 1) You've set the text direction to right-to-left (RTL) using the 'dir=\"rtl\"' attribute or software setting, 2) You're using a proper Arabic font that supports letter connections, 3) Your system has proper Arabic language support installed. Our generator handles these settings automatically within its preview.",
   },
 ]
 
 export default function FAQPage() {
+  const generalQuestionsEndIndex = 3;
+  const generatorQuestionsStartIndex = 3;
+  const generatorQuestionsEndIndex = 10;
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
       <div className="container mx-auto px-4 py-8 md:py-16">
@@ -62,18 +91,36 @@ export default function FAQPage() {
             Frequently Asked Questions
           </h1>
           <p className="text-xl text-amber-700 max-w-2xl mx-auto">
-            Find answers to common questions about Arabic calligraphy and our generator tool.
+            Find answers to common questions about Arabic calligraphy and our <strong>Arabic calligraphy generator</strong> tool.
           </p>
         </header>
 
         <Card className="border-amber-200 bg-white/80 backdrop-blur-sm mb-8">
           <CardHeader>
-            <CardTitle className="text-2xl text-amber-800">General Questions</CardTitle>
+            <CardTitle className="text-2xl text-amber-800">General Calligraphy Questions</CardTitle>
           </CardHeader>
           <CardContent>
             <Accordion type="single" collapsible className="w-full">
-              {faqs.slice(0, 3).map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
+              {faqs.slice(0, generalQuestionsEndIndex).map((faq, index) => (
+                <AccordionItem key={`general-${index}`} value={`general-item-${index}`}>
+                  <AccordionTrigger className="text-lg font-medium text-amber-900">{faq.question}</AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </CardContent>
+        </Card>
+
+        <Card className="border-amber-200 bg-white/80 backdrop-blur-sm mb-8">
+          <CardHeader>
+            <CardTitle className="text-2xl text-amber-800">About Our Arabic Calligraphy Generator</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.slice(generatorQuestionsStartIndex, generatorQuestionsEndIndex).map((faq, index) => (
+                <AccordionItem key={`generator-${index}`} value={`generator-item-${index}`}>
                   <AccordionTrigger className="text-lg font-medium text-amber-900">{faq.question}</AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
                     <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
@@ -86,12 +133,12 @@ export default function FAQPage() {
 
         <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
           <CardHeader>
-            <CardTitle className="text-2xl text-amber-800">Technical Questions</CardTitle>
+            <CardTitle className="text-2xl text-amber-800">Technical & Further Learning</CardTitle>
           </CardHeader>
           <CardContent>
             <Accordion type="single" collapsible className="w-full">
-              {faqs.slice(3).map((faq, index) => (
-                <AccordionItem key={index + 3} value={`item-${index + 3}`}>
+              {faqs.slice(generatorQuestionsEndIndex).map((faq, index) => (
+                <AccordionItem key={`technical-${index}`} value={`technical-item-${index + generatorQuestionsEndIndex}`}>
                   <AccordionTrigger className="text-lg font-medium text-amber-900">{faq.question}</AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
                     <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
@@ -104,7 +151,7 @@ export default function FAQPage() {
 
         <div className="mt-12 text-center">
           <p className="mb-4 text-amber-700">
-            Didn't find what you're looking for? Check our blog for more in-depth articles.
+            Didn't find what you're looking for? Our <strong>Arabic calligraphy generator</strong> is easy to use, or check our blog for more in-depth articles.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild className="bg-amber-600 hover:bg-amber-700">
