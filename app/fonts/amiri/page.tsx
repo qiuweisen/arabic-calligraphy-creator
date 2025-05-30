@@ -2,13 +2,16 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, BookOpen, Feather, Layers, PenTool, Sparkles, Type } from "lucide-react"
+import { ArrowLeft, BookOpen, Download, Feather, Layers, PenTool, Sparkles, Type } from "lucide-react"
+// 从字体数据文件中导入getFontInfoBySlug函数
+import { getFontInfoBySlug } from "@/app/lib/font-data"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
+import { DownloadButton } from "@/components/download-button"
 
 export const metadata: Metadata = {
   title: "Amiri Font: Masterpiece of Classical Naskh Arabic Typography | Arabic Calligraphy",
@@ -161,17 +164,20 @@ const TECHNICAL_DETAILS = [
   }
 ];
 
-export default function AmiriFontPage() {
+export default function AmiriPage() {
+  // Get font info for the current page
+  const fontInfo = getFontInfoBySlug('amiri');
+  
   return (
     <>
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-800 hover:bg-amber-50">
+            <Button asChild variant="ghost" className="text-amber-600 hover:text-amber-800 hover:bg-amber-50 mb-6">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Fonts
+                Back to Font Library
               </Link>
             </Button>
             
@@ -189,9 +195,17 @@ export default function AmiriFontPage() {
                     <p className="text-lg text-amber-700 mb-6 leading-relaxed">
                       A masterpiece of digital Arabic typography, the Amiri font revives the elegance of classical Naskh script. Designed by Dr. Khaled Hosny, it is inspired by the Bulaq Press typefaces of the early 20th century, offering unparalleled authenticity and readability for traditional and contemporary use.
                     </p>
-                    <Button asChild size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
-                      <Link href="/?font=Amiri">Try Amiri in Our Generator</Link>
-                    </Button>
+                    <div className="flex gap-4">
+                      {fontInfo && (
+                        <DownloadButton 
+                          zipFileName={fontInfo.zipFileName}
+                          displayName={fontInfo.displayName}
+                        />
+                      )}
+                      <Button asChild size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
+                        <Link href="/?font=Amiri">Try Amiri in Our Generator</Link>
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -317,4 +331,4 @@ export default function AmiriFontPage() {
       <Footer />
     </>
   )
-} 
+}

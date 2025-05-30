@@ -9,6 +9,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
+import { getFontInfoBySlug } from "@/app/lib/font-data"
+import { DownloadButton } from "@/components/download-button"
 
 export const metadata: Metadata = {
   title: "Mada Font: Clear & Modern Arabic Sans-Serif | Arabic Calligraphy",
@@ -157,6 +159,9 @@ const TECHNICAL_DETAILS = [
 const ARABIC_ALPHABET_MADA = "ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي";
 
 export default function MadaFontPage() {
+  // Get font info for the current page
+  const fontInfo = getFontInfoBySlug('mada');
+
   return (
     <>
       <Navbar />
@@ -184,9 +189,17 @@ export default function MadaFontPage() {
                     <p className="text-lg text-teal-700 mb-6 leading-relaxed">
                       Mada is a contemporary Arabic sans-serif typeface celebrated for its exceptional clarity and balanced proportions. It excels in user interfaces, web content, and any application demanding high readability and a clean, modern aesthetic.
                     </p>
-                    <Button asChild size="lg" className="bg-teal-600 hover:bg-teal-700 text-white">
-                      <Link href="/?font=Mada">Try Mada in Our Generator</Link>
-                    </Button>
+                    <div className="flex gap-4">
+                      {fontInfo && (
+                        <DownloadButton 
+                          zipFileName={fontInfo.zipFileName}
+                          displayName={fontInfo.displayName}
+                        />
+                      )}
+                      <Button asChild size="lg" className="bg-teal-600 hover:bg-teal-700 text-white">
+                        <Link href="/?font=Mada">Try Mada in Our Generator</Link>
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </CardContent>

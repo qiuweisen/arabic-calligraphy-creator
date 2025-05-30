@@ -4,7 +4,10 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ChevronRight, Info, BookOpen, Zap, CheckCircle } from "lucide-react"
+import { ChevronRight, Info, BookOpen, Zap, CheckCircle, Download } from "lucide-react"
+import { getFontInfoBySlug } from "@/app/lib/font-data"
+import { downloadFont } from "@/app/lib/font-download"
+import { FontCard } from "@/components/font-card"
 
 export const metadata: Metadata = {
   title: "Arabic Fonts: Naskh, Kufi, Diwani & More | Calligraphy Library",
@@ -172,7 +175,7 @@ export default function FontsPage() {
             </section>
 
             {/* Font Categories Display */}
-            <div className="space-y-16"> {/* Increased spacing between categories */}
+            <div className="space-y-16">
               {Object.entries(FONT_DATA).map(([categoryName, categoryData]) => (
                 <div key={categoryName} className="space-y-6">
                   {/* Category Header and Description */}
@@ -197,44 +200,25 @@ export default function FontsPage() {
                   </div>
 
                   {/* Fonts within this category */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> {/* Increased gap */}
-                    {categoryData.fonts.map((font) => (
-                      <Link href={`/fonts/${font.slug}`} key={font.slug} passHref>
-                        <Card className="border-amber-200 hover:border-amber-400 transition-all hover:shadow-lg h-full flex flex-col group">
-                          <CardContent className="p-5 flex flex-col flex-grow"> {/* Slightly reduced padding */}
-                            <h3 className="text-xl font-semibold text-amber-800 mb-1.5 group-hover:text-amber-600 transition-colors">
-                              {font.name}
-                            </h3>
-                            <p className="text-sm text-gray-600 mb-3 flex-grow min-h-[40px]">
-                              {createTagline(font.description, 75)} {/* Using helper for tagline */}
-                            </p>
-                            <div 
-                              className="my-3 p-3 bg-amber-50 border border-amber-100 rounded-md text-center min-h-[80px] flex items-center justify-center"
-                              style={{ 
-                                fontFamily: font.name === "Scheherazade" ? "'Scheherazade New', serif" : (font.name === "Aref Ruqaa" ? "'Aref Ruqaa', serif" : `\\'${font.name}\\', sans-serif`),
-                                fontSize: "28px", // Consistent font size for preview
-                                direction: "rtl",
-                                color: "#8B4513" // Consistent color for preview
-                              }}
-                            >
-                              بسم الله الرحمن الرحيم
-                            </div>
-                            <Button 
-                              variant="outline" 
-                              size="sm" 
-                              className="w-full mt-auto border-amber-500 text-amber-600 hover:bg-amber-500 hover:text-white group-hover:bg-amber-500 group-hover:text-white transition-colors"
-                            >
-                              View Details <ChevronRight className="h-4 w-4 ml-1.5" />
-                            </Button>
-                          </CardContent>
-                        </Card>
-                      </Link>
-                    ))}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {categoryData.fonts.map((font) => {
+                      const fontInfo = getFontInfoBySlug(font.slug);
+                      return (
+                        <FontCard
+                          key={font.slug}
+                          name={font.name}
+                          slug={font.slug}
+                          description={createTagline(font.description, 75)}
+                          zipFileName={fontInfo?.zipFileName}
+                          displayName={fontInfo?.displayName}
+                        />
+                      );
+                    })}
                   </div>
                 </div>
               ))}
             </div>
-            
+
             {/* Section for "Tips for Using Arabic Fonts Effectively" - Kept from previous changes */}
             <section className="mt-16 mb-12 p-6 bg-green-100/40 border border-green-200 rounded-lg shadow">
               <h2 className="text-2xl font-bold text-green-800 mb-4 flex items-center">

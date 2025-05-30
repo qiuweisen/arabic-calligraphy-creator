@@ -2,13 +2,15 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, Smartphone, CheckCircle, Users, Globe, Palette, Type, Settings, SearchCode, BookOpen } from "lucide-react"
+import { ArrowLeft, Smartphone, CheckCircle, Users, Globe, Palette, Type, Settings, SearchCode, BookOpen, Feather, Layers, MonitorPlay, Edit3, Award } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
+import { getFontInfoBySlug } from "@/app/lib/font-data"
+import { DownloadButton } from "@/components/download-button"
 
 export const metadata: Metadata = {
   title: "Noto Naskh Arabic: Universally Readable & Screen-Optimized Naskh | Arabic Calligraphy",
@@ -157,6 +159,9 @@ const TECHNICAL_DETAILS = [
 const ARABIC_ALPHABET = "ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي";
 
 export default function NotoNaskhArabicFontPage() {
+  // Get font info for the current page
+  const fontInfo = getFontInfoBySlug('noto-naskh-arabic');
+
   return (
     <>
       <Navbar />
@@ -182,11 +187,19 @@ export default function NotoNaskhArabicFontPage() {
                     <span className="text-xs text-sky-700 font-medium px-2 py-1 bg-sky-50 rounded-full mb-2 inline-block">Modern Naskh (Screen Optimized)</span>
                     <h1 className="text-4xl md:text-5xl font-bold text-sky-800 mt-1 mb-3">Noto Naskh Arabic</h1>
                     <p className="text-lg text-sky-700 mb-6 leading-relaxed">
-                      From Google's Noto project, Noto Naskh Arabic ensures every Arabic character is beautifully and clearly rendered on all digital screens. Say goodbye to missing characters (tofu) and embrace universal readability.
+                      Noto Naskh Arabic is a versatile and highly legible Arabic typeface designed by Google. It combines traditional Naskh aesthetics with modern digital optimization, making it perfect for both screen and print applications.
                     </p>
-                    <Button asChild size="lg" className="bg-sky-600 hover:bg-sky-700 text-white">
-                      <Link href="/?font=Noto%20Naskh%20Arabic">Try Noto Naskh Arabic</Link>
-                    </Button>
+                    <div className="flex gap-4">
+                      {fontInfo && (
+                        <DownloadButton 
+                          zipFileName={fontInfo.zipFileName}
+                          displayName={fontInfo.displayName}
+                        />
+                      )}
+                      <Button asChild size="lg" className="bg-sky-600 hover:bg-sky-700 text-white">
+                        <Link href="/?font=Noto%20Naskh%20Arabic">Try Noto Naskh Arabic in Our Generator</Link>
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </CardContent>

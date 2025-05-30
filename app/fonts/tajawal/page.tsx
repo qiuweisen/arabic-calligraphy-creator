@@ -9,6 +9,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
+import { getFontInfoBySlug } from "@/app/lib/font-data"
+import { DownloadButton } from "@/components/download-button"
 
 export const metadata: Metadata = {
   title: "Tajawal Font: Geometric Arabic & Latin Sans-Serif | Arabic Calligraphy",
@@ -158,6 +160,9 @@ const ARABIC_ALPHABET_TAJAWAL = "ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط
 const LATIN_ALPHABET_TAJAWAL = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9";
 
 export default function TajawalFontPage() {
+  // Get font info for the current page
+  const fontInfo = getFontInfoBySlug('tajawal');
+
   return (
     <>
       <Navbar />
@@ -185,9 +190,17 @@ export default function TajawalFontPage() {
                     <p className="text-lg text-indigo-700 mb-6 leading-relaxed">
                       Tajawal is a modern geometric sans-serif typeface that supports both Arabic and Latin scripts. Known for its clarity, contemporary feel, and extensive weight range, it is an excellent choice for UI/UX, web design, and branding projects.
                     </p>
-                    <Button asChild size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white">
-                      <Link href="/?font=Tajawal">Try Tajawal in Our Generator</Link>
-                    </Button>
+                    <div className="flex gap-4">
+                      {fontInfo && (
+                        <DownloadButton 
+                          zipFileName={fontInfo.zipFileName}
+                          displayName={fontInfo.displayName}
+                        />
+                      )}
+                      <Button asChild size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white">
+                        <Link href="/?font=Tajawal">Try Tajawal in Our Generator</Link>
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </CardContent>

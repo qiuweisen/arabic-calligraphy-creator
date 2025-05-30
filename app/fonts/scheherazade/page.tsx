@@ -2,13 +2,15 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, BookOpen, CheckCircle, Feather, Globe, Languages, Layers, PenTool, Sparkles, Type, Users } from "lucide-react"
+import { ArrowLeft, BookOpen, CheckCircle, Feather, Globe, Languages, Layers, PenTool, Sparkles, Type, Users, MonitorPlay, Edit3, Award } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
+import { getFontInfoBySlug } from "@/app/lib/font-data"
+import { DownloadButton } from "@/components/download-button"
 
 export const metadata: Metadata = {
   title: "Scheherazade New Font: Premier Naskh for Scholarly & Multilingual Texts | Arabic Calligraphy",
@@ -158,6 +160,9 @@ const TECHNICAL_DETAILS = [
 const ARABIC_ALPHABET = "ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي";
 
 export default function ScheherazadeFontPage() {
+  // Get font info for the current page
+  const fontInfo = getFontInfoBySlug('scheherazade');
+
   return (
     <>
       <Navbar />
@@ -183,11 +188,19 @@ export default function ScheherazadeFontPage() {
                     <span className="text-xs text-amber-600 font-medium px-2 py-1 bg-amber-50 rounded-full mb-2 inline-block">Traditional Naskh (Scholarly)</span>
                     <h1 className="text-4xl md:text-5xl font-bold text-amber-800 mt-1 mb-3">Scheherazade New</h1>
                     <p className="text-lg text-amber-700 mb-6 leading-relaxed">
-                      Scheherazade New, developed by SIL International, is a premier Naskh typeface designed for exceptional clarity in academic texts, multilingual documents, and extensive reading. It offers comprehensive support for Arabic script languages.
+                      Scheherazade is a traditional Naskh-style Arabic typeface that excels in readability and authenticity. Perfect for extended reading, academic texts, and projects requiring a classic Arabic aesthetic.
                     </p>
-                    <Button asChild size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
-                      <Link href="/?font=Scheherazade%20New">Try Scheherazade New</Link>
-                    </Button>
+                    <div className="flex gap-4">
+                      {fontInfo && (
+                        <DownloadButton 
+                          zipFileName={fontInfo.zipFileName}
+                          displayName={fontInfo.displayName}
+                        />
+                      )}
+                      <Button asChild size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
+                        <Link href="/?font=Scheherazade">Try Scheherazade in Our Generator</Link>
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </CardContent>

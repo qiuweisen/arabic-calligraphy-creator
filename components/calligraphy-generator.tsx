@@ -418,13 +418,13 @@ export function CalligraphyGenerator() {
       console.error('PNG download failed:', error);
       // General error if canvas generation was successful but subsequent steps failed
       if (!(error instanceof Error && error.message.includes("generatePreviewCanvas"))) {
-          toast({
-            title: "Download Failed",
-            description: "There was an error downloading your calligraphy. Please try again.",
-            variant: "destructive",
+      toast({
+        title: "Download Failed",
+        description: "There was an error downloading your calligraphy. Please try again.",
+        variant: "destructive",
           });
-      }
     }
+  }
   };
 
   const handleDownloadSVG = async () => {
@@ -518,13 +518,13 @@ export function CalligraphyGenerator() {
     } catch (error) {
       console.error('SVG download failed:', error);
       if (!(error instanceof Error && error.message.includes("generatePreviewCanvas"))) {
-          toast({
-            title: "Download Failed",
-            description: "There was an error downloading your calligraphy. Please try again.",
-            variant: "destructive",
+      toast({
+        title: "Download Failed",
+        description: "There was an error downloading your calligraphy. Please try again.",
+        variant: "destructive",
           });
-      }
     }
+  }
   };
 
   const handleCopyToClipboardImage = async () => {
@@ -652,7 +652,7 @@ export function CalligraphyGenerator() {
           const imageFile = new File([blob], fileName, { type: 'image/png' });
           const shareData: ShareData = {
             title: "Arabic Calligraphy Design",
-            text: "Check out this beautiful Arabic calligraphy I created!",
+        text: "Check out this beautiful Arabic calligraphy I created!",
             files: [imageFile],
           };
 
@@ -671,9 +671,9 @@ export function CalligraphyGenerator() {
           }
 
           await navigator.share(shareData);
-          toast({
-            title: "Shared Successfully",
-            description: "Your calligraphy has been shared.",
+      toast({
+        title: "Shared Successfully",
+        description: "Your calligraphy has been shared.",
           });
           
           // 追踪分享事件
@@ -702,12 +702,12 @@ export function CalligraphyGenerator() {
       }
       
       console.error('Share failed:', error);
-      toast({
-        title: "Share Failed",
+        toast({
+          title: "Share Failed",
         description: "There was an error sharing your calligraphy. Please try again or download the image.",
-        variant: "destructive",
+          variant: "destructive",
       });
-    }
+      }
   };
 
   const resetToDefaults = () => {
@@ -951,14 +951,14 @@ export function CalligraphyGenerator() {
           <Label className="text-base font-medium">Font Size: {fontSize}px</Label>
         </div>
         <div className="px-2">
-          <Slider
-            value={[fontSize]}
-            min={12}
-            max={120}
-            step={1}
+        <Slider
+          value={[fontSize]}
+          min={12}
+          max={120}
+          step={1}
             onValueChange={(value) => handleFontSizeChange(value[0])}
             className="[&>[role=slider]]:h-6 [&>[role=slider]]:w-6 [&>[role=slider]]:touch-manipulation"
-          />
+        />
         </div>
       </div>
 

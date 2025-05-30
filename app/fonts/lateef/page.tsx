@@ -9,6 +9,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
+import { getFontInfoBySlug } from "@/app/lib/font-data"
+import { DownloadButton } from "@/components/download-button"
 
 export const metadata: Metadata = {
   title: "Lateef Font: Graceful Cursive Script for Urdu & Arabic | Arabic Calligraphy",
@@ -158,6 +160,9 @@ const TECHNICAL_DETAILS = [
 const ARABIC_ALPHABET_LATEEF = "ا ب پ ت ٹ ث ج چ ح خ د ڈ ذ ر ڑ ز ژ س ش ص ض ط ظ ع غ ف ق ک گ ل م ن ں ه و ی ے";
 
 export default function LateefFontPage() {
+  // Get font info for the current page
+  const fontInfo = getFontInfoBySlug('lateef');
+
   return (
     <>
       <Navbar />
@@ -186,9 +191,17 @@ export default function LateefFontPage() {
                     <p className="text-lg text-amber-700 mb-6 leading-relaxed">
                       The Lateef font, from SIL International, offers a gracefully flowing cursive script primarily designed for Urdu, Sindhi, and other South Asian languages using Arabic script. It is celebrated for its elegance and readability in literary and artistic contexts.
                     </p>
-                    <Button asChild size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
-                      <Link href="/?font=Lateef">Try Lateef in Our Generator</Link>
-                    </Button>
+                    <div className="flex gap-4">
+                      {fontInfo && (
+                        <DownloadButton 
+                          zipFileName={fontInfo.zipFileName}
+                          displayName={fontInfo.displayName}
+                        />
+                      )}
+                      <Button asChild size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
+                        <Link href="/?font=Lateef">Try Lateef in Our Generator</Link>
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </CardContent>

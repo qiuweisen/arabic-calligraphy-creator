@@ -6,6 +6,8 @@ import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { CssLoader } from "@/components/css-loader"
+import type { Metadata } from 'next'
+import { Toaster as SonnerToaster } from 'sonner'
 
 // LCP 元素和UI使用的字体，必须预加载
 const inter = Inter({ subsets: ["latin"], display: 'swap', variable: "--font-inter", preload: true })
@@ -28,7 +30,7 @@ const reemKufi = Reem_Kufi({ subsets: ["latin"], display: 'swap', weight: ["400"
 const tajawal = Tajawal({ subsets: ["latin"], display: 'swap', weight: ["400"], variable: "--font-tajawal", preload: false })
 
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Arabic Calligraphy Generator | Online Arabic Art Creator",
   description:
     "Create beautiful Arabic calligraphy online. Customize fonts, styles, and colors. Download designs for social media, print, or web. Free and easy to use!",

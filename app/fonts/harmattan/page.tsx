@@ -8,6 +8,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
+import { getFontInfoBySlug } from "@/app/lib/font-data"
+import { DownloadButton } from "@/components/download-button"
 
 export const metadata: Metadata = {
   title: "Harmattan Font | Simplified Modern Arabic Typography | Arabic Calligraphy",
@@ -63,6 +65,9 @@ const FONT_FEATURES = [
 ];
 
 export default function HarmattanFontPage() {
+  // Get font info for the current page
+  const fontInfo = getFontInfoBySlug('harmattan');
+
   return (
     <>
       <Navbar />
@@ -78,7 +83,19 @@ export default function HarmattanFontPage() {
             
             <span className="text-xs text-amber-600 font-medium px-2 py-1 bg-amber-50 rounded-full">Modern</span>
             <h1 className="text-3xl md:text-4xl font-bold text-amber-800 mt-4 mb-2">Harmattan Font</h1>
-            <p className="text-lg text-amber-700 mb-8">A simplified modern Arabic typeface with excellent legibility</p>
+            <p className="text-lg text-amber-700 mb-4">A simplified modern Arabic typeface with excellent legibility</p>
+            
+            <div className="flex gap-4 mb-8">
+              {fontInfo && (
+                <DownloadButton 
+                  zipFileName={fontInfo.zipFileName}
+                  displayName={fontInfo.displayName}
+                />
+              )}
+              <Button asChild size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
+                <Link href="/?font=Harmattan">Try Harmattan in Our Generator</Link>
+              </Button>
+            </div>
             
             <div className="prose prose-amber max-w-none">
               <div className="mb-8">

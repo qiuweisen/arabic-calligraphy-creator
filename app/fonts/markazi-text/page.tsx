@@ -9,6 +9,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
+import { getFontInfoBySlug } from "@/app/lib/font-data"
+import { DownloadButton } from "@/components/download-button"
 
 export const metadata: Metadata = {
   title: "Markazi Text Font: Optimized Naskh for Readability | Arabic Calligraphy",
@@ -158,6 +160,9 @@ const ARABIC_ALPHABET_MARKAZI = "ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط
 const LATIN_ALPHABET_MARKAZI = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9";
 
 export default function MarkaziTextFontPage() {
+  // Get font info for the current page
+  const fontInfo = getFontInfoBySlug('markazi-text');
+
   return (
     <>
       <Navbar />
@@ -185,9 +190,17 @@ export default function MarkaziTextFontPage() {
                     <p className="text-lg text-emerald-700 mb-6 leading-relaxed">
                       Markazi Text is a Naskh-inspired Arabic typeface masterfully designed by Borna Izadpanah for optimal readability in extended text. It beautifully balances traditional aesthetics with modern screen performance, making it ideal for digital publications and academic content.
                     </p>
-                    <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
-                      <Link href="/?font=Markazi%20Text">Try Markazi Text in Our Generator</Link>
-                    </Button>
+                    <div className="flex gap-4">
+                      {fontInfo && (
+                        <DownloadButton 
+                          zipFileName={fontInfo.zipFileName}
+                          displayName={fontInfo.displayName}
+                        />
+                      )}
+                      <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
+                        <Link href="/?font=Markazi%20Text">Try Markazi Text in Our Generator</Link>
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </CardContent>

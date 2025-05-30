@@ -9,6 +9,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
+import { getFontInfoBySlug } from "@/app/lib/font-data"
+import { DownloadButton } from "@/components/download-button"
 
 export const metadata: Metadata = {
   title: "El Messiri Font: Elegant Naskh-Inspired Arabic Typeface | Arabic Calligraphy",
@@ -157,6 +159,9 @@ const TECHNICAL_DETAILS = [
 const ARABIC_ALPHABET_ELMESSIRI = "ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي";
 
 export default function ElMessiriFontPage() {
+  // Get font info for the current page
+  const fontInfo = getFontInfoBySlug('el-messiri');
+
   return (
     <>
       <Navbar />
@@ -184,9 +189,17 @@ export default function ElMessiriFontPage() {
                     <p className="text-lg text-cyan-700 mb-6 leading-relaxed">
                       El Messiri is an elegant Arabic typeface by Mohamed Gaber, inspired by traditional Naskh calligraphy but infused with modern, open forms. It offers sophistication for headlines, branding, and cultural projects.
                     </p>
-                    <Button asChild size="lg" className="bg-cyan-600 hover:bg-cyan-700 text-white">
-                      <Link href="/?font=El%20Messiri">Try El Messiri in Our Generator</Link>
-                    </Button>
+                    <div className="flex gap-4">
+                      {fontInfo && (
+                        <DownloadButton 
+                          zipFileName={fontInfo.zipFileName}
+                          displayName={fontInfo.displayName}
+                        />
+                      )}
+                      <Button asChild size="lg" className="bg-cyan-600 hover:bg-cyan-700 text-white">
+                        <Link href="/?font=El%20Messiri">Try El Messiri in Our Generator</Link>
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </CardContent>

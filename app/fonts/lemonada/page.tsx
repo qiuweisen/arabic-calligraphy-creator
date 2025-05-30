@@ -9,6 +9,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
+import { getFontInfoBySlug } from "@/app/lib/font-data"
+import { DownloadButton } from "@/components/download-button"
 
 export const metadata: Metadata = {
   title: "Lemonada Font: Friendly & Rounded Arabic Typeface | Arabic Calligraphy",
@@ -158,6 +160,9 @@ const ARABIC_ALPHABET_LEMONADA = "ا ب ت ث ج ح خ د ذ ر ز س ش ص ض �
 const LATIN_ALPHABET_LEMONADA = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9";
 
 export default function LemonadaFontPage() {
+  // Get font info for the current page
+  const fontInfo = getFontInfoBySlug('lemonada');
+
   return (
     <>
       <Navbar />
@@ -185,9 +190,17 @@ export default function LemonadaFontPage() {
                     <p className="text-lg text-lime-700 mb-6 leading-relaxed">
                       Lemonada is a modern and friendly Arabic typeface featuring distinctive rounded letterforms. Designed by Eduardo Tunni, it brings warmth and personality to branding, UI, and casual designs, supporting both Arabic and Latin scripts.
                     </p>
-                    <Button asChild size="lg" className="bg-lime-600 hover:bg-lime-700 text-white">
-                      <Link href="/?font=Lemonada">Try Lemonada in Our Generator</Link>
-                    </Button>
+                    <div className="flex gap-4">
+                      {fontInfo && (
+                        <DownloadButton 
+                          zipFileName={fontInfo.zipFileName}
+                          displayName={fontInfo.displayName}
+                        />
+                      )}
+                      <Button asChild size="lg" className="bg-lime-600 hover:bg-lime-700 text-white">
+                        <Link href="/?font=Lemonada">Try Lemonada in Our Generator</Link>
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </CardContent>
