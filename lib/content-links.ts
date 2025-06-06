@@ -11,7 +11,7 @@ export const BLOG_LINKS: Record<string, ContentLink> = {
   historyOfCalligraphy: {
     title: "The Rich History of Arabic Calligraphy",
     description: "Explore the origins and evolution of this sacred art form",
-    href: "/blog/history-of-arabic-calligraphy",
+    href: "/blog/the-rich-history-of-arabic-calligraphy",
     type: "blog"
   },
   sixMajorStyles: {
@@ -185,7 +185,7 @@ export function getContentSpecificLinks(
   
   // 针对博客页面的特定相关链接
   const blogSpecificLinks: Record<string, ContentLink[]> = {
-    'history-of-arabic-calligraphy': [
+    'the-rich-history-of-arabic-calligraphy': [
       FONT_LINKS.amiri,
       FONT_LINKS.scheherazade,
       BLOG_LINKS.famousCalligraphers

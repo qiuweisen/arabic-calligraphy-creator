@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   description: "Explore the origins and evolution of Arabic calligraphy from the 7th century to modern times. Discover how this sacred art form has shaped Islamic culture, architecture, and artistic expression through the centuries.",
   keywords: "Arabic calligraphy history, Islamic calligraphy, Quranic script, calligraphic art, Arabic culture, Islamic art history, Kufic script, Naskh, Thuluth, Ottoman calligraphy",
   alternates: {
-    canonical: "https://arabic-calligraphy-generator.com/blog/history-of-arabic-calligraphy",
+    canonical: "https://arabic-calligraphy-generator.com/blog/the-rich-history-of-arabic-calligraphy",
   },
   openGraph: {
     title: "The Rich History of Arabic Calligraphy",
     description: "Explore the origins and evolution of Arabic calligraphy from the 7th century to modern times",
-    url: "https://arabic-calligraphy-generator.com/blog/history-of-arabic-calligraphy",
+    url: "https://arabic-calligraphy-generator.com/blog/the-rich-history-of-arabic-calligraphy",
     siteName: "Arabic Calligraphy Generator",
     locale: "en_US",
     type: "article",
@@ -181,7 +181,7 @@ export default function HistoryOfArabicCalligraphyPage() {
               {/* 相关内容链接 */}
               <RelatedContent 
                 title="Related Articles and Resources"
-                links={getContentSpecificLinks('blog', 'history-of-arabic-calligraphy')}
+                links={getContentSpecificLinks('blog', 'the-rich-history-of-arabic-calligraphy')}
               />
             </div>
           </div>
