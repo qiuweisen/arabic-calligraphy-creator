@@ -88,7 +88,7 @@ export default function RootLayout({
             <Script
               defer
               data-domain="arabic-calligraphy-generator.com"
-              src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
+              src="https://plausible.myklink.xyz:8443/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
               strategy="afterInteractive"
             />
           </>
