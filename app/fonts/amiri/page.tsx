@@ -12,6 +12,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
 import { DownloadButton } from "@/components/download-button"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "Amiri Font: Masterpiece of Classical Naskh Arabic Typography | Arabic Calligraphy",
@@ -217,6 +218,15 @@ export default function AmiriPage() {
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            {/* 面包屑导航 */}
+            <Breadcrumb 
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Arabic Fonts", href: "/fonts" },
+                { name: "Amiri", href: "/fonts/amiri" }
+              ]}
+            />
+            
             <Button asChild variant="ghost" className="text-amber-600 hover:text-amber-800 hover:bg-amber-50 mb-6">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />

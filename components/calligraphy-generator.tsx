@@ -1531,7 +1531,7 @@ export function CalligraphyGenerator() {
                       <div className="pt-2 flex items-center">
                         <ChevronRight className="h-4 w-4 mr-1 text-amber-600" />
                         <a
-                          href="/blog/history-of-arabic-calligraphy"
+                          href="/blog/the-rich-history-of-arabic-calligraphy"
                           className="text-sm text-amber-600 hover:underline"
                         >
                           Read more about Arabic calligraphy history

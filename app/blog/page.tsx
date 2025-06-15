@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
-    id: "history-of-arabic-calligraphy",
+    id: "the-rich-history-of-arabic-calligraphy",
     title: "The Rich History of Arabic Calligraphy",
     description: "Explore the origins and development of Arabic calligraphy from the 7th century to modern times.",
     date: "May 15, 2023",

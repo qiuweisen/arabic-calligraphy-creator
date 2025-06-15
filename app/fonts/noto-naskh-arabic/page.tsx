@@ -11,6 +11,7 @@ import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
 import { getFontInfoBySlug } from "@/app/lib/font-data"
 import { DownloadButton } from "@/components/download-button"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "Noto Naskh Arabic: Universally Readable & Screen-Optimized Naskh | Arabic Calligraphy",
@@ -211,6 +212,16 @@ export default function NotoNaskhArabicFontPage() {
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            {/* 面包屑导航 */}
+            <Breadcrumb 
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Arabic Fonts", href: "/fonts" },
+                { name: "Noto Naskh Arabic", href: "/fonts/noto-naskh-arabic" }
+              ]}
+              className="mb-6"
+            />
+            
             <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-800 hover:bg-amber-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />
