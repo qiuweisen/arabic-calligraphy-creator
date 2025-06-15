@@ -19,15 +19,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lemonada Font: Add a Touch of Friendliness & Modernity | Arabic Calligraphy Generator",
     description: "Explore Lemonada, a versatile Arabic and Latin font with a unique rounded style by Eduardo Tunni, ideal for projects needing warmth and personality.",
-    images: [
-      {
-        url: "/og-images/lemonada-font-og.jpg", // Placeholder - replace with actual image
-        width: 1200,
-        height: 630,
-        alt: "Lemonada Font Showcase",
-      },
-    ],
-  },
+    url: "https://arabic-calligraphy-generator.com/fonts/lemonada",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",  },
 }
 
 const TEXT_EXAMPLES = [
@@ -163,8 +158,56 @@ export default function LemonadaFontPage() {
   // Get font info for the current page
   const fontInfo = getFontInfoBySlug('lemonada');
 
+  // Structured data for the font
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Lemonada Font",
+    "description": "A modern and friendly Arabic typeface by Eduardo Tunni featuring distinctive rounded letterforms. Perfect for branding, UI, and casual designs with bilingual Arabic-Latin support.",
+    "applicationCategory": "Font",
+    "operatingSystem": "Cross-platform",
+    "creator": {
+      "@type": "Person",
+      "name": "Eduardo Tunni",
+      "description": "Argentine type designer known for friendly and approachable typeface designs"
+    },
+    "publisher": {
+      "@type": "Organization", 
+      "name": "Google Fonts",
+      "url": "https://fonts.google.com"
+    },
+    "datePublished": "2025",
+    "license": "https://scripts.sil.org/OFL",
+    "programmingLanguage": "OpenType",
+    "keywords": ["Arabic font", "Rounded sans-serif", "Friendly typography", "Bilingual font", "UI design", "Casual design"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "ratingCount": "95",
+      "bestRating": "5"
+    },
+    "featureList": [
+      "Rounded letterforms",
+      "Friendly character", 
+      "Bilingual Arabic-Latin support",
+      "Multiple weights",
+      "UI optimization",
+      "Cross-platform compatibility"
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-lime-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">

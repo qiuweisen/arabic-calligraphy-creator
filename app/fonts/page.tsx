@@ -145,8 +145,65 @@ function createTagline(description: string, maxLength = 100): string {
 }
 
 export default function FontsPage() {
+  // 面包屑结构化数据
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arabic-calligraphy-generator.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Arabic Fonts",
+        "item": "https://arabic-calligraphy-generator.com/fonts"
+      }
+    ]
+  };
+
+  // 字体集合结构化数据
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Arabic Calligraphy Fonts Collection",
+    "description": "Comprehensive collection of Arabic calligraphy fonts including Traditional Naskh, Kufi, Diwani, Modern and Display styles for digital typography and Islamic art.",
+    "url": "https://arabic-calligraphy-generator.com/fonts",
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": Object.values(FONT_DATA).reduce((total, category) => total + category.fonts.length, 0),
+      "itemListElement": Object.entries(FONT_DATA).flatMap(([categoryName, categoryData], categoryIndex) =>
+        categoryData.fonts.map((font, fontIndex) => ({
+          "@type": "ListItem",
+          "position": categoryIndex * 10 + fontIndex + 1,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": font.name,
+            "description": font.description,
+            "url": `https://arabic-calligraphy-generator.com/fonts/${font.slug}`,
+            "applicationCategory": "Font",
+            "operatingSystem": "Web Browser"
+          }
+        }))
+      )
+    }
+  };
+
   return (
     <>
+      {/* 结构化数据 */}
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+      />
+      
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">

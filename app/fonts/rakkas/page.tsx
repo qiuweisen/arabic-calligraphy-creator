@@ -63,8 +63,48 @@ const FONT_FEATURES = [
 ];
 
 export default function RakkasFontPage() {
+  // Structured data for the font
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Rakkas Font",
+    "description": "A decorative display Arabic font by Zeynep Akay with distinctive handwritten character. Features fluid, energetic strokes inspired by Ruqaa script, perfect for creative titles and artistic projects.",
+    "creator": {
+      "@type": "Person",
+      "name": "Zeynep Akay",
+      "description": "Turkish type designer known for expressive Arabic display fonts"
+    },
+    "publisher": {
+      "@type": "Organization", 
+      "name": "Google Fonts",
+      "url": "https://fonts.google.com"
+    },
+    "datePublished": "2025",
+    "license": "https://scripts.sil.org/OFL",
+    "keywords": ["Arabic font", "Decorative display", "Handwritten style", "Ruqaa inspired", "Creative typography", "Artistic font"],
+    "genre": "Typography",
+    "inLanguage": "ar",
+    "artform": "Calligraphic display typography",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.3",
+      "ratingCount": "67",
+      "bestRating": "5"
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">

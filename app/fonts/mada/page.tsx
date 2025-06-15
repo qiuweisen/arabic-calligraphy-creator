@@ -19,14 +19,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mada Font: Versatile & Legible Sans-Serif for Modern Designs | Arabic Calligraphy Generator",
     description: "Explore Mada, a clean and balanced Arabic sans-serif font, ideal for user interfaces, web content, and projects requiring high readability.",
-    images: [
-      {
-        url: "/og-images/mada-font-og.jpg", // Placeholder - replace with actual image
-        width: 1200,
-        height: 630,
-        alt: "Mada Font Showcase",
-      },
-    ],
+    url: "https://arabic-calligraphy-generator.com/fonts/mada",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",
   },
 }
 
@@ -162,8 +158,59 @@ export default function MadaFontPage() {
   // Get font info for the current page
   const fontInfo = getFontInfoBySlug('mada');
 
+  // Structured data for Mada font - emphasizing UI/UX focus
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "@id": "https://arabic-calligraphy-generator.com/fonts/mada",
+    "name": "Mada Font",
+    "description": "Mada is a contemporary Arabic sans-serif typeface celebrated for exceptional clarity and balanced proportions. Excels in user interfaces, web content, and applications demanding high readability.",
+    "creator": {
+      "@type": "Person",
+      "name": "Noaman Kareem"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open Source Typography Community"
+    },
+    "dateCreated": "2016",
+    "license": "https://scripts.sil.org/OFL",
+    "inLanguage": ["ar", "en"],
+    "keywords": ["Mada font", "Arabic sans-serif", "UI typography", "Web font", "Modern Arabic", "Legible font", "Interface design"],
+    "about": {
+      "@type": "Thing",
+      "name": "Arabic Typography",
+      "description": "Modern Arabic typeface design for digital applications"
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": ["Designers", "Developers", "UI/UX Professionals", "Web Developers"]
+    },
+    "usageInfo": {
+      "@type": "CreativeWork",
+      "name": "Usage Guidelines",
+      "text": "Ideal for user interfaces, web content, corporate communications, and digital applications requiring clear Arabic text rendering"
+    },
+    "mainEntity": {
+      "@type": "SoftwareApplication",
+      "name": "Mada Typeface",
+      "applicationCategory": "Font",
+      "operatingSystem": "Cross-platform",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-teal-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">

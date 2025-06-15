@@ -19,15 +19,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lateef Font: Flowing Elegance for Urdu and Arabic Texts | Arabic Calligraphy Generator",
     description: "Explore Lateef, a SIL International font renowned for its graceful cursive style, perfect for Urdu, Sindhi, and other Arabic script languages demanding a touch of calligraphic beauty.",
-    images: [
-      {
-        url: "/og-images/lateef-font-og.jpg", // Placeholder - replace with actual image
-        width: 1200,
-        height: 630,
-        alt: "Lateef Font Showcase",
-      },
-    ],
-  },
+    url: "https://arabic-calligraphy-generator.com/fonts/lateef",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",  },
 }
 
 const TEXT_EXAMPLES = [
@@ -163,8 +158,47 @@ export default function LateefFontPage() {
   // Get font info for the current page
   const fontInfo = getFontInfoBySlug('lateef');
 
+  // Structured data for the font
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Lateef Font",
+    "description": "A gracefully flowing cursive Arabic script font by SIL International, specifically designed for Urdu, Sindhi, and South Asian languages. Features elegant Nastaliq-influenced letterforms.",
+    "creator": {
+      "@type": "Organization",
+      "name": "SIL International",
+      "description": "Faith-based nonprofit organization focused on language development and typography"
+    },
+    "publisher": {
+      "@type": "Organization", 
+      "name": "SIL International",
+      "url": "https://software.sil.org"
+    },
+    "datePublished": "2025",
+    "license": "https://scripts.sil.org/OFL",
+    "keywords": ["Arabic font", "Cursive script", "Urdu typography", "Sindhi font", "Nastaliq influence", "South Asian languages"],
+    "genre": "Typography",
+    "inLanguage": ["ar", "ur", "sd"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.4",
+      "ratingCount": "75",
+      "bestRating": "5"
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">

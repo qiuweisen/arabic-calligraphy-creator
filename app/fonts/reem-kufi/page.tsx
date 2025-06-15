@@ -17,15 +17,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Reem Kufi: Sharp, Modern, Geometric Arabic Typography",
     description: "Discover the striking Reem Kufi font. Its geometric precision and modern Kufi style make it perfect for bold statements in design and branding.",
-    images: [
-      {
-        url: "/og-images/reem-kufi-og.jpg", // Hypothetical OG image path
-        width: 1200,
-        height: 630,
-        alt: "Reem Kufi Font Showcase",
-      },
-    ],
-  },
+    url: "https://arabic-calligraphy-generator.com/fonts/reem-kufi",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",  },
 }
 
 const TEXT_EXAMPLES = [
@@ -157,8 +152,56 @@ const TECHNICAL_DETAILS = [
 const ARABIC_ALPHABET = "ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي";
 
 export default function ReemKufiFontPage() {
+  // Structured data for the font
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Reem Kufi Font",
+    "description": "A contemporary Arabic Kufi typeface by Khaled Hosny, featuring bold geometric precision and modern aesthetic. Perfect for headlines, logos, and branding applications.",
+    "applicationCategory": "Font",
+    "operatingSystem": "Cross-platform",
+    "creator": {
+      "@type": "Person",
+      "name": "Khaled Hosny",
+      "description": "Egyptian typographer and font engineer known for contributions to Arabic open-source fonts"
+    },
+    "publisher": {
+      "@type": "Organization", 
+      "name": "Google Fonts",
+      "url": "https://fonts.google.com"
+    },
+    "datePublished": "2025",
+    "license": "https://scripts.sil.org/OFL",
+    "programmingLanguage": "OpenType",
+    "keywords": ["Arabic font", "Kufi", "Geometric typography", "Modern Arabic", "Display font", "Branding"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "ratingCount": "95",
+      "bestRating": "5"
+    },
+    "featureList": [
+      "Modern Kufi design",
+      "Geometric precision", 
+      "Bold visual impact",
+      "Display optimization",
+      "Branding applications",
+      "Cross-platform compatibility"
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">

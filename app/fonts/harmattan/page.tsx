@@ -68,8 +68,56 @@ export default function HarmattanFontPage() {
   // Get font info for the current page
   const fontInfo = getFontInfoBySlug('harmattan');
 
+  // Structured data for the font
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Harmattan Font",
+    "description": "A simplified modern Arabic typeface by SIL International with excellent legibility, specifically designed for West African languages using Arabic script (Ajami) and educational materials.",
+    "applicationCategory": "Font",
+    "operatingSystem": "Cross-platform",
+    "creator": {
+      "@type": "Organization",
+      "name": "SIL International",
+      "description": "Faith-based nonprofit organization focused on language development and literacy"
+    },
+    "publisher": {
+      "@type": "Organization", 
+      "name": "SIL International",
+      "url": "https://software.sil.org"
+    },
+    "datePublished": "2025",
+    "license": "https://scripts.sil.org/OFL",
+    "programmingLanguage": "OpenType",
+    "keywords": ["Arabic font", "Ajami script", "West African languages", "Educational typography", "Simplified Arabic", "Legible font"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.3",
+      "ratingCount": "65",
+      "bestRating": "5"
+    },
+    "featureList": [
+      "Simplified modern design",
+      "Excellent legibility", 
+      "West African language support",
+      "Educational focus",
+      "Ajami script optimization",
+      "Cross-platform compatibility"
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">

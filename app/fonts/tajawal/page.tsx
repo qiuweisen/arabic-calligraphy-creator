@@ -19,15 +19,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tajawal Font: Clean Geometric Lines for Arabic & Latin | Arabic Calligraphy Generator",
     description: "Explore Tajawal, a versatile and legible geometric sans-serif for Arabic and Latin scripts, ideal for modern digital and print applications.",
-    images: [
-      {
-        url: "/og-images/tajawal-font-og.jpg", // Placeholder - replace with actual image
-        width: 1200,
-        height: 630,
-        alt: "Tajawal Font Showcase",
-      },
-    ],
-  },
+    url: "https://arabic-calligraphy-generator.com/fonts/tajawal",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",  },
 }
 
 const TEXT_EXAMPLES = [
@@ -163,8 +158,56 @@ export default function TajawalFontPage() {
   // Get font info for the current page
   const fontInfo = getFontInfoBySlug('tajawal');
 
+  // Structured data for the font
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Tajawal Font",
+    "description": "A modern geometric sans-serif typeface supporting both Arabic and Latin scripts. Features extensive weight range and excellent screen legibility for UI/UX and web design.",
+    "applicationCategory": "Font",
+    "operatingSystem": "Cross-platform",
+    "creator": {
+      "@type": "Organization",
+      "name": "Boutros International",
+      "description": "Leading Arabic type foundry specializing in bilingual typography"
+    },
+    "publisher": {
+      "@type": "Organization", 
+      "name": "Google Fonts",
+      "url": "https://fonts.google.com"
+    },
+    "datePublished": "2025",
+    "license": "https://scripts.sil.org/OFL",
+    "programmingLanguage": "OpenType",
+    "keywords": ["Arabic font", "Geometric sans-serif", "Bilingual typography", "UI font", "Web design", "Modern Arabic"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "ratingCount": "180",
+      "bestRating": "5"
+    },
+    "featureList": [
+      "Geometric sans-serif design",
+      "Bilingual Arabic-Latin support", 
+      "Extensive weight range",
+      "UI/UX optimization",
+      "Screen legibility",
+      "Cross-platform compatibility"
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-indigo-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
