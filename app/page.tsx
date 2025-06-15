@@ -119,55 +119,7 @@ export default function Home() {
             </p>
           </header>
 
-          {/* SEO-Friendly Tool Preview Section */}
-          <section className="mb-8 bg-white/90 backdrop-blur-sm border border-amber-200 rounded-lg p-6 shadow-lg">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-amber-800 mb-3">
-                Free Online Arabic Calligraphy Generator Tool
-              </h2>
-              <p className="text-amber-700 max-w-3xl mx-auto">
-                Create beautiful Arabic calligraphy instantly with our powerful online generator. Type your text, choose from 13+ authentic Arabic fonts including Naskh, Kufi, and Diwani styles, customize colors and effects, then download your artwork in high-quality PNG or SVG format.
-              </p>
-            </div>
-            
-            {/* Tool Features Preview - Visible to Search Engines */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-              <div className="text-center p-4 bg-amber-50 rounded-lg">
-                <Type className="h-6 w-6 text-amber-600 mx-auto mb-2" />
-                <h3 className="font-semibold text-amber-800 text-sm">Text Input</h3>
-                <p className="text-xs text-amber-600">Arabic text & virtual keyboard support</p>
-              </div>
-              <div className="text-center p-4 bg-amber-50 rounded-lg">
-                <Palette className="h-6 w-6 text-amber-600 mx-auto mb-2" />
-                <h3 className="font-semibold text-amber-800 text-sm">Style Options</h3>
-                <p className="text-xs text-amber-600">13+ fonts, colors, gradients & effects</p>
-              </div>
-              <div className="text-center p-4 bg-amber-50 rounded-lg">
-                <Download className="h-6 w-6 text-amber-600 mx-auto mb-2" />
-                <h3 className="font-semibold text-amber-800 text-sm">Export Formats</h3>
-                <p className="text-xs text-amber-600">PNG, SVG downloads & social sharing</p>
-              </div>
-              <div className="text-center p-4 bg-amber-50 rounded-lg">
-                <Check className="h-6 w-6 text-amber-600 mx-auto mb-2" />
-                <h3 className="font-semibold text-amber-800 text-sm">Free Access</h3>
-                <p className="text-xs text-amber-600">100% free, no registration required</p>
-              </div>
-            </div>
 
-            {/* Sample Text Examples - SEO Content */}
-            <div className="text-center">
-              <h3 className="text-lg font-semibold text-amber-800 mb-3">Popular Arabic Phrases to Try:</h3>
-              <div className="flex flex-wrap justify-center gap-2 mb-4">
-                <span className="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium" lang="ar">بسم الله الرحمن الرحيم</span>
-                <span className="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium" lang="ar">الحمد لله</span>
-                <span className="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium" lang="ar">ما شاء الله</span>
-                <span className="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium" lang="ar">سبحان الله</span>
-              </div>
-              <p className="text-sm text-amber-600">
-                Start creating your Arabic calligraphy artwork with these examples or enter your own text below.
-              </p>
-            </div>
-          </section>
 
           {/* Main Tool Section */}
           <div className="mb-12" id="calligraphy-tool-section">
