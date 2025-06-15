@@ -13,9 +13,20 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Harmattan Font | Simplified Modern Arabic Typography | Arabic Calligraphy",
-  description: "Explore the Harmattan font, a simplified modern Arabic typeface with excellent legibility, designed for clarity in various reading environments, especially for African languages using Arabic script.",
-  keywords: "Harmattan font, Arabic typography, modern Arabic fonts, African Arabic script, Islamic calligraphy, Arabic fonts, legible Arabic fonts",
+  title: "Harmattan Font: West African Arabic Typography",
+  description: "Discover Harmattan by SIL International, designed for West African Arabic scripts with support for Ajami languages and traditional letterforms.",
+  keywords: "harmattan font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/fonts/harmattan",
+  },
+  openGraph: {
+    title: "Harmattan Font: West African Arabic Typography",
+    description: "Discover Harmattan by SIL International, designed for West African Arabic scripts with support for Ajami languages and traditional letterforms.",
+    url: "https://arabic-calligraphy-generator.com/fonts/harmattan",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",
+  },
 }
 
 // Sample alphabet for demonstration

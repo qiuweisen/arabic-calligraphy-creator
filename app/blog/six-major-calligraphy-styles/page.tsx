@@ -12,9 +12,20 @@ import { getContentSpecificLinks } from "@/lib/content-links"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Understanding the Six Major Arabic Calligraphy Styles | Arabic Calligraphy Guide",
-  description: "Explore the unique characteristics and applications of Naskh, Thuluth, Diwani, Kufi, Riq'a, and Nastaliq - the six major styles of Arabic calligraphy.",
+  title: "Six Major Arabic Calligraphy Styles Guide",
+  description: "Explore the unique characteristics and applications of Naskh, Thuluth, Diwani, Kufi, Riq'a, and Nastaliq - the six major styles of Arabic calligraphy with examples.",
   keywords: "Arabic calligraphy styles, Naskh, Thuluth, Diwani, Kufi, Riq'a, Nastaliq, Islamic calligraphy, Arabic script types",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/blog/six-major-calligraphy-styles",
+  },
+  openGraph: {
+    title: "Six Major Arabic Calligraphy Styles Guide",
+    description: "Explore the unique characteristics and applications of Naskh, Thuluth, Diwani, Kufi, Riq'a, and Nastaliq - the six major styles of Arabic calligraphy with examples.",
+    url: "https://arabic-calligraphy-generator.com/blog/six-major-calligraphy-styles",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",
+  },
 }
 
 export default function SixMajorCalligraphyStylesPage() {

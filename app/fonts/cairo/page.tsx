@@ -14,12 +14,15 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Cairo Font: Modern Arabic & Latin Sans-Serif by TitraShop | Arabic Calligraphy",
-  description: "Explore the Cairo font, a contemporary bilingual Arabic and Latin sans-serif typeface designed by Mohamed Gaber (TitraShop). Ideal for modern UI, web, and branding applications.",
-  keywords: "Cairo font, modern Arabic font, sans-serif Arabic, bilingual font, TitraShop, Mohamed Gaber, Arabic UI font, web Arabic font, contemporary Arabic typeface, Latin Arabic font pairing",
+  title: "Cairo Font: Modern Arabic Sans-Serif Typography",
+  description: "Discover Cairo, a contemporary Arabic sans-serif font perfect for modern designs, digital interfaces, and bilingual projects with clean, readable letterforms.",
+  keywords: "cairo font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/fonts/cairo",
+  },
   openGraph: {
-    title: "Cairo Font: Versatile & Modern Sans-Serif for Arabic & Latin | Arabic Calligraphy Generator",
-    description: "Discover Cairo, a contemporary sans-serif by TitraShop, offering excellent readability for Arabic and Latin scripts in UI, web, and branding.",
+    title: "Cairo Font: Modern Arabic Sans-Serif Typography",
+    description: "Discover Cairo, a contemporary Arabic sans-serif font perfect for modern designs, digital interfaces, and bilingual projects with clean, readable letterforms.",
     url: "https://arabic-calligraphy-generator.com/fonts/cairo",
     siteName: "Arabic Calligraphy Generator",
     type: "article",

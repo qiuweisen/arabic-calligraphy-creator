@@ -12,16 +12,20 @@ import { getContentSpecificLinks } from "@/lib/content-links"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Marhey Font: Playful & Energetic Arabic Typeface | Arabic Calligraphy",
-  description: "Explore Marhey, a lively and energetic Arabic display font with a playful character. Perfect for fun branding, children's content, and eye-catching designs.",
-  keywords: "Marhey font, playful Arabic font, energetic Arabic font, fun Arabic typeface, Arabic display font, children's Arabic font, Arabic calligraphy, creative Arabic font",
+  title: "Marhey Font: Friendly Arabic Typography",
+  description: "Discover Marhey, a friendly Arabic font with approachable letterforms, perfect for user interfaces, educational content, and modern Arabic designs.",
+  keywords: "marhey font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/fonts/marhey",
+  },
   openGraph: {
-    title: "Marhey Font: Inject Fun & Energy into Your Designs | Arabic Calligraphy Generator",
-    description: "Discover Marhey, a uniquely playful and dynamic Arabic font ideal for projects that need a burst of energy and a touch of whimsy.",
+    title: "Marhey Font: Friendly Arabic Typography",
+    description: "Discover Marhey, a friendly Arabic font with approachable letterforms, perfect for user interfaces, educational content, and modern Arabic designs.",
     url: "https://arabic-calligraphy-generator.com/fonts/marhey",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
-    locale: "en_US",  },
+    locale: "en_US",
+  },
 }
 
 const TEXT_EXAMPLES = [

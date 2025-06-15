@@ -11,9 +11,20 @@ import { getContentSpecificLinks } from "@/lib/content-links"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Rakkas Font | Decorative Arabic Display Typography | Arabic Calligraphy",
-  description: "Explore the Rakkas font, a decorative Arabic display typeface with a distinctive, handwritten character, perfect for eye-catching titles and artistic designs.",
-  keywords: "Rakkas font, Arabic typography, display font, decorative Arabic font, handwritten Arabic font, Islamic calligraphy, Arabic fonts",
+  title: "Rakkas Font: Decorative Arabic Display Typography",
+  description: "Explore Rakkas, a decorative Arabic display font with ornamental features, ideal for artistic projects and traditional Arabic design applications.",
+  keywords: "rakkas font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/fonts/rakkas",
+  },
+  openGraph: {
+    title: "Rakkas Font: Decorative Arabic Display Typography",
+    description: "Explore Rakkas, a decorative Arabic display font with ornamental features, ideal for artistic projects and traditional Arabic design applications.",
+    url: "https://arabic-calligraphy-generator.com/fonts/rakkas",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",
+  },
 }
 
 // Sample alphabet for demonstration

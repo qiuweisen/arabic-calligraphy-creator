@@ -14,12 +14,15 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Mada Font: Clear & Modern Arabic Sans-Serif | Arabic Calligraphy",
-  description: "Discover Mada, a contemporary Arabic sans-serif typeface known for its clarity, balanced proportions, and excellent readability in UI and digital content.",
-  keywords: "Mada font, modern Arabic font, sans-serif Arabic, Arabic UI font, clear Arabic font, legible Arabic typeface, Arabic web font, contemporary Arabic design",
+  title: "Mada Font: Clean Modern Arabic Typography",
+  description: "Explore Mada, a minimalist Arabic font designed for clarity and readability in digital and print media with contemporary geometric styling.",
+  keywords: "mada font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/fonts/mada",
+  },
   openGraph: {
-    title: "Mada Font: Versatile & Legible Sans-Serif for Modern Designs | Arabic Calligraphy Generator",
-    description: "Explore Mada, a clean and balanced Arabic sans-serif font, ideal for user interfaces, web content, and projects requiring high readability.",
+    title: "Mada Font: Clean Modern Arabic Typography",
+    description: "Explore Mada, a minimalist Arabic font designed for clarity and readability in digital and print media with contemporary geometric styling.",
     url: "https://arabic-calligraphy-generator.com/fonts/mada",
     siteName: "Arabic Calligraphy Generator",
     type: "article",

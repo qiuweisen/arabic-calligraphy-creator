@@ -11,9 +11,20 @@ import { getContentSpecificLinks } from "@/lib/content-links"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Beginner's Guide to Arabic Calligraphy | Start Your Calligraphy Journey",
-  description: "Learn the essential tools, techniques, and foundational knowledge to begin your Arabic calligraphy practice. Perfect for beginners with step-by-step guidance.",
-  keywords: "Arabic calligraphy for beginners, calligraphy tools, learn Arabic calligraphy, calligraphy techniques, calligraphy practice, Arabic script basics",
+  title: "Beginner's Guide to Arabic Calligraphy",
+  description: "Learn Arabic calligraphy basics with our comprehensive guide covering essential tools, techniques, and fundamental strokes for aspiring calligraphers.",
+  keywords: "beginners guide to calligraphy, Arabic calligraphy, Islamic art, Arabic typography, calligraphy guide, Arabic script",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/blog/beginners-guide-to-calligraphy",
+  },
+  openGraph: {
+    title: "Beginner's Guide to Arabic Calligraphy",
+    description: "Learn Arabic calligraphy basics with our comprehensive guide covering essential tools, techniques, and fundamental strokes for aspiring calligraphers.",
+    url: "https://arabic-calligraphy-generator.com/blog/beginners-guide-to-calligraphy",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",
+  },
 }
 
 export default function BeginnersGuideToCalligraphyPage() {

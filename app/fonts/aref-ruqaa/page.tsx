@@ -12,16 +12,20 @@ import { getContentSpecificLinks } from "@/lib/content-links"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Aref Ruqaa Font: Elegant and Traditional Ruq'ah Script | Arabic Calligraphy",
-  description: "Discover the Aref Ruqaa font, a beautiful rendition of the traditional Ruq'ah script. Ideal for headlines, short texts, and designs requiring a classic, flowing Arabic style.",
-  keywords: "Aref Ruqaa font, Ruq'ah script, Arabic calligraphy, traditional Arabic font, headline font, Islamic calligraphy, Arabic display font, classic Arabic typeface",
+  title: "Aref Ruqaa: Traditional Arabic Handwriting Font",
+  description: "Explore Aref Ruqaa, a digital revival of traditional Arabic Ruqaa handwriting style, perfect for informal texts and authentic Arabic designs.",
+  keywords: "aref ruqaa font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/fonts/aref-ruqaa",
+  },
   openGraph: {
-    title: "Aref Ruqaa: Mastering the Beauty of Ruq'ah Script | Arabic Calligraphy Generator",
-    description: "Explore Aref Ruqaa, a font that brings the elegance of Ruq'ah calligraphy to digital form. Perfect for distinctive titles and artistic expressions.",
+    title: "Aref Ruqaa: Traditional Arabic Handwriting Font",
+    description: "Explore Aref Ruqaa, a digital revival of traditional Arabic Ruqaa handwriting style, perfect for informal texts and authentic Arabic designs.",
     url: "https://arabic-calligraphy-generator.com/fonts/aref-ruqaa",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
-    locale: "en_US",  },
+    locale: "en_US",
+  },
 }
 
 const TEXT_EXAMPLES = [

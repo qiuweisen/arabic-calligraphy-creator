@@ -12,16 +12,20 @@ import { getContentSpecificLinks } from "@/lib/content-links"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Jomhuria Font: Bold & Impactful Display Typeface | Arabic Calligraphy",
-  description: "Discover Jomhuria, a striking Arabic display font designed for impactful headlines, posters, and branding. Its unique Kufi-inspired forms command attention.",
-  keywords: "Jomhuria font, Arabic display font, bold Arabic font, Kufi font, headline Arabic font, TitraShop, Kourosh Beigpour, Arabic calligraphy, impactful Arabic typeface",
+  title: "Jomhuria Font: Bold Arabic Display Typography",
+  description: "Discover Jomhuria, a bold Arabic display font inspired by newspaper headlines, perfect for impactful titles and attention-grabbing Arabic text.",
+  keywords: "jomhuria font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/fonts/jomhuria",
+  },
   openGraph: {
-    title: "Jomhuria Font: Command Attention with This Powerful Display Typeface | Arabic Calligraphy Generator",
-    description: "Explore Jomhuria, a Kufi-inspired display font by Kourosh Beigpour (TitraShop), perfect for designs that need to make a bold statement.",
+    title: "Jomhuria Font: Bold Arabic Display Typography",
+    description: "Discover Jomhuria, a bold Arabic display font inspired by newspaper headlines, perfect for impactful titles and attention-grabbing Arabic text.",
     url: "https://arabic-calligraphy-generator.com/fonts/jomhuria",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
-    locale: "en_US",  },
+    locale: "en_US",
+  },
 }
 
 const TEXT_EXAMPLES = [

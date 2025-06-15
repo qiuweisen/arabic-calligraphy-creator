@@ -15,12 +15,15 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Amiri Font: Masterpiece of Classical Naskh Arabic Typography | Arabic Calligraphy",
-  description: "Delve into the Amiri font, a revival of classical Naskh calligraphy by Dr. Khaled Hosny. Perfect for Quranic text, academic publishing, and designs requiring authentic Arabic heritage.",
+  title: "Amiri Font: Classical Naskh Arabic Typography",
+  description: "Discover Amiri, a revival of classical Naskh calligraphy by Dr. Khaled Hosny. Perfect for Quranic text, academic publishing, and authentic Arabic designs.",
   keywords: "Amiri font, classical Naskh, Dr. Khaled Hosny, Bulaq Press, Arabic typography, Quranic font, Islamic calligraphy, Arabic fonts, traditional Arabic typeface, academic Arabic font",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/fonts/amiri",
+  },
   openGraph: {
-    title: "Amiri Font: Reviving Classical Naskh Beauty | Arabic Calligraphy Generator",
-    description: "Discover Amiri, a Naskh typeface by Dr. Khaled Hosny, ideal for traditional and academic Arabic texts. Explore its features and use cases.",
+    title: "Amiri Font: Classical Naskh Arabic Typography",
+    description: "Discover Amiri, a revival of classical Naskh calligraphy by Dr. Khaled Hosny. Perfect for Quranic text, academic publishing, and authentic Arabic designs.",
     url: "https://arabic-calligraphy-generator.com/fonts/amiri",
     siteName: "Arabic Calligraphy Generator",
     type: "article",

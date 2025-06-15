@@ -14,16 +14,20 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Scheherazade New Font: Premier Naskh for Scholarly & Multilingual Texts | Arabic Calligraphy",
-  description: "Discover Scheherazade New by SIL International, a Naskh typeface optimized for academic publishing, extensive text, and multilingual support for Arabic script languages.",
+  title: "Scheherazade New: Scholarly Arabic Naskh Font",
+  description: "Discover Scheherazade New by SIL International, a Naskh typeface optimized for academic publishing and multilingual Arabic script languages with extensive character support.",
   keywords: "Scheherazade New font, SIL International, Arabic Naskh font, scholarly Arabic font, multilingual Arabic typography, Arabic book typography, legible Arabic typeface, extended Arabic character set, Ajami scripts",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/fonts/scheherazade",
+  },
   openGraph: {
-    title: "Scheherazade New: The Scholar\'s Choice for Arabic Script Typography",
-    description: "Explore Scheherazade New, SIL International\'s Naskh font for clarity in academic and multilingual Arabic texts. Features extensive character support.",
+    title: "Scheherazade New: Scholarly Arabic Naskh Font",
+    description: "Discover Scheherazade New by SIL International, a Naskh typeface optimized for academic publishing and multilingual Arabic script languages with extensive character support.",
     url: "https://arabic-calligraphy-generator.com/fonts/scheherazade",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
-    locale: "en_US",  },
+    locale: "en_US",
+  },
 }
 
 const TEXT_EXAMPLES = [

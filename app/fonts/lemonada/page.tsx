@@ -14,16 +14,20 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Lemonada Font: Friendly & Rounded Arabic Typeface | Arabic Calligraphy",
-  description: "Discover Lemonada, a modern and friendly Arabic typeface with rounded letterforms, perfect for branding, UI, and casual designs. Supports Arabic and Latin.",
-  keywords: "Lemonada font, rounded Arabic font, friendly Arabic font, modern Arabic typeface, bilingual font, Eduardo Tunni, Arabic calligraphy, casual Arabic font, UI Arabic font",
+  title: "Lemonada Font: Playful Arabic Typography",
+  description: "Discover Lemonada, a playful Arabic font with rounded letterforms, perfect for friendly designs, children's content, and casual Arabic typography.",
+  keywords: "lemonada font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/fonts/lemonada",
+  },
   openGraph: {
-    title: "Lemonada Font: Add a Touch of Friendliness & Modernity | Arabic Calligraphy Generator",
-    description: "Explore Lemonada, a versatile Arabic and Latin font with a unique rounded style by Eduardo Tunni, ideal for projects needing warmth and personality.",
+    title: "Lemonada Font: Playful Arabic Typography",
+    description: "Discover Lemonada, a playful Arabic font with rounded letterforms, perfect for friendly designs, children's content, and casual Arabic typography.",
     url: "https://arabic-calligraphy-generator.com/fonts/lemonada",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
-    locale: "en_US",  },
+    locale: "en_US",
+  },
 }
 
 const TEXT_EXAMPLES = [
