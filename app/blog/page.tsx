@@ -2,8 +2,9 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight } from "lucide-react"
+import { Card, CardDescription, CardFooter, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import { ArrowRight, Type } from "lucide-react"
+import { getFeaturedFonts } from "@/lib/content-links"
 
 export const metadata: Metadata = {
   title: "Arabic Calligraphy Blog | History, Styles & Tutorials",
@@ -113,6 +114,46 @@ export default function BlogPage() {
             </Card>
           ))}
         </div>
+
+        {/* Featured Fonts Section - Consistent with font library page style */}
+        <section className="mt-16 mb-12">
+          <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">Explore Arabic Fonts Mentioned in Our Articles</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {getFeaturedFonts().slice(0, 4).map((font) => (
+              <Card key={font.href} className="border-amber-200 bg-white/80 backdrop-blur-sm hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <Link href={font.href} className="group">
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-2">
+                          <Type className="h-4 w-4 text-amber-600" />
+                          <span className="text-xs text-amber-600 font-medium px-2 py-1 bg-amber-50 rounded-full">
+                            Font
+                          </span>
+                        </div>
+                        <h3 className="text-lg font-semibold text-amber-800 group-hover:text-amber-900 mb-2">
+                          {font.title}
+                        </h3>
+                        <p className="text-amber-600 text-sm mb-3">
+                          {font.description}
+                        </p>
+                        <div className="flex items-center text-amber-600 group-hover:text-amber-800 text-sm font-medium">
+                          <span>Explore Font</span>
+                          <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="mt-6 text-center">
+            <Button asChild variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
+              <Link href="/fonts">View All Fonts</Link>
+            </Button>
+          </div>
+        </section>
 
         <div className="mt-12 text-center">
           <Button asChild className="bg-amber-600 hover:bg-amber-700">

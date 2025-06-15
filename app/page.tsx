@@ -6,9 +6,10 @@ import { CalligraphyGenerator } from "@/components/calligraphy-generator"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Check, Download, Palette, Type, ChevronRight, Laptop, Smartphone, Tablet } from "lucide-react"
+import { Check, Download, Palette, Type, ChevronRight, Laptop, Smartphone, Tablet, ArrowRight } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { getFeaturedFonts, FONT_CATEGORIES } from "@/lib/content-links"
 
 const UseCasesSection = dynamic(() => 
   import("@/components/home/use-cases-section").then((mod) => mod.UseCasesSection)
@@ -257,6 +258,65 @@ export default function Home() {
 
           {/* Use Cases Section - Now dynamically loaded */}
           <UseCasesSection />
+
+          {/* Featured Fonts Section - Moved to better position after use cases */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">Explore Our Arabic Font Collection</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Featured Fonts */}
+              <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-amber-800 mb-4">Featured Arabic Fonts</h3>
+                  <div className="space-y-3">
+                    {getFeaturedFonts().slice(0, 4).map((font) => (
+                      <Link 
+                        key={font.href} 
+                        href={font.href}
+                        className="flex items-center justify-between p-3 rounded-lg border border-amber-100 hover:border-amber-300 hover:bg-amber-50 transition-colors group"
+                      >
+                        <div>
+                          <h4 className="font-semibold text-amber-800 group-hover:text-amber-900">{font.title}</h4>
+                          <p className="text-sm text-amber-600">{font.description}</p>
+                        </div>
+                        <ArrowRight className="h-4 w-4 text-amber-600 group-hover:text-amber-800" />
+                      </Link>
+                    ))}
+                  </div>
+                  <div className="mt-4 text-center">
+                    <Button asChild variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
+                      <Link href="/fonts">View All Fonts</Link>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Font Categories */}
+              <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-amber-800 mb-4">Browse by Style</h3>
+                  <div className="space-y-3">
+                    {Object.entries(FONT_CATEGORIES).slice(0, 4).map(([key, category]) => (
+                      <div key={key} className="p-3 rounded-lg border border-amber-100 hover:border-amber-300 hover:bg-amber-50 transition-colors">
+                        <h4 className="font-semibold text-amber-800 mb-1">{category.title}</h4>
+                        <p className="text-sm text-amber-600 mb-2">{category.description}</p>
+                        <div className="flex flex-wrap gap-2">
+                          {category.fonts.slice(0, 3).map((font) => (
+                            <Link 
+                              key={font.href}
+                              href={font.href}
+                              className="text-xs px-2 py-1 bg-amber-100 text-amber-700 rounded hover:bg-amber-200 transition-colors"
+                            >
+                              {font.title.replace(' Font', '')}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </section>
 
           {/* FAQ Section */}
           <section id="faq" className="mb-12">
