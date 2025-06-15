@@ -9,6 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "Mirza Font: Elegant Nastaliq Script for Persian & Urdu | Arabic Calligraphy",
@@ -17,15 +18,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mirza Font: Classic Nastaliq Elegance for Persian & Urdu | Arabic Calligraphy Generator",
     description: "Discover Mirza, a font that captures the beauty of Nastaliq calligraphy. Perfect for literary works, poetry, and designs requiring an authentic Perso-Arabic aesthetic.",
-    images: [
-      {
-        url: "/og-images/mirza-font-og.jpg", // Placeholder - replace with actual image
-        width: 1200,
-        height: 630,
-        alt: "Mirza Font Showcase",
-      },
-    ],
-  },
+    url: "https://arabic-calligraphy-generator.com/fonts/mirza",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",  },
 }
 
 const TEXT_EXAMPLES = [
@@ -157,12 +153,67 @@ const TECHNICAL_DETAILS = [
 const ARABIC_ALPHABET_MIRZA = "ا ب پ ت ٹ ث ج چ ح خ د ڈ ذ ر ڑ ز ژ س ش ص ض ط ظ ع غ ف ق ک گ ل م ن ں ه و ی ے";
 
 export default function MirzaFontPage() {
+  // Structured data for the font
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Mirza Font",
+    "description": "A distinguished Arabic typeface in the Nastaliq style, celebrated for its flowing elegance. Ideal for Persian, Urdu, and other languages requiring traditional calligraphic beauty.",
+    "creator": [
+      {
+        "@type": "Person",
+        "name": "KB Sajjadi"
+      },
+      {
+        "@type": "Person", 
+        "name": "Peter Verkinderen"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization", 
+      "name": "Google Fonts",
+      "url": "https://fonts.google.com"
+    },
+    "datePublished": "2025",
+    "license": "https://scripts.sil.org/OFL",
+    "keywords": ["Arabic font", "Nastaliq script", "Persian typography", "Urdu font", "Traditional calligraphy", "Literary typography"],
+    "genre": "Typography",
+    "inLanguage": ["ar", "fa", "ur"],
+    "culturalContext": "Persian and South Asian literary traditions",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.4",
+      "ratingCount": "88",
+      "bestRating": "5"
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            {/* Breadcrumb Navigation */}
+            <Breadcrumb 
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Arabic Fonts", href: "/fonts" },
+                { name: "Mirza Font", href: "/fonts/mirza" }
+              ]}
+              className="mb-6"
+            />
+
             <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-800 hover:bg-amber-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />

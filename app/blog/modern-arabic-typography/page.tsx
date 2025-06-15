@@ -6,6 +6,9 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
+import { RelatedContent } from "@/components/related-content"
+import { getContentSpecificLinks } from "@/lib/content-links"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "Modern Arabic Typography in Digital Design | Arabic Design Evolution",
@@ -20,6 +23,16 @@ export default function ModernArabicTypographyPage() {
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
+            {/* Breadcrumb Navigation */}
+            <Breadcrumb 
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Blog", href: "/blog" },
+                { name: "Modern Arabic Typography", href: "/blog/modern-arabic-typography" }
+              ]}
+              className="mb-6"
+            />
+
             <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-800 hover:bg-amber-50">
               <Link href="/blog">
                 <ArrowLeft className="mr-2 h-4 w-4" />
@@ -44,7 +57,7 @@ export default function ModernArabicTypographyPage() {
               </div>
               
               <p className="lead text-lg text-amber-700">
-                The rich heritage of Arabic calligraphy is finding new expression in the digital age. As designers adapt this ancient art form to modern interfaces, they face unique challenges and opportunities. This article explores how traditional Arabic script has evolved into contemporary digital typography and examines best practices for using Arabic in today's design landscape.
+                <Link href="/blog/the-rich-history-of-arabic-calligraphy" className="text-amber-600 hover:text-amber-800 underline">The rich heritage of Arabic calligraphy</Link> is finding new expression in the digital age. As designers adapt this ancient art form to modern interfaces, they face unique challenges and opportunities. This article explores how traditional Arabic script has evolved into contemporary digital typography and examines best practices for using Arabic in today's design landscape.
               </p>
               
               <h2 id="bridging-tradition-and-technology">Bridging Tradition and Technology</h2>
@@ -220,8 +233,8 @@ export default function ModernArabicTypographyPage() {
               <p>
                 Beyond technical implementation, consider these design principles:
               </p>
-              <ul>
-                <li><strong>Respect Tradition:</strong> Understand the rules of Arabic calligraphy before breaking them</li>
+                              <ul>
+                <li><strong>Respect Tradition:</strong> Understand <Link href="/blog/six-major-calligraphy-styles" className="text-amber-600 hover:text-amber-800 underline">the rules of Arabic calligraphy</Link> before breaking them</li>
                 <li><strong>Prioritize Readability:</strong> Choose legibility over decorative elements for body text</li>
                 <li><strong>Create Clear Hierarchy:</strong> Distinguish between headings, subheadings, and body text</li>
                 <li><strong>Consider Context:</strong> Different applications (mobile, web, print) may require different approaches</li>
@@ -306,6 +319,13 @@ export default function ModernArabicTypographyPage() {
                 </Button>
               </div>
             </div>
+
+            {/* Related Content */}
+            <RelatedContent 
+              links={getContentSpecificLinks('blog', 'modern-arabic-typography')}
+              title="Related Articles"
+              className="mt-12"
+            />
           </div>
         </div>
       </main>

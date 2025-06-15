@@ -40,6 +40,7 @@ import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { useMobile } from "@/hooks/use-mobile"
+import { useFontLoader } from "@/hooks/use-font-loader"
 import { ArabicKeyboard } from "@/components/arabic-keyboard"
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle } from "@/components/ui/drawer"
 import { TemplateBrowser } from "@/components/template-browser"
@@ -206,6 +207,7 @@ const DEFAULT_TEXT = "بسم الله الرحمن الرحيم"
 
 export function CalligraphyGenerator() {
   const isMobile = useMobile()
+  const { loadFont, isFontLoaded, isFontLoading } = useFontLoader()
   const [text, setText] = useState(DEFAULT_TEXT)
   const [font, setFont] = useState(ARABIC_FONTS[0].value)
   const [fontSize, setFontSize] = useState(48)
@@ -249,7 +251,7 @@ export function CalligraphyGenerator() {
   const previewRef = useRef<HTMLDivElement>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
-  // 页面访问和工具初始化追踪
+  // 页面访问和工具初始化追踪，预加载默认字体
   useEffect(() => {
     if (typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
       (window as any).trackCalligraphyEvent('Tool_Initialized', {
@@ -258,7 +260,11 @@ export function CalligraphyGenerator() {
         initial_load: true
       });
     }
-  }, [])
+    
+    // 暂时禁用预加载，只在用户选择字体时才加载
+    // 这样可以避免页面加载时的字体错误
+    console.log('Font loader initialized, fonts will load on demand')
+  }, [loadFont])
 
   // Toggle keyboard visibility
   const toggleKeyboard = () => {
@@ -285,8 +291,16 @@ export function CalligraphyGenerator() {
     }
   }
 
-  const handleFontChange = (value: string) => {
+  const handleFontChange = async (value: string) => {
+    // 立即更新字体状态，使用fallback字体显示
     setFont(value)
+    
+    // 异步加载字体
+    try {
+      await loadFont(value)
+    } catch (error) {
+      console.error('Failed to load font:', error)
+    }
     
     // 追踪字体选择事件
     if (typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
@@ -911,7 +925,15 @@ export function CalligraphyGenerator() {
                   <div className="text-xs font-semibold text-muted-foreground mb-1">{category}</div>
                   {ARABIC_FONTS.filter((font) => font.category === category).map((font) => (
                     <SelectItem key={font.name} value={font.value} className="py-3 flex justify-between min-h-[44px]">
-                      <span>{font.name}</span>
+                      <div className="flex items-center gap-2">
+                        <span>{font.name}</span>
+                        {isFontLoading(font.value) && (
+                          <div className="w-3 h-3 border border-amber-600 border-t-transparent rounded-full animate-spin" />
+                        )}
+                        {isFontLoaded(font.value) && !isFontLoading(font.value) && (
+                          <div className="w-2 h-2 bg-green-500 rounded-full" />
+                        )}
+                      </div>
                       <button
                         type="button"
                         onClick={(e) => {
@@ -1484,7 +1506,7 @@ export function CalligraphyGenerator() {
                   </TabsTrigger>
                 </TabsList>
 
-                <ScrollArea className="h-[calc(100vh-320px)] min-h-[400px]">
+                <ScrollArea className="h-[600px] lg:h-[calc(100vh-320px)] lg:min-h-[500px]">
                   <TabsContent value="text" className="space-y-4">
                     <TextTabContent />
                   </TabsContent>
@@ -1531,7 +1553,7 @@ export function CalligraphyGenerator() {
                       <div className="pt-2 flex items-center">
                         <ChevronRight className="h-4 w-4 mr-1 text-amber-600" />
                         <a
-                          href="/blog/history-of-arabic-calligraphy"
+                          href="/blog/the-rich-history-of-arabic-calligraphy"
                           className="text-sm text-amber-600 hover:underline"
                         >
                           Read more about Arabic calligraphy history

@@ -4,10 +4,11 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ChevronRight, Info, BookOpen, Zap, CheckCircle, Download } from "lucide-react"
+import { ChevronRight, Info, BookOpen, Zap, CheckCircle, Download, ArrowRight } from "lucide-react"
 import { getFontInfoBySlug } from "@/app/lib/font-data"
 import { downloadFont } from "@/app/lib/font-download"
 import { FontCard } from "@/components/font-card"
+import { BLOG_LINKS } from "@/lib/content-links"
 
 export const metadata: Metadata = {
   title: "Arabic Fonts: Naskh, Kufi, Diwani & More | Calligraphy Library",
@@ -145,8 +146,65 @@ function createTagline(description: string, maxLength = 100): string {
 }
 
 export default function FontsPage() {
+  // 面包屑结构化数据
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arabic-calligraphy-generator.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Arabic Fonts",
+        "item": "https://arabic-calligraphy-generator.com/fonts"
+      }
+    ]
+  };
+
+  // 字体集合结构化数据
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Arabic Calligraphy Fonts Collection",
+    "description": "Comprehensive collection of Arabic calligraphy fonts including Traditional Naskh, Kufi, Diwani, Modern and Display styles for digital typography and Islamic art.",
+    "url": "https://arabic-calligraphy-generator.com/fonts",
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": Object.values(FONT_DATA).reduce((total, category) => total + category.fonts.length, 0),
+      "itemListElement": Object.entries(FONT_DATA).flatMap(([categoryName, categoryData], categoryIndex) =>
+        categoryData.fonts.map((font, fontIndex) => ({
+          "@type": "ListItem",
+          "position": categoryIndex * 10 + fontIndex + 1,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": font.name,
+            "description": font.description,
+            "url": `https://arabic-calligraphy-generator.com/fonts/${font.slug}`,
+            "applicationCategory": "Font",
+            "operatingSystem": "Web Browser"
+          }
+        }))
+      )
+    }
+  };
+
   return (
     <>
+      {/* 结构化数据 */}
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+      />
+      
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
@@ -259,6 +317,45 @@ export default function FontsPage() {
                 <p className="mt-4">
                   Experimentation is key! Feel free to use our <Link href="/" className="text-green-600 hover:text-green-800 underline font-semibold">Calligraphy Generator</Link> to preview how these fonts look with your text and styles.
                 </p>
+              </div>
+            </section>
+
+            {/* Related Blog Articles Section */}
+            <section className="mt-16 mb-12">
+              <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">Learn More About Arabic Calligraphy</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  BLOG_LINKS.historyOfCalligraphy,
+                  BLOG_LINKS.sixMajorStyles,
+                  BLOG_LINKS.modernTypography,
+                  BLOG_LINKS.beginnersGuide
+                ].map((blog) => (
+                  <Card key={blog.href} className="border-amber-200 bg-white/80 backdrop-blur-sm hover:shadow-lg transition-shadow">
+                    <CardContent className="p-6">
+                      <Link href={blog.href} className="group">
+                        <div className="flex items-start justify-between">
+                          <div className="flex-1">
+                            <h3 className="text-lg font-semibold text-amber-800 group-hover:text-amber-900 mb-2">
+                              {blog.title}
+                            </h3>
+                            <p className="text-amber-600 text-sm mb-3">
+                              {blog.description}
+                            </p>
+                            <div className="flex items-center text-amber-600 group-hover:text-amber-800 text-sm font-medium">
+                              <span>Read Article</span>
+                              <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+              <div className="mt-6 text-center">
+                <Button asChild variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
+                  <Link href="/blog">View All Articles</Link>
+                </Button>
               </div>
             </section>
 

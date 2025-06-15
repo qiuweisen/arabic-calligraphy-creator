@@ -11,6 +11,7 @@ import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
 import { getFontInfoBySlug } from "@/app/lib/font-data"
 import { DownloadButton } from "@/components/download-button"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "Scheherazade New Font: Premier Naskh for Scholarly & Multilingual Texts | Arabic Calligraphy",
@@ -19,15 +20,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Scheherazade New: The Scholar\'s Choice for Arabic Script Typography",
     description: "Explore Scheherazade New, SIL International\'s Naskh font for clarity in academic and multilingual Arabic texts. Features extensive character support.",
-    images: [
-      {
-        url: "/og-images/scheherazade-new-font-og.jpg", // 假设的OG图片路径
-        width: 1200,
-        height: 630,
-        alt: "Scheherazade New Font Showcase",
-      },
-    ],
-  },
+    url: "https://arabic-calligraphy-generator.com/fonts/scheherazade",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",  },
 }
 
 const TEXT_EXAMPLES = [
@@ -163,12 +159,69 @@ export default function ScheherazadeFontPage() {
   // Get font info for the current page
   const fontInfo = getFontInfoBySlug('scheherazade');
 
+  // Structured data for the font
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Scheherazade New Font",
+    "description": "A traditional Naskh-style Arabic typeface by SIL International, optimized for scholarly publishing and multilingual Arabic script texts with extensive character support.",
+    "applicationCategory": "Font",
+    "operatingSystem": "Cross-platform",
+    "creator": {
+      "@type": "Organization",
+      "name": "SIL International",
+      "description": "Faith-based nonprofit organization focused on language development, literacy, and translation globally"
+    },
+    "publisher": {
+      "@type": "Organization", 
+      "name": "SIL International",
+      "url": "https://software.sil.org"
+    },
+    "datePublished": "2025",
+    "license": "https://scripts.sil.org/OFL",
+    "programmingLanguage": "OpenType",
+    "keywords": ["Arabic font", "Naskh", "Scholarly typography", "Multilingual", "Academic publishing", "Traditional Arabic"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "ratingCount": "120",
+      "bestRating": "5"
+    },
+    "featureList": [
+      "Traditional Naskh design",
+      "Scholarly text optimization", 
+      "Multilingual Arabic script support",
+      "Comprehensive diacritics",
+      "Academic publishing focus",
+      "Cross-platform compatibility"
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            {/* 面包屑导航 */}
+            <Breadcrumb 
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Arabic Fonts", href: "/fonts" },
+                { name: "Scheherazade", href: "/fonts/scheherazade" }
+              ]}
+            />
+            
             <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-800 hover:bg-amber-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />

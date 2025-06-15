@@ -8,21 +8,47 @@ Disallow: /404
 Disallow: /500
 Disallow: /*.json$
 
-# AI爬虫规则
+# AI爬虫规则 - 允许访问主要内容以提升AI搜索可见性
 User-Agent: GPTBot
+Allow: /
+Allow: /fonts/
+Allow: /blog/
 Allow: /llms.txt
 Allow: /llms-full.txt
-Disallow: /
+Disallow: /api/
+Disallow: /_next/
 
 User-Agent: anthropic-ai
+Allow: /
+Allow: /fonts/
+Allow: /blog/
 Allow: /llms.txt
 Allow: /llms-full.txt
-Disallow: /
+Disallow: /api/
+Disallow: /_next/
 
 User-Agent: Claude-Web
+Allow: /
+Allow: /fonts/
+Allow: /blog/
 Allow: /llms.txt
 Allow: /llms-full.txt
-Disallow: /
+Disallow: /api/
+Disallow: /_next/
+
+User-Agent: OpenAI-SearchBot
+Allow: /
+Allow: /fonts/
+Allow: /blog/
+Disallow: /api/
+Disallow: /_next/
+
+User-Agent: PerplexityBot
+Allow: /
+Allow: /fonts/
+Allow: /blog/
+Disallow: /api/
+Disallow: /_next/
 
 User-Agent: Googlebot
 Allow: /

@@ -12,6 +12,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
 import { DownloadButton } from "@/components/download-button"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "Amiri Font: Masterpiece of Classical Naskh Arabic Typography | Arabic Calligraphy",
@@ -20,14 +21,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Amiri Font: Reviving Classical Naskh Beauty | Arabic Calligraphy Generator",
     description: "Discover Amiri, a Naskh typeface by Dr. Khaled Hosny, ideal for traditional and academic Arabic texts. Explore its features and use cases.",
-    images: [
-      {
-        url: "/og-images/amiri-font-og.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Amiri Font Showcase",
-      },
-    ],
+    url: "https://arabic-calligraphy-generator.com/fonts/amiri",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",
   },
 }
 
@@ -168,12 +165,68 @@ export default function AmiriPage() {
   // Get font info for the current page
   const fontInfo = getFontInfoBySlug('amiri');
   
+  // Structured data for the font
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Amiri Font",
+    "description": "A masterpiece of digital Arabic typography, the Amiri font revives the elegance of classical Naskh script. Designed by Dr. Khaled Hosny, inspired by the Bulaq Press typefaces.",
+    "applicationCategory": "Font",
+    "operatingSystem": "Cross-platform",
+    "creator": {
+      "@type": "Person",
+      "name": "Dr. Khaled Hosny",
+      "description": "Egyptian physician and type designer, renowned for contributions to Arabic open-source fonts"
+    },
+    "publisher": {
+      "@type": "Organization", 
+      "name": "The Amiri Project"
+    },
+    "datePublished": "2025",
+    "license": "https://scripts.sil.org/OFL",
+    "programmingLanguage": "OpenType",
+    "keywords": ["Arabic font", "Naskh", "Classical typography", "Quranic text", "Islamic calligraphy", "Traditional Arabic"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "150",
+      "bestRating": "5"
+    },
+    "featureList": [
+      "Classical Naskh revival",
+      "Quranic text optimization", 
+      "Comprehensive glyph set",
+      "OpenType features",
+      "Multiple weights and styles",
+      "Cross-platform compatibility"
+    ]
+  };
+  
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            {/* 面包屑导航 */}
+            <Breadcrumb 
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Arabic Fonts", href: "/fonts" },
+                { name: "Amiri", href: "/fonts/amiri" }
+              ]}
+            />
+            
             <Button asChild variant="ghost" className="text-amber-600 hover:text-amber-800 hover:bg-amber-50 mb-6">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />

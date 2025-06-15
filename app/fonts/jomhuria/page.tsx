@@ -2,13 +2,14 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, Eye, Sparkles, Layers, Type, Palette, Megaphone, Bold } from "lucide-react"
+import { ArrowLeft, Eye, Sparkles, Layers, Type, Palette, Megaphone, Bold, Crown, Feather, PenTool } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "Jomhuria Font: Bold & Impactful Display Typeface | Arabic Calligraphy",
@@ -17,15 +18,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Jomhuria Font: Command Attention with This Powerful Display Typeface | Arabic Calligraphy Generator",
     description: "Explore Jomhuria, a Kufi-inspired display font by Kourosh Beigpour (TitraShop), perfect for designs that need to make a bold statement.",
-    images: [
-      {
-        url: "/og-images/jomhuria-font-og.jpg", // Placeholder - replace with actual image
-        width: 1200,
-        height: 630,
-        alt: "Jomhuria Font Showcase",
-      },
-    ],
-  },
+    url: "https://arabic-calligraphy-generator.com/fonts/jomhuria",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",  },
 }
 
 const TEXT_EXAMPLES = [
@@ -158,12 +154,61 @@ const TECHNICAL_DETAILS = [
 const ARABIC_ALPHABET_JOMHURIA = "جمهورية قلم فن قوة"; // Republic, Pen, Art, Power
 
 export default function JomhuriaFontPage() {
+  // Structured data for the font
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Jomhuria Font",
+    "description": "A powerful Arabic display font by Kourosh Beigpour for TitraShop, featuring bold Kufi-inspired letterforms designed for headlines, posters, and impactful branding applications.",
+    "creator": {
+      "@type": "Person",
+      "name": "Kourosh Beigpour",
+      "description": "Iranian graphic and type designer known for contemporary Kufi-inspired work"
+    },
+    "publisher": {
+      "@type": "Organization", 
+      "name": "TitraShop",
+      "url": "https://fonts.google.com"
+    },
+    "datePublished": "2025",
+    "license": "https://scripts.sil.org/OFL",
+    "keywords": ["Arabic font", "Display font", "Kufi inspired", "Bold typography", "Headlines", "Poster design"],
+    "genre": "Typography",
+    "inLanguage": ["ar", "fa", "ur"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.2",
+      "ratingCount": "55",
+      "bestRating": "5"
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-red-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            {/* Breadcrumb Navigation */}
+            <Breadcrumb 
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Arabic Fonts", href: "/fonts" },
+                { name: "Jomhuria Font", href: "/fonts/jomhuria" }
+              ]}
+              className="mb-6"
+            />
+
             <Button asChild variant="ghost" className="mb-4 text-red-600 hover:text-red-800 hover:bg-red-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />

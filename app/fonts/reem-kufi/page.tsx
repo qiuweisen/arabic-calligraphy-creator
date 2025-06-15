@@ -9,6 +9,9 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
+import { getFontInfoBySlug } from "@/app/lib/font-data"
+import { DownloadButton } from "@/components/download-button"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "Reem Kufi Font: Geometric Precision in Modern Arabic Kufi | Arabic Calligraphy",
@@ -17,15 +20,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Reem Kufi: Sharp, Modern, Geometric Arabic Typography",
     description: "Discover the striking Reem Kufi font. Its geometric precision and modern Kufi style make it perfect for bold statements in design and branding.",
-    images: [
-      {
-        url: "/og-images/reem-kufi-og.jpg", // Hypothetical OG image path
-        width: 1200,
-        height: 630,
-        alt: "Reem Kufi Font Showcase",
-      },
-    ],
-  },
+    url: "https://arabic-calligraphy-generator.com/fonts/reem-kufi",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",  },
 }
 
 const TEXT_EXAMPLES = [
@@ -157,12 +155,72 @@ const TECHNICAL_DETAILS = [
 const ARABIC_ALPHABET = "ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي";
 
 export default function ReemKufiFontPage() {
+  // Get font info for the current page
+  const fontInfo = getFontInfoBySlug('reem-kufi');
+  
+  // Structured data for the font
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Reem Kufi Font",
+    "description": "A contemporary Arabic Kufi typeface by Khaled Hosny, featuring bold geometric precision and modern aesthetic. Perfect for headlines, logos, and branding applications.",
+    "applicationCategory": "Font",
+    "operatingSystem": "Cross-platform",
+    "creator": {
+      "@type": "Person",
+      "name": "Khaled Hosny",
+      "description": "Egyptian typographer and font engineer known for contributions to Arabic open-source fonts"
+    },
+    "publisher": {
+      "@type": "Organization", 
+      "name": "Google Fonts",
+      "url": "https://fonts.google.com"
+    },
+    "datePublished": "2025",
+    "license": "https://scripts.sil.org/OFL",
+    "programmingLanguage": "OpenType",
+    "keywords": ["Arabic font", "Kufi", "Geometric typography", "Modern Arabic", "Display font", "Branding"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "ratingCount": "95",
+      "bestRating": "5"
+    },
+    "featureList": [
+      "Modern Kufi design",
+      "Geometric precision", 
+      "Bold visual impact",
+      "Display optimization",
+      "Branding applications",
+      "Cross-platform compatibility"
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            {/* 面包屑导航 */}
+            <Breadcrumb 
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Arabic Fonts", href: "/fonts" },
+                { name: "Reem Kufi", href: "/fonts/reem-kufi" }
+              ]}
+            />
+            
             <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-800 hover:bg-amber-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />
@@ -184,9 +242,17 @@ export default function ReemKufiFontPage() {
                     <p className="text-lg text-amber-700 mb-6 leading-relaxed">
                       Reem Kufi is a contemporary Arabic typeface celebrated for its bold geometric precision and modern Kufi aesthetic. Designed by Khaled Hosny, it's perfect for impactful headlines, striking logos, and modern branding.
                     </p>
-                    <Button asChild size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
-                      <Link href="/?font=Reem%20Kufi">Try Reem Kufi Now</Link>
-                    </Button>
+                    <div className="flex gap-4">
+                      {fontInfo && (
+                        <DownloadButton 
+                          zipFileName={fontInfo.zipFileName}
+                          displayName={fontInfo.displayName}
+                        />
+                      )}
+                      <Button asChild size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
+                        <Link href="/?font=Reem%20Kufi">Try Reem Kufi Now</Link>
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </CardContent>

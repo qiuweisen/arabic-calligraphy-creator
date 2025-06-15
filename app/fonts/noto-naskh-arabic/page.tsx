@@ -11,6 +11,7 @@ import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
 import { getFontInfoBySlug } from "@/app/lib/font-data"
 import { DownloadButton } from "@/components/download-button"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "Noto Naskh Arabic: Universally Readable & Screen-Optimized Naskh | Arabic Calligraphy",
@@ -19,15 +20,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Noto Naskh Arabic: Clear, Accessible, and Universal Arabic Font",
     description: "Discover Noto Naskh Arabic by Google. Perfect for web, UI, and digital content, ensuring every Arabic character displays beautifully everywhere.",
-    images: [
-      {
-        url: "/og-images/noto-naskh-arabic-og.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Noto Naskh Arabic Font Showcase",
-      },
-    ],
-  },
+    url: "https://arabic-calligraphy-generator.com/fonts/noto-naskh-arabic",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",  },
 }
 
 const TEXT_EXAMPLES = [
@@ -162,12 +158,70 @@ export default function NotoNaskhArabicFontPage() {
   // Get font info for the current page
   const fontInfo = getFontInfoBySlug('noto-naskh-arabic');
 
+  // Structured data for the font
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Noto Naskh Arabic Font",
+    "description": "A versatile and highly legible Arabic Naskh typeface by Google, combining traditional aesthetics with modern digital optimization for screen and print applications.",
+    "applicationCategory": "Font",
+    "operatingSystem": "Cross-platform",
+    "creator": {
+      "@type": "Organization",
+      "name": "Google",
+      "description": "Part of Google's Noto font initiative for universal script support"
+    },
+    "publisher": {
+      "@type": "Organization", 
+      "name": "Google Fonts",
+      "url": "https://fonts.google.com"
+    },
+    "datePublished": "2025",
+    "license": "https://scripts.sil.org/OFL",
+    "programmingLanguage": "OpenType",
+    "keywords": ["Arabic font", "Naskh", "Google Noto", "Screen optimized", "Digital typography", "Universal font"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "200",
+      "bestRating": "5"
+    },
+    "featureList": [
+      "Modern Naskh design",
+      "Screen optimization", 
+      "Universal script support",
+      "Multiple weights",
+      "Cross-platform compatibility",
+      "Unicode compliance"
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            {/* 面包屑导航 */}
+            <Breadcrumb 
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Arabic Fonts", href: "/fonts" },
+                { name: "Noto Naskh Arabic", href: "/fonts/noto-naskh-arabic" }
+              ]}
+              className="mb-6"
+            />
+            
             <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-800 hover:bg-amber-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />

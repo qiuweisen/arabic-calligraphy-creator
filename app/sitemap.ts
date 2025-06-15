@@ -27,12 +27,12 @@ const FONTS = [
   { slug: "marhey" },
 ]
 
-// Blog posts data
+// Blog posts data - using actual directory names (shorter URLs are better)
 const BLOG_POSTS = [
   'the-rich-history-of-arabic-calligraphy',
-  'understanding-the-six-major-arabic-calligraphy-styles',
+  'six-major-calligraphy-styles',
   'beginners-guide-to-calligraphy',
-  'famous-arabic-calligraphers-through-history',
+  'famous-arabic-calligraphers',
   'modern-arabic-typography',
   'quran-and-calligraphy'
 ]

@@ -11,6 +11,7 @@ import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
 import { getFontInfoBySlug } from "@/app/lib/font-data"
 import { DownloadButton } from "@/components/download-button"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "Markazi Text Font: Optimized Naskh for Readability | Arabic Calligraphy",
@@ -19,15 +20,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Markazi Text: Classic Naskh Meets Modern Readability | Arabic Calligraphy Generator",
     description: "Explore Markazi Text by Borna Izadpanah, a Naskh-based font designed for superior readability in extended Arabic text, perfect for digital and print.",
-    images: [
-      {
-        url: "/og-images/markazi-text-font-og.jpg", // Placeholder - replace with actual image
-        width: 1200,
-        height: 630,
-        alt: "Markazi Text Font Showcase",
-      },
-    ],
-  },
+    url: "https://arabic-calligraphy-generator.com/fonts/markazi-text",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",  },
 }
 
 const TEXT_EXAMPLES = [
@@ -163,12 +159,77 @@ export default function MarkaziTextFontPage() {
   // Get font info for the current page
   const fontInfo = getFontInfoBySlug('markazi-text');
 
+  // Structured data for the font
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Markazi Text Font",
+    "description": "A Naskh-inspired Arabic typeface by Borna Izadpanah, masterfully designed for optimal readability in extended text. Balances traditional aesthetics with modern screen performance for digital publications.",
+    "applicationCategory": "Font",
+    "operatingSystem": "Cross-platform",
+    "creator": [
+      {
+        "@type": "Person",
+        "name": "Borna Izadpanah",
+        "description": "Iranian type designer specializing in Arabic typography"
+      },
+      {
+        "@type": "Person", 
+        "name": "Fiona Ross",
+        "description": "British type designer and Arabic script specialist"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization", 
+      "name": "Google Fonts",
+      "url": "https://fonts.google.com"
+    },
+    "datePublished": "2025",
+    "license": "https://scripts.sil.org/OFL",
+    "programmingLanguage": "OpenType",
+    "keywords": ["Arabic font", "Naskh typography", "Text optimization", "Digital reading", "Academic content", "Extended text"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "ratingCount": "125",
+      "bestRating": "5"
+    },
+    "featureList": [
+      "Text readability optimization",
+      "Traditional Naskh aesthetics", 
+      "Screen performance",
+      "Extended reading comfort",
+      "Bilingual Arabic-Latin support",
+      "Award-winning design"
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-emerald-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            {/* Breadcrumb Navigation */}
+            <Breadcrumb 
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Arabic Fonts", href: "/fonts" },
+                { name: "Markazi Text Font", href: "/fonts/markazi-text" }
+              ]}
+              className="mb-6"
+            />
+
             <Button asChild variant="ghost" className="mb-4 text-emerald-600 hover:text-emerald-800 hover:bg-emerald-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />

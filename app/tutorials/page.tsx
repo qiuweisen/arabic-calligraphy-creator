@@ -191,7 +191,7 @@ export default function TutorialsPage() {
                   <Link href="/fonts">Font Gallery</Link>
                 </Button>
                 <Button asChild variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
-                  <Link href="/blog/history-of-arabic-calligraphy">History of Calligraphy</Link>
+                  <Link href="/blog/the-rich-history-of-arabic-calligraphy">History of Calligraphy</Link>
                 </Button>
               </div>
             </div>

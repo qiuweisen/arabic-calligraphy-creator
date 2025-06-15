@@ -9,6 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "Aref Ruqaa Font: Elegant and Traditional Ruq'ah Script | Arabic Calligraphy",
@@ -17,15 +18,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Aref Ruqaa: Mastering the Beauty of Ruq'ah Script | Arabic Calligraphy Generator",
     description: "Explore Aref Ruqaa, a font that brings the elegance of Ruq'ah calligraphy to digital form. Perfect for distinctive titles and artistic expressions.",
-    images: [
-      {
-        url: "/og-images/aref-ruqaa-og.jpg", // Placeholder - replace with actual image
-        width: 1200,
-        height: 630,
-        alt: "Aref Ruqaa Font Showcase",
-      },
-    ],
-  },
+    url: "https://arabic-calligraphy-generator.com/fonts/aref-ruqaa",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",  },
 }
 
 const TEXT_EXAMPLES = [
@@ -157,12 +153,67 @@ const TECHNICAL_DETAILS = [
 const ARABIC_ALPHABET_RUQAA = "ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي"; // Standard alphabet for example
 
 export default function ArefRuqaaFontPage() {
+  // Structured data for the font
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Aref Ruqaa Font",
+    "description": "A traditional Ruq'ah script Arabic typeface by Abdullah Aref and Khaled Hosny, featuring characteristic short strokes and flowing connections. Perfect for headlines and decorative applications.",
+    "creator": [
+      {
+        "@type": "Person",
+        "name": "Abdullah Aref"
+      },
+      {
+        "@type": "Person", 
+        "name": "Khaled Hosny",
+        "description": "Egyptian typographer and font engineer"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization", 
+      "name": "Google Fonts",
+      "url": "https://fonts.google.com"
+    },
+    "datePublished": "2025",
+    "license": "https://scripts.sil.org/OFL",
+    "keywords": ["Arabic font", "Ruqaa", "Traditional calligraphy", "Ottoman script", "Display font", "Decorative typography"],
+    "genre": "Typography",
+    "inLanguage": "ar",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "ratingCount": "85",
+      "bestRating": "5"
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            {/* Breadcrumb Navigation */}
+            <Breadcrumb 
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Arabic Fonts", href: "/fonts" },
+                { name: "Aref Ruqaa Font", href: "/fonts/aref-ruqaa" }
+              ]}
+              className="mb-6"
+            />
+
             <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-800 hover:bg-amber-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />

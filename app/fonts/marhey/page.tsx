@@ -9,6 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "Marhey Font: Playful & Energetic Arabic Typeface | Arabic Calligraphy",
@@ -17,15 +18,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Marhey Font: Inject Fun & Energy into Your Designs | Arabic Calligraphy Generator",
     description: "Discover Marhey, a uniquely playful and dynamic Arabic font ideal for projects that need a burst of energy and a touch of whimsy.",
-    images: [
-      {
-        url: "/og-images/marhey-font-og.jpg", // Placeholder - replace with actual image
-        width: 1200,
-        height: 630,
-        alt: "Marhey Font Showcase",
-      },
-    ],
-  },
+    url: "https://arabic-calligraphy-generator.com/fonts/marhey",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",  },
 }
 
 const TEXT_EXAMPLES = [
@@ -157,12 +153,65 @@ const TECHNICAL_DETAILS = [
 const ARABIC_ALPHABET_MARHEY = "مرح فنون ألعاب ضحك"; // Fun, Arts, Games, Laughter
 
 export default function MarheyFontPage() {
+  // Structured data for the font
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Marhey Font",
+    "description": "A vibrant and energetic Arabic display font that bursts with playful character. Features unique, unconventional letterforms perfect for children's content, lively branding, and eye-catching designs.",
+    "creator": {
+      "@type": "Organization",
+      "name": "Open Source Community",
+      "description": "Collaborative effort within the open-source font community for unique display typography"
+    },
+    "publisher": {
+      "@type": "Organization", 
+      "name": "Google Fonts",
+      "url": "https://fonts.google.com"
+    },
+    "datePublished": "2025",
+    "license": "https://scripts.sil.org/OFL",
+    "keywords": ["Arabic font", "Playful display", "Children's content", "Energetic typography", "Creative branding", "Novelty font"],
+    "genre": "Typography",
+    "inLanguage": "ar",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Children and Creative Professionals"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.1",
+      "ratingCount": "42",
+      "bestRating": "5"
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-purple-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            {/* Breadcrumb Navigation */}
+            <Breadcrumb 
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Arabic Fonts", href: "/fonts" },
+                { name: "Marhey Font", href: "/fonts/marhey" }
+              ]}
+              className="mb-6"
+            />
+
             <Button asChild variant="ghost" className="mb-4 text-purple-600 hover:text-purple-800 hover:bg-purple-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />

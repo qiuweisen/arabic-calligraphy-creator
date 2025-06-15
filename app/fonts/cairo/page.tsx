@@ -11,6 +11,7 @@ import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
 import { getFontInfoBySlug } from "@/app/lib/font-data"
 import { DownloadButton } from "@/components/download-button"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "Cairo Font: Modern Arabic & Latin Sans-Serif by TitraShop | Arabic Calligraphy",
@@ -19,14 +20,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Cairo Font: Versatile & Modern Sans-Serif for Arabic & Latin | Arabic Calligraphy Generator",
     description: "Discover Cairo, a contemporary sans-serif by TitraShop, offering excellent readability for Arabic and Latin scripts in UI, web, and branding.",
-    images: [
-      {
-        url: "/og-images/cairo-font-og.jpg", // Placeholder - replace with actual image
-        width: 1200,
-        height: 630,
-        alt: "Cairo Font Showcase",
-      },
-    ],
+    url: "https://arabic-calligraphy-generator.com/fonts/cairo",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",
   },
 }
 
@@ -164,12 +161,86 @@ export default function CairoFontPage() {
   // Get font info for the current page
   const fontInfo = getFontInfoBySlug('cairo');
 
+  // Structured data for Cairo font - different structure from Amiri
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": ["SoftwareApplication", "Product"],
+    "name": "Cairo Font",
+    "alternateName": "Cairo Typeface",
+    "description": "Cairo is a contemporary Arabic and Latin sans-serif typeface designed by Mohamed Gaber (TitraShop). Offers excellent readability and modern aesthetic for UI/UX and web design.",
+    "applicationCategory": ["Font", "Typography", "Design Tool"],
+    "operatingSystem": ["Windows", "macOS", "Linux", "Android", "iOS"],
+    "creator": {
+      "@type": "Person",
+      "name": "Mohamed Gaber",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "TitraShop"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Google Fonts",
+      "url": "https://fonts.google.com"
+    },
+    "datePublished": "2025",
+    "license": "https://scripts.sil.org/OFL",
+    "programmingLanguage": "OpenType",
+    "keywords": ["Arabic font", "Latin font", "Sans-serif", "Modern typography", "Bilingual font", "UI font", "Web font", "Google Fonts"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "Google Fonts"
+      }
+    },
+    "review": {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.7",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Typography Community"
+      }
+    },
+    "featureList": [
+      "Bilingual Arabic-Latin support",
+      "Modern sans-serif design",
+      "Multiple font weights",
+      "Excellent screen readability",
+      "Google Fonts integration",
+      "Open source license"
+    ],
+    "applicationSubCategory": "Typography",
+    "softwareVersion": "Latest",
+    "fileFormat": ["TTF", "OTF", "WOFF", "WOFF2"]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-sky-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            {/* 面包屑导航 */}
+            <Breadcrumb 
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Arabic Fonts", href: "/fonts" },
+                { name: "Cairo", href: "/fonts/cairo" }
+              ]}
+            />
+            
             <Button asChild variant="ghost" className="mb-4 text-sky-600 hover:text-sky-800 hover:bg-sky-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />

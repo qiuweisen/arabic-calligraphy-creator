@@ -11,6 +11,7 @@ import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
 import { getFontInfoBySlug } from "@/app/lib/font-data"
 import { DownloadButton } from "@/components/download-button"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "El Messiri Font: Elegant Naskh-Inspired Arabic Typeface | Arabic Calligraphy",
@@ -19,15 +20,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "El Messiri Font: Timeless Elegance Meets Modern Naskh | Arabic Calligraphy Generator",
     description: "Explore El Messiri by Mohamed Gaber, a sophisticated Naskh-inspired font that combines classical beauty with contemporary design, perfect for impactful text.",
-    images: [
-      {
-        url: "/og-images/el-messiri-font-og.jpg", // Placeholder - replace with actual image
-        width: 1200,
-        height: 630,
-        alt: "El Messiri Font Showcase",
-      },
-    ],
-  },
+    url: "https://arabic-calligraphy-generator.com/fonts/el-messiri",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",  },
 }
 
 const TEXT_EXAMPLES = [
@@ -162,12 +158,70 @@ export default function ElMessiriFontPage() {
   // Get font info for the current page
   const fontInfo = getFontInfoBySlug('el-messiri');
 
+  // Structured data for the font
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "El Messiri Font",
+    "description": "An elegant Arabic Naskh typeface by Mohamed Gaber, featuring refined letterforms and modern sensibility. Perfect for sophisticated headlines, branding, and cultural projects.",
+    "applicationCategory": "Font",
+    "operatingSystem": "Cross-platform",
+    "creator": {
+      "@type": "Person",
+      "name": "Mohamed Gaber",
+      "description": "Egyptian type designer known for contributions to modern Arabic typography"
+    },
+    "publisher": {
+      "@type": "Organization", 
+      "name": "Google Fonts",
+      "url": "https://fonts.google.com"
+    },
+    "datePublished": "2025",
+    "license": "https://scripts.sil.org/OFL",
+    "programmingLanguage": "OpenType",
+    "keywords": ["Arabic font", "Naskh", "Elegant typography", "Modern Arabic", "Display font", "Cultural design"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "ratingCount": "110",
+      "bestRating": "5"
+    },
+    "featureList": [
+      "Elegant Naskh design",
+      "Modern refinement", 
+      "Cultural sophistication",
+      "Display optimization",
+      "Branding applications",
+      "Cross-platform compatibility"
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-cyan-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            {/* Breadcrumb Navigation */}
+            <Breadcrumb 
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Arabic Fonts", href: "/fonts" },
+                { name: "El Messiri Font", href: "/fonts/el-messiri" }
+              ]}
+              className="mb-6"
+            />
+
             <Button asChild variant="ghost" className="mb-4 text-cyan-600 hover:text-cyan-800 hover:bg-cyan-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />

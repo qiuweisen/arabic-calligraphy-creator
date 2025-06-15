@@ -6,6 +6,9 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
+import { RelatedContent } from "@/components/related-content"
+import { getContentSpecificLinks } from "@/lib/content-links"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "The Quran and Arabic Calligraphy: A Sacred Connection | Islamic Art",
@@ -20,6 +23,16 @@ export default function QuranAndCalligraphyPage() {
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
+            {/* Breadcrumb Navigation */}
+            <Breadcrumb 
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Blog", href: "/blog" },
+                { name: "The Quran and Arabic Calligraphy", href: "/blog/quran-and-calligraphy" }
+              ]}
+              className="mb-6"
+            />
+
             <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-800 hover:bg-amber-50">
               <Link href="/blog">
                 <ArrowLeft className="mr-2 h-4 w-4" />
@@ -44,7 +57,7 @@ export default function QuranAndCalligraphyPage() {
               </div>
               
               <p className="lead text-lg text-amber-700">
-                The relationship between the Quran and Arabic calligraphy represents one of the most profound connections between text and art in human history. Born from the need to preserve divine revelation, Arabic calligraphy evolved into an exquisite art form that continues to express spiritual devotion through aesthetic beauty. This article explores this sacred relationship and its significance in Islamic culture.
+                The relationship between the Quran and Arabic calligraphy represents one of the most profound connections between text and art in human history. Born from the need to preserve divine revelation, <Link href="/blog/the-rich-history-of-arabic-calligraphy" className="text-amber-600 hover:text-amber-800 underline">Arabic calligraphy evolved</Link> into an exquisite art form that continues to express spiritual devotion through aesthetic beauty. This article explores this sacred relationship and its significance in Islamic culture.
               </p>
               
               <h2 id="divine-origins">Divine Origins: The Word Made Beautiful</h2>
@@ -105,7 +118,7 @@ export default function QuranAndCalligraphyPage() {
               
               <h3 id="development-of-six-scripts">Development of the Six Scripts</h3>
               <p>
-                As Islamic civilization expanded, calligraphers refined their art. By the 10th century, Ibn Muqla systematized calligraphy through the "Six Pens" (al-aqlam al-sitta), which established proportional rules for the six major scripts: Thuluth, Naskh, Muhaqqaq, Rayhani, Tawqi, and Riqa.
+                As Islamic civilization expanded, calligraphers refined their art. By the 10th century, <Link href="/blog/famous-arabic-calligraphers" className="text-amber-600 hover:text-amber-800 underline">Ibn Muqla</Link> systematized calligraphy through the "Six Pens" (al-aqlam al-sitta), which established proportional rules for <Link href="/blog/six-major-calligraphy-styles" className="text-amber-600 hover:text-amber-800 underline">the six major scripts</Link>: Thuluth, Naskh, Muhaqqaq, Rayhani, Tawqi, and Riqa.
               </p>
               <p>
                 For Quranic transcription, certain scripts became preferred:
@@ -339,6 +352,13 @@ export default function QuranAndCalligraphyPage() {
                 </Button>
               </div>
             </div>
+
+            {/* Related Content */}
+            <RelatedContent 
+              links={getContentSpecificLinks('blog', 'quran-and-calligraphy')}
+              title="Related Articles"
+              className="mt-12"
+            />
           </div>
         </div>
       </main>

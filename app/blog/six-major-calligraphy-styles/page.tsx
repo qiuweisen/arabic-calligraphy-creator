@@ -7,6 +7,9 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Image from "next/image"
+import { RelatedContent } from "@/components/related-content"
+import { getContentSpecificLinks } from "@/lib/content-links"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "Understanding the Six Major Arabic Calligraphy Styles | Arabic Calligraphy Guide",
@@ -21,6 +24,16 @@ export default function SixMajorCalligraphyStylesPage() {
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            {/* Breadcrumb Navigation */}
+            <Breadcrumb 
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Blog", href: "/blog" },
+                { name: "Six Major Arabic Calligraphy Styles", href: "/blog/six-major-calligraphy-styles" }
+              ]}
+              className="mb-6"
+            />
+
             <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-800 hover:bg-amber-50">
               <Link href="/blog">
                 <ArrowLeft className="mr-2 h-4 w-4" />
@@ -45,7 +58,7 @@ export default function SixMajorCalligraphyStylesPage() {
               </div>
               
               <p className="lead text-lg text-amber-700">
-                Arabic calligraphy stands as one of the most important art forms in Islamic culture, blending exceptional craftsmanship with profound spiritual meaning. Throughout its development, various calligraphic styles emerged, each with distinct characteristics and purposes. This article explores the six major Arabic calligraphy styles, helping you understand their features, historical context, and practical applications.
+                Arabic calligraphy stands as one of the most important art forms in Islamic culture, blending exceptional craftsmanship with profound spiritual meaning. Throughout <Link href="/blog/the-rich-history-of-arabic-calligraphy" className="text-amber-600 hover:text-amber-800 underline">its development</Link>, various calligraphic styles emerged, each with distinct characteristics and purposes. This article explores the six major Arabic calligraphy styles, helping you understand their features, historical context, and practical applications.
               </p>
               
               <Tabs defaultValue="naskh" className="w-full mt-8">
@@ -78,7 +91,7 @@ export default function SixMajorCalligraphyStylesPage() {
                         <div className="md:w-2/3">
                           <h4 className="font-bold text-amber-700 mb-2">Historical Background</h4>
                           <p className="mb-4">
-                            Naskh emerged in the 10th century, developed by the master calligrapher Ibn Muqla and further perfected by Ibn al-Bawwab. The term "Naskh" derives from the Arabic word for "copying," reflecting its original purpose of transcribing the Quran and important documents.
+                            Naskh emerged in the 10th century, developed by the master calligrapher <Link href="/blog/famous-arabic-calligraphers" className="text-amber-600 hover:text-amber-800 underline">Ibn Muqla and further perfected by Ibn al-Bawwab</Link>. The term "Naskh" derives from the Arabic word for "copying," reflecting its original purpose of transcribing the Quran and important documents.
                           </p>
                           
                           <h4 className="font-bold text-amber-700 mb-2">Style Characteristics</h4>
@@ -392,6 +405,13 @@ export default function SixMajorCalligraphyStylesPage() {
                 </Button>
               </div>
             </div>
+
+            {/* Related Content */}
+            <RelatedContent 
+              links={getContentSpecificLinks('blog', 'six-major-calligraphy-styles')}
+              title="Related Articles"
+              className="mt-12"
+            />
           </div>
         </div>
       </main>
