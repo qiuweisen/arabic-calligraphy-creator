@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { ChevronRight, Home } from "lucide-react"
+import { getFullUrl } from "@/lib/utils"
 
 interface BreadcrumbItem {
   name: string
@@ -20,7 +21,7 @@ export function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.name,
-      "item": `https://arabic-calligraphy-generator.com${item.href}`
+      "item": getFullUrl(item.href)
     }))
   }
 

@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
 import Image from "next/image"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "The Rich History of Arabic Calligraphy | Origins to Modern Era",
@@ -33,6 +34,16 @@ export default function HistoryOfArabicCalligraphyPage() {
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
+            {/* Breadcrumb Navigation */}
+            <Breadcrumb 
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Blog", href: "/blog" },
+                { name: "The Rich History of Arabic Calligraphy", href: "/blog/the-rich-history-of-arabic-calligraphy" }
+              ]}
+              className="mb-6"
+            />
+
             <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-800 hover:bg-amber-50">
               <Link href="/blog">
                 <ArrowLeft className="mr-2 h-4 w-4" />

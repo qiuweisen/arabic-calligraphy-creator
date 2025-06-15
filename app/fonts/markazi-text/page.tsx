@@ -11,6 +11,7 @@ import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
 import { getFontInfoBySlug } from "@/app/lib/font-data"
 import { DownloadButton } from "@/components/download-button"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "Markazi Text Font: Optimized Naskh for Readability | Arabic Calligraphy",
@@ -219,6 +220,16 @@ export default function MarkaziTextFontPage() {
       <main className="min-h-screen bg-gradient-to-b from-emerald-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            {/* Breadcrumb Navigation */}
+            <Breadcrumb 
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Arabic Fonts", href: "/fonts" },
+                { name: "Markazi Text Font", href: "/fonts/markazi-text" }
+              ]}
+              className="mb-6"
+            />
+
             <Button asChild variant="ghost" className="mb-4 text-emerald-600 hover:text-emerald-800 hover:bg-emerald-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />

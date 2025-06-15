@@ -2,13 +2,14 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, Eye, Sparkles, Layers, Type, Palette, Megaphone, Bold } from "lucide-react"
+import { ArrowLeft, Eye, Sparkles, Layers, Type, Palette, Megaphone, Bold, Crown, Feather, PenTool } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "Jomhuria Font: Bold & Impactful Display Typeface | Arabic Calligraphy",

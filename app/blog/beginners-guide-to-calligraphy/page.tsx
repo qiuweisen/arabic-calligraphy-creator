@@ -6,6 +6,9 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
+import { RelatedContent } from "@/components/related-content"
+import { getContentSpecificLinks } from "@/lib/content-links"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "Beginner's Guide to Arabic Calligraphy | Start Your Calligraphy Journey",
