@@ -11,9 +11,20 @@ import { getContentSpecificLinks } from "@/lib/content-links"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "The Quran and Arabic Calligraphy: A Sacred Connection | Islamic Art",
-  description: "Explore the profound spiritual relationship between the Quran and Arabic calligraphy, how sacred text inspired an art form, and its evolution across Islamic history.",
-  keywords: "Quranic calligraphy, Islamic art, sacred calligraphy, mushaf design, Quran manuscripts, spiritual dimensions of calligraphy, calligraphy in mosques",
+  title: "Quran and Arabic Calligraphy Connection",
+  description: "Discover the sacred relationship between Quranic text and Arabic calligraphy, exploring how religious devotion shaped this beautiful art form.",
+  keywords: "quran and calligraphy, Arabic calligraphy, Islamic art, Arabic typography, calligraphy guide, Arabic script",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/blog/quran-and-calligraphy",
+  },
+  openGraph: {
+    title: "Quran and Arabic Calligraphy Connection",
+    description: "Discover the sacred relationship between Quranic text and Arabic calligraphy, exploring how religious devotion shaped this beautiful art form.",
+    url: "https://arabic-calligraphy-generator.com/blog/quran-and-calligraphy",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",
+  },
 }
 
 export default function QuranAndCalligraphyPage() {

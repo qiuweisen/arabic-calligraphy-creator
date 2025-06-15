@@ -14,16 +14,20 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Markazi Text Font: Optimized Naskh for Readability | Arabic Calligraphy",
-  description: "Discover Markazi Text, a Naskh-inspired Arabic typeface optimized for on-screen readability. Ideal for long texts, digital publications, and academic content.",
-  keywords: "Markazi Text font, Naskh Arabic font, readable Arabic font, Arabic text font, screen optimized Arabic, digital Arabic typography, Borna Izadpanah, Arabic calligraphy",
+  title: "Markazi Text: Elegant Arabic Text Font",
+  description: "Explore Markazi Text, an elegant Arabic font optimized for body text with excellent readability and sophisticated letterform design.",
+  keywords: "markazi text font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/fonts/markazi-text",
+  },
   openGraph: {
-    title: "Markazi Text: Classic Naskh Meets Modern Readability | Arabic Calligraphy Generator",
-    description: "Explore Markazi Text by Borna Izadpanah, a Naskh-based font designed for superior readability in extended Arabic text, perfect for digital and print.",
+    title: "Markazi Text: Elegant Arabic Text Font",
+    description: "Explore Markazi Text, an elegant Arabic font optimized for body text with excellent readability and sophisticated letterform design.",
     url: "https://arabic-calligraphy-generator.com/fonts/markazi-text",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
-    locale: "en_US",  },
+    locale: "en_US",
+  },
 }
 
 const TEXT_EXAMPLES = [

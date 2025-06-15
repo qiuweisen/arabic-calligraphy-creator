@@ -12,16 +12,20 @@ import { getContentSpecificLinks } from "@/lib/content-links"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Mirza Font: Elegant Nastaliq Script for Persian & Urdu | Arabic Calligraphy",
-  description: "Explore the Mirza font, a beautiful Arabic typeface in the Nastaliq style, ideal for Persian, Urdu, and other languages. Known for its flowing elegance and traditional calligraphic feel.",
-  keywords: "Mirza font, Nastaliq font, Persian font, Urdu font, Arabic calligraphy, Islamic calligraphy, Arabic typeface, traditional Arabic font, Iranian fonts, South Asian fonts",
+  title: "Mirza Font: Elegant Arabic Display Typography",
+  description: "Explore Mirza, an elegant Arabic display font with calligraphic influences, perfect for titles, headers, and decorative Arabic text applications.",
+  keywords: "mirza font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/fonts/mirza",
+  },
   openGraph: {
-    title: "Mirza Font: Classic Nastaliq Elegance for Persian & Urdu | Arabic Calligraphy Generator",
-    description: "Discover Mirza, a font that captures the beauty of Nastaliq calligraphy. Perfect for literary works, poetry, and designs requiring an authentic Perso-Arabic aesthetic.",
+    title: "Mirza Font: Elegant Arabic Display Typography",
+    description: "Explore Mirza, an elegant Arabic display font with calligraphic influences, perfect for titles, headers, and decorative Arabic text applications.",
     url: "https://arabic-calligraphy-generator.com/fonts/mirza",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
-    locale: "en_US",  },
+    locale: "en_US",
+  },
 }
 
 const TEXT_EXAMPLES = [

@@ -10,20 +10,19 @@ import Image from "next/image"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "The Rich History of Arabic Calligraphy | Origins to Modern Era",
-  description: "Explore the origins and evolution of Arabic calligraphy from the 7th century to modern times. Discover how this sacred art form has shaped Islamic culture, architecture, and artistic expression through the centuries.",
-  keywords: "Arabic calligraphy history, Islamic calligraphy, Quranic script, calligraphic art, Arabic culture, Islamic art history, Kufic script, Naskh, Thuluth, Ottoman calligraphy",
+  title: "Rich History of Arabic Calligraphy",
+  description: "Explore the fascinating evolution of Arabic calligraphy from ancient scripts to modern typography, tracing its cultural significance and artistic development.",
+  keywords: "the rich history of arabic calligraphy, Arabic calligraphy, Islamic art, Arabic typography, calligraphy guide, Arabic script",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/blog/the-rich-history-of-arabic-calligraphy",
   },
   openGraph: {
-    title: "The Rich History of Arabic Calligraphy",
-    description: "Explore the origins and evolution of Arabic calligraphy from the 7th century to modern times",
+    title: "Rich History of Arabic Calligraphy",
+    description: "Explore the fascinating evolution of Arabic calligraphy from ancient scripts to modern typography, tracing its cultural significance and artistic development.",
     url: "https://arabic-calligraphy-generator.com/blog/the-rich-history-of-arabic-calligraphy",
     siteName: "Arabic Calligraphy Generator",
-    locale: "en_US",
     type: "article",
-    publishedTime: "2023-05-15T00:00:00Z",
+    locale: "en_US",
   },
 }
 

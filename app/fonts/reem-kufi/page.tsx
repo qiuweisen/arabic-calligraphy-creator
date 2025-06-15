@@ -14,16 +14,20 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Reem Kufi Font: Geometric Precision in Modern Arabic Kufi | Arabic Calligraphy",
-  description: "Explore Reem Kufi, a contemporary Arabic Kufi typeface by Khaled Hosny, celebrated for its sharp geometric forms and modern appeal. Ideal for headlines, logos, and impactful branding.",
-  keywords: "Reem Kufi font, modern Kufi, Khaled Hosny, geometric Arabic font, Arabic branding font, Kufi logo font, contemporary Arabic design, Arabic display typeface, Arabic typography",
+  title: "Reem Kufi: Geometric Arabic Display Font",
+  description: "Discover Reem Kufi, a modern geometric Arabic font inspired by traditional Kufi calligraphy, perfect for headlines and display typography.",
+  keywords: "reem kufi font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/fonts/reem-kufi",
+  },
   openGraph: {
-    title: "Reem Kufi: Sharp, Modern, Geometric Arabic Typography",
-    description: "Discover the striking Reem Kufi font. Its geometric precision and modern Kufi style make it perfect for bold statements in design and branding.",
+    title: "Reem Kufi: Geometric Arabic Display Font",
+    description: "Discover Reem Kufi, a modern geometric Arabic font inspired by traditional Kufi calligraphy, perfect for headlines and display typography.",
     url: "https://arabic-calligraphy-generator.com/fonts/reem-kufi",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
-    locale: "en_US",  },
+    locale: "en_US",
+  },
 }
 
 const TEXT_EXAMPLES = [

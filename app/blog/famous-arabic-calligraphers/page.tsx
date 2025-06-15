@@ -12,9 +12,20 @@ import { getContentSpecificLinks } from "@/lib/content-links"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "10 Famous Arabic Calligraphers You Should Know | Masters of the Art",
-  description: "Discover the lives and works of the most influential Arabic calligraphers throughout history, from classical masters to contemporary innovators.",
-  keywords: "famous Arabic calligraphers, Islamic calligraphy masters, Ibn Muqla, Yaqut al-Musta'simi, Hafiz Osman, contemporary Arabic calligraphers",
+  title: "Famous Arabic Calligraphers Throughout History",
+  description: "Discover the masters of Arabic calligraphy who shaped the art form, from Ibn Muqla and Ibn al-Bawwab to contemporary artists and their contributions.",
+  keywords: "famous arabic calligraphers, Arabic calligraphy, Islamic art, Arabic typography, calligraphy guide, Arabic script",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/blog/famous-arabic-calligraphers",
+  },
+  openGraph: {
+    title: "Famous Arabic Calligraphers Throughout History",
+    description: "Discover the masters of Arabic calligraphy who shaped the art form, from Ibn Muqla and Ibn al-Bawwab to contemporary artists and their contributions.",
+    url: "https://arabic-calligraphy-generator.com/blog/famous-arabic-calligraphers",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",
+  },
 }
 
 export default function FamousArabicCalligraphersPage() {

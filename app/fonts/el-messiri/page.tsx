@@ -14,16 +14,20 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "El Messiri Font: Elegant Naskh-Inspired Arabic Typeface | Arabic Calligraphy",
-  description: "Discover El Messiri, an elegant Arabic typeface inspired by Naskh calligraphy with modern touches. Ideal for headlines, branding, and cultural projects.",
-  keywords: "El Messiri font, Naskh Arabic font, elegant Arabic font, modern Naskh, Arabic display font, Arabic headline font, Mohamed Gaber, Arabic calligraphy",
+  title: "El Messiri Font: Contemporary Arabic Typography",
+  description: "Explore El Messiri, a contemporary Arabic font balancing traditional calligraphic elements with modern design principles for versatile applications.",
+  keywords: "el messiri font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/fonts/el-messiri",
+  },
   openGraph: {
-    title: "El Messiri Font: Timeless Elegance Meets Modern Naskh | Arabic Calligraphy Generator",
-    description: "Explore El Messiri by Mohamed Gaber, a sophisticated Naskh-inspired font that combines classical beauty with contemporary design, perfect for impactful text.",
+    title: "El Messiri Font: Contemporary Arabic Typography",
+    description: "Explore El Messiri, a contemporary Arabic font balancing traditional calligraphic elements with modern design principles for versatile applications.",
     url: "https://arabic-calligraphy-generator.com/fonts/el-messiri",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
-    locale: "en_US",  },
+    locale: "en_US",
+  },
 }
 
 const TEXT_EXAMPLES = [

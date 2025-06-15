@@ -14,16 +14,20 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Tajawal Font: Geometric Arabic & Latin Sans-Serif | Arabic Calligraphy",
-  description: "Discover Tajawal, a modern geometric Arabic and Latin sans-serif typeface. Known for its clarity and contemporary feel, perfect for UI, web, and branding.",
-  keywords: "Tajawal font, geometric Arabic font, modern Arabic font, bilingual font, Arabic UI font, sans-serif Arabic, Arabic web font, contemporary Arabic typeface, Latin Arabic font pairing",
+  title: "Tajawal Font: Geometric Arabic Sans-Serif",
+  description: "Discover Tajawal, a geometric Arabic sans-serif font perfect for modern bilingual designs, user interfaces, and contemporary Arabic typography.",
+  keywords: "tajawal font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/fonts/tajawal",
+  },
   openGraph: {
-    title: "Tajawal Font: Clean Geometric Lines for Arabic & Latin | Arabic Calligraphy Generator",
-    description: "Explore Tajawal, a versatile and legible geometric sans-serif for Arabic and Latin scripts, ideal for modern digital and print applications.",
+    title: "Tajawal Font: Geometric Arabic Sans-Serif",
+    description: "Discover Tajawal, a geometric Arabic sans-serif font perfect for modern bilingual designs, user interfaces, and contemporary Arabic typography.",
     url: "https://arabic-calligraphy-generator.com/fonts/tajawal",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
-    locale: "en_US",  },
+    locale: "en_US",
+  },
 }
 
 const TEXT_EXAMPLES = [

@@ -11,9 +11,20 @@ import { getContentSpecificLinks } from "@/lib/content-links"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Modern Arabic Typography in Digital Design | Arabic Design Evolution",
-  description: "Explore how traditional Arabic calligraphy influences contemporary digital typography and design. Learn about challenges, innovations, and best practices in Arabic UI/UX design.",
-  keywords: "Arabic typography, digital Arabic design, Arabic fonts, Arabic UI/UX, Arabic web design, Arabic mobile apps, bilingual design, Arabic branding",
+  title: "Modern Arabic Typography in Digital Age",
+  description: "Explore how Arabic typography has evolved in the digital era, from traditional calligraphy to contemporary font design and web typography.",
+  keywords: "modern arabic typography, Arabic calligraphy, Islamic art, Arabic typography, calligraphy guide, Arabic script",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/blog/modern-arabic-typography",
+  },
+  openGraph: {
+    title: "Modern Arabic Typography in Digital Age",
+    description: "Explore how Arabic typography has evolved in the digital era, from traditional calligraphy to contemporary font design and web typography.",
+    url: "https://arabic-calligraphy-generator.com/blog/modern-arabic-typography",
+    siteName: "Arabic Calligraphy Generator",
+    type: "article",
+    locale: "en_US",
+  },
 }
 
 export default function ModernArabicTypographyPage() {

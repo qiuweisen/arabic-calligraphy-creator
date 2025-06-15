@@ -14,16 +14,20 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Lateef Font: Graceful Cursive Script for Urdu & Arabic | Arabic Calligraphy",
-  description: "Discover the Lateef font, a beautiful and flowing cursive Arabic script primarily designed for Urdu and other South Asian languages. Ideal for literature, poetry, and elegant designs.",
-  keywords: "Lateef font, Urdu font, cursive Arabic script, SIL International, Arabic calligraphy, Nastaliq style font, South Asian languages font, elegant Arabic typeface, literary Arabic font",
+  title: "Lateef Font: Extended Arabic Script Typography",
+  description: "Discover Lateef by SIL International, an Arabic font with extensive character support for multilingual projects and minority language documentation.",
+  keywords: "lateef font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/fonts/lateef",
+  },
   openGraph: {
-    title: "Lateef Font: Flowing Elegance for Urdu and Arabic Texts | Arabic Calligraphy Generator",
-    description: "Explore Lateef, a SIL International font renowned for its graceful cursive style, perfect for Urdu, Sindhi, and other Arabic script languages demanding a touch of calligraphic beauty.",
+    title: "Lateef Font: Extended Arabic Script Typography",
+    description: "Discover Lateef by SIL International, an Arabic font with extensive character support for multilingual projects and minority language documentation.",
     url: "https://arabic-calligraphy-generator.com/fonts/lateef",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
-    locale: "en_US",  },
+    locale: "en_US",
+  },
 }
 
 const TEXT_EXAMPLES = [
