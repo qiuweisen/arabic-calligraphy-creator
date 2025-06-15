@@ -58,7 +58,7 @@ export default function SixMajorCalligraphyStylesPage() {
               </div>
               
               <p className="lead text-lg text-amber-700">
-                Arabic calligraphy stands as one of the most important art forms in Islamic culture, blending exceptional craftsmanship with profound spiritual meaning. Throughout its development, various calligraphic styles emerged, each with distinct characteristics and purposes. This article explores the six major Arabic calligraphy styles, helping you understand their features, historical context, and practical applications.
+                Arabic calligraphy stands as one of the most important art forms in Islamic culture, blending exceptional craftsmanship with profound spiritual meaning. Throughout <Link href="/blog/the-rich-history-of-arabic-calligraphy" className="text-amber-600 hover:text-amber-800 underline">its development</Link>, various calligraphic styles emerged, each with distinct characteristics and purposes. This article explores the six major Arabic calligraphy styles, helping you understand their features, historical context, and practical applications.
               </p>
               
               <Tabs defaultValue="naskh" className="w-full mt-8">
@@ -91,7 +91,7 @@ export default function SixMajorCalligraphyStylesPage() {
                         <div className="md:w-2/3">
                           <h4 className="font-bold text-amber-700 mb-2">Historical Background</h4>
                           <p className="mb-4">
-                            Naskh emerged in the 10th century, developed by the master calligrapher Ibn Muqla and further perfected by Ibn al-Bawwab. The term "Naskh" derives from the Arabic word for "copying," reflecting its original purpose of transcribing the Quran and important documents.
+                            Naskh emerged in the 10th century, developed by the master calligrapher <Link href="/blog/famous-arabic-calligraphers" className="text-amber-600 hover:text-amber-800 underline">Ibn Muqla and further perfected by Ibn al-Bawwab</Link>. The term "Naskh" derives from the Arabic word for "copying," reflecting its original purpose of transcribing the Quran and important documents.
                           </p>
                           
                           <h4 className="font-bold text-amber-700 mb-2">Style Characteristics</h4>
@@ -405,6 +405,13 @@ export default function SixMajorCalligraphyStylesPage() {
                 </Button>
               </div>
             </div>
+
+            {/* Related Content */}
+            <RelatedContent 
+              links={getContentSpecificLinks('blog', 'six-major-calligraphy-styles')}
+              title="Related Articles"
+              className="mt-12"
+            />
           </div>
         </div>
       </main>

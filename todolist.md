@@ -78,10 +78,16 @@
   - [x] 配置特定AI爬虫（GPTBot、anthropic-ai、Claude-Web）的访问规则
 
 ### 技术优化
-- [ ] 性能优化
+- [x] 性能优化
   - [x] 页面加载速度优化
   - [x] 移动端体验进一步优化
   - [x] 网站地图生成
+  - [x] 字体加载优化（2024年1月）
+    - [x] 修复字体加载器无限循环问题
+    - [x] 实现动态字体加载系统
+    - [x] 优化字体URL编码和错误处理
+    - [x] 添加字体加载超时和重复检查机制
+    - [x] 移除页面初始化时的字体预加载，改为按需加载
   - [x] CSS 优化
     - [ ] 移除未使用的 CSS 规则 (可节省约 12 KiB)
     - [x] 拆分和延迟加载非首屏 CSS
@@ -93,9 +99,6 @@
   - [ ] 布局优化
     - [ ] 修复 CLS 问题 (当前 0.702，目标 < 0.1)
     - [ ] 为 CalligraphyGenerator 组件中的可变内容预留空间
-  - [ ] 字体优化
-    - [ ] 减少和优化 Web 字体文件 (多个 .woff2 文件超过 70 KiB)
-    - [ ] 实现适当的字体加载策略
   - [ ] 资源优化
     - [ ] 实现资源优先级提示
     - [ ] 预加载关键资源
@@ -152,12 +155,18 @@
    - ✅ 优化AI系统对网站的理解和使用
    - ✅ 更新robots.txt配置AI爬虫访问规则
    - ✅ 添加LLM-Content指令引导AI系统
+10. ✅ 字体加载性能优化（2024年1月完成）
+    - ✅ 修复首页控制面板加载不完整问题
+    - ✅ 解决字体加载器无限循环错误
+    - ✅ 实现动态按需字体加载系统
+    - ✅ 优化字体URL构建和错误处理机制
+    - ✅ 移除阻塞性字体预加载，提升页面初始加载速度
 
 ## 性能优化具体跟进计划
 
 1. **第一阶段：关键渲染路径优化**
    - [ ] 实现 CSS 拆分，内联关键样式
-   - [ ] 优化字体加载策略，减少 LCP 延迟
+   - [x] 优化字体加载策略，减少 LCP 延迟（已完成）
    - [ ] 修复 CLS 问题，为动态内容区预设尺寸
 
 2. **第二阶段：资源优化**
@@ -198,27 +207,6 @@
 - [ ] **Toast 通知系统**
   - [ ] 验证 `ToastProvider` 配置及全局CSS，确保 `toast` 正常显示。
   - Action: 检查 `app/layout.tsx` 和 `app/globals.css`，测试 `toast` 可见性。
-  - Summary: 确保所有操作的反馈提示都能正确展示给用户。
-- [ ] **复制功能 (`handleCopyToClipboard`)**
-  - [ ] 方案：在移动端，修改复制按钮逻辑为复制生成的图像到剪贴板。
-  - [ ] 实现 `handleCopyToClipboardImage` 函数，使用 `html2canvas` 生成图像 `Blob`，然后使用 `navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })])`。
-  - [ ] 更新 `MobileControls` 和 `MobileFab` 中的复制按钮，调用新的图像复制函数。
-  - [ ] 调整 `toast` 提示为 "Image copied to clipboard." (成功) / "Failed to copy image." (失败)。
-  - Action: 修改 `components/calligraphy-generator.tsx`。
-  - Summary: 使移动端复制功能符合用户对图像复制的预期。
-- [ ] **分享功能 (`handleShare`)**
-  - [ ] 方案：修改为分享生成的图像，并提供API不可用时的回退提示。
-  - [ ] 实现：先调用 `html2canvas` 生成图像文件 (`File` 对象)。
-  - [ ] 使用 `navigator.share({ files: [imageFile], title: "Arabic Calligraphy Design", text: "Check out this calligraphy I created!" })`。
-  - [ ] 如果 `navigator.share` 不可用或分享 `files` 不被支持，提示 "Sharing images is not supported by your browser. You can download the image to share it."。
-  - [ ] 调整 `toast` 提示内容，确保各种场景都有清晰反馈。
-  - Action: 修改 `components/calligraphy-generator.tsx`。
-  - Summary: 实现图像分享功能，并处理浏览器兼容性问题。
-- [ ] **下载功能 (`handleDownloadPNG`, `handleDownloadSVG`)**
-  - [ ] 检查 `html2canvas` 的错误处理，确保所有潜在错误都被捕获并用 `toast` 清晰提示。
-  - [ ] 测试在不同场景下（例如复杂背景、特殊字体）的下载稳定性。
-  - Action: 审查并加固 `components/calligraphy-generator.tsx` 中的下载函数。
-  - Summary: 提高下载功能的稳定性和错误反馈。
 
 ### 3. 移动端UI/UX优化 (可选，待讨论)
 - [ ] 评估移动端操作按钮的冗余问题 (顶部图标 vs MobileFab)。

@@ -10,13 +10,15 @@ interface RelatedContentProps {
   links: ContentLink[]
   maxItems?: number
   showIcons?: boolean
+  className?: string
 }
 
 export function RelatedContent({ 
   title = "Related Content", 
   links, 
   maxItems = 3,
-  showIcons = true 
+  showIcons = true,
+  className = ""
 }: RelatedContentProps) {
   // 如果maxItems设置了数值，则只显示指定数量的链接
   const displayLinks = maxItems ? links.slice(0, maxItems) : links
@@ -54,7 +56,7 @@ export function RelatedContent({
   }
 
   return (
-    <div className="mt-8 mb-10">
+    <div className={`mt-8 mb-10 ${className}`}>
       <h3 className="text-xl font-bold text-amber-800 mb-4">{title}</h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {displayLinks.map((link, index) => (

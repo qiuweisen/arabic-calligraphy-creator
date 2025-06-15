@@ -1,6 +1,6 @@
 import type React from "react"
 import "@/app/globals.css"
-import { Inter, Noto_Naskh_Arabic, Amiri, Aref_Ruqaa, Cairo, Harmattan, Jomhuria, Lateef, Mada, Mirza, Rakkas, Reem_Kufi, Scheherazade_New, Tajawal } from "next/font/google"
+import { Inter, Amiri } from "next/font/google"
 import Script from "next/script"
 import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -9,25 +9,9 @@ import { CssLoader } from "@/components/css-loader"
 import type { Metadata } from 'next'
 import { Toaster as SonnerToaster } from 'sonner'
 
-// LCP 元素和UI使用的字体，必须预加载
+// 只预加载必要的字体以提升首次加载性能
 const inter = Inter({ subsets: ["latin"], display: 'swap', variable: "--font-inter", preload: true })
-
-// Featured Designs 和常用字体，启用预加载以提升性能
 const amiri = Amiri({ subsets: ["latin"], display: 'swap', weight: ["400", "700"], variable: "--font-amiri", preload: true })
-const scheherazadeNew = Scheherazade_New({ subsets: ["latin"], display: 'swap', weight: ["400", "700"], variable: "--font-scheherazade-new", preload: true })
-const lateef = Lateef({ subsets: ["latin"], display: 'swap', weight: ["400", "700"], variable: "--font-lateef", preload: true })
-
-// 其他阿拉伯字体，也使用latin子集，但不预加载
-const notoNaskhArabic = Noto_Naskh_Arabic({ subsets: ["latin"], display: 'swap', weight: ["400", "700"], variable: "--font-noto-naskh-arabic", preload: false })
-const arefRuqaa = Aref_Ruqaa({ subsets: ["latin"], display: 'swap', weight: ["400"], variable: "--font-aref-ruqaa", preload: false })
-const cairo = Cairo({ subsets: ["latin"], display: 'swap', weight: ["400"], variable: "--font-cairo", preload: false })
-const harmattan = Harmattan({ subsets: ["latin"], display: 'swap', weight: ["400"], variable: "--font-harmattan", preload: false })
-const jomhuria = Jomhuria({ subsets: ["latin"], display: 'swap', weight: ["400"], variable: "--font-jomhuria", preload: false })
-const mada = Mada({ subsets: ["latin"], display: 'swap', weight: ["400"], variable: "--font-mada", preload: false })
-const mirza = Mirza({ subsets: ["latin"], display: 'swap', weight: ["400"], variable: "--font-mirza", preload: false })
-const rakkas = Rakkas({ subsets: ["latin"], display: 'swap', weight: ["400"], variable: "--font-rakkas", preload: false })
-const reemKufi = Reem_Kufi({ subsets: ["latin"], display: 'swap', weight: ["400"], variable: "--font-reem-kufi", preload: false })
-const tajawal = Tajawal({ subsets: ["latin"], display: 'swap', weight: ["400"], variable: "--font-tajawal", preload: false })
 
 
 export const metadata: Metadata = {
@@ -47,13 +31,13 @@ export default function RootLayout({
   const isProduction = process.env.NODE_ENV === 'production'
 
   return (
-    <html lang="en" dir="ltr" suppressHydrationWarning className={`${inter.variable} ${notoNaskhArabic.variable} ${amiri.variable} ${arefRuqaa.variable} ${cairo.variable} ${harmattan.variable} ${jomhuria.variable} ${lateef.variable} ${mada.variable} ${mirza.variable} ${rakkas.variable} ${reemKufi.variable} ${scheherazadeNew.variable} ${tajawal.variable}`}>
+    <html lang="en" dir="ltr" suppressHydrationWarning className={`${inter.variable} ${amiri.variable}`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
         <link rel="icon" href="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/favicon.ico" sizes="any" />
         {/* Google Fonts <link> tags removed as next/font handles this */}
       </head>
-      <body className={`${inter.className} ${notoNaskhArabic.className} font-sans`}>
+      <body className={`${inter.className} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="system">
           {children}
           <Toaster />

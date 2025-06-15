@@ -57,7 +57,7 @@ export default function BeginnersGuideToCalligraphyPage() {
               </div>
               
               <p className="lead text-lg text-amber-700">
-                Arabic calligraphy is a revered art form with centuries of tradition behind it. While mastering this art requires years of practice, everyone has to start somewhere. This guide will introduce you to the fundamentals of Arabic calligraphy, from gathering the right tools to understanding basic techniques and practical exercises for beginners.
+                Arabic calligraphy is a revered art form with <Link href="/blog/the-rich-history-of-arabic-calligraphy" className="text-amber-600 hover:text-amber-800 underline">centuries of tradition</Link> behind it. While mastering this art requires years of practice, everyone has to start somewhere. This guide will introduce you to the fundamentals of Arabic calligraphy, from gathering the right tools to understanding basic techniques and practical exercises for beginners.
               </p>
               
               <h2 id="understanding-the-basics">Understanding the Basics</h2>
@@ -114,7 +114,7 @@ export default function BeginnersGuideToCalligraphyPage() {
               
               <h2 id="choosing-a-style">Choosing a Style to Begin With</h2>
               <p>
-                With six major styles of Arabic calligraphy, beginners often wonder where to start. Here's our recommendation:
+                With <Link href="/blog/six-major-calligraphy-styles" className="text-amber-600 hover:text-amber-800 underline">six major styles of Arabic calligraphy</Link>, beginners often wonder where to start. Here's our recommendation:
               </p>
               <p>
                 <strong>Naskh</strong> is generally considered the best style for beginners due to its:
@@ -270,6 +270,13 @@ export default function BeginnersGuideToCalligraphyPage() {
                 </Button>
               </div>
             </div>
+
+            {/* Related Content */}
+            <RelatedContent 
+              links={getContentSpecificLinks('blog', 'beginners-guide-to-calligraphy')}
+              title="Related Articles"
+              className="mt-12"
+            />
           </div>
         </div>
       </main>

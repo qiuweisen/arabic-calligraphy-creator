@@ -58,7 +58,7 @@ export default function FamousArabicCalligraphersPage() {
               </div>
               
               <p className="lead text-lg text-amber-700">
-                For over a millennium, Arabic calligraphers have elevated writing to an exquisite art form, combining technical precision with spiritual devotion. This article highlights ten influential masters whose innovations and artistic achievements have shaped the tradition of Arabic calligraphy from its classical foundations to contemporary expressions.
+                For over a millennium, Arabic calligraphers have elevated writing to an exquisite art form, combining technical precision with spiritual devotion. This article highlights ten influential masters whose innovations and artistic achievements have shaped <Link href="/blog/the-rich-history-of-arabic-calligraphy" className="text-amber-600 hover:text-amber-800 underline">the tradition of Arabic calligraphy</Link> from its classical foundations to contemporary expressions.
               </p>
               
               <h2 id="classical-masters">Classical Masters (8th-14th Centuries)</h2>
@@ -91,7 +91,7 @@ export default function FamousArabicCalligraphersPage() {
                       <ul className="list-disc pl-5 mb-4">
                         <li>Developed the "Six Pens" system (al-aqlam al-sitta), establishing the first set of proportional rules for Arabic script</li>
                         <li>Created a revolutionary geometric system based on dots, circles, and alifs as measurement units</li>
-                        <li>Refined and systematized the four major scripts of his time: Thuluth, Naskh, Reyhan, and Muhaqqaq</li>
+                        <li>Refined and systematized <Link href="/blog/six-major-calligraphy-styles" className="text-amber-600 hover:text-amber-800 underline">the four major scripts</Link> of his time: Thuluth, Naskh, Reyhan, and Muhaqqaq</li>
                         <li>Established the principles that would influence all subsequent calligraphic development</li>
                       </ul>
                       
@@ -491,6 +491,13 @@ export default function FamousArabicCalligraphersPage() {
                 </Button>
               </div>
             </div>
+
+            {/* Related Content */}
+            <RelatedContent 
+              links={getContentSpecificLinks('blog', 'famous-arabic-calligraphers')}
+              title="Related Articles"
+              className="mt-12"
+            />
           </div>
         </div>
       </main>
