@@ -189,12 +189,6 @@ export default function LateefFontPage() {
       "price": "0",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.4",
-      "ratingCount": "75",
-      "bestRating": "5"
     }
   };
 

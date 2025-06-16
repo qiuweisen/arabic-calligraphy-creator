@@ -184,12 +184,6 @@ export default function JomhuriaFontPage() {
       "price": "0",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.2",
-      "ratingCount": "55",
-      "bestRating": "5"
     }
   };
 

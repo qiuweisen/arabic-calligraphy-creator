@@ -102,12 +102,6 @@ export default function RakkasFontPage() {
       "price": "0",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.3",
-      "ratingCount": "67",
-      "bestRating": "5"
     }
   };
 

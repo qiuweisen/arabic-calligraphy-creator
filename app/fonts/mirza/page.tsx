@@ -189,12 +189,6 @@ export default function MirzaFontPage() {
       "price": "0",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.4",
-      "ratingCount": "88",
-      "bestRating": "5"
     }
   };
 

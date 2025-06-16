@@ -189,12 +189,6 @@ export default function ArefRuqaaFontPage() {
       "price": "0",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.5",
-      "ratingCount": "85",
-      "bestRating": "5"
     }
   };
 
