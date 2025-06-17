@@ -310,6 +310,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
   useEffect(() => {
     if (initialFont && FONT_NAME_MAP[initialFont]) {
       const fontValue = FONT_NAME_MAP[initialFont]
+      
       if (fontValue !== font) {
         setFont(fontValue)
         // Load the font asynchronously

@@ -442,7 +442,7 @@ export function getFontsByCategory(category: keyof typeof FONT_CATEGORIES): Cont
   return FONT_CATEGORIES[category]?.fonts || []
 }
 
-// 获取热门/推荐字体 - 用于主页展示
+// 获取热门/推荐字体 - 用于主页展示（13个字体，符合"13+字体"描述）
 export function getFeaturedFonts(): ContentLink[] {
   return [
     FONT_LINKS.amiri,
@@ -450,7 +450,14 @@ export function getFeaturedFonts(): ContentLink[] {
     FONT_LINKS.scheherazade,
     FONT_LINKS.reemKufi,
     FONT_LINKS.arefRuqaa,
-    FONT_LINKS.tajawal
+    FONT_LINKS.tajawal,
+    FONT_LINKS.notoNaskhArabic,
+    FONT_LINKS.lateef,
+    FONT_LINKS.harmattan,
+    FONT_LINKS.mada,
+    FONT_LINKS.elMessiri,
+    FONT_LINKS.lemonada,
+    FONT_LINKS.markaziText
   ]
 }
 

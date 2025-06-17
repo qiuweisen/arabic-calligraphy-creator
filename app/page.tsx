@@ -127,8 +127,14 @@ function loadFontDetails(fontSlug: string, panelElement: Element) {
 
 export default function Home() {
   const [selectedFont, setSelectedFont] = useState<string | undefined>(undefined)
-  const [isAllExpanded, setIsAllExpanded] = useState(false)
-  const [expandedFontIds, setExpandedFontIds] = useState<Set<string>>(new Set())
+  
+  // 分离左右两边的状态管理
+  const [featuredIsAllExpanded, setFeaturedIsAllExpanded] = useState(false)
+  const [featuredExpandedIds, setFeaturedExpandedIds] = useState<Set<string>>(new Set())
+  
+  const [browseExpandedCategories, setBrowseExpandedCategories] = useState<Set<string>>(new Set())
+  const [browseExpandedFonts, setBrowseExpandedFonts] = useState<Set<string>>(new Set())
+  const [showAllFeaturedFonts, setShowAllFeaturedFonts] = useState(false)
 
   // Handle URL parameter for font selection
   useEffect(() => {
@@ -170,7 +176,6 @@ export default function Home() {
     if (!fontSlug) return
     
     const fontName = FONT_SLUG_TO_NAME[fontSlug]
-    console.log('Font switching:', { fontSlug, fontName, mapping: FONT_SLUG_TO_NAME })
     
     if (fontName) {
       setSelectedFont(fontName)
@@ -185,8 +190,6 @@ export default function Home() {
       const newUrl = new URL(window.location.href)
       newUrl.searchParams.set('font', fontName)
       window.history.replaceState({}, '', newUrl.toString())
-    } else {
-      console.error('Font name not found for slug:', fontSlug)
     }
   }
 
@@ -199,37 +202,38 @@ export default function Home() {
     window.history.replaceState({}, '', newUrl.toString())
   }
 
-  // Toggle font details panel
-  const toggleFontDetails = (fontSlug: string | undefined) => {
+  // Featured字体详情切换 - 只控制Featured部分
+  const toggleFeaturedFontDetails = (fontSlug: string | undefined) => {
     if (!fontSlug) return
     
-    // Check if this specific font is currently expanded
-    const isCurrentlyExpanded = expandedFontIds.has(fontSlug)
+    const isCurrentlyExpanded = featuredExpandedIds.has(fontSlug)
     
     if (isCurrentlyExpanded) {
-      // Collapse this font
-      setExpandedFontIds(prev => {
+      // 收缩这个字体
+      setFeaturedExpandedIds(prev => {
         const newSet = new Set(prev)
         newSet.delete(fontSlug)
         return newSet
       })
       
-      const panelElement = document.getElementById(`${fontSlug}-details`) || 
-                          document.getElementById(`${fontSlug}-browse-details`)
+      const panelElement = document.getElementById(`featured-${fontSlug}-details`)
       if (panelElement) {
         panelElement.classList.add('hidden')
       }
       
-      // If user manually collapses any font, exit "all expanded" mode
-      if (isAllExpanded) {
-        setIsAllExpanded(false)
+      // 如果是最后一个展开的字体，退出"全部展开"模式
+      if (featuredIsAllExpanded && featuredExpandedIds.size === 1) {
+        setFeaturedIsAllExpanded(false)
       }
     } else {
-      // Expand this font
-      setExpandedFontIds(prev => new Set(prev).add(fontSlug))
+      // 展开这个字体
+      setFeaturedExpandedIds(prev => {
+        const newSet = new Set(prev)
+        newSet.add(fontSlug)
+        return newSet
+      })
       
-      const panelElement = document.getElementById(`${fontSlug}-details`) || 
-                          document.getElementById(`${fontSlug}-browse-details`)
+      const panelElement = document.getElementById(`featured-${fontSlug}-details`)
       if (panelElement) {
         panelElement.classList.remove('hidden')
         loadFontDetails(fontSlug, panelElement)
@@ -237,59 +241,41 @@ export default function Home() {
     }
   }
 
-  // Toggle expand/collapse all font details
-  const handleExploreAllFonts = () => {
-    if (isAllExpanded) {
-      // Collapse all fonts
-      setIsAllExpanded(false)
-      setExpandedFontIds(new Set())
-      
-      // Hide all panels
-      document.querySelectorAll('.font-details-panel').forEach(panel => {
-        panel.classList.add('hidden')
+  // Browse字体详情切换 - 只控制Browse部分
+  const toggleBrowseFontDetails = (fontSlug: string | undefined) => {
+    if (!fontSlug) return
+    
+    const isCurrentlyExpanded = browseExpandedFonts.has(fontSlug)
+    
+    if (isCurrentlyExpanded) {
+      // 收缩这个字体
+      setBrowseExpandedFonts(prev => {
+        const newSet = new Set(prev)
+        newSet.delete(fontSlug)
+        return newSet
       })
+      
+      const panelElement = document.getElementById(`browse-${fontSlug}-details`)
+      if (panelElement) {
+        panelElement.classList.add('hidden')
+      }
     } else {
-      // Expand all fonts
-      setIsAllExpanded(true)
-      
-      // Collect all font slugs
-      const allFontSlugs: string[] = []
-      
-      // Featured fonts
-      const featuredFonts = getFeaturedFonts().slice(0, 4)
-      featuredFonts.forEach(font => {
-        const fontSlug = font.href.split('/').pop()
-        if (fontSlug) {
-          allFontSlugs.push(fontSlug)
-        }
+      // 展开这个字体
+      setBrowseExpandedFonts(prev => {
+        const newSet = new Set(prev)
+        newSet.add(fontSlug)
+        return newSet
       })
       
-      // Browse by Style fonts
-      Object.values(FONT_CATEGORIES).forEach(category => {
-        category.fonts.forEach(font => {
-          const fontSlug = font.href.split('/').pop()
-          if (fontSlug) {
-            allFontSlugs.push(fontSlug)
-          }
-        })
-      })
-      
-      // Update state with all font IDs
-      setExpandedFontIds(new Set(allFontSlugs))
-      
-      // Show and load details for all fonts
-      allFontSlugs.forEach(fontSlug => {
-        setTimeout(() => {
-          const panelElement = document.getElementById(`${fontSlug}-details`) || 
-                              document.getElementById(`${fontSlug}-browse-details`)
-          if (panelElement) {
-            panelElement.classList.remove('hidden')
-            loadFontDetails(fontSlug, panelElement)
-          }
-        }, 100)
-      })
+      const panelElement = document.getElementById(`browse-${fontSlug}-details`)
+      if (panelElement) {
+        panelElement.classList.remove('hidden')
+        loadFontDetails(fontSlug, panelElement)
+      }
     }
   }
+
+
 
   // 结构化数据 - SoftwareApplication Schema
   const softwareApplicationSchema = {
@@ -493,7 +479,7 @@ export default function Home() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-amber-800 mb-4">Featured Arabic Fonts</h3>
                   <div className="space-y-3">
-                    {getFeaturedFonts().slice(0, 4).map((font) => (
+                    {(showAllFeaturedFonts ? getFeaturedFonts() : getFeaturedFonts().slice(0, 5)).map((font) => (
                       <div 
                         key={font.href} 
                         id={font.href.split('/').pop()}
@@ -511,7 +497,7 @@ export default function Home() {
                           <button
                             onClick={(e) => {
                               e.stopPropagation();
-                              toggleFontDetails(font.href.split('/').pop());
+                              toggleFeaturedFontDetails(font.href.split('/').pop());
                             }}
                             className="flex items-center gap-1 px-2 py-1 text-xs text-amber-600 hover:text-amber-800 border border-amber-200 rounded hover:bg-amber-100 transition-colors"
                           >
@@ -522,11 +508,11 @@ export default function Home() {
                         
                         {/* Collapsible details panel */}
                         <div 
-                          id={`${font.href.split('/').pop()}-details`}
+                          id={`featured-${font.href.split('/').pop()}-details`}
                           className="hidden font-details-panel border-t border-amber-100 p-4 bg-amber-25"
                         >
                           <div className="text-sm text-amber-700">
-                            <p className="mb-2">Loading font details...</p>
+                            <p className="mb-2">Click to view comprehensive information about this typeface...</p>
                             {/* Font details will be populated here */}
                           </div>
                         </div>
@@ -537,9 +523,32 @@ export default function Home() {
                     <Button 
                       variant="outline" 
                       className="border-amber-600 text-amber-600 hover:bg-amber-50"
-                      onClick={handleExploreAllFonts}
+                      onClick={() => {
+                        const newShowAll = !showAllFeaturedFonts
+                        setShowAllFeaturedFonts(newShowAll)
+                        
+                        // 如果要收缩到5个字体，需要隐藏超出范围的字体详情面板
+                        if (!newShowAll) {
+                          const fontsToHide = getFeaturedFonts().slice(5)
+                          fontsToHide.forEach(font => {
+                            const fontSlug = font.href.split('/').pop()
+                            if (fontSlug) {
+                              const panelElement = document.getElementById(`featured-${fontSlug}-details`)
+                              if (panelElement) {
+                                panelElement.classList.add('hidden')
+                              }
+                              // 从展开状态中移除
+                              setFeaturedExpandedIds(prev => {
+                                const newSet = new Set(prev)
+                                newSet.delete(fontSlug)
+                                return newSet
+                              })
+                            }
+                          })
+                        }
+                      }}
                     >
-                      {isAllExpanded ? 'Collapse All Fonts' : 'Explore All Fonts'}
+                      {showAllFeaturedFonts ? 'Show Less Fonts' : 'Explore All Fonts'}
                     </Button>
                   </div>
                 </CardContent>
@@ -567,7 +576,7 @@ export default function Home() {
                                 <button
                                   onClick={(e) => {
                                     e.stopPropagation();
-                                    toggleFontDetails(font.href.split('/').pop());
+                                    toggleBrowseFontDetails(font.href.split('/').pop());
                                   }}
                                   className="text-xs px-1 py-1 text-amber-600 hover:text-amber-800 border border-amber-200 rounded hover:bg-amber-100 transition-colors"
                                   title="View Details"
@@ -583,11 +592,11 @@ export default function Home() {
                         {category.fonts.slice(0, 3).map((font) => (
                           <div 
                             key={`${font.href}-browse-details`}
-                            id={`${font.href.split('/').pop()}-browse-details`}
+                            id={`browse-${font.href.split('/').pop()}-details`}
                             className="hidden font-details-panel border-t border-amber-100 p-4 bg-amber-25"
                           >
                             <div className="text-sm text-amber-700">
-                              <p className="mb-2">Loading font details...</p>
+                              <p className="mb-2">Discover features and usage examples for this Arabic font...</p>
                               {/* Font details will be populated here */}
                             </div>
                           </div>
