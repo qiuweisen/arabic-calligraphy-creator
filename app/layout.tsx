@@ -13,14 +13,58 @@ import { Toaster as SonnerToaster } from 'sonner'
 const inter = Inter({ subsets: ["latin"], display: 'swap', variable: "--font-inter", preload: true })
 const amiri = Amiri({ subsets: ["latin"], display: 'swap', weight: ["400", "700"], variable: "--font-amiri", preload: true })
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://arabic-calligraphy-generator.com'
+const cdnBaseUrl = 'https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev'
 
 export const metadata: Metadata = {
-  title: "Arabic Calligraphy Generator | Online Arabic Art Creator",
-  description:
-    "Create beautiful Arabic calligraphy online. Customize fonts, styles, and colors. Download designs for social media, print, or web. Free and easy to use!",
-  keywords:
-    "Arabic calligraphy, calligraphy generator, Arabic fonts, Islamic art, online design tool",
-    generator: 'v0.dev'
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Arabic Calligraphy Generator - Free Tool | الخط العربي",
+    template: "%s | Arabic Calligraphy Generator"
+  },
+  description: "Use our free Arabic calligraphy generator to create stunning script art online. Discover fonts, customize styles, and download your unique designs easily.",
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: "Free Arabic Calligraphy Generator - Online Islamic Art Tool | الخط العربي",
+    description: "Design beautiful Arabic calligraphy & Islamic art online with our free generator. Multiple fonts, styles, & easy sharing.",
+    url: siteUrl,
+    siteName: 'Arabic Calligraphy Generator',
+    images: [
+      {
+        url: `${cdnBaseUrl}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Arabic Calligraphy Generator - Online Tool for Arabic Script Art',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Free Arabic Calligraphy Generator - Create Islamic Script Online | الخط العربي",
+    description: "Use our free Arabic calligraphy generator to design beautiful Arabic script and Islamic art. Easy to use, multiple fonts and styles.",
+    images: [`${cdnBaseUrl}/twitter-image.png`],
+  },
+  keywords: [
+    "free arabic calligraphy generator",
+    "islamic art generator",
+    "arabic fonts",
+    "الخط العربي",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 export default function RootLayout({
@@ -84,33 +128,68 @@ export default function RootLayout({
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
+              // 初始化 Plausible 函数（确保总是可用）
               window.plausible = window.plausible || function() { 
                 (window.plausible.q = window.plausible.q || []).push(arguments) 
               }
               
+              // 开发模式日志
               if (${process.env.NODE_ENV === 'development'}) {
                 console.log('Analytics scripts (GA, Plausible) are in DEVELOPMENT mode or NOT loaded.')
                 console.log('Plausible Analytics would be initialized for domain: arabic-calligraphy-generator.com if in production.')
+                console.log('Plausible server: https://plausible.myklink.xyz:8443')
               }
               
+              // 统一事件追踪函数
               window.trackCalligraphyEvent = function(eventName, props) {
                 const isProd = ${isProduction}
+                
                 if (isProd) {
-                  // Send to Plausible if in production
-                  if (typeof window.plausible === 'function') {
-                    window.plausible(eventName, { props: props })
+                  // 发送到 Plausible
+                  try {
+                    if (typeof window.plausible === 'function') {
+                      window.plausible(eventName, { props: props })
+                      console.log('Event sent to Plausible:', eventName, props)
+                    } else {
+                      console.warn('Plausible function not available')
+                    }
+                  } catch (error) {
+                    console.error('Error sending event to Plausible:', error)
                   }
                   
-                  // Send to Google Analytics if in production
-                  if (typeof gtag === 'function') {
-                    gtag('event', eventName, {
-                      event_category: 'Calligraphy_Generator',
-                      ...props
-                    })
+                  // 发送到 Google Analytics
+                  try {
+                    if (typeof gtag === 'function') {
+                      gtag('event', eventName, {
+                        event_category: 'Calligraphy_Generator',
+                        ...props
+                      })
+                      console.log('Event sent to GA:', eventName, props)
+                    } else {
+                      console.warn('Google Analytics gtag function not available')
+                    }
+                  } catch (error) {
+                    console.error('Error sending event to GA:', error)
                   }
                 } else {
                   console.log('[DEV MODE] Event: ' + eventName + ', Props:', props)
                 }
+              }
+              
+              // Plausible 连接测试
+              if (${isProduction}) {
+                setTimeout(() => {
+                  fetch('https://plausible.myklink.xyz:8443/api/health', { 
+                    mode: 'no-cors',
+                    method: 'GET'
+                  })
+                  .then(() => {
+                    console.log('Plausible server is reachable')
+                  })
+                  .catch((error) => {
+                    console.error('Cannot reach Plausible server:', error)
+                  })
+                }, 2000)
               }
             `,
           }}

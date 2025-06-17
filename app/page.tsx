@@ -1,15 +1,18 @@
-import type { Metadata } from "next"
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import dynamic from "next/dynamic"
+import { useState, useEffect } from "react"
 import { CalligraphyGenerator } from "@/components/calligraphy-generator"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Check, Download, Palette, Type, ChevronRight, Laptop, Smartphone, Tablet, ArrowRight } from "lucide-react"
+import { Check, Download, Palette, Type, ChevronRight, Laptop, Smartphone, Tablet, ArrowRight, Info } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { getFeaturedFonts, FONT_CATEGORIES } from "@/lib/content-links"
+import { getFontDetails } from "@/lib/font-details-data"
 
 const UseCasesSection = dynamic(() => 
   import("@/components/home/use-cases-section").then((mod) => mod.UseCasesSection)
@@ -18,55 +21,262 @@ const UseCasesSection = dynamic(() =>
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://arabic-calligraphy-generator.com'; // Fallback for safety
 const cdnBaseUrl = 'https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev';
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: "Arabic Calligraphy Generator - Free Tool | الخط العربي",
-  description: "Use our free Arabic calligraphy generator to create stunning script art online. Discover fonts, customize styles, and download your unique designs easily.",
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: "Free Arabic Calligraphy Generator - Online Islamic Art Tool | الخط العربي",
-    description: "Design beautiful Arabic calligraphy & Islamic art online with our free generator. Multiple fonts, styles, & easy sharing.",
-    url: siteUrl,
-    siteName: 'Arabic Calligraphy Generator',
-    images: [
-      {
-        url: `${cdnBaseUrl}/og-image.png`,
-        width: 1200,
-        height: 630,
-        alt: 'Arabic Calligraphy Generator - Online Tool for Arabic Script Art',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Free Arabic Calligraphy Generator - Create Islamic Script Online | الخط العربي",
-    description: "Use our free Arabic calligraphy generator to design beautiful Arabic script and Islamic art. Easy to use, multiple fonts and styles.",
-    images: [`${cdnBaseUrl}/twitter-image.png`],
-  },
-  keywords: [
-    "free arabic calligraphy generator",
-    "islamic art generator",
-    "arabic fonts",
-    "الخط العربي",
-  ],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+// Font name mapping to match generator component
+const FONT_SLUG_TO_NAME: Record<string, string> = {
+  'amiri': 'Amiri',
+  'scheherazade': 'Scheherazade',
+  'noto-naskh-arabic': 'Noto Naskh Arabic',
+  'aref-ruqaa': 'Aref Ruqaa',
+  'reem-kufi': 'Reem Kufi',
+  'lateef': 'Lateef',
+  'mirza': 'Mirza',
+  'cairo': 'Cairo',
+  'jomhuria': 'Jomhuria',
+  'rakkas': 'Rakkas',
+  'harmattan': 'Harmattan',
+  'mada': 'Mada',
+  'tajawal': 'Tajawal',
+  'el-messiri': 'El Messiri',
+  'lemonada': 'Lemonada',
+  'marhey': 'Marhey',
+  'markazi-text': 'Markazi Text'
+}
+
+// Font details loading function (used by both featured and browse sections)
+function loadFontDetails(fontSlug: string, panelElement: Element) {
+  const fontDetails = getFontDetails(fontSlug);
+  
+  if (!fontDetails) {
+    panelElement.innerHTML = `
+      <div class="text-sm text-amber-700">
+        <p class="text-amber-600">Font details not available for this font yet.</p>
+      </div>
+    `;
+    return;
+  }
+
+  // Create detailed font information panel
+  panelElement.innerHTML = `
+    <div class="space-y-6">
+      <!-- Font Overview -->
+      <div>
+        <h5 class="font-semibold text-amber-900 mb-2">${fontDetails.name} Font</h5>
+        <p class="text-sm text-amber-700 mb-2">${fontDetails.fullDescription}</p>
+        <div class="flex gap-4 text-xs text-amber-600">
+          <span><strong>Category:</strong> ${fontDetails.category}</span>
+          <span><strong>Designer:</strong> ${fontDetails.designer}</span>
+        </div>
+      </div>
+
+      <!-- Key Features -->
+      <div>
+        <h6 class="font-medium text-amber-900 mb-2">Key Features</h6>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+          ${fontDetails.features.slice(0, 4).map(feature => `
+            <div class="flex items-start gap-2 text-xs">
+              <div class="w-1 h-1 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <span class="font-medium text-amber-800">${feature.title}:</span>
+                <span class="text-amber-700">${feature.description}</span>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- Ideal Use Cases -->
+      <div>
+        <h6 class="font-medium text-amber-900 mb-2">Best Used For</h6>
+        <div class="space-y-1">
+          ${fontDetails.useCases.slice(0, 3).map(useCase => `
+            <div class="text-xs">
+              <span class="font-medium text-amber-800">${useCase.title}:</span>
+              <span class="text-amber-700">${useCase.description}</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- Text Examples -->
+      ${fontDetails.textExamples.length > 0 ? `
+        <div>
+          <h6 class="font-medium text-amber-900 mb-2">Text Examples</h6>
+          <div class="space-y-2">
+            ${fontDetails.textExamples.slice(0, 2).map(example => `
+              <div class="bg-amber-50 p-2 rounded text-xs">
+                <div class="text-lg text-amber-900 font-arabic mb-1" dir="rtl">${example.text}</div>
+                <div class="text-amber-600 text-xs">${example.translation}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
+
+      <!-- Try Font Button -->
+      <div class="pt-2 border-t border-amber-200">
+        <button 
+          data-font-slug="${fontSlug}" 
+          class="try-font-button w-full px-3 py-2 bg-amber-600 text-white rounded text-xs hover:bg-amber-700 transition-colors"
+        >
+          Try ${fontDetails.name} in Generator
+        </button>
+      </div>
+    </div>
+  `;
+}
 
 export default function Home() {
+  const [selectedFont, setSelectedFont] = useState<string | undefined>(undefined)
+  
+  // 分离左右两边的状态管理
+  const [featuredIsAllExpanded, setFeaturedIsAllExpanded] = useState(false)
+  const [featuredExpandedIds, setFeaturedExpandedIds] = useState<Set<string>>(new Set())
+  
+  const [browseExpandedCategories, setBrowseExpandedCategories] = useState<Set<string>>(new Set())
+  const [browseExpandedFonts, setBrowseExpandedFonts] = useState<Set<string>>(new Set())
+  const [showAllFeaturedFonts, setShowAllFeaturedFonts] = useState(false)
+
+  // Handle URL parameter for font selection
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search)
+      const fontParam = urlParams.get('font')
+      if (fontParam) {
+        setSelectedFont(fontParam)
+        // Scroll to generator after a short delay to ensure page is loaded
+        setTimeout(() => {
+          const calligraphySection = document.getElementById('calligraphy-tool-section')
+          if (calligraphySection) {
+            calligraphySection.scrollIntoView({ behavior: 'smooth' })
+          }
+        }, 500)
+      }
+
+      // Add event delegation for try-font-button clicks
+      const handleTryFontClick = (event: Event) => {
+        const target = event.target as HTMLElement
+        if (target.classList.contains('try-font-button')) {
+          const fontSlug = target.dataset.fontSlug
+          if (fontSlug) {
+            handleFontSwitch(fontSlug)
+          }
+        }
+      }
+
+      document.addEventListener('click', handleTryFontClick)
+      
+      return () => {
+        document.removeEventListener('click', handleTryFontClick)
+      }
+    }
+  }, [])
+
+  // Font switching function
+  const handleFontSwitch = (fontSlug: string | undefined) => {
+    if (!fontSlug) return
+    
+    const fontName = FONT_SLUG_TO_NAME[fontSlug]
+    
+    if (fontName) {
+      setSelectedFont(fontName)
+      
+      // Smooth scroll to the top creation area
+      const calligraphySection = document.getElementById('calligraphy-tool-section')
+      if (calligraphySection) {
+        calligraphySection.scrollIntoView({ behavior: 'smooth' })
+      }
+      
+      // Update URL without reloading page
+      const newUrl = new URL(window.location.href)
+      newUrl.searchParams.set('font', fontName)
+      window.history.replaceState({}, '', newUrl.toString())
+    }
+  }
+
+  // Handle font change from generator component
+  const handleGeneratorFontChange = (fontName: string) => {
+    setSelectedFont(fontName)
+    // Update URL
+    const newUrl = new URL(window.location.href)
+    newUrl.searchParams.set('font', fontName)
+    window.history.replaceState({}, '', newUrl.toString())
+  }
+
+  // Featured字体详情切换 - 只控制Featured部分
+  const toggleFeaturedFontDetails = (fontSlug: string | undefined) => {
+    if (!fontSlug) return
+    
+    const isCurrentlyExpanded = featuredExpandedIds.has(fontSlug)
+    
+    if (isCurrentlyExpanded) {
+      // 收缩这个字体
+      setFeaturedExpandedIds(prev => {
+        const newSet = new Set(prev)
+        newSet.delete(fontSlug)
+        return newSet
+      })
+      
+      const panelElement = document.getElementById(`featured-${fontSlug}-details`)
+      if (panelElement) {
+        panelElement.classList.add('hidden')
+      }
+      
+      // 如果是最后一个展开的字体，退出"全部展开"模式
+      if (featuredIsAllExpanded && featuredExpandedIds.size === 1) {
+        setFeaturedIsAllExpanded(false)
+      }
+    } else {
+      // 展开这个字体
+      setFeaturedExpandedIds(prev => {
+        const newSet = new Set(prev)
+        newSet.add(fontSlug)
+        return newSet
+      })
+      
+      const panelElement = document.getElementById(`featured-${fontSlug}-details`)
+      if (panelElement) {
+        panelElement.classList.remove('hidden')
+        loadFontDetails(fontSlug, panelElement)
+      }
+    }
+  }
+
+  // Browse字体详情切换 - 只控制Browse部分
+  const toggleBrowseFontDetails = (fontSlug: string | undefined) => {
+    if (!fontSlug) return
+    
+    const isCurrentlyExpanded = browseExpandedFonts.has(fontSlug)
+    
+    if (isCurrentlyExpanded) {
+      // 收缩这个字体
+      setBrowseExpandedFonts(prev => {
+        const newSet = new Set(prev)
+        newSet.delete(fontSlug)
+        return newSet
+      })
+      
+      const panelElement = document.getElementById(`browse-${fontSlug}-details`)
+      if (panelElement) {
+        panelElement.classList.add('hidden')
+      }
+    } else {
+      // 展开这个字体
+      setBrowseExpandedFonts(prev => {
+        const newSet = new Set(prev)
+        newSet.add(fontSlug)
+        return newSet
+      })
+      
+      const panelElement = document.getElementById(`browse-${fontSlug}-details`)
+      if (panelElement) {
+        panelElement.classList.remove('hidden')
+        loadFontDetails(fontSlug, panelElement)
+      }
+    }
+  }
+
+
+
   // 结构化数据 - SoftwareApplication Schema
   const softwareApplicationSchema = {
     "@context": "https://schema.org",
@@ -120,11 +330,12 @@ export default function Home() {
             </p>
           </header>
 
-
-
           {/* Main Tool Section */}
           <div className="mb-12" id="calligraphy-tool-section">
-            <CalligraphyGenerator />
+            <CalligraphyGenerator 
+              initialFont={selectedFont} 
+              onFontChange={handleGeneratorFontChange}
+            />
           </div>
 
           {/* Key Features Section */}
@@ -260,7 +471,7 @@ export default function Home() {
           <UseCasesSection />
 
           {/* Featured Fonts Section - Moved to better position after use cases */}
-          <section className="mb-12">
+          <section className="mb-12" id="font-collection">
             <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">Explore Our Arabic Font Collection</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Featured Fonts */}
@@ -268,23 +479,76 @@ export default function Home() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-amber-800 mb-4">Featured Arabic Fonts</h3>
                   <div className="space-y-3">
-                    {getFeaturedFonts().slice(0, 4).map((font) => (
-                      <Link 
+                    {(showAllFeaturedFonts ? getFeaturedFonts() : getFeaturedFonts().slice(0, 5)).map((font) => (
+                      <div 
                         key={font.href} 
-                        href={font.href}
-                        className="flex items-center justify-between p-3 rounded-lg border border-amber-100 hover:border-amber-300 hover:bg-amber-50 transition-colors group"
+                        id={font.href.split('/').pop()}
+                        className="rounded-lg border border-amber-100 hover:border-amber-300 transition-colors"
                       >
-                        <div>
-                          <h4 className="font-semibold text-amber-800 group-hover:text-amber-900">{font.title}</h4>
-                          <p className="text-sm text-amber-600">{font.description}</p>
+                        {/* Main clickable area */}
+                        <div 
+                          onClick={() => handleFontSwitch(font.href.split('/').pop())}
+                          className="flex items-center justify-between p-3 hover:bg-amber-50 transition-colors group cursor-pointer"
+                        >
+                          <div>
+                            <h4 className="font-semibold text-amber-800 group-hover:text-amber-900">{font.title}</h4>
+                            <p className="text-sm text-amber-600">{font.description}</p>
+                          </div>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              toggleFeaturedFontDetails(font.href.split('/').pop());
+                            }}
+                            className="flex items-center gap-1 px-2 py-1 text-xs text-amber-600 hover:text-amber-800 border border-amber-200 rounded hover:bg-amber-100 transition-colors"
+                          >
+                            <Info className="h-3 w-3" />
+                            Details
+                          </button>
                         </div>
-                        <ArrowRight className="h-4 w-4 text-amber-600 group-hover:text-amber-800" />
-                      </Link>
+                        
+                        {/* Collapsible details panel */}
+                        <div 
+                          id={`featured-${font.href.split('/').pop()}-details`}
+                          className="hidden font-details-panel border-t border-amber-100 p-4 bg-amber-25"
+                        >
+                          <div className="text-sm text-amber-700">
+                            <p className="mb-2">Click to view comprehensive information about this typeface...</p>
+                            {/* Font details will be populated here */}
+                          </div>
+                        </div>
+                      </div>
                     ))}
                   </div>
                   <div className="mt-4 text-center">
-                    <Button asChild variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
-                      <Link href="/fonts">View All Fonts</Link>
+                    <Button 
+                      variant="outline" 
+                      className="border-amber-600 text-amber-600 hover:bg-amber-50"
+                      onClick={() => {
+                        const newShowAll = !showAllFeaturedFonts
+                        setShowAllFeaturedFonts(newShowAll)
+                        
+                        // 如果要收缩到5个字体，需要隐藏超出范围的字体详情面板
+                        if (!newShowAll) {
+                          const fontsToHide = getFeaturedFonts().slice(5)
+                          fontsToHide.forEach(font => {
+                            const fontSlug = font.href.split('/').pop()
+                            if (fontSlug) {
+                              const panelElement = document.getElementById(`featured-${fontSlug}-details`)
+                              if (panelElement) {
+                                panelElement.classList.add('hidden')
+                              }
+                              // 从展开状态中移除
+                              setFeaturedExpandedIds(prev => {
+                                const newSet = new Set(prev)
+                                newSet.delete(fontSlug)
+                                return newSet
+                              })
+                            }
+                          })
+                        }
+                      }}
+                    >
+                      {showAllFeaturedFonts ? 'Show Less Fonts' : 'Explore All Fonts'}
                     </Button>
                   </div>
                 </CardContent>
@@ -296,20 +560,47 @@ export default function Home() {
                   <h3 className="text-xl font-bold text-amber-800 mb-4">Browse by Style</h3>
                   <div className="space-y-3">
                     {Object.entries(FONT_CATEGORIES).slice(0, 4).map(([key, category]) => (
-                      <div key={key} className="p-3 rounded-lg border border-amber-100 hover:border-amber-300 hover:bg-amber-50 transition-colors">
-                        <h4 className="font-semibold text-amber-800 mb-1">{category.title}</h4>
-                        <p className="text-sm text-amber-600 mb-2">{category.description}</p>
-                        <div className="flex flex-wrap gap-2">
-                          {category.fonts.slice(0, 3).map((font) => (
-                            <Link 
-                              key={font.href}
-                              href={font.href}
-                              className="text-xs px-2 py-1 bg-amber-100 text-amber-700 rounded hover:bg-amber-200 transition-colors"
-                            >
-                              {font.title.replace(' Font', '')}
-                            </Link>
-                          ))}
+                      <div key={key} className="rounded-lg border border-amber-100 hover:border-amber-300 transition-colors">
+                        <div className="p-3 hover:bg-amber-50 transition-colors">
+                          <h4 className="font-semibold text-amber-800 mb-1">{category.title}</h4>
+                          <p className="text-sm text-amber-600 mb-2">{category.description}</p>
+                          <div className="flex flex-wrap gap-2">
+                            {category.fonts.slice(0, 3).map((font) => (
+                              <div key={font.href} className="flex items-center gap-1">
+                                <button
+                                  onClick={() => handleFontSwitch(font.href.split('/').pop())}
+                                  className="text-xs px-2 py-1 bg-amber-100 text-amber-700 rounded hover:bg-amber-200 transition-colors cursor-pointer"
+                                >
+                                  {font.title.replace(' Font', '')}
+                                </button>
+                                <button
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    toggleBrowseFontDetails(font.href.split('/').pop());
+                                  }}
+                                  className="text-xs px-1 py-1 text-amber-600 hover:text-amber-800 border border-amber-200 rounded hover:bg-amber-100 transition-colors"
+                                  title="View Details"
+                                >
+                                  <Info className="h-3 w-3" />
+                                </button>
+                              </div>
+                            ))}
+                          </div>
                         </div>
+                        
+                        {/* Collapsible details panels for browse fonts */}
+                        {category.fonts.slice(0, 3).map((font) => (
+                          <div 
+                            key={`${font.href}-browse-details`}
+                            id={`browse-${font.href.split('/').pop()}-details`}
+                            className="hidden font-details-panel border-t border-amber-100 p-4 bg-amber-25"
+                          >
+                            <div className="text-sm text-amber-700">
+                              <p className="mb-2">Discover features and usage examples for this Arabic font...</p>
+                              {/* Font details will be populated here */}
+                            </div>
+                          </div>
+                        ))}
                       </div>
                     ))}
                   </div>
@@ -418,7 +709,7 @@ export default function Home() {
                         <ChevronRight className="h-4 w-4 mr-1" />
                         <span>Browse templates for your next calligraphy design</span>
                       </Link>
-                      <Link href="/fonts" className="flex items-center text-amber-600 hover:text-amber-800">
+                      <Link href="/#font-collection" className="flex items-center text-amber-600 hover:text-amber-800">
                         <ChevronRight className="h-4 w-4 mr-1" />
                         <span>View our rich font gallery for Arabic typography</span>
                       </Link>

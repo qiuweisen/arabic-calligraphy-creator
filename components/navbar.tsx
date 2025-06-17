@@ -21,7 +21,7 @@ export function Navbar() {
 
   const navItems = [
     { label: "Home", href: "/" },
-    { label: "Arabic Fonts", href: "/fonts" },
+    { label: "Arabic Fonts", href: "/#font-collection" },
     { label: "Features", href: "/#features" },
     { label: "Blog", href: "/blog" },
     { label: "FAQ", href: "/faq" },

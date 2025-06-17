@@ -157,7 +157,7 @@ const ARABIC_FONTS = [
   { name: "Noto Naskh Arabic", value: "'Noto Naskh Arabic', serif", category: "Traditional" },
   { name: "Aref Ruqaa", value: "'Aref Ruqaa', serif", category: "Diwani" },
   { name: "Reem Kufi", value: "'Reem Kufi', sans-serif", category: "Kufi" },
-  { name: "Lateef", value: "'Lateef', cursive", category: "Nastaliq" },
+  { name: "Lateef", value: "'Lateef', cursive", category: "Traditional" },
   { name: "Mirza", value: "'Mirza', cursive", category: "Nastaliq" },
   { name: "Cairo", value: "'Cairo', sans-serif", category: "Modern" },
   { name: "Jomhuria", value: "'Jomhuria', display", category: "Display" },
@@ -165,6 +165,10 @@ const ARABIC_FONTS = [
   { name: "Harmattan", value: "'Harmattan', sans-serif", category: "Modern" },
   { name: "Mada", value: "'Mada', sans-serif", category: "Modern" },
   { name: "Tajawal", value: "'Tajawal', sans-serif", category: "Modern" },
+  { name: "El Messiri", value: "'El Messiri', sans-serif", category: "Modern" },
+  { name: "Lemonada", value: "'Lemonada', display", category: "Display" },
+  { name: "Marhey", value: "'Marhey', display", category: "Display" },
+  { name: "Markazi Text", value: "'Markazi Text', serif", category: "Traditional" },
 ]
 
 const BACKGROUND_PATTERNS = [
@@ -205,11 +209,47 @@ const COMMON_PHRASES = [
 
 const DEFAULT_TEXT = "بسم الله الرحمن الرحيم"
 
-export function CalligraphyGenerator() {
+// Font name mapping for external integration
+const FONT_NAME_MAP: Record<string, string> = {
+  'Amiri': "'Amiri', serif",
+  'Scheherazade': "'Scheherazade New', serif", 
+  'Scheherazade New': "'Scheherazade New', serif",
+  'Noto Naskh Arabic': "'Noto Naskh Arabic', serif",
+  'Aref Ruqaa': "'Aref Ruqaa', serif",
+  'Reem Kufi': "'Reem Kufi', sans-serif",
+  'Lateef': "'Lateef', cursive",
+  'Mirza': "'Mirza', cursive",
+  'Cairo': "'Cairo', sans-serif",
+  'Jomhuria': "'Jomhuria', display",
+  'Rakkas': "'Rakkas', display",
+  'Harmattan': "'Harmattan', sans-serif",
+  'Mada': "'Mada', sans-serif",
+  'Tajawal': "'Tajawal', sans-serif",
+  'El Messiri': "'El Messiri', sans-serif",
+  'Lemonada': "'Lemonada', display",
+  'Marhey': "'Marhey', display",
+  'Markazi Text': "'Markazi Text', serif"
+}
+
+interface CalligraphyGeneratorProps {
+  initialFont?: string
+  onFontChange?: (fontName: string) => void
+}
+
+export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyGeneratorProps = {}) {
   const isMobile = useMobile()
   const { loadFont, isFontLoaded, isFontLoading } = useFontLoader()
   const [text, setText] = useState(DEFAULT_TEXT)
-  const [font, setFont] = useState(ARABIC_FONTS[0].value)
+  
+  // Initialize font based on initialFont prop or default
+  const getInitialFont = () => {
+    if (initialFont && FONT_NAME_MAP[initialFont]) {
+      return FONT_NAME_MAP[initialFont]
+    }
+    return ARABIC_FONTS[0].value
+  }
+  
+  const [font, setFont] = useState(() => getInitialFont())
   const [fontSize, setFontSize] = useState(48)
   const [textColor, setTextColor] = useState("#8B5A2B") // Amber brown
   const [useGradient, setUseGradient] = useState(false)
@@ -266,6 +306,21 @@ export function CalligraphyGenerator() {
     console.log('Font loader initialized, fonts will load on demand')
   }, [loadFont])
 
+  // Handle external font changes
+  useEffect(() => {
+    if (initialFont && FONT_NAME_MAP[initialFont]) {
+      const fontValue = FONT_NAME_MAP[initialFont]
+      
+      if (fontValue !== font) {
+        setFont(fontValue)
+        // Load the font asynchronously
+        loadFont(fontValue).catch(error => {
+          console.error('Failed to load external font:', error)
+        })
+      }
+    }
+  }, [initialFont, font, loadFont])
+
   // Toggle keyboard visibility
   const toggleKeyboard = () => {
     setKeyboardVisible(!keyboardVisible)
@@ -300,6 +355,14 @@ export function CalligraphyGenerator() {
       await loadFont(value)
     } catch (error) {
       console.error('Failed to load font:', error)
+    }
+    
+    // Notify parent component of font change
+    if (onFontChange) {
+      const fontName = Object.keys(FONT_NAME_MAP).find(key => FONT_NAME_MAP[key] === value)
+      if (fontName) {
+        onFontChange(fontName)
+      }
     }
     
     // 追踪字体选择事件
