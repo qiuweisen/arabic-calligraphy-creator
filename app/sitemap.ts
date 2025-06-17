@@ -1,32 +1,5 @@
 import { MetadataRoute } from 'next'
 
-// Define all fonts
-const FONTS = [
-  // Traditional
-  { slug: "amiri" },
-  { slug: "scheherazade" },
-  { slug: "noto-naskh-arabic" },
-  { slug: "el-messiri" },
-  { slug: "markazi-text" },
-  // Kufi
-  { slug: "reem-kufi" },
-  // Diwani
-  { slug: "aref-ruqaa" },
-  // Nastaliq
-  { slug: "lateef" },
-  { slug: "mirza" },
-  // Modern
-  { slug: "cairo" },
-  { slug: "harmattan" },
-  { slug: "mada" },
-  { slug: "tajawal" },
-  { slug: "lemonada" },
-  // Display
-  { slug: "jomhuria" },
-  { slug: "rakkas" },
-  { slug: "marhey" },
-]
-
 // Blog posts data - using actual directory names (shorter URLs are better)
 const BLOG_POSTS = [
   'the-rich-history-of-arabic-calligraphy',
@@ -40,7 +13,7 @@ const BLOG_POSTS = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://arabic-calligraphy-generator.com'
   
-  // Core pages
+  // Core pages - 移除字体相关页面，因为它们现在重定向到主页
   const staticPages = [
     {
       url: baseUrl,
@@ -48,12 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 1.0,
     },
-    {
-      url: `${baseUrl}/fonts`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.9,
-    },
+    // 注意：移除了 /fonts 页面，因为现在重定向到主页 #font-collection
     {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
@@ -90,15 +58,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly' as const,
       priority: 0.5,
     },
+    {
+      url: `${baseUrl}/features`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/tutorials`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
   ]
-
-  // Font detail pages
-  const fontPages = FONTS.map(font => ({
-    url: `${baseUrl}/fonts/${font.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }))
 
   // Blog post pages
   const blogPages = BLOG_POSTS.map(slug => ({
@@ -108,5 +80,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
-  return [...staticPages, ...fontPages, ...blogPages]
+  // 注意：移除了所有字体详情页面，因为它们现在都重定向到主页的锚点
+  // 这样避免了重复内容和SEO冲突，所有权重都聚合到主页
+  
+  return [...staticPages, ...blogPages]
 } 
