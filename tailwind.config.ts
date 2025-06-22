@@ -10,22 +10,13 @@ const config = {
     "*.{js,ts,jsx,tsx,mdx}",
   ],
   safelist: [
-    // Safelist for dynamically generated classes, especially from CalligraphyGenerator
-    { pattern: /^(bg|text|border|ring|fill|stroke)-amber-/ }, // Common amber shades
-    { pattern: /^(bg|text|border|ring|fill|stroke)-blue-/ }, // For new FAB
-    { pattern: /^(bg|text|border|ring|fill|stroke)-red-/ }, // For MobileFab when open
-    { pattern: /^(from|to)-amber-/ }, // Gradients
-    // Specific patterns used in CalligraphyGenerator for dynamic styles if any
-    // e.g., if there are color pickers that can result in arbitrary hex like text-[#FF0000]
-    // Tailwind JIT usually handles these well if they appear directly in template files
-    // but safelisting can be a fallback.
-    "h-0", // For accordion-up animation
-    "h-screen",
-    "fixed",
-    "bottom-6", "right-6", "bottom-20", // For FAB positioning
-    "z-50",
-    "w-[300px]", "sm:w-[400px]", // For Sheet width
-    // Add any other specific classes that might be dynamically constructed and not easily found by JIT
+    // 只保留真正动态生成的类
+    { pattern: /^(bg|text|border)-amber-(50|100|600|700|800)$/ }, // 限制amber色彩范围
+    { pattern: /^(bg|text|border)-blue-(600|700)$/ }, // 限制blue色彩范围
+    { pattern: /^(bg|text|border)-red-(600|700)$/ }, // 限制red色彩范围
+    "h-0", // accordion动画必需
+    "fixed", "bottom-6", "right-6", "z-50", // FAB定位必需
+    "w-[300px]", "sm:w-[400px]", // Sheet宽度必需
   ],
   prefix: "",
   theme: {

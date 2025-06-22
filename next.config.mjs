@@ -1,3 +1,5 @@
+// 暂时移除bundle analyzer以避免构建问题
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -11,6 +13,8 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  poweredByHeader: false,
+  compress: true,
   modularizeImports: {
     '@radix-ui/react-icons': {
       transform: '@radix-ui/react-icons/dist/esm/icons/{{member}}',
@@ -64,4 +68,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig; 
+export default nextConfig;
