@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-amber-900 text-amber-100 py-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-amber-900 font-bold text-lg">
@@ -72,8 +72,49 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/guides" className="text-amber-200 hover:text-white transition-colors">
+                  Guides
+                </Link>
+              </li>
+              <li>
                 <Link href="/fonts" className="text-amber-200 hover:text-white transition-colors">
                   Font Gallery
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources/design-templates" className="text-amber-200 hover:text-white transition-colors">
+                  Design Templates
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/color-palette-generator" className="text-amber-200 hover:text-white transition-colors">
+                  Color Tool
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-white mb-4 text-sm uppercase">Popular</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/fonts/amiri" className="text-amber-200 hover:text-white transition-colors">
+                  Amiri Font
+                </Link>
+              </li>
+              <li>
+                <Link href="/fonts/cairo" className="text-amber-200 hover:text-white transition-colors">
+                  Cairo Font
+                </Link>
+              </li>
+              <li>
+                <Link href="/use-cases/wedding-arabic-calligraphy" className="text-amber-200 hover:text-white transition-colors">
+                  Wedding Calligraphy
+                </Link>
+              </li>
+              <li>
+                <Link href="/use-cases/business-logo-arabic-fonts" className="text-amber-200 hover:text-white transition-colors">
+                  Business Logos
                 </Link>
               </li>
               <li>

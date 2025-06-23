@@ -701,17 +701,21 @@ export default function Home() {
                   <div className="md:w-1/3 bg-amber-50 p-6 md:p-8 flex flex-col justify-center">
                     <h3 className="text-xl font-semibold text-amber-800 mb-4">Learn More</h3>
                     <div className="space-y-3">
+                      <Link href="/tutorials" className="flex items-center text-amber-600 hover:text-amber-800">
+                        <ChevronRight className="h-4 w-4 mr-1" />
+                        <span>Learn with our comprehensive Arabic calligraphy tutorials</span>
+                      </Link>
+                      <Link href="/use-cases" className="flex items-center text-amber-600 hover:text-amber-800">
+                        <ChevronRight className="h-4 w-4 mr-1" />
+                        <span>Discover real-world applications and use cases</span>
+                      </Link>
                       <Link href="/blog" className="flex items-center text-amber-600 hover:text-amber-800">
                         <ChevronRight className="h-4 w-4 mr-1" />
-                        <span>Explore our blog for tips on creating stunning Arabic script</span>
-                      </Link>
-                      <Link href="#calligraphy-tool-section" className="flex items-center text-amber-600 hover:text-amber-800">
-                        <ChevronRight className="h-4 w-4 mr-1" />
-                        <span>Browse templates for your next calligraphy design</span>
+                        <span>Explore our blog for tips and cultural insights</span>
                       </Link>
                       <Link href="/#font-collection" className="flex items-center text-amber-600 hover:text-amber-800">
                         <ChevronRight className="h-4 w-4 mr-1" />
-                        <span>View our rich font gallery for Arabic typography</span>
+                        <span>Browse our extensive Arabic font collection</span>
                       </Link>
                     </div>
                   </div>

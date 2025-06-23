@@ -7,89 +7,89 @@ import { Card, CardContent } from "@/components/ui/card"
 import { PlayCircle, Book, Lightbulb, Palette, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Arabic Calligraphy Tutorials | Learn Arabic Typography",
-  description: "Learn how to create beautiful Arabic calligraphy with our step-by-step tutorials. From basics to advanced techniques for both beginners and experts.",
-  keywords: "Arabic calligraphy tutorial, how to create Arabic typography, Arabic calligraphy generator guide, learn Arabic calligraphy, Arabic font tutorial",
+  title: "Arabic Calligraphy Tutorials | Complete Learning Guide 2024",
+  description: "Master Arabic calligraphy with our comprehensive tutorials and use cases. From beginner guides to advanced techniques, learn font selection, design tips, and real-world applications.",
+  keywords: "Arabic calligraphy tutorial, how to create Arabic typography, Arabic calligraphy generator guide, learn Arabic calligraphy, Arabic font tutorial, Arabic design tips",
 }
 
 const BEGINNER_TUTORIALS = [
   {
-    title: "Getting Started with Arabic Calligraphy Generator",
-    description: "Learn the basics of using our Arabic Calligraphy Generator tool with this beginner-friendly introduction.",
+    title: "How to Create Arabic Calligraphy Online",
+    description: "Master the complete process of creating professional Arabic calligraphy online. Learn to craft beautiful Arabic text art from scratch using our browser-based tool.",
     icon: <PlayCircle className="h-6 w-6 text-amber-600" />,
-    duration: "5 min",
-    slug: "getting-started",
-    link: "/blog/beginners-guide-to-calligraphy"
+    duration: "10 min",
+    slug: "how-to-create-arabic-calligraphy-online",
+    link: "/tutorials/how-to-create-arabic-calligraphy-online"
   },
   {
-    title: "Understanding Arabic Font Styles",
-    description: "Explore the differences between Naskh, Kufi, Diwani, and other popular Arabic calligraphy styles.",
+    title: "Arabic Font Selection Guide",
+    description: "Professional Arabic font selection guide covering 17 curated fonts with characteristics, use cases, and pairing recommendations.",
     icon: <Book className="h-6 w-6 text-amber-600" />,
-    duration: "8 min",
-    slug: "arabic-font-styles",
-    link: "/blog/six-major-calligraphy-styles"
+    duration: "15 min",
+    slug: "arabic-font-selection-guide",
+    link: "/tutorials/arabic-font-selection-guide"
   },
   {
-    title: "Basic Text Customization",
-    description: "Learn how to adjust font size, color, and basic styling options to personalize your Arabic text.",
+    title: "Download and Use Arabic Fonts",
+    description: "Comprehensive guide on downloading, installing, and using Arabic fonts across different platforms and applications.",
     icon: <Palette className="h-6 w-6 text-amber-600" />,
-    duration: "7 min",
-    slug: "basic-customization",
-    link: "/"
+    duration: "12 min",
+    slug: "download-and-use-arabic-fonts",
+    link: "/tutorials/download-and-use-arabic-fonts"
   },
 ]
 
 const INTERMEDIATE_TUTORIALS = [
   {
-    title: "Working with Arabic Text Direction",
-    description: "Master right-to-left text alignment and proper Arabic text formatting for beautiful calligraphy.",
+    title: "Arabic Calligraphy Design Tips",
+    description: "Elevate your Arabic calligraphy with professional design techniques. Learn composition principles, color theory, typography hierarchy, and cultural considerations.",
     icon: <Lightbulb className="h-6 w-6 text-amber-600" />,
-    duration: "10 min",
-    slug: "text-direction",
-    link: "/blog/modern-arabic-typography"
+    duration: "18 min",
+    slug: "arabic-calligraphy-design-tips",
+    link: "/tutorials/arabic-calligraphy-design-tips"
   },
   {
-    title: "Creating Beautiful Text Shadows",
-    description: "Learn how to add dimension to your calligraphy with multi-layered shadow effects.",
+    title: "Wedding Arabic Calligraphy",
+    description: "Create breathtaking Arabic calligraphy for your special day. From elegant wedding invitations to beautiful ceremony decorations.",
     icon: <Palette className="h-6 w-6 text-amber-600" />,
     duration: "12 min",
-    slug: "text-shadows",
-    link: "/"
+    slug: "wedding-arabic-calligraphy",
+    link: "/use-cases/wedding-arabic-calligraphy"
   },
   {
-    title: "Using Custom Backgrounds",
-    description: "Discover how to upload custom backgrounds or create gradient backgrounds for your calligraphy art.",
+    title: "Business Logo Arabic Fonts",
+    description: "Elevate your brand with professional Arabic typography. Create powerful business logos and corporate identities.",
     icon: <Palette className="h-6 w-6 text-amber-600" />,
-    duration: "9 min",
-    slug: "custom-backgrounds",
-    link: "/"
+    duration: "15 min",
+    slug: "business-logo-arabic-fonts",
+    link: "/use-cases/business-logo-arabic-fonts"
   },
 ]
 
 const ADVANCED_TUTORIALS = [
   {
-    title: "Mastering Kashida Extensions",
-    description: "Advanced techniques for using Kashida (letter stretching) to create balanced and beautiful compositions.",
+    title: "Social Media Arabic Typography",
+    description: "Transform your social media presence with captivating Arabic typography. Create viral content for Instagram, TikTok, Facebook, and Twitter.",
     icon: <Lightbulb className="h-6 w-6 text-amber-600" />,
-    duration: "15 min",
-    slug: "kashida-techniques",
-    link: "/blog/famous-arabic-calligraphers"
+    duration: "20 min",
+    slug: "social-media-arabic-typography",
+    link: "/use-cases/social-media-arabic-typography"
   },
   {
-    title: "Creating Logo Designs with Arabic Calligraphy",
-    description: "Learn professional techniques for creating logos and branding materials using Arabic typography.",
+    title: "Religious Arabic Calligraphy",
+    description: "Honor the sacred beauty of Islamic art with authentic Arabic calligraphy. Create reverent designs for Quranic verses and mosque decorations.",
     icon: <Palette className="h-6 w-6 text-amber-600" />,
-    duration: "18 min",
-    slug: "logo-design",
-    link: "/blog/modern-arabic-typography"
+    duration: "25 min",
+    slug: "religious-arabic-calligraphy",
+    link: "/use-cases/religious-arabic-calligraphy"
   },
   {
-    title: "Exporting for Print and Digital Media",
-    description: "Master the export options and best practices for using your calligraphy designs in various media.",
+    title: "Professional Typography Techniques",
+    description: "Master advanced Arabic typography techniques for professional design projects and commercial applications.",
     icon: <Book className="h-6 w-6 text-amber-600" />,
-    duration: "11 min",
-    slug: "export-options",
-    link: "/features"
+    duration: "22 min",
+    slug: "professional-techniques",
+    link: "/blog/modern-arabic-typography"
   },
 ]
 
@@ -130,9 +130,11 @@ export default function TutorialsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h1 className="text-3xl md:text-4xl font-bold text-amber-800 mb-4">Arabic Calligraphy Tutorials</h1>
-              <p className="text-amber-700 text-lg max-w-2xl mx-auto">
-                Learn how to create beautiful Arabic calligraphy with our step-by-step guides for all skill levels.
+              <h1 className="text-3xl md:text-4xl font-bold text-amber-800 mb-4">Arabic Calligraphy Tutorials & Use Cases</h1>
+              <p className="text-amber-700 text-lg max-w-3xl mx-auto">
+                Master Arabic calligraphy with our comprehensive tutorials and real-world use cases.
+                From beginner guides to advanced techniques, learn font selection, design principles,
+                and practical applications for weddings, business, social media, and religious purposes.
               </p>
             </div>
 
@@ -182,16 +184,19 @@ export default function TutorialsPage() {
             </div>
 
             <div className="mt-12 text-center">
-              <h2 className="text-xl font-bold text-amber-800 mb-4">Looking for More Resources?</h2>
+              <h2 className="text-xl font-bold text-amber-800 mb-4">Explore More Resources</h2>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button asChild variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
-                  <Link href="/blog/beginners-guide-to-calligraphy">Beginner's Guide</Link>
+                  <Link href="/use-cases">Use Cases & Examples</Link>
                 </Button>
                 <Button asChild variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
                   <Link href="/fonts">Font Gallery</Link>
                 </Button>
                 <Button asChild variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
-                  <Link href="/blog/the-rich-history-of-arabic-calligraphy">History of Calligraphy</Link>
+                  <Link href="/blog">Blog & Insights</Link>
+                </Button>
+                <Button asChild variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
+                  <Link href="/features">Features & Tools</Link>
                 </Button>
               </div>
             </div>
