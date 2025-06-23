@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
@@ -84,7 +86,9 @@ export default function FAQPage() {
   const generatorQuestionsEndIndex = 10;
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
       <div className="container mx-auto px-4 py-8 md:py-16">
         <header className="mb-12 text-center">
           <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-800 to-amber-600 mb-4">
@@ -164,5 +168,7 @@ export default function FAQPage() {
         </div>
       </div>
     </main>
+    <Footer />
+    </>
   )
 }

@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { Navbar } from '@/components/navbar'
+import { Footer } from '@/components/footer'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -64,6 +66,7 @@ export default function ArabicFontComparisonPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      <Navbar />
       <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
         <div className="container mx-auto px-4 py-8">
           <Breadcrumb items={breadcrumbItems} />
@@ -756,6 +759,7 @@ export default function ArabicFontComparisonPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   )
 }

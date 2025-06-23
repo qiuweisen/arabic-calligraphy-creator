@@ -58,7 +58,7 @@ const RESOURCES_PAGES = [
 const USE_CASES_PAGES = [
   'wedding-arabic-calligraphy',
   'business-logo-arabic-fonts',
-  'social-media-arabic-posts',
+  'social-media-arabic-typography',
   'religious-arabic-calligraphy'
 ]
 

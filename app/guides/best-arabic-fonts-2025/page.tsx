@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
 import { Breadcrumb } from '@/components/breadcrumb'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -60,6 +62,7 @@ export default function BestArabicFonts2024Page() {
 
   return (
     <>
+      <Navbar />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -586,6 +589,7 @@ export default function BestArabicFonts2024Page() {
           </div>
         </div>
       </div>
+          <Footer />
     </>
   )
 }
