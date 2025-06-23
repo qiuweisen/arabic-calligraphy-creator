@@ -82,13 +82,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/resources/design-templates" className="text-amber-200 hover:text-white transition-colors">
-                  Design Templates
-                </Link>
-              </li>
-              <li>
-                <Link href="/tools/color-palette-generator" className="text-amber-200 hover:text-white transition-colors">
-                  Color Tool
+                <Link href="/resources/free-arabic-fonts" className="text-amber-200 hover:text-white transition-colors">
+                  Free Fonts
                 </Link>
               </li>
             </ul>

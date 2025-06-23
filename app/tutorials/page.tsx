@@ -94,6 +94,72 @@ const ADVANCED_TUTORIALS = [
 ]
 
 export default function TutorialsPage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Arabic Calligraphy Tutorials",
+    "description": "Master Arabic calligraphy with our comprehensive tutorials and use cases. From beginner guides to advanced techniques, learn font selection, design tips, and real-world applications.",
+    "url": "https://arabic-calligraphy-generator.com/tutorials",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        ...BEGINNER_TUTORIALS.map((tutorial, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "item": {
+            "@type": "HowTo",
+            "name": tutorial.title,
+            "description": tutorial.description,
+            "url": `https://arabic-calligraphy-generator.com${tutorial.link}`,
+            "totalTime": tutorial.duration,
+            "skillLevel": "Beginner"
+          }
+        })),
+        ...INTERMEDIATE_TUTORIALS.map((tutorial, index) => ({
+          "@type": "ListItem",
+          "position": BEGINNER_TUTORIALS.length + index + 1,
+          "item": {
+            "@type": "HowTo",
+            "name": tutorial.title,
+            "description": tutorial.description,
+            "url": `https://arabic-calligraphy-generator.com${tutorial.link}`,
+            "totalTime": tutorial.duration,
+            "skillLevel": "Intermediate"
+          }
+        })),
+        ...ADVANCED_TUTORIALS.map((tutorial, index) => ({
+          "@type": "ListItem",
+          "position": BEGINNER_TUTORIALS.length + INTERMEDIATE_TUTORIALS.length + index + 1,
+          "item": {
+            "@type": "HowTo",
+            "name": tutorial.title,
+            "description": tutorial.description,
+            "url": `https://arabic-calligraphy-generator.com${tutorial.link}`,
+            "totalTime": tutorial.duration,
+            "skillLevel": "Advanced"
+          }
+        }))
+      ]
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://arabic-calligraphy-generator.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tutorials",
+          "item": "https://arabic-calligraphy-generator.com/tutorials"
+        }
+      ]
+    }
+  }
+
   // 修改为使用每个教程项中预定义的link属性，而不是构建可能不存在的链接
   const getTutorialLink = (tutorial: any) => {
     return tutorial.link || "/"; // 如果没有指定链接，则返回首页
@@ -125,6 +191,10 @@ export default function TutorialsPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">

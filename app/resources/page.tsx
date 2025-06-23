@@ -14,22 +14,6 @@ export const metadata: Metadata = {
 
 const RESOURCES = [
   {
-    title: "Design Inspiration",
-    description: "Explore beautiful Arabic calligraphy examples, traditional Islamic art, and modern typography designs to inspire your creative projects.",
-    icon: <Lightbulb className="h-8 w-8 text-purple-600" />,
-    href: "/resources/design-inspiration",
-    color: "purple",
-    popular: true
-  },
-  {
-    title: "Design Templates", 
-    description: "Download ready-to-use Arabic calligraphy templates for various occasions including weddings, business cards, and social media posts.",
-    icon: <Palette className="h-8 w-8 text-green-600" />,
-    href: "/resources/design-templates",
-    color: "green",
-    popular: true
-  },
-  {
     title: "Free Arabic Fonts",
     description: "Access our curated collection of high-quality free Arabic fonts suitable for both personal and commercial projects.",
     icon: <Download className="h-8 w-8 text-blue-600" />,
@@ -40,6 +24,45 @@ const RESOURCES = [
 ]
 
 export default function ResourcesPage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Arabic Calligraphy Resources",
+    "description": "Free Arabic calligraphy resources including design templates, font downloads, and creative inspiration for your projects.",
+    "url": "https://arabic-calligraphy-generator.com/resources",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": RESOURCES.map((resource, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "CreativeWork",
+          "name": resource.title,
+          "description": resource.description,
+          "url": `https://arabic-calligraphy-generator.com${resource.href}`,
+          "genre": "Arabic Calligraphy Resource"
+        }
+      }))
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://arabic-calligraphy-generator.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://arabic-calligraphy-generator.com/resources"
+        }
+      ]
+    }
+  }
+
   const getColorClasses = (color: string) => {
     const colorMap = {
       purple: {
@@ -66,6 +89,10 @@ export default function ResourcesPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-green-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
@@ -80,7 +107,7 @@ export default function ResourcesPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button asChild className="bg-green-600 hover:bg-green-700 text-white">
-                  <Link href="/resources/design-templates">Browse Templates</Link>
+                  <Link href="/">Create Design</Link>
                 </Button>
                 <Button asChild variant="outline" className="border-green-600 text-green-600 hover:bg-green-50">
                   <Link href="/">Create Now</Link>
@@ -166,7 +193,7 @@ export default function ResourcesPage() {
                 <Button asChild className="bg-white text-green-900 hover:bg-gray-100">
                   <Link href="/">Try Generator</Link>
                 </Button>
-                <Button asChild variant="outline" className="border-green-400 text-white hover:bg-green-800">
+                <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
                   <Link href="/tutorials">Learn More</Link>
                 </Button>
               </div>

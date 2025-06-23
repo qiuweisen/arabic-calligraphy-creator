@@ -143,6 +143,16 @@ export default function UseCasesPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Arabic Calligraphy Use Cases",
+      "description": "Discover practical applications of Arabic calligraphy for weddings, business, social media, and religious purposes with professional examples and tutorials.",
+      "url": "https://arabic-calligraphy-generator.com/use-cases"
+}) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
@@ -160,7 +170,7 @@ export default function UseCasesPage() {
                 <Button asChild className="bg-gray-900 hover:bg-gray-800 text-white">
                   <Link href="/">Start Creating Now</Link>
                 </Button>
-                <Button asChild variant="outline" className="border-gray-600 text-gray-600 hover:bg-gray-50">
+                <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
                   <Link href="/tutorials">View Tutorials</Link>
                 </Button>
               </div>
@@ -220,7 +230,7 @@ export default function UseCasesPage() {
                 <Button asChild className="bg-white text-gray-900 hover:bg-gray-100">
                   <Link href="/">Create Calligraphy Now</Link>
                 </Button>
-                <Button asChild variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
+                <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white border-amber-600">
                   <Link href="/fonts">Browse Font Library</Link>
                 </Button>
               </div>
@@ -230,16 +240,16 @@ export default function UseCasesPage() {
             <div className="mt-12 text-center">
               <h2 className="text-xl font-bold text-gray-800 mb-6">Related Resources</h2>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button asChild variant="outline" className="border-gray-600 text-gray-600 hover:bg-gray-50">
+                <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
                   <Link href="/tutorials/arabic-font-selection-guide">Font Selection Guide</Link>
                 </Button>
-                <Button asChild variant="outline" className="border-gray-600 text-gray-600 hover:bg-gray-50">
+                <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
                   <Link href="/tutorials/arabic-calligraphy-design-tips">Design Tips</Link>
                 </Button>
-                <Button asChild variant="outline" className="border-gray-600 text-gray-600 hover:bg-gray-50">
+                <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
                   <Link href="/tutorials/how-to-create-arabic-calligraphy-online">Creation Tutorial</Link>
                 </Button>
-                <Button asChild variant="outline" className="border-gray-600 text-gray-600 hover:bg-gray-50">
+                <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
                   <Link href="/blog">Blog & Insights</Link>
                 </Button>
               </div>

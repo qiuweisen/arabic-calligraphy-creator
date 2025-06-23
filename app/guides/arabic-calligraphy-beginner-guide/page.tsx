@@ -190,7 +190,7 @@ export default function ArabicCalligraphyBeginnerGuidePage() {
                   Start Learning Now <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="/resources/design-inspiration">
+              <Link href="/resources/free-arabic-fonts">
                 <Button variant="outline" className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 px-6 py-3">
                   View Examples
                 </Button>
@@ -526,23 +526,23 @@ export default function ArabicCalligraphyBeginnerGuidePage() {
             
             <Card className="border-emerald-200 hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
-                <h3 className="font-semibold text-gray-900 mb-2">Design Templates</h3>
-                <p className="text-sm text-gray-600 mb-4">Ready-made templates to practice and learn from</p>
-                <Link href="/resources/design-templates">
+                <h3 className="font-semibold text-gray-900 mb-2">Free Arabic Fonts</h3>
+                <p className="text-sm text-gray-600 mb-4">Download high-quality Arabic fonts for practice</p>
+                <Link href="/resources/free-arabic-fonts">
                   <Button variant="outline" size="sm" className="border-emerald-600 text-emerald-600 hover:bg-emerald-50">
-                    Browse Templates <ArrowRight className="ml-1 h-3 w-3" />
+                    Download Fonts <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>
                 </Link>
               </CardContent>
             </Card>
-            
+
             <Card className="border-emerald-200 hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
-                <h3 className="font-semibold text-gray-900 mb-2">Design Inspiration</h3>
-                <p className="text-sm text-gray-600 mb-4">Beautiful examples to inspire your learning journey</p>
-                <Link href="/resources/design-inspiration">
+                <h3 className="font-semibold text-gray-900 mb-2">Practice Online</h3>
+                <p className="text-sm text-gray-600 mb-4">Start practicing with our online calligraphy generator</p>
+                <Link href="/">
                   <Button variant="outline" size="sm" className="border-emerald-600 text-emerald-600 hover:bg-emerald-50">
-                    Get Inspired <ArrowRight className="ml-1 h-3 w-3" />
+                    Start Creating <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>
                 </Link>
               </CardContent>

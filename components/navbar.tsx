@@ -47,16 +47,7 @@ export function Navbar() {
       label: "Resources",
       href: "/resources",
       dropdown: [
-        { label: "Design Inspiration", href: "/resources/design-inspiration" },
-        { label: "Design Templates", href: "/resources/design-templates" },
         { label: "Free Arabic Fonts", href: "/resources/free-arabic-fonts" }
-      ]
-    },
-    {
-      label: "Tools",
-      href: "/tools",
-      dropdown: [
-        { label: "Color Palette Generator", href: "/tools/color-palette-generator" }
       ]
     },
     { label: "Use Cases", href: "/use-cases" },

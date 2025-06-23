@@ -520,9 +520,8 @@ export default function Home() {
                     ))}
                   </div>
                   <div className="mt-4 text-center">
-                    <Button 
-                      variant="outline" 
-                      className="border-amber-600 text-amber-600 hover:bg-amber-50"
+                    <Button
+                      className="bg-amber-600 hover:bg-amber-700 text-white border-amber-600"
                       onClick={() => {
                         const newShowAll = !showAllFeaturedFonts
                         setShowAllFeaturedFonts(newShowAll)
@@ -661,7 +660,7 @@ export default function Home() {
                   ))}
                 </Accordion>
                 <div className="mt-4 text-center">
-                  <Button asChild variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
+                  <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
                     <Link href="/faq">View All FAQs</Link>
                   </Button>
                 </div>

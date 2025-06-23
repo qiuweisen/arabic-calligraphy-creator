@@ -49,8 +49,6 @@ const TUTORIALS_PAGES = [
 
 // Resources pages data
 const RESOURCES_PAGES = [
-  'design-inspiration',
-  'design-templates',
   'free-arabic-fonts'
 ]
 
@@ -62,10 +60,7 @@ const USE_CASES_PAGES = [
   'religious-arabic-calligraphy'
 ]
 
-// Tools pages data
-const TOOLS_PAGES = [
-  'color-palette-generator'
-]
+
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://arabic-calligraphy-generator.com'
@@ -156,10 +151,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     },
+
     {
-      url: `${baseUrl}/templates`,
+      url: `${baseUrl}/about/arabic-calligraphy-history`,
       lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
+      changeFrequency: 'yearly' as const,
       priority: 0.6,
     },
   ]
@@ -212,13 +208,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  // Tools pages
-  const toolsPages = TOOLS_PAGES.map(slug => ({
-    url: `${baseUrl}/tools/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
-  }))
+
 
   return [
     ...staticPages,
@@ -227,7 +217,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...guidesPages,
     ...tutorialsPages,
     ...resourcesPages,
-    ...useCasesPages,
-    ...toolsPages
+    ...useCasesPages
   ]
 } 

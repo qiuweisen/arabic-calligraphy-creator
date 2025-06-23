@@ -134,7 +134,7 @@ export default function FreeArabicFontsPage() {
                 </Button>
               </Link>
               <Link href="/fonts">
-                <Button variant="outline" className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 px-6 py-3">
+                <Button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3">
                   Browse All Fonts
                 </Button>
               </Link>
@@ -352,11 +352,11 @@ export default function FreeArabicFontsPage() {
             
             <Card className="border-emerald-200 hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
-                <h3 className="font-semibold text-gray-900 mb-2">Design Templates</h3>
-                <p className="text-sm text-gray-600 mb-4">Ready-to-use Arabic calligraphy templates and designs</p>
-                <Link href="/resources/design-templates">
+                <h3 className="font-semibold text-gray-900 mb-2">Online Generator</h3>
+                <p className="text-sm text-gray-600 mb-4">Use these fonts with our online Arabic calligraphy generator</p>
+                <Link href="/">
                   <Button variant="outline" size="sm" className="border-emerald-600 text-emerald-600 hover:bg-emerald-50">
-                    View Templates <ArrowRight className="ml-1 h-3 w-3" />
+                    Start Creating <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>
                 </Link>
               </CardContent>

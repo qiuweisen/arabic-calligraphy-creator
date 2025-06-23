@@ -48,8 +48,52 @@ const GUIDES = [
 ]
 
 export default function GuidesPage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Arabic Calligraphy Guides",
+    "description": "Comprehensive guides for learning Arabic calligraphy, font selection, typography trends, and design principles. From beginner to advanced tutorials.",
+    "url": "https://arabic-calligraphy-generator.com/guides",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": GUIDES.map((guide, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "HowTo",
+          "name": guide.title,
+          "description": guide.description,
+          "url": `https://arabic-calligraphy-generator.com${guide.href}`,
+          "totalTime": guide.duration,
+          "skillLevel": guide.difficulty
+        }
+      }))
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://arabic-calligraphy-generator.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://arabic-calligraphy-generator.com/guides"
+        }
+      ]
+    }
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
@@ -129,7 +173,7 @@ export default function GuidesPage() {
                 <Button asChild className="bg-white text-blue-900 hover:bg-gray-100">
                   <Link href="/">Create Calligraphy</Link>
                 </Button>
-                <Button asChild variant="outline" className="border-blue-400 text-white hover:bg-blue-800">
+                <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
                   <Link href="/tutorials">View Tutorials</Link>
                 </Button>
               </div>

@@ -14,9 +14,8 @@ const INTERNAL_LINKS = [
   '/',
   '/fonts',
   '/guides',
-  '/tutorials', 
+  '/tutorials',
   '/resources',
-  '/tools',
   '/use-cases',
   '/blog',
   '/faq',
@@ -35,12 +34,7 @@ const INTERNAL_LINKS = [
   '/tutorials/download-and-use-arabic-fonts',
   
   // Resources 下拉菜单
-  '/resources/design-inspiration',
-  '/resources/design-templates',
-  '/resources/free-arabic-fonts',
-  
-  // Tools 下拉菜单
-  '/tools/color-palette-generator',
+  '/resources/free-arabic-fonts'
   
   // Footer 链接
   '/features',

@@ -87,6 +87,16 @@ export default function FAQPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "name": "Arabic Calligraphy FAQ",
+      "description": "Frequently asked questions about Arabic calligraphy, our generator tool, fonts, and design techniques. Get expert answers to common questions.",
+      "url": "https://arabic-calligraphy-generator.com/faq"
+}) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
       <div className="container mx-auto px-4 py-8 md:py-16">
@@ -161,7 +171,7 @@ export default function FAQPage() {
             <Button asChild className="bg-amber-600 hover:bg-amber-700">
               <Link href="/">Try Our Calligraphy Generator</Link>
             </Button>
-            <Button asChild variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
+            <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
               <Link href="/blog">Browse Our Blog</Link>
             </Button>
           </div>
