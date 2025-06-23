@@ -79,6 +79,17 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
         <link rel="icon" href="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/favicon.ico" sizes="any" />
+
+        {/* 预加载关键资源 */}
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" as="style" />
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" as="style" />
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap" as="style" />
+
+        {/* DNS预解析 */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="//pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev" />
+
         {/* Google Fonts <link> tags removed as next/font handles this */}
       </head>
       <body className={`${inter.className} font-sans`}>

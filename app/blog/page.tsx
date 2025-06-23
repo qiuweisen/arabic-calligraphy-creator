@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { ArrowRight, Type } from "lucide-react"
 import { getFeaturedFonts } from "@/lib/content-links"
+import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
   title: "Arabic Calligraphy Blog | History, Styles & Tutorials",
@@ -66,7 +68,9 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
       <div className="container mx-auto px-4 py-8 md:py-16">
         <header className="mb-12 text-center">
           <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-800 to-amber-600 mb-4">
@@ -162,5 +166,7 @@ export default function BlogPage() {
         </div>
       </div>
     </main>
+    <Footer />
+    </>
   )
 }

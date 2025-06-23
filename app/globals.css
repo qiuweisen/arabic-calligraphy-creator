@@ -62,4 +62,5 @@
 
 .font-arabic {
   font-family: "Amiri", "Scheherazade New", "Noto Naskh Arabic", serif;
+  font-display: swap; /* 优化字体加载 */
 }
