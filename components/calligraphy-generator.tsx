@@ -300,11 +300,13 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
         initial_load: true
       });
     }
-    
+
     // 暂时禁用预加载，只在用户选择字体时才加载
     // 这样可以避免页面加载时的字体错误
     console.log('Font loader initialized, fonts will load on demand')
   }, [loadFont])
+
+
 
   // Handle external font changes
   useEffect(() => {

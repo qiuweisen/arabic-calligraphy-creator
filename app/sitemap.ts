@@ -31,6 +31,37 @@ const FONT_PAGES = [
   'marhey'
 ]
 
+// Guides pages data
+const GUIDES_PAGES = [
+  'arabic-calligraphy-beginner-guide',
+  'arabic-font-comparison',
+  'best-arabic-fonts-2025',
+  'arabic-typography-trends-2025'
+]
+
+// Tutorials pages data
+const TUTORIALS_PAGES = [
+  'how-to-create-arabic-calligraphy-online',
+  'arabic-font-selection-guide',
+  'arabic-calligraphy-design-tips',
+  'download-and-use-arabic-fonts'
+]
+
+// Resources pages data
+const RESOURCES_PAGES = [
+  'free-arabic-fonts'
+]
+
+// Use cases pages data
+const USE_CASES_PAGES = [
+  'wedding-arabic-calligraphy',
+  'business-logo-arabic-fonts',
+  'social-media-arabic-typography',
+  'religious-arabic-calligraphy'
+]
+
+
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://arabic-calligraphy-generator.com'
   
@@ -49,6 +80,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/guides`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/tutorials`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/resources`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tools`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/use-cases`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
@@ -58,7 +119,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/faq`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: 0.7,
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/contact`,
@@ -90,16 +151,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     },
+
     {
-      url: `${baseUrl}/tutorials`,
+      url: `${baseUrl}/about/arabic-calligraphy-history`,
       lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/templates`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
+      changeFrequency: 'yearly' as const,
       priority: 0.6,
     },
   ]
@@ -120,5 +176,47 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...blogPages, ...fontPages]
+  // Guides pages
+  const guidesPages = GUIDES_PAGES.map(slug => ({
+    url: `${baseUrl}/guides/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
+
+  // Tutorials pages
+  const tutorialsPages = TUTORIALS_PAGES.map(slug => ({
+    url: `${baseUrl}/tutorials/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  // Resources pages
+  const resourcesPages = RESOURCES_PAGES.map(slug => ({
+    url: `${baseUrl}/resources/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
+  // Use cases pages
+  const useCasesPages = USE_CASES_PAGES.map(slug => ({
+    url: `${baseUrl}/use-cases/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+
+
+  return [
+    ...staticPages,
+    ...blogPages,
+    ...fontPages,
+    ...guidesPages,
+    ...tutorialsPages,
+    ...resourcesPages,
+    ...useCasesPages
+  ]
 } 

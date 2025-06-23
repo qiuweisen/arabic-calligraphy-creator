@@ -69,6 +69,16 @@ const blogPosts = [
 export default function BlogPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Arabic Calligraphy Blog",
+      "description": "Explore the rich world of Arabic calligraphy through our comprehensive blog covering history, techniques, famous calligraphers, and modern applications.",
+      "url": "https://arabic-calligraphy-generator.com/blog"
+}) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
       <div className="container mx-auto px-4 py-8 md:py-16">

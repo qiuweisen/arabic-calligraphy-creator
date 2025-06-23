@@ -11,15 +11,15 @@ import { getContentSpecificLinks } from "@/lib/content-links"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Beginner's Guide to Arabic Calligraphy",
-  description: "Learn Arabic calligraphy basics with our comprehensive guide covering essential tools, techniques, and fundamental strokes for aspiring calligraphers.",
-  keywords: "beginners guide to calligraphy, Arabic calligraphy, Islamic art, Arabic typography, calligraphy guide, Arabic script",
+  title: "Quick Start Guide to Arabic Calligraphy - Essential Tips for Beginners",
+  description: "Get started with Arabic calligraphy quickly! Learn essential tools, basic techniques, and first steps to begin your calligraphy journey today.",
+  keywords: "quick start arabic calligraphy, arabic calligraphy tips, calligraphy basics, arabic writing basics, calligraphy first steps, islamic art introduction",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/blog/beginners-guide-to-calligraphy",
   },
   openGraph: {
-    title: "Beginner's Guide to Arabic Calligraphy",
-    description: "Learn Arabic calligraphy basics with our comprehensive guide covering essential tools, techniques, and fundamental strokes for aspiring calligraphers.",
+    title: "Quick Start Guide to Arabic Calligraphy - Essential Tips for Beginners",
+    description: "Get started with Arabic calligraphy quickly! Learn essential tools, basic techniques, and first steps to begin your calligraphy journey today.",
     url: "https://arabic-calligraphy-generator.com/blog/beginners-guide-to-calligraphy",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
@@ -51,8 +51,8 @@ export default function BeginnersGuideToCalligraphyPage() {
               </Link>
             </Button>
             
-            <span className="text-xs text-amber-600 font-medium px-2 py-1 bg-amber-50 rounded-full">Tutorials</span>
-            <h1 className="text-3xl md:text-4xl font-bold text-amber-800 mt-4 mb-6">Beginner's Guide to Arabic Calligraphy</h1>
+            <span className="text-xs text-amber-600 font-medium px-2 py-1 bg-amber-50 rounded-full">Quick Start</span>
+            <h1 className="text-3xl md:text-4xl font-bold text-amber-800 mt-4 mb-6">Quick Start Guide to Arabic Calligraphy</h1>
             <p className="text-sm text-muted-foreground mb-8">Published on September 10, 2023</p>
             
             <div className="prose prose-amber max-w-none">
@@ -68,7 +68,7 @@ export default function BeginnersGuideToCalligraphyPage() {
               </div>
               
               <p className="lead text-lg text-amber-700">
-                Arabic calligraphy is a revered art form with <Link href="/blog/the-rich-history-of-arabic-calligraphy" className="text-amber-600 hover:text-amber-800 underline">centuries of tradition</Link> behind it. While mastering this art requires years of practice, everyone has to start somewhere. This guide will introduce you to the fundamentals of Arabic calligraphy, from gathering the right tools to understanding basic techniques and practical exercises for beginners.
+                Want to start creating Arabic calligraphy today? This quick-start guide gives you the essential knowledge to begin your journey immediately. We'll cover the must-know basics, essential tools, and your first practice steps. For a comprehensive learning path, check out our <Link href="/guides/arabic-calligraphy-beginner-guide" className="text-amber-600 hover:text-amber-800 underline">complete beginner guide</Link>.
               </p>
               
               <h2 id="understanding-the-basics">Understanding the Basics</h2>

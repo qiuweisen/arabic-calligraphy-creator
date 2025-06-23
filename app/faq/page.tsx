@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
@@ -84,7 +86,19 @@ export default function FAQPage() {
   const generatorQuestionsEndIndex = 10;
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "name": "Arabic Calligraphy FAQ",
+      "description": "Frequently asked questions about Arabic calligraphy, our generator tool, fonts, and design techniques. Get expert answers to common questions.",
+      "url": "https://arabic-calligraphy-generator.com/faq"
+}) }}
+      />
+      <Navbar />
+      <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
       <div className="container mx-auto px-4 py-8 md:py-16">
         <header className="mb-12 text-center">
           <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-800 to-amber-600 mb-4">
@@ -157,12 +171,14 @@ export default function FAQPage() {
             <Button asChild className="bg-amber-600 hover:bg-amber-700">
               <Link href="/">Try Our Calligraphy Generator</Link>
             </Button>
-            <Button asChild variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
+            <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
               <Link href="/blog">Browse Our Blog</Link>
             </Button>
           </div>
         </div>
       </div>
     </main>
+    <Footer />
+    </>
   )
 }

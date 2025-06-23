@@ -17,6 +17,16 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Us",
+      "description": "Get in touch with our Arabic calligraphy experts. Contact us for support, feedback, or collaboration opportunities.",
+      "url": "https://arabic-calligraphy-generator.com/contact"
+}) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
