@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     default: "Arabic Calligraphy Generator - Free Tool | الخط العربي",
     template: "%s | Arabic Calligraphy Generator"
   },
-  description: "Use our free Arabic calligraphy generator to create stunning script art online. Discover fonts, customize styles, and download your unique designs easily.",
+  description: "🎨 FREE Arabic Calligraphy Generator | Create stunning Islamic art online instantly! 13+ fonts, instant download PNG/SVG. No signup required ✨",
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: "Free Arabic Calligraphy Generator - Online Islamic Art Tool | الخط العربي",
-    description: "Design beautiful Arabic calligraphy & Islamic art online with our free generator. Multiple fonts, styles, & easy sharing.",
+    description: "🎨 Create stunning Arabic calligraphy instantly! FREE online generator with 13+ fonts. Download PNG/SVG in seconds. No signup needed ✨",
     url: siteUrl,
     siteName: 'Arabic Calligraphy Generator',
     images: [
@@ -45,15 +45,10 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Free Arabic Calligraphy Generator - Create Islamic Script Online | الخط العربي",
-    description: "Use our free Arabic calligraphy generator to design beautiful Arabic script and Islamic art. Easy to use, multiple fonts and styles.",
+    description: "🎨 FREE Arabic Calligraphy Generator! Create beautiful Islamic art online instantly. 13+ fonts, instant PNG/SVG download. Try now! ✨",
     images: [`${cdnBaseUrl}/twitter-image.png`],
   },
-  keywords: [
-    "free arabic calligraphy generator",
-    "islamic art generator",
-    "arabic fonts",
-    "الخط العربي",
-  ],
+
   robots: {
     index: true,
     follow: true,

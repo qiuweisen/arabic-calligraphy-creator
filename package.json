@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "verify-seo": "node scripts/verify-seo.js",
-    "analyze": "ANALYZE=true npm run build"
+    "analyze": "ANALYZE=true npm run build",
+    "submit-indexnow": "node scripts/submit-to-indexnow.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

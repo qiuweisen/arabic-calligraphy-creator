@@ -209,6 +209,9 @@ const COMMON_PHRASES = [
 
 const DEFAULT_TEXT = "بسم الله الرحمن الرحيم"
 
+// Sample text for font preview in selector
+const FONT_PREVIEW_TEXT = "بسم الله"
+
 // Font name mapping for external integration
 const FONT_NAME_MAP: Record<string, string> = {
   'Amiri': "'Amiri', serif",
@@ -989,30 +992,45 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                 <div key={category} className="px-2 py-1">
                   <div className="text-xs font-semibold text-muted-foreground mb-1">{category}</div>
                   {ARABIC_FONTS.filter((font) => font.category === category).map((font) => (
-                    <SelectItem key={font.name} value={font.value} className="py-3 flex justify-between min-h-[44px]">
-                      <div className="flex items-center gap-2">
-                        <span>{font.name}</span>
-                        {isFontLoading(font.value) && (
-                          <div className="w-3 h-3 border border-amber-600 border-t-transparent rounded-full animate-spin" />
-                        )}
-                        {isFontLoaded(font.value) && !isFontLoading(font.value) && (
-                          <div className="w-2 h-2 bg-green-500 rounded-full" />
-                        )}
+                    <SelectItem key={font.name} value={font.value} className="py-4 min-h-[70px]">
+                      <div className="flex items-center justify-between w-full">
+                        <div className="flex flex-col gap-1 flex-1">
+                          <div className="flex items-center gap-2">
+                            <span className="text-sm font-medium text-gray-700">{font.name}</span>
+                            {isFontLoading(font.value) && (
+                              <div className="w-3 h-3 border border-amber-600 border-t-transparent rounded-full animate-spin" />
+                            )}
+                            {isFontLoaded(font.value) && !isFontLoading(font.value) && (
+                              <div className="w-2 h-2 bg-green-500 rounded-full" />
+                            )}
+                          </div>
+                          <div
+                            style={{
+                              fontFamily: font.value,
+                              fontSize: '18px',
+                              lineHeight: '1.2'
+                            }}
+                            dir="rtl"
+                            className="text-amber-800 font-medium"
+                          >
+                            {FONT_PREVIEW_TEXT}
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            toggleFavorite(font.value)
+                          }}
+                          className="text-amber-500 hover:text-amber-600 p-1 ml-2"
+                        >
+                          {favorites.includes(font.value) ? (
+                            <Bookmark className="h-4 w-4 fill-current" />
+                          ) : (
+                            <Bookmark className="h-4 w-4" />
+                          )}
+                        </button>
                       </div>
-                      <button
-                        type="button"
-                        onClick={(e) => {
-                          e.stopPropagation()
-                          toggleFavorite(font.value)
-                        }}
-                        className="text-amber-500 hover:text-amber-600 p-1"
-                      >
-                        {favorites.includes(font.value) ? (
-                          <Bookmark className="h-4 w-4 fill-current" />
-                        ) : (
-                          <Bookmark className="h-4 w-4" />
-                        )}
-                      </button>
                     </SelectItem>
                   ))}
                 </div>
@@ -1022,8 +1040,29 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                 <div className="px-2 py-1">
                   <div className="text-xs font-semibold text-muted-foreground mb-1">Favorites</div>
                   {ARABIC_FONTS.filter((font) => favorites.includes(font.value)).map((font) => (
-                    <SelectItem key={`fav-${font.name}`} value={font.value} className="py-3 min-h-[44px]">
-                      {font.name}
+                    <SelectItem key={`fav-${font.name}`} value={font.value} className="py-4 min-h-[70px]">
+                      <div className="flex flex-col gap-1 w-full">
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm font-medium text-gray-700">{font.name}</span>
+                          {isFontLoading(font.value) && (
+                            <div className="w-3 h-3 border border-amber-600 border-t-transparent rounded-full animate-spin" />
+                          )}
+                          {isFontLoaded(font.value) && !isFontLoading(font.value) && (
+                            <div className="w-2 h-2 bg-green-500 rounded-full" />
+                          )}
+                        </div>
+                        <div
+                          style={{
+                            fontFamily: font.value,
+                            fontSize: '18px',
+                            lineHeight: '1.2'
+                          }}
+                          dir="rtl"
+                          className="text-amber-800 font-medium"
+                        >
+                          {FONT_PREVIEW_TEXT}
+                        </div>
+                      </div>
                     </SelectItem>
                   ))}
                 </div>
