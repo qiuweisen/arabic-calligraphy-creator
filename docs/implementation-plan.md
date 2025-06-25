@@ -35,6 +35,59 @@
   - 自动更新字体选择器为被点击的字体（待与CalligraphyGenerator集成）
   - 添加 JavaScript 函数处理字体切换逻辑
 
+#### 1.2 内链权重传递优化 - Done
+
+**实施日期**：2024年1月
+
+**优化内容**：
+- [x] **导航栏锚文本优化** - Done
+  - "Home" → "Generator" (强化核心关键词)
+  - "Guides" → "Learning Guides" (明确定位)
+  - "Tutorials" → "How-to Tutorials" (差异化定位)
+  - "Resources" → "Free Resources" (突出免费属性)
+
+- [x] **Footer权重传递强化** - Done
+  - 品牌描述融入"free online Arabic calligraphy generator"
+  - "Quick Links" → "Arabic Calligraphy" (主题聚焦)
+  - "Resources" → "Learning Resources" (明确分类)
+  - 所有链接锚文本包含相关关键词
+
+- [x] **创建统一CTA组件** - Done
+  - 新建 `components/generator-cta.tsx`
+  - 三种变体：compact、default、featured
+  - 统一的"回到生成器"内链策略
+  - 为所有页面提供标准化的权重传递组件
+
+- [x] **部署CTA组件到高权重页面** - Done
+  - 博客文章中间添加compact CTA (`six-major-calligraphy-styles`)
+  - 教程页面中间添加compact CTA (`how-to-create-arabic-calligraphy-online`)
+  - 字体页面添加featured CTA (`noto-naskh-arabic`)
+  - 增强长内容页面的权重传递效果
+
+#### 1.3 页面关键词聚焦优化 - Done
+
+**实施日期**：2024年1月
+
+**优化内容**：
+- [x] **系统性关键词审查** - Done
+  - 创建 `docs/keyword-focus-audit.md` 详细分析报告
+  - 识别关键词冲突和蚕食风险
+  - 制定三级优先级优化计划
+
+- [x] **第一优先级页面优化** - Done
+  - FAQ页面：避免与首页直接竞争核心关键词
+  - Guides页面：强化"学习"定位，区别于tutorials
+  - Tutorials页面：强化"实操指导"定位
+  - Blog页面：聚焦"文化知识"而非教程
+  - Fonts页面：强化"Collection"概念
+  - Resources页面：突出"Free Resources"
+  - Features页面：确保支撑首页而非竞争
+
+- [x] **具体页面关键词冲突解决** - Done
+  - 修复guides子页面中的"Tutorial"关键词重叠
+  - 确保每个页面都有独特的核心关键词
+  - 建立清晰的关键词层级结构
+
 - [x] **详情触发区改造** - Done
   - 将右侧 `→` 箭头替换为 `Details` 按钮
   - 实现折叠面板 (Accordion) 功能

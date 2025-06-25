@@ -21,10 +21,10 @@ export function Navbar() {
   }, [])
 
   const navItems = [
-    { label: "Home", href: "/" },
+    { label: "Generator", href: "/" }, // 强化核心关键词
     { label: "Arabic Fonts", href: "/fonts" },
     {
-      label: "Guides",
+      label: "Learning Guides",
       href: "/guides",
       dropdown: [
         { label: "Complete Beginner Guide", href: "/guides/arabic-calligraphy-beginner-guide" },
@@ -34,7 +34,7 @@ export function Navbar() {
       ]
     },
     {
-      label: "Tutorials",
+      label: "How-to Tutorials",
       href: "/tutorials",
       dropdown: [
         { label: "Create Calligraphy Online", href: "/tutorials/how-to-create-arabic-calligraphy-online" },
@@ -44,7 +44,7 @@ export function Navbar() {
       ]
     },
     {
-      label: "Resources",
+      label: "Free Resources",
       href: "/resources",
       dropdown: [
         { label: "Free Arabic Fonts", href: "/resources/free-arabic-fonts" }

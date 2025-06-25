@@ -11,9 +11,9 @@ import { FontCard } from "@/components/font-card"
 import { BLOG_LINKS } from "@/lib/content-links"
 
 export const metadata: Metadata = {
-  title: "Arabic Fonts: Naskh, Kufi, Diwani & More | Calligraphy Library",
-  description: "Discover diverse Arabic calligraphy fonts: Traditional Naskh, Kufi, Diwani, Modern & Display. Find the perfect font for your Islamic art & typography projects.",
-  keywords: "Arabic fonts, calligraphy, Naskh, Kufi, Diwani, Thuluth, Ruqaa, Islamic art, typography, font styles",
+  title: "Arabic Font Collection | Browse 17+ Calligraphy Fonts",
+  description: "Browse our curated Arabic font collection featuring Traditional Naskh, Kufi, Diwani, Modern & Display fonts. Complete font library for your calligraphy projects.",
+  keywords: "Arabic font collection, Arabic fonts library, calligraphy fonts, Naskh fonts, Kufi fonts, Diwani fonts, Arabic typography fonts",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/fonts",
   },

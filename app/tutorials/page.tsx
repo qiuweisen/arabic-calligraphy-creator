@@ -7,9 +7,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { PlayCircle, Book, Lightbulb, Palette, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Arabic Calligraphy Tutorials | Complete Learning Guide 2024",
-  description: "Master Arabic calligraphy with our comprehensive tutorials and use cases. From beginner guides to advanced techniques, learn font selection, design tips, and real-world applications.",
-  keywords: "Arabic calligraphy tutorial, how to create Arabic typography, Arabic calligraphy generator guide, learn Arabic calligraphy, Arabic font tutorial, Arabic design tips",
+  title: "Arabic Calligraphy How-to Tutorials | Step-by-Step Instructions",
+  description: "Step-by-step tutorials for creating Arabic calligraphy. Practical instructions for font selection, design techniques, and using our generator tool effectively.",
+  keywords: "how to create arabic calligraphy, arabic calligraphy tutorial, step by step calligraphy guide, arabic font selection tutorial, calligraphy design tips",
 }
 
 const BEGINNER_TUTORIALS = [

@@ -7,9 +7,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Palette, Download, Lightbulb, ArrowRight, Star } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Arabic Calligraphy Resources | Design Templates, Fonts & Inspiration",
-  description: "Free Arabic calligraphy resources including design templates, font downloads, and creative inspiration for your projects.",
-  keywords: "arabic calligraphy resources, free arabic fonts, design templates, calligraphy inspiration",
+  title: "Free Arabic Calligraphy Resources | Templates & Design Assets",
+  description: "Download free Arabic calligraphy resources including design templates, font collections, and creative assets for your typography projects.",
+  keywords: "free arabic calligraphy resources, free arabic fonts download, calligraphy templates, arabic design assets, free typography resources",
 }
 
 const RESOURCES = [

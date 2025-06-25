@@ -7,9 +7,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { BookOpen, ArrowRight, Star, Clock, Users } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Arabic Calligraphy Guides | Complete Learning Resources & Tutorials",
-  description: "Comprehensive guides for learning Arabic calligraphy, font selection, typography trends, and design principles. From beginner to advanced tutorials.",
-  keywords: "arabic calligraphy guides, arabic typography tutorials, font selection guide, calligraphy learning resources",
+  title: "Arabic Calligraphy Learning Guides | Comprehensive Study Path",
+  description: "Comprehensive learning guides for mastering Arabic calligraphy, understanding font characteristics, typography trends, and design principles. Structured learning path from beginner to advanced.",
+  keywords: "arabic calligraphy learning, calligraphy study guide, arabic typography learning, font comparison guide, calligraphy education resources",
 }
 
 const GUIDES = [

@@ -10,6 +10,7 @@ import Image from "next/image"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
 import { Breadcrumb } from "@/components/breadcrumb"
+import { GeneratorCTA } from "@/components/generator-cta"
 
 export const metadata: Metadata = {
   title: "Six Major Arabic Calligraphy Styles Guide",
@@ -216,7 +217,12 @@ export default function SixMajorCalligraphyStylesPage() {
                     </CardContent>
                   </Card>
                 </TabsContent>
-                
+
+                {/* Mid-article CTA */}
+                <div className="my-8">
+                  <GeneratorCTA variant="compact" />
+                </div>
+
                 <TabsContent value="kufi" className="mt-6">
                   <Card className="border-amber-200">
                     <CardContent className="p-6">

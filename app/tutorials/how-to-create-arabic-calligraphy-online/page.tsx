@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, Download, Palette, Type, Settings } from 'lucide-react'
 import Link from 'next/link'
+import { GeneratorCTA } from '@/components/generator-cta'
 
 export const metadata: Metadata = {
   title: 'How to Create Arabic Calligraphy Online - Complete Tutorial Guide | Arabic Calligraphy Generator',
@@ -410,6 +411,11 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
                 </div>
               </CardContent>
             </Card>
+
+            {/* Mid-tutorial CTA */}
+            <div className="my-8">
+              <GeneratorCTA variant="compact" />
+            </div>
 
             {/* Step 3: Customizing Style and Effects */}
             <Card className="border-amber-200 shadow-lg">

@@ -14,7 +14,7 @@ export function Footer() {
               <span className="font-bold text-amber-100">ArabicCalligraphy</span>
             </div>
             <p className="text-amber-200 mb-4 text-sm">
-              Create beautiful Arabic calligraphy with our easy-to-use online generator.
+              Create beautiful Arabic calligraphy with our free online Arabic calligraphy generator.
             </p>
             <div className="flex space-x-4">
               <Link href="#" className="text-amber-200 hover:text-white transition-colors">
@@ -33,26 +33,26 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold text-white mb-4 text-sm uppercase">Quick Links</h3>
+            <h3 className="font-bold text-white mb-4 text-sm uppercase">Arabic Calligraphy</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/" className="text-amber-200 hover:text-white transition-colors">
-                  Home
+                  Arabic Calligraphy Generator
                 </Link>
               </li>
               <li>
                 <Link href="/features" className="text-amber-200 hover:text-white transition-colors">
-                  Features
+                  Generator Features
                 </Link>
               </li>
               <li>
                 <Link href="/blog" className="text-amber-200 hover:text-white transition-colors">
-                  Blog
+                  Calligraphy Blog
                 </Link>
               </li>
               <li>
                 <Link href="/faq" className="text-amber-200 hover:text-white transition-colors">
-                  FAQ
+                  Generator FAQ
                 </Link>
               </li>
               <li>
@@ -64,26 +64,26 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold text-white mb-4 text-sm uppercase">Resources</h3>
+            <h3 className="font-bold text-white mb-4 text-sm uppercase">Learning Resources</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/tutorials" className="text-amber-200 hover:text-white transition-colors">
-                  Tutorials
+                  Calligraphy Tutorials
                 </Link>
               </li>
               <li>
                 <Link href="/guides" className="text-amber-200 hover:text-white transition-colors">
-                  Guides
+                  Learning Guides
                 </Link>
               </li>
               <li>
                 <Link href="/fonts" className="text-amber-200 hover:text-white transition-colors">
-                  Font Gallery
+                  Arabic Font Collection
                 </Link>
               </li>
               <li>
                 <Link href="/resources/free-arabic-fonts" className="text-amber-200 hover:text-white transition-colors">
-                  Free Fonts
+                  Free Arabic Fonts
                 </Link>
               </li>
             </ul>
