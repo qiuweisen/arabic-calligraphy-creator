@@ -114,7 +114,6 @@ export const ALL_PAGES = [
   '/guides',
   '/use-cases',
   '/resources',
-  '/tools',
   '/features',
 
   // 静态页面

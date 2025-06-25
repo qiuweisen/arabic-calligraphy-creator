@@ -20,7 +20,6 @@ const CORE_PAGES = [
   '/guides',
   '/use-cases',
   '/resources',
-  '/tools',
   '/features'
 ];
 
