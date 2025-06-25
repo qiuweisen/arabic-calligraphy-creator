@@ -26,6 +26,17 @@ const PAGES_TO_CHECK = [
   '/blog',
   '/blog/beginners-guide-to-calligraphy',
   '/fonts',
+  '/guides',
+  '/tutorials',
+  '/resources',
+  '/use-cases',
+  '/templates',
+  '/faq',
+  '/contact',
+  '/features',
+  '/about-us',
+  '/privacy-policy',
+  '/terms-of-service',
   '/sitemap.xml'
 ];
 
