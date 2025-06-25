@@ -12,6 +12,7 @@ import { getContentSpecificLinks } from "@/lib/content-links"
 import { getFontInfoBySlug } from "@/app/lib/font-data"
 import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
+import { GeneratorCTA } from "@/components/generator-cta"
 
 export const metadata: Metadata = {
   title: "Noto Naskh Arabic: Google's Universal Font",
@@ -293,6 +294,11 @@ export default function NotoNaskhArabicFontPage() {
                   </p>
                 </CardContent>
               </Card>
+
+              {/* Featured CTA */}
+              <div className="my-12">
+                <GeneratorCTA variant="featured" />
+              </div>
 
               <h2 id="alphabet-showcase" className="text-3xl font-bold text-sky-800 mt-12 mb-6">Noto Naskh Arabic: Alphabet Clarity</h2>
               <Card className="border-sky-200 mb-12 bg-white">

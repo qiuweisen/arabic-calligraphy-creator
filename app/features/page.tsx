@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button"
 import { Check } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Features | Arabic Calligraphy Generator",
-  description: "Explore the powerful features of our Arabic Calligraphy Generator including font selection, customization options, and easy export capabilities.",
-  keywords: "Arabic calligraphy generator, Arabic typography tool, calligraphy features, Arabic font customization, Arabic text generator",
+  title: "Arabic Calligraphy Generator Features | Tool Capabilities",
+  description: "Discover the powerful features of our Arabic calligraphy generator: 17+ fonts, customization options, instant downloads, and professional-quality output.",
+  keywords: "arabic calligraphy generator features, calligraphy tool capabilities, arabic font features, generator specifications, calligraphy tool functions",
 }
 
 const FEATURES = [

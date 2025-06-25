@@ -9,10 +9,10 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Arabic Calligraphy Blog | History, Styles & Tutorials",
+  title: "Arabic Calligraphy Knowledge Base | History & Cultural Insights",
   description:
-    "Explore the rich world of Arabic calligraphy through our articles about history, styles, techniques and famous calligraphers.",
-  keywords: "Arabic calligraphy, Arabic script, Islamic calligraphy, calligraphy history, Arabic typography tutorial",
+    "Explore the rich cultural heritage of Arabic calligraphy through our articles about history, traditional styles, famous calligraphers, and cultural significance.",
+  keywords: "Arabic calligraphy history, Islamic calligraphy culture, Arabic script heritage, calligraphy styles, famous calligraphers, Arabic typography culture",
 }
 
 const blogPosts = [

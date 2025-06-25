@@ -8,9 +8,9 @@ import { ArrowRight, BookOpen, Play, CheckCircle, Star, Users, Clock, Award } fr
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Arabic Calligraphy Beginner Guide 2025 - Complete Tutorial for Beginners | Learn Islamic Art',
-  description: 'Complete beginner guide to Arabic calligraphy and Islamic art. Learn basic techniques, tools, fonts, and design principles. Start your calligraphy journey today.',
-  keywords: 'arabic calligraphy beginner guide,learn arabic calligraphy,islamic art tutorial,arabic writing tutorial,calligraphy for beginners,arabic typography basics',
+  title: 'Arabic Calligraphy Beginner Guide 2025 - Complete Learning Path | Islamic Art Study',
+  description: 'Comprehensive beginner guide to Arabic calligraphy and Islamic art. Study fundamental concepts, understand tools, explore fonts, and master design principles.',
+  keywords: 'arabic calligraphy beginner guide,learn arabic calligraphy,islamic art study,arabic calligraphy learning,calligraphy fundamentals,arabic typography study',
   openGraph: {
     title: 'Arabic Calligraphy Beginner Guide 2025 - Complete Tutorial for Beginners',
     description: 'Complete beginner guide to Arabic calligraphy and Islamic art. Learn basic techniques, tools, fonts, and design principles.',
