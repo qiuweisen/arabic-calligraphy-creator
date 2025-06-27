@@ -51,12 +51,7 @@ const nextConfig = {
       },
       
       // Legacy language redirects (keeping existing ones for old URLs)
-      { source: '/bn', destination: '/', permanent: true },
-      { source: '/hi', destination: '/', permanent: true },
-      { source: '/id', destination: '/', permanent: true },
-      { source: '/bn/:path*', destination: '/:path*', permanent: true },
-      { source: '/hi/:path*', destination: '/:path*', permanent: true },
-      { source: '/id/:path*', destination: '/:path*', permanent: true },
+      // Note: /bn is now supported as Bengali language, removed from redirects
       // Note: /ar routes are now handled by next-intl, so removed from redirects
       
       // HTTP to HTTPS redirect

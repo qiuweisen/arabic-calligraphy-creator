@@ -646,5 +646,22 @@
       "exploreFonts": "Explore our font collection",
       "viewAllTemplates": "View All Templates"
     }
+  },
+  "seo": {
+    "structuredData": {
+      "featureList": [
+        "13+ Arabic fonts including Kufi, Naskh, Diwani styles",
+        "Real-time Arabic text generation",
+        "Gradient and color customization",
+        "Background patterns and images",
+        "PNG and SVG export",
+        "Mobile responsive interface",
+        "No registration required"
+      ],
+      "applicationCategory": "DesignApplication",
+      "operatingSystem": "Web Browser",
+      "browserRequirements": "Requires JavaScript enabled",
+      "authorName": "Arabic Calligraphy Generator"
+    }
   }
 }

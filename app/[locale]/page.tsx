@@ -129,6 +129,7 @@ function loadFontDetails(fontSlug: string, panelElement: Element) {
 
 export default function Home() {
   const t = useTranslations('homepage');
+  const seoT = useTranslations('seo.structuredData');
 
   const [selectedFont, setSelectedFont] = useState<string | undefined>(undefined)
   
@@ -281,27 +282,19 @@ export default function Home() {
 
 
 
-  // 结构化数据 - SoftwareApplication Schema
+  // 结构化数据 - SoftwareApplication Schema (多语言支持)
   const softwareApplicationSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "Arabic Calligraphy Generator",
-    "description": "FREE Arabic Calligraphy Generator - Create stunning Islamic art online instantly! Features 13+ authentic fonts, instant PNG/SVG download, no signup required. Perfect for Arabic script art creation.",
+    "name": t('title'),
+    "description": t('intro'),
     "url": "https://arabic-calligraphy-generator.com",
-    "applicationCategory": "DesignApplication",
-    "operatingSystem": "Web Browser",
-    "browserRequirements": "Requires JavaScript enabled",
+    "applicationCategory": seoT('applicationCategory'),
+    "operatingSystem": seoT('operatingSystem'),
+    "browserRequirements": seoT('browserRequirements'),
     "softwareVersion": "2.0",
     "fileFormat": ["PNG", "SVG"],
-    "featureList": [
-      "13+ Arabic fonts including Kufi, Naskh, Diwani styles",
-      "Real-time Arabic text generation",
-      "Gradient and color customization",
-      "Background patterns and images",
-      "PNG and SVG export",
-      "Mobile responsive interface",
-      "No registration required"
-    ],
+    "featureList": seoT.raw('featureList'),
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -316,7 +309,7 @@ export default function Home() {
     "screenshot": "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/og-image.png",
     "author": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Generator"
+      "name": seoT('authorName')
     }
   };
 

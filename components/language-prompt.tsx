@@ -146,6 +146,20 @@ export function LanguagePrompt({ suggestedLocale, countryCode }: LanguagePromptP
           useLanguage: 'استخدم العربية',
           continueEnglish: 'Continue in English'
         };
+      case 'ur':
+        return {
+          title: 'ہیلو! ہم اپنی ویب سائٹ اردو میں فراہم کرتے ہیں',
+          subtitle: 'Hello! We offer our site in Urdu',
+          useLanguage: 'اردو استعمال کریں',
+          continueEnglish: 'Continue in English'
+        };
+      case 'bn':
+        return {
+          title: 'হ্যালো! আমরা আমাদের সাইট বাংলায় অফার করি',
+          subtitle: 'Hello! We offer our site in Bengali',
+          useLanguage: 'বাংলা ব্যবহার করুন',
+          continueEnglish: 'Continue in English'
+        };
       default:
         return {
           title: t('title'),

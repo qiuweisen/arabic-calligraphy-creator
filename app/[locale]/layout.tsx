@@ -23,6 +23,8 @@ export async function generateMetadata({
       languages: {
         'en': baseUrl,
         'ar': `${baseUrl}/ar`,
+        'ur': `${baseUrl}/ur`,
+        'bn': `${baseUrl}/bn`,
         'x-default': baseUrl,
       },
     },

@@ -1,7 +1,7 @@
 import { getRequestConfig } from 'next-intl/server';
 
 // 支持的语言配置
-export const locales = ['en', 'ar'] as const;
+export const locales = ['en', 'ar', 'ur', 'bn'] as const;
 export type Locale = (typeof locales)[number];
 
 // 默认语言
@@ -22,6 +22,20 @@ export const localeConfig = {
     dir: 'rtl' as const,
     flag: '🇸🇦',
     country: 'SA'
+  },
+  ur: {
+    name: 'Urdu',
+    nativeName: 'اردو',
+    dir: 'rtl' as const,
+    flag: '🇵🇰',
+    country: 'PK'
+  },
+  bn: {
+    name: 'Bengali',
+    nativeName: 'বাংলা',
+    dir: 'ltr' as const,
+    flag: '🇧🇩',
+    country: 'BD'
   }
 } as const;
 
@@ -45,6 +59,11 @@ export const countryToLocaleMap: Record<string, Locale> = {
   'YE': 'ar', // 也门
   'LY': 'ar', // 利比亚
   'SD': 'ar', // 苏丹
+  // 乌尔都语国家
+  'PK': 'ur', // 巴基斯坦
+  // 孟加拉语国家
+  'BD': 'bn', // 孟加拉国
+  'IN': 'bn', // 印度（西孟加拉邦等）
   // 其他国家默认英语
 };
 
