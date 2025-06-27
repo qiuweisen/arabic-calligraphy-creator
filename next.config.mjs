@@ -8,9 +8,6 @@ const nextConfig = {
     basePath: '/arabic-calligraphy-creator',
     assetPrefix: '/arabic-calligraphy-creator/',
     trailingSlash: true,
-    images: {
-      unoptimized: true,
-    },
     env: {
       NEXT_PUBLIC_IS_GITHUB_PAGES: 'true',
     },
@@ -38,6 +35,8 @@ const nextConfig = {
     },
   },
   images: {
+    // GitHub Pages 需要 unoptimized: true
+    ...(process.env.GITHUB_PAGES === 'true' && { unoptimized: true }),
     remotePatterns: [
       {
         protocol: 'https',
