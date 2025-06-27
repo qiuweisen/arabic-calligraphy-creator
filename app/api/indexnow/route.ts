@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+export const dynamic = 'force-static'
+
 // IndexNow API配置
 const INDEXNOW_KEY = '546621d08c3644b2b136f9819638abee';
 const SITE_URL = 'https://arabic-calligraphy-generator.com';

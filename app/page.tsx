@@ -13,6 +13,8 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { getFeaturedFonts, FONT_CATEGORIES } from "@/lib/content-links"
 import { getFontDetails } from "@/lib/font-details-data"
+import { GitHubPagesLayout } from "@/components/github-pages-layout"
+import { GitHubPagesHero } from "@/components/github-pages-hero"
 
 const UseCasesSection = dynamic(() => 
   import("@/components/home/use-cases-section").then((mod) => mod.UseCasesSection)
@@ -126,6 +128,18 @@ function loadFontDetails(fontSlug: string, panelElement: Element) {
 }
 
 export default function Home() {
+  // GitHub Pages 模式检测 - 使用构建时环境变量
+  const isGitHubPages = process.env.NEXT_PUBLIC_IS_GITHUB_PAGES === 'true'
+
+  // 如果是 GitHub Pages 构建，显示专门的演示页面
+  if (isGitHubPages) {
+    return (
+      <GitHubPagesLayout>
+        <GitHubPagesHero />
+      </GitHubPagesLayout>
+    )
+  }
+
   const [selectedFont, setSelectedFont] = useState<string | undefined>(undefined)
   
   // 分离左右两边的状态管理

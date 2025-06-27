@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+export const dynamic = 'force-static'
+
 const CDN_BASE_URL = 'https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev';
 
 export async function GET(request: NextRequest) {

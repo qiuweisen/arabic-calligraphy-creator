@@ -2,6 +2,20 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // GitHub Pages 配置
+  ...(process.env.GITHUB_PAGES === 'true' && {
+    output: 'export',
+    basePath: '/arabic-calligraphy-creator',
+    assetPrefix: '/arabic-calligraphy-creator/',
+    trailingSlash: true,
+    images: {
+      unoptimized: true,
+    },
+    env: {
+      NEXT_PUBLIC_IS_GITHUB_PAGES: 'true',
+    },
+  }),
+
   reactStrictMode: true,
   experimental: {
     optimizePackageImports: [
@@ -36,8 +50,6 @@ const nextConfig = {
   },
   async redirects() {
     return [
-
-      
       // === 现有重定向规则 ===
       // Blog URL correction - 301 redirect to preserve SEO
       {
@@ -46,7 +58,7 @@ const nextConfig = {
         permanent: true, // 301 redirect
         statusCode: 301, // Explicitly set the status code
       },
-      
+
       // Language redirects (keeping existing ones)
       { source: '/bn', destination: '/', permanent: true },
       { source: '/hi', destination: '/', permanent: true },
@@ -56,7 +68,7 @@ const nextConfig = {
       { source: '/hi/:path*', destination: '/:path*', permanent: true },
       { source: '/ar/:path*', destination: '/:path*', permanent: true },
       { source: '/id/:path*', destination: '/:path*', permanent: true },
-      
+
       // HTTP to HTTPS redirect
       {
         source: '/:path*',

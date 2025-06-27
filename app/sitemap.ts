@@ -1,5 +1,7 @@
 import { MetadataRoute } from 'next'
 
+export const dynamic = 'force-static'
+
 // Blog posts data - using actual directory names (shorter URLs are better)
 const BLOG_POSTS = [
   'the-rich-history-of-arabic-calligraphy',
