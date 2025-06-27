@@ -70,7 +70,7 @@ export default function RootLayout({
   const isProduction = process.env.NODE_ENV === 'production'
 
   return (
-    <html lang="en" dir="ltr" suppressHydrationWarning className={`${inter.variable} ${amiri.variable}`}>
+    <>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
         <link rel="icon" href="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/favicon.ico" sizes="any" />
@@ -87,14 +87,13 @@ export default function RootLayout({
 
         {/* Google Fonts <link> tags removed as next/font handles this */}
       </head>
-      <body className={`${inter.className} font-sans`}>
-        <ThemeProvider attribute="class" defaultTheme="system">
-          {children}
-          <Toaster />
-          <ScrollToTop />
-          <CssLoader />
-        </ThemeProvider>
-        
+      <ThemeProvider attribute="class" defaultTheme="system">
+        {children}
+        <Toaster />
+        <ScrollToTop />
+        <CssLoader />
+      </ThemeProvider>
+
         {isProduction && (
           <>
             {/* Google Analytics 4 */}
@@ -117,7 +116,7 @@ export default function RootLayout({
                 `,
               }}
             />
-            
+
             {/* Plausible Analytics */}
             <Script
               defer
@@ -127,7 +126,7 @@ export default function RootLayout({
             />
           </>
         )}
-        
+
         {/* Common Analytics Event Tracking Function and Plausible Dev Init */}
         <Script
           id="analytics-functions"
@@ -135,21 +134,21 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               // 初始化 Plausible 函数（确保总是可用）
-              window.plausible = window.plausible || function() { 
-                (window.plausible.q = window.plausible.q || []).push(arguments) 
+              window.plausible = window.plausible || function() {
+                (window.plausible.q = window.plausible.q || []).push(arguments)
               }
-              
+
               // 开发模式日志
               if (${process.env.NODE_ENV === 'development'}) {
                 console.log('Analytics scripts (GA, Plausible) are in DEVELOPMENT mode or NOT loaded.')
                 console.log('Plausible Analytics would be initialized for domain: arabic-calligraphy-generator.com if in production.')
                 console.log('Plausible server: https://plausible.myklink.xyz:8443')
               }
-              
+
               // 统一事件追踪函数
               window.trackCalligraphyEvent = function(eventName, props) {
                 const isProd = ${isProduction}
-                
+
                 if (isProd) {
                   // 发送到 Plausible
                   try {
@@ -162,7 +161,7 @@ export default function RootLayout({
                   } catch (error) {
                     console.error('Error sending event to Plausible:', error)
                   }
-                  
+
                   // 发送到 Google Analytics
                   try {
                     if (typeof gtag === 'function') {
@@ -181,11 +180,11 @@ export default function RootLayout({
                   console.log('[DEV MODE] Event: ' + eventName + ', Props:', props)
                 }
               }
-              
+
               // Plausible 连接测试
               if (${isProduction}) {
                 setTimeout(() => {
-                  fetch('https://plausible.myklink.xyz:8443/api/health', { 
+                  fetch('https://plausible.myklink.xyz:8443/api/health', {
                     mode: 'no-cors',
                     method: 'GET'
                   })
@@ -200,7 +199,6 @@ export default function RootLayout({
             `,
           }}
         />
-      </body>
-    </html>
-  )
+      </>
+    )
 }

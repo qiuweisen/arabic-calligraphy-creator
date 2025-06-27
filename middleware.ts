@@ -6,7 +6,8 @@ import { locales, defaultLocale, getSuggestedLocale } from './i18n';
 const intlMiddleware = createMiddleware({
   locales,
   defaultLocale,
-  localePrefix: 'as-needed' // 默认语言不显示前缀
+  localePrefix: 'as-needed', // 默认语言不显示前缀
+  localeDetection: false // 禁用自动语言检测和重定向
 });
 
 export default function middleware(request: NextRequest) {

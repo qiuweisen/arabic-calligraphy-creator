@@ -19,24 +19,9 @@ export function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
-  // 安全地获取翻译和当前语言
-  let t: any;
-  let currentLocale: Locale = 'en';
-
-  try {
-    t = useTranslations('languageSwitcher');
-    currentLocale = useLocale() as Locale;
-  } catch (error) {
-    // 如果不在多语言路由下，使用默认值
-    t = (key: string) => {
-      const fallbacks: Record<string, string> = {
-        'selectLanguage': 'Select Language',
-        'currentLanguage': 'Current Language'
-      };
-      return fallbacks[key] || key;
-    };
-    currentLocale = 'en';
-  }
+  // 获取翻译和当前语言
+  const t = useTranslations('languageSwitcher');
+  const currentLocale = useLocale() as Locale;
 
   useEffect(() => {
     setMounted(true);
@@ -53,9 +38,12 @@ export function LanguageSwitcher() {
     let newPath = pathname;
 
     // 移除当前语言前缀（如果存在）
-    const currentLocalePrefix = `/${currentLocale}`;
-    if (pathname.startsWith(currentLocalePrefix)) {
-      newPath = pathname.slice(currentLocalePrefix.length) || '/';
+    for (const locale of locales) {
+      const localePrefix = `/${locale}`;
+      if (pathname.startsWith(localePrefix)) {
+        newPath = pathname.slice(localePrefix.length) || '/';
+        break;
+      }
     }
 
     // 添加新语言前缀（如果不是默认语言）

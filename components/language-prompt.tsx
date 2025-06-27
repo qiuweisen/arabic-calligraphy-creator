@@ -13,13 +13,46 @@ interface LanguagePromptProps {
   countryCode?: string;
 }
 
-export function LanguagePrompt({ suggestedLocale, countryCode }: LanguagePromptProps) {
-  const t = useTranslations('languagePrompt');
+export function LanguagePrompt({ suggestedLocale, countryCode }: LanguagePromptProps = {}) {
   const router = useRouter();
   const pathname = usePathname();
-  const currentLocale = useLocale() as Locale;
+
+  // 安全地获取翻译和当前语言
+  let t: any;
+  let currentLocale: Locale = 'en';
+
+  try {
+    t = useTranslations('languagePrompt');
+    currentLocale = useLocale() as Locale;
+  } catch (error) {
+    // 如果不在多语言路由下，使用默认值
+    t = (key: string) => {
+      const fallbacks: Record<string, string> = {
+        'title': 'Welcome! We offer our site in your language',
+        'subtitle': 'Would you like to switch to {language}?',
+        'useLanguage': 'Use {language}',
+        'continueEnglish': 'Continue in English',
+        'dontShowAgain': 'Don\'t show again'
+      };
+      return fallbacks[key] || key;
+    };
+    currentLocale = 'en';
+  }
   const [isVisible, setIsVisible] = useState(false);
   const [shouldShow, setShouldShow] = useState(false);
+  const [detectedSuggestedLocale, setDetectedSuggestedLocale] = useState<Locale | undefined>(suggestedLocale);
+  const [detectedCountryCode, setDetectedCountryCode] = useState<string | undefined>(countryCode);
+
+  useEffect(() => {
+    // 客户端语言检测
+    if (!suggestedLocale) {
+      const browserLang = navigator.language.split('-')[0];
+      if (browserLang === 'ar') {
+        setDetectedSuggestedLocale('ar');
+        setDetectedCountryCode('AR');
+      }
+    }
+  }, [suggestedLocale]);
 
   useEffect(() => {
     // 检查是否应该显示弹窗
@@ -34,7 +67,8 @@ export function LanguagePrompt({ suggestedLocale, countryCode }: LanguagePromptP
       }
       
       // 2. 检查是否有建议的语言且不同于当前语言
-      if (!suggestedLocale || suggestedLocale === currentLocale) {
+      const finalSuggestedLocale = detectedSuggestedLocale || suggestedLocale;
+      if (!finalSuggestedLocale || finalSuggestedLocale === currentLocale) {
         return false;
       }
       
@@ -59,19 +93,20 @@ export function LanguagePrompt({ suggestedLocale, countryCode }: LanguagePromptP
       
       return () => clearTimeout(timer);
     }
-  }, [suggestedLocale, currentLocale]);
+  }, [detectedSuggestedLocale, suggestedLocale, currentLocale]);
 
   const handleAcceptLanguage = () => {
-    if (!suggestedLocale) return;
+    const finalSuggestedLocale = detectedSuggestedLocale || suggestedLocale;
+    if (!finalSuggestedLocale) return;
     
     // 记录用户选择
-    localStorage.setItem('prompt-language-choice', suggestedLocale);
-    document.cookie = `prompt-language-choice=${suggestedLocale}; path=/; max-age=${365 * 24 * 60 * 60}`;
-    
+    localStorage.setItem('prompt-language-choice', finalSuggestedLocale);
+    document.cookie = `prompt-language-choice=${finalSuggestedLocale}; path=/; max-age=${365 * 24 * 60 * 60}`;
+
     // 构建新路径
     let newPath = pathname;
-    if (suggestedLocale !== 'en') {
-      newPath = `/${suggestedLocale}${pathname}`;
+    if (finalSuggestedLocale !== 'en') {
+      newPath = `/${finalSuggestedLocale}${pathname}`;
     }
     
     // 导航到新语言版本
@@ -92,16 +127,18 @@ export function LanguagePrompt({ suggestedLocale, countryCode }: LanguagePromptP
     setIsVisible(false);
   };
 
-  if (!shouldShow || !isVisible || !suggestedLocale) {
+  const finalSuggestedLocale = detectedSuggestedLocale || suggestedLocale;
+
+  if (!shouldShow || !isVisible || !finalSuggestedLocale) {
     return null;
   }
 
-  const suggestedConfig = localeConfig[suggestedLocale];
+  const suggestedConfig = localeConfig[finalSuggestedLocale];
   const currentConfig = localeConfig[currentLocale];
 
   // 根据建议语言显示不同的文案
   const getLocalizedContent = () => {
-    switch (suggestedLocale) {
+    switch (finalSuggestedLocale) {
       case 'ar':
         return {
           title: 'مرحباً! نحن نوفر موقعنا باللغة العربية',
