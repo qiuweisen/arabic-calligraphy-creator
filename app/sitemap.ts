@@ -80,6 +80,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 1.0,
     },
+    {
+      url: `${baseUrl}/ur`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/bn`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 1.0,
+    },
     // Other pages - keep original English-only URLs until they are internationalized
     {
       url: `${baseUrl}/fonts`,

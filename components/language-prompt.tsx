@@ -47,9 +47,27 @@ export function LanguagePrompt({ suggestedLocale, countryCode }: LanguagePromptP
     // 客户端语言检测
     if (!suggestedLocale) {
       const browserLang = navigator.language.split('-')[0];
+      const fullLang = navigator.language;
+
+      // 检测支持的语言
       if (browserLang === 'ar') {
         setDetectedSuggestedLocale('ar');
-        setDetectedCountryCode('AR');
+        setDetectedCountryCode('SA');
+      } else if (browserLang === 'ur') {
+        setDetectedSuggestedLocale('ur');
+        setDetectedCountryCode('PK');
+      } else if (browserLang === 'bn') {
+        setDetectedSuggestedLocale('bn');
+        setDetectedCountryCode('BD');
+      } else if (fullLang.includes('IN')) {
+        // 印度用户可能使用多种语言，根据地区判断
+        if (fullLang.includes('ur') || fullLang.includes('Urdu')) {
+          setDetectedSuggestedLocale('ur');
+          setDetectedCountryCode('IN');
+        } else if (fullLang.includes('bn') || fullLang.includes('Bengali')) {
+          setDetectedSuggestedLocale('bn');
+          setDetectedCountryCode('IN');
+        }
       }
     }
   }, [suggestedLocale]);
@@ -89,8 +107,20 @@ export function LanguagePrompt({ suggestedLocale, countryCode }: LanguagePromptP
       // 延迟显示弹窗，让页面先加载完成
       const timer = setTimeout(() => {
         setIsVisible(true);
+
+        // 分析事件：弹窗显示
+        if (typeof window !== 'undefined' && (window as any).plausible) {
+          (window as any).plausible('Language Prompt Show', {
+            props: {
+              current_language: currentLocale,
+              suggested_language: detectedSuggestedLocale || suggestedLocale,
+              country_code: detectedCountryCode || 'unknown',
+              detection_method: suggestedLocale ? 'server' : 'client'
+            }
+          });
+        }
       }, 2000);
-      
+
       return () => clearTimeout(timer);
     }
   }, [detectedSuggestedLocale, suggestedLocale, currentLocale]);
@@ -98,7 +128,19 @@ export function LanguagePrompt({ suggestedLocale, countryCode }: LanguagePromptP
   const handleAcceptLanguage = () => {
     const finalSuggestedLocale = detectedSuggestedLocale || suggestedLocale;
     if (!finalSuggestedLocale) return;
-    
+
+    // 分析事件：用户接受语言建议
+    if (typeof window !== 'undefined' && (window as any).plausible) {
+      (window as any).plausible('Language Prompt Accept', {
+        props: {
+          from_language: currentLocale,
+          to_language: finalSuggestedLocale,
+          country_code: detectedCountryCode || 'unknown',
+          detection_method: suggestedLocale ? 'server' : 'client'
+        }
+      });
+    }
+
     // 记录用户选择
     localStorage.setItem('prompt-language-choice', finalSuggestedLocale);
     document.cookie = `prompt-language-choice=${finalSuggestedLocale}; path=/; max-age=${365 * 24 * 60 * 60}`;
@@ -108,13 +150,25 @@ export function LanguagePrompt({ suggestedLocale, countryCode }: LanguagePromptP
     if (finalSuggestedLocale !== 'en') {
       newPath = `/${finalSuggestedLocale}${pathname}`;
     }
-    
+
     // 导航到新语言版本
     router.push(newPath);
     setIsVisible(false);
   };
 
   const handleContinueEnglish = () => {
+    // 分析事件：用户选择继续使用英语
+    if (typeof window !== 'undefined' && (window as any).plausible) {
+      (window as any).plausible('Language Prompt Decline', {
+        props: {
+          current_language: currentLocale,
+          suggested_language: finalSuggestedLocale,
+          country_code: detectedCountryCode || 'unknown',
+          detection_method: suggestedLocale ? 'server' : 'client'
+        }
+      });
+    }
+
     // 记录用户选择继续使用英语
     localStorage.setItem('prompt-language-choice', 'en');
     document.cookie = `prompt-language-choice=en; path=/; max-age=${365 * 24 * 60 * 60}`;
@@ -122,6 +176,18 @@ export function LanguagePrompt({ suggestedLocale, countryCode }: LanguagePromptP
   };
 
   const handleDismiss = () => {
+    // 分析事件：用户关闭弹窗
+    if (typeof window !== 'undefined' && (window as any).plausible) {
+      (window as any).plausible('Language Prompt Dismiss', {
+        props: {
+          current_language: currentLocale,
+          suggested_language: finalSuggestedLocale,
+          country_code: detectedCountryCode || 'unknown',
+          detection_method: suggestedLocale ? 'server' : 'client'
+        }
+      });
+    }
+
     // 记录用户关闭弹窗，但不记录语言选择
     localStorage.setItem('language-prompt-dismissed', 'true');
     setIsVisible(false);

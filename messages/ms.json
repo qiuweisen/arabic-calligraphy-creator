@@ -1,0 +1,667 @@
+{
+  "metadata": {
+    "title": "Penjana Kaligrafi Arab - Alat Percuma | الخط العربي",
+    "description": "Cipta kaligrafi Arab yang menakjubkan dengan penjana dalam talian kami yang percuma. 13+ fon Arab premium, muat turun segera, tiada pendaftaran diperlukan. Ubah mana-mana teks Arab menjadi seni yang indah.",
+    "keywords": "penjana kaligrafi arab, fon arab, kaligrafi islam, penjana teks arab, fon arab percuma, pembuat kaligrafi dalam talian"
+  },
+  "common": {
+    "loading": "Memuatkan...",
+    "error": "Ralat",
+    "close": "Tutup",
+    "continue": "Teruskan",
+    "cancel": "Batal",
+    "confirm": "Sahkan",
+    "save": "Simpan",
+    "download": "Muat Turun",
+    "share": "Kongsi",
+    "copy": "Salin",
+    "copied": "Tersalin!",
+    "yes": "Ya",
+    "no": "Tidak"
+  },
+  "navigation": {
+    "generator": "Penjana",
+    "arabicFonts": "Fon Arab",
+    "learningGuides": "Panduan Pembelajaran",
+    "howToTutorials": "Tutorial Cara Guna",
+    "freeResources": "Sumber Percuma",
+    "useCases": "Contoh Kegunaan",
+    "blog": "Blog",
+    "faq": "Soalan Lazim",
+    "contact": "Hubungi",
+    "dropdown": {
+      "completeBeginner": "Panduan Lengkap Permulaan",
+      "fontComparison": "Panduan Perbandingan Fon",
+      "bestFonts2025": "Fon Arab Terbaik 2025",
+      "typographyTrends": "Trend Tipografi 2025",
+      "createOnline": "Cipta Kaligrafi Dalam Talian",
+      "fontSelection": "Panduan Pemilihan Fon",
+      "designTips": "Tip Reka Bentuk",
+      "downloadFonts": "Muat Turun & Guna Fon",
+      "freeArabicFonts": "Fon Arab Percuma"
+    }
+  },
+  "languageSwitcher": {
+    "selectLanguage": "Pilih Bahasa",
+    "currentLanguage": "Bahasa Semasa"
+  },
+  "languagePrompt": {
+    "title": "Selamat Datang! Laman web kami tersedia dalam bahasa anda",
+    "subtitle": "Adakah anda ingin bertukar ke {language}?",
+    "useLanguage": "Gunakan {language}",
+    "continueEnglish": "Teruskan dalam Bahasa Inggeris",
+    "dontShowAgain": "Jangan paparkan lagi"
+  },
+  "footer": {
+    "description": "Cipta kaligrafi Arab yang indah dengan penjana kaligrafi Arab dalam talian kami yang percuma.",
+    "arabicCalligraphy": "Kaligrafi Arab",
+    "generator": "Penjana Kaligrafi Arab",
+    "features": "Ciri-ciri Penjana",
+    "blog": "Blog Kaligrafi",
+    "faq": "Soalan Lazim Penjana",
+    "contact": "Hubungi Kami",
+    "fonts": "Fon Arab",
+    "fontLibrary": "Pustaka Fon",
+    "fontComparison": "Perbandingan Fon",
+    "fontDownloads": "Muat Turun Fon",
+    "learning": "Sumber Pembelajaran",
+    "beginnerGuide": "Panduan Permulaan",
+    "tutorials": "Tutorial",
+    "designTips": "Tip Reka Bentuk",
+    "company": "Syarikat",
+    "about": "Tentang Kami",
+    "privacy": "Dasar Privasi",
+    "terms": "Syarat Perkhidmatan",
+    "copyright": "© 2010-{year} Penjana Kaligrafi Arab. Hak cipta terpelihara.",
+    "popular": {
+      "title": "Popular",
+      "amiriFont": "Fon Amiri",
+      "cairoFont": "Fon Cairo",
+      "weddingCalligraphy": "Kaligrafi Perkahwinan",
+      "businessLogos": "Logo Perniagaan",
+      "privacyPolicy": "Dasar Privasi",
+      "termsOfService": "Syarat Perkhidmatan"
+    }
+  },
+  "homepage": {
+    "title": "Penjana Kaligrafi Arab",
+    "subtitle": "الخط العربي",
+    "description": "Cipta Seni Khat Arab Yang Menakjubkan Serta-merta",
+    "intro": "Ubah mana-mana teks Arab menjadi kaligrafi yang indah dengan penjana kaligrafi Arab dalam talian kami yang percuma. Penjana teks Arab yang berkuasa ini mempunyai 13+ fon Arab premium dalam talian. Cipta reka bentuk yang menakjubkan serta-merta - tiada pendaftaran diperlukan!",
+    "socialProof": {
+      "designsCreated": "100,000+ Reka Bentuk Dicipta",
+      "premiumFonts": "13+ Fon Premium",
+      "freeForever": "Percuma Selamanya"
+    },
+    "features": {
+      "title": "Ciri-ciri Kaligrafi Arab Profesional",
+      "fontLibrary": {
+        "title": "Pustaka Fon Arab yang Luas",
+        "description": "Pembuat kaligrafi Arab percuma kami menyediakan 13+ fon Arab premium dalam talian, merangkumi skrip tradisional (Kufi, Naskh, Diwani) hingga tipografi moden. Penjana teks Arab yang komprehensif ini menyertakan pratonton visual untuk pemilihan fon yang mudah.",
+        "items": [
+          "Gaya kaligrafi tradisional",
+          "Fon Arab moden",
+          "Pilihan hiasan dan paparan"
+        ]
+      },
+      "customization": {
+        "title": "Pilihan Penyesuaian Lanjutan",
+        "description": "Alat penjana kaligrafi Arab dalam talian percuma ini menawarkan pilihan penggayaan gred profesional termasuk kesan teks gradien, latar belakang tersuai, bayang, dan kawalan tipografi yang jitu untuk hasil pembuat kaligrafi Arab yang sempurna.",
+        "items": [
+          "Kesan teks gradien",
+          "Corak latar belakang tersuai",
+          "Kesan bayang dan seri"
+        ]
+      },
+      "export": {
+        "title": "Pilihan Eksport Profesional",
+        "description": "Muat turun kaligrafi Arab anda dalam pelbagai format berkualiti tinggi. Penjana teks Arab kami menyokong PNG untuk kegunaan web dan SVG untuk aplikasi cetakan, memastikan reka bentuk anda kelihatan sempurna dalam sebarang saiz.",
+        "items": [
+          "Eksport PNG beresolusi tinggi",
+          "Format SVG boleh skala",
+          "Kualiti sedia-cetak"
+        ]
+      }
+    },
+    "quickStart": {
+      "title": "Mula Pantas:",
+      "steps": "Taip teks Arab → Pilih fon → Muat turun serta-merta"
+    },
+    "howToUse": {
+      "title": "Cara Mencipta Kaligrafi Arab",
+      "step1": {
+        "title": "Masukkan Teks Anda",
+        "description": "Taip atau tampal teks Arab anda di medan input di atas"
+      },
+      "step2": {
+        "title": "Pilih Gaya Anda",
+        "description": "Pilih daripada 13+ fon Arab yang indah dan sesuaikan warna"
+      },
+      "step3": {
+        "title": "Muat Turun & Kongsi",
+        "description": "Muat turun kaligrafi anda sebagai PNG atau SVG dan kongsi di mana sahaja"
+      }
+    },
+    "useCases": {
+      "title": "Sesuai untuk Setiap Majlis",
+      "wedding": {
+        "title": "Kad Jemputan Kahwin",
+        "description": "Cipta kaligrafi Arab yang elegan untuk kad kahwin dan jemputan"
+      },
+      "business": {
+        "title": "Penjenamaan Perniagaan",
+        "description": "Reka logo profesional dan bahan penjenamaan dengan tipografi Arab"
+      },
+      "social": {
+        "title": "Media Sosial",
+        "description": "Hasilkan petikan dan siaran Arab yang indah untuk Instagram, Facebook, dan banyak lagi"
+      },
+      "religious": {
+        "title": "Seni Keagamaan",
+        "description": "Cipta kaligrafi Islam yang menakjubkan untuk ayat-ayat Al-Quran dan teks keagamaan"
+      }
+    },
+    "faq": {
+      "title": "Soalan Lazim Penjana Kaligrafi Arab",
+      "q1": {
+        "question": "Adakah penjana kaligrafi Arab ini percuma sepenuhnya?",
+        "answer": "Ya! Penjana kaligrafi Arab kami adalah 100% percuma tanpa kos tersembunyi, langganan, atau pendaftaran diperlukan. Semua 13+ fon premium, ciri penyesuaian, dan pilihan eksport disertakan tanpa sebarang bayaran."
+      },
+      "q2": {
+        "question": "Apakah format fail yang boleh saya muat turun?",
+        "answer": "Anda boleh memuat turun kaligrafi Arab anda dalam dua format: PNG (untuk gambar dan media sosial) dan SVG (untuk cetakan dan grafik boleh skala). Kedua-dua format mengekalkan kualiti tinggi."
+      },
+      "q3": {
+        "question": "Berapa banyak fon Arab yang tersedia?",
+        "answer": "Kami menawarkan 13+ fon Arab yang dipilih dengan teliti termasuk gaya tradisional seperti Naskh dan Thuluth, serta fon moden seperti Kufi dan pilihan hiasan. Setiap fon direka secara profesional untuk kebolehbacaan yang optimum."
+      },
+      "q4": {
+        "question": "Bolehkah saya menggunakan kaligrafi yang dihasilkan secara komersial?",
+        "answer": "Ya, anda boleh menggunakan kaligrafi Arab yang anda cipta untuk tujuan peribadi dan komersial. Fon yang kami gunakan adalah sama ada sumber terbuka atau dilesenkan dengan betul untuk kegunaan komersial."
+      },
+      "q5": {
+        "question": "Adakah penjana ini berfungsi pada peranti mudah alih?",
+        "answer": "Sudah tentu! Penjana kaligrafi Arab kami adalah responsif sepenuhnya dan berfungsi dengan sempurna pada telefon pintar, tablet dan komputer meja. Antara muka menyesuaikan diri dengan saiz skrin anda untuk pengalaman terbaik."
+      }
+    },
+    "cta": {
+      "title": "Aplikasi Penjana Kaligrafi Arab Dalam Talian Percuma Terbaik",
+      "description": "Alami alat penjana kaligrafi Arab dalam talian percuma yang paling komprehensif. Sertai ribuan pengguna yang mencipta reka bentuk Arab yang menakjubkan dengan penjana teks Arab kami. Mula sekarang - ianya percuma sepenuhnya!",
+      "button": "Mula Mencipta Sekarang",
+      "features": {
+        "noRegistration": "Tanpa Pendaftaran",
+        "free": "100% Percuma",
+        "instantDownload": "Muat Turun Segera"
+      }
+    },
+    "technicalFeatures": {
+      "title": "Ciri-ciri Tipografi Arab Lanjutan",
+      "fontCollection": {
+        "title": "Koleksi & Gaya Fon",
+        "traditional": "Skrip Tradisional: Amiri (Naskh), Scheherazade, Lateef, Markazi Text",
+        "decorative": "Gaya Hiasan: Aref Ruqaa (Diwani), Jomhuria, Rakkas, Lemonada",
+        "modern": "Tipografi Moden: Cairo, Harmattan, Mada, Tajawal, El Messiri",
+        "specialized": "Khusus: Reem Kufi (Geometri), Mirza (Nastaliq), Marhey (Paparan)",
+        "note": "Semua fon menyokong arah teks RTL, diakritik Arab (Harakat), dan pemanjangan Kashida untuk kaligrafi yang asli."
+      },
+      "export": {
+        "title": "Eksport & Keserasian",
+        "formats": "Format Output: PNG (latar belakang lutsinar), SVG (vektor boleh skala)",
+        "quality": "Pilihan Kualiti: Eksport beresolusi tinggi sesuai untuk kegunaan cetakan dan digital",
+        "browsers": "Sokongan Pelayar: Chrome, Firefox, Safari, Edge - semua pelayar moden",
+        "devices": "Keserasian Peranti: Reka bentuk responsif untuk komputer meja, tablet dan mudah alih",
+        "note": "Percuma untuk kegunaan komersial. Tiada tera air, tiada pendaftaran diperlukan. Berfungsi sepenuhnya dalam pelayar anda untuk privasi."
+      }
+    },
+    "professionalUse": {
+      "title": "Aplikasi Kaligrafi Arab Profesional",
+      "business": {
+        "title": "Perniagaan & Penjenamaan",
+        "logo": {
+          "title": "Logo & Identiti Korporat",
+          "description": "Cipta nama jenama Arab yang unik dengan gaya kaligrafi tradisional atau moden"
+        },
+        "restaurant": {
+          "title": "Restoran & Hospitaliti",
+          "description": "Reka papan tanda, menu, dan bahan promosi Arab yang asli"
+        },
+        "marketing": {
+          "title": "Bahan Pemasaran",
+          "description": "Tipografi Arab profesional untuk risalah, iklan, dan kempen digital"
+        }
+      },
+      "personal": {
+        "title": "Peribadi & Budaya",
+        "wedding": {
+          "title": "Jemputan Perkahwinan & Acara",
+          "description": "Kaligrafi Arab yang elegan untuk majlis dan keraian istimewa"
+        },
+        "islamic": {
+          "title": "Seni & Hiasan Islam",
+          "description": "Ayat-ayat Al-Quran, Hadis, dan ungkapan Islam yang indah untuk hiasan rumah"
+        },
+        "social": {
+          "title": "Kandungan Media Sosial",
+          "description": "Siaran Arab yang menarik perhatian untuk Instagram, Facebook, dan platform lain"
+        }
+      }
+    },
+    "detailedFaq": {
+      "title": "Soalan Lazim Penjana Kaligrafi Arab",
+      "viewAll": "Lihat Semua Soalan Lazim",
+      "questions": [
+        {
+          "question": "Adakah penjana kaligrafi Arab ini percuma sepenuhnya?",
+          "answer": "Ya! Penjana kaligrafi Arab kami adalah 100% percuma tanpa kos tersembunyi, langganan, atau pendaftaran diperlukan. Semua 13+ fon premium, ciri penyesuaian, dan pilihan eksport disertakan tanpa sebarang bayaran."
+        },
+        {
+          "question": "Apakah fon dan gaya kaligrafi Arab yang tersedia?",
+          "answer": "Kami menawarkan 13+ fon Arab yang dipilih dengan teliti merangkumi gaya kaligrafi tradisional (Kufi, Naskh, Diwani, Nastaliq) dan tipografi Arab moden. Setiap fon menyokong arah teks RTL, diakritik Arab (Harakat), dan paparan skrip Arab yang asli."
+        },
+        {
+          "question": "Apakah format fail yang boleh saya muat turun dan apakah kualitinya?",
+          "answer": "Anda boleh mengeksport kaligrafi Arab anda sebagai fail PNG beresolusi tinggi (dengan latar belakang lutsinar) atau fail vektor SVG boleh skala. Kedua-dua format sesuai untuk cetakan profesional, media digital, dan aplikasi komersial."
+        },
+        {
+          "question": "Bolehkah saya menggunakan kaligrafi yang dihasilkan untuk projek komersial?",
+          "answer": "Ya, anda boleh menggunakan reka bentuk kaligrafi Arab yang anda cipta untuk projek peribadi dan komersial tanpa sebarang sekatan. Ini termasuk logo perniagaan, bahan pemasaran, jemputan perkahwinan, dan sebarang aplikasi komersial lain."
+        },
+        {
+          "question": "Adakah penjana kaligrafi Arab ini berfungsi pada peranti mudah alih?",
+          "answer": "Sudah tentu! Penjana kaligrafi Arab kami adalah responsif sepenuhnya dan dioptimumkan untuk telefon pintar, tablet dan komputer meja. Antara muka menyesuaikan diri dengan saiz skrin anda sambil mengekalkan fungsi penuh."
+        },
+        {
+          "question": "Adakah ini penjana kaligrafi Arab dalam talian percuma terbaik yang ada?",
+          "answer": "Penjana kaligrafi Arab dalam talian percuma kami menonjol dengan 13+ fon Arab premium dalam talian, muat turun PNG/SVG segera, dan tiada keperluan pendaftaran. Tidak seperti kebanyakan penjana teks Arab yang memerlukan langganan, aplikasi pembuat kaligrafi Arab kami menyediakan hasil berkualiti profesional secara percuma sepenuhnya."
+        },
+        {
+          "question": "Adakah alat ini menyokong teks Arab dengan diakritik (Harakat)?",
+          "answer": "Ya, penjana kaligrafi Arab kami menyokong teks Arab dengan diakritik (Harakat/اعراب). Anda boleh memasukkan teks dengan tanda baris, dan penjana akan memaparkannya mengikut keupayaan setiap fon. Ini penting untuk ayat-ayat Al-Quran dan teks Arab formal."
+        },
+        {
+          "question": "Bagaimanakah pembuat kaligrafi Arab ini berbanding dengan perisian desktop?",
+          "answer": "Alat penjana kaligrafi Arab dalam talian percuma kami menawarkan beberapa kelebihan berbanding perisian desktop: akses segera tanpa muat turun, kemas kini automatik, keserasian rentas platform, dan kemudahan berasaskan awan. Walaupun perisian desktop mungkin menawarkan ciri yang lebih canggih, penjana teks Arab kami menyediakan keseimbangan fungsi dan kebolehcapaian yang sempurna untuk kebanyakan keperluan pengguna."
+        }
+      ]
+    },
+    "generator": {
+      "title": "Ciri-ciri Penjana Kaligrafi Arab",
+      "availableFonts": "Fon Arab Tersedia:",
+      "toolFeatures": "Ciri-ciri Alat:",
+      "fonts": {
+        "amiri": "Amiri (Naskh Tradisional)",
+        "scheherazade": "Scheherazade (Tradisional)",
+        "reemKufi": "Reem Kufi (Kufi Moden)",
+        "arefRuqaa": "Aref Ruqaa (Gaya Diwani)",
+        "cairo": "Cairo (Sans-serif Moden)",
+        "moreFonts": "Dan 8+ lagi fon premium"
+      },
+      "features": {
+        "freeGenerator": "Penjana teks Arab dalam talian percuma",
+        "instantDownload": "Muat turun PNG dan SVG segera",
+        "colorCustomization": "Penyesuaian gradien dan warna",
+        "backgroundPatterns": "Corak dan imej latar belakang",
+        "mobileFriendly": "Antara muka mesra mudah alih",
+        "noRegistration": "Tiada pendaftaran diperlukan"
+      },
+      "jsRequired": "Pembuat kaligrafi Arab ini memerlukan JavaScript untuk berfungsi. Sila aktifkan JavaScript dalam pelayar anda untuk menggunakan alat interaktif ini.",
+      "tabs": {
+        "text": "Teks",
+        "style": "Gaya",
+        "advanced": "Lanjutan"
+      },
+      "textTab": {
+        "arabicText": "Teks Arab",
+        "hideKeyboard": "Sembunyi Papan Kekunci",
+        "showKeyboard": "Tunjuk Papan Kekunci",
+        "placeholder": "Masukkan teks Arab di sini...",
+        "templates": "Templat",
+        "font": "Fon",
+        "preview": "Pratonton",
+        "selectFont": "Pilih fon",
+        "categories": "Kategori",
+        "fontSize": "Saiz Fon",
+        "resetText": "Set Semula Teks"
+      },
+      "styleTab": {
+        "textColor": "Warna Teks",
+        "useGradient": "Guna Gradien",
+        "gradientFrom": "Gradien Dari",
+        "gradientTo": "Gradien Ke",
+        "backgroundColor": "Warna Latar",
+        "backgroundImage": "Imej Latar",
+        "uploadImage": "Muat Naik Imej",
+        "backgroundPattern": "Corak Latar",
+        "alignment": "Jajaran Teks",
+        "left": "Kiri",
+        "center": "Tengah",
+        "right": "Kanan"
+      },
+      "advancedTab": {
+        "fontWeight": "Berat Fon",
+        "fontStyle": "Gaya Fon",
+        "normal": "Normal",
+        "italic": "Italik",
+        "letterSpacing": "Jarak Huruf",
+        "lineHeight": "Tinggi Baris",
+        "shadow": "Bayang Teks",
+        "shadowX": "Bayang X",
+        "shadowY": "Bayang Y",
+        "shadowBlur": "Kabur Bayang",
+        "shadowColor": "Warna Bayang",
+        "border": "Sempadan",
+        "borderColor": "Warna Sempadan",
+        "borderWidth": "Lebar Sempadan",
+        "borderRadius": "Jejari Sempadan",
+        "padding": "Pad",
+        "kashida": "Sambungan Kashida",
+        "kashidaLength": "Panjang Kashida"
+      },
+      "preview": {
+        "title": "Pratonton",
+        "downloadPNG": "Muat Turun PNG",
+        "downloadSVG": "Muat Turun SVG",
+        "share": "Kongsi"
+      },
+      "featuredDesigns": {
+        "title": "Reka Bentuk Pilihan",
+        "topPicks": "Pilihan Utama",
+        "viewAllTemplates": "Lihat Semua Templat"
+      },
+      "quickLinks": {
+        "title": "Pautan Pantas",
+        "blog": "Blog",
+        "faq": "Soalan Lazim"
+      },
+      "tooltips": {
+        "resetDefaults": "Set semula kepada lalai",
+        "fullscreen": "Pratonton skrin penuh",
+        "exitFullscreen": "Keluar skrin penuh"
+      },
+      "toasts": {
+        "downloadStarted": "Muat Turun Bermula",
+        "preparingPNG": "Menyediakan kaligrafi Arab anda sebagai PNG...",
+        "preparingSVG": "Menyediakan kaligrafi Arab anda sebagai SVG...",
+        "downloadFailed": "Muat Turun Gagal",
+        "downloadError": "Terdapat ralat semasa memuat turun kaligrafi anda. Sila cuba lagi.",
+        "preparingImage": "Menyediakan Imej",
+        "generatingImage": "Menjana imej untuk perkongsian...",
+        "designApplied": "Reka Bentuk Digunakan",
+        "designAppliedDesc": "Reka bentuk pilihan telah digunakan pada kanvas anda.",
+        "shareTitle": "Reka Bentuk Kaligrafi Arab",
+        "shareText": "Lihat kaligrafi Arab yang indah ini yang saya cipta!"
+      }
+    },
+    "useCasesSection": {
+      "title": "Apa yang Anda Boleh Cipta",
+      "socialMedia": {
+        "title": "Media Sosial",
+        "subtitle": "Sesuai untuk Media Sosial",
+        "description": "Cipta siaran, 'stories', dan grafik profil yang menarik dengan tipografi Arab yang indah.",
+        "instagram": "Siaran dan 'stories' Instagram",
+        "facebook": "Gambar sampul Facebook",
+        "twitter": "Grafik Twitter",
+        "profiles": "Gambar profil dengan monogram Arab"
+      },
+      "print": {
+        "title": "Cetakan",
+        "subtitle": "Bahan Cetakan",
+        "description": "Reka bahan cetakan profesional dengan kaligrafi Arab berkualiti tinggi.",
+        "invitations": "Jemputan perkahwinan dan acara",
+        "business": "Kad perniagaan dan kepala surat",
+        "posters": "Poster dan sepanduk",
+        "certificates": "Sijil dan anugerah"
+      },
+      "web": {
+        "title": "Web",
+        "subtitle": "Grafik Web",
+        "description": "Cipta grafik web dan kandungan digital yang menakjubkan dengan tipografi Arab.",
+        "logos": "Logo dan pengepala laman web",
+        "banners": "Sepanduk dan iklan web",
+        "icons": "Ikon Arab tersuai",
+        "graphics": "Grafik dan ilustrasi digital"
+      },
+      "art": {
+        "title": "Seni",
+        "subtitle": "Ciptaan Artistik",
+        "description": "Ekspresikan kreativiti anda dengan reka bentuk kaligrafi Arab yang artistik.",
+        "wallArt": "Seni dinding dan hiasan",
+        "islamic": "Seni dan ayat-ayat Islam",
+        "modern": "Seni kaligrafi moden",
+        "traditional": "Skrip Arab tradisional"
+      }
+    }
+  },
+  "generator": {
+    "title": "Ciri-ciri Penjana Kaligrafi Arab",
+    "availableFonts": "Fon Arab Tersedia:",
+    "toolFeatures": "Ciri-ciri Alat:",
+    "jsRequired": "JavaScript diperlukan untuk menggunakan penjana kaligrafi Arab. Sila aktifkan JavaScript dalam pelayar anda.",
+    "fonts": {
+      "amiri": "Amiri (Naskh Tradisional)",
+      "scheherazade": "Scheherazade (Tradisional)",
+      "reemKufi": "Reem Kufi (Geometri)",
+      "arefRuqaa": "Aref Ruqaa (Gaya Diwani)",
+      "cairo": "Cairo (Sans-serif Moden)",
+      "moreFonts": "Dan 8+ lagi fon premium"
+    },
+    "features": {
+      "freeGenerator": "Penjana teks Arab dalam talian percuma",
+      "instantDownload": "Muat turun PNG dan SVG segera",
+      "colorCustomization": "Penyesuaian gradien dan warna",
+      "backgroundPatterns": "Corak dan imej latar belakang",
+      "mobileFriendly": "Antara muka mesra mudah alih",
+      "noRegistration": "Tiada pendaftaran diperlukan"
+    },
+    "tabs": {
+      "text": "Teks",
+      "style": "Gaya",
+      "advanced": "Lanjutan"
+    },
+    "textTab": {
+      "arabicText": "Teks Arab",
+      "hideKeyboard": "Sembunyi Papan Kekunci",
+      "showKeyboard": "Tunjuk Papan Kekunci",
+      "placeholder": "Masukkan teks Arab di sini...",
+      "templates": "Templat",
+      "font": "Fon",
+      "preview": "Pratonton",
+      "selectFont": "Pilih fon",
+      "categories": "Kategori",
+      "fontSize": "Saiz Fon",
+      "resetText": "Set Semula Teks"
+    },
+    "styleTab": {
+      "textColor": "Warna Teks",
+      "useGradient": "Guna Gradien",
+      "gradientFrom": "Gradien Dari",
+      "gradientTo": "Gradien Ke",
+      "backgroundColor": "Warna Latar",
+      "backgroundImage": "Imej Latar",
+      "uploadImage": "Muat Naik Imej",
+      "backgroundPattern": "Corak Latar",
+      "alignment": "Jajaran Teks",
+      "left": "Kiri",
+      "center": "Tengah",
+      "right": "Kanan"
+    },
+    "advancedTab": {
+      "fontWeight": "Berat Fon",
+      "fontStyle": "Gaya Fon",
+      "normal": "Normal",
+      "italic": "Italik",
+      "letterSpacing": "Jarak Huruf",
+      "lineHeight": "Tinggi Baris",
+      "shadow": "Bayang Teks",
+      "shadowX": "Bayang X",
+      "shadowY": "Bayang Y",
+      "shadowBlur": "Kabur Bayang",
+      "shadowColor": "Warna Bayang",
+      "border": "Sempadan",
+      "borderColor": "Warna Sempadan",
+      "borderWidth": "Lebar Sempadan",
+      "borderRadius": "Jejari Sempadan",
+      "padding": "Pad",
+      "kashida": "Sambungan Kashida",
+      "kashidaLength": "Panjang Kashida"
+    },
+    "preview": {
+      "title": "Pratonton",
+      "downloadPNG": "Muat Turun PNG",
+      "downloadSVG": "Muat Turun SVG",
+      "share": "Kongsi"
+    },
+    "featuredDesigns": {
+      "title": "Reka Bentuk Pilihan",
+      "topPicks": "Pilihan Utama",
+      "viewAllTemplates": "Lihat Semua Templat"
+    },
+    "quickLinks": {
+      "title": "Pautan Pantas",
+      "blog": "Blog",
+      "faq": "Soalan Lazim"
+    },
+    "tooltips": {
+      "resetDefaults": "Set semula kepada lalai",
+      "fullscreen": "Pratonton skrin penuh",
+      "exitFullscreen": "Keluar skrin penuh"
+    },
+    "toasts": {
+      "downloadStarted": "Muat Turun Bermula",
+      "preparingPNG": "Menyediakan kaligrafi Arab anda sebagai PNG...",
+      "preparingSVG": "Menyediakan kaligrafi Arab anda sebagai SVG...",
+      "downloadFailed": "Muat Turun Gagal",
+      "downloadError": "Terdapat ralat semasa memuat turun kaligrafi anda. Sila cuba lagi.",
+      "preparingImage": "Menyediakan Imej",
+      "generatingImage": "Menjana imej untuk perkongsian...",
+      "designApplied": "Reka Bentuk Digunakan",
+      "designAppliedDesc": "Reka bentuk pilihan telah digunakan pada kanvas anda.",
+      "shareTitle": "Reka Bentuk Kaligrafi Arab",
+      "shareText": "Lihat kaligrafi Arab yang indah ini yang saya cipta!",
+      "templateApplied": "Templat Digunakan",
+      "templateAppliedDesc": "Templat yang dipilih telah digunakan pada kanvas anda.",
+      "downloadComplete": "Muat Turun Selesai",
+      "downloadCompletePNG": "Kaligrafi Arab anda telah dimuat turun sebagai PNG.",
+      "downloadCompleteSVG": "Kaligrafi Arab anda telah dimuat turun sebagai SVG.",
+      "imageGenerationFailed": "Penjanaan Imej Gagal",
+      "imageGenerationFailedDesc": "Tidak dapat menjana imej. Sila cuba lagi.",
+      "copyingImage": "Menyalin Imej",
+      "copyingImageDesc": "Menyediakan imej untuk disalin ke papan keratan...",
+      "imageCopied": "Imej Disalin",
+      "imageCopiedDesc": "Imej kaligrafi telah disalin ke papan keratan anda.",
+      "copyFailed": "Salinan Gagal",
+      "copyFailedDesc": "Tidak dapat menyalin imej. Pelayar anda mungkin tidak menyokong ciri ini atau kebenaran telah dinafikan.",
+      "copyError": "Ralat Salinan",
+      "copyErrorDesc": "Gagal menjana blob imej untuk penyalinan.",
+      "copyErrorUnexpected": "Ralat yang tidak dijangka berlaku semasa cuba menyalin imej.",
+      "copiedToClipboard": "Disalin ke Papan Keratan",
+      "copiedToClipboardDesc": "Teks anda telah disalin ke papan keratan.",
+      "copyFailedText": "Terdapat ralat semasa menyalin ke papan keratan.",
+      "error": "Ralat",
+      "previewNotFound": "Elemen pratonton tidak ditemui.",
+      "previewNotFoundShare": "Elemen pratonton tidak ditemui. Tidak dapat menyediakan imej untuk perkongsian.",
+      "sharingNotAvailable": "Perkongsian Tidak Tersedia",
+      "sharingNotAvailableDesc": "Pelayar anda tidak menyokong API Kongsi Web. Cuba muat turun imej untuk mengongsinya.",
+      "imageShareNotSupported": "Perkongsian Imej Tidak Disokong Sepenuhnya",
+      "imageShareNotSupportedDesc": "Pelayar atau sasaran kongsi yang dipilih mungkin tidak menyokong perkongsian imej secara langsung. Berkongsi kandungan teks sebaliknya.",
+      "sharedSuccessfully": "Berjaya Dikongsi",
+      "sharedSuccessfullyDesc": "Kaligrafi anda telah dikongsi.",
+      "shareFailed": "Perkongsian Gagal",
+      "shareFailedDesc": "Terdapat ralat semasa berkongsi kaligrafi anda. Sila cuba lagi atau muat turun imej.",
+      "resetComplete": "Set Semula Selesai",
+      "resetCompleteDesc": "Semua tetapan telah diset semula kepada lalai."
+    },
+    "fontCategories": {
+      "Traditional": "Tradisional",
+      "Diwani": "Diwani",
+      "Kufi": "Kufi",
+      "Nastaliq": "Nastaliq",
+      "Modern": "Moden",
+      "Display": "Paparan"
+    },
+    "backgroundPatterns": {
+      "None": "Tiada",
+      "Geometric": "Geometri",
+      "Arabesque": "Arabes",
+      "Islamic Patterns": "Corak Islam",
+      "Dots": "Titik"
+    },
+    "commonPhrases": {
+      "bismillah": "Dengan nama Allah, Yang Maha Pemurah, lagi Maha Mengasihani",
+      "alhamdulillah": "Segala puji bagi Allah",
+      "mashallah": "Atas kehendak Allah",
+      "subhanallah": "Maha Suci Allah",
+      "allahuakbar": "Allah Maha Besar",
+      "lailahaillallah": "Tiada Tuhan selain Allah",
+      "astaghfirullah": "Aku memohon ampun kepada Allah",
+      "allahummasalli": "Ya Allah, limpahkanlah selawat ke atas Nabi Muhammad"
+    },
+    "ui": {
+      "calligraphyControls": "Kawalan Kaligrafi",
+      "text": "Teks",
+      "style": "Gaya",
+      "advanced": "Lanjutan",
+      "textColor": "Warna Teks",
+      "gradient": "Gradien",
+      "from": "Dari",
+      "to": "Ke",
+      "background": "Latar Belakang",
+      "color": "Warna",
+      "image": "Imej",
+      "pattern": "Corak",
+      "upload": "Muat Naik",
+      "backgroundPattern": "Corak Latar",
+      "selectPattern": "Pilih corak",
+      "textShadow": "Bayang Teks",
+      "horizontal": "Mendatar",
+      "vertical": "Menegak",
+      "blur": "Kabur",
+      "opacity": "Kelegapan",
+      "fontWeight": "Berat Fon",
+      "fontStyle": "Gaya Fon",
+      "selectWeight": "Pilih berat",
+      "selectStyle": "Pilih gaya",
+      "light": "Ringan",
+      "regular": "Biasa",
+      "medium": "Sederhana",
+      "bold": "Tebal",
+      "normal": "Normal",
+      "italic": "Italik",
+      "alignment": "Jajaran",
+      "letterSpacing": "Jarak Huruf",
+      "lineHeight": "Tinggi Baris",
+      "kashida": "Kashida (Pemanjangan)",
+      "kashidaDesc": "Kashida menambah pemanjangan pada huruf Arab tertentu, meningkatkan kualiti estetik teks.",
+      "length": "Panjang",
+      "border": "Sempadan",
+      "borderColor": "Warna Sempadan",
+      "borderWidth": "Lebar Sempadan",
+      "borderRadius": "Jejari Sempadan",
+      "padding": "Pad",
+      "featuredTemplates": "Templat Pilihan",
+      "favorites": "Kegemaran",
+      "aboutArabicCalligraphy": "Mengenai Kaligrafi Arab",
+      "aboutArabicCalligraphyDesc": "Kaligrafi Arab (خط عربي) ialah amalan seni tulisan tangan dan kaligrafi berdasarkan abjad Arab. Ia dikenali dalam bahasa Arab sebagai khatt, berasal daripada perkataan 'garisan', 'reka bentuk', atau 'binaan'.",
+      "readMoreHistory": "Baca lebih lanjut tentang sejarah kaligrafi Arab",
+      "exploreFonts": "Terokai koleksi fon kami",
+      "viewAllTemplates": "Lihat Semua Templat"
+    }
+  },
+  "seo": {
+    "structuredData": {
+      "featureList": [
+        "13+ fon Arab termasuk gaya Kufi, Naskh, Diwani",
+        "Penjanaan teks Arab masa nyata",
+        "Penyesuaian gradien dan warna",
+        "Corak dan imej latar belakang",
+        "Eksport PNG dan SVG",
+        "Antara muka responsif mudah alih",
+        "Tiada pendaftaran diperlukan"
+      ],
+      "applicationCategory": "Aplikasi Reka Bentuk",
+      "operatingSystem": "Pelayar Web",
+      "browserRequirements": "Memerlukan JavaScript diaktifkan",
+      "authorName": "Penjana Kaligrafi Arab"
+    }
+  }
+}
