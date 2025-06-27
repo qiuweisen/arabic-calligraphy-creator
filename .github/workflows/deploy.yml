@@ -37,10 +37,23 @@ jobs:
         run: npm ci
 
       - name: Build project
-        run: npm run build
+        run: |
+          echo "Building with GITHUB_PAGES=true"
+          npm run build
         env:
           # 启用 GitHub Pages 模式
           GITHUB_PAGES: true
+
+      - name: Verify build output
+        run: |
+          echo "Checking if GitHub Pages version was built..."
+          if grep -q "Professional Arabic Calligraphy Generator" ./out/index.html; then
+            echo "✅ GitHub Pages version detected in build output"
+          else
+            echo "❌ GitHub Pages version NOT found in build output"
+            echo "First 500 characters of index.html:"
+            head -c 500 ./out/index.html
+          fi
 
       - name: Create GitHub Pages sitemap
         run: |
