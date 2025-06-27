@@ -6,11 +6,11 @@ interface LogoProps {
 
 export function SharedLogo({ className = "" }: LogoProps) {
   return (
-    <Link href="/" className={`flex items-center space-x-2 ${className}`}>
-      <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-        <span className="text-white font-bold text-sm">خط</span>
+    <Link href="/" className={`flex items-center gap-2 ${className}`}>
+      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-white font-bold text-lg">
+        خط
       </div>
-      <span className="font-bold text-xl text-gray-900">Arabic Calligraphy</span>
+      <span className="font-bold text-amber-800">ArabicCalligraphy</span>
     </Link>
   )
 }

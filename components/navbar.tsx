@@ -8,6 +8,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { Menu, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { LanguageSwitcher } from "@/components/language-switcher"
+import { SharedLogo } from "@/components/shared/logo"
 import { useTranslations } from 'next-intl'
 
 export function Navbar() {
@@ -68,12 +69,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-white font-bold text-lg">
-              خط
-            </div>
-            <span className="font-bold text-amber-800">ArabicCalligraphy</span>
-          </Link>
+          <SharedLogo />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
@@ -132,12 +128,9 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px] sm:w-[320px]">
               <div className="flex flex-col h-full py-8">
-                <Link href="/" className="flex items-center gap-2 mb-8 px-2" onClick={() => setIsMobileMenuOpen(false)}>
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-white font-bold text-lg">
-                    خط
-                  </div>
-                  <span className="font-bold text-amber-800 text-xl">ArabicCalligraphy</span>
-                </Link>
+                <div className="mb-8 px-2" onClick={() => setIsMobileMenuOpen(false)}>
+                  <SharedLogo />
+                </div>
 
                 <nav className="flex flex-col">
                   {navItems.map((item, index) => (
