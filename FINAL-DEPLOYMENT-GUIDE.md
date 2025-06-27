@@ -36,8 +36,10 @@ https://github.com/qiuweisen/arabic-calligraphy-creator
 ```bash
 git add .
 git commit -m "Add premium GitHub Pages demo"
-git push origin main
+git push origin github_pages
 ```
+
+**注意**: 确保推送到 `github_pages` 分支，GitHub Actions 已配置监听此分支。
 
 ### 4. 访问结果
 https://qiuweisen.github.io/arabic-calligraphy-creator/
@@ -55,12 +57,18 @@ https://qiuweisen.github.io/arabic-calligraphy-creator/
 - 多个 CTA 按钮引导
 - 页脚专业链接
 
-## ⚠️ 关于404错误
+## ⚠️ 重要说明
 
+### 关于404错误
 **本地测试时的404错误是正常的**，因为：
 - 本地测试缺少 `/arabic-calligraphy-creator/` 路径结构
 - GitHub Pages 部署时会自动创建正确的路径
 - 所有静态资源在实际部署中都能正常加载
+
+### 分支设置
+- 代码推送到 `github_pages` 分支
+- GitHub Actions 监听此分支自动部署
+- GitHub Pages 设置为 "GitHub Actions" 源
 
 **在 GitHub Pages 上部署后，所有资源都会正常工作！**
 
