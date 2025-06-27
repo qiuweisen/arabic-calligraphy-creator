@@ -129,7 +129,7 @@ function loadFontDetails(fontSlug: string, panelElement: Element) {
 
 export default function Home() {
   // GitHub Pages 模式检测 - 使用构建时环境变量
-  const isGitHubPages = process.env.NEXT_PUBLIC_IS_GITHUB_PAGES === 'true'
+  const isGitHubPages = process.env.NEXT_PUBLIC_IS_STATIC_PAGES === 'true'
 
   // 如果是 GitHub Pages 构建，显示专门的演示页面
   if (isGitHubPages) {

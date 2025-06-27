@@ -2,9 +2,9 @@
 name: Deploy to GitHub Pages
 
 on:
-  # 在推送到 "main" 或 "github_pages" 分支时触发
+  # 在推送到 "main" 或 "STATIC_PAGES" 分支时触发
   push:
-    branches: ["main", "github_pages"]
+    branches: ["main", "STATIC_PAGES"]
   # 允许手动触发
   workflow_dispatch:
 
@@ -38,11 +38,11 @@ jobs:
 
       - name: Build project
         run: |
-          echo "Building with GITHUB_PAGES=true"
+          echo "Building with STATIC_PAGES=true"
           npm run build
         env:
           # 启用 GitHub Pages 模式
-          GITHUB_PAGES: true
+          STATIC_PAGES: true
 
       - name: Verify build output
         run: |

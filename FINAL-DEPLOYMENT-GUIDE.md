@@ -36,10 +36,10 @@ https://github.com/qiuweisen/arabic-calligraphy-creator
 ```bash
 git add .
 git commit -m "Add premium GitHub Pages demo"
-git push origin github_pages
+git push origin STATIC_PAGES
 ```
 
-**注意**: 确保推送到 `github_pages` 分支，GitHub Actions 已配置监听此分支。
+**注意**: 确保推送到 `STATIC_PAGES` 分支，GitHub Actions 已配置监听此分支。
 
 ### 4. 访问结果
 https://qiuweisen.github.io/arabic-calligraphy-creator/
@@ -66,7 +66,7 @@ https://qiuweisen.github.io/arabic-calligraphy-creator/
 - 所有静态资源在实际部署中都能正常加载
 
 ### 分支设置
-- 代码推送到 `github_pages` 分支
+- 代码推送到 `STATIC_PAGES` 分支
 - GitHub Actions 监听此分支自动部署
 - GitHub Pages 设置为 "GitHub Actions" 源
 

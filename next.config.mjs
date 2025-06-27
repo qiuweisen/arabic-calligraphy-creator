@@ -3,13 +3,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // GitHub Pages 配置
-  ...(process.env.GITHUB_PAGES === 'true' && {
+  ...(process.env.STATIC_PAGES === 'true' && {
     output: 'export',
     basePath: '/arabic-calligraphy-creator',
     assetPrefix: '/arabic-calligraphy-creator/',
     trailingSlash: true,
     env: {
-      NEXT_PUBLIC_IS_GITHUB_PAGES: 'true',
+      NEXT_PUBLIC_IS_STATIC_PAGES: 'true',
     },
   }),
 
@@ -36,7 +36,7 @@ const nextConfig = {
   },
   images: {
     // GitHub Pages 需要 unoptimized: true
-    ...(process.env.GITHUB_PAGES === 'true' && { unoptimized: true }),
+    ...(process.env.STATIC_PAGES === 'true' && { unoptimized: true }),
     remotePatterns: [
       {
         protocol: 'https',

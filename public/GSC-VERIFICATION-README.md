@@ -21,7 +21,7 @@
 
 ## 部署说明
 
-- **GitHub Pages 部署**: 设置 `GITHUB_PAGES=true` 时，此目录内容会被复制到 `./out/`
+- **GitHub Pages 部署**: 设置 `STATIC_PAGES=true` 时，此目录内容会被复制到 `./out/`
 - **主站部署**: 默认情况下，此目录内容正常部署到根目录
 
 ## 当前状态
