@@ -7,6 +7,8 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Menu, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { SHARED_STYLES, NAVIGATION_ITEMS } from "@/lib/shared-styles"
+import { SharedLogo } from "@/components/shared/logo"
 
 export function StaticNavbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -21,41 +23,15 @@ export function StaticNavbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navigationItems = [
-    { name: "Generator", href: "/" },
-    { name: "Arabic Fonts", href: "/fonts" },
-    { 
-      name: "Learning Guides", 
-      href: "/guides",
-      dropdown: [
-        { name: "Beginner Guide", href: "/guides/arabic-calligraphy-beginner-guide" },
-        { name: "Font Comparison", href: "/guides/arabic-font-comparison" },
-        { name: "Typography Trends", href: "/guides/arabic-typography-trends-2025" },
-        { name: "Best Fonts 2025", href: "/guides/best-arabic-fonts-2025" }
-      ]
-    },
-    { 
-      name: "How-to Tutorials", 
-      href: "/tutorials",
-      dropdown: [
-        { name: "Create Calligraphy Online", href: "/tutorials/how-to-create-arabic-calligraphy-online" },
-        { name: "Design Tips", href: "/tutorials/arabic-calligraphy-design-tips" },
-        { name: "Font Selection Guide", href: "/tutorials/arabic-font-selection-guide" },
-        { name: "Download & Use Fonts", href: "/tutorials/download-and-use-arabic-fonts" }
-      ]
-    },
-    { 
-      name: "Free Resources", 
-      href: "/resources",
-      dropdown: [
-        { name: "Free Arabic Fonts", href: "/resources/free-arabic-fonts" }
-      ]
-    },
-    { name: "Use Cases", href: "/use-cases" },
-    { name: "Blog", href: "/blog" },
-    { name: "FAQ", href: "/faq" },
-    { name: "Contact", href: "/contact" }
-  ]
+  // 使用共享的导航数据，保持与多语言页面一致
+  const navigationItems = NAVIGATION_ITEMS.en.map(item => ({
+    name: item.label,
+    href: item.href,
+    dropdown: item.dropdown?.map(subItem => ({
+      name: subItem.label,
+      href: subItem.href
+    }))
+  }))
 
   return (
     <header className={cn(
@@ -67,12 +43,7 @@ export function StaticNavbar() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-            <div className="flex items-center">
-              <span className="text-2xl font-bold text-amber-800">خط</span>
-              <span className="text-xl font-semibold text-amber-700 ml-1">ArabicCalligraphy</span>
-            </div>
-          </Link>
+          <SharedLogo className="hover:opacity-80 transition-opacity" />
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">

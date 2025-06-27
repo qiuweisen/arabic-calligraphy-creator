@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { StaticNavbar } from "@/components/static-navbar"
-import { Footer } from "@/components/footer"
+import { StaticFooter } from "@/components/static-footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ChevronRight, Info, BookOpen, Zap, CheckCircle, Download, ArrowRight } from "lucide-react"
@@ -371,7 +371,7 @@ export default function FontsPage() {
           </div>
         </div>
       </main>
-      <Footer />
+      <StaticFooter />
     </>
   )
 } 

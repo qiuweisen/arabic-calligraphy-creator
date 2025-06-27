@@ -1,6 +1,16 @@
 import type React from "react"
 import "@/app/globals.css"
+import { Inter, Amiri } from "next/font/google"
+import Script from "next/script"
+import { Toaster } from "@/components/ui/toaster"
+import { ThemeProvider } from "@/components/theme-provider"
+import { ScrollToTop } from "@/components/scroll-to-top"
+import { CssLoader } from "@/components/css-loader"
 import type { Metadata } from 'next'
+
+// 字体配置
+const inter = Inter({ subsets: ["latin"], display: 'swap', variable: "--font-inter", preload: true })
+const amiri = Amiri({ subsets: ["latin"], display: 'swap', weight: ["400", "700"], variable: "--font-amiri", preload: true })
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://arabic-calligraphy-generator.com'
 const cdnBaseUrl = 'https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev'
@@ -56,5 +66,124 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return children
+  const isProduction = process.env.NODE_ENV === 'production'
+
+  return (
+    <html className={`${inter.variable} ${amiri.variable}`} suppressHydrationWarning>
+      <body className={`${inter.className} font-sans`}>
+        <ThemeProvider attribute="class" defaultTheme="system">
+          {children}
+          <Toaster />
+          <ScrollToTop />
+          <CssLoader />
+        </ThemeProvider>
+
+        {isProduction && (
+          <>
+            {/* Google Analytics 4 */}
+            <Script
+              strategy="afterInteractive"
+              src="https://www.googletagmanager.com/gtag/js?id=G-8M8QKWNMRY"
+            />
+            <Script
+              id="google-analytics-init"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-8M8QKWNMRY', {
+                    debug_mode: false,
+                    send_page_view: true
+                  });
+                `,
+              }}
+            />
+
+            {/* Plausible Analytics */}
+            <Script
+              defer
+              data-domain="arabic-calligraphy-generator.com"
+              src="https://plausible.myklink.xyz:8443/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
+              strategy="afterInteractive"
+            />
+          </>
+        )}
+
+        {/* Common Analytics Event Tracking Function and Plausible Dev Init */}
+        <Script
+          id="analytics-functions"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              // 初始化 Plausible 函数（确保总是可用）
+              window.plausible = window.plausible || function() {
+                (window.plausible.q = window.plausible.q || []).push(arguments)
+              }
+
+              // 开发模式日志
+              if (${process.env.NODE_ENV === 'development'}) {
+                console.log('Analytics scripts (GA, Plausible) are in DEVELOPMENT mode or NOT loaded.')
+                console.log('Plausible Analytics would be initialized for domain: arabic-calligraphy-generator.com if in production.')
+                console.log('Plausible server: https://plausible.myklink.xyz:8443')
+              }
+
+              // 统一事件追踪函数
+              window.trackCalligraphyEvent = function(eventName, props) {
+                const isProd = ${isProduction}
+
+                if (isProd) {
+                  // 发送到 Plausible
+                  try {
+                    if (typeof window.plausible === 'function') {
+                      window.plausible(eventName, { props: props })
+                      console.log('Event sent to Plausible:', eventName, props)
+                    } else {
+                      console.warn('Plausible function not available')
+                    }
+                  } catch (error) {
+                    console.error('Error sending event to Plausible:', error)
+                  }
+
+                  // 发送到 Google Analytics
+                  try {
+                    if (typeof gtag === 'function') {
+                      gtag('event', eventName, {
+                        event_category: 'Calligraphy_Generator',
+                        ...props
+                      })
+                      console.log('Event sent to GA:', eventName, props)
+                    } else {
+                      console.warn('Google Analytics gtag function not available')
+                    }
+                  } catch (error) {
+                    console.error('Error sending event to GA:', error)
+                  }
+                } else {
+                  console.log('[DEV MODE] Event: ' + eventName + ', Props:', props)
+                }
+              }
+
+              // Plausible 连接测试
+              if (${isProduction}) {
+                setTimeout(() => {
+                  fetch('https://plausible.myklink.xyz:8443/api/health', {
+                    mode: 'no-cors',
+                    method: 'GET'
+                  })
+                  .then(() => {
+                    console.log('Plausible server is reachable')
+                  })
+                  .catch((error) => {
+                    console.error('Cannot reach Plausible server:', error)
+                  })
+                }, 2000)
+              }
+            `,
+          }}
+        />
+      </body>
+    </html>
+  )
 }

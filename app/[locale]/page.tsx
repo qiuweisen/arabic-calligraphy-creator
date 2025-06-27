@@ -323,11 +323,11 @@ export default function Home() {
   return (
     <>
       {/* 结构化数据 */}
-      <script 
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
       />
-      
+
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
         <div className="container mx-auto px-4 py-8 md:py-16">
