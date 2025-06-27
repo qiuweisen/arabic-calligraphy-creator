@@ -1,0 +1,142 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "close": "Close",
+    "continue": "Continue",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "download": "Download",
+    "share": "Share",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "navigation": {
+    "generator": "Generator",
+    "arabicFonts": "Arabic Fonts",
+    "learningGuides": "Learning Guides",
+    "tutorials": "Tutorials",
+    "useCases": "Use Cases",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "languageSwitcher": {
+    "selectLanguage": "Select Language",
+    "currentLanguage": "Current Language"
+  },
+  "languagePrompt": {
+    "title": "Welcome! We offer our site in your language",
+    "subtitle": "Would you like to switch to {language}?",
+    "useLanguage": "Use {language}",
+    "continueEnglish": "Continue in English",
+    "dontShowAgain": "Don't show again"
+  },
+  "homepage": {
+    "title": "Arabic Calligraphy Generator",
+    "subtitle": "الخط العربي",
+    "description": "Create Stunning Arabic Script Art Instantly",
+    "intro": "Transform your Arabic text into beautiful calligraphy with our free online generator. Choose from 13+ premium fonts, customize colors and styles, then download instantly as PNG or SVG.",
+    "features": {
+      "title": "Why Choose Our Arabic Calligraphy Generator?",
+      "free": {
+        "title": "100% Free Forever",
+        "description": "No hidden costs, subscriptions, or registration required. All features included."
+      },
+      "fonts": {
+        "title": "13+ Premium Arabic Fonts",
+        "description": "From traditional Naskh to modern Kufi styles, all professionally designed."
+      },
+      "instant": {
+        "title": "Instant Download",
+        "description": "Generate and download your calligraphy in PNG or SVG format immediately."
+      },
+      "customizable": {
+        "title": "Fully Customizable",
+        "description": "Adjust colors, sizes, spacing, and effects to match your vision perfectly."
+      }
+    },
+    "generator": {
+      "title": "Arabic Calligraphy Generator",
+      "placeholder": "Enter your Arabic text here...",
+      "fontFamily": "Font Family",
+      "fontSize": "Font Size",
+      "color": "Text Color",
+      "backgroundColor": "Background Color",
+      "download": "Download",
+      "downloadPng": "Download PNG",
+      "downloadSvg": "Download SVG",
+      "preview": "Preview"
+    },
+    "howToUse": {
+      "title": "How to Create Arabic Calligraphy",
+      "step1": {
+        "title": "Enter Your Text",
+        "description": "Type or paste your Arabic text in the input field above"
+      },
+      "step2": {
+        "title": "Choose Your Style",
+        "description": "Select from 13+ beautiful Arabic fonts and customize colors"
+      },
+      "step3": {
+        "title": "Download & Share",
+        "description": "Download your calligraphy as PNG or SVG and share it anywhere"
+      }
+    },
+    "useCases": {
+      "title": "Perfect for Every Occasion",
+      "wedding": {
+        "title": "Wedding Invitations",
+        "description": "Create elegant Arabic calligraphy for wedding cards and invitations"
+      },
+      "business": {
+        "title": "Business Branding",
+        "description": "Design professional logos and branding materials with Arabic typography"
+      },
+      "social": {
+        "title": "Social Media",
+        "description": "Generate beautiful Arabic quotes and posts for Instagram, Facebook, and more"
+      },
+      "religious": {
+        "title": "Religious Art",
+        "description": "Create stunning Islamic calligraphy for Quran verses and religious texts"
+      }
+    },
+    "faq": {
+      "title": "Arabic Calligraphy Generator FAQ",
+      "q1": {
+        "question": "Is this Arabic calligraphy generator completely free?",
+        "answer": "Yes! Our Arabic calligraphy generator is 100% free with no hidden costs, subscriptions, or registration required. All 13+ premium fonts, customization features, and export options are included at no charge."
+      },
+      "q2": {
+        "question": "What file formats can I download?",
+        "answer": "You can download your Arabic calligraphy in two formats: PNG (for photos and social media) and SVG (for printing and scalable graphics). Both formats maintain high quality."
+      },
+      "q3": {
+        "question": "How many Arabic fonts are available?",
+        "answer": "We offer 13+ carefully selected Arabic fonts including traditional styles like Naskh and Thuluth, as well as modern fonts like Kufi and decorative options. Each font is professionally designed for optimal readability."
+      },
+      "q4": {
+        "question": "Can I use the generated calligraphy commercially?",
+        "answer": "Yes, you can use the Arabic calligraphy you create for both personal and commercial purposes. The fonts we use are either open source or properly licensed for commercial use."
+      },
+      "q5": {
+        "question": "Does the generator work on mobile devices?",
+        "answer": "Absolutely! Our Arabic calligraphy generator is fully responsive and works perfectly on smartphones, tablets, and desktop computers. The interface adapts to your screen size for the best experience."
+      }
+    },
+    "cta": {
+      "title": "Start Creating Beautiful Arabic Calligraphy Today",
+      "description": "Join thousands of users who create stunning Arabic typography with our free generator",
+      "button": "Start Creating Now",
+      "features": {
+        "noRegistration": "No Registration",
+        "free": "100% Free",
+        "instantDownload": "Instant Download"
+      }
+    }
+  }
+}

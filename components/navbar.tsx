@@ -7,6 +7,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Menu, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { LanguageSwitcher } from "@/components/language-switcher"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -73,41 +74,48 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1">
-            {navItems.map((item, index) => (
-              item.dropdown ? (
-                <DropdownMenu key={index}>
-                  <DropdownMenuTrigger asChild>
-                    <Button
-                      variant="ghost"
-                      className="text-amber-800 hover:text-amber-600 hover:bg-amber-50"
-                    >
-                      {item.label}
-                      <ChevronDown className="ml-1 h-3 w-3" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start" className="w-56">
-                    {item.dropdown.map((dropdownItem, dropdownIndex) => (
-                      <DropdownMenuItem key={dropdownIndex} asChild>
-                        <Link href={dropdownItem.href} className="w-full">
-                          {dropdownItem.label}
-                        </Link>
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              ) : (
-                <Button
-                  key={index}
-                  variant="ghost"
-                  asChild
-                  className="text-amber-800 hover:text-amber-600 hover:bg-amber-50"
-                >
-                  <Link href={item.href}>{item.label}</Link>
-                </Button>
-              )
-            ))}
-          </nav>
+          <div className="hidden md:flex items-center gap-1">
+            <nav className="flex items-center gap-1">
+              {navItems.map((item, index) => (
+                item.dropdown ? (
+                  <DropdownMenu key={index}>
+                    <DropdownMenuTrigger asChild>
+                      <Button
+                        variant="ghost"
+                        className="text-amber-800 hover:text-amber-600 hover:bg-amber-50"
+                      >
+                        {item.label}
+                        <ChevronDown className="ml-1 h-3 w-3" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="start" className="w-56">
+                      {item.dropdown.map((dropdownItem, dropdownIndex) => (
+                        <DropdownMenuItem key={dropdownIndex} asChild>
+                          <Link href={dropdownItem.href} className="w-full">
+                            {dropdownItem.label}
+                          </Link>
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                ) : (
+                  <Button
+                    key={index}
+                    variant="ghost"
+                    asChild
+                    className="text-amber-800 hover:text-amber-600 hover:bg-amber-50"
+                  >
+                    <Link href={item.href}>{item.label}</Link>
+                  </Button>
+                )
+              ))}
+            </nav>
+
+            {/* Language Switcher */}
+            <div className="ml-2 pl-2 border-l border-amber-200">
+              <LanguageSwitcher />
+            </div>
+          </div>
 
           {/* Mobile Menu Trigger - Increased touch area */}
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -156,6 +164,14 @@ export function Navbar() {
                     </div>
                   ))}
                 </nav>
+
+                {/* Mobile Language Switcher */}
+                <div className="mt-6 pt-6 border-t border-amber-200">
+                  <div className="px-4 mb-3">
+                    <span className="text-sm font-medium text-amber-800">Language / اللغة</span>
+                  </div>
+                  <LanguageSwitcher />
+                </div>
               </div>
             </SheetContent>
           </Sheet>
