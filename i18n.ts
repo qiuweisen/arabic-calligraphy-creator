@@ -69,7 +69,8 @@ export function getSuggestedLocale(countryCode?: string, acceptLanguage?: string
 
 // next-intl 配置
 export default getRequestConfig(async ({ locale }) => {
-  const validLocale = locale || defaultLocale;
+  // 确保locale是有效的
+  const validLocale = (locales.includes(locale as Locale) ? locale : defaultLocale) as Locale;
 
   return {
     locale: validLocale,

@@ -27,15 +27,6 @@ export function LanguageSwitcher() {
     setMounted(true);
   }, []);
 
-  // 强制重新渲染当语言改变时
-  useEffect(() => {
-    if (mounted) {
-      // 确保组件在语言切换后重新渲染
-      setMounted(false);
-      setTimeout(() => setMounted(true), 0);
-    }
-  }, [currentLocale]);
-
   const handleLanguageChange = (newLocale: Locale) => {
     if (!mounted) return;
 
@@ -78,10 +69,10 @@ export function LanguageSwitcher() {
       >
         <Globe className="h-4 w-4 mr-2" />
         <span className="hidden sm:inline mr-1">
-          🇺🇸 English
+          {currentConfig.flag} {currentConfig.nativeName}
         </span>
         <span className="sm:hidden mr-1">
-          🇺🇸
+          {currentConfig.flag}
         </span>
         <ChevronDown className="h-3 w-3" />
       </Button>
