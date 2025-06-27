@@ -8,8 +8,10 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { Menu, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { LanguageSwitcher } from "@/components/language-switcher"
+import { useTranslations } from 'next-intl'
 
 export function Navbar() {
+  const t = useTranslations('navigation')
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -22,39 +24,39 @@ export function Navbar() {
   }, [])
 
   const navItems = [
-    { label: "Generator", href: "/" }, // 强化核心关键词
-    { label: "Arabic Fonts", href: "/fonts" },
+    { label: t('generator'), href: "/" },
+    { label: t('arabicFonts'), href: "/fonts" },
     {
-      label: "Learning Guides",
+      label: t('learningGuides'),
       href: "/guides",
       dropdown: [
-        { label: "Complete Beginner Guide", href: "/guides/arabic-calligraphy-beginner-guide" },
-        { label: "Font Comparison Guide", href: "/guides/arabic-font-comparison" },
-        { label: "Best Arabic Fonts 2025", href: "/guides/best-arabic-fonts-2025" },
-        { label: "Typography Trends 2025", href: "/guides/arabic-typography-trends-2025" }
+        { label: t('dropdown.completeBeginner'), href: "/guides/arabic-calligraphy-beginner-guide" },
+        { label: t('dropdown.fontComparison'), href: "/guides/arabic-font-comparison" },
+        { label: t('dropdown.bestFonts2025'), href: "/guides/best-arabic-fonts-2025" },
+        { label: t('dropdown.typographyTrends'), href: "/guides/arabic-typography-trends-2025" }
       ]
     },
     {
-      label: "How-to Tutorials",
+      label: t('howToTutorials'),
       href: "/tutorials",
       dropdown: [
-        { label: "Create Calligraphy Online", href: "/tutorials/how-to-create-arabic-calligraphy-online" },
-        { label: "Font Selection Guide", href: "/tutorials/arabic-font-selection-guide" },
-        { label: "Design Tips", href: "/tutorials/arabic-calligraphy-design-tips" },
-        { label: "Download & Use Fonts", href: "/tutorials/download-and-use-arabic-fonts" }
+        { label: t('dropdown.createOnline'), href: "/tutorials/how-to-create-arabic-calligraphy-online" },
+        { label: t('dropdown.fontSelection'), href: "/tutorials/arabic-font-selection-guide" },
+        { label: t('dropdown.designTips'), href: "/tutorials/arabic-calligraphy-design-tips" },
+        { label: t('dropdown.downloadFonts'), href: "/tutorials/download-and-use-arabic-fonts" }
       ]
     },
     {
-      label: "Free Resources",
+      label: t('freeResources'),
       href: "/resources",
       dropdown: [
-        { label: "Free Arabic Fonts", href: "/resources/free-arabic-fonts" }
+        { label: t('dropdown.freeArabicFonts'), href: "/resources/free-arabic-fonts" }
       ]
     },
-    { label: "Use Cases", href: "/use-cases" },
-    { label: "Blog", href: "/blog" },
-    { label: "FAQ", href: "/faq" },
-    { label: "Contact", href: "/contact" },
+    { label: t('useCases'), href: "/use-cases" },
+    { label: t('blog'), href: "/blog" },
+    { label: t('faq'), href: "/faq" },
+    { label: t('contact'), href: "/contact" },
   ]
 
   return (

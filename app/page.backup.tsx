@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Check, Download, Palette, Type, ChevronRight, Laptop, Smartphone, Tablet, ArrowRight, Info } from "lucide-react"
-import { Navbar } from "@/components/navbar"
+import { StaticNavbar } from "@/components/static-navbar"
 import { Footer } from "@/components/footer"
 import { getFeaturedFonts, FONT_CATEGORIES } from "@/lib/content-links"
 import { getFontDetails } from "@/lib/font-details-data"
@@ -324,7 +324,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
       />
       
-      <Navbar />
+      <StaticNavbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
         <div className="container mx-auto px-4 py-8 md:py-16">
           {/* Header */}

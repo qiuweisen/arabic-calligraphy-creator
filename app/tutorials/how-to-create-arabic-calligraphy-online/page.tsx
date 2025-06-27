@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Navbar } from '@/components/navbar'
+import { StaticNavbar } from '@/components/static-navbar'
 import { Footer } from '@/components/footer'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -112,7 +112,7 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <Navbar />
+      <StaticNavbar />
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
         <div className="container mx-auto px-4 py-8">
           <Breadcrumb items={breadcrumbItems} />

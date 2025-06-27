@@ -17,21 +17,44 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'metadata' });
+  const baseUrl = 'https://arabic-calligraphy-generator.com';
 
   return {
     title: t('title'),
     description: t('description'),
     keywords: t('keywords'),
+    alternates: {
+      canonical: locale === 'en' ? baseUrl : `${baseUrl}/${locale}`,
+      languages: {
+        'en': baseUrl,
+        'ar': `${baseUrl}/ar`,
+        'x-default': baseUrl,
+      },
+    },
     openGraph: {
       title: t('title'),
       description: t('description'),
-      locale: locale,
+      locale: locale === 'en' ? 'en_US' : 'ar_SA',
+      alternateLocale: locale === 'en' ? 'ar_SA' : 'en_US',
       type: 'website',
+      url: locale === 'en' ? baseUrl : `${baseUrl}/${locale}`,
+      siteName: 'Arabic Calligraphy Generator',
     },
     twitter: {
       card: 'summary_large_image',
       title: t('title'),
       description: t('description'),
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
   };
 }

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft, BookOpen, Download, Feather, Layers, PenTool, Sparkles, Type } from "lucide-react"
 // 从字体数据文件中导入getFontInfoBySlug函数
 import { getFontInfoBySlug } from "@/app/lib/font-data"
-import { Navbar } from "@/components/navbar"
+import { StaticNavbar } from "@/components/static-navbar"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -217,7 +217,7 @@ export default function AmiriPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <Navbar />
+      <StaticNavbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">

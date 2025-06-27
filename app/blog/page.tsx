@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { ArrowRight, Type } from "lucide-react"
 import { getFeaturedFonts } from "@/lib/content-links"
-import { Navbar } from "@/components/navbar"
+import { StaticNavbar } from "@/components/static-navbar"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
@@ -79,7 +79,7 @@ export default function BlogPage() {
       "url": "https://arabic-calligraphy-generator.com/blog"
 }) }}
       />
-      <Navbar />
+      <StaticNavbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
       <div className="container mx-auto px-4 py-8 md:py-16">
         <header className="mb-12 text-center">

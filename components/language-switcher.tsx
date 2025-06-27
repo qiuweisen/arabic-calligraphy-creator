@@ -27,6 +27,15 @@ export function LanguageSwitcher() {
     setMounted(true);
   }, []);
 
+  // 强制重新渲染当语言改变时
+  useEffect(() => {
+    if (mounted) {
+      // 确保组件在语言切换后重新渲染
+      setMounted(false);
+      setTimeout(() => setMounted(true), 0);
+    }
+  }, [currentLocale]);
+
   const handleLanguageChange = (newLocale: Locale) => {
     if (!mounted) return;
 

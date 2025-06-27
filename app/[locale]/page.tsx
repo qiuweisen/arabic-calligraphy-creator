@@ -474,18 +474,18 @@ export default function Home() {
 
           {/* Technical Capabilities */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">Advanced Arabic Typography Features</h2>
+            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">{t('technicalFeatures.title')}</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-amber-800 mb-4">Font Collection & Styles</h3>
+                  <h3 className="text-lg font-bold text-amber-800 mb-4">{t('technicalFeatures.fontCollection.title')}</h3>
                   <div className="space-y-3 text-sm text-amber-700">
-                    <div><strong>Traditional Scripts:</strong> Amiri (Naskh), Scheherazade, Lateef, Markazi Text</div>
-                    <div><strong>Decorative Styles:</strong> Aref Ruqaa (Diwani), Jomhuria, Rakkas, Lemonada</div>
-                    <div><strong>Modern Typography:</strong> Cairo, Harmattan, Mada, Tajawal, El Messiri</div>
-                    <div><strong>Specialized:</strong> Reem Kufi (Geometric), Mirza (Nastaliq), Marhey (Display)</div>
+                    <div><strong>{t('technicalFeatures.fontCollection.traditional')}</strong></div>
+                    <div><strong>{t('technicalFeatures.fontCollection.decorative')}</strong></div>
+                    <div><strong>{t('technicalFeatures.fontCollection.modern')}</strong></div>
+                    <div><strong>{t('technicalFeatures.fontCollection.specialized')}</strong></div>
                     <div className="mt-4 p-3 bg-amber-50 rounded-lg">
-                      <p className="text-xs text-amber-600">All fonts support RTL text direction, Arabic diacritics (Harakat), and Kashida elongation for authentic calligraphy.</p>
+                      <p className="text-xs text-amber-600">{t('technicalFeatures.fontCollection.note')}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -493,14 +493,14 @@ export default function Home() {
 
               <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-amber-800 mb-4">Export & Compatibility</h3>
+                  <h3 className="text-lg font-bold text-amber-800 mb-4">{t('technicalFeatures.export.title')}</h3>
                   <div className="space-y-3 text-sm text-amber-700">
-                    <div><strong>Output Formats:</strong> PNG (transparent background), SVG (scalable vector)</div>
-                    <div><strong>Quality Options:</strong> High-resolution export suitable for print and digital use</div>
-                    <div><strong>Browser Support:</strong> Chrome, Firefox, Safari, Edge - all modern browsers</div>
-                    <div><strong>Device Compatibility:</strong> Desktop, tablet, and mobile responsive design</div>
+                    <div><strong>{t('technicalFeatures.export.formats')}</strong></div>
+                    <div><strong>{t('technicalFeatures.export.quality')}</strong></div>
+                    <div><strong>{t('technicalFeatures.export.browsers')}</strong></div>
+                    <div><strong>{t('technicalFeatures.export.devices')}</strong></div>
                     <div className="mt-4 p-3 bg-amber-50 rounded-lg">
-                      <p className="text-xs text-amber-600">Free for commercial use. No watermarks, no registration required. Works entirely in your browser for privacy.</p>
+                      <p className="text-xs text-amber-600">{t('technicalFeatures.export.note')}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -513,31 +513,31 @@ export default function Home() {
 
           {/* Professional Use Cases */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">Professional Arabic Calligraphy Applications</h2>
+            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">{t('professionalUse.title')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-amber-800 mb-4">Business & Branding</h3>
+                  <h3 className="text-lg font-bold text-amber-800 mb-4">{t('professionalUse.business.title')}</h3>
                   <div className="space-y-3 text-amber-700">
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
                       <div>
-                        <p className="font-medium">Corporate Logos & Identity</p>
-                        <p className="text-sm text-amber-600">Create distinctive Arabic brand names with traditional or modern calligraphy styles</p>
+                        <p className="font-medium">{t('professionalUse.business.logo.title')}</p>
+                        <p className="text-sm text-amber-600">{t('professionalUse.business.logo.description')}</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
                       <div>
-                        <p className="font-medium">Restaurant & Hospitality</p>
-                        <p className="text-sm text-amber-600">Design authentic Arabic signage, menus, and promotional materials</p>
+                        <p className="font-medium">{t('professionalUse.business.restaurant.title')}</p>
+                        <p className="text-sm text-amber-600">{t('professionalUse.business.restaurant.description')}</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
                       <div>
-                        <p className="font-medium">Marketing Materials</p>
-                        <p className="text-sm text-amber-600">Professional Arabic typography for brochures, advertisements, and digital campaigns</p>
+                        <p className="font-medium">{t('professionalUse.business.marketing.title')}</p>
+                        <p className="text-sm text-amber-600">{t('professionalUse.business.marketing.description')}</p>
                       </div>
                     </div>
                   </div>
@@ -546,27 +546,27 @@ export default function Home() {
 
               <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-amber-800 mb-4">Personal & Cultural</h3>
+                  <h3 className="text-lg font-bold text-amber-800 mb-4">{t('professionalUse.personal.title')}</h3>
                   <div className="space-y-3 text-amber-700">
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
                       <div>
-                        <p className="font-medium">Wedding & Event Invitations</p>
-                        <p className="text-sm text-amber-600">Elegant Arabic calligraphy for special occasions and celebrations</p>
+                        <p className="font-medium">{t('professionalUse.personal.wedding.title')}</p>
+                        <p className="text-sm text-amber-600">{t('professionalUse.personal.wedding.description')}</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
                       <div>
-                        <p className="font-medium">Islamic Art & Decoration</p>
-                        <p className="text-sm text-amber-600">Beautiful Quranic verses, Hadith, and Islamic phrases for home decoration</p>
+                        <p className="font-medium">{t('professionalUse.personal.islamic.title')}</p>
+                        <p className="text-sm text-amber-600">{t('professionalUse.personal.islamic.description')}</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
                       <div>
-                        <p className="font-medium">Social Media Content</p>
-                        <p className="text-sm text-amber-600">Eye-catching Arabic posts for Instagram, Facebook, and other platforms</p>
+                        <p className="font-medium">{t('professionalUse.personal.social.title')}</p>
+                        <p className="text-sm text-amber-600">{t('professionalUse.personal.social.description')}</p>
                       </div>
                     </div>
                   </div>
@@ -577,52 +577,11 @@ export default function Home() {
 
           {/* FAQ Section - Comprehensive but User-Friendly */}
           <section id="faq" className="mb-12">
-            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">Arabic Calligraphy Generator FAQ</h2>
+            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">{t('detailedFaq.title')}</h2>
             <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
               <CardContent className="p-6">
                 <Accordion type="single" collapsible className="w-full">
-                  {[
-                    {
-                      question: "Is this Arabic calligraphy generator completely free?",
-                      answer:
-                        "Yes! Our Arabic calligraphy generator is 100% free with no hidden costs, subscriptions, or registration required. All 13+ premium fonts, customization features, and export options are included at no charge.",
-                    },
-                    {
-                      question: "What Arabic fonts and calligraphy styles are available?",
-                      answer:
-                        "We offer 13+ carefully selected Arabic fonts covering traditional calligraphy styles (Kufic, Naskh, Diwani, Nastaliq) and modern Arabic typography. Each font supports RTL text direction, Arabic diacritics (Harakat), and authentic Arabic script rendering.",
-                    },
-                    {
-                      question: "What file formats can I download and what quality?",
-                      answer:
-                        "You can export your Arabic calligraphy as high-resolution PNG files (with transparent background) or scalable SVG vector files. Both formats are suitable for professional printing, digital media, and commercial applications.",
-                    },
-                    {
-                      question: "Can I use the generated calligraphy for commercial projects?",
-                      answer:
-                        "Yes, you can use your created Arabic calligraphy designs for both personal and commercial projects without any restrictions. This includes business logos, marketing materials, wedding invitations, and any other commercial applications.",
-                    },
-                    {
-                      question: "Does this Arabic calligraphy generator work on mobile devices?",
-                      answer:
-                        "Absolutely! Our Arabic calligraphy generator is fully responsive and optimized for smartphones, tablets, and desktop computers. The interface adapts to your screen size while maintaining full functionality.",
-                    },
-                    {
-                      question: "Is this the best free online Arabic calligraphy generator available?",
-                      answer:
-                        "Our free online Arabic calligraphy generator stands out with 13+ premium Arabic fonts online, instant PNG/SVG downloads, and no registration requirements. Unlike many Arabic text generators that require subscriptions, our Arabic calligraphy maker app provides professional-quality results completely free.",
-                    },
-                    {
-                      question: "Does the tool support Arabic text with diacritics (Harakat)?",
-                      answer:
-                        "Yes, our Arabic calligraphy generator supports Arabic text with diacritics (Harakat/اعراب). You can input text with vowel marks, and the generator will render them according to each font's capabilities. This is essential for Quranic verses and formal Arabic text.",
-                    },
-                    {
-                      question: "How does this Arabic calligraphy maker compare to desktop software?",
-                      answer:
-                        "Our online Arabic calligraphy generator free tool offers several advantages over desktop software: instant access without downloads, automatic updates, cross-platform compatibility, and cloud-based convenience. While desktop software may offer more advanced features, our Arabic text generator provides the perfect balance of functionality and accessibility for most users' needs.",
-                    },
-                  ].map((faq, index) => (
+                  {t.raw('detailedFaq.questions').map((faq: any, index: number) => (
                     <AccordionItem key={index} value={`item-${index}`}>
                       <AccordionTrigger className="text-lg font-medium text-amber-900">{faq.question}</AccordionTrigger>
                       <AccordionContent className="text-amber-700">
@@ -633,7 +592,7 @@ export default function Home() {
                 </Accordion>
                 <div className="mt-4 text-center">
                   <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
-                    <Link href="/faq">View All FAQs</Link>
+                    <Link href="/faq">{t('detailedFaq.viewAll')}</Link>
                   </Button>
                 </div>
               </CardContent>

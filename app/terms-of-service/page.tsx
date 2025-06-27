@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Navbar } from "@/components/navbar"
+import { StaticNavbar } from "@/components/static-navbar"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function TermsOfServicePage() {
   return (
     <>
-      <Navbar />
+      <StaticNavbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">

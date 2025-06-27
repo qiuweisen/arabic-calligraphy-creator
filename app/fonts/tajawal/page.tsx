@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Type, Layers, CheckCircle, MonitorPlay, Globe, Zap, Box } from "lucide-react"
-import { Navbar } from "@/components/navbar"
+import { StaticNavbar } from "@/components/static-navbar"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -213,7 +213,7 @@ export default function TajawalFontPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <Navbar />
+      <StaticNavbar />
       <main className="min-h-screen bg-gradient-to-b from-indigo-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">

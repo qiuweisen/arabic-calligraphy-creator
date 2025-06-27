@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Navbar } from "@/components/navbar"
+import { StaticNavbar } from "@/components/static-navbar"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -97,7 +97,7 @@ export default function FAQPage() {
       "url": "https://arabic-calligraphy-generator.com/faq"
 }) }}
       />
-      <Navbar />
+      <StaticNavbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
       <div className="container mx-auto px-4 py-8 md:py-16">
         <header className="mb-12 text-center">

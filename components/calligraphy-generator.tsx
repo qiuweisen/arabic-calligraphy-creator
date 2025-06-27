@@ -46,6 +46,7 @@ import { Drawer, DrawerContent, DrawerHeader, DrawerTitle } from "@/components/u
 import { TemplateBrowser } from "@/components/template-browser"
 import { FontPreview } from "@/components/font-preview"
 import { MobileFab } from "@/components/mobile-fab"
+import { useTranslations } from 'next-intl'
 
 // Helper function to generate canvas from preview
 async function generatePreviewCanvas(
@@ -240,6 +241,7 @@ interface CalligraphyGeneratorProps {
 }
 
 export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyGeneratorProps = {}) {
+  const t = useTranslations('generator')
   const isMobile = useMobile()
   const { loadFont, isFontLoaded, isFontLoading } = useFontLoader()
   const [text, setText] = useState(DEFAULT_TEXT)
@@ -928,15 +930,15 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
     <>
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <Label htmlFor="arabic-text" className="text-base font-medium">Arabic Text</Label>
+          <Label htmlFor="arabic-text" className="text-base font-medium">{t('textTab.arabicText')}</Label>
           <Button variant="ghost" size="sm" onClick={toggleKeyboard} className="h-8 px-3 text-sm">
-            {keyboardVisible ? "Hide Keyboard" : "Show Keyboard"}
+            {keyboardVisible ? t('textTab.hideKeyboard') : t('textTab.showKeyboard')}
           </Button>
         </div>
         <Textarea
           id="arabic-text"
           dir="rtl"
-          placeholder="Enter Arabic text here..."
+          placeholder={t('textTab.placeholder')}
           value={text}
           onChange={handleTextChange}
           className="min-h-[120px] font-arabic text-lg p-4 touch-manipulation"
@@ -955,7 +957,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
           onClick={() => setIsTemplateDialogOpen(true)}
         >
           <Sparkles className="mr-2 h-5 w-5" />
-          Templates
+          {t('textTab.templates')}
         </Button>
         <Button
           variant="outline"
@@ -963,17 +965,17 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
           onClick={() => setText(DEFAULT_TEXT)}
         >
           <RefreshCw className="mr-2 h-5 w-5" />
-          Reset Text
+          {t('textTab.resetText')}
         </Button>
       </div>
 
       <div className="space-y-3">
         <div className="flex justify-between items-center">
-          <Label htmlFor="font-select" className="text-base font-medium">Font</Label>
+          <Label htmlFor="font-select" className="text-base font-medium">{t('textTab.font')}</Label>
           <Popover>
             <PopoverTrigger asChild>
               <Button variant="ghost" size="sm" className="h-8 px-3 text-sm">
-                Preview
+                {t('textTab.preview')}
               </Button>
             </PopoverTrigger>
             <PopoverContent className="w-80" align="end">
@@ -983,11 +985,11 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
         </div>
         <Select value={font} onValueChange={handleFontChange}>
           <SelectTrigger className="w-full h-12 touch-manipulation">
-            <SelectValue placeholder="Select font" />
+            <SelectValue placeholder={t('textTab.selectFont')} />
           </SelectTrigger>
           <SelectContent>
             <div className="mb-2">
-              <div className="px-2 py-1.5 text-sm font-medium text-amber-800">Categories</div>
+              <div className="px-2 py-1.5 text-sm font-medium text-amber-800">{t('textTab.categories')}</div>
               {Array.from(new Set(ARABIC_FONTS.map((font) => font.category))).map((category) => (
                 <div key={category} className="px-2 py-1">
                   <div className="text-xs font-semibold text-muted-foreground mb-1">{category}</div>
@@ -1074,7 +1076,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
 
       <div className="space-y-4">
         <div className="flex justify-between items-center">
-          <Label className="text-base font-medium">Font Size: {fontSize}px</Label>
+          <Label className="text-base font-medium">{t('textTab.fontSize')}: {fontSize}px</Label>
         </div>
         <div className="px-2">
         <Slider
@@ -1598,15 +1600,15 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                 <TabsList className="grid grid-cols-3 mb-4">
                   <TabsTrigger value="text" className="flex items-center gap-2">
                     <Type className="h-4 w-4" />
-                    <span>Text</span>
+                    <span>{t('tabs.text')}</span>
                   </TabsTrigger>
                   <TabsTrigger value="style" className="flex items-center gap-2">
                     <Palette className="h-4 w-4" />
-                    <span>Style</span>
+                    <span>{t('tabs.style')}</span>
                   </TabsTrigger>
                   <TabsTrigger value="advanced" className="flex items-center gap-2">
                     <Sliders className="h-4 w-4" />
-                    <span>Advanced</span>
+                    <span>{t('tabs.advanced')}</span>
                   </TabsTrigger>
                 </TabsList>
 
@@ -1679,18 +1681,18 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
           {/* Quick Links for Desktop */}
           <Card className="overflow-hidden border-amber-200 bg-white/80 backdrop-blur-sm">
             <CardContent className="p-6">
-              <h3 className="text-lg font-semibold text-amber-800 mb-3">Quick Links</h3>
+              <h3 className="text-lg font-semibold text-amber-800 mb-3">{t('quickLinks.title')}</h3>
               <div className="grid grid-cols-2 gap-3">
                 <Button variant="outline" className="justify-start border-amber-200" asChild>
                   <a href="/blog">
                     <BookOpen className="h-4 w-4 mr-2" />
-                    Blog
+                    {t('quickLinks.blog')}
                   </a>
                 </Button>
                 <Button variant="outline" className="justify-start border-amber-200" asChild>
                   <a href="/faq">
                     <HelpCircle className="h-4 w-4 mr-2" />
-                    FAQ
+                    {t('quickLinks.faq')}
                   </a>
                 </Button>
               </div>
@@ -1708,7 +1710,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
             <Card className="overflow-hidden border-amber-200 bg-white/80 backdrop-blur-sm">
               <CardContent className="p-6">
                 <div className="mb-4 flex justify-between items-center">
-                  <h2 className="text-xl font-semibold text-amber-800">Preview</h2>
+                  <h2 className="text-xl font-semibold text-amber-800">{t('preview.title')}</h2>
                   {!isMobile && (
                     <div className="flex gap-2">
                       <TooltipProvider>
@@ -1768,7 +1770,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                 <div className="mt-6 flex flex-wrap gap-3 justify-center">
                   <Button onClick={handleDownloadPNG} className="bg-amber-600 hover:bg-amber-700">
                     <Download className="mr-2 h-4 w-4" />
-                    Download PNG
+                    {t('preview.downloadPNG')}
                   </Button>
                   <Button
                     onClick={handleDownloadSVG}
@@ -1776,7 +1778,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                     className="border-amber-600 text-amber-600 hover:bg-amber-50"
                   >
                     <Download className="mr-2 h-4 w-4" />
-                    Download SVG
+                    {t('preview.downloadSVG')}
                   </Button>
                 </div>
               </CardContent>
@@ -1786,9 +1788,9 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
             <Card className="overflow-hidden border-amber-200 bg-white/80 backdrop-blur-sm">
               <CardContent className="p-6">
                 <div className="flex justify-between items-center mb-4">
-                  <h2 className="text-xl font-semibold text-amber-800">Featured Designs</h2>
+                  <h2 className="text-xl font-semibold text-amber-800">{t('featuredDesigns.title')}</h2>
                   <Badge variant="outline" className="border-amber-200 text-amber-800">
-                    Top Picks
+                    {t('featuredDesigns.topPicks')}
                   </Badge>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

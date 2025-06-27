@@ -4,45 +4,48 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Check } from "lucide-react";
+import { useTranslations } from 'next-intl';
 
 const cdnBaseUrl = 'https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev';
 
 export function UseCasesSection() {
+  const t = useTranslations('homepage.useCasesSection');
+
   return (
     <section className="mb-12">
-      <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">What You Can Create</h2>
+      <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">{t('title')}</h2>
       <Tabs defaultValue="social" className="w-full">
         <TabsList className="grid w-full max-w-md mx-auto grid-cols-4 mb-6">
-          <TabsTrigger value="social">Social Media</TabsTrigger>
-          <TabsTrigger value="print">Print</TabsTrigger>
-          <TabsTrigger value="web">Web</TabsTrigger>
-          <TabsTrigger value="art">Art</TabsTrigger>
+          <TabsTrigger value="social">{t('socialMedia.title')}</TabsTrigger>
+          <TabsTrigger value="print">{t('print.title')}</TabsTrigger>
+          <TabsTrigger value="web">{t('web.title')}</TabsTrigger>
+          <TabsTrigger value="art">{t('art.title')}</TabsTrigger>
         </TabsList>
         <TabsContent value="social">
           <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
             <CardContent className="p-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="text-lg font-bold text-amber-800 mb-3">Perfect for Social Media</h3>
+                  <h3 className="text-lg font-bold text-amber-800 mb-3">{t('socialMedia.subtitle')}</h3>
                   <p className="text-amber-700 mb-4">
-                    Create eye-catching posts, stories, and profile graphics with beautiful Arabic typography.
+                    {t('socialMedia.description')}
                   </p>
                   <ul className="space-y-2 text-amber-700">
                     <li className="flex items-start">
                       <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>Instagram posts and stories</span>
+                      <span>{t('socialMedia.instagram')}</span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>Facebook cover photos</span>
+                      <span>{t('socialMedia.facebook')}</span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>Twitter graphics</span>
+                      <span>{t('socialMedia.twitter')}</span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>Profile pictures with Arabic monograms</span>
+                      <span>{t('socialMedia.profiles')}</span>
                     </li>
                   </ul>
                 </div>
@@ -67,26 +70,26 @@ export function UseCasesSection() {
             <CardContent className="p-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="text-lg font-bold text-amber-800 mb-3">Stunning Print Materials</h3>
+                  <h3 className="text-lg font-bold text-amber-800 mb-3">{t('print.subtitle')}</h3>
                   <p className="text-amber-700 mb-4">
-                    Design business cards, invitations, posters, and more with elegant Arabic calligraphy.
+                    {t('print.description')}
                   </p>
                   <ul className="space-y-2 text-amber-700">
                     <li className="flex items-start">
                       <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>Business cards with Arabic typography</span>
+                      <span>{t('print.business')}</span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>Wedding invitations</span>
+                      <span>{t('print.invitations')}</span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>Posters and flyers</span>
+                      <span>{t('print.posters')}</span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>Greeting cards with Arabic messages</span>
+                      <span>{t('print.certificates')}</span>
                     </li>
                   </ul>
                 </div>
@@ -111,26 +114,26 @@ export function UseCasesSection() {
             <CardContent className="p-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="text-lg font-bold text-amber-800 mb-3">Elegant Web Design Elements</h3>
+                  <h3 className="text-lg font-bold text-amber-800 mb-3">{t('web.subtitle')}</h3>
                   <p className="text-amber-700 mb-4">
-                    Enhance your website with unique Arabic calligraphy for headers, logos, and decorative elements.
+                    {t('web.description')}
                   </p>
                   <ul className="space-y-2 text-amber-700">
                     <li className="flex items-start">
                       <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>Website headers and banners</span>
+                      <span>{t('web.logos')}</span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>Arabic logos and branding</span>
+                      <span>{t('web.banners')}</span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>Decorative text for online content</span>
+                      <span>{t('web.icons')}</span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>Blog post featured images</span>
+                      <span>{t('web.graphics')}</span>
                     </li>
                   </ul>
                 </div>
@@ -155,26 +158,26 @@ export function UseCasesSection() {
             <CardContent className="p-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="text-lg font-bold text-amber-800 mb-3">Creative Art & Decor</h3>
+                  <h3 className="text-lg font-bold text-amber-800 mb-3">{t('art.subtitle')}</h3>
                   <p className="text-amber-700 mb-4">
-                    Create personalized art pieces, home decor, and unique gifts with meaningful Arabic calligraphy.
+                    {t('art.description')}
                   </p>
                   <ul className="space-y-2 text-amber-700">
                     <li className="flex items-start">
                       <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>Wall art and posters</span>
+                      <span>{t('art.wallArt')}</span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>Personalized gifts</span>
+                      <span>{t('art.islamic')}</span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>Home decor items</span>
+                      <span>{t('art.modern')}</span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>Digital art projects</span>
+                      <span>{t('art.traditional')}</span>
                     </li>
                   </ul>
                 </div>
