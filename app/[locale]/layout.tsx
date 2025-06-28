@@ -25,6 +25,8 @@ export async function generateMetadata({
         'ar': `${baseUrl}/ar`,
         'ur': `${baseUrl}/ur`,
         'bn': `${baseUrl}/bn`,
+        'ms': `${baseUrl}/ms`,
+        'id': `${baseUrl}/id`,
         'x-default': baseUrl,
       },
     },
@@ -35,7 +37,6 @@ export async function generateMetadata({
       alternateLocale: locale === 'en' ? 'ar_SA' : 'en_US',
       type: 'website',
       url: locale === 'en' ? baseUrl : `${baseUrl}/${locale}`,
-      siteName: 'Arabic Calligraphy Generator',
     },
     twitter: {
       card: 'summary_large_image',

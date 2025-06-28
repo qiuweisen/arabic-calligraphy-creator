@@ -59,6 +59,12 @@ export function LanguagePrompt({ suggestedLocale, countryCode }: LanguagePromptP
       } else if (browserLang === 'bn') {
         setDetectedSuggestedLocale('bn');
         setDetectedCountryCode('BD');
+      } else if (browserLang === 'ms') {
+        setDetectedSuggestedLocale('ms');
+        setDetectedCountryCode('MY');
+      } else if (browserLang === 'id') {
+        setDetectedSuggestedLocale('id');
+        setDetectedCountryCode('ID');
       } else if (fullLang.includes('IN')) {
         // 印度用户可能使用多种语言，根据地区判断
         if (fullLang.includes('ur') || fullLang.includes('Urdu')) {
@@ -224,6 +230,20 @@ export function LanguagePrompt({ suggestedLocale, countryCode }: LanguagePromptP
           title: 'হ্যালো! আমরা আমাদের সাইট বাংলায় অফার করি',
           subtitle: 'Hello! We offer our site in Bengali',
           useLanguage: 'বাংলা ব্যবহার করুন',
+          continueEnglish: 'Continue in English'
+        };
+      case 'ms':
+        return {
+          title: 'Selamat datang! Kami menawarkan laman web kami dalam Bahasa Melayu',
+          subtitle: 'Hello! We offer our site in Malay',
+          useLanguage: 'Guna Bahasa Melayu',
+          continueEnglish: 'Continue in English'
+        };
+      case 'id':
+        return {
+          title: 'Selamat datang! Kami menawarkan situs kami dalam Bahasa Indonesia',
+          subtitle: 'Hello! We offer our site in Indonesian',
+          useLanguage: 'Gunakan Bahasa Indonesia',
           continueEnglish: 'Continue in English'
         };
       default:

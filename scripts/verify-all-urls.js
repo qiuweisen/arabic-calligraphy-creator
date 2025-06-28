@@ -15,6 +15,8 @@ const URLS_TO_TEST = [
   '/ar',
   '/ur',
   '/bn',
+  '/ms',
+  '/id',
   '/fonts',
   '/blog',
   '/faq',
