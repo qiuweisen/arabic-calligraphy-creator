@@ -53,6 +53,7 @@ export default function middleware(request: NextRequest) {
     if (response) {
       response.headers.set('X-Suggested-Locale', suggestedLocale);
       response.headers.set('X-Country-Code', countryCode || 'unknown');
+      response.headers.set('x-pathname', pathname);
     }
 
     return response;

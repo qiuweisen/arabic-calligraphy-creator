@@ -6,6 +6,8 @@ import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { CssLoader } from "@/components/css-loader"
+import { localeConfig } from "@/i18n"
+import { headers } from "next/headers"
 import type { Metadata } from 'next'
 
 // 字体配置
@@ -58,15 +60,32 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   const isProduction = process.env.NODE_ENV === 'production'
 
+  // 从headers中获取当前路径
+  const headersList = await headers();
+  const pathname = headersList.get('x-pathname') || '/';
+
+  // 从URL路径中提取语言代码
+  const segments = pathname.split('/').filter(Boolean);
+  const firstSegment = segments[0];
+
+  // 检查第一个段是否是支持的语言代码
+  let locale: keyof typeof localeConfig = 'en';
+  if (firstSegment && Object.keys(localeConfig).includes(firstSegment)) {
+    locale = firstSegment as keyof typeof localeConfig;
+  }
+
+  // 获取当前语言的文本方向
+  const dir = localeConfig[locale]?.dir || 'ltr';
+
   return (
-    <html className={`${inter.variable} ${amiri.variable}`} suppressHydrationWarning>
+    <html className={`${inter.variable} ${amiri.variable}`} dir={dir} suppressHydrationWarning>
       <body className={`${inter.className} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="system">
           {children}
