@@ -83,7 +83,7 @@ export function Navbar() {
                         className="text-amber-800 hover:text-amber-600 hover:bg-amber-50"
                       >
                         {item.label}
-                        <ChevronDown className="ml-1 h-3 w-3" />
+                        <ChevronDown className="ml-1 h-3 w-3 navbar-chevron" />
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="start" className="w-56">
@@ -110,7 +110,7 @@ export function Navbar() {
             </nav>
 
             {/* Language Switcher */}
-            <div className="ml-2 pl-2 border-l border-amber-200">
+            <div className="ml-2 pl-2 border-l border-amber-200 navbar-language-container">
               <LanguageSwitcher />
             </div>
           </div>
@@ -143,7 +143,7 @@ export function Navbar() {
                         {item.label}
                       </Link>
                       {item.dropdown && (
-                        <div className="ml-4 border-l border-amber-200">
+                        <div className="ms-4 border-s border-amber-200">
                           {item.dropdown.map((dropdownItem, dropdownIndex) => (
                             <Link
                               key={dropdownIndex}

@@ -1,0 +1,79 @@
+/* RTL (Right-to-Left) 专用样式 */
+/* 只有当 HTML dir="rtl" 时才会应用这些样式，不会影响其他语言 */
+
+/* 导航栏 RTL 适配 */
+:dir(rtl) .navbar-chevron {
+  margin-left: 0;
+  margin-right: 0.25rem; /* mr-1 */
+}
+
+:dir(rtl) .navbar-language-container {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: none;
+  margin-right: 0.5rem; /* mr-2 */
+  padding-right: 0.5rem; /* pr-2 */
+  border-right: 1px solid rgb(251 191 36 / 0.2); /* border-r border-amber-200 */
+}
+
+:dir(rtl) .navbar-mobile-dropdown {
+  margin-left: 0;
+  border-left: none;
+  margin-right: 1rem; /* mr-4 */
+  border-right: 1px solid rgb(251 191 36 / 0.2); /* border-r border-amber-200 */
+}
+
+/* 语言切换器 RTL 适配 */
+:dir(rtl) .language-switcher-icon {
+  margin-right: 0;
+  margin-left: 0.5rem; /* ml-2 */
+}
+
+:dir(rtl) .language-switcher-text {
+  margin-right: 0;
+  margin-left: 0.25rem; /* ml-1 */
+}
+
+:dir(rtl) .language-switcher-flag {
+  margin-right: 0;
+  margin-left: 0.75rem; /* ml-3 */
+}
+
+:dir(rtl) .language-switcher-checkmark {
+  margin-left: 0;
+  margin-right: auto; /* mr-auto */
+}
+
+/* 通用 RTL 布局调整 */
+:dir(rtl) .flex-row {
+  flex-direction: row-reverse;
+}
+
+/* 确保阿拉伯文本正确显示 */
+:dir(rtl) [lang="ar"],
+:dir(rtl) [lang="ur"] {
+  text-align: right;
+  direction: rtl;
+}
+
+/* 移动端菜单 RTL 适配 */
+:dir(rtl) .mobile-menu {
+  right: auto;
+  left: 0;
+}
+
+/* 下拉菜单 RTL 适配 */
+:dir(rtl) .dropdown-menu {
+  text-align: right;
+}
+
+/* 按钮图标 RTL 适配 */
+:dir(rtl) .button-icon-left {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+:dir(rtl) .button-icon-right {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}

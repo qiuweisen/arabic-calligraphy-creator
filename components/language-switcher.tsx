@@ -25,7 +25,31 @@ export function LanguageSwitcher() {
 
   useEffect(() => {
     setMounted(true);
-  }, []);
+
+    // 确保HTML dir属性与当前语言一致
+    const currentDir = localeConfig[currentLocale]?.dir || 'ltr';
+    if (document.documentElement.getAttribute('dir') !== currentDir) {
+      document.documentElement.setAttribute('dir', currentDir);
+    }
+  }, [currentLocale]);
+
+  // 添加路由变化监听，确保dir属性始终正确
+  useEffect(() => {
+    const handleRouteChange = () => {
+      // 延迟一点确保currentLocale已更新
+      setTimeout(() => {
+        const currentDir = localeConfig[currentLocale]?.dir || 'ltr';
+        document.documentElement.setAttribute('dir', currentDir);
+      }, 100);
+    };
+
+    // 监听popstate事件（浏览器前进后退）
+    window.addEventListener('popstate', handleRouteChange);
+
+    return () => {
+      window.removeEventListener('popstate', handleRouteChange);
+    };
+  }, [currentLocale]);
 
   const handleLanguageChange = (newLocale: Locale) => {
     if (!mounted) return;
@@ -33,6 +57,10 @@ export function LanguageSwitcher() {
     // 记录用户主动选择（最高优先级）
     localStorage.setItem('user-language-choice', newLocale);
     document.cookie = `user-language-choice=${newLocale}; path=/; max-age=${365 * 24 * 60 * 60}`;
+
+    // 立即更新HTML dir属性
+    const newDir = localeConfig[newLocale]?.dir || 'ltr';
+    document.documentElement.setAttribute('dir', newDir);
 
     // 构建新的路径
     let newPath = pathname;
@@ -67,8 +95,8 @@ export function LanguageSwitcher() {
         className="h-9 px-3 text-amber-800 hover:bg-amber-50 hover:text-amber-900"
         disabled
       >
-        <Globe className="h-4 w-4 mr-2" />
-        <span className="hidden sm:inline mr-1">
+        <Globe className="h-4 w-4 mr-2 language-switcher-icon" />
+        <span className="hidden sm:inline mr-1 language-switcher-text">
           {currentConfig.flag} {currentConfig.nativeName}
         </span>
         <span className="sm:hidden mr-1">
@@ -87,11 +115,11 @@ export function LanguageSwitcher() {
           size="sm"
           className="h-9 px-3 text-amber-800 hover:bg-amber-50 hover:text-amber-900"
         >
-          <Globe className="h-4 w-4 mr-2" />
-          <span className="hidden sm:inline mr-1">
+          <Globe className="h-4 w-4 mr-2 language-switcher-icon" />
+          <span className="hidden sm:inline mr-1 language-switcher-text">
             {currentConfig.flag} {currentConfig.nativeName}
           </span>
-          <span className="sm:hidden mr-1">
+          <span className="sm:hidden mr-1 language-switcher-text">
             {currentConfig.flag}
           </span>
           <ChevronDown className="h-3 w-3" />
@@ -112,13 +140,13 @@ export function LanguageSwitcher() {
                   : 'text-gray-700 hover:bg-gray-50'
               }`}
             >
-              <span className="mr-3 text-lg">{config.flag}</span>
+              <span className="mr-3 text-lg language-switcher-flag">{config.flag}</span>
               <div className="flex flex-col">
                 <span className="text-sm font-medium">{config.nativeName}</span>
                 <span className="text-xs text-gray-500">{config.name}</span>
               </div>
               {isActive && (
-                <span className="ml-auto text-amber-600">✓</span>
+                <span className="ml-auto text-amber-600 language-switcher-checkmark">✓</span>
               )}
             </DropdownMenuItem>
           );
