@@ -7,8 +7,12 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Menu, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { LanguageSwitcher } from "@/components/language-switcher"
+import { SharedLogo } from "@/components/shared/logo"
+import { useTranslations } from 'next-intl'
 
 export function Navbar() {
+  const t = useTranslations('navigation')
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -21,39 +25,39 @@ export function Navbar() {
   }, [])
 
   const navItems = [
-    { label: "Generator", href: "/" }, // 强化核心关键词
-    { label: "Arabic Fonts", href: "/fonts" },
+    { label: t('generator'), href: "/" },
+    { label: t('arabicFonts'), href: "/fonts" },
     {
-      label: "Learning Guides",
+      label: t('learningGuides'),
       href: "/guides",
       dropdown: [
-        { label: "Complete Beginner Guide", href: "/guides/arabic-calligraphy-beginner-guide" },
-        { label: "Font Comparison Guide", href: "/guides/arabic-font-comparison" },
-        { label: "Best Arabic Fonts 2025", href: "/guides/best-arabic-fonts-2025" },
-        { label: "Typography Trends 2025", href: "/guides/arabic-typography-trends-2025" }
+        { label: t('dropdown.completeBeginner'), href: "/guides/arabic-calligraphy-beginner-guide" },
+        { label: t('dropdown.fontComparison'), href: "/guides/arabic-font-comparison" },
+        { label: t('dropdown.bestFonts2025'), href: "/guides/best-arabic-fonts-2025" },
+        { label: t('dropdown.typographyTrends'), href: "/guides/arabic-typography-trends-2025" }
       ]
     },
     {
-      label: "How-to Tutorials",
+      label: t('howToTutorials'),
       href: "/tutorials",
       dropdown: [
-        { label: "Create Calligraphy Online", href: "/tutorials/how-to-create-arabic-calligraphy-online" },
-        { label: "Font Selection Guide", href: "/tutorials/arabic-font-selection-guide" },
-        { label: "Design Tips", href: "/tutorials/arabic-calligraphy-design-tips" },
-        { label: "Download & Use Fonts", href: "/tutorials/download-and-use-arabic-fonts" }
+        { label: t('dropdown.createOnline'), href: "/tutorials/how-to-create-arabic-calligraphy-online" },
+        { label: t('dropdown.fontSelection'), href: "/tutorials/arabic-font-selection-guide" },
+        { label: t('dropdown.designTips'), href: "/tutorials/arabic-calligraphy-design-tips" },
+        { label: t('dropdown.downloadFonts'), href: "/tutorials/download-and-use-arabic-fonts" }
       ]
     },
     {
-      label: "Free Resources",
+      label: t('freeResources'),
       href: "/resources",
       dropdown: [
-        { label: "Free Arabic Fonts", href: "/resources/free-arabic-fonts" }
+        { label: t('dropdown.freeArabicFonts'), href: "/resources/free-arabic-fonts" }
       ]
     },
-    { label: "Use Cases", href: "/use-cases" },
-    { label: "Blog", href: "/blog" },
-    { label: "FAQ", href: "/faq" },
-    { label: "Contact", href: "/contact" },
+    { label: t('useCases'), href: "/use-cases" },
+    { label: t('blog'), href: "/blog" },
+    { label: t('faq'), href: "/faq" },
+    { label: t('contact'), href: "/contact" },
   ]
 
   return (
@@ -65,49 +69,51 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-white font-bold text-lg">
-              خط
-            </div>
-            <span className="font-bold text-amber-800">ArabicCalligraphy</span>
-          </Link>
+          <SharedLogo />
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1">
-            {navItems.map((item, index) => (
-              item.dropdown ? (
-                <DropdownMenu key={index}>
-                  <DropdownMenuTrigger asChild>
-                    <Button
-                      variant="ghost"
-                      className="text-amber-800 hover:text-amber-600 hover:bg-amber-50"
-                    >
-                      {item.label}
-                      <ChevronDown className="ml-1 h-3 w-3" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start" className="w-56">
-                    {item.dropdown.map((dropdownItem, dropdownIndex) => (
-                      <DropdownMenuItem key={dropdownIndex} asChild>
-                        <Link href={dropdownItem.href} className="w-full">
-                          {dropdownItem.label}
-                        </Link>
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              ) : (
-                <Button
-                  key={index}
-                  variant="ghost"
-                  asChild
-                  className="text-amber-800 hover:text-amber-600 hover:bg-amber-50"
-                >
-                  <Link href={item.href}>{item.label}</Link>
-                </Button>
-              )
-            ))}
-          </nav>
+          <div className="hidden md:flex items-center gap-1">
+            <nav className="flex items-center gap-1">
+              {navItems.map((item, index) => (
+                item.dropdown ? (
+                  <DropdownMenu key={index}>
+                    <DropdownMenuTrigger asChild>
+                      <Button
+                        variant="ghost"
+                        className="text-amber-800 hover:text-amber-600 hover:bg-amber-50"
+                      >
+                        {item.label}
+                        <ChevronDown className="ml-1 h-3 w-3 navbar-chevron" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="start" className="w-56">
+                      {item.dropdown.map((dropdownItem, dropdownIndex) => (
+                        <DropdownMenuItem key={dropdownIndex} asChild>
+                          <Link href={dropdownItem.href} className="w-full">
+                            {dropdownItem.label}
+                          </Link>
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                ) : (
+                  <Button
+                    key={index}
+                    variant="ghost"
+                    asChild
+                    className="text-amber-800 hover:text-amber-600 hover:bg-amber-50"
+                  >
+                    <Link href={item.href}>{item.label}</Link>
+                  </Button>
+                )
+              ))}
+            </nav>
+
+            {/* Language Switcher */}
+            <div className="ml-2 pl-2 border-l border-amber-200 navbar-language-container">
+              <LanguageSwitcher />
+            </div>
+          </div>
 
           {/* Mobile Menu Trigger - Increased touch area */}
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -122,12 +128,9 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px] sm:w-[320px]">
               <div className="flex flex-col h-full py-8">
-                <Link href="/" className="flex items-center gap-2 mb-8 px-2" onClick={() => setIsMobileMenuOpen(false)}>
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-white font-bold text-lg">
-                    خط
-                  </div>
-                  <span className="font-bold text-amber-800 text-xl">ArabicCalligraphy</span>
-                </Link>
+                <div className="mb-8 px-2" onClick={() => setIsMobileMenuOpen(false)}>
+                  <SharedLogo />
+                </div>
 
                 <nav className="flex flex-col">
                   {navItems.map((item, index) => (
@@ -140,7 +143,7 @@ export function Navbar() {
                         {item.label}
                       </Link>
                       {item.dropdown && (
-                        <div className="ml-4 border-l border-amber-200">
+                        <div className="ms-4 border-s border-amber-200">
                           {item.dropdown.map((dropdownItem, dropdownIndex) => (
                             <Link
                               key={dropdownIndex}
@@ -156,6 +159,14 @@ export function Navbar() {
                     </div>
                   ))}
                 </nav>
+
+                {/* Mobile Language Switcher */}
+                <div className="mt-6 pt-6 border-t border-amber-200">
+                  <div className="px-4 mb-3">
+                    <span className="text-sm font-medium text-amber-800">Language / اللغة</span>
+                  </div>
+                  <LanguageSwitcher />
+                </div>
               </div>
             </SheetContent>
           </Sheet>

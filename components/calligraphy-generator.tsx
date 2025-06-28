@@ -46,6 +46,7 @@ import { Drawer, DrawerContent, DrawerHeader, DrawerTitle } from "@/components/u
 import { TemplateBrowser } from "@/components/template-browser"
 import { FontPreview } from "@/components/font-preview"
 import { MobileFab } from "@/components/mobile-fab"
+import { useTranslations } from 'next-intl'
 
 // Helper function to generate canvas from preview
 async function generatePreviewCanvas(
@@ -151,6 +152,7 @@ async function generatePreviewCanvas(
   }
 }
 
+// Font definitions with category keys for translation
 const ARABIC_FONTS = [
   { name: "Amiri", value: "'Amiri', serif", category: "Traditional" },
   { name: "Scheherazade", value: "'Scheherazade New', serif", category: "Traditional" },
@@ -171,25 +173,26 @@ const ARABIC_FONTS = [
   { name: "Markazi Text", value: "'Markazi Text', serif", category: "Traditional" },
 ]
 
+// Background patterns with translation keys
 const BACKGROUND_PATTERNS = [
-  { name: "None", value: "none" },
+  { nameKey: "None", value: "none" },
   {
-    name: "Geometric",
+    nameKey: "Geometric",
     value:
       "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%239C92AC' fillOpacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
   },
   {
-    name: "Arabesque",
+    nameKey: "Arabesque",
     value:
       "url(\"data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%239C92AC' fillOpacity='0.05'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
   },
   {
-    name: "Islamic Patterns",
+    nameKey: "Islamic Patterns",
     value:
       "url(\"data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fillOpacity='0.05' fillRule='evenodd'/%3E%3C/svg%3E\")",
   },
   {
-    name: "Dots",
+    nameKey: "Dots",
     value:
       "url(\"data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fillOpacity='0.05' fillRule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E\")",
   },
@@ -240,6 +243,7 @@ interface CalligraphyGeneratorProps {
 }
 
 export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyGeneratorProps = {}) {
+  const t = useTranslations('generator')
   const isMobile = useMobile()
   const { loadFont, isFontLoaded, isFontLoading } = useFontLoader()
   const [text, setText] = useState(DEFAULT_TEXT)
@@ -447,8 +451,8 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
     }
 
     toast({
-      title: "Template Applied",
-      description: "The selected template has been applied to your canvas.",
+      title: t('toasts.templateApplied'),
+      description: t('toasts.templateAppliedDesc'),
     })
   }
 
@@ -462,8 +466,8 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
 
     try {
       toast({
-        title: "Download Started",
-        description: "Preparing your Arabic calligraphy as PNG...",
+        title: t('toasts.downloadStarted'),
+        description: t('toasts.preparingPNG'),
       });
 
       const canvas = await generatePreviewCanvas(previewRef.current, currentOptions, 4); // Higher scale for download
@@ -493,16 +497,16 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
       }
 
       toast({
-        title: "Download Complete",
-        description: "Your Arabic calligraphy has been downloaded as PNG.",
+        title: t('toasts.downloadComplete'),
+        description: t('toasts.downloadCompletePNG'),
       });
     } catch (error) {
       console.error('PNG download failed:', error);
       // General error if canvas generation was successful but subsequent steps failed
       if (!(error instanceof Error && error.message.includes("generatePreviewCanvas"))) {
       toast({
-        title: "Download Failed",
-        description: "There was an error downloading your calligraphy. Please try again.",
+        title: t('toasts.downloadFailed'),
+        description: t('toasts.downloadError'),
         variant: "destructive",
           });
     }
@@ -519,8 +523,8 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
 
     try {
       toast({
-        title: "Download Started",
-        description: "Preparing your Arabic calligraphy as SVG...",
+        title: t('toasts.downloadStarted'),
+        description: t('toasts.preparingSVG'),
       });
 
       const canvas = await generatePreviewCanvas(previewRef.current, currentOptions, 4); // Higher scale for embedded image
@@ -594,15 +598,15 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
       }
 
       toast({
-        title: "Download Complete",
-        description: "Your Arabic calligraphy has been downloaded as SVG.",
+        title: t('toasts.downloadComplete'),
+        description: t('toasts.downloadCompleteSVG'),
       });
     } catch (error) {
       console.error('SVG download failed:', error);
       if (!(error instanceof Error && error.message.includes("generatePreviewCanvas"))) {
       toast({
-        title: "Download Failed",
-        description: "There was an error downloading your calligraphy. Please try again.",
+        title: t('toasts.downloadFailed'),
+        description: t('toasts.downloadError'),
         variant: "destructive",
           });
     }
@@ -612,8 +616,8 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
   const handleCopyToClipboardImage = async () => {
     if (!previewRef.current) {
       toast({
-        title: "Error",
-        description: "Preview element not found.",
+        title: t('toasts.error'),
+        description: t('toasts.previewNotFound'),
         variant: "destructive",
       });
       return;
@@ -626,8 +630,8 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
 
     try {
       toast({
-        title: "Copying Image",
-        description: "Preparing image to copy to clipboard...",
+        title: t('toasts.copyingImage'),
+        description: t('toasts.copyingImageDesc'),
       });
 
       const canvas = await generatePreviewCanvas(previewRef.current, currentOptions, 2); // Moderate scale for clipboard
@@ -643,14 +647,14 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
               new ClipboardItem({ 'image/png': blob })
             ]);
             toast({
-              title: "Image Copied",
-              description: "The calligraphy image has been copied to your clipboard.",
+              title: t('toasts.imageCopied'),
+              description: t('toasts.imageCopiedDesc'),
             });
           } catch (clipboardError) {
             console.error('Failed to copy image to clipboard:', clipboardError);
             toast({
-              title: "Copy Failed",
-              description: "Could not copy image. Your browser might not support this feature or permission was denied.",
+              title: t('toasts.copyFailed'),
+              description: t('toasts.copyFailedDesc'),
               variant: "destructive",
             });
           }
@@ -658,8 +662,8 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
           // This case should ideally be caught by generatePreviewCanvas returning null
           console.error("Image copy failed: Canvas toBlob produced null.");
           toast({
-            title: "Copy Error",
-            description: "Failed to generate image blob for copying.",
+            title: t('toasts.copyError'),
+            description: t('toasts.copyErrorDesc'),
             variant: "destructive",
           });
         }
@@ -669,8 +673,8 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
       console.error('Image copy failed:', error);
       if (!(error instanceof Error && error.message.includes("generatePreviewCanvas"))) {
           toast({
-            title: "Copy Error",
-            description: "An unexpected error occurred while trying to copy the image.",
+            title: t('toasts.copyError'),
+            description: t('toasts.copyErrorUnexpected'),
             variant: "destructive",
           });
       }
@@ -681,13 +685,13 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
     try {
       await navigator.clipboard.writeText(text)
       toast({
-        title: "Copied to Clipboard",
-        description: "Your text has been copied to clipboard.",
+        title: t('toasts.copiedToClipboard'),
+        description: t('toasts.copiedToClipboardDesc'),
       })
     } catch (error) {
       toast({
-        title: "Copy Failed",
-        description: "There was an error copying to clipboard.",
+        title: t('toasts.copyFailed'),
+        description: t('toasts.copyFailedText'),
         variant: "destructive",
       })
     }
@@ -696,8 +700,8 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
   const handleShare = async () => {
     if (!previewRef.current) {
       toast({
-        title: "Error",
-        description: "Preview element not found. Cannot prepare image for sharing.",
+        title: t('toasts.error'),
+        description: t('toasts.previewNotFoundShare'),
         variant: "destructive",
       });
       return;
@@ -705,8 +709,8 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
 
     if (!navigator.share) {
       toast({
-        title: "Sharing Not Available",
-        description: "Your browser doesn\'t support the Web Share API. Try downloading the image to share it.",
+        title: t('toasts.sharingNotAvailable'),
+        description: t('toasts.sharingNotAvailableDesc'),
         variant: "destructive",
       });
       return;
@@ -714,8 +718,8 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
 
     try {
       toast({
-        title: "Preparing Image",
-        description: "Generating image for sharing...",
+        title: t('toasts.preparingImage'),
+        description: t('toasts.generatingImage'),
       });
 
       const currentOptions = {
@@ -733,8 +737,8 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
           const fileName = `arabic-calligraphy-${new Date().getTime()}.png`;
           const imageFile = new File([blob], fileName, { type: 'image/png' });
           const shareData: ShareData = {
-            title: "Arabic Calligraphy Design",
-        text: "Check out this beautiful Arabic calligraphy I created!",
+            title: t('toasts.shareTitle'),
+        text: t('toasts.shareText'),
             files: [imageFile],
           };
 
@@ -745,8 +749,8 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
             // If files cannot be shared, we can share the URL if we had one, or just text. 
             // For now, we'll just proceed without files if not shareable, the OS might still pick up the text/title.
             toast({
-              title: "Image Share Not Fully Supported",
-              description: "Your browser or selected share target might not support sharing images directly. Sharing text content instead.",
+              title: t('toasts.imageShareNotSupported'),
+              description: t('toasts.imageShareNotSupportedDesc'),
               variant: "default", // Use default variant, not destructive
               duration: 5000,
             });
@@ -754,8 +758,8 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
 
           await navigator.share(shareData);
       toast({
-        title: "Shared Successfully",
-        description: "Your calligraphy has been shared.",
+        title: t('toasts.sharedSuccessfully'),
+        description: t('toasts.sharedSuccessfullyDesc'),
           });
           
           // 追踪分享事件
@@ -785,8 +789,8 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
       
       console.error('Share failed:', error);
         toast({
-          title: "Share Failed",
-        description: "There was an error sharing your calligraphy. Please try again or download the image.",
+          title: t('toasts.shareFailed'),
+        description: t('toasts.shareFailedDesc'),
           variant: "destructive",
       });
       }
@@ -818,8 +822,8 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
     setFontStyle("normal")
 
     toast({
-      title: "Reset Complete",
-      description: "All settings have been reset to defaults.",
+      title: t('toasts.resetComplete'),
+      description: t('toasts.resetCompleteDesc'),
     })
   }
 
@@ -881,13 +885,13 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
         <DrawerContent className="h-[85vh] md:hidden">
           <div className="h-full flex flex-col">
             <DrawerHeader className="border-b border-amber-200">
-              <DrawerTitle className="text-xl font-semibold text-amber-800 text-center">Calligraphy Controls</DrawerTitle>
+              <DrawerTitle className="text-xl font-semibold text-amber-800 text-center">{t('ui.calligraphyControls')}</DrawerTitle>
             </DrawerHeader>
             <Tabs defaultValue="text" className="w-full flex-grow flex flex-col">
               <TabsList className="grid grid-cols-3 m-4 mb-0">
-                <TabsTrigger value="text" className="flex items-center gap-2"><Type className="h-4 w-4" /><span>Text</span></TabsTrigger>
-                <TabsTrigger value="style" className="flex items-center gap-2"><Palette className="h-4 w-4" /><span>Style</span></TabsTrigger>
-                <TabsTrigger value="advanced" className="flex items-center gap-2"><Sliders className="h-4 w-4" /><span>Advanced</span></TabsTrigger>
+                <TabsTrigger value="text" className="flex items-center gap-2"><Type className="h-4 w-4" /><span>{t('ui.text')}</span></TabsTrigger>
+                <TabsTrigger value="style" className="flex items-center gap-2"><Palette className="h-4 w-4" /><span>{t('ui.style')}</span></TabsTrigger>
+                <TabsTrigger value="advanced" className="flex items-center gap-2"><Sliders className="h-4 w-4" /><span>{t('ui.advanced')}</span></TabsTrigger>
               </TabsList>
               <ScrollArea className="flex-grow p-4">
                 <TabsContent value="text" className="space-y-6 mt-0"><TextTabContent /></TabsContent>
@@ -928,15 +932,15 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
     <>
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <Label htmlFor="arabic-text" className="text-base font-medium">Arabic Text</Label>
+          <Label htmlFor="arabic-text" className="text-base font-medium">{t('textTab.arabicText')}</Label>
           <Button variant="ghost" size="sm" onClick={toggleKeyboard} className="h-8 px-3 text-sm">
-            {keyboardVisible ? "Hide Keyboard" : "Show Keyboard"}
+            {keyboardVisible ? t('textTab.hideKeyboard') : t('textTab.showKeyboard')}
           </Button>
         </div>
         <Textarea
           id="arabic-text"
           dir="rtl"
-          placeholder="Enter Arabic text here..."
+          placeholder={t('textTab.placeholder')}
           value={text}
           onChange={handleTextChange}
           className="min-h-[120px] font-arabic text-lg p-4 touch-manipulation"
@@ -955,7 +959,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
           onClick={() => setIsTemplateDialogOpen(true)}
         >
           <Sparkles className="mr-2 h-5 w-5" />
-          Templates
+          {t('textTab.templates')}
         </Button>
         <Button
           variant="outline"
@@ -963,17 +967,17 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
           onClick={() => setText(DEFAULT_TEXT)}
         >
           <RefreshCw className="mr-2 h-5 w-5" />
-          Reset Text
+          {t('textTab.resetText')}
         </Button>
       </div>
 
       <div className="space-y-3">
         <div className="flex justify-between items-center">
-          <Label htmlFor="font-select" className="text-base font-medium">Font</Label>
+          <Label htmlFor="font-select" className="text-base font-medium">{t('textTab.font')}</Label>
           <Popover>
             <PopoverTrigger asChild>
               <Button variant="ghost" size="sm" className="h-8 px-3 text-sm">
-                Preview
+                {t('textTab.preview')}
               </Button>
             </PopoverTrigger>
             <PopoverContent className="w-80" align="end">
@@ -983,14 +987,14 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
         </div>
         <Select value={font} onValueChange={handleFontChange}>
           <SelectTrigger className="w-full h-12 touch-manipulation">
-            <SelectValue placeholder="Select font" />
+            <SelectValue placeholder={t('textTab.selectFont')} />
           </SelectTrigger>
           <SelectContent>
             <div className="mb-2">
-              <div className="px-2 py-1.5 text-sm font-medium text-amber-800">Categories</div>
+              <div className="px-2 py-1.5 text-sm font-medium text-amber-800">{t('textTab.categories')}</div>
               {Array.from(new Set(ARABIC_FONTS.map((font) => font.category))).map((category) => (
                 <div key={category} className="px-2 py-1">
-                  <div className="text-xs font-semibold text-muted-foreground mb-1">{category}</div>
+                  <div className="text-xs font-semibold text-muted-foreground mb-1">{t(`fontCategories.${category}`)}</div>
                   {ARABIC_FONTS.filter((font) => font.category === category).map((font) => (
                     <SelectItem key={font.name} value={font.value} className="py-4 min-h-[70px]">
                       <div className="flex items-center justify-between w-full">
@@ -1038,7 +1042,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
 
               {favorites.length > 0 && (
                 <div className="px-2 py-1">
-                  <div className="text-xs font-semibold text-muted-foreground mb-1">Favorites</div>
+                  <div className="text-xs font-semibold text-muted-foreground mb-1">{t('ui.favorites')}</div>
                   {ARABIC_FONTS.filter((font) => favorites.includes(font.value)).map((font) => (
                     <SelectItem key={`fav-${font.name}`} value={font.value} className="py-4 min-h-[70px]">
                       <div className="flex flex-col gap-1 w-full">
@@ -1074,7 +1078,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
 
       <div className="space-y-4">
         <div className="flex justify-between items-center">
-          <Label className="text-base font-medium">Font Size: {fontSize}px</Label>
+          <Label className="text-base font-medium">{t('textTab.fontSize')}: {fontSize}px</Label>
         </div>
         <div className="px-2">
         <Slider
@@ -1090,36 +1094,36 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
 
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-3">
-          <Label className="text-base font-medium">Font Weight</Label>
+          <Label className="text-base font-medium">{t('ui.fontWeight')}</Label>
           <Select value={fontWeight.toString()} onValueChange={handleFontWeightChange}>
             <SelectTrigger className="h-12 touch-manipulation">
-              <SelectValue placeholder="Select weight" />
+              <SelectValue placeholder={t('ui.selectWeight')} />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="300" className="py-3 min-h-[44px]">Light</SelectItem>
-              <SelectItem value="400" className="py-3 min-h-[44px]">Regular</SelectItem>
-              <SelectItem value="500" className="py-3 min-h-[44px]">Medium</SelectItem>
-              <SelectItem value="700" className="py-3 min-h-[44px]">Bold</SelectItem>
+              <SelectItem value="300" className="py-3 min-h-[44px]">{t('ui.light')}</SelectItem>
+              <SelectItem value="400" className="py-3 min-h-[44px]">{t('ui.regular')}</SelectItem>
+              <SelectItem value="500" className="py-3 min-h-[44px]">{t('ui.medium')}</SelectItem>
+              <SelectItem value="700" className="py-3 min-h-[44px]">{t('ui.bold')}</SelectItem>
             </SelectContent>
           </Select>
         </div>
 
         <div className="space-y-3">
-          <Label className="text-base font-medium">Font Style</Label>
+          <Label className="text-base font-medium">{t('ui.fontStyle')}</Label>
           <Select value={fontStyle} onValueChange={handleFontStyleChange}>
             <SelectTrigger className="h-12 touch-manipulation">
-              <SelectValue placeholder="Select style" />
+              <SelectValue placeholder={t('ui.selectStyle')} />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="normal" className="py-3 min-h-[44px]">Normal</SelectItem>
-              <SelectItem value="italic" className="py-3 min-h-[44px]">Italic</SelectItem>
+              <SelectItem value="normal" className="py-3 min-h-[44px]">{t('ui.normal')}</SelectItem>
+              <SelectItem value="italic" className="py-3 min-h-[44px]">{t('ui.italic')}</SelectItem>
             </SelectContent>
           </Select>
         </div>
       </div>
 
       <div className="space-y-3">
-        <Label className="text-base font-medium">Alignment</Label>
+        <Label className="text-base font-medium">{t('ui.alignment')}</Label>
         <div className="flex gap-2">
           <Button
             variant={alignment === "right" ? "default" : "outline"}
@@ -1174,10 +1178,10 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
     <>
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <Label htmlFor="text-color">Text Color</Label>
+          <Label htmlFor="text-color">{t('ui.textColor')}</Label>
           <div className="flex items-center gap-2">
             <Label htmlFor="use-gradient" className="text-sm font-normal">
-              Gradient
+              {t('ui.gradient')}
             </Label>
             <Switch id="use-gradient" checked={useGradient} onCheckedChange={setUseGradient} />
           </div>
@@ -1204,7 +1208,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
             <div className="flex gap-2">
               <div className="space-y-1 flex-1">
                 <Label htmlFor="gradient-from" className="text-xs">
-                  From
+                  {t('ui.from')}
                 </Label>
                 <div className="flex gap-2">
                   <input
@@ -1224,7 +1228,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
               </div>
               <div className="space-y-1 flex-1">
                 <Label htmlFor="gradient-to" className="text-xs">
-                  To
+                  {t('ui.to')}
                 </Label>
                 <div className="flex gap-2">
                   <input
@@ -1254,11 +1258,11 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="background-color">Background</Label>
+        <Label htmlFor="background-color">{t('ui.background')}</Label>
         <div className="grid grid-cols-2 gap-2">
           <div className="space-y-2">
             <Label htmlFor="background-color" className="text-xs">
-              Color
+              {t('ui.color')}
             </Label>
             <div className="flex gap-2">
               <input
@@ -1277,11 +1281,11 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
             </div>
           </div>
           <div className="space-y-2">
-            <Label className="text-xs">Image / Pattern</Label>
+            <Label className="text-xs">{t('ui.image')} / {t('ui.pattern')}</Label>
             <div className="flex gap-2">
               <Button variant="outline" size="sm" onClick={triggerFileInput} className="text-xs h-8 w-full">
                 <ImageIcon className="h-3 w-3 mr-1" />
-                Upload
+                {t('ui.upload')}
               </Button>
               <input
                 ref={fileInputRef}
@@ -1296,15 +1300,15 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
       </div>
 
       <div className="space-y-2">
-        <Label>Background Pattern</Label>
+        <Label>{t('ui.backgroundPattern')}</Label>
         <Select value={backgroundPattern} onValueChange={handleBackgroundPatternChange}>
           <SelectTrigger className="w-full">
-            <SelectValue placeholder="Select pattern" />
+            <SelectValue placeholder={t('ui.selectPattern')} />
           </SelectTrigger>
           <SelectContent>
             {BACKGROUND_PATTERNS.map((pattern) => (
-              <SelectItem key={pattern.name} value={pattern.value}>
-                {pattern.name}
+              <SelectItem key={pattern.nameKey} value={pattern.value}>
+                {t(`backgroundPatterns.${pattern.nameKey}`)}
               </SelectItem>
             ))}
           </SelectContent>
@@ -1313,13 +1317,13 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
 
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <Label htmlFor="text-shadow">Text Shadow</Label>
+          <Label htmlFor="text-shadow">{t('ui.textShadow')}</Label>
           <Switch id="text-shadow" checked={shadow} onCheckedChange={setShadow} />
         </div>
         {shadow && (
           <div className="grid grid-cols-2 gap-3 pt-2">
             <div className="space-y-1">
-              <Label className="text-xs">Horizontal</Label>
+              <Label className="text-xs">{t('ui.horizontal')}</Label>
               <Slider
                 value={[shadowSettings.x]}
                 min={-10}
@@ -1330,7 +1334,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
               <div className="text-xs text-center">{shadowSettings.x}px</div>
             </div>
             <div className="space-y-1">
-              <Label className="text-xs">Vertical</Label>
+              <Label className="text-xs">{t('ui.vertical')}</Label>
               <Slider
                 value={[shadowSettings.y]}
                 min={-10}
@@ -1341,7 +1345,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
               <div className="text-xs text-center">{shadowSettings.y}px</div>
             </div>
             <div className="space-y-1">
-              <Label className="text-xs">Blur</Label>
+              <Label className="text-xs">{t('ui.blur')}</Label>
               <Slider
                 value={[shadowSettings.blur]}
                 min={0}
@@ -1352,7 +1356,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
               <div className="text-xs text-center">{shadowSettings.blur}px</div>
             </div>
             <div className="space-y-1">
-              <Label className="text-xs">Color</Label>
+              <Label className="text-xs">{t('ui.color')}</Label>
               <div className="flex gap-1">
                 <input
                   type="color"
@@ -1387,7 +1391,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                 />
               </div>
               <div className="text-xs text-center">
-                Opacity:{" "}
+                {t('ui.opacity')}:{" "}
                 {Math.round(
                   Number.parseFloat(shadowSettings.color.match(/[\d.]+\)$/)?.[0]?.replace(")", "") || "0.3") * 100,
                 )}
@@ -1405,7 +1409,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
     <>
       <div className="space-y-2">
         <div className="flex justify-between">
-          <Label>Letter Spacing: {letterSpacing}px</Label>
+          <Label>{t('ui.letterSpacing')}: {letterSpacing}px</Label>
         </div>
         <Slider
           value={[letterSpacing]}
@@ -1418,19 +1422,19 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
 
       <div className="space-y-2">
         <div className="flex justify-between">
-          <Label>Line Height: {lineHeight}</Label>
+          <Label>{t('ui.lineHeight')}: {lineHeight}</Label>
         </div>
         <Slider value={[lineHeight]} min={0.8} max={3} step={0.1} onValueChange={(value) => setLineHeight(value[0])} />
       </div>
 
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <Label htmlFor="kashida-toggle">Kashida (Elongation)</Label>
+          <Label htmlFor="kashida-toggle">{t('ui.kashida')}</Label>
           <Switch id="kashida-toggle" checked={kashidaEnabled} onCheckedChange={setKashidaEnabled} />
         </div>
         {kashidaEnabled && (
           <div className="pt-2">
-            <Label className="text-xs">Length: {kashidaLength}</Label>
+            <Label className="text-xs">{t('ui.length')}: {kashidaLength}</Label>
             <Slider
               value={[kashidaLength]}
               min={1}
@@ -1440,7 +1444,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
             />
             <div className="mt-2 p-2 bg-amber-50 rounded-md border border-amber-100">
               <p className="text-xs text-amber-800">
-                Kashida adds elongation to certain Arabic letters, enhancing the aesthetic quality of text.
+                {t('ui.kashidaDesc')}
               </p>
             </div>
           </div>
@@ -1448,14 +1452,14 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
       </div>
 
       <div className="flex items-center justify-between">
-        <Label htmlFor="border-toggle">Border</Label>
+        <Label htmlFor="border-toggle">{t('ui.border')}</Label>
         <Switch id="border-toggle" checked={border} onCheckedChange={setBorder} />
       </div>
 
       {border && (
         <>
           <div className="space-y-2">
-            <Label htmlFor="border-color">Border Color</Label>
+            <Label htmlFor="border-color">{t('ui.borderColor')}</Label>
             <div className="flex gap-2">
               <input
                 id="border-color"
@@ -1475,7 +1479,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
 
           <div className="space-y-2">
             <div className="flex justify-between">
-              <Label>Border Width: {borderWidth}px</Label>
+              <Label>{t('ui.borderWidth')}: {borderWidth}px</Label>
             </div>
             <Slider
               value={[borderWidth]}
@@ -1488,7 +1492,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
 
           <div className="space-y-2">
             <div className="flex justify-between">
-              <Label>Border Radius: {borderRadius}px</Label>
+              <Label>{t('ui.borderRadius')}: {borderRadius}px</Label>
             </div>
             <Slider
               value={[borderRadius]}
@@ -1503,7 +1507,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
 
       <div className="space-y-2">
         <div className="flex justify-between">
-          <Label>Padding: {padding}px</Label>
+          <Label>{t('ui.padding')}: {padding}px</Label>
         </div>
         <Slider value={[padding]} min={0} max={100} step={5} onValueChange={(value) => setPadding(value[0])} />
       </div>
@@ -1515,7 +1519,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
     <Drawer open={isTemplateDialogOpen} onOpenChange={setIsTemplateDialogOpen}>
       <DrawerContent>
         <DrawerHeader>
-          <DrawerTitle className="text-xl font-semibold text-amber-800 text-center">Featured Templates</DrawerTitle>
+          <DrawerTitle className="text-xl font-semibold text-amber-800 text-center">{t('ui.featuredTemplates')}</DrawerTitle>
         </DrawerHeader>
         <div className="px-4 pb-6">
           <div className="grid grid-cols-1 gap-4 max-h-[60vh] overflow-y-auto pb-6">
@@ -1536,7 +1540,9 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                 >
                   {phrase.text}
                 </div>
-                <div className="text-xs text-center text-amber-700 mt-2">{phrase.translation}</div>
+                <div className="text-xs text-center text-amber-700 mt-2">
+                  {t(`commonPhrases.${['bismillah', 'alhamdulillah', 'mashallah', 'subhanallah', 'allahuakbar', 'lailahaillallah', 'astaghfirullah', 'allahummasalli'][index]}`)}
+                </div>
               </div>
             ))}
           </div>
@@ -1598,15 +1604,15 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                 <TabsList className="grid grid-cols-3 mb-4">
                   <TabsTrigger value="text" className="flex items-center gap-2">
                     <Type className="h-4 w-4" />
-                    <span>Text</span>
+                    <span>{t('tabs.text')}</span>
                   </TabsTrigger>
                   <TabsTrigger value="style" className="flex items-center gap-2">
                     <Palette className="h-4 w-4" />
-                    <span>Style</span>
+                    <span>{t('tabs.style')}</span>
                   </TabsTrigger>
                   <TabsTrigger value="advanced" className="flex items-center gap-2">
                     <Sliders className="h-4 w-4" />
-                    <span>Advanced</span>
+                    <span>{t('tabs.advanced')}</span>
                   </TabsTrigger>
                 </TabsList>
 
@@ -1647,11 +1653,9 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                   </PopoverTrigger>
                   <PopoverContent className="w-80">
                     <div className="space-y-3">
-                      <h3 className="font-medium">About Arabic Calligraphy</h3>
+                      <h3 className="font-medium">{t('ui.aboutArabicCalligraphy')}</h3>
                       <p className="text-sm text-muted-foreground">
-                        Arabic calligraphy (خط عربي) is the artistic practice of handwriting and calligraphy based on
-                        the Arabic alphabet. It is known in Arabic as khatt, derived from the word 'line', 'design', or
-                        'construction'.
+                        {t('ui.aboutArabicCalligraphyDesc')}
                       </p>
                       <Separator />
                       <div className="pt-2 flex items-center">
@@ -1660,13 +1664,13 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                           href="/blog/the-rich-history-of-arabic-calligraphy"
                           className="text-sm text-amber-600 hover:underline"
                         >
-                          Read more about Arabic calligraphy history
+                          {t('ui.readMoreHistory')}
                         </a>
                       </div>
                       <div className="flex items-center">
                         <ChevronRight className="h-4 w-4 mr-1 text-amber-600" />
                         <a href="/fonts" className="text-sm text-amber-600 hover:underline">
-                          Explore our font collection
+                          {t('ui.exploreFonts')}
                         </a>
                       </div>
                     </div>
@@ -1679,18 +1683,18 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
           {/* Quick Links for Desktop */}
           <Card className="overflow-hidden border-amber-200 bg-white/80 backdrop-blur-sm">
             <CardContent className="p-6">
-              <h3 className="text-lg font-semibold text-amber-800 mb-3">Quick Links</h3>
+              <h3 className="text-lg font-semibold text-amber-800 mb-3">{t('quickLinks.title')}</h3>
               <div className="grid grid-cols-2 gap-3">
                 <Button variant="outline" className="justify-start border-amber-200" asChild>
                   <a href="/blog">
                     <BookOpen className="h-4 w-4 mr-2" />
-                    Blog
+                    {t('quickLinks.blog')}
                   </a>
                 </Button>
                 <Button variant="outline" className="justify-start border-amber-200" asChild>
                   <a href="/faq">
                     <HelpCircle className="h-4 w-4 mr-2" />
-                    FAQ
+                    {t('quickLinks.faq')}
                   </a>
                 </Button>
               </div>
@@ -1708,7 +1712,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
             <Card className="overflow-hidden border-amber-200 bg-white/80 backdrop-blur-sm">
               <CardContent className="p-6">
                 <div className="mb-4 flex justify-between items-center">
-                  <h2 className="text-xl font-semibold text-amber-800">Preview</h2>
+                  <h2 className="text-xl font-semibold text-amber-800">{t('preview.title')}</h2>
                   {!isMobile && (
                     <div className="flex gap-2">
                       <TooltipProvider>
@@ -1768,7 +1772,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                 <div className="mt-6 flex flex-wrap gap-3 justify-center">
                   <Button onClick={handleDownloadPNG} className="bg-amber-600 hover:bg-amber-700">
                     <Download className="mr-2 h-4 w-4" />
-                    Download PNG
+                    {t('preview.downloadPNG')}
                   </Button>
                   <Button
                     onClick={handleDownloadSVG}
@@ -1776,7 +1780,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                     className="border-amber-600 text-amber-600 hover:bg-amber-50"
                   >
                     <Download className="mr-2 h-4 w-4" />
-                    Download SVG
+                    {t('preview.downloadSVG')}
                   </Button>
                 </div>
               </CardContent>
@@ -1786,9 +1790,9 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
             <Card className="overflow-hidden border-amber-200 bg-white/80 backdrop-blur-sm">
               <CardContent className="p-6">
                 <div className="flex justify-between items-center mb-4">
-                  <h2 className="text-xl font-semibold text-amber-800">Featured Designs</h2>
+                  <h2 className="text-xl font-semibold text-amber-800">{t('featuredDesigns.title')}</h2>
                   <Badge variant="outline" className="border-amber-200 text-amber-800">
-                    Top Picks
+                    {t('featuredDesigns.topPicks')}
                   </Badge>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -1830,8 +1834,8 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                         setUseGradient(false)
 
                         toast({
-                          title: "Design Applied",
-                          description: "The featured design has been applied to your canvas.",
+                          title: t('toasts.designApplied'),
+                          description: t('toasts.designAppliedDesc'),
                         })
                       }}
                     >
@@ -1851,7 +1855,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                 </div>
 
                 <Button variant="link" className="mt-4 text-amber-600 hover:text-amber-700" asChild>
-                  <a href="#features">View All Templates</a>
+                  <a href="#features">{t('ui.viewAllTemplates')}</a>
                 </Button>
               </CardContent>
             </Card>

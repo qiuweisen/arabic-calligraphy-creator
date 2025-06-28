@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* RTL 样式支持 */
+@import './rtl-styles.css';
+
 @layer base {
   :root {
     --background: 0 0% 100%;

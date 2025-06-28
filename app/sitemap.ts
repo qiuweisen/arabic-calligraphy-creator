@@ -64,15 +64,47 @@ const USE_CASES_PAGES = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://arabic-calligraphy-generator.com'
-  
-  // Core pages
+
+  // Core pages - only include pages that have been fully internationalized
   const staticPages = [
+    // Homepage - fully internationalized
     {
       url: baseUrl,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 1.0,
     },
+    {
+      url: `${baseUrl}/ar`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/ur`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/bn`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/ms`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/id`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 1.0,
+    },
+    // Other pages - keep original English-only URLs until they are internationalized
     {
       url: `${baseUrl}/fonts`,
       lastModified: new Date(),

@@ -1,4 +1,7 @@
 // 暂时移除bundle analyzer以避免构建问题
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin('./i18n.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -47,15 +50,9 @@ const nextConfig = {
         statusCode: 301, // Explicitly set the status code
       },
       
-      // Language redirects (keeping existing ones)
-      { source: '/bn', destination: '/', permanent: true },
-      { source: '/hi', destination: '/', permanent: true },
-      { source: '/ar', destination: '/', permanent: true },
-      { source: '/id', destination: '/', permanent: true },
-      { source: '/bn/:path*', destination: '/:path*', permanent: true },
-      { source: '/hi/:path*', destination: '/:path*', permanent: true },
-      { source: '/ar/:path*', destination: '/:path*', permanent: true },
-      { source: '/id/:path*', destination: '/:path*', permanent: true },
+      // Legacy language redirects (keeping existing ones for old URLs)
+      // Note: /bn is now supported as Bengali language, removed from redirects
+      // Note: /ar routes are now handled by next-intl, so removed from redirects
       
       // HTTP to HTTPS redirect
       {
@@ -68,4 +65,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

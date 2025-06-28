@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Navbar } from "@/components/navbar"
+import { StaticNavbar } from "@/components/static-navbar"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -153,7 +153,7 @@ export default function UseCasesPage() {
       "url": "https://arabic-calligraphy-generator.com/use-cases"
 }) }}
       />
-      <Navbar />
+      <StaticNavbar />
       <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">

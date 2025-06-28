@@ -4,6 +4,8 @@ import Link from "next/link"
 import Image from "next/image"
 import dynamic from "next/dynamic"
 import { useState, useEffect } from "react"
+import { useTranslations } from 'next-intl'
+import { LanguagePrompt } from "@/components/language-prompt"
 import { CalligraphyGenerator } from "@/components/calligraphy-generator"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -126,6 +128,9 @@ function loadFontDetails(fontSlug: string, panelElement: Element) {
 }
 
 export default function Home() {
+  const t = useTranslations('homepage');
+  const seoT = useTranslations('seo.structuredData');
+
   const [selectedFont, setSelectedFont] = useState<string | undefined>(undefined)
   
   // 分离左右两边的状态管理
@@ -277,27 +282,19 @@ export default function Home() {
 
 
 
-  // 结构化数据 - SoftwareApplication Schema
+  // 结构化数据 - SoftwareApplication Schema (多语言支持)
   const softwareApplicationSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "Arabic Calligraphy Generator",
-    "description": "FREE Arabic Calligraphy Generator - Create stunning Islamic art online instantly! Features 13+ authentic fonts, instant PNG/SVG download, no signup required. Perfect for Arabic script art creation.",
+    "name": t('title'),
+    "description": t('intro'),
     "url": "https://arabic-calligraphy-generator.com",
-    "applicationCategory": "DesignApplication",
-    "operatingSystem": "Web Browser",
-    "browserRequirements": "Requires JavaScript enabled",
+    "applicationCategory": seoT('applicationCategory'),
+    "operatingSystem": seoT('operatingSystem'),
+    "browserRequirements": seoT('browserRequirements'),
     "softwareVersion": "2.0",
     "fileFormat": ["PNG", "SVG"],
-    "featureList": [
-      "13+ Arabic fonts including Kufi, Naskh, Diwani styles",
-      "Real-time Arabic text generation",
-      "Gradient and color customization",
-      "Background patterns and images",
-      "PNG and SVG export",
-      "Mobile responsive interface",
-      "No registration required"
-    ],
+    "featureList": seoT.raw('featureList'),
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -312,45 +309,119 @@ export default function Home() {
     "screenshot": "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/og-image.png",
     "author": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Generator"
+      "name": seoT('authorName')
     }
+  };
+
+  // 额外的结构化数据 - WebApplication Schema
+  const webApplicationSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Arabic Calligraphy Generator",
+    "description": "Free online Arabic calligraphy generator with 13+ fonts, instant download, and customization options",
+    "url": "https://arabic-calligraphy-generator.com",
+    "applicationCategory": "DesignApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Modern web browser with JavaScript",
+    "permissions": "none",
+    "memoryRequirements": "Minimal",
+    "storageRequirements": "None",
+    "featureList": [
+      "13+ Arabic fonts",
+      "Real-time preview",
+      "PNG/SVG download",
+      "Color customization",
+      "Background patterns",
+      "Mobile responsive",
+      "No registration required"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  };
+
+  // FAQ结构化数据
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is the Arabic calligraphy generator free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our Arabic calligraphy generator is completely free to use. You can create, customize, and download your calligraphy without any registration or payment required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What file formats can I download?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can download your Arabic calligraphy in both PNG and SVG formats. PNG is perfect for web use and printing, while SVG is ideal for scalable vector graphics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many Arabic fonts are available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer 13+ professional Arabic fonts including Amiri, Scheherazade, Reem Kufi, Aref Ruqaa, Cairo, and many more traditional and modern styles."
+        }
+      }
+    ]
   };
 
   return (
     <>
-      {/* 结构化数据 */}
-      <script 
+      {/* 主要结构化数据 */}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
       />
-      
+
+      {/* Web应用结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationSchema) }}
+      />
+
+      {/* FAQ结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
         <div className="container mx-auto px-4 py-8 md:py-16">
           {/* Header */}
           <header className="mb-8 text-center">
             <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-800 to-amber-600 mb-4">
-              Arabic Calligraphy Generator
+              {t('title')}
             </h1>
-            <p className="text-2xl md:text-3xl text-amber-800 font-semibold mt-2" lang="ar">الخط العربي</p>
-            <p className="text-xl md:text-2xl text-amber-900 font-medium mt-1">Create Stunning Arabic Script Art Instantly</p>
+            <p className="text-2xl md:text-3xl text-amber-800 font-semibold mt-2" lang="ar">{t('subtitle')}</p>
+            <p className="text-xl md:text-2xl text-amber-900 font-medium mt-1">{t('description')}</p>
             <p className="mt-4 text-amber-700 max-w-2xl mx-auto">
-              Transform any Arabic text into beautiful calligraphy with our free online Arabic calligraphy generator. This powerful Arabic text generator features 13+ premium Arabic fonts online. Create stunning designs instantly - no registration required!
+              {t('intro')}
             </p>
 
             {/* Social Proof */}
             <div className="mt-6 flex flex-wrap justify-center gap-6 text-sm text-amber-600">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span>100,000+ Designs Created</span>
+                <span>{t('socialProof.designsCreated')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <span>13+ Premium Fonts</span>
+                <span>{t('socialProof.premiumFonts')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                <span>100% Free Forever</span>
+                <span>{t('socialProof.freeForever')}</span>
               </div>
             </div>
           </header>
@@ -358,37 +429,65 @@ export default function Home() {
           {/* Main Tool Section */}
           <div className="mb-12" id="calligraphy-tool-section">
 
-            {/* NoScript fallback for search engines */}
+            {/* NoScript fallback for search engines - Enhanced SEO content */}
             <noscript>
-              <div className="bg-amber-50 border border-amber-200 rounded-lg p-8 text-center">
-                <h3 className="text-lg font-semibold text-amber-800 mb-4">Arabic Calligraphy Generator Features</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+              <div className="bg-amber-50 border border-amber-200 rounded-lg p-8">
+                <div className="text-center mb-6">
+                  <h2 className="text-2xl font-bold text-amber-800 mb-4">{t('generator.title')}</h2>
+                  <p className="text-amber-700 max-w-2xl mx-auto">
+                    Create beautiful Arabic calligraphy instantly with our free online generator.
+                    Choose from 13+ professional fonts, customize colors and backgrounds,
+                    and download high-quality PNG/SVG files.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                   <div>
-                    <h4 className="font-medium text-amber-700 mb-2">Available Arabic Fonts:</h4>
+                    <h3 className="font-semibold text-amber-800 mb-3">{t('generator.availableFonts')}</h3>
                     <ul className="text-sm text-amber-600 space-y-1">
-                      <li>• Amiri (Traditional Naskh)</li>
-                      <li>• Scheherazade (Traditional)</li>
-                      <li>• Reem Kufi (Modern Kufi)</li>
-                      <li>• Aref Ruqaa (Diwani Style)</li>
-                      <li>• Cairo (Modern Sans-serif)</li>
-                      <li>• And 8+ more premium fonts</li>
+                      <li>• {t('generator.fonts.amiri')} - Traditional Naskh</li>
+                      <li>• {t('generator.fonts.scheherazade')} - Classical Arabic</li>
+                      <li>• {t('generator.fonts.reemKufi')} - Modern Kufi</li>
+                      <li>• {t('generator.fonts.arefRuqaa')} - Ruqaa Script</li>
+                      <li>• {t('generator.fonts.cairo')} - Contemporary Sans</li>
+                      <li>• {t('generator.fonts.moreFonts')} (13+ total fonts)</li>
                     </ul>
                   </div>
+
                   <div>
-                    <h4 className="font-medium text-amber-700 mb-2">Tool Features:</h4>
+                    <h3 className="font-semibold text-amber-800 mb-3">{t('generator.toolFeatures')}</h3>
                     <ul className="text-sm text-amber-600 space-y-1">
-                      <li>• Free online Arabic text generator</li>
-                      <li>• Instant PNG and SVG download</li>
-                      <li>• Gradient and color customization</li>
-                      <li>• Background patterns and images</li>
-                      <li>• Mobile-friendly interface</li>
-                      <li>• No registration required</li>
+                      <li>• {t('generator.features.freeGenerator')}</li>
+                      <li>• {t('generator.features.instantDownload')}</li>
+                      <li>• {t('generator.features.colorCustomization')}</li>
+                      <li>• {t('generator.features.backgroundPatterns')}</li>
+                      <li>• {t('generator.features.mobileFriendly')}</li>
+                      <li>• {t('generator.features.noRegistration')}</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="font-semibold text-amber-800 mb-3">Popular Use Cases</h3>
+                    <ul className="text-sm text-amber-600 space-y-1">
+                      <li>• Wedding invitations</li>
+                      <li>• Islamic art projects</li>
+                      <li>• Social media posts</li>
+                      <li>• Business logos</li>
+                      <li>• Educational materials</li>
+                      <li>• Religious decorations</li>
                     </ul>
                   </div>
                 </div>
-                <p className="mt-4 text-amber-700">
-                  This Arabic calligraphy maker requires JavaScript to function. Please enable JavaScript in your browser to use the interactive tool.
-                </p>
+
+                <div className="text-center">
+                  <p className="text-amber-700 mb-4">
+                    {t('generator.jsRequired')}
+                  </p>
+                  <div className="text-sm text-amber-600">
+                    <p>Keywords: Arabic calligraphy generator, Islamic art, Arabic fonts, calligraphy maker,
+                    Arabic text design, Islamic calligraphy, Arabic typography, free calligraphy tool</p>
+                  </div>
+                </div>
               </div>
             </noscript>
 
@@ -402,28 +501,28 @@ export default function Home() {
           <section className="mb-8">
             <div className="text-center">
               <p className="text-amber-700 mb-4">
-                <span className="font-semibold">Quick Start:</span> Type Arabic text → Choose font → Download instantly
+                <span className="font-semibold">{t('quickStart.title')}</span> {t('quickStart.steps')}
               </p>
             </div>
           </section>
 
           {/* Key Features Section - Enhanced */}
           <section id="features" className="mb-12">
-            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">Professional Arabic Calligraphy Features</h2>
+            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">{t('features.title')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
                 <CardContent className="p-6 text-center">
                   <div className="mb-4 w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mx-auto">
                     <Type className="h-6 w-6 text-amber-600" />
                   </div>
-                  <h3 className="text-lg font-bold text-amber-800 mb-2">Extensive Arabic Font Library</h3>
+                  <h3 className="text-lg font-bold text-amber-800 mb-2">{t('features.fontLibrary.title')}</h3>
                   <p className="text-amber-700 mb-3">
-                    Our free Arabic calligraphy maker provides 13+ premium Arabic fonts online, spanning traditional scripts (Kufic, Naskh, Diwani) to modern typography. This comprehensive Arabic text generator includes visual preview for easy font selection.
+                    {t('features.fontLibrary.description')}
                   </p>
                   <ul className="text-xs text-amber-600 text-left space-y-1">
-                    <li>• Traditional calligraphy styles</li>
-                    <li>• Modern Arabic fonts</li>
-                    <li>• Decorative and display options</li>
+                    <li>• {t('features.fontLibrary.items.0')}</li>
+                    <li>• {t('features.fontLibrary.items.1')}</li>
+                    <li>• {t('features.fontLibrary.items.2')}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -433,14 +532,14 @@ export default function Home() {
                   <div className="mb-4 w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mx-auto">
                     <Palette className="h-6 w-6 text-amber-600" />
                   </div>
-                  <h3 className="text-lg font-bold text-amber-800 mb-2">Advanced Customization Options</h3>
+                  <h3 className="text-lg font-bold text-amber-800 mb-2">{t('features.customization.title')}</h3>
                   <p className="text-amber-700 mb-3">
-                    This online Arabic calligraphy generator free tool offers professional-grade styling options including gradient text effects, custom backgrounds, shadows, and precise typography controls for perfect Arabic calligraphy maker results.
+                    {t('features.customization.description')}
                   </p>
                   <ul className="text-xs text-amber-600 text-left space-y-1">
-                    <li>• Gradient and solid colors</li>
-                    <li>• Background patterns & images</li>
-                    <li>• Typography fine-tuning</li>
+                    <li>• {t('features.customization.items.0')}</li>
+                    <li>• {t('features.customization.items.1')}</li>
+                    <li>• {t('features.customization.items.2')}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -450,14 +549,14 @@ export default function Home() {
                   <div className="mb-4 w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mx-auto">
                     <Download className="h-6 w-6 text-amber-600" />
                   </div>
-                  <h3 className="text-lg font-bold text-amber-800 mb-2">High-Quality Export Formats</h3>
+                  <h3 className="text-lg font-bold text-amber-800 mb-2">{t('features.export.title')}</h3>
                   <p className="text-amber-700 mb-3">
-                    Download your creations instantly from our Arabic calligraphy generator app in high-resolution PNG with transparency or scalable SVG vector files. Perfect for professional printing, digital media, and commercial applications.
+                    {t('features.export.description')}
                   </p>
                   <ul className="text-xs text-amber-600 text-left space-y-1">
-                    <li>• Print-ready quality</li>
-                    <li>• Transparent backgrounds</li>
-                    <li>• Vector format support</li>
+                    <li>• {t('features.export.items.0')}</li>
+                    <li>• {t('features.export.items.1')}</li>
+                    <li>• {t('features.export.items.2')}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -470,18 +569,18 @@ export default function Home() {
 
           {/* Technical Capabilities */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">Advanced Arabic Typography Features</h2>
+            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">{t('technicalFeatures.title')}</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-amber-800 mb-4">Font Collection & Styles</h3>
+                  <h3 className="text-lg font-bold text-amber-800 mb-4">{t('technicalFeatures.fontCollection.title')}</h3>
                   <div className="space-y-3 text-sm text-amber-700">
-                    <div><strong>Traditional Scripts:</strong> Amiri (Naskh), Scheherazade, Lateef, Markazi Text</div>
-                    <div><strong>Decorative Styles:</strong> Aref Ruqaa (Diwani), Jomhuria, Rakkas, Lemonada</div>
-                    <div><strong>Modern Typography:</strong> Cairo, Harmattan, Mada, Tajawal, El Messiri</div>
-                    <div><strong>Specialized:</strong> Reem Kufi (Geometric), Mirza (Nastaliq), Marhey (Display)</div>
+                    <div><strong>{t('technicalFeatures.fontCollection.traditional')}</strong></div>
+                    <div><strong>{t('technicalFeatures.fontCollection.decorative')}</strong></div>
+                    <div><strong>{t('technicalFeatures.fontCollection.modern')}</strong></div>
+                    <div><strong>{t('technicalFeatures.fontCollection.specialized')}</strong></div>
                     <div className="mt-4 p-3 bg-amber-50 rounded-lg">
-                      <p className="text-xs text-amber-600">All fonts support RTL text direction, Arabic diacritics (Harakat), and Kashida elongation for authentic calligraphy.</p>
+                      <p className="text-xs text-amber-600">{t('technicalFeatures.fontCollection.note')}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -489,14 +588,14 @@ export default function Home() {
 
               <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-amber-800 mb-4">Export & Compatibility</h3>
+                  <h3 className="text-lg font-bold text-amber-800 mb-4">{t('technicalFeatures.export.title')}</h3>
                   <div className="space-y-3 text-sm text-amber-700">
-                    <div><strong>Output Formats:</strong> PNG (transparent background), SVG (scalable vector)</div>
-                    <div><strong>Quality Options:</strong> High-resolution export suitable for print and digital use</div>
-                    <div><strong>Browser Support:</strong> Chrome, Firefox, Safari, Edge - all modern browsers</div>
-                    <div><strong>Device Compatibility:</strong> Desktop, tablet, and mobile responsive design</div>
+                    <div><strong>{t('technicalFeatures.export.formats')}</strong></div>
+                    <div><strong>{t('technicalFeatures.export.quality')}</strong></div>
+                    <div><strong>{t('technicalFeatures.export.browsers')}</strong></div>
+                    <div><strong>{t('technicalFeatures.export.devices')}</strong></div>
                     <div className="mt-4 p-3 bg-amber-50 rounded-lg">
-                      <p className="text-xs text-amber-600">Free for commercial use. No watermarks, no registration required. Works entirely in your browser for privacy.</p>
+                      <p className="text-xs text-amber-600">{t('technicalFeatures.export.note')}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -509,31 +608,31 @@ export default function Home() {
 
           {/* Professional Use Cases */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">Professional Arabic Calligraphy Applications</h2>
+            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">{t('professionalUse.title')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-amber-800 mb-4">Business & Branding</h3>
+                  <h3 className="text-lg font-bold text-amber-800 mb-4">{t('professionalUse.business.title')}</h3>
                   <div className="space-y-3 text-amber-700">
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
                       <div>
-                        <p className="font-medium">Corporate Logos & Identity</p>
-                        <p className="text-sm text-amber-600">Create distinctive Arabic brand names with traditional or modern calligraphy styles</p>
+                        <p className="font-medium">{t('professionalUse.business.logo.title')}</p>
+                        <p className="text-sm text-amber-600">{t('professionalUse.business.logo.description')}</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
                       <div>
-                        <p className="font-medium">Restaurant & Hospitality</p>
-                        <p className="text-sm text-amber-600">Design authentic Arabic signage, menus, and promotional materials</p>
+                        <p className="font-medium">{t('professionalUse.business.restaurant.title')}</p>
+                        <p className="text-sm text-amber-600">{t('professionalUse.business.restaurant.description')}</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
                       <div>
-                        <p className="font-medium">Marketing Materials</p>
-                        <p className="text-sm text-amber-600">Professional Arabic typography for brochures, advertisements, and digital campaigns</p>
+                        <p className="font-medium">{t('professionalUse.business.marketing.title')}</p>
+                        <p className="text-sm text-amber-600">{t('professionalUse.business.marketing.description')}</p>
                       </div>
                     </div>
                   </div>
@@ -542,27 +641,27 @@ export default function Home() {
 
               <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-amber-800 mb-4">Personal & Cultural</h3>
+                  <h3 className="text-lg font-bold text-amber-800 mb-4">{t('professionalUse.personal.title')}</h3>
                   <div className="space-y-3 text-amber-700">
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
                       <div>
-                        <p className="font-medium">Wedding & Event Invitations</p>
-                        <p className="text-sm text-amber-600">Elegant Arabic calligraphy for special occasions and celebrations</p>
+                        <p className="font-medium">{t('professionalUse.personal.wedding.title')}</p>
+                        <p className="text-sm text-amber-600">{t('professionalUse.personal.wedding.description')}</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
                       <div>
-                        <p className="font-medium">Islamic Art & Decoration</p>
-                        <p className="text-sm text-amber-600">Beautiful Quranic verses, Hadith, and Islamic phrases for home decoration</p>
+                        <p className="font-medium">{t('professionalUse.personal.islamic.title')}</p>
+                        <p className="text-sm text-amber-600">{t('professionalUse.personal.islamic.description')}</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
                       <div>
-                        <p className="font-medium">Social Media Content</p>
-                        <p className="text-sm text-amber-600">Eye-catching Arabic posts for Instagram, Facebook, and other platforms</p>
+                        <p className="font-medium">{t('professionalUse.personal.social.title')}</p>
+                        <p className="text-sm text-amber-600">{t('professionalUse.personal.social.description')}</p>
                       </div>
                     </div>
                   </div>
@@ -573,52 +672,11 @@ export default function Home() {
 
           {/* FAQ Section - Comprehensive but User-Friendly */}
           <section id="faq" className="mb-12">
-            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">Arabic Calligraphy Generator FAQ</h2>
+            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">{t('detailedFaq.title')}</h2>
             <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
               <CardContent className="p-6">
                 <Accordion type="single" collapsible className="w-full">
-                  {[
-                    {
-                      question: "Is this Arabic calligraphy generator completely free?",
-                      answer:
-                        "Yes! Our Arabic calligraphy generator is 100% free with no hidden costs, subscriptions, or registration required. All 13+ premium fonts, customization features, and export options are included at no charge.",
-                    },
-                    {
-                      question: "What Arabic fonts and calligraphy styles are available?",
-                      answer:
-                        "We offer 13+ carefully selected Arabic fonts covering traditional calligraphy styles (Kufic, Naskh, Diwani, Nastaliq) and modern Arabic typography. Each font supports RTL text direction, Arabic diacritics (Harakat), and authentic Arabic script rendering.",
-                    },
-                    {
-                      question: "What file formats can I download and what quality?",
-                      answer:
-                        "You can export your Arabic calligraphy as high-resolution PNG files (with transparent background) or scalable SVG vector files. Both formats are suitable for professional printing, digital media, and commercial applications.",
-                    },
-                    {
-                      question: "Can I use the generated calligraphy for commercial projects?",
-                      answer:
-                        "Yes, you can use your created Arabic calligraphy designs for both personal and commercial projects without any restrictions. This includes business logos, marketing materials, wedding invitations, and any other commercial applications.",
-                    },
-                    {
-                      question: "Does this Arabic calligraphy generator work on mobile devices?",
-                      answer:
-                        "Absolutely! Our Arabic calligraphy generator is fully responsive and optimized for smartphones, tablets, and desktop computers. The interface adapts to your screen size while maintaining full functionality.",
-                    },
-                    {
-                      question: "Is this the best free online Arabic calligraphy generator available?",
-                      answer:
-                        "Our free online Arabic calligraphy generator stands out with 13+ premium Arabic fonts online, instant PNG/SVG downloads, and no registration requirements. Unlike many Arabic text generators that require subscriptions, our Arabic calligraphy maker app provides professional-quality results completely free.",
-                    },
-                    {
-                      question: "Does the tool support Arabic text with diacritics (Harakat)?",
-                      answer:
-                        "Yes, our Arabic calligraphy generator supports Arabic text with diacritics (Harakat/اعراب). You can input text with vowel marks, and the generator will render them according to each font's capabilities. This is essential for Quranic verses and formal Arabic text.",
-                    },
-                    {
-                      question: "How does this Arabic calligraphy maker compare to desktop software?",
-                      answer:
-                        "Our online Arabic calligraphy generator free tool offers several advantages over desktop software: instant access without downloads, automatic updates, cross-platform compatibility, and cloud-based convenience. While desktop software may offer more advanced features, our Arabic text generator provides the perfect balance of functionality and accessibility for most users' needs.",
-                    },
-                  ].map((faq, index) => (
+                  {t.raw('detailedFaq.questions').map((faq: any, index: number) => (
                     <AccordionItem key={index} value={`item-${index}`}>
                       <AccordionTrigger className="text-lg font-medium text-amber-900">{faq.question}</AccordionTrigger>
                       <AccordionContent className="text-amber-700">
@@ -629,7 +687,7 @@ export default function Home() {
                 </Accordion>
                 <div className="mt-4 text-center">
                   <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
-                    <Link href="/faq">View All FAQs</Link>
+                    <Link href="/faq">{t('detailedFaq.viewAll')}</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -640,29 +698,29 @@ export default function Home() {
           <section className="mb-12">
             <Card className="border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50">
               <CardContent className="p-8 text-center">
-                <h2 className="text-3xl font-bold text-amber-800 mb-4">Best Free Online Arabic Calligraphy Generator App</h2>
+                <h2 className="text-3xl font-bold text-amber-800 mb-4">{t('cta.title')}</h2>
                 <p className="text-lg text-amber-700 mb-6 max-w-2xl mx-auto">
-                  Experience the most comprehensive online Arabic calligraphy generator free tool available. Join thousands of users creating stunning Arabic designs with our Arabic text generator. Start now - it's completely free!
+                  {t('cta.description')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <Button
                     onClick={() => document.getElementById('calligraphy-tool-section')?.scrollIntoView({ behavior: 'smooth' })}
                     className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 text-lg"
                   >
-                    Start Creating Now
+                    {t('cta.button')}
                   </Button>
                   <div className="flex items-center gap-4 text-sm text-amber-600">
                     <span className="flex items-center gap-1">
                       <Check className="h-4 w-4" />
-                      No Registration
+                      {t('cta.features.noRegistration')}
                     </span>
                     <span className="flex items-center gap-1">
                       <Check className="h-4 w-4" />
-                      100% Free
+                      {t('cta.features.free')}
                     </span>
                     <span className="flex items-center gap-1">
                       <Check className="h-4 w-4" />
-                      Instant Download
+                      {t('cta.features.instantDownload')}
                     </span>
                   </div>
                 </div>
@@ -670,8 +728,54 @@ export default function Home() {
             </Card>
           </section>
         </div>
+
+        {/* SEO友好的隐藏内容区域 - 只对搜索引擎可见 */}
+        <div className="sr-only" aria-hidden="true">
+          <h2>About Arabic Calligraphy Generator</h2>
+
+          <div>
+            <h3>Professional Arabic Typography</h3>
+            <p>
+              Our Arabic calligraphy generator offers professional-grade typography tools for creating
+              stunning Islamic art, wedding invitations, business logos, and educational materials.
+              With over 13 carefully selected Arabic fonts, you can create authentic calligraphy
+              that respects traditional Arabic script aesthetics.
+            </p>
+            <p>
+              Each font in our collection represents different calligraphic styles: from classical
+              Naskh and Thuluth to modern Kufi and contemporary sans-serif designs. Perfect for
+              both traditional Islamic art projects and modern graphic design needs.
+            </p>
+          </div>
+
+          <div>
+            <h3>Free Online Tool Features</h3>
+            <ul>
+              <li>13+ Arabic Fonts: Traditional and modern calligraphy styles</li>
+              <li>Real-time Preview: See your design as you type</li>
+              <li>High-Quality Export: Download PNG and SVG formats</li>
+              <li>Color Customization: Text colors, gradients, and backgrounds</li>
+              <li>Mobile Responsive: Works perfectly on all devices</li>
+              <li>No Registration: Start creating immediately</li>
+              <li>Commercial Use: Free for personal and commercial projects</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Popular Keywords</h3>
+            <p>
+              Arabic calligraphy generator, Islamic art maker, Arabic font generator,
+              calligraphy design tool, Arabic typography, Islamic calligraphy creator,
+              Arabic text design, free calligraphy maker, Arabic script generator,
+              Islamic art generator, Arabic logo maker, wedding invitation Arabic text
+            </p>
+          </div>
+        </div>
       </main>
       <Footer />
+
+      {/* 语言建议弹窗 */}
+      <LanguagePrompt />
     </>
   )
 }

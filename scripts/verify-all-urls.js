@@ -10,8 +10,13 @@ const BASE_URL = 'http://localhost:3000';
 
 // 从sitemap.ts中提取的所有URL路径
 const URLS_TO_TEST = [
-  // 核心页面
+  // 核心页面 - 多语言支持
   '/',
+  '/ar',
+  '/ur',
+  '/bn',
+  '/ms',
+  '/id',
   '/fonts',
   '/blog',
   '/faq',
