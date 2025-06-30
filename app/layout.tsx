@@ -96,6 +96,14 @@ export default async function RootLayout({
 
         {isProduction && (
           <>
+            {/* Google AdSense */}
+            <Script
+              async
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4575951448621910"
+              crossOrigin="anonymous"
+              strategy="afterInteractive"
+            />
+
             {/* Google Analytics 4 */}
             <Script
               strategy="afterInteractive"
