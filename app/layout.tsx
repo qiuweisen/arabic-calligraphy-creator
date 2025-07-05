@@ -85,7 +85,7 @@ export default async function RootLayout({
   const dir = localeConfig[locale]?.dir || 'ltr';
 
   return (
-    <html className={`${inter.variable} ${amiri.variable}`} dir={dir} suppressHydrationWarning>
+    <html className={`${inter.variable} ${amiri.variable}`} lang={locale} dir={dir} suppressHydrationWarning>
       <body className={`${inter.className} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="system">
           {children}

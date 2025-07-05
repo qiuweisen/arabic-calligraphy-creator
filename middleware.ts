@@ -5,7 +5,9 @@ import { locales, defaultLocale, getSuggestedLocale } from './i18n';
 // 定义需要多语言支持的路径
 const multilingualPaths = [
   '/', // 主页
+  '/fonts', // 字体页面 - P0 优先级
   // 未来可以添加更多页面，如：
+  // '/resources/free-arabic-fonts', // P1 优先级
   // '/contact',
   // '/about',
 ];

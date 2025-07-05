@@ -9,12 +9,21 @@ import { Menu, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { SharedLogo } from "@/components/shared/logo"
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 
 export function Navbar() {
   const t = useTranslations('navigation')
+  const locale = useLocale()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  // 构建多语言链接的函数
+  const buildLocalizedHref = (path: string) => {
+    if (locale === 'en') {
+      return path
+    }
+    return `/${locale}${path}`
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,11 +34,11 @@ export function Navbar() {
   }, [])
 
   const navItems = [
-    { label: t('generator'), href: "/" },
-    { label: t('arabicFonts'), href: "/fonts" },
+    { label: t('generator'), href: buildLocalizedHref("/") },
+    { label: t('arabicFonts'), href: buildLocalizedHref("/fonts") },
     {
       label: t('learningGuides'),
-      href: "/guides",
+      href: buildLocalizedHref("/guides"),
       dropdown: [
         { label: t('dropdown.completeBeginner'), href: "/guides/arabic-calligraphy-beginner-guide" },
         { label: t('dropdown.fontComparison'), href: "/guides/arabic-font-comparison" },

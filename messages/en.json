@@ -647,6 +647,166 @@
       "viewAllTemplates": "View All Templates"
     }
   },
+  "fontsPage": {
+    "metadata": {
+      "title": "Arabic Font Collection | Browse 17+ Calligraphy Fonts",
+      "description": "Browse our curated Arabic font collection featuring Traditional Naskh, Kufi, Diwani, Modern & Display fonts. Complete font library for your calligraphy projects.",
+      "keywords": "Arabic font collection, Arabic fonts library, calligraphy fonts, Naskh fonts, Kufi fonts, Diwani fonts, Arabic typography fonts",
+      "openGraphTitle": "Explore Arabic Calligraphy Fonts: Naskh, Kufi, Diwani & More",
+      "openGraphDescription": "Your ultimate library of Arabic fonts for calligraphy, Islamic art, and modern typography. Find usage guides and inspiration."
+    },
+    "title": "Explore the World of Arabic Calligraphy Fonts",
+    "pageTitle": "Explore the World of Arabic Calligraphy Fonts",
+    "pageDescription": "Welcome to our Arabic font library! Discover and learn about various styles of Arabic calligraphy fonts to find the perfect inspiration for your creative projects, artistic designs, or academic research.",
+    "howToChoose": {
+      "title": "How to Choose the Right Arabic Font?",
+      "description": "Selecting the right Arabic font is crucial for conveying the desired tone and ensuring readability. Consider these points:",
+      "tips": [
+        "<strong>Define Your Purpose:</strong> Are you choosing a font for formal documents, artistic creations, website UI, or brand logos? For instance, traditional Naskh suits formal texts, while Kufi or Diwani are better for art and logos.",
+        "<strong>Focus on Readability:</strong> For long passages or user interface elements, prioritize clear and legible fonts (like most Naskh or modern sans-serifs). Fonts for display purposes can be more expressive.",
+        "<strong>Explore Different Styles:</strong> Arabic calligraphy boasts diverse styles like Naskh, Kufi, and Diwani, each with its unique history, visual appeal, and typical applications."
+      ]
+    },
+    "commonApplications": "Common Applications",
+    "stylesLabel": "Styles",
+    "fontCategories": {
+      "Traditional": "Traditional",
+      "Diwani": "Diwani",
+      "Kufi": "Kufi",
+      "Nastaliq": "Nastaliq",
+      "Modern": "Modern",
+      "Display": "Display"
+    },
+    "categories": {
+      "Traditional": {
+        "description": "Rooted in centuries of history, traditional Arabic scripts like Naskh and Thuluth are renowned for their elegance, readability, and widespread use in classical texts, religious manuscripts (especially the Quran), and formal documents. They typically feature balanced proportions and meticulous calligraphic rules. These fonts are cornerstones of Arabic calligraphic art, carrying profound cultural and religious significance.",
+        "applications": [
+          "Quranic verses and religious texts",
+          "Formal documents and official correspondence",
+          "Classic literary works and poetry collections",
+          "Educational materials and book body text requiring high clarity",
+          "Traditional artworks and decorative designs"
+        ]
+      },
+      "Kufi": {
+        "description": "Kufi is one of the oldest Arabic scripts, characterized by its angular, geometric forms. It was initially used for stone inscriptions and early Quranic manuscripts. Modern Kufi fonts range from classic to highly stylized, often employed for logos, titles, and decorative purposes, conveying strength and modernity.",
+        "applications": [
+          "Logos and branding requiring a strong, geometric look",
+          "Architectural inscriptions, signage, and monuments",
+          "Modern art pieces and graphic design projects",
+          "Decorative headlines for books, posters, and covers"
+        ]
+      },
+      "Diwani": {
+        "description": "Developed during the Ottoman era, Diwani script is known for its elaborate, flowing, and highly decorative style. Its letters are often interconnected in complex ways, making it popular for calligraphic art, official decrees, and ornamental designs, exuding dynamism and artistic beauty.",
+        "applications": [
+          "Artistic calligraphy pieces and posters",
+          "Wedding invitations and greeting cards",
+          "Ornate certificates and awards",
+          "Branding and visual design for cultural events"
+        ]
+      },
+      "Nastaliq": {
+        "description": "Nastaliq, also known as Farsi script, is a cursive style developed in Persia. It is characterized by its sweeping descenders and a distinct slant from right to left. Nastaliq is widely used for Persian, Urdu, and Pashto, often for poetry and literary works, showcasing an elegant, flowing aesthetic.",
+        "applications": [
+          "Persian, Urdu, and Pashto poetry and literature",
+          "Book covers and literary publications",
+          "Cultural and artistic expressions",
+          "Elegant branding for niche markets"
+        ]
+      },
+      "Modern": {
+        "description": "Modern Arabic fonts are designed with contemporary aesthetics and digital usability in mind. They often draw inspiration from traditional scripts but adapt them for clarity on screens, in branding, and for a wide range of applications. Sans-serif styles are common, emphasizing simplicity and functionality.",
+        "applications": [
+          "Website user interfaces (UI) and mobile applications (Apps)",
+          "Digital advertisements and social media graphics",
+          "Corporate branding and presentations",
+          "Informational signage and wayfinding systems"
+        ]
+      },
+      "Display": {
+        "description": "Display fonts are crafted for impact and visual appeal, typically used for headlines, titles, logos, and other short, prominent texts. They often feature unique, stylized, or decorative elements that capture attention, making them excellent choices for creative expression.",
+        "applications": [
+          "Large headlines for posters and banners",
+          "Logos requiring a unique typographic identity",
+          "Social media graphics and promotional materials",
+          "Creative titles for books and magazines"
+        ]
+      }
+    },
+    "deeperSection": {
+      "title": "Diving Deeper into Arabic Typography",
+      "description": "Want to further enhance your Arabic typography designs? These tips might inspire you:",
+      "tips": [
+        {
+          "title": "<strong>Backgrounds & Contrast:</strong>",
+          "content": "Ensure sufficient contrast between Arabic text and its background for readability. Light text on dark backgrounds or vice-versa usually works best. Avoid busy backgrounds that can obscure the intricate details of Arabic letterforms."
+        },
+        {
+          "title": "<strong>Effective Font Combinations:</strong>",
+          "content": "",
+          "subItems": [
+            "Try pairing a legible traditional Naskh for body text with a geometric Kufi or a flowing Diwani for impactful headlines.",
+            "For a modern feel, if your design is bilingual (e.g., Arabic and Latin), pair a clean Arabic sans-serif (like Cairo) with a complementary Latin sans-serif.",
+            "Avoid using too many different font styles on one page; 2-3 distinct fonts are usually sufficient."
+          ]
+        },
+        {
+          "title": "<strong>Starting Points for Beginners:</strong>",
+          "content": "",
+          "subItems": [
+            "<strong>Amiri or Noto Naskh Arabic:</strong> Excellent for beginners due to their clarity, traditional Naskh forms, and wide application in texts.",
+            "<strong>Reem Kufi:</strong> A good introduction to Kufic styles, with its clear geometric shapes, suitable for titles or simple branding.",
+            "<strong>Cairo:</strong> If you prefer a modern, clean look, Cairo is a versatile sans-serif that's easy to work with for digital content."
+          ]
+        },
+        {
+          "title": "<strong>Considering Diacritics (Tashkeel):</strong>",
+          "content": "For texts requiring full vocalization (like Quranic verses or educational material), ensure your chosen font has good support for all diacritical marks and that they are clearly rendered."
+        },
+        {
+          "title": "<strong>Line Height & Spacing:</strong>",
+          "content": "Arabic scripts often benefit from slightly more generous line height (leading) compared to Latin scripts to comfortably accommodate ascenders, descenders, and diacritics, improving overall readability."
+        }
+      ],
+      "experimentText": "Experimentation is key! Feel free to use our",
+      "generatorLink": "Calligraphy Generator",
+      "previewText": "to preview how these fonts look with your text and styles."
+    },
+    "blogSection": {
+      "title": "Learn More About Arabic Calligraphy",
+      "readArticle": "Read Article",
+      "viewAllArticles": "View All Articles",
+      "articles": {
+        "historyOfCalligraphy": {
+          "title": "The Rich History of Arabic Calligraphy",
+          "description": "Explore the origins and evolution of this sacred art form"
+        },
+        "sixMajorStyles": {
+          "title": "Six Major Calligraphy Styles",
+          "description": "Understanding the distinctive characteristics of each style"
+        },
+        "modernTypography": {
+          "title": "Modern Arabic Typography",
+          "description": "How traditional calligraphy influences digital design"
+        },
+        "beginnersGuide": {
+          "title": "Beginner's Guide to Arabic Calligraphy",
+          "description": "Essential tools and techniques for starting your journey"
+        }
+      }
+    },
+    "finalCTA": {
+      "description": "Ready to create stunning Arabic calligraphy with these exquisite fonts?",
+      "buttonText": "Try Our Calligraphy Generator Now"
+    },
+    "structuredData": {
+      "breadcrumbHome": "Home",
+      "breadcrumbFonts": "Arabic Fonts",
+      "collectionName": "Arabic Calligraphy Fonts Collection",
+      "collectionDescription": "Comprehensive collection of Arabic calligraphy fonts including Traditional Naskh, Kufi, Diwani, Modern and Display styles for digital typography and Islamic art."
+    }
+  },
   "seo": {
     "structuredData": {
       "featureList": [
