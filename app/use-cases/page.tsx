@@ -7,9 +7,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Heart, Building, Share2, ArrowRight, Star, Users, Sparkles, Church } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Arabic Calligraphy Use Cases | Real-World Applications & Examples",
-  description: "Discover practical applications of Arabic calligraphy for weddings, business branding, social media, and religious purposes. Get inspired with real-world examples and implementation guides.",
-  keywords: "Arabic calligraphy use cases, Arabic typography applications, wedding calligraphy, business Arabic fonts, social media Arabic, religious calligraphy",
+  title: "Arabic Calligraphy Ideas - Wedding, Business, Social Media Examples",
+  description: "Discover amazing Arabic calligraphy ideas! Perfect for weddings, business logos, Instagram posts & religious art. Free examples & templates.",
+  keywords: "Arabic calligraphy ideas, wedding Arabic fonts, business Arabic logos, Instagram Arabic posts, Arabic calligraphy examples, free Arabic designs",
 }
 
 const USE_CASES = [

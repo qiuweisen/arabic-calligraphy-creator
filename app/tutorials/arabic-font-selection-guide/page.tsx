@@ -8,9 +8,9 @@ import { ArrowRight, Star, Eye, Heart, Zap, Crown, Palette } from 'lucide-react'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Arabic Font Selection Guide - Best Arabic Fonts 2024 | Professional Font Selection Tips',
-  description: 'Professional Arabic font selection guide covering 17 curated fonts with characteristics, use cases, and pairing recommendations. Choose the perfect Arabic font for your design projects.',
-  keywords: 'arabic font selection guide,best arabic fonts 2024,arabic font comparison,font pairing tips,arabic typography guide,professional font selection',
+  title: 'How to Choose Arabic Fonts - Free Selection Guide | Best Fonts 2025',
+  description: 'Learn how to choose the perfect Arabic font! Free guide covering 17+ fonts with examples, tips & recommendations. Find your ideal Arabic typography.',
+  keywords: 'how to choose arabic fonts, arabic font selection guide, best arabic fonts 2025, free arabic font guide, arabic typography tips, font selection tutorial',
   openGraph: {
     title: 'Arabic Font Selection Guide - Best Arabic Fonts 2024',
     description: 'Professional Arabic font selection guide covering 17 curated fonts with characteristics, use cases, and pairing recommendations.',
