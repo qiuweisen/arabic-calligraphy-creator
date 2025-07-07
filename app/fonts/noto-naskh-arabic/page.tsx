@@ -15,15 +15,15 @@ import { Breadcrumb } from "@/components/breadcrumb"
 import { GeneratorCTA } from "@/components/generator-cta"
 
 export const metadata: Metadata = {
-  title: "Noto Naskh Arabic: Google's Universal Font",
-  description: "Explore Noto Naskh Arabic by Google, designed for optimal screen readability and comprehensive Unicode support across all Arabic script languages.",
-  keywords: "noto naskh arabic font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  title: "Noto Naskh Arabic Font Free Download - Google's Best Arabic Font",
+  description: "Download Noto Naskh Arabic font free! Google's premium Arabic font with perfect screen readability. Supports all Arabic languages. Free PNG/SVG download.",
+  keywords: "Noto Naskh Arabic font free download, Google Arabic fonts, best Arabic fonts, screen optimized Arabic, free Google fonts, Arabic web fonts",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/fonts/noto-naskh-arabic",
   },
   openGraph: {
-    title: "Noto Naskh Arabic: Google's Universal Font",
-    description: "Explore Noto Naskh Arabic by Google, designed for optimal screen readability and comprehensive Unicode support across all Arabic script languages.",
+    title: "Noto Naskh Arabic Font Free Download - Google's Best Arabic Font",
+    description: "Download Noto Naskh Arabic font free! Google's premium Arabic font with perfect screen readability. Supports all Arabic languages. Free PNG/SVG download.",
     url: "https://arabic-calligraphy-generator.com/fonts/noto-naskh-arabic",
     siteName: "Arabic Calligraphy Generator",
     type: "article",

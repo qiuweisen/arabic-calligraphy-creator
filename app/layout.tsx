@@ -19,8 +19,8 @@ const cdnBaseUrl = 'https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Arabic Calligraphy Generator - Free Online Tool",
-  description: "Create stunning Arabic calligraphy instantly with our free online generator. Choose from 13+ beautiful fonts, download PNG/SVG formats. No signup required - start creating now!",
+  title: "Arabic Calligraphy Generator - Free Tool | Create Islamic Art Online",
+  description: "🎨 FREE Arabic Calligraphy Generator | Create stunning Islamic art online instantly! 17+ premium fonts, instant download PNG/SVG. No signup required ✨",
   alternates: {
     canonical: '/',
   },

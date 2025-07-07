@@ -14,15 +14,15 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Cairo Font: Modern Arabic Sans-Serif Typography",
-  description: "Discover Cairo, a contemporary Arabic sans-serif font perfect for modern designs, digital interfaces, and bilingual projects with clean, readable letterforms.",
-  keywords: "cairo font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  title: "Cairo Font Free Download - Modern Arabic Sans-Serif | Perfect for UI/UX",
+  description: "Download Cairo Arabic font free! Clean, modern sans-serif perfect for websites, apps & logos. Bilingual Arabic-Latin support. Instant PNG/SVG download.",
+  keywords: "Cairo font free download, modern Arabic font, Arabic sans-serif, UI UX Arabic fonts, bilingual fonts, web fonts Arabic, clean Arabic typography",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/fonts/cairo",
   },
   openGraph: {
-    title: "Cairo Font: Modern Arabic Sans-Serif Typography",
-    description: "Discover Cairo, a contemporary Arabic sans-serif font perfect for modern designs, digital interfaces, and bilingual projects with clean, readable letterforms.",
+    title: "Cairo Font Free Download - Modern Arabic Sans-Serif | Perfect for UI/UX",
+    description: "Download Cairo Arabic font free! Clean, modern sans-serif perfect for websites, apps & logos. Bilingual Arabic-Latin support. Instant PNG/SVG download.",
     url: "https://arabic-calligraphy-generator.com/fonts/cairo",
     siteName: "Arabic Calligraphy Generator",
     type: "article",

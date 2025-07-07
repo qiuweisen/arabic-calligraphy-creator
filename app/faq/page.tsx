@@ -7,9 +7,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 export const metadata: Metadata = {
-  title: "Arabic Calligraphy Generator FAQ | Common Questions & Answers",
-  description: "Get answers to frequently asked questions about using our Arabic calligraphy generator, font selection, commercial use, and creating beautiful Arabic typography designs.",
-  keywords: "Arabic calligraphy generator FAQ, calligraphy tool questions, Arabic font help, generator support, Arabic typography FAQ, calligraphy generator guide",
+  title: "Arabic Calligraphy FAQ - Free Generator Help & Support Guide",
+  description: "Get instant answers about our free Arabic calligraphy generator! Font selection, downloads, commercial use, troubleshooting. Complete user guide.",
+  keywords: "Arabic calligraphy FAQ, free generator help, Arabic font questions, calligraphy support, generator guide, Arabic typography help",
 }
 
 const faqs = [

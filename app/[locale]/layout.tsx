@@ -2,6 +2,8 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
+import { headers } from 'next/headers';
+import { DesktopSEOTracker } from '@/components/desktop-optimization/desktop-seo-tracker';
 import type { Metadata } from 'next'
 
 // 生成metadata
@@ -14,9 +16,19 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'metadata' });
   const baseUrl = 'https://arabic-calligraphy-generator.com';
 
+  // 桌面端检测 - 仅对英文用户应用优化
+  const headersList = await headers();
+  const userAgent = headersList.get('user-agent') || '';
+  const isDesktop = !(/Mobile|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent));
+
+  // 根据设备类型和语言选择描述
+  const description = (isDesktop && locale === 'en')
+    ? t('description_desktop')
+    : t('description');
+
   return {
     title: t('title'),
-    description: t('description'),
+    description,
     keywords: t('keywords'),
     alternates: {
       canonical: locale === 'en' ? baseUrl : `${baseUrl}/${locale}`,
@@ -32,7 +44,7 @@ export async function generateMetadata({
     },
     openGraph: {
       title: t('title'),
-      description: t('description'),
+      description,
       locale: locale === 'en' ? 'en_US' : 'ar_SA',
       alternateLocale: locale === 'en' ? 'ar_SA' : 'en_US',
       type: 'website',
@@ -41,7 +53,7 @@ export async function generateMetadata({
     twitter: {
       card: 'summary_large_image',
       title: t('title'),
-      description: t('description'),
+      description,
     },
     robots: {
       index: true,
@@ -77,6 +89,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
+      <DesktopSEOTracker locale={locale} />
       {children}
     </NextIntlClientProvider>
   );
