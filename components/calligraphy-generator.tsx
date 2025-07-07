@@ -153,24 +153,32 @@ async function generatePreviewCanvas(
 }
 
 // Font definitions with category keys for translation
+// 混合多样性排序：让用户在前几个选择中看到不同风格，提供更好的选择体验
 const ARABIC_FONTS = [
-  { name: "Amiri", value: "'Amiri', serif", category: "Traditional" },
-  { name: "Scheherazade", value: "'Scheherazade New', serif", category: "Traditional" },
-  { name: "Noto Naskh Arabic", value: "'Noto Naskh Arabic', serif", category: "Traditional" },
-  { name: "Aref Ruqaa", value: "'Aref Ruqaa', serif", category: "Diwani" },
-  { name: "Reem Kufi", value: "'Reem Kufi', sans-serif", category: "Kufi" },
-  { name: "Lateef", value: "'Lateef', cursive", category: "Traditional" },
-  { name: "Mirza", value: "'Mirza', cursive", category: "Nastaliq" },
-  { name: "Cairo", value: "'Cairo', sans-serif", category: "Modern" },
-  { name: "Jomhuria", value: "'Jomhuria', display", category: "Display" },
-  { name: "Rakkas", value: "'Rakkas', display", category: "Display" },
-  { name: "Harmattan", value: "'Harmattan', sans-serif", category: "Modern" },
-  { name: "Mada", value: "'Mada', sans-serif", category: "Modern" },
-  { name: "Tajawal", value: "'Tajawal', sans-serif", category: "Modern" },
+  // 第1轮：经典热门字体，不同风格混合
+  { name: "Amiri", value: "'Amiri', serif", category: "Traditional" },        // 传统经典
+  { name: "Cairo", value: "'Cairo', sans-serif", category: "Modern" },        // 现代简洁
+  { name: "Reem Kufi", value: "'Reem Kufi', sans-serif", category: "Kufi" },  // Kufi特色
+  { name: "Jomhuria", value: "'Jomhuria', display", category: "Display" },    // 装饰醒目
+
+  // 第2轮：优质备选，继续保持风格多样性
+  { name: "Scheherazade", value: "'Scheherazade New', serif", category: "Traditional" }, // 传统优雅
+  { name: "Tajawal", value: "'Tajawal', sans-serif", category: "Modern" },              // 现代清晰
+  { name: "Aref Ruqaa", value: "'Aref Ruqaa', serif", category: "Diwani" },             // Diwani风格
+  { name: "Rakkas", value: "'Rakkas', display", category: "Display" },                  // 装饰粗体
+
+  // 第3轮：专业选择
+  { name: "Noto Naskh Arabic", value: "'Noto Naskh Arabic', serif", category: "Traditional" }, // 传统标准
+  { name: "Mada", value: "'Mada', sans-serif", category: "Modern" },                          // 现代实用
+  { name: "Mirza", value: "'Mirza', cursive", category: "Nastaliq" },                         // Nastaliq风格
+  { name: "Lemonada", value: "'Lemonada', display", category: "Display" },                    // 装饰圆润
+
+  // 其他实用字体
   { name: "El Messiri", value: "'El Messiri', sans-serif", category: "Modern" },
-  { name: "Lemonada", value: "'Lemonada', display", category: "Display" },
-  { name: "Marhey", value: "'Marhey', display", category: "Display" },
+  { name: "Harmattan", value: "'Harmattan', sans-serif", category: "Modern" },
+  { name: "Lateef", value: "'Lateef', cursive", category: "Traditional" },
   { name: "Markazi Text", value: "'Markazi Text', serif", category: "Traditional" },
+  { name: "Marhey", value: "'Marhey', display", category: "Display" },
 ]
 
 // Background patterns with translation keys
@@ -358,14 +366,14 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
   const handleFontChange = async (value: string) => {
     // 立即更新字体状态，使用fallback字体显示
     setFont(value)
-    
+
     // 异步加载字体
     try {
       await loadFont(value)
     } catch (error) {
       console.error('Failed to load font:', error)
     }
-    
+
     // Notify parent component of font change
     if (onFontChange) {
       const fontName = Object.keys(FONT_NAME_MAP).find(key => FONT_NAME_MAP[key] === value)
@@ -373,7 +381,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
         onFontChange(fontName)
       }
     }
-    
+
     // 追踪字体选择事件
     if (typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
       const selectedFont = ARABIC_FONTS.find(f => f.value === value)
@@ -385,6 +393,8 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
       });
     }
   }
+
+
 
   const handleAlignmentChange = (value: string) => {
     setAlignment(value)

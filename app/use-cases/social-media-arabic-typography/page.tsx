@@ -8,19 +8,19 @@ import { ArrowRight, Share2, Heart, MessageCircle, TrendingUp, Camera, Video } f
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Social Media Arabic Typography - Instagram, Facebook, TikTok Arabic Fonts | Social Content 2024',
-  description: 'Create viral social media content with stunning Arabic typography. Discover the best Arabic fonts for Instagram, Facebook, TikTok, and Twitter. Boost engagement with culturally authentic designs.',
+  title: 'Arabic Fonts for Social Media - Free Instagram, TikTok & Facebook Typography',
+  description: 'Create viral Arabic social media posts! Free Arabic fonts perfect for Instagram stories, TikTok videos & Facebook posts. Boost engagement instantly.',
   keywords: 'social media arabic typography,instagram arabic fonts,facebook arabic posts,tiktok arabic text,twitter arabic calligraphy,social content arabic,viral arabic posts',
   openGraph: {
-    title: 'Social Media Arabic Typography - Instagram, Facebook, TikTok Arabic Fonts',
-    description: 'Create viral social media content with stunning Arabic typography. Discover the best Arabic fonts for Instagram, Facebook, TikTok, and Twitter.',
+    title: 'Arabic Fonts for Social Media - Free Instagram, TikTok & Facebook Typography',
+    description: 'Create viral Arabic social media posts! Free Arabic fonts perfect for Instagram stories, TikTok videos & Facebook posts. Boost engagement instantly.',
     type: 'article',
     url: 'https://arabic-calligraphy-creator.com/use-cases/social-media-arabic-typography',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Social Media Arabic Typography - Instagram, Facebook, TikTok Arabic Fonts',
-    description: 'Create viral social media content with stunning Arabic typography. Discover the best Arabic fonts for Instagram, Facebook, TikTok, and Twitter.',
+    title: 'Arabic Fonts for Social Media - Free Instagram, TikTok & Facebook Typography',
+    description: 'Create viral Arabic social media posts! Free Arabic fonts perfect for Instagram stories, TikTok videos & Facebook posts. Boost engagement instantly.',
   },
   alternates: {
     canonical: 'https://arabic-calligraphy-creator.com/use-cases/social-media-arabic-typography',
