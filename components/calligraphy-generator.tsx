@@ -442,11 +442,28 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
     if (template.bg) setBackgroundColor(template.bg)
     setIsTemplateDialogOpen(false)
 
-    // 追踪模板使用事件
+    // 增强模板使用事件追踪
     if (typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
+      // 获取字体信息
+      let fontName = 'Unknown'
+      let fontCategory = 'Unknown'
+
+      if (template.font) {
+        const fontInfo = ARABIC_FONTS.find(f => f.value === template.font)
+        if (fontInfo) {
+          fontName = fontInfo.name
+          fontCategory = fontInfo.category
+        }
+      }
+
       (window as any).trackCalligraphyEvent('Template_Used', {
         templateText: template.text.substring(0, 20), // 前20个字符
-        templateFont: template.font || 'default'
+        templateFont: template.font || 'default',
+        font_name: fontName,
+        font_category: fontCategory,
+        selection_method: 'featured_template',
+        previous_font: font, // 用户之前选择的字体
+        device_type: window.innerWidth >= 1024 ? 'desktop' : 'mobile'
       });
     }
 
@@ -1799,25 +1816,25 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                   {[
                     {
                       text: "بسم الله الرحمن الرحيم",
-                      font: ARABIC_FONTS[0].value,
+                      font: ARABIC_FONTS[0].value, // Amiri (Traditional)
                       color: "#8B4513",
                       bg: "#FFF8E1",
                     },
                     {
                       text: "الحمد لله",
-                      font: ARABIC_FONTS[1].value,
+                      font: ARABIC_FONTS[7].value, // Cairo (Modern)
                       color: "#006400",
                       bg: "#F0FFF0",
                     },
                     {
                       text: "سبحان الله",
-                      font: ARABIC_FONTS[5].value,
+                      font: ARABIC_FONTS[4].value, // Reem Kufi (Kufi)
                       color: "#4B0082",
                       bg: "#F8F4FF",
                     },
                     {
                       text: "الله أكبر",
-                      font: ARABIC_FONTS[0].value,
+                      font: ARABIC_FONTS[3].value, // Aref Ruqaa (Diwani)
                       color: "#800000",
                       bg: "#FFF0F0",
                     },
