@@ -1,0 +1,668 @@
+{
+  "metadata": {
+    "title": "Générateur de Calligraphie Arabe - Outil Gratuit | الخط العربي",
+    "description": "🎨 Générateur de Calligraphie Arabe GRATUIT | Créez instantanément de superbes œuvres d'art islamique en ligne ! 13+ polices, téléchargement instantané PNG/SVG. Aucune inscription requise ✨",
+    "description_desktop": "Générateur de Calligraphie Arabe Professionnel - Créez de l'Art Islamique avec 13+ Polices Premium. Outil en ligne gratuit pour designers, étudiants et entreprises. Téléchargement instantané PNG/SVG.",
+    "keywords": "générateur de calligraphie arabe, polices arabes, calligraphie islamique, générateur de texte arabe, polices arabes gratuites, créateur de calligraphie en ligne"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "close": "Fermer",
+    "continue": "Continuer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "save": "Enregistrer",
+    "download": "Télécharger",
+    "share": "Partager",
+    "copy": "Copier",
+    "copied": "Copié !",
+    "yes": "Oui",
+    "no": "Non"
+  },
+  "navigation": {
+    "generator": "Générateur",
+    "arabicFonts": "Polices Arabes",
+    "learningGuides": "Guides d'Apprentissage",
+    "howToTutorials": "Tutoriels",
+    "freeResources": "Ressources Gratuites",
+    "useCases": "Cas d'Usage",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "dropdown": {
+      "completeBeginner": "Guide Complet pour Débutants",
+      "fontComparison": "Guide de Comparaison des Polices",
+      "bestFonts2025": "Meilleures Polices Arabes 2025",
+      "typographyTrends": "Tendances Typographiques 2025",
+      "createOnline": "Créer de la Calligraphie en Ligne",
+      "fontSelection": "Guide de Sélection des Polices",
+      "designTips": "Conseils de Conception",
+      "downloadFonts": "Télécharger et Utiliser des Polices",
+      "freeArabicFonts": "Polices Arabes Gratuites"
+    }
+  },
+  "languageSwitcher": {
+    "selectLanguage": "Sélectionner la langue",
+    "currentLanguage": "Langue actuelle"
+  },
+  "languagePrompt": {
+    "title": "Bienvenue ! Nous proposons notre site dans votre langue",
+    "subtitle": "Souhaitez-vous passer en {language} ?",
+    "useLanguage": "Utiliser le {language}",
+    "continueEnglish": "Continuer en anglais",
+    "dontShowAgain": "Ne plus afficher"
+  },
+  "footer": {
+    "description": "Créez de magnifiques calligraphies arabes avec notre générateur de calligraphie arabe en ligne gratuit.",
+    "arabicCalligraphy": "Calligraphie Arabe",
+    "generator": "Générateur de Calligraphie Arabe",
+    "features": "Fonctionnalités du Générateur",
+    "blog": "Blog de Calligraphie",
+    "faq": "FAQ du Générateur",
+    "contact": "Nous Contacter",
+    "fonts": "Polices Arabes",
+    "fontLibrary": "Bibliothèque de Polices",
+    "fontComparison": "Comparaison de Polices",
+    "fontDownloads": "Téléchargements de Polices",
+    "learning": "Ressources d'Apprentissage",
+    "beginnerGuide": "Guide du Débutant",
+    "tutorials": "Tutoriels",
+    "designTips": "Conseils de Conception",
+    "company": "Entreprise",
+    "about": "À Propos de Nous",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
+    "copyright": "© 2010-{year} Générateur de Calligraphie Arabe. Tous droits réservés.",
+    "popular": {
+      "title": "Populaire",
+      "amiriFont": "Police Amiri",
+      "cairoFont": "Police Cairo",
+      "weddingCalligraphy": "Calligraphie de Mariage",
+      "businessLogos": "Logos d'Entreprise",
+      "privacyPolicy": "Politique de Confidentialité",
+      "termsOfService": "Conditions d'Utilisation"
+    }
+  },
+  "homepage": {
+    "title": "Générateur de Calligraphie Arabe",
+    "subtitle": "الخط العربي",
+    "description": "Créez Instantanément de Superbes Œuvres d'Art en Écriture Arabe",
+    "intro": "Transformez n'importe quel texte arabe en une magnifique calligraphie avec notre générateur de calligraphie arabe en ligne gratuit. Ce puissant générateur de texte arabe propose plus de 13 polices arabes premium. Créez des designs époustouflants instantanément - aucune inscription requise !",
+    "socialProof": {
+      "designsCreated": "100 000+ Designs Créés",
+      "premiumFonts": "13+ Polices Premium",
+      "freeForever": "Gratuit pour Toujours"
+    },
+    "features": {
+      "title": "Fonctionnalités de Calligraphie Arabe Professionnelle",
+      "fontLibrary": {
+        "title": "Vaste Bibliothèque de Polices Arabes",
+        "description": "Notre créateur de calligraphie arabe gratuit propose plus de 13 polices arabes premium en ligne, couvrant les écritures traditionnelles (Koufi, Naskh, Diwani) et la typographie moderne. Ce générateur de texte arabe complet inclut un aperçu visuel pour une sélection facile des polices.",
+        "items": [
+          "Styles de calligraphie traditionnelle",
+          "Polices arabes modernes",
+          "Options décoratives et d'affichage"
+        ]
+      },
+      "customization": {
+        "title": "Options de Personnalisation Avancées",
+        "description": "Cet outil gratuit de génération de calligraphie arabe en ligne offre des options de style de qualité professionnelle, notamment des effets de texte en dégradé, des arrière-plans personnalisés, des ombres et des contrôles typographiques précis pour des résultats parfaits.",
+        "items": [
+          "Effets de texte en dégradé",
+          "Motifs d'arrière-plan personnalisés",
+          "Effets d'ombre et de lueur"
+        ]
+      },
+      "export": {
+        "title": "Options d'Exportation Professionnelles",
+        "description": "Téléchargez votre calligraphie arabe dans plusieurs formats de haute qualité. Notre générateur de texte arabe prend en charge le format PNG pour le web et SVG pour les applications d'impression, garantissant que vos designs soient parfaits à n'importe quelle taille.",
+        "items": [
+          "Exportation PNG haute résolution",
+          "Format SVG vectoriel",
+          "Qualité prête pour l'impression"
+        ]
+      }
+    },
+    "quickStart": {
+      "title": "Démarrage Rapide :",
+      "steps": "Saisissez du texte arabe → Choisissez une police → Téléchargez instantanément"
+    },
+    "howToUse": {
+      "title": "Comment Créer une Calligraphie Arabe",
+      "step1": {
+        "title": "Saisissez Votre Texte",
+        "description": "Tapez ou collez votre texte arabe dans le champ de saisie ci-dessus"
+      },
+      "step2": {
+        "title": "Choisissez Votre Style",
+        "description": "Sélectionnez parmi plus de 13 magnifiques polices arabes et personnalisez les couleurs"
+      },
+      "step3": {
+        "title": "Téléchargez et Partagez",
+        "description": "Téléchargez votre calligraphie en PNG ou SVG et partagez-la partout"
+      }
+    },
+    "useCases": {
+      "title": "Parfait pour Chaque Occasion",
+      "wedding": {
+        "title": "Faire-part de Mariage",
+        "description": "Créez une calligraphie arabe élégante pour les cartes et faire-part de mariage"
+      },
+      "business": {
+        "title": "Image de Marque d'Entreprise",
+        "description": "Concevez des logos professionnels et des supports de marque avec la typographie arabe"
+      },
+      "social": {
+        "title": "Réseaux Sociaux",
+        "description": "Générez de belles citations et publications en arabe pour Instagram, Facebook, et plus encore"
+      },
+      "religious": {
+        "title": "Art Religieux",
+        "description": "Créez une calligraphie islamique époustouflante pour les versets du Coran et les textes religieux"
+      }
+    },
+    "faq": {
+      "title": "FAQ du Générateur de Calligraphie Arabe",
+      "q1": {
+        "question": "Ce générateur de calligraphie arabe est-il entièrement gratuit ?",
+        "answer": "Oui ! Notre générateur de calligraphie arabe est 100% gratuit, sans frais cachés, abonnements ou inscription. Les 13+ polices premium, les fonctionnalités de personnalisation et les options d'exportation sont toutes incluses gratuitement."
+      },
+      "q2": {
+        "question": "Quels formats de fichiers puis-je télécharger ?",
+        "answer": "Vous pouvez télécharger votre calligraphie arabe en deux formats : PNG (pour les photos et les réseaux sociaux) et SVG (pour l'impression et les graphiques vectoriels). Les deux formats conservent une haute qualité."
+      },
+      "q3": {
+        "question": "Combien de polices arabes sont disponibles ?",
+        "answer": "Nous proposons plus de 13 polices arabes soigneusement sélectionnées, y compris des styles traditionnels comme le Naskh et le Thuluth, ainsi que des polices modernes comme le Koufi et des options décoratives. Chaque police est conçue par des professionnels pour une lisibilité optimale."
+      },
+      "q4": {
+        "question": "Puis-je utiliser la calligraphie générée à des fins commerciales ?",
+        "answer": "Oui, vous pouvez utiliser la calligraphie arabe que vous créez à des fins personnelles et commerciales. Les polices que nous utilisons sont soit open source, soit sous licence appropriée pour un usage commercial."
+      },
+      "q5": {
+        "question": "Le générateur fonctionne-t-il sur les appareils mobiles ?",
+        "answer": "Absolument ! Notre générateur de calligraphie arabe est entièrement adaptatif (responsive) et fonctionne parfaitement sur les smartphones, les tablettes et les ordinateurs de bureau. L'interface s'adapte à la taille de votre écran pour une expérience optimale."
+      }
+    },
+    "cta": {
+      "title": "La Meilleure Application Gratuite en Ligne de Générateur de Calligraphie Arabe",
+      "description": "Découvrez l'outil gratuit en ligne de génération de calligraphie arabe le plus complet du marché. Rejoignez des milliers d'utilisateurs qui créent de superbes designs arabes avec notre générateur de texte. Commencez dès maintenant - c'est entièrement gratuit !",
+      "button": "Commencer à Créer Maintenant",
+      "features": {
+        "noRegistration": "Aucune Inscription",
+        "free": "100% Gratuit",
+        "instantDownload": "Téléchargement Instantané"
+      }
+    },
+    "technicalFeatures": {
+      "title": "Fonctionnalités Avancées de Typographie Arabe",
+      "fontCollection": {
+        "title": "Collection de Polices et Styles",
+        "traditional": "Écritures Traditionnelles : Amiri (Naskh), Scheherazade, Lateef, Markazi Text",
+        "decorative": "Styles Décoratifs : Aref Ruqaa (Diwani), Jomhuria, Rakkas, Lemonada",
+        "modern": "Typographie Moderne : Cairo, Harmattan, Mada, Tajawal, El Messiri",
+        "specialized": "Spécialisées : Reem Kufi (Géométrique), Mirza (Nastaliq), Marhey (Display)",
+        "note": "Toutes les polices prennent en charge la direction du texte de droite à gauche (RTL), les signes diacritiques arabes (Harakat) et l'allongement Kashida pour une calligraphie authentique."
+      },
+      "export": {
+        "title": "Exportation et Compatibilité",
+        "formats": "Formats de sortie : PNG (fond transparent), SVG (vecteur redimensionnable)",
+        "quality": "Options de qualité : Exportation haute résolution adaptée à l'impression et à l'usage numérique",
+        "browsers": "Compatibilité des navigateurs : Chrome, Firefox, Safari, Edge - tous les navigateurs modernes",
+        "devices": "Compatibilité des appareils : Design adaptatif (responsive) pour ordinateur de bureau, tablette et mobile",
+        "note": "Utilisation commerciale gratuite. Sans filigrane, sans inscription. Fonctionne entièrement dans votre navigateur pour préserver votre confidentialité."
+      }
+    },
+    "professionalUse": {
+      "title": "Applications Professionnelles de la Calligraphie Arabe",
+      "business": {
+        "title": "Entreprise et Image de Marque",
+        "logo": {
+          "title": "Logos d'Entreprise et Identité Visuelle",
+          "description": "Créez des noms de marque arabes distinctifs avec des styles de calligraphie traditionnels ou modernes"
+        },
+        "restaurant": {
+          "title": "Restauration et Hôtellerie",
+          "description": "Concevez des enseignes, des menus et des supports promotionnels arabes authentiques"
+        },
+        "marketing": {
+          "title": "Supports Marketing",
+          "description": "Typographie arabe professionnelle pour brochures, publicités et campagnes numériques"
+        }
+      },
+      "personal": {
+        "title": "Personnel et Culturel",
+        "wedding": {
+          "title": "Faire-part de Mariage et d'Événements",
+          "description": "Calligraphie arabe élégante pour les occasions spéciales et les célébrations"
+        },
+        "islamic": {
+          "title": "Art et Décoration Islamiques",
+          "description": "Beaux versets coraniques, Hadiths et phrases islamiques pour la décoration intérieure"
+        },
+        "social": {
+          "title": "Contenu pour les Réseaux Sociaux",
+          "description": "Publications arabes attrayantes pour Instagram, Facebook et d'autres plateformes"
+        }
+      }
+    },
+    "detailedFaq": {
+      "title": "FAQ du Générateur de Calligraphie Arabe",
+      "viewAll": "Voir toutes les FAQ",
+      "questions": [
+        {
+          "question": "Ce générateur de calligraphie arabe est-il entièrement gratuit ?",
+          "answer": "Oui ! Notre générateur de calligraphie arabe est 100% gratuit, sans frais cachés, abonnements ou inscription. Les 13+ polices premium, les fonctionnalités de personnalisation et les options d'exportation sont toutes incluses gratuitement."
+        },
+        {
+          "question": "Quelles polices et quels styles de calligraphie arabes sont disponibles ?",
+          "answer": "Nous proposons plus de 13 polices arabes soigneusement sélectionnées couvrant les styles de calligraphie traditionnels (Koufi, Naskh, Diwani, Nastaliq) et la typographie arabe moderne. Chaque police prend en charge la direction du texte de droite à gauche (RTL), les signes diacritiques arabes (Harakat) et un rendu authentique de l'écriture arabe."
+        },
+        {
+          "question": "Quels formats de fichier et quelle qualité puis-je télécharger ?",
+          "answer": "Vous pouvez exporter votre calligraphie arabe sous forme de fichiers PNG haute résolution (avec fond transparent) ou de fichiers vectoriels SVG redimensionnables. Les deux formats conviennent à l'impression professionnelle, aux médias numériques et aux applications commerciales."
+        },
+        {
+          "question": "Puis-je utiliser la calligraphie générée pour des projets commerciaux ?",
+          "answer": "Oui, vous pouvez utiliser vos créations de calligraphie arabe pour des projets personnels et commerciaux sans aucune restriction. Cela inclut les logos d'entreprise, les supports marketing, les faire-part de mariage et toute autre application commerciale."
+        },
+        {
+          "question": "Ce générateur de calligraphie arabe fonctionne-t-il sur les appareils mobiles ?",
+          "answer": "Absolument ! Notre générateur de calligraphie arabe est entièrement adaptatif (responsive) et optimisé pour les smartphones, les tablettes et les ordinateurs de bureau. L'interface s'adapte à la taille de votre écran tout en conservant toutes ses fonctionnalités."
+        },
+        {
+          "question": "Est-ce le meilleur générateur de calligraphie arabe en ligne gratuit disponible ?",
+          "answer": "Notre générateur de calligraphie arabe en ligne gratuit se distingue par ses 13+ polices arabes premium, ses téléchargements instantanés en PNG/SVG et l'absence d'inscription. Contrairement à de nombreux générateurs de texte arabe qui nécessitent des abonnements, notre application de création de calligraphie arabe fournit des résultats de qualité professionnelle de manière totalement gratuite."
+        },
+        {
+          "question": "L'outil prend-il en charge le texte arabe avec des signes diacritiques (Harakat) ?",
+          "answer": "Oui, notre générateur de calligraphie arabe prend en charge le texte arabe avec des signes diacritiques (Harakat/اعراب). Vous pouvez saisir du texte avec des voyelles, et le générateur les affichera selon les capacités de chaque police. C'est essentiel pour les versets coraniques et le texte arabe formel."
+        },
+        {
+          "question": "Comment ce créateur de calligraphie arabe se compare-t-il aux logiciels de bureau ?",
+          "answer": "Notre outil gratuit de génération de calligraphie arabe en ligne offre plusieurs avantages par rapport aux logiciels de bureau : accès instantané sans téléchargement, mises à jour automatiques, compatibilité multiplateforme et commodité du cloud. Bien que les logiciels de bureau puissent offrir des fonctionnalités plus avancées, notre générateur de texte arabe offre un équilibre parfait entre fonctionnalité et accessibilité pour les besoins de la plupart des utilisateurs."
+        }
+      ]
+    },
+    "generator": {
+      "title": "Fonctionnalités du Générateur de Calligraphie Arabe",
+      "availableFonts": "Polices Arabes Disponibles :",
+      "toolFeatures": "Fonctionnalités de l'Outil :",
+      "fonts": {
+        "amiri": "Amiri (Naskh Traditionnel)",
+        "scheherazade": "Scheherazade (Traditionnel)",
+        "reemKufi": "Reem Kufi (Koufi Moderne)",
+        "arefRuqaa": "Aref Ruqaa (Style Diwani)",
+        "cairo": "Cairo (Sans-serif Moderne)",
+        "moreFonts": "Et 8+ autres polices premium"
+      },
+      "features": {
+        "freeGenerator": "Générateur de texte arabe en ligne gratuit",
+        "instantDownload": "Téléchargement instantané en PNG et SVG",
+        "colorCustomization": "Personnalisation des couleurs et des dégradés",
+        "backgroundPatterns": "Motifs et images d'arrière-plan",
+        "mobileFriendly": "Interface adaptée aux mobiles",
+        "noRegistration": "Aucune inscription requise"
+      },
+      "jsRequired": "Ce créateur de calligraphie arabe nécessite JavaScript pour fonctionner. Veuillez activer JavaScript dans votre navigateur pour utiliser l'outil interactif.",
+      "tabs": {
+        "text": "Texte",
+        "style": "Style",
+        "advanced": "Avancé"
+      },
+      "textTab": {
+        "arabicText": "Texte Arabe",
+        "hideKeyboard": "Masquer le clavier",
+        "showKeyboard": "Afficher le clavier",
+        "placeholder": "Saisissez du texte arabe ici...",
+        "templates": "Modèles",
+        "font": "Police",
+        "preview": "Aperçu",
+        "selectFont": "Sélectionner une police",
+        "categories": "Catégories",
+        "fontSize": "Taille de la police",
+        "resetText": "Réinitialiser le texte"
+      },
+      "styleTab": {
+        "textColor": "Couleur du texte",
+        "useGradient": "Utiliser un dégradé",
+        "gradientFrom": "Dégradé de",
+        "gradientTo": "Dégradé à",
+        "backgroundColor": "Couleur de fond",
+        "backgroundImage": "Image de fond",
+        "uploadImage": "Télécharger une image",
+        "backgroundPattern": "Motif de fond",
+        "alignment": "Alignement du texte",
+        "left": "Gauche",
+        "center": "Centré",
+        "right": "Droite"
+      },
+      "advancedTab": {
+        "fontWeight": "Graisse de la police",
+        "fontStyle": "Style de police",
+        "normal": "Normal",
+        "italic": "Italique",
+        "letterSpacing": "Espacement des lettres",
+        "lineHeight": "Hauteur de ligne",
+        "shadow": "Ombre du texte",
+        "shadowX": "Ombre X",
+        "shadowY": "Ombre Y",
+        "shadowBlur": "Flou de l'ombre",
+        "shadowColor": "Couleur de l'ombre",
+        "border": "Bordure",
+        "borderColor": "Couleur de bordure",
+        "borderWidth": "Largeur de bordure",
+        "borderRadius": "Rayon de bordure",
+        "padding": "Marge intérieure",
+        "kashida": "Extension Kashida",
+        "kashidaLength": "Longueur du Kashida"
+      },
+      "preview": {
+        "title": "Aperçu",
+        "downloadPNG": "Télécharger en PNG",
+        "downloadSVG": "Télécharger en SVG",
+        "share": "Partager"
+      },
+      "featuredDesigns": {
+        "title": "Designs à la Une",
+        "topPicks": "Meilleurs Choix",
+        "viewAllTemplates": "Voir tous les modèles"
+      },
+      "quickLinks": {
+        "title": "Liens Rapides",
+        "blog": "Blog",
+        "faq": "FAQ"
+      },
+      "tooltips": {
+        "resetDefaults": "Réinitialiser aux valeurs par défaut",
+        "fullscreen": "Aperçu en plein écran",
+        "exitFullscreen": "Quitter le plein écran"
+      },
+      "toasts": {
+        "downloadStarted": "Téléchargement en cours",
+        "preparingPNG": "Préparation de votre calligraphie arabe en PNG...",
+        "preparingSVG": "Préparation de votre calligraphie arabe en SVG...",
+        "downloadFailed": "Échec du téléchargement",
+        "downloadError": "Une erreur s'est produite lors du téléchargement de votre calligraphie. Veuillez réessayer.",
+        "preparingImage": "Préparation de l'image",
+        "generatingImage": "Génération de l'image pour le partage...",
+        "designApplied": "Design Appliqué",
+        "designAppliedDesc": "Le design sélectionné a été appliqué à votre canevas.",
+        "shareTitle": "Design de Calligraphie Arabe",
+        "shareText": "Découvrez cette magnifique calligraphie arabe que j'ai créée !"
+      }
+    },
+    "useCasesSection": {
+      "title": "Ce que Vous Pouvez Créer",
+      "socialMedia": {
+        "title": "Réseaux Sociaux",
+        "subtitle": "Parfait pour les Réseaux Sociaux",
+        "description": "Créez des publications, des stories et des graphiques de profil attrayants avec une belle typographie arabe.",
+        "instagram": "Publications et stories Instagram",
+        "facebook": "Photos de couverture Facebook",
+        "twitter": "Graphiques Twitter",
+        "profiles": "Photos de profil avec des monogrammes arabes"
+      },
+      "print": {
+        "title": "Impression",
+        "subtitle": "Supports d'Impression",
+        "description": "Concevez des supports d'impression professionnels avec une calligraphie arabe de haute qualité.",
+        "invitations": "Faire-part de mariage et d'événements",
+        "business": "Cartes de visite et en-têtes de lettre",
+        "posters": "Affiches et bannières",
+        "certificates": "Certificats et récompenses"
+      },
+      "web": {
+        "title": "Web",
+        "subtitle": "Graphiques Web",
+        "description": "Créez de superbes graphiques web et du contenu numérique avec la typographie arabe.",
+        "logos": "Logos et en-têtes de site web",
+        "banners": "Bannières et publicités web",
+        "icons": "Icônes arabes personnalisées",
+        "graphics": "Graphiques et illustrations numériques"
+      },
+      "art": {
+        "title": "Art",
+        "subtitle": "Créations Artistiques",
+        "description": "Exprimez votre créativité avec des conceptions artistiques de calligraphie arabe.",
+        "wallArt": "Art mural et décorations",
+        "islamic": "Art et versets islamiques",
+        "modern": "Art de la calligraphie moderne",
+        "traditional": "Écritures arabes traditionnelles"
+      }
+    }
+  },
+  "generator": {
+    "title": "Fonctionnalités du Générateur de Calligraphie Arabe",
+    "availableFonts": "Polices Arabes Disponibles :",
+    "toolFeatures": "Fonctionnalités de l'Outil :",
+    "jsRequired": "JavaScript est requis pour utiliser le générateur de calligraphie arabe. Veuillez activer JavaScript dans votre navigateur.",
+    "fonts": {
+      "amiri": "Amiri (Naskh Traditionnel)",
+      "scheherazade": "Scheherazade (Traditionnel)",
+      "reemKufi": "Reem Kufi (Géométrique)",
+      "arefRuqaa": "Aref Ruqaa (Style Diwani)",
+      "cairo": "Cairo (Sans-serif Moderne)",
+      "moreFonts": "Et 8+ autres polices premium"
+    },
+    "features": {
+      "freeGenerator": "Générateur de texte arabe en ligne gratuit",
+      "instantDownload": "Téléchargement instantané en PNG et SVG",
+      "colorCustomization": "Personnalisation des couleurs et des dégradés",
+      "backgroundPatterns": "Motifs et images d'arrière-plan",
+      "mobileFriendly": "Interface adaptée aux mobiles",
+      "noRegistration": "Aucune inscription requise"
+    },
+    "tabs": {
+      "text": "Texte",
+      "style": "Style",
+      "advanced": "Avancé"
+    },
+    "textTab": {
+      "arabicText": "Texte Arabe",
+      "hideKeyboard": "Masquer le clavier",
+      "showKeyboard": "Afficher le clavier",
+      "placeholder": "Saisissez du texte arabe ici...",
+      "templates": "Modèles",
+      "font": "Police",
+      "preview": "Aperçu",
+      "selectFont": "Sélectionner une police",
+      "categories": "Catégories",
+      "fontSize": "Taille de la police",
+      "resetText": "Réinitialiser le texte"
+    },
+    "styleTab": {
+      "textColor": "Couleur du texte",
+      "useGradient": "Utiliser un dégradé",
+      "gradientFrom": "De",
+      "gradientTo": "À",
+      "backgroundColor": "Couleur de fond",
+      "backgroundImage": "Image de fond",
+      "uploadImage": "Télécharger une image",
+      "backgroundPattern": "Motif de fond",
+      "alignment": "Alignement du texte",
+      "left": "Gauche",
+      "center": "Centré",
+      "right": "Droite"
+    },
+    "advancedTab": {
+      "fontWeight": "Graisse de la police",
+      "fontStyle": "Style de police",
+      "normal": "Normal",
+      "italic": "Italique",
+      "letterSpacing": "Espacement des lettres",
+      "lineHeight": "Hauteur de ligne",
+      "shadow": "Ombre du texte",
+      "shadowX": "Ombre X",
+      "shadowY": "Ombre Y",
+      "shadowBlur": "Flou",
+      "shadowColor": "Couleur de l'ombre",
+      "border": "Bordure",
+      "borderColor": "Couleur de bordure",
+      "borderWidth": "Largeur de bordure",
+      "borderRadius": "Rayon de bordure",
+      "padding": "Marge intérieure",
+      "kashida": "Extension Kashida",
+      "kashidaLength": "Longueur du Kashida"
+    },
+    "preview": {
+      "title": "Aperçu",
+      "downloadPNG": "Télécharger en PNG",
+      "downloadSVG": "Télécharger en SVG",
+      "share": "Partager"
+    },
+    "featuredDesigns": {
+      "title": "Designs à la Une",
+      "topPicks": "Meilleurs Choix",
+      "viewAllTemplates": "Voir tous les modèles"
+    },
+    "quickLinks": {
+      "title": "Liens Rapides",
+      "blog": "Blog",
+      "faq": "FAQ"
+    },
+    "tooltips": {
+      "resetDefaults": "Réinitialiser aux valeurs par défaut",
+      "fullscreen": "Aperçu en plein écran",
+      "exitFullscreen": "Quitter le plein écran"
+    },
+    "toasts": {
+      "downloadStarted": "Téléchargement en cours",
+      "preparingPNG": "Préparation de votre calligraphie arabe en PNG...",
+      "preparingSVG": "Préparation de votre calligraphie arabe en SVG...",
+      "downloadFailed": "Échec du téléchargement",
+      "downloadError": "Une erreur s'est produite lors du téléchargement de votre calligraphie. Veuillez réessayer.",
+      "preparingImage": "Préparation de l'image",
+      "generatingImage": "Génération de l'image pour le partage...",
+      "designApplied": "Design Appliqué",
+      "designAppliedDesc": "Le design sélectionné a été appliqué à votre canevas.",
+      "shareTitle": "Design de Calligraphie Arabe",
+      "shareText": "Découvrez cette magnifique calligraphie arabe que j'ai créée !",
+      "templateApplied": "Modèle Appliqué",
+      "templateAppliedDesc": "Le modèle sélectionné a été appliqué à votre canevas.",
+      "downloadComplete": "Téléchargement Terminé",
+      "downloadCompletePNG": "Votre calligraphie arabe a été téléchargée en PNG.",
+      "downloadCompleteSVG": "Votre calligraphie arabe a été téléchargée en SVG.",
+      "imageGenerationFailed": "Échec de la Génération de l'Image",
+      "imageGenerationFailedDesc": "Impossible de générer l'image. Veuillez réessayer.",
+      "copyingImage": "Copie de l'Image",
+      "copyingImageDesc": "Préparation de l'image pour la copier dans le presse-papiers...",
+      "imageCopied": "Image Copiée",
+      "imageCopiedDesc": "L'image de la calligraphie a été copiée dans votre presse-papiers.",
+      "copyFailed": "Échec de la Copie",
+      "copyFailedDesc": "Impossible de copier l'image. Votre navigateur peut ne pas prendre en charge cette fonctionnalité ou la permission a été refusée.",
+      "copyError": "Erreur de Copie",
+      "copyErrorDesc": "Échec de la génération du blob d'image pour la copie.",
+      "copyErrorUnexpected": "Une erreur inattendue s'est produite lors de la tentative de copie de l'image.",
+      "copiedToClipboard": "Copié dans le Presse-papiers",
+      "copiedToClipboardDesc": "Votre texte a été copié dans le presse-papiers.",
+      "copyFailedText": "Une erreur s'est produite lors de la copie dans le presse-papiers.",
+      "error": "Erreur",
+      "previewNotFound": "Élément d'aperçu non trouvé.",
+      "previewNotFoundShare": "Élément d'aperçu non trouvé. Impossible de préparer l'image pour le partage.",
+      "sharingNotAvailable": "Partage Non Disponible",
+      "sharingNotAvailableDesc": "Votre navigateur ne prend pas en charge l'API Web Share. Essayez de télécharger l'image pour la partager.",
+      "imageShareNotSupported": "Partage d'Image Non Entièrement Pris en Charge",
+      "imageShareNotSupportedDesc": "Votre navigateur ou la cible de partage sélectionnée peut ne pas prendre en charge le partage direct d'images. Partage du contenu textuel à la place.",
+      "sharedSuccessfully": "Partagé avec Succès",
+      "sharedSuccessfullyDesc": "Votre calligraphie a été partagée.",
+      "shareFailed": "Échec du Partage",
+      "shareFailedDesc": "Une erreur s'est produite lors du partage de votre calligraphie. Veuillez réessayer ou télécharger l'image.",
+      "resetComplete": "Réinitialisation Terminée",
+      "resetCompleteDesc": "Tous les paramètres ont été réinitialisés aux valeurs par défaut."
+    },
+    "fontCategories": {
+      "Traditional": "Traditionnel",
+      "Diwani": "Diwani",
+      "Kufi": "Koufi",
+      "Nastaliq": "Nastaliq",
+      "Modern": "Moderne",
+      "Display": "Décoratif"
+    },
+    "backgroundPatterns": {
+      "None": "Aucun",
+      "Geometric": "Géométrique",
+      "Arabesque": "Arabesque",
+      "Islamic Patterns": "Motifs Islamiques",
+      "Dots": "Points"
+    },
+    "commonPhrases": {
+      "bismillah": "Au nom de Dieu, le Tout Miséricordieux, le Très Miséricordieux",
+      "alhamdulillah": "Louange à Dieu",
+      "mashallah": "Ce que Dieu a voulu",
+      "subhanallah": "Gloire à Dieu",
+      "allahuakbar": "Dieu est le plus grand",
+      "lailahaillallah": "Il n'y a de divinité que Dieu",
+      "astaghfirullah": "Je demande pardon à Dieu",
+      "allahummasalli": "Ô Dieu, bénis Muhammad"
+    },
+    "ui": {
+      "calligraphyControls": "Contrôles de la Calligraphie",
+      "text": "Texte",
+      "style": "Style",
+      "advanced": "Avancé",
+      "textColor": "Couleur du texte",
+      "gradient": "Dégradé",
+      "from": "De",
+      "to": "À",
+      "background": "Arrière-plan",
+      "color": "Couleur",
+      "image": "Image",
+      "pattern": "Motif",
+      "upload": "Télécharger",
+      "backgroundPattern": "Motif de fond",
+      "selectPattern": "Sélectionner un motif",
+      "textShadow": "Ombre du texte",
+      "horizontal": "Horizontal",
+      "vertical": "Vertical",
+      "blur": "Flou",
+      "opacity": "Opacité",
+      "fontWeight": "Graisse de la police",
+      "fontStyle": "Style de police",
+      "selectWeight": "Sélectionner la graisse",
+      "selectStyle": "Sélectionner le style",
+      "light": "Léger",
+      "regular": "Normal",
+      "medium": "Moyen",
+      "bold": "Gras",
+      "normal": "Normal",
+      "italic": "Italique",
+      "alignment": "Alignement",
+      "letterSpacing": "Espacement des lettres",
+      "lineHeight": "Hauteur de ligne",
+      "kashida": "Kashida (Allongement)",
+      "kashidaDesc": "Le Kashida ajoute un allongement à certaines lettres arabes, améliorant ainsi la qualité esthétique du texte.",
+      "length": "Longueur",
+      "border": "Bordure",
+      "borderColor": "Couleur de bordure",
+      "borderWidth": "Largeur de bordure",
+      "borderRadius": "Rayon de bordure",
+      "padding": "Marge intérieure",
+      "featuredTemplates": "Modèles à la Une",
+      "favorites": "Favoris",
+      "aboutArabicCalligraphy": "À propos de la Calligraphie Arabe",
+      "aboutArabicCalligraphyDesc": "La calligraphie arabe (خط عربي) est la pratique artistique de l'écriture manuscrite et de la calligraphie basée sur l'alphabet arabe. Elle est connue en arabe sous le nom de khatt, dérivé du mot 'ligne', 'dessin' ou 'construction'.",
+      "readMoreHistory": "En savoir plus sur l'histoire de la calligraphie arabe",
+      "exploreFonts": "Découvrez notre collection de polices",
+      "viewAllTemplates": "Voir tous les modèles"
+    }
+  },
+  "seo": {
+    "structuredData": {
+      "featureList": [
+        "13+ polices arabes incluant les styles Koufi, Naskh, Diwani",
+        "Génération de texte arabe en temps réel",
+        "Personnalisation des dégradés et des couleurs",
+        "Motifs et images d'arrière-plan",
+        "Exportation en PNG et SVG",
+        "Interface adaptée aux mobiles (responsive)",
+        "Aucune inscription requise"
+      ],
+      "applicationCategory": "ApplicationDeDesign",
+      "operatingSystem": "Navigateur Web",
+      "browserRequirements": "Nécessite l'activation de JavaScript",
+      "authorName": "Générateur de Calligraphie Arabe"
+    }
+  }
+}

@@ -6,6 +6,23 @@ import { headers } from 'next/headers';
 import { DesktopSEOTracker } from '@/components/desktop-optimization/desktop-seo-tracker';
 import type { Metadata } from 'next'
 
+// OpenGraph locale 映射
+function getOpenGraphLocale(locale: string): string {
+  const localeMap: Record<string, string> = {
+    'en': 'en_US',
+    'ar': 'ar_SA',
+    'ur': 'ur_PK',
+    'bn': 'bn_BD',
+    'ms': 'ms_MY',
+    'id': 'id_ID',
+    'de': 'de_DE',
+    'hi': 'hi_IN',
+    'fr': 'fr_FR',
+    'tr': 'tr_TR'
+  };
+  return localeMap[locale] || 'en_US';
+}
+
 // 生成metadata
 export async function generateMetadata({
   params
@@ -39,13 +56,17 @@ export async function generateMetadata({
         'bn': `${baseUrl}/bn`,
         'ms': `${baseUrl}/ms`,
         'id': `${baseUrl}/id`,
+        'de': `${baseUrl}/de`,
+        'hi': `${baseUrl}/hi`,
+        'fr': `${baseUrl}/fr`,
+        'tr': `${baseUrl}/tr`,
         'x-default': baseUrl,
       },
     },
     openGraph: {
       title: t('title'),
       description,
-      locale: locale === 'en' ? 'en_US' : 'ar_SA',
+      locale: getOpenGraphLocale(locale),
       alternateLocale: locale === 'en' ? 'ar_SA' : 'en_US',
       type: 'website',
       url: locale === 'en' ? baseUrl : `${baseUrl}/${locale}`,
