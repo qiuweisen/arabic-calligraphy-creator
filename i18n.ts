@@ -115,12 +115,11 @@ export const countryToLocaleMap: Record<string, Locale> = {
   // 德语国家
   'DE': 'de', // 德国
   'AT': 'de', // 奥地利
-  'CH': 'de', // 瑞士（德语区）
+  'CH': 'de', // 瑞士（德语区为主）
   // 法语国家
   'FR': 'fr', // 法国
   'BE': 'fr', // 比利时（法语区）
   'CA': 'fr', // 加拿大（法语区）
-  'CH': 'fr', // 瑞士（法语区）
   // 土耳其语国家
   'TR': 'tr', // 土耳其
   // 其他国家默认英语
