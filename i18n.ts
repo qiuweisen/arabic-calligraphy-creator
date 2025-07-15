@@ -1,7 +1,7 @@
 import { getRequestConfig } from 'next-intl/server';
 
 // 支持的语言配置
-export const locales = ['en', 'ar', 'ur', 'bn', 'ms', 'id'] as const;
+export const locales = ['en', 'ar', 'ur', 'bn', 'ms', 'id', 'de', 'hi', 'fr', 'tr'] as const;
 export type Locale = (typeof locales)[number];
 
 // 默认语言
@@ -50,6 +50,34 @@ export const localeConfig = {
     dir: 'ltr' as const,
     flag: '🇮🇩',
     country: 'ID'
+  },
+  de: {
+    name: 'German',
+    nativeName: 'Deutsch',
+    dir: 'ltr' as const,
+    flag: '🇩🇪',
+    country: 'DE'
+  },
+  hi: {
+    name: 'Hindi',
+    nativeName: 'हिन्दी',
+    dir: 'ltr' as const,
+    flag: '🇮🇳',
+    country: 'IN'
+  },
+  fr: {
+    name: 'French',
+    nativeName: 'Français',
+    dir: 'ltr' as const,
+    flag: '🇫🇷',
+    country: 'FR'
+  },
+  tr: {
+    name: 'Turkish',
+    nativeName: 'Türkçe',
+    dir: 'ltr' as const,
+    flag: '🇹🇷',
+    country: 'TR'
   }
 } as const;
 
@@ -84,6 +112,16 @@ export const countryToLocaleMap: Record<string, Locale> = {
   'SG': 'ms', // 新加坡（马来语是官方语言之一）
   // 印尼语国家
   'ID': 'id', // 印度尼西亚
+  // 德语国家
+  'DE': 'de', // 德国
+  'AT': 'de', // 奥地利
+  'CH': 'de', // 瑞士（德语区为主）
+  // 法语国家
+  'FR': 'fr', // 法国
+  'BE': 'fr', // 比利时（法语区）
+  'CA': 'fr', // 加拿大（法语区）
+  // 土耳其语国家
+  'TR': 'tr', // 土耳其
   // 其他国家默认英语
 };
 

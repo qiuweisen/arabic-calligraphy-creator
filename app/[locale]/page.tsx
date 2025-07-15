@@ -313,66 +313,19 @@ export default function Home() {
     }
   };
 
-  // 额外的结构化数据 - WebApplication Schema
-  const webApplicationSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Arabic Calligraphy Generator",
-    "description": "Free online Arabic calligraphy generator with 13+ fonts, instant download, and customization options",
-    "url": "https://arabic-calligraphy-generator.com",
-    "applicationCategory": "DesignApplication",
-    "operatingSystem": "Any",
-    "browserRequirements": "Modern web browser with JavaScript",
-    "permissions": "none",
-    "memoryRequirements": "Minimal",
-    "storageRequirements": "None",
-    "featureList": [
-      "13+ Arabic fonts",
-      "Real-time preview",
-      "PNG/SVG download",
-      "Color customization",
-      "Background patterns",
-      "Mobile responsive",
-      "No registration required"
-    ],
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    }
-  };
-
-  // FAQ结构化数据
+  // FAQ结构化数据 - 使用多语言翻译
+  const faqT = useTranslations('homepage.detailedFaq');
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is the Arabic calligraphy generator free to use?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, our Arabic calligraphy generator is completely free to use. You can create, customize, and download your calligraphy without any registration or payment required."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What file formats can I download?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can download your Arabic calligraphy in both PNG and SVG formats. PNG is perfect for web use and printing, while SVG is ideal for scalable vector graphics."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How many Arabic fonts are available?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We offer 13+ professional Arabic fonts including Amiri, Scheherazade, Reem Kufi, Aref Ruqaa, Cairo, and many more traditional and modern styles."
-        }
+    "mainEntity": faqT.raw('questions').slice(0, 3).map((faq: any) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
       }
-    ]
+    }))
   };
 
   return (
@@ -381,12 +334,6 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
-      />
-
-      {/* Web应用结构化数据 */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationSchema) }}
       />
 
       {/* FAQ结构化数据 */}
