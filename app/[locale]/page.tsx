@@ -132,14 +132,36 @@ export default function Home() {
   const seoT = useTranslations('seo.structuredData');
 
   const [selectedFont, setSelectedFont] = useState<string | undefined>(undefined)
-  
+
+  // 广告显示状态管理
+  const [showTopAd, setShowTopAd] = useState(false)
+
   // 分离左右两边的状态管理
   const [featuredIsAllExpanded, setFeaturedIsAllExpanded] = useState(false)
   const [featuredExpandedIds, setFeaturedExpandedIds] = useState<Set<string>>(new Set())
-  
+
   const [browseExpandedCategories, setBrowseExpandedCategories] = useState<Set<string>>(new Set())
   const [browseExpandedFonts, setBrowseExpandedFonts] = useState<Set<string>>(new Set())
   const [showAllFeaturedFonts, setShowAllFeaturedFonts] = useState(false)
+
+  // 延迟显示广告的逻辑
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowTopAd(true)
+    }, 3000)
+    return () => clearTimeout(timer)
+  }, [])
+
+  // 广告加载逻辑
+  useEffect(() => {
+    if (showTopAd) {
+      try {
+        ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({})
+      } catch (err) {
+        console.error("AdSense push error:", err)
+      }
+    }
+  }, [showTopAd])
 
   // Handle URL parameter for font selection
   useEffect(() => {
@@ -169,7 +191,7 @@ export default function Home() {
       }
 
       document.addEventListener('click', handleTryFontClick)
-      
+
       return () => {
         document.removeEventListener('click', handleTryFontClick)
       }
@@ -372,6 +394,19 @@ export default function Home() {
               </div>
             </div>
           </header>
+
+          {/* 延迟显示的工具上方广告位 */}
+          {showTopAd && (
+            <div className="ad-container" style={{ margin: '2rem 0', minHeight: '90px' }}>
+              <ins className="adsbygoogle"
+                   style={{ display: 'block' }}
+                   data-ad-client="ca-pub-4575951448621910"
+                   data-ad-slot="1396374895"
+                   data-ad-format="auto"
+                   data-full-width-responsive="true">
+              </ins>
+            </div>
+          )}
 
           {/* Main Tool Section */}
           <div className="mb-12" id="calligraphy-tool-section">
