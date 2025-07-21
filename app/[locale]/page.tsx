@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import dynamic from "next/dynamic"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { useTranslations } from 'next-intl'
 import { LanguagePrompt } from "@/components/language-prompt"
 import { CalligraphyGenerator } from "@/components/calligraphy-generator"
@@ -134,7 +134,8 @@ export default function Home() {
   const [selectedFont, setSelectedFont] = useState<string | undefined>(undefined)
 
   // 广告显示状态管理
-  const [showTopAd, setShowTopAd] = useState(false)
+  const [showTopAd, setShowTopAd] = useState(false);
+  const adContainerRef = useRef<HTMLDivElement>(null);
 
   // 分离左右两边的状态管理
   const [featuredIsAllExpanded, setFeaturedIsAllExpanded] = useState(false)
@@ -144,13 +145,30 @@ export default function Home() {
   const [browseExpandedFonts, setBrowseExpandedFonts] = useState<Set<string>>(new Set())
   const [showAllFeaturedFonts, setShowAllFeaturedFonts] = useState(false)
 
-  // 延迟显示广告的逻辑
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowTopAd(true)
-    }, 3000)
-    return () => clearTimeout(timer)
-  }, [])
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShowTopAd(true);
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin: '0px',
+        threshold: 0.1
+      }
+    );
+
+    if (adContainerRef.current) {
+      observer.observe(adContainerRef.current);
+    }
+
+    return () => {
+      if (adContainerRef.current) {
+        observer.unobserve(adContainerRef.current);
+      }
+    };
+  }, []);
 
   // 广告加载逻辑
   useEffect(() => {
@@ -395,9 +413,9 @@ export default function Home() {
             </div>
           </header>
 
-          {/* 延迟显示的工具上方广告位 */}
-          {showTopAd && (
-            <div className="ad-container" style={{ margin: '2rem 0', minHeight: '90px' }}>
+          {/* Intersection Observer-based Ad Slot */}
+          <div ref={adContainerRef} className="ad-container" style={{ minHeight: showTopAd ? '90px' : '0' }}>
+            {showTopAd && (
               <ins className="adsbygoogle"
                    style={{ display: 'block' }}
                    data-ad-client="ca-pub-4575951448621910"
@@ -405,11 +423,11 @@ export default function Home() {
                    data-ad-format="auto"
                    data-full-width-responsive="true">
               </ins>
-            </div>
-          )}
+            )}
+          </div>
 
-          {/* Main Tool Section */}
-          <div className="mb-12" id="calligraphy-tool-section">
+          {/* Calligraphy Generator Section */}
+          <section id="calligraphy-tool-section" className="my-12">
 
             {/* NoScript fallback for search engines - Enhanced SEO content */}
             <noscript>
@@ -477,7 +495,7 @@ export default function Home() {
               initialFont={selectedFont}
               onFontChange={handleGeneratorFontChange}
             />
-          </div>
+          </section>
 
           {/* Quick Start Guide - Simplified */}
           <section className="mb-8">
