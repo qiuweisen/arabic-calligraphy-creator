@@ -1,668 +1,696 @@
 {
-  "metadata": {
-    "title": "Arabic Calligraphy Generator - Free Tool | الخط العربي",
-    "description": "🎨 FREE Arabic Calligraphy Generator | Create stunning Islamic art online instantly! 13+ fonts, instant download PNG/SVG. No signup required ✨",
-    "description_desktop": "Professional Arabic Calligraphy Generator - Create Islamic Art with 13+ Premium Fonts. Free online tool for designers, students & businesses. Instant PNG/SVG download.",
-    "keywords": "Arabic calligraphy generator, Arabic fonts, Islamic calligraphy, Arabic text generator, free Arabic fonts, online calligraphy maker"
-  },
-  "common": {
-    "loading": "Loading...",
-    "error": "Error",
-    "close": "Close",
-    "continue": "Continue",
-    "cancel": "Cancel",
-    "confirm": "Confirm",
-    "save": "Save",
-    "download": "Download",
-    "share": "Share",
-    "copy": "Copy",
-    "copied": "Copied!",
-    "yes": "Yes",
-    "no": "No"
-  },
-  "navigation": {
-    "generator": "Generator",
-    "arabicFonts": "Arabic Fonts",
-    "learningGuides": "Learning Guides",
-    "howToTutorials": "How-to Tutorials",
-    "freeResources": "Free Resources",
-    "useCases": "Use Cases",
-    "blog": "Blog",
-    "faq": "FAQ",
-    "contact": "Contact",
-    "dropdown": {
-      "completeBeginner": "Complete Beginner Guide",
-      "fontComparison": "Font Comparison Guide",
-      "bestFonts2025": "Best Arabic Fonts 2025",
-      "typographyTrends": "Typography Trends 2025",
-      "createOnline": "Create Calligraphy Online",
-      "fontSelection": "Font Selection Guide",
-      "designTips": "Design Tips",
-      "downloadFonts": "Download & Use Fonts",
-      "freeArabicFonts": "Free Arabic Fonts"
-    }
-  },
-  "languageSwitcher": {
-    "selectLanguage": "Select Language",
-    "currentLanguage": "Current Language"
-  },
-  "languagePrompt": {
-    "title": "Welcome! We offer our site in your language",
-    "subtitle": "Would you like to switch to {language}?",
-    "useLanguage": "Use {language}",
-    "continueEnglish": "Continue in English",
-    "dontShowAgain": "Don't show again"
-  },
-  "footer": {
-    "description": "Create beautiful Arabic calligraphy with our free online Arabic calligraphy generator.",
-    "arabicCalligraphy": "Arabic Calligraphy",
-    "generator": "Arabic Calligraphy Generator",
-    "features": "Generator Features",
-    "blog": "Calligraphy Blog",
-    "faq": "Generator FAQ",
-    "contact": "Contact Us",
-    "fonts": "Arabic Fonts",
-    "fontLibrary": "Font Library",
-    "fontComparison": "Font Comparison",
-    "fontDownloads": "Font Downloads",
-    "learning": "Learning Resources",
-    "beginnerGuide": "Beginner Guide",
-    "tutorials": "Tutorials",
-    "designTips": "Design Tips",
-    "company": "Company",
-    "about": "About Us",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "copyright": "© 2010-{year} Arabic Calligraphy Generator. All rights reserved.",
-    "popular": {
-      "title": "Popular",
-      "amiriFont": "Amiri Font",
-      "cairoFont": "Cairo Font",
-      "weddingCalligraphy": "Wedding Calligraphy",
-      "businessLogos": "Business Logos",
-      "privacyPolicy": "Privacy Policy",
-      "termsOfService": "Terms of Service"
-    }
-  },
-  "homepage": {
-    "title": "Arabic Calligraphy Generator",
-    "subtitle": "الخط العربي",
-    "description": "Create Stunning Arabic Script Art Instantly",
-    "intro": "Transform any Arabic text into beautiful calligraphy with our free online Arabic calligraphy generator. This powerful Arabic text generator features 13+ premium Arabic fonts online. Create stunning designs instantly - no registration required!",
-    "socialProof": {
-      "designsCreated": "100,000+ Designs Created",
-      "premiumFonts": "13+ Premium Fonts",
-      "freeForever": "Free Forever"
-    },
-    "features": {
-      "title": "Professional Arabic Calligraphy Features",
-      "fontLibrary": {
-        "title": "Extensive Arabic Font Library",
-        "description": "Our free Arabic calligraphy maker provides 13+ premium Arabic fonts online, spanning traditional scripts (Kufic, Naskh, Diwani) to modern typography. This comprehensive Arabic text generator includes visual preview for easy font selection.",
-        "items": [
-          "Traditional calligraphy styles",
-          "Modern Arabic fonts",
-          "Decorative and display options"
-        ]
-      },
-      "customization": {
-        "title": "Advanced Customization Options",
-        "description": "This online Arabic calligraphy generator free tool offers professional-grade styling options including gradient text effects, custom backgrounds, shadows, and precise typography controls for perfect Arabic calligraphy maker results.",
-        "items": [
-          "Gradient text effects",
-          "Custom background patterns",
-          "Shadow and glow effects"
-        ]
-      },
-      "export": {
-        "title": "Professional Export Options",
-        "description": "Download your Arabic calligraphy in multiple high-quality formats. Our Arabic text generator supports PNG for web use and SVG for print applications, ensuring your designs look perfect at any size.",
-        "items": [
-          "High-resolution PNG export",
-          "Scalable SVG format",
-          "Print-ready quality"
-        ]
-      }
-    },
-    "quickStart": {
-      "title": "Quick Start:",
-      "steps": "Type Arabic text → Choose font → Download instantly"
-    },
-    "howToUse": {
-      "title": "How to Create Arabic Calligraphy",
-      "step1": {
-        "title": "Enter Your Text",
-        "description": "Type or paste your Arabic text in the input field above"
-      },
-      "step2": {
-        "title": "Choose Your Style",
-        "description": "Select from 13+ beautiful Arabic fonts and customize colors"
-      },
-      "step3": {
-        "title": "Download & Share",
-        "description": "Download your calligraphy as PNG or SVG and share it anywhere"
-      }
-    },
-    "useCases": {
-      "title": "Perfect for Every Occasion",
-      "wedding": {
-        "title": "Wedding Invitations",
-        "description": "Create elegant Arabic calligraphy for wedding cards and invitations"
-      },
-      "business": {
-        "title": "Business Branding",
-        "description": "Design professional logos and branding materials with Arabic typography"
-      },
-      "social": {
-        "title": "Social Media",
-        "description": "Generate beautiful Arabic quotes and posts for Instagram, Facebook, and more"
-      },
-      "religious": {
-        "title": "Religious Art",
-        "description": "Create stunning Islamic calligraphy for Quran verses and religious texts"
-      }
-    },
-    "faq": {
-      "title": "Arabic Calligraphy Generator FAQ",
-      "q1": {
-        "question": "Is this Arabic calligraphy generator completely free?",
-        "answer": "Yes! Our Arabic calligraphy generator is 100% free with no hidden costs, subscriptions, or registration required. All 13+ premium fonts, customization features, and export options are included at no charge."
-      },
-      "q2": {
-        "question": "What file formats can I download?",
-        "answer": "You can download your Arabic calligraphy in two formats: PNG (for photos and social media) and SVG (for printing and scalable graphics). Both formats maintain high quality."
-      },
-      "q3": {
-        "question": "How many Arabic fonts are available?",
-        "answer": "We offer 13+ carefully selected Arabic fonts including traditional styles like Naskh and Thuluth, as well as modern fonts like Kufi and decorative options. Each font is professionally designed for optimal readability."
-      },
-      "q4": {
-        "question": "Can I use the generated calligraphy commercially?",
-        "answer": "Yes, you can use the Arabic calligraphy you create for both personal and commercial purposes. The fonts we use are either open source or properly licensed for commercial use."
-      },
-      "q5": {
-        "question": "Does the generator work on mobile devices?",
-        "answer": "Absolutely! Our Arabic calligraphy generator is fully responsive and works perfectly on smartphones, tablets, and desktop computers. The interface adapts to your screen size for the best experience."
-      }
-    },
-    "cta": {
-      "title": "Best Free Online Arabic Calligraphy Generator App",
-      "description": "Experience the most comprehensive online Arabic calligraphy generator free tool available. Join thousands of users creating stunning Arabic designs with our Arabic text generator. Start now - it's completely free!",
-      "button": "Start Creating Now",
-      "features": {
-        "noRegistration": "No Registration",
-        "free": "100% Free",
-        "instantDownload": "Instant Download"
-      }
-    },
-    "technicalFeatures": {
-      "title": "Advanced Arabic Typography Features",
-      "fontCollection": {
-        "title": "Font Collection & Styles",
-        "traditional": "Traditional Scripts: Amiri (Naskh), Scheherazade, Lateef, Markazi Text",
-        "decorative": "Decorative Styles: Aref Ruqaa (Diwani), Jomhuria, Rakkas, Lemonada",
-        "modern": "Modern Typography: Cairo, Harmattan, Mada, Tajawal, El Messiri",
-        "specialized": "Specialized: Reem Kufi (Geometric), Mirza (Nastaliq), Marhey (Display)",
-        "note": "All fonts support RTL text direction, Arabic diacritics (Harakat), and Kashida elongation for authentic calligraphy."
-      },
-      "export": {
-        "title": "Export & Compatibility",
-        "formats": "Output Formats: PNG (transparent background), SVG (scalable vector)",
-        "quality": "Quality Options: High-resolution export suitable for print and digital use",
-        "browsers": "Browser Support: Chrome, Firefox, Safari, Edge - all modern browsers",
-        "devices": "Device Compatibility: Desktop, tablet, and mobile responsive design",
-        "note": "Free for commercial use. No watermarks, no registration required. Works entirely in your browser for privacy."
-      }
-    },
-    "professionalUse": {
-      "title": "Professional Arabic Calligraphy Applications",
-      "business": {
-        "title": "Business & Branding",
-        "logo": {
-          "title": "Corporate Logos & Identity",
-          "description": "Create distinctive Arabic brand names with traditional or modern calligraphy styles"
-        },
-        "restaurant": {
-          "title": "Restaurant & Hospitality",
-          "description": "Design authentic Arabic signage, menus, and promotional materials"
-        },
-        "marketing": {
-          "title": "Marketing Materials",
-          "description": "Professional Arabic typography for brochures, advertisements, and digital campaigns"
-        }
-      },
-      "personal": {
-        "title": "Personal & Cultural",
-        "wedding": {
-          "title": "Wedding & Event Invitations",
-          "description": "Elegant Arabic calligraphy for special occasions and celebrations"
-        },
-        "islamic": {
-          "title": "Islamic Art & Decoration",
-          "description": "Beautiful Quranic verses, Hadith, and Islamic phrases for home decoration"
-        },
-        "social": {
-          "title": "Social Media Content",
-          "description": "Eye-catching Arabic posts for Instagram, Facebook, and other platforms"
-        }
-      }
-    },
-    "detailedFaq": {
-      "title": "Arabic Calligraphy Generator FAQ",
-      "viewAll": "View All FAQs",
-      "questions": [
-        {
-          "question": "Is this Arabic calligraphy generator completely free?",
-          "answer": "Yes! Our Arabic calligraphy generator is 100% free with no hidden costs, subscriptions, or registration required. All 13+ premium fonts, customization features, and export options are included at no charge."
-        },
-        {
-          "question": "What Arabic fonts and calligraphy styles are available?",
-          "answer": "We offer 13+ carefully selected Arabic fonts covering traditional calligraphy styles (Kufic, Naskh, Diwani, Nastaliq) and modern Arabic typography. Each font supports RTL text direction, Arabic diacritics (Harakat), and authentic Arabic script rendering."
-        },
-        {
-          "question": "What file formats can I download and what quality?",
-          "answer": "You can export your Arabic calligraphy as high-resolution PNG files (with transparent background) or scalable SVG vector files. Both formats are suitable for professional printing, digital media, and commercial applications."
-        },
-        {
-          "question": "Can I use the generated calligraphy for commercial projects?",
-          "answer": "Yes, you can use your created Arabic calligraphy designs for both personal and commercial projects without any restrictions. This includes business logos, marketing materials, wedding invitations, and any other commercial applications."
-        },
-        {
-          "question": "Does this Arabic calligraphy generator work on mobile devices?",
-          "answer": "Absolutely! Our Arabic calligraphy generator is fully responsive and optimized for smartphones, tablets, and desktop computers. The interface adapts to your screen size while maintaining full functionality."
-        },
-        {
-          "question": "Is this the best free online Arabic calligraphy generator available?",
-          "answer": "Our free online Arabic calligraphy generator stands out with 13+ premium Arabic fonts online, instant PNG/SVG downloads, and no registration requirements. Unlike many Arabic text generators that require subscriptions, our Arabic calligraphy maker app provides professional-quality results completely free."
-        },
-        {
-          "question": "Does the tool support Arabic text with diacritics (Harakat)?",
-          "answer": "Yes, our Arabic calligraphy generator supports Arabic text with diacritics (Harakat/اعراب). You can input text with vowel marks, and the generator will render them according to each font's capabilities. This is essential for Quranic verses and formal Arabic text."
-        },
-        {
-          "question": "How does this Arabic calligraphy maker compare to desktop software?",
-          "answer": "Our online Arabic calligraphy generator free tool offers several advantages over desktop software: instant access without downloads, automatic updates, cross-platform compatibility, and cloud-based convenience. While desktop software may offer more advanced features, our Arabic text generator provides the perfect balance of functionality and accessibility for most users' needs."
-        }
-      ]
-    },
-    "generator": {
-      "title": "Arabic Calligraphy Generator Features",
-      "availableFonts": "Available Arabic Fonts:",
-      "toolFeatures": "Tool Features:",
-      "fonts": {
-        "amiri": "Amiri (Traditional Naskh)",
-        "scheherazade": "Scheherazade (Traditional)",
-        "reemKufi": "Reem Kufi (Modern Kufi)",
-        "arefRuqaa": "Aref Ruqaa (Diwani Style)",
-        "cairo": "Cairo (Modern Sans-serif)",
-        "moreFonts": "And 8+ more premium fonts"
-      },
-      "features": {
-        "freeGenerator": "Free online Arabic text generator",
-        "instantDownload": "Instant PNG and SVG download",
-        "colorCustomization": "Gradient and color customization",
-        "backgroundPatterns": "Background patterns and images",
-        "mobileFriendly": "Mobile-friendly interface",
-        "noRegistration": "No registration required"
-      },
-      "jsRequired": "This Arabic calligraphy maker requires JavaScript to function. Please enable JavaScript in your browser to use the interactive tool.",
-      "tabs": {
-        "text": "Text",
-        "style": "Style",
-        "advanced": "Advanced"
-      },
-      "textTab": {
-        "arabicText": "Arabic Text",
-        "hideKeyboard": "Hide Keyboard",
-        "showKeyboard": "Show Keyboard",
-        "placeholder": "Enter Arabic text here...",
-        "templates": "Templates",
-        "font": "Font",
-        "preview": "Preview",
-        "selectFont": "Select font",
-        "categories": "Categories",
-        "fontSize": "Font Size",
-        "resetText": "Reset Text"
-      },
-      "styleTab": {
-        "textColor": "Text Color",
-        "useGradient": "Use Gradient",
-        "gradientFrom": "Gradient From",
-        "gradientTo": "Gradient To",
-        "backgroundColor": "Background Color",
-        "backgroundImage": "Background Image",
-        "uploadImage": "Upload Image",
-        "backgroundPattern": "Background Pattern",
-        "alignment": "Text Alignment",
-        "left": "Left",
-        "center": "Center",
-        "right": "Right"
-      },
-      "advancedTab": {
-        "fontWeight": "Font Weight",
-        "fontStyle": "Font Style",
-        "normal": "Normal",
-        "italic": "Italic",
-        "letterSpacing": "Letter Spacing",
-        "lineHeight": "Line Height",
-        "shadow": "Text Shadow",
-        "shadowX": "Shadow X",
-        "shadowY": "Shadow Y",
-        "shadowBlur": "Shadow Blur",
-        "shadowColor": "Shadow Color",
-        "border": "Border",
-        "borderColor": "Border Color",
-        "borderWidth": "Border Width",
-        "borderRadius": "Border Radius",
-        "padding": "Padding",
-        "kashida": "Kashida Extension",
-        "kashidaLength": "Kashida Length"
-      },
-      "preview": {
-        "title": "Preview",
-        "downloadPNG": "Download PNG",
-        "downloadSVG": "Download SVG",
-        "share": "Share"
-      },
-      "featuredDesigns": {
-        "title": "Featured Designs",
-        "topPicks": "Top Picks",
-        "viewAllTemplates": "View All Templates"
-      },
-      "quickLinks": {
-        "title": "Quick Links",
-        "blog": "Blog",
-        "faq": "FAQ"
-      },
-      "tooltips": {
-        "resetDefaults": "Reset to defaults",
-        "fullscreen": "Fullscreen preview",
-        "exitFullscreen": "Exit fullscreen"
-      },
-      "toasts": {
-        "downloadStarted": "Download Started",
-        "preparingPNG": "Preparing your Arabic calligraphy as PNG...",
-        "preparingSVG": "Preparing your Arabic calligraphy as SVG...",
-        "downloadFailed": "Download Failed",
-        "downloadError": "There was an error downloading your calligraphy. Please try again.",
-        "preparingImage": "Preparing Image",
-        "generatingImage": "Generating image for sharing...",
-        "designApplied": "Design Applied",
-        "designAppliedDesc": "The featured design has been applied to your canvas.",
-        "shareTitle": "Arabic Calligraphy Design",
-        "shareText": "Check out this beautiful Arabic calligraphy I created!"
-      }
-    },
-    "useCasesSection": {
-      "title": "What You Can Create",
-      "socialMedia": {
-        "title": "Social Media",
-        "subtitle": "Perfect for Social Media",
-        "description": "Create eye-catching posts, stories, and profile graphics with beautiful Arabic typography.",
-        "instagram": "Instagram posts and stories",
-        "facebook": "Facebook cover photos",
-        "twitter": "Twitter graphics",
-        "profiles": "Profile pictures with Arabic monograms"
-      },
-      "print": {
-        "title": "Print",
-        "subtitle": "Print Materials",
-        "description": "Design professional print materials with high-quality Arabic calligraphy.",
-        "invitations": "Wedding and event invitations",
-        "business": "Business cards and letterheads",
-        "posters": "Posters and banners",
-        "certificates": "Certificates and awards"
-      },
-      "web": {
-        "title": "Web",
-        "subtitle": "Web Graphics",
-        "description": "Create stunning web graphics and digital content with Arabic typography.",
-        "logos": "Website logos and headers",
-        "banners": "Web banners and ads",
-        "icons": "Custom Arabic icons",
-        "graphics": "Digital graphics and illustrations"
-      },
-      "art": {
-        "title": "Art",
-        "subtitle": "Artistic Creations",
-        "description": "Express your creativity with artistic Arabic calligraphy designs.",
-        "wallArt": "Wall art and decorations",
-        "islamic": "Islamic art and verses",
-        "modern": "Modern calligraphy art",
-        "traditional": "Traditional Arabic scripts"
-      }
-    }
-  },
-  "generator": {
-    "title": "Arabic Calligraphy Generator Features",
-    "availableFonts": "Available Arabic Fonts:",
-    "toolFeatures": "Tool Features:",
-    "jsRequired": "JavaScript is required to use the Arabic calligraphy generator. Please enable JavaScript in your browser.",
-    "fonts": {
-      "amiri": "Amiri (Traditional Naskh)",
-      "scheherazade": "Scheherazade (Traditional)",
-      "reemKufi": "Reem Kufi (Geometric)",
-      "arefRuqaa": "Aref Ruqaa (Diwani Style)",
-      "cairo": "Cairo (Modern Sans-serif)",
-      "moreFonts": "And 8+ more premium fonts"
-    },
-    "features": {
-      "freeGenerator": "Free online Arabic text generator",
-      "instantDownload": "Instant PNG and SVG download",
-      "colorCustomization": "Gradient and color customization",
-      "backgroundPatterns": "Background patterns and images",
-      "mobileFriendly": "Mobile-friendly interface",
-      "noRegistration": "No registration required"
-    },
-    "tabs": {
-      "text": "Text",
-      "style": "Style",
-      "advanced": "Advanced"
-    },
-    "textTab": {
-      "arabicText": "Arabic Text",
-      "hideKeyboard": "Hide Keyboard",
-      "showKeyboard": "Show Keyboard",
-      "placeholder": "Enter Arabic text here...",
-      "templates": "Templates",
-      "font": "Font",
-      "preview": "Preview",
-      "selectFont": "Select font",
-      "categories": "Categories",
-      "fontSize": "Font Size",
-      "resetText": "Reset Text"
-    },
-    "styleTab": {
-      "textColor": "Text Color",
-      "useGradient": "Use Gradient",
-      "gradientFrom": "Gradient From",
-      "gradientTo": "Gradient To",
-      "backgroundColor": "Background Color",
-      "backgroundImage": "Background Image",
-      "uploadImage": "Upload Image",
-      "backgroundPattern": "Background Pattern",
-      "alignment": "Text Alignment",
-      "left": "Left",
-      "center": "Center",
-      "right": "Right"
-    },
-    "advancedTab": {
-      "fontWeight": "Font Weight",
-      "fontStyle": "Font Style",
-      "normal": "Normal",
-      "italic": "Italic",
-      "letterSpacing": "Letter Spacing",
-      "lineHeight": "Line Height",
-      "shadow": "Text Shadow",
-      "shadowX": "Shadow X",
-      "shadowY": "Shadow Y",
-      "shadowBlur": "Shadow Blur",
-      "shadowColor": "Shadow Color",
-      "border": "Border",
-      "borderColor": "Border Color",
-      "borderWidth": "Border Width",
-      "borderRadius": "Border Radius",
-      "padding": "Padding",
-      "kashida": "Kashida Extension",
-      "kashidaLength": "Kashida Length"
-    },
-    "preview": {
-      "title": "Preview",
-      "downloadPNG": "Download PNG",
-      "downloadSVG": "Download SVG",
-      "share": "Share"
-    },
-    "featuredDesigns": {
-      "title": "Featured Designs",
-      "topPicks": "Top Picks",
-      "viewAllTemplates": "View All Templates"
-    },
-    "quickLinks": {
-      "title": "Quick Links",
-      "blog": "Blog",
-      "faq": "FAQ"
-    },
-    "tooltips": {
-      "resetDefaults": "Reset to defaults",
-      "fullscreen": "Fullscreen preview",
-      "exitFullscreen": "Exit fullscreen"
-    },
-    "toasts": {
-      "downloadStarted": "Download Started",
-      "preparingPNG": "Preparing your Arabic calligraphy as PNG...",
-      "preparingSVG": "Preparing your Arabic calligraphy as SVG...",
-      "downloadFailed": "Download Failed",
-      "downloadError": "There was an error downloading your calligraphy. Please try again.",
-      "preparingImage": "Preparing Image",
-      "generatingImage": "Generating image for sharing...",
-      "designApplied": "Design Applied",
-      "designAppliedDesc": "The featured design has been applied to your canvas.",
-      "shareTitle": "Arabic Calligraphy Design",
-      "shareText": "Check out this beautiful Arabic calligraphy I created!",
-      "templateApplied": "Template Applied",
-      "templateAppliedDesc": "The selected template has been applied to your canvas.",
-      "downloadComplete": "Download Complete",
-      "downloadCompletePNG": "Your Arabic calligraphy has been downloaded as PNG.",
-      "downloadCompleteSVG": "Your Arabic calligraphy has been downloaded as SVG.",
-      "imageGenerationFailed": "Image Generation Failed",
-      "imageGenerationFailedDesc": "Could not generate the image. Please try again.",
-      "copyingImage": "Copying Image",
-      "copyingImageDesc": "Preparing image to copy to clipboard...",
-      "imageCopied": "Image Copied",
-      "imageCopiedDesc": "The calligraphy image has been copied to your clipboard.",
-      "copyFailed": "Copy Failed",
-      "copyFailedDesc": "Could not copy image. Your browser might not support this feature or permission was denied.",
-      "copyError": "Copy Error",
-      "copyErrorDesc": "Failed to generate image blob for copying.",
-      "copyErrorUnexpected": "An unexpected error occurred while trying to copy the image.",
-      "copiedToClipboard": "Copied to Clipboard",
-      "copiedToClipboardDesc": "Your text has been copied to clipboard.",
-      "copyFailedText": "There was an error copying to clipboard.",
-      "error": "Error",
-      "previewNotFound": "Preview element not found.",
-      "previewNotFoundShare": "Preview element not found. Cannot prepare image for sharing.",
-      "sharingNotAvailable": "Sharing Not Available",
-      "sharingNotAvailableDesc": "Your browser doesn't support the Web Share API. Try downloading the image to share it.",
-      "imageShareNotSupported": "Image Share Not Fully Supported",
-      "imageShareNotSupportedDesc": "Your browser or selected share target might not support sharing images directly. Sharing text content instead.",
-      "sharedSuccessfully": "Shared Successfully",
-      "sharedSuccessfullyDesc": "Your calligraphy has been shared.",
-      "shareFailed": "Share Failed",
-      "shareFailedDesc": "There was an error sharing your calligraphy. Please try again or download the image.",
-      "resetComplete": "Reset Complete",
-      "resetCompleteDesc": "All settings have been reset to defaults."
-    },
-    "fontCategories": {
-      "Traditional": "Traditional",
-      "Diwani": "Diwani",
-      "Kufi": "Kufi",
-      "Nastaliq": "Nastaliq",
-      "Modern": "Modern",
-      "Display": "Display"
-    },
-    "backgroundPatterns": {
-      "None": "None",
-      "Geometric": "Geometric",
-      "Arabesque": "Arabesque",
-      "Islamic Patterns": "Islamic Patterns",
-      "Dots": "Dots"
-    },
-    "commonPhrases": {
-      "bismillah": "In the name of God, the Most Gracious, the Most Merciful",
-      "alhamdulillah": "Praise be to God",
-      "mashallah": "God has willed it",
-      "subhanallah": "Glory be to God",
-      "allahuakbar": "God is Greater",
-      "lailahaillallah": "There is no deity but God",
-      "astaghfirullah": "I seek forgiveness from God",
-      "allahummasalli": "O God, bless Muhammad"
-    },
-    "ui": {
-      "calligraphyControls": "Calligraphy Controls",
-      "text": "Text",
-      "style": "Style",
-      "advanced": "Advanced",
-      "textColor": "Text Color",
-      "gradient": "Gradient",
-      "from": "From",
-      "to": "To",
-      "background": "Background",
-      "color": "Color",
-      "image": "Image",
-      "pattern": "Pattern",
-      "upload": "Upload",
-      "backgroundPattern": "Background Pattern",
-      "selectPattern": "Select pattern",
-      "textShadow": "Text Shadow",
-      "horizontal": "Horizontal",
-      "vertical": "Vertical",
-      "blur": "Blur",
-      "opacity": "Opacity",
-      "fontWeight": "Font Weight",
-      "fontStyle": "Font Style",
-      "selectWeight": "Select weight",
-      "selectStyle": "Select style",
-      "light": "Light",
-      "regular": "Regular",
-      "medium": "Medium",
-      "bold": "Bold",
-      "normal": "Normal",
-      "italic": "Italic",
-      "alignment": "Alignment",
-      "letterSpacing": "Letter Spacing",
-      "lineHeight": "Line Height",
-      "kashida": "Kashida (Elongation)",
-      "kashidaDesc": "Kashida adds elongation to certain Arabic letters, enhancing the aesthetic quality of text.",
-      "length": "Length",
-      "border": "Border",
-      "borderColor": "Border Color",
-      "borderWidth": "Border Width",
-      "borderRadius": "Border Radius",
-      "padding": "Padding",
-      "featuredTemplates": "Featured Templates",
-      "favorites": "Favorites",
-      "aboutArabicCalligraphy": "About Arabic Calligraphy",
-      "aboutArabicCalligraphyDesc": "Arabic calligraphy (خط عربي) is the artistic practice of handwriting and calligraphy based on the Arabic alphabet. It is known in Arabic as khatt, derived from the word 'line', 'design', or 'construction'.",
-      "readMoreHistory": "Read more about Arabic calligraphy history",
-      "exploreFonts": "Explore our font collection",
-      "viewAllTemplates": "View All Templates"
-    }
-  },
-  "seo": {
-    "structuredData": {
-      "featureList": [
-        "13+ Arabic fonts including Kufi, Naskh, Diwani styles",
-        "Real-time Arabic text generation",
-        "Gradient and color customization",
-        "Background patterns and images",
-        "PNG and SVG export",
-        "Mobile responsive interface",
-        "No registration required"
-      ],
-      "applicationCategory": "DesignApplication",
-      "operatingSystem": "Web Browser",
-      "browserRequirements": "Requires JavaScript enabled",
-      "authorName": "Arabic Calligraphy Generator"
-    }
-  }
+	"metadata": {
+		"title": "Arabic Calligraphy Generator - Free Tool | الخط العربي",
+		"description": "🎨 FREE Arabic Calligraphy Generator | Create stunning Islamic art online instantly! 13+ fonts, instant download PNG/SVG. No signup required ✨",
+		"description_desktop": "Professional Arabic Calligraphy Generator - Create Islamic Art with 13+ Premium Fonts. Free online tool for designers, students & businesses. Instant PNG/SVG download.",
+		"keywords": "Arabic calligraphy generator, Arabic fonts, Islamic calligraphy, Arabic text generator, free Arabic fonts, online calligraphy maker"
+	},
+	"common": {
+		"loading": "Loading...",
+		"error": "Error",
+		"close": "Close",
+		"continue": "Continue",
+		"cancel": "Cancel",
+		"confirm": "Confirm",
+		"save": "Save",
+		"download": "Download",
+		"share": "Share",
+		"copy": "Copy",
+		"copied": "Copied!",
+		"yes": "Yes",
+		"no": "No"
+	},
+	"navigation": {
+		"generator": "Generator",
+		"arabicFonts": "Arabic Fonts",
+		"learningGuides": "Learning Guides",
+		"howToTutorials": "How-to Tutorials",
+		"freeResources": "Free Resources",
+		"useCases": "Use Cases",
+		"blog": "Blog",
+		"faq": "FAQ",
+		"contact": "Contact",
+		"dropdown": {
+			"completeBeginner": "Complete Beginner Guide",
+			"fontComparison": "Font Comparison Guide",
+			"bestFonts2025": "Best Arabic Fonts 2025",
+			"typographyTrends": "Typography Trends 2025",
+			"createOnline": "Create Calligraphy Online",
+			"fontSelection": "Font Selection Guide",
+			"designTips": "Design Tips",
+			"downloadFonts": "Download & Use Fonts",
+			"freeArabicFonts": "Free Arabic Fonts"
+		}
+	},
+	"languageSwitcher": {
+		"selectLanguage": "Select Language",
+		"currentLanguage": "Current Language"
+	},
+	"languagePrompt": {
+		"title": "Welcome! We offer our site in your language",
+		"subtitle": "Would you like to switch to {language}?",
+		"useLanguage": "Use {language}",
+		"continueEnglish": "Continue in English",
+		"dontShowAgain": "Don't show again"
+	},
+	"footer": {
+		"description": "Create beautiful Arabic calligraphy with our free online Arabic calligraphy generator.",
+		"arabicCalligraphy": "Arabic Calligraphy",
+		"generator": "Arabic Calligraphy Generator",
+		"features": "Generator Features",
+		"blog": "Calligraphy Blog",
+		"faq": "Generator FAQ",
+		"contact": "Contact Us",
+		"fonts": "Arabic Fonts",
+		"fontLibrary": "Font Library",
+		"fontComparison": "Font Comparison",
+		"fontDownloads": "Font Downloads",
+		"learning": "Learning Resources",
+		"beginnerGuide": "Beginner Guide",
+		"tutorials": "Tutorials",
+		"designTips": "Design Tips",
+		"company": "Company",
+		"about": "About Us",
+		"privacy": "Privacy Policy",
+		"terms": "Terms of Service",
+		"copyright": "© 2010-{year} Arabic Calligraphy Generator. All rights reserved.",
+		"popular": {
+			"title": "Popular",
+			"amiriFont": "Amiri Font",
+			"cairoFont": "Cairo Font",
+			"weddingCalligraphy": "Wedding Calligraphy",
+			"businessLogos": "Business Logos",
+			"privacyPolicy": "Privacy Policy",
+			"termsOfService": "Terms of Service"
+		}
+	},
+	"homepage": {
+		"title": "Arabic Calligraphy Generator",
+		"subtitle": "الخط العربي",
+		"description": "Create Stunning Arabic Script Art Instantly",
+		"intro": "Transform any Arabic text into beautiful calligraphy with our free online Arabic calligraphy generator. This powerful Arabic text generator features 13+ premium Arabic fonts online. Create stunning designs instantly - no registration required!",
+		"socialProof": {
+			"designsCreated": "100,000+ Designs Created",
+			"premiumFonts": "13+ Premium Fonts",
+			"freeForever": "Free Forever"
+		},
+		"features": {
+			"title": "Professional Arabic Calligraphy Features",
+			"fontLibrary": {
+				"title": "Extensive Arabic Font Library",
+				"description": "Our free Arabic calligraphy maker provides 13+ premium Arabic fonts online, spanning traditional scripts (Kufic, Naskh, Diwani) to modern typography. This comprehensive Arabic text generator includes visual preview for easy font selection.",
+				"items": [
+					"Traditional calligraphy styles",
+					"Modern Arabic fonts",
+					"Decorative and display options"
+				]
+			},
+			"customization": {
+				"title": "Advanced Customization Options",
+				"description": "This online Arabic calligraphy generator free tool offers professional-grade styling options including gradient text effects, custom backgrounds, shadows, and precise typography controls for perfect Arabic calligraphy maker results.",
+				"items": [
+					"Gradient text effects",
+					"Custom background patterns",
+					"Shadow and glow effects"
+				]
+			},
+			"export": {
+				"title": "Professional Export Options",
+				"description": "Download your Arabic calligraphy in multiple high-quality formats. Our Arabic text generator supports PNG for web use and SVG for print applications, ensuring your designs look perfect at any size.",
+				"items": [
+					"High-resolution PNG export",
+					"Scalable SVG format",
+					"Print-ready quality"
+				]
+			}
+		},
+		"quickStart": {
+			"title": "Quick Start:",
+			"steps": "Type Arabic text → Choose font → Download instantly"
+		},
+		"howToUse": {
+			"title": "How to Create Arabic Calligraphy",
+			"step1": {
+				"title": "Enter Your Text",
+				"description": "Type or paste your Arabic text in the input field above"
+			},
+			"step2": {
+				"title": "Choose Your Style",
+				"description": "Select from 13+ beautiful Arabic fonts and customize colors"
+			},
+			"step3": {
+				"title": "Download & Share",
+				"description": "Download your calligraphy as PNG or SVG and share it anywhere"
+			}
+		},
+		"useCases": {
+			"title": "Perfect for Every Occasion",
+			"wedding": {
+				"title": "Wedding Invitations",
+				"description": "Create elegant Arabic calligraphy for wedding cards and invitations"
+			},
+			"business": {
+				"title": "Business Branding",
+				"description": "Design professional logos and branding materials with Arabic typography"
+			},
+			"social": {
+				"title": "Social Media",
+				"description": "Generate beautiful Arabic quotes and posts for Instagram, Facebook, and more"
+			},
+			"religious": {
+				"title": "Religious Art",
+				"description": "Create stunning Islamic calligraphy for Quran verses and religious texts"
+			}
+		},
+		"faq": {
+			"title": "Arabic Calligraphy Generator FAQ",
+			"q1": {
+				"question": "Is this Arabic calligraphy generator completely free?",
+				"answer": "Yes! Our Arabic calligraphy generator is 100% free with no hidden costs, subscriptions, or registration required. All 13+ premium fonts, customization features, and export options are included at no charge."
+			},
+			"q2": {
+				"question": "What file formats can I download?",
+				"answer": "You can download your Arabic calligraphy in two formats: PNG (for photos and social media) and SVG (for printing and scalable graphics). Both formats maintain high quality."
+			},
+			"q3": {
+				"question": "How many Arabic fonts are available?",
+				"answer": "We offer 13+ carefully selected Arabic fonts including traditional styles like Naskh and Thuluth, as well as modern fonts like Kufi and decorative options. Each font is professionally designed for optimal readability."
+			},
+			"q4": {
+				"question": "Can I use the generated calligraphy commercially?",
+				"answer": "Yes, you can use the Arabic calligraphy you create for both personal and commercial purposes. The fonts we use are either open source or properly licensed for commercial use."
+			},
+			"q5": {
+				"question": "Does the generator work on mobile devices?",
+				"answer": "Absolutely! Our Arabic calligraphy generator is fully responsive and works perfectly on smartphones, tablets, and desktop computers. The interface adapts to your screen size for the best experience."
+			}
+		},
+		"cta": {
+			"title": "Best Free Online Arabic Calligraphy Generator App",
+			"description": "Experience the most comprehensive online Arabic calligraphy generator free tool available. Join thousands of users creating stunning Arabic designs with our Arabic text generator. Start now - it's completely free!",
+			"button": "Start Creating Now",
+			"features": {
+				"noRegistration": "No Registration",
+				"free": "100% Free",
+				"instantDownload": "Instant Download"
+			}
+		},
+		"technicalFeatures": {
+			"title": "Advanced Arabic Typography Features",
+			"fontCollection": {
+				"title": "Font Collection & Styles",
+				"traditional": "Traditional Scripts: Amiri (Naskh), Scheherazade, Lateef, Markazi Text",
+				"decorative": "Decorative Styles: Aref Ruqaa (Diwani), Jomhuria, Rakkas, Lemonada",
+				"modern": "Modern Typography: Cairo, Harmattan, Mada, Tajawal, El Messiri",
+				"specialized": "Specialized: Reem Kufi (Geometric), Mirza (Nastaliq), Marhey (Display)",
+				"note": "All fonts support RTL text direction, Arabic diacritics (Harakat), and Kashida elongation for authentic calligraphy."
+			},
+			"export": {
+				"title": "Export & Compatibility",
+				"formats": "Output Formats: PNG (transparent background), SVG (scalable vector)",
+				"quality": "Quality Options: High-resolution export suitable for print and digital use",
+				"browsers": "Browser Support: Chrome, Firefox, Safari, Edge - all modern browsers",
+				"devices": "Device Compatibility: Desktop, tablet, and mobile responsive design",
+				"note": "Free for commercial use. No watermarks, no registration required. Works entirely in your browser for privacy."
+			}
+		},
+		"professionalUse": {
+			"title": "Professional Arabic Calligraphy Applications",
+			"business": {
+				"title": "Business & Branding",
+				"logo": {
+					"title": "Corporate Logos & Identity",
+					"description": "Create distinctive Arabic brand names with traditional or modern calligraphy styles"
+				},
+				"restaurant": {
+					"title": "Restaurant & Hospitality",
+					"description": "Design authentic Arabic signage, menus, and promotional materials"
+				},
+				"marketing": {
+					"title": "Marketing Materials",
+					"description": "Professional Arabic typography for brochures, advertisements, and digital campaigns"
+				}
+			},
+			"personal": {
+				"title": "Personal & Cultural",
+				"wedding": {
+					"title": "Wedding & Event Invitations",
+					"description": "Elegant Arabic calligraphy for special occasions and celebrations"
+				},
+				"islamic": {
+					"title": "Islamic Art & Decoration",
+					"description": "Beautiful Quranic verses, Hadith, and Islamic phrases for home decoration"
+				},
+				"social": {
+					"title": "Social Media Content",
+					"description": "Eye-catching Arabic posts for Instagram, Facebook, and other platforms"
+				}
+			}
+		},
+		"detailedFaq": {
+			"title": "Arabic Calligraphy Generator FAQ",
+			"viewAll": "View All FAQs",
+			"questions": [{
+					"question": "Is this Arabic calligraphy generator completely free?",
+					"answer": "Yes! Our Arabic calligraphy generator is 100% free with no hidden costs, subscriptions, or registration required. All 13+ premium fonts, customization features, and export options are included at no charge."
+				},
+				{
+					"question": "What Arabic fonts and calligraphy styles are available?",
+					"answer": "We offer 13+ carefully selected Arabic fonts covering traditional calligraphy styles (Kufic, Naskh, Diwani, Nastaliq) and modern Arabic typography. Each font supports RTL text direction, Arabic diacritics (Harakat), and authentic Arabic script rendering."
+				},
+				{
+					"question": "What file formats can I download and what quality?",
+					"answer": "You can export your Arabic calligraphy as high-resolution PNG files (with transparent background) or scalable SVG vector files. Both formats are suitable for professional printing, digital media, and commercial applications."
+				},
+				{
+					"question": "Can I use the generated calligraphy for commercial projects?",
+					"answer": "Yes, you can use your created Arabic calligraphy designs for both personal and commercial projects without any restrictions. This includes business logos, marketing materials, wedding invitations, and any other commercial applications."
+				},
+				{
+					"question": "Does this Arabic calligraphy generator work on mobile devices?",
+					"answer": "Absolutely! Our Arabic calligraphy generator is fully responsive and optimized for smartphones, tablets, and desktop computers. The interface adapts to your screen size while maintaining full functionality."
+				},
+				{
+					"question": "Is this the best free online Arabic calligraphy generator available?",
+					"answer": "Our free online Arabic calligraphy generator stands out with 13+ premium Arabic fonts online, instant PNG/SVG downloads, and no registration requirements. Unlike many Arabic text generators that require subscriptions, our Arabic calligraphy maker app provides professional-quality results completely free."
+				},
+				{
+					"question": "Does the tool support Arabic text with diacritics (Harakat)?",
+					"answer": "Yes, our Arabic calligraphy generator supports Arabic text with diacritics (Harakat/اعراب). You can input text with vowel marks, and the generator will render them according to each font's capabilities. This is essential for Quranic verses and formal Arabic text."
+				},
+				{
+					"question": "How does this Arabic calligraphy maker compare to desktop software?",
+					"answer": "Our online Arabic calligraphy generator free tool offers several advantages over desktop software: instant access without downloads, automatic updates, cross-platform compatibility, and cloud-based convenience. While desktop software may offer more advanced features, our Arabic text generator provides the perfect balance of functionality and accessibility for most users' needs."
+				}
+			]
+		},
+		"generator": {
+			"title": "Arabic Calligraphy Generator Features",
+			"availableFonts": "Available Arabic Fonts:",
+			"toolFeatures": "Tool Features:",
+			"fonts": {
+				"amiri": "Amiri (Traditional Naskh)",
+				"scheherazade": "Scheherazade (Traditional)",
+				"reemKufi": "Reem Kufi (Modern Kufi)",
+				"arefRuqaa": "Aref Ruqaa (Diwani Style)",
+				"cairo": "Cairo (Modern Sans-serif)",
+				"moreFonts": "And 8+ more premium fonts"
+			},
+			"features": {
+				"freeGenerator": "Free online Arabic text generator",
+				"instantDownload": "Instant PNG and SVG download",
+				"colorCustomization": "Gradient and color customization",
+				"backgroundPatterns": "Background patterns and images",
+				"mobileFriendly": "Mobile-friendly interface",
+				"noRegistration": "No registration required"
+			},
+			"jsRequired": "This Arabic calligraphy maker requires JavaScript to function. Please enable JavaScript in your browser to use the interactive tool.",
+			"tabs": {
+				"text": "Text",
+				"style": "Style",
+				"advanced": "Advanced"
+			},
+			"textTab": {
+				"arabicText": "Arabic Text",
+				"hideKeyboard": "Hide Keyboard",
+				"showKeyboard": "Show Keyboard",
+				"placeholder": "Enter Arabic text here...",
+				"templates": "Templates",
+				"font": "Font",
+				"preview": "Preview",
+				"selectFont": "Select font",
+				"categories": "Categories",
+				"fontSize": "Font Size",
+				"resetText": "Reset Text"
+			},
+			"styleTab": {
+				"textColor": "Text Color",
+				"useGradient": "Use Gradient",
+				"gradientFrom": "Gradient From",
+				"gradientTo": "Gradient To",
+				"backgroundColor": "Background Color",
+				"backgroundImage": "Background Image",
+				"uploadImage": "Upload Image",
+				"backgroundPattern": "Background Pattern",
+				"alignment": "Text Alignment",
+				"left": "Left",
+				"center": "Center",
+				"right": "Right"
+			},
+			"advancedTab": {
+				"fontWeight": "Font Weight",
+				"fontStyle": "Font Style",
+				"normal": "Normal",
+				"italic": "Italic",
+				"letterSpacing": "Letter Spacing",
+				"lineHeight": "Line Height",
+				"shadow": "Text Shadow",
+				"shadowX": "Shadow X",
+				"shadowY": "Shadow Y",
+				"shadowBlur": "Shadow Blur",
+				"shadowColor": "Shadow Color",
+				"border": "Border",
+				"borderColor": "Border Color",
+				"borderWidth": "Border Width",
+				"borderRadius": "Border Radius",
+				"padding": "Padding",
+				"kashida": "Kashida Extension",
+				"kashidaLength": "Kashida Length"
+			},
+			"preview": {
+				"title": "Preview",
+				"downloadPNG": "Download PNG",
+				"downloadSVG": "Download SVG",
+				"share": "Share"
+			},
+			"featuredDesigns": {
+				"title": "Featured Designs",
+				"topPicks": "Top Picks",
+				"viewAllTemplates": "View All Templates"
+			},
+			"quickLinks": {
+				"title": "Quick Links",
+				"blog": "Blog",
+				"faq": "FAQ"
+			},
+			"tooltips": {
+				"resetDefaults": "Reset to defaults",
+				"fullscreen": "Fullscreen preview",
+				"exitFullscreen": "Exit fullscreen"
+			},
+			"toasts": {
+				"downloadStarted": "Download Started",
+				"preparingPNG": "Preparing your Arabic calligraphy as PNG...",
+				"preparingSVG": "Preparing your Arabic calligraphy as SVG...",
+				"downloadFailed": "Download Failed",
+				"downloadError": "There was an error downloading your calligraphy. Please try again.",
+				"preparingImage": "Preparing Image",
+				"generatingImage": "Generating image for sharing...",
+				"designApplied": "Design Applied",
+				"designAppliedDesc": "The featured design has been applied to your canvas.",
+				"shareTitle": "Arabic Calligraphy Design",
+				"shareText": "Check out this beautiful Arabic calligraphy I created!"
+			},
+			"noScript": {
+				"title": "Arabic Calligraphy Generator",
+				"description": "Create beautiful Arabic calligraphy instantly with our free online generator. Choose from 13+ professional fonts, customize colors and backgrounds, and download high-quality PNG/SVG files.",
+				"useCases": {
+					"title": "Popular Use Cases",
+					"weddingInvitations": "Wedding invitations",
+					"islamicArt": "Islamic art projects",
+					"socialMedia": "Social media posts",
+					"businessLogos": "Business logos",
+					"educational": "Educational materials",
+					"religious": "Religious decorations"
+				},
+				"keywords": "Keywords: Arabic calligraphy generator, Islamic art, Arabic fonts, calligraphy maker, Arabic text design, Islamic calligraphy, Arabic typography, free calligraphy tool"
+			},
+			"fontTooltip": {
+				"textExamples": "Text Examples",
+				"tryFont": "Try {fontName} in Generator"
+			},
+			"seoContent": {
+				"aboutTitle": "About Arabic Calligraphy Generator",
+				"professionalTypography": {
+					"title": "Professional Arabic Typography",
+					"description1": "Our Arabic calligraphy generator offers professional-grade typography tools for creating stunning Islamic art, wedding invitations, business logos, and educational materials. With over 13 carefully selected Arabic fonts, you can create authentic calligraphy that respects traditional Arabic script aesthetics.",
+					"description2": "Each font in our collection represents different calligraphic styles: from classical Naskh and Thuluth to modern Kufi and contemporary sans-serif designs. Perfect for both traditional Islamic art projects and modern graphic design needs."
+				},
+				"featuresTitle": "Free Online Tool Features",
+				"keywordsTitle": "Popular Keywords",
+				"keywordsList": "Arabic calligraphy generator, Islamic art maker, Arabic font generator, calligraphy design tool, Arabic typography, Islamic calligraphy creator, Arabic text design, free calligraphy maker, Arabic script generator, Islamic art generator, Arabic logo maker, wedding invitation Arabic text"
+			}
+		},
+		"useCasesSection": {
+			"title": "What You Can Create",
+			"socialMedia": {
+				"title": "Social Media",
+				"subtitle": "Perfect for Social Media",
+				"description": "Create eye-catching posts, stories, and profile graphics with beautiful Arabic typography.",
+				"instagram": "Instagram posts and stories",
+				"facebook": "Facebook cover photos",
+				"twitter": "Twitter graphics",
+				"profiles": "Profile pictures with Arabic monograms"
+			},
+			"print": {
+				"title": "Print",
+				"subtitle": "Print Materials",
+				"description": "Design professional print materials with high-quality Arabic calligraphy.",
+				"invitations": "Wedding and event invitations",
+				"business": "Business cards and letterheads",
+				"posters": "Posters and banners",
+				"certificates": "Certificates and awards"
+			},
+			"web": {
+				"title": "Web",
+				"subtitle": "Web Graphics",
+				"description": "Create stunning web graphics and digital content with Arabic typography.",
+				"logos": "Website logos and headers",
+				"banners": "Web banners and ads",
+				"icons": "Custom Arabic icons",
+				"graphics": "Digital graphics and illustrations"
+			},
+			"art": {
+				"title": "Art",
+				"subtitle": "Artistic Creations",
+				"description": "Express your creativity with artistic Arabic calligraphy designs.",
+				"wallArt": "Wall art and decorations",
+				"islamic": "Islamic art and verses",
+				"modern": "Modern calligraphy art",
+				"traditional": "Traditional Arabic scripts"
+			}
+		}
+	},
+	"generator": {
+		"title": "Arabic Calligraphy Generator Features",
+		"availableFonts": "Available Arabic Fonts:",
+		"toolFeatures": "Tool Features:",
+		"jsRequired": "JavaScript is required to use the Arabic calligraphy generator. Please enable JavaScript in your browser.",
+		"fonts": {
+			"amiri": "Amiri (Traditional Naskh)",
+			"scheherazade": "Scheherazade (Traditional)",
+			"reemKufi": "Reem Kufi (Geometric)",
+			"arefRuqaa": "Aref Ruqaa (Diwani Style)",
+			"cairo": "Cairo (Modern Sans-serif)",
+			"moreFonts": "And 8+ more premium fonts"
+		},
+		"features": {
+			"freeGenerator": "Free online Arabic text generator",
+			"instantDownload": "Instant PNG and SVG download",
+			"colorCustomization": "Gradient and color customization",
+			"backgroundPatterns": "Background patterns and images",
+			"mobileFriendly": "Mobile-friendly interface",
+			"noRegistration": "No registration required"
+		},
+		"tabs": {
+			"text": "Text",
+			"style": "Style",
+			"advanced": "Advanced"
+		},
+		"textTab": {
+			"arabicText": "Arabic Text",
+			"hideKeyboard": "Hide Keyboard",
+			"showKeyboard": "Show Keyboard",
+			"placeholder": "Enter Arabic text here...",
+			"templates": "Templates",
+			"font": "Font",
+			"preview": "Preview",
+			"selectFont": "Select font",
+			"categories": "Categories",
+			"fontSize": "Font Size",
+			"resetText": "Reset Text"
+		},
+		"styleTab": {
+			"textColor": "Text Color",
+			"useGradient": "Use Gradient",
+			"gradientFrom": "Gradient From",
+			"gradientTo": "Gradient To",
+			"backgroundColor": "Background Color",
+			"backgroundImage": "Background Image",
+			"uploadImage": "Upload Image",
+			"backgroundPattern": "Background Pattern",
+			"alignment": "Text Alignment",
+			"left": "Left",
+			"center": "Center",
+			"right": "Right"
+		},
+		"advancedTab": {
+			"fontWeight": "Font Weight",
+			"fontStyle": "Font Style",
+			"normal": "Normal",
+			"italic": "Italic",
+			"letterSpacing": "Letter Spacing",
+			"lineHeight": "Line Height",
+			"shadow": "Text Shadow",
+			"shadowX": "Shadow X",
+			"shadowY": "Shadow Y",
+			"shadowBlur": "Shadow Blur",
+			"shadowColor": "Shadow Color",
+			"border": "Border",
+			"borderColor": "Border Color",
+			"borderWidth": "Border Width",
+			"borderRadius": "Border Radius",
+			"padding": "Padding",
+			"kashida": "Kashida Extension",
+			"kashidaLength": "Kashida Length"
+		},
+		"preview": {
+			"title": "Preview",
+			"downloadPNG": "Download PNG",
+			"downloadSVG": "Download SVG",
+			"share": "Share"
+		},
+		"featuredDesigns": {
+			"title": "Featured Designs",
+			"topPicks": "Top Picks",
+			"viewAllTemplates": "View All Templates"
+		},
+		"quickLinks": {
+			"title": "Quick Links",
+			"blog": "Blog",
+			"faq": "FAQ"
+		},
+		"tooltips": {
+			"resetDefaults": "Reset to defaults",
+			"fullscreen": "Fullscreen preview",
+			"exitFullscreen": "Exit fullscreen"
+		},
+		"toasts": {
+			"downloadStarted": "Download Started",
+			"preparingPNG": "Preparing your Arabic calligraphy as PNG...",
+			"preparingSVG": "Preparing your Arabic calligraphy as SVG...",
+			"downloadFailed": "Download Failed",
+			"downloadError": "There was an error downloading your calligraphy. Please try again.",
+			"preparingImage": "Preparing Image",
+			"generatingImage": "Generating image for sharing...",
+			"designApplied": "Design Applied",
+			"designAppliedDesc": "The featured design has been applied to your canvas.",
+			"shareTitle": "Arabic Calligraphy Design",
+			"shareText": "Check out this beautiful Arabic calligraphy I created!",
+			"templateApplied": "Template Applied",
+			"templateAppliedDesc": "The selected template has been applied to your canvas.",
+			"downloadComplete": "Download Complete",
+			"downloadCompletePNG": "Your Arabic calligraphy has been downloaded as PNG.",
+			"downloadCompleteSVG": "Your Arabic calligraphy has been downloaded as SVG.",
+			"imageGenerationFailed": "Image Generation Failed",
+			"imageGenerationFailedDesc": "Could not generate the image. Please try again.",
+			"copyingImage": "Copying Image",
+			"copyingImageDesc": "Preparing image to copy to clipboard...",
+			"imageCopied": "Image Copied",
+			"imageCopiedDesc": "The calligraphy image has been copied to your clipboard.",
+			"copyFailed": "Copy Failed",
+			"copyFailedDesc": "Could not copy image. Your browser might not support this feature or permission was denied.",
+			"copyError": "Copy Error",
+			"copyErrorDesc": "Failed to generate image blob for copying.",
+			"copyErrorUnexpected": "An unexpected error occurred while trying to copy the image.",
+			"copiedToClipboard": "Copied to Clipboard",
+			"copiedToClipboardDesc": "Your text has been copied to clipboard.",
+			"copyFailedText": "There was an error copying to clipboard.",
+			"error": "Error",
+			"previewNotFound": "Preview element not found.",
+			"previewNotFoundShare": "Preview element not found. Cannot prepare image for sharing.",
+			"sharingNotAvailable": "Sharing Not Available",
+			"sharingNotAvailableDesc": "Your browser doesn't support the Web Share API. Try downloading the image to share it.",
+			"imageShareNotSupported": "Image Share Not Fully Supported",
+			"imageShareNotSupportedDesc": "Your browser or selected share target might not support sharing images directly. Sharing text content instead.",
+			"sharedSuccessfully": "Shared Successfully",
+			"sharedSuccessfullyDesc": "Your calligraphy has been shared.",
+			"shareFailed": "Share Failed",
+			"shareFailedDesc": "There was an error sharing your calligraphy. Please try again or download the image.",
+			"resetComplete": "Reset Complete",
+			"resetCompleteDesc": "All settings have been reset to defaults."
+		},
+		"fontCategories": {
+			"Traditional": "Traditional",
+			"Diwani": "Diwani",
+			"Kufi": "Kufi",
+			"Nastaliq": "Nastaliq",
+			"Modern": "Modern",
+			"Display": "Display"
+		},
+		"backgroundPatterns": {
+			"None": "None",
+			"Geometric": "Geometric",
+			"Arabesque": "Arabesque",
+			"Islamic Patterns": "Islamic Patterns",
+			"Dots": "Dots"
+		},
+		"commonPhrases": {
+			"bismillah": "In the name of God, the Most Gracious, the Most Merciful",
+			"alhamdulillah": "Praise be to God",
+			"mashallah": "God has willed it",
+			"subhanallah": "Glory be to God",
+			"allahuakbar": "God is Greater",
+			"lailahaillallah": "There is no deity but God",
+			"astaghfirullah": "I seek forgiveness from God",
+			"allahummasalli": "O God, bless Muhammad"
+		},
+		"ui": {
+			"calligraphyControls": "Calligraphy Controls",
+			"text": "Text",
+			"style": "Style",
+			"advanced": "Advanced",
+			"textColor": "Text Color",
+			"gradient": "Gradient",
+			"from": "From",
+			"to": "To",
+			"background": "Background",
+			"color": "Color",
+			"image": "Image",
+			"pattern": "Pattern",
+			"upload": "Upload",
+			"backgroundPattern": "Background Pattern",
+			"selectPattern": "Select pattern",
+			"textShadow": "Text Shadow",
+			"horizontal": "Horizontal",
+			"vertical": "Vertical",
+			"blur": "Blur",
+			"opacity": "Opacity",
+			"fontWeight": "Font Weight",
+			"fontStyle": "Font Style",
+			"selectWeight": "Select weight",
+			"selectStyle": "Select style",
+			"light": "Light",
+			"regular": "Regular",
+			"medium": "Medium",
+			"bold": "Bold",
+			"normal": "Normal",
+			"italic": "Italic",
+			"alignment": "Alignment",
+			"letterSpacing": "Letter Spacing",
+			"lineHeight": "Line Height",
+			"kashida": "Kashida (Elongation)",
+			"kashidaDesc": "Kashida adds elongation to certain Arabic letters, enhancing the aesthetic quality of text.",
+			"length": "Length",
+			"border": "Border",
+			"borderColor": "Border Color",
+			"borderWidth": "Border Width",
+			"borderRadius": "Border Radius",
+			"padding": "Padding",
+			"featuredTemplates": "Featured Templates",
+			"favorites": "Favorites",
+			"aboutArabicCalligraphy": "About Arabic Calligraphy",
+			"aboutArabicCalligraphyDesc": "Arabic calligraphy (خط عربي) is the artistic practice of handwriting and calligraphy based on the Arabic alphabet. It is known in Arabic as khatt, derived from the word 'line', 'design', or 'construction'.",
+			"readMoreHistory": "Read more about Arabic calligraphy history",
+			"exploreFonts": "Explore our font collection",
+			"viewAllTemplates": "View All Templates"
+		}
+	},
+	"seo": {
+		"structuredData": {
+			"featureList": [
+				"13+ Arabic fonts including Kufi, Naskh, Diwani styles",
+				"Real-time Arabic text generation",
+				"Gradient and color customization",
+				"Background patterns and images",
+				"PNG and SVG export",
+				"Mobile responsive interface",
+				"No registration required"
+			],
+			"applicationCategory": "DesignApplication",
+			"operatingSystem": "Web Browser",
+			"browserRequirements": "Requires JavaScript enabled",
+			"authorName": "Arabic Calligraphy Generator"
+		}
+	}
 }
