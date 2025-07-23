@@ -380,11 +380,9 @@ export default function Home() {
             <noscript>
               <div className="bg-amber-50 border border-amber-200 rounded-lg p-8">
                 <div className="text-center mb-6">
-                  <h2 className="text-2xl font-bold text-amber-800 mb-4">{t('generator.title')}</h2>
+                  <h2 className="text-2xl font-bold text-amber-800 mb-4">{t('generator.noScript.title')}</h2>
                   <p className="text-amber-700 max-w-2xl mx-auto">
-                    Create beautiful Arabic calligraphy instantly with our free online generator.
-                    Choose from 13+ professional fonts, customize colors and backgrounds,
-                    and download high-quality PNG/SVG files.
+                    {t('generator.noScript.description')}
                   </p>
                 </div>
 
@@ -414,14 +412,14 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <h3 className="font-semibold text-amber-800 mb-3">Popular Use Cases</h3>
+                    <h3 className="font-semibold text-amber-800 mb-3">{t('generator.noScript.useCases.title')}</h3>
                     <ul className="text-sm text-amber-600 space-y-1">
-                      <li>• Wedding invitations</li>
-                      <li>• Islamic art projects</li>
-                      <li>• Social media posts</li>
-                      <li>• Business logos</li>
-                      <li>• Educational materials</li>
-                      <li>• Religious decorations</li>
+                      <li>• {t('generator.noScript.useCases.weddingInvitations')}</li>
+                      <li>• {t('generator.noScript.useCases.islamicArt')}</li>
+                      <li>• {t('generator.noScript.useCases.socialMedia')}</li>
+                      <li>• {t('generator.noScript.useCases.businessLogos')}</li>
+                      <li>• {t('generator.noScript.useCases.educational')}</li>
+                      <li>• {t('generator.noScript.useCases.religious')}</li>
                     </ul>
                   </div>
                 </div>
@@ -431,8 +429,7 @@ export default function Home() {
                     {t('generator.jsRequired')}
                   </p>
                   <div className="text-sm text-amber-600">
-                    <p>Keywords: Arabic calligraphy generator, Islamic art, Arabic fonts, calligraphy maker,
-                    Arabic text design, Islamic calligraphy, Arabic typography, free calligraphy tool</p>
+                    <p>{t('generator.noScript.keywords')}</p>
                   </div>
                 </div>
               </div>
@@ -678,43 +675,31 @@ export default function Home() {
 
         {/* SEO友好的隐藏内容区域 - 只对搜索引擎可见 */}
         <div className="sr-only" aria-hidden="true">
-          <h2>About Arabic Calligraphy Generator</h2>
+          <h2>{t('generator.seoContent.aboutTitle')}</h2>
 
           <div>
-            <h3>Professional Arabic Typography</h3>
+            <h3>{t('generator.seoContent.professionalTypography.title')}</h3>
             <p>
-              Our Arabic calligraphy generator offers professional-grade typography tools for creating
-              stunning Islamic art, wedding invitations, business logos, and educational materials.
-              With over 13 carefully selected Arabic fonts, you can create authentic calligraphy
-              that respects traditional Arabic script aesthetics.
+              {t('generator.seoContent.professionalTypography.description1')}
             </p>
             <p>
-              Each font in our collection represents different calligraphic styles: from classical
-              Naskh and Thuluth to modern Kufi and contemporary sans-serif designs. Perfect for
-              both traditional Islamic art projects and modern graphic design needs.
+              {t('generator.seoContent.professionalTypography.description2')}
             </p>
           </div>
 
           <div>
-            <h3>Free Online Tool Features</h3>
+            <h3>{t('generator.seoContent.featuresTitle')}</h3>
             <ul>
-              <li>13+ Arabic Fonts: Traditional and modern calligraphy styles</li>
-              <li>Real-time Preview: See your design as you type</li>
-              <li>High-Quality Export: Download PNG and SVG formats</li>
-              <li>Color Customization: Text colors, gradients, and backgrounds</li>
-              <li>Mobile Responsive: Works perfectly on all devices</li>
-              <li>No Registration: Start creating immediately</li>
-              <li>Commercial Use: Free for personal and commercial projects</li>
+              {seoT.raw('featureList').map((feature: string, index: number) => (
+                <li key={index}>{feature}</li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h3>Popular Keywords</h3>
+            <h3>{t('generator.seoContent.keywordsTitle')}</h3>
             <p>
-              Arabic calligraphy generator, Islamic art maker, Arabic font generator,
-              calligraphy design tool, Arabic typography, Islamic calligraphy creator,
-              Arabic text design, free calligraphy maker, Arabic script generator,
-              Islamic art generator, Arabic logo maker, wedding invitation Arabic text
+              {t('generator.seoContent.keywordsList')}
             </p>
           </div>
         </div>
