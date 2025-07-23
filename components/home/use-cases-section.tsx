@@ -53,7 +53,7 @@ export function UseCasesSection() {
                   <div className="relative w-[300px] h-[200px] rounded-lg border border-amber-200">
                     <Image
                       src={`${cdnBaseUrl}/arabic-calligraphy-in-twitter-post.png`}
-                      alt="Social media examples"
+                      alt={t('socialMedia.imageAlt')}
                       fill
                       style={{ objectFit: 'cover' }}
                       className="rounded-lg"
