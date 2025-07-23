@@ -430,7 +430,8 @@
 				"instagram": "Publications et stories Instagram",
 				"facebook": "Photos de couverture Facebook",
 				"twitter": "Graphiques Twitter",
-				"profiles": "Photos de profil avec des monogrammes arabes"
+				"profiles": "Photos de profil avec des monogrammes arabes",
+				"imageAlt": "Exemples de réseaux sociaux"
 			},
 			"print": {
 				"title": "Impression",

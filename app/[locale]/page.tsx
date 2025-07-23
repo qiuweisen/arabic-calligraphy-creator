@@ -390,12 +390,12 @@ export default function Home() {
                   <div>
                     <h3 className="font-semibold text-amber-800 mb-3">{t('generator.availableFonts')}</h3>
                     <ul className="text-sm text-amber-600 space-y-1">
-                      <li>• {t('generator.fonts.amiri')} - Traditional Naskh</li>
-                      <li>• {t('generator.fonts.scheherazade')} - Classical Arabic</li>
-                      <li>• {t('generator.fonts.reemKufi')} - Modern Kufi</li>
-                      <li>• {t('generator.fonts.arefRuqaa')} - Ruqaa Script</li>
-                      <li>• {t('generator.fonts.cairo')} - Contemporary Sans</li>
-                      <li>• {t('generator.fonts.moreFonts')} (13+ total fonts)</li>
+                      <li>• {t('generator.fonts.amiri')}</li>
+                      <li>• {t('generator.fonts.scheherazade')}</li>
+                      <li>• {t('generator.fonts.reemKufi')}</li>
+                      <li>• {t('generator.fonts.arefRuqaa')}</li>
+                      <li>• {t('generator.fonts.cairo')}</li>
+                      <li>• {t('generator.fonts.moreFonts')}</li>
                     </ul>
                   </div>
 

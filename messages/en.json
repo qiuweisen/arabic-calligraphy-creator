@@ -430,7 +430,8 @@
 				"instagram": "Instagram posts and stories",
 				"facebook": "Facebook cover photos",
 				"twitter": "Twitter graphics",
-				"profiles": "Profile pictures with Arabic monograms"
+				"profiles": "Profile pictures with Arabic monograms",
+				"imageAlt": "Social media examples"
 			},
 			"print": {
 				"title": "Print",

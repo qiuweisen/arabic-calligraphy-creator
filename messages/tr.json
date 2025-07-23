@@ -430,7 +430,8 @@
 				"instagram": "Instagram gönderileri ve hikayeleri",
 				"facebook": "Facebook kapak fotoğrafları",
 				"twitter": "Twitter grafikleri",
-				"profiles": "Arapça monogramlı profil resimleri"
+				"profiles": "Arapça monogramlı profil resimleri",
+				"imageAlt": "Sosyal medya örnekleri"
 			},
 			"print": {
 				"title": "Baskı",

@@ -429,7 +429,8 @@
 				"instagram": "Siaran dan 'stories' Instagram",
 				"facebook": "Gambar sampul Facebook",
 				"twitter": "Grafik Twitter",
-				"profiles": "Gambar profil dengan monogram Arab"
+				"profiles": "Gambar profil dengan monogram Arab",
+				"imageAlt": "Contoh media sosial"
 			},
 			"print": {
 				"title": "Cetakan",
