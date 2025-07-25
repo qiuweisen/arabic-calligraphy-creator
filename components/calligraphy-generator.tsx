@@ -1809,6 +1809,21 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                     <Download className="mr-2 h-4 w-4" />
                     {t('preview.downloadSVG')}
                   </Button>
+                  <Button
+                    onClick={() => {
+                      window.open('https://www.buymeacoffee.com/arabiccalligraphy', '_blank')
+                      // 追踪赞助点击事件
+                      if (typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
+                        (window as any).trackCalligraphyEvent('Support_Click', {
+                          action: 'sponsor_button_click',
+                          source: 'download_section'
+                        })
+                      }
+                    }}
+                    className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-200"
+                  >
+                    {t('sponsor.supportButton')}
+                  </Button>
                 </div>
               </CardContent>
             </Card>
