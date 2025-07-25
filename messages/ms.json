@@ -674,6 +674,9 @@
 			"readMoreHistory": "Baca lebih lanjut tentang sejarah kaligrafi Arab",
 			"exploreFonts": "Terokai koleksi fon kami",
 			"viewAllTemplates": "Lihat Semua Templat"
+		},
+		"sponsor": {
+			"supportButton": "☕ Sokong Kami ($3)"
 		}
 	},
 	"seo": {

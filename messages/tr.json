@@ -675,6 +675,9 @@
 			"readMoreHistory": "Arapça hat sanatının tarihi hakkında daha fazla bilgi edinin",
 			"exploreFonts": "Yazı tipi koleksiyonumuzu keşfedin",
 			"viewAllTemplates": "Tüm Şablonları Görüntüle"
+		},
+		"sponsor": {
+			"supportButton": "☕ Bizi Destekle ($3)"
 		}
 	},
 	"seo": {

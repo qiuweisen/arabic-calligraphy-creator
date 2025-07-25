@@ -675,6 +675,9 @@
 			"readMoreHistory": "Read more about Arabic calligraphy history",
 			"exploreFonts": "Explore our font collection",
 			"viewAllTemplates": "View All Templates"
+		},
+		"sponsor": {
+			"supportButton": "☕ Support Us ($3)"
 		}
 	},
 	"seo": {

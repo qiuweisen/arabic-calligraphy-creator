@@ -674,6 +674,9 @@
 			"readMoreHistory": "عربی خطاطی کی تاریخ کے بارے میں مزید پڑھیں",
 			"exploreFonts": "ہمارے فونٹ کلیکشن کو دریافت کریں",
 			"viewAllTemplates": "تمام ٹیمپلیٹس دیکھیں"
+		},
+		"sponsor": {
+			"supportButton": "☕ ہماری سپورٹ کریں ($3)"
 		}
 	},
 	"seo": {

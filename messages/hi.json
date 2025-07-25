@@ -675,6 +675,9 @@
 			"readMoreHistory": "अरबी सुलेख के इतिहास के बारे में और पढ़ें",
 			"exploreFonts": "हमारे फ़ॉन्ट संग्रह को देखें",
 			"viewAllTemplates": "सभी टेम्पलेट्स देखें"
+		},
+		"sponsor": {
+			"supportButton": "☕ हमारा समर्थन करें ($3)"
 		}
 	},
 	"seo": {

@@ -675,6 +675,9 @@
 			"readMoreHistory": "Lesen Sie mehr über die Geschichte der arabischen Kalligraphie",
 			"exploreFonts": "Entdecken Sie unsere Schriftartensammlung",
 			"viewAllTemplates": "Alle Vorlagen anzeigen"
+		},
+		"sponsor": {
+			"supportButton": "☕ Unterstützen ($3)"
 		}
 	},
 	"seo": {

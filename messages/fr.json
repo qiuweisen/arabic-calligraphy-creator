@@ -675,6 +675,9 @@
 			"readMoreHistory": "En savoir plus sur l'histoire de la calligraphie arabe",
 			"exploreFonts": "Découvrez notre collection de polices",
 			"viewAllTemplates": "Voir tous les modèles"
+		},
+		"sponsor": {
+			"supportButton": "☕ Nous Soutenir ($3)"
 		}
 	},
 	"seo": {
