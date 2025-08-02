@@ -307,7 +307,7 @@ export default function Home() {
       
       // 2. 解决非严重问题：添加 "priceValidUntil"
       // 因为是长期免费，可以设置一个未来的日期，比如明年年底。
-      "priceValidUntil": "2025-12-31" 
+      "priceValidUntil": "2030-12-31" 
     },
     "aggregateRating": {
       "@type": "AggregateRating",
