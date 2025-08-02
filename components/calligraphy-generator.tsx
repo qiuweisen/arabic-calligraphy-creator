@@ -321,8 +321,6 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
     console.log('Font loader initialized, fonts will load on demand')
   }, [loadFont])
 
-
-
   // Handle external font changes
   useEffect(() => {
     if (initialFont && FONT_NAME_MAP[initialFont]) {
@@ -1844,30 +1842,33 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                       font: ARABIC_FONTS[0].value, // Amiri (Traditional)
                       color: "#8B4513",
                       bg: "#FFF8E1",
+                      svg: "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/default-images/featured-1.svg"
                     },
                     {
                       text: "الحمد لله",
                       font: ARABIC_FONTS[7].value, // Cairo (Modern)
                       color: "#006400",
                       bg: "#F0FFF0",
+                      svg: "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/default-images/featured-2.svg"
                     },
                     {
                       text: "سبحان الله",
                       font: ARABIC_FONTS[4].value, // Reem Kufi (Kufi)
                       color: "#4B0082",
                       bg: "#F8F4FF",
+                      svg: "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/default-images/featured-3.svg"
                     },
                     {
                       text: "الله أكبر",
                       font: ARABIC_FONTS[3].value, // Aref Ruqaa (Diwani)
                       color: "#800000",
                       bg: "#FFF0F0",
+                      svg: "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/default-images/featured-4.svg"
                     },
                   ].map((design, index) => (
                     <div
                       key={index}
-                      className="p-4 rounded-lg cursor-pointer hover:shadow-md transition-shadow border border-amber-100"
-                      style={{ backgroundColor: design.bg }}
+                      className="cursor-pointer hover:shadow-md transition-shadow rounded-lg overflow-hidden"
                       onClick={() => {
                         setText(design.text)
                         setFont(design.font)
@@ -1881,17 +1882,13 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                         })
                       }}
                     >
-                      <div
-                        dir="rtl"
-                        className="text-center py-4"
-                        style={{
-                          fontFamily: design.font,
-                          fontSize: "32px",
-                          color: design.color,
-                        }}
-                      >
-                        {design.text}
-                      </div>
+                      {/* 使用静态SVG图片替代动态渲染 */}
+                      <img 
+                        src={design.svg} 
+                        alt={design.text}
+                        className="w-full h-auto"
+                        loading="lazy"
+                      />
                     </div>
                   ))}
                 </div>
