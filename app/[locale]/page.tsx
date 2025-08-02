@@ -289,6 +289,11 @@ export default function Home() {
     "name": t('title'),
     "description": t('intro'),
     "url": "https://arabic-calligraphy-generator.com",
+    
+    // 1. 解决严重问题：添加 "image" 字段
+    // Merchant Listings 要求用 "image" 而不是 "screenshot"。我们直接用您现有的图片。
+    "image": "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/og-image.png",
+
     "applicationCategory": seoT('applicationCategory'),
     "operatingSystem": seoT('operatingSystem'),
     "browserRequirements": seoT('browserRequirements'),
@@ -298,7 +303,11 @@ export default function Home() {
     "offers": {
       "@type": "Offer",
       "price": "0",
-      "priceCurrency": "USD"
+      "priceCurrency": "USD",
+      
+      // 2. 解决非严重问题：添加 "priceValidUntil"
+      // 因为是长期免费，可以设置一个未来的日期，比如明年年底。
+      "priceValidUntil": "2030-12-31" 
     },
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -306,6 +315,7 @@ export default function Home() {
       "ratingCount": "1250",
       "bestRating": "5"
     },
+    // "screenshot" 字段可以保留，因为它对 SoftwareApplication 类型是有效的。
     "screenshot": "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/og-image.png",
     "author": {
       "@type": "Organization",
