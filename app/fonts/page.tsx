@@ -181,12 +181,11 @@ export default function FontsPage() {
           "@type": "ListItem",
           "position": categoryIndex * 10 + fontIndex + 1,
           "item": {
-            "@type": "SoftwareApplication",
+            "@type": "CreativeWork",
             "name": font.name,
             "description": font.description,
             "url": `https://arabic-calligraphy-generator.com/fonts/${font.slug}`,
-            "applicationCategory": "Font",
-            "operatingSystem": "Web Browser"
+            "genre": "Typography"
           }
         }))
       )

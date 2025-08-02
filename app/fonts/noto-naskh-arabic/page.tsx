@@ -166,11 +166,10 @@ export default function NotoNaskhArabicFontPage() {
   // Structured data for the font
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "CreativeWork",
     "name": "Noto Naskh Arabic Font",
     "description": "A versatile and highly legible Arabic Naskh typeface by Google, combining traditional aesthetics with modern digital optimization for screen and print applications.",
-    "applicationCategory": "Font",
-    "operatingSystem": "Cross-platform",
+    "genre": "Typography",
     "creator": {
       "@type": "Organization",
       "name": "Google",
@@ -183,21 +182,16 @@ export default function NotoNaskhArabicFontPage() {
     },
     "datePublished": "2025",
     "license": "https://scripts.sil.org/OFL",
-    "programmingLanguage": "OpenType",
+    "encodingFormat": "OpenType",
     "keywords": ["Arabic font", "Naskh", "Google Noto", "Screen optimized", "Digital typography", "Universal font"],
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    },
+
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.8",
       "ratingCount": "200",
       "bestRating": "5"
     },
-    "featureList": [
+    "about": [
       "Modern Naskh design",
       "Screen optimization", 
       "Universal script support",

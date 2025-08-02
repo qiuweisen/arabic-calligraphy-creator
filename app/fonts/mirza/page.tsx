@@ -183,13 +183,7 @@ export default function MirzaFontPage() {
     "keywords": ["Arabic font", "Nastaliq script", "Persian typography", "Urdu font", "Traditional calligraphy", "Literary typography"],
     "genre": "Typography",
     "inLanguage": ["ar", "fa", "ur"],
-    "culturalContext": "Persian and South Asian literary traditions",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    }
+    "culturalContext": "Persian and South Asian literary traditions"
   };
 
   return (

@@ -165,11 +165,10 @@ export default function ReemKufiFontPage() {
   // Structured data for the font
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "CreativeWork",
     "name": "Reem Kufi Font",
     "description": "A contemporary Arabic Kufi typeface by Khaled Hosny, featuring bold geometric precision and modern aesthetic. Perfect for headlines, logos, and branding applications.",
-    "applicationCategory": "Font",
-    "operatingSystem": "Cross-platform",
+    "genre": "Typography",
     "creator": {
       "@type": "Person",
       "name": "Khaled Hosny",
@@ -182,21 +181,15 @@ export default function ReemKufiFontPage() {
     },
     "datePublished": "2025",
     "license": "https://scripts.sil.org/OFL",
-    "programmingLanguage": "OpenType",
+    "encodingFormat": "OpenType",
     "keywords": ["Arabic font", "Kufi", "Geometric typography", "Modern Arabic", "Display font", "Branding"],
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.6",
       "ratingCount": "95",
       "bestRating": "5"
     },
-    "featureList": [
+    "about": [
       "Modern Kufi design",
       "Geometric precision", 
       "Bold visual impact",

@@ -166,11 +166,10 @@ export default function MarkaziTextFontPage() {
   // Structured data for the font
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "CreativeWork",
     "name": "Markazi Text Font",
     "description": "A Naskh-inspired Arabic typeface by Borna Izadpanah, masterfully designed for optimal readability in extended text. Balances traditional aesthetics with modern screen performance for digital publications.",
-    "applicationCategory": "Font",
-    "operatingSystem": "Cross-platform",
+    "genre": "Typography",
     "creator": [
       {
         "@type": "Person",
@@ -190,21 +189,15 @@ export default function MarkaziTextFontPage() {
     },
     "datePublished": "2025",
     "license": "https://scripts.sil.org/OFL",
-    "programmingLanguage": "OpenType",
+    "encodingFormat": "OpenType",
     "keywords": ["Arabic font", "Naskh typography", "Text optimization", "Digital reading", "Academic content", "Extended text"],
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.6",
       "ratingCount": "125",
       "bestRating": "5"
     },
-    "featureList": [
+    "about": [
       "Text readability optimization",
       "Traditional Naskh aesthetics", 
       "Screen performance",

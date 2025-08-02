@@ -96,13 +96,7 @@ export default function RakkasFontPage() {
     "keywords": ["Arabic font", "Decorative display", "Handwritten style", "Ruqaa inspired", "Creative typography", "Artistic font"],
     "genre": "Typography",
     "inLanguage": "ar",
-    "artform": "Calligraphic display typography",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    }
+    "artform": "Calligraphic display typography"
   };
 
   return (

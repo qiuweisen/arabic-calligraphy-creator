@@ -166,11 +166,10 @@ export default function LemonadaFontPage() {
   // Structured data for the font
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "CreativeWork",
     "name": "Lemonada Font",
     "description": "A modern and friendly Arabic typeface by Eduardo Tunni featuring distinctive rounded letterforms. Perfect for branding, UI, and casual designs with bilingual Arabic-Latin support.",
-    "applicationCategory": "Font",
-    "operatingSystem": "Cross-platform",
+    "genre": "Typography",
     "creator": {
       "@type": "Person",
       "name": "Eduardo Tunni",
@@ -183,21 +182,15 @@ export default function LemonadaFontPage() {
     },
     "datePublished": "2025",
     "license": "https://scripts.sil.org/OFL",
-    "programmingLanguage": "OpenType",
+    "encodingFormat": "OpenType",
     "keywords": ["Arabic font", "Rounded sans-serif", "Friendly typography", "Bilingual font", "UI design", "Casual design"],
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.5",
       "ratingCount": "95",
       "bestRating": "5"
     },
-    "featureList": [
+    "about": [
       "Rounded letterforms",
       "Friendly character", 
       "Bilingual Arabic-Latin support",

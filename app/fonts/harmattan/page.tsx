@@ -83,11 +83,10 @@ export default function HarmattanFontPage() {
   // Structured data for the font
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "CreativeWork",
     "name": "Harmattan Font",
     "description": "A simplified modern Arabic typeface by SIL International with excellent legibility, specifically designed for West African languages using Arabic script (Ajami) and educational materials.",
-    "applicationCategory": "Font",
-    "operatingSystem": "Cross-platform",
+    "genre": "Typography",
     "creator": {
       "@type": "Organization",
       "name": "SIL International",
@@ -100,21 +99,15 @@ export default function HarmattanFontPage() {
     },
     "datePublished": "2025",
     "license": "https://scripts.sil.org/OFL",
-    "programmingLanguage": "OpenType",
+    "encodingFormat": "OpenType",
     "keywords": ["Arabic font", "Ajami script", "West African languages", "Educational typography", "Simplified Arabic", "Legible font"],
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.3",
       "ratingCount": "65",
       "bestRating": "5"
     },
-    "featureList": [
+    "about": [
       "Simplified modern design",
       "Excellent legibility", 
       "West African language support",

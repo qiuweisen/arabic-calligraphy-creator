@@ -166,11 +166,10 @@ export default function TajawalFontPage() {
   // Structured data for the font
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "CreativeWork",
     "name": "Tajawal Font",
     "description": "A modern geometric sans-serif typeface supporting both Arabic and Latin scripts. Features extensive weight range and excellent screen legibility for UI/UX and web design.",
-    "applicationCategory": "Font",
-    "operatingSystem": "Cross-platform",
+    "genre": "Typography",
     "creator": {
       "@type": "Organization",
       "name": "Boutros International",
@@ -183,21 +182,15 @@ export default function TajawalFontPage() {
     },
     "datePublished": "2025",
     "license": "https://scripts.sil.org/OFL",
-    "programmingLanguage": "OpenType",
+    "encodingFormat": "OpenType",
     "keywords": ["Arabic font", "Geometric sans-serif", "Bilingual typography", "UI font", "Web design", "Modern Arabic"],
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.7",
       "ratingCount": "180",
       "bestRating": "5"
     },
-    "featureList": [
+    "about": [
       "Geometric sans-serif design",
       "Bilingual Arabic-Latin support", 
       "Extensive weight range",

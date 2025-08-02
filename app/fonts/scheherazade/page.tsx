@@ -166,11 +166,10 @@ export default function ScheherazadeFontPage() {
   // Structured data for the font
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "CreativeWork",
     "name": "Scheherazade New Font",
     "description": "A traditional Naskh-style Arabic typeface by SIL International, optimized for scholarly publishing and multilingual Arabic script texts with extensive character support.",
-    "applicationCategory": "Font",
-    "operatingSystem": "Cross-platform",
+    "genre": "Typography",
     "creator": {
       "@type": "Organization",
       "name": "SIL International",
@@ -183,21 +182,15 @@ export default function ScheherazadeFontPage() {
     },
     "datePublished": "2025",
     "license": "https://scripts.sil.org/OFL",
-    "programmingLanguage": "OpenType",
+    "encodingFormat": "OpenType",
     "keywords": ["Arabic font", "Naskh", "Scholarly typography", "Multilingual", "Academic publishing", "Traditional Arabic"],
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.7",
       "ratingCount": "120",
       "bestRating": "5"
     },
-    "featureList": [
+    "about": [
       "Traditional Naskh design",
       "Scholarly text optimization", 
       "Multilingual Arabic script support",

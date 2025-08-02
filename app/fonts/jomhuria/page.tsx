@@ -178,13 +178,7 @@ export default function JomhuriaFontPage() {
     "license": "https://scripts.sil.org/OFL",
     "keywords": ["Arabic font", "Display font", "Kufi inspired", "Bold typography", "Headlines", "Poster design"],
     "genre": "Typography",
-    "inLanguage": ["ar", "fa", "ur"],
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    }
+    "inLanguage": ["ar", "fa", "ur"]
   };
 
   return (
