@@ -171,11 +171,10 @@ export default function AmiriPage() {
   // Structured data for the font
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "CreativeWork",
     "name": "Amiri Font",
     "description": "A masterpiece of digital Arabic typography, the Amiri font revives the elegance of classical Naskh script. Designed by Dr. Khaled Hosny, inspired by the Bulaq Press typefaces.",
-    "applicationCategory": "Font",
-    "operatingSystem": "Cross-platform",
+    "genre": "Typography",
     "creator": {
       "@type": "Person",
       "name": "Dr. Khaled Hosny",
@@ -187,21 +186,15 @@ export default function AmiriPage() {
     },
     "datePublished": "2025",
     "license": "https://scripts.sil.org/OFL",
-    "programmingLanguage": "OpenType",
+    "encodingFormat": "OpenType",
     "keywords": ["Arabic font", "Naskh", "Classical typography", "Quranic text", "Islamic calligraphy", "Traditional Arabic"],
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.8",
       "ratingCount": "150",
       "bestRating": "5"
     },
-    "featureList": [
+    "about": [
       "Classical Naskh revival",
       "Quranic text optimization", 
       "Comprehensive glyph set",

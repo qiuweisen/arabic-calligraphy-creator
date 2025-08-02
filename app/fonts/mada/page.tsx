@@ -196,16 +196,9 @@ export default function MadaFontPage() {
       "text": "Ideal for user interfaces, web content, corporate communications, and digital applications requiring clear Arabic text rendering"
     },
     "mainEntity": {
-      "@type": "SoftwareApplication",
+      "@type": "CreativeWork",
       "name": "Mada Typeface",
-      "applicationCategory": "Font",
-      "operatingSystem": "Cross-platform",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      }
+      "genre": "Typography"
     }
   };
 

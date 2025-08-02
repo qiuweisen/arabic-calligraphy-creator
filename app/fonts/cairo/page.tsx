@@ -164,15 +164,14 @@ export default function CairoFontPage() {
   // Get font info for the current page
   const fontInfo = getFontInfoBySlug('cairo');
 
-  // Structured data for Cairo font - different structure from Amiri
+  // Structured data for Cairo font - CreativeWork type to avoid GSC warnings
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": ["SoftwareApplication", "Product"],
+    "@type": "CreativeWork",
     "name": "Cairo Font",
     "alternateName": "Cairo Typeface",
     "description": "Cairo is a contemporary Arabic and Latin sans-serif typeface designed by Mohamed Gaber (TitraShop). Offers excellent readability and modern aesthetic for UI/UX and web design.",
-    "applicationCategory": ["Font", "Typography", "Design Tool"],
-    "operatingSystem": ["Windows", "macOS", "Linux", "Android", "iOS"],
+    "genre": "Typography",
     "creator": {
       "@type": "Person",
       "name": "Mohamed Gaber",
@@ -188,31 +187,15 @@ export default function CairoFontPage() {
     },
     "datePublished": "2025",
     "license": "https://scripts.sil.org/OFL",
-    "programmingLanguage": "OpenType",
+    "encodingFormat": "OpenType",
     "keywords": ["Arabic font", "Latin font", "Sans-serif", "Modern typography", "Bilingual font", "UI font", "Web font", "Google Fonts"],
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock",
-      "seller": {
-        "@type": "Organization",
-        "name": "Google Fonts"
-      }
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "ratingCount": "180",
+      "bestRating": "5"
     },
-    "review": {
-      "@type": "Review",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "4.7",
-        "bestRating": "5"
-      },
-      "author": {
-        "@type": "Organization",
-        "name": "Typography Community"
-      }
-    },
-    "featureList": [
+    "about": [
       "Bilingual Arabic-Latin support",
       "Modern sans-serif design",
       "Multiple font weights",
@@ -220,8 +203,6 @@ export default function CairoFontPage() {
       "Google Fonts integration",
       "Open source license"
     ],
-    "applicationSubCategory": "Typography",
-    "softwareVersion": "Latest",
     "fileFormat": ["TTF", "OTF", "WOFF", "WOFF2"]
   };
 

@@ -181,12 +181,6 @@ export default function MarheyFontPage() {
     "audience": {
       "@type": "Audience",
       "audienceType": "Children and Creative Professionals"
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
     }
   };
 

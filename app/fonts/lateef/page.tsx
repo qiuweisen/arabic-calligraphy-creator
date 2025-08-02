@@ -183,13 +183,7 @@ export default function LateefFontPage() {
     "license": "https://scripts.sil.org/OFL",
     "keywords": ["Arabic font", "Cursive script", "Urdu typography", "Sindhi font", "Nastaliq influence", "South Asian languages"],
     "genre": "Typography",
-    "inLanguage": ["ar", "ur", "sd"],
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    }
+    "inLanguage": ["ar", "ur", "sd"]
   };
 
   return (

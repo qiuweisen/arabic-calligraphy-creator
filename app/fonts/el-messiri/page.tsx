@@ -165,11 +165,10 @@ export default function ElMessiriFontPage() {
   // Structured data for the font
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "CreativeWork",
     "name": "El Messiri Font",
     "description": "An elegant Arabic Naskh typeface by Mohamed Gaber, featuring refined letterforms and modern sensibility. Perfect for sophisticated headlines, branding, and cultural projects.",
-    "applicationCategory": "Font",
-    "operatingSystem": "Cross-platform",
+    "genre": "Typography",
     "creator": {
       "@type": "Person",
       "name": "Mohamed Gaber",
@@ -182,21 +181,15 @@ export default function ElMessiriFontPage() {
     },
     "datePublished": "2025",
     "license": "https://scripts.sil.org/OFL",
-    "programmingLanguage": "OpenType",
+    "encodingFormat": "OpenType",
     "keywords": ["Arabic font", "Naskh", "Elegant typography", "Modern Arabic", "Display font", "Cultural design"],
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.6",
       "ratingCount": "110",
       "bestRating": "5"
     },
-    "featureList": [
+    "about": [
       "Elegant Naskh design",
       "Modern refinement", 
       "Cultural sophistication",

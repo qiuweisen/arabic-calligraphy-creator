@@ -183,13 +183,7 @@ export default function ArefRuqaaFontPage() {
     "license": "https://scripts.sil.org/OFL",
     "keywords": ["Arabic font", "Ruqaa", "Traditional calligraphy", "Ottoman script", "Display font", "Decorative typography"],
     "genre": "Typography",
-    "inLanguage": "ar",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    }
+    "inLanguage": "ar"
   };
 
   return (
