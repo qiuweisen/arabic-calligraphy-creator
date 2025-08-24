@@ -125,17 +125,28 @@ export const countryToLocaleMap: Record<string, Locale> = {
   // 其他国家默认英语
 };
 
-// 获取建议的语言
+// 创建locale Set用于O(1)查找
+const LOCALE_SET = new Set(locales);
+
+// 高效的Accept-Language解析函数
+function parseAcceptLanguage(acceptLanguage: string): string {
+  const firstComma = acceptLanguage.indexOf(',');
+  const langPart = firstComma === -1 ? acceptLanguage : acceptLanguage.slice(0, firstComma);
+  const firstDash = langPart.indexOf('-');
+  return firstDash === -1 ? langPart : langPart.slice(0, firstDash);
+}
+
+// 获取建议的语言（性能优化版）
 export function getSuggestedLocale(countryCode?: string, acceptLanguage?: string): Locale {
   // 1. 基于国家代码
   if (countryCode && countryToLocaleMap[countryCode]) {
     return countryToLocaleMap[countryCode];
   }
   
-  // 2. 基于浏览器语言
+  // 2. 基于浏览器语言（优化版）
   if (acceptLanguage) {
-    const browserLang = acceptLanguage.split(',')[0].split('-')[0];
-    if (locales.includes(browserLang as Locale)) {
+    const browserLang = parseAcceptLanguage(acceptLanguage);
+    if (LOCALE_SET.has(browserLang as Locale)) {
       return browserLang as Locale;
     }
   }

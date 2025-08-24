@@ -54,9 +54,8 @@ export function LanguageSwitcher() {
   const handleLanguageChange = (newLocale: Locale) => {
     if (!mounted) return;
 
-    // 记录用户主动选择（最高优先级）
-    localStorage.setItem('user-language-choice', newLocale);
-    document.cookie = `user-language-choice=${newLocale}; path=/; max-age=${365 * 24 * 60 * 60}`;
+    // 保存用户语言偏好（与middleware保持一致）
+    document.cookie = `prompt-language-choice=${newLocale}; path=/; max-age=${365 * 24 * 60 * 60}; samesite=lax`;
 
     // 立即更新HTML dir属性
     const newDir = localeConfig[newLocale]?.dir || 'ltr';

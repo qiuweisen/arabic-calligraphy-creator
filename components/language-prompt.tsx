@@ -82,11 +82,10 @@ export function LanguagePrompt({ suggestedLocale, countryCode }: LanguagePromptP
     // 检查是否应该显示弹窗
     const checkShouldShow = () => {
       // 1. 检查用户是否已经做过选择
-      const userChoice = localStorage.getItem('user-language-choice');
       const promptChoice = localStorage.getItem('prompt-language-choice');
       const promptDismissed = localStorage.getItem('language-prompt-dismissed');
       
-      if (userChoice || promptChoice || promptDismissed) {
+      if (promptChoice || promptDismissed) {
         return false;
       }
       

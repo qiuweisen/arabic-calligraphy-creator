@@ -27,6 +27,9 @@ const nextConfig = {
     },
   },
   images: {
+    // 禁用 Vercel 图片优化以降低成本
+    // 图片已通过 Cloudflare CDN 优化提供
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
