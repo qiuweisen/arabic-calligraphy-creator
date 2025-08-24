@@ -10,9 +10,9 @@ import { localeConfig } from "@/i18n"
 import { headers } from "next/headers"
 import type { Metadata } from 'next'
 
-// 字体配置
-const inter = Inter({ subsets: ["latin"], display: 'swap', variable: "--font-inter", preload: true })
-const amiri = Amiri({ subsets: ["latin"], display: 'swap', weight: ["400", "700"], variable: "--font-amiri", preload: true })
+// 字体配置 - 禁用自动预加载，使用CDN
+const inter = Inter({ subsets: ["latin"], display: 'swap', variable: "--font-inter", preload: false })
+const amiri = Amiri({ subsets: ["latin", "arabic"], display: 'swap', weight: ["400", "700"], variable: "--font-amiri", preload: false })
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://arabic-calligraphy-generator.com'
 const cdnBaseUrl = 'https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev'
@@ -86,6 +86,22 @@ export default async function RootLayout({
 
   return (
     <html className={`${inter.variable} ${amiri.variable}`} dir={dir} suppressHydrationWarning>
+      <head>
+        {/* 字体预连接优化 */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* 关键字体预加载 - 使用fallback平衡CLS和LCP */}
+        <link 
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=fallback&subset=arabic,latin"
+          as="style"
+        />
+        <link 
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=fallback&subset=arabic,latin"
+        />
+      </head>
       <body className={`${inter.className} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="system">
           {children}
