@@ -45,6 +45,19 @@ export function useFontLoader() {
       return false
     }
 
+    // 检查字体是否已经在浏览器中可用（通过预加载或之前的下载）
+    if (typeof document !== 'undefined' && 'fonts' in document) {
+      try {
+        const isAvailable = document.fonts.check(`12px "${config.family}"`)
+        if (isAvailable) {
+          loadedFonts.add(fontValue)
+          return true
+        }
+      } catch (error) {
+        console.warn('Font check failed:', error)
+      }
+    }
+
     // 创建加载Promise
     const loadPromise = (async () => {
       try {
@@ -52,10 +65,10 @@ export function useFontLoader() {
         loadingFonts.add(fontValue)
         forceUpdate({})
 
-        // 构建字体URL，正确处理空格和特殊字符
+        // 构建字体URL，使用font-display: fallback平衡CLS和LCP
         const fontFamily = encodeURIComponent(config.family)
         const weights = config.weights.join(';')
-        const fontUrl = `https://fonts.googleapis.com/css2?family=${fontFamily}:wght@${weights}&display=swap`
+        const fontUrl = `https://fonts.googleapis.com/css2?family=${fontFamily}:wght@${weights}&display=fallback`
 
         // 检查是否已经有相同的link标签
         const existingLink = document.querySelector(`link[href="${fontUrl}"]`)
@@ -73,8 +86,10 @@ export function useFontLoader() {
         // 等待字体加载完成，增加超时机制
         await new Promise<void>((resolve, reject) => {
           const timeout = setTimeout(() => {
-            reject(new Error(`Font loading timeout: ${config.family}`))
-          }, 10000) // 10秒超时
+            console.warn(`Font loading timeout: ${config.family}`)
+            // 不要reject，让字体加载继续
+            resolve()
+          }, 5000) // 减少到5秒超时
 
           link.onload = () => {
             clearTimeout(timeout)
@@ -91,11 +106,11 @@ export function useFontLoader() {
           document.head.appendChild(link)
         })
 
-        // 简化字体就绪检查
+        // 简化字体就绪检查，给字体更少时间来加载
         if (typeof document !== 'undefined' && 'fonts' in document) {
           try {
-            // 给字体一些时间来加载
-            await new Promise(resolve => setTimeout(resolve, 500))
+            // 给字体较短时间来加载
+            await new Promise(resolve => setTimeout(resolve, 200))
           } catch (error) {
             console.warn('Font ready check failed:', error)
           }
