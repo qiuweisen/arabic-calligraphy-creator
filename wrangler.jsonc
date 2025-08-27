@@ -26,6 +26,10 @@
     {
       "pattern": "arabic-calligraphy-generator.com/*",
       "zone_name": "arabic-calligraphy-generator.com"
+    },
+    {
+      "pattern": "prod.arabic-calligraphy-generator.com/*",
+      "zone_name": "arabic-calligraphy-generator.com"
     }
   ],
   "r2_buckets": [
