@@ -62,10 +62,13 @@ const nextConfig = {
       // Note: /bn is now supported as Bengali language, removed from redirects
       // Note: /ar routes are now handled by next-intl, so removed from redirects
       
-      // HTTP to HTTPS redirect
+      // HTTP to HTTPS redirect for production
       {
         source: '/:path*',
-        has: [{ type: 'header', key: 'x-forwarded-proto', value: 'http' }],
+        has: [
+          { type: 'header', key: 'x-forwarded-proto', value: 'http' },
+          { type: 'host', value: 'arabic-calligraphy-generator.com' }
+        ],
         destination: 'https://arabic-calligraphy-generator.com/:path*',
         permanent: true,
       },
