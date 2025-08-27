@@ -1,0 +1,38 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "arabic-calligraphy-generator-prod",
+  "compatibility_date": "2024-12-30",
+  "compatibility_flags": [
+    // Enable Node.js API
+    // see https://developers.cloudflare.com/workers/configuration/compatibility-flags/#nodejs-compatibility-flag
+    "nodejs_compat",
+    // Allow to fetch URLs in your app
+    // see https://developers.cloudflare.com/workers/configuration/compatibility-flags/#global-fetch-strictly-public
+    "global_fetch_strictly_public"
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      // The service should match the "name" of your worker
+      "service": "arabic-calligraphy-generator-prod"
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "arabic-calligraphy-generator.com/*",
+      "zone_name": "arabic-calligraphy-generator.com"
+    }
+  ],
+  "r2_buckets": [
+    // 可选：启用 R2 缓存以提升性能
+    // {
+    //   "binding": "NEXT_INC_CACHE_R2_BUCKET",
+    //   "bucket_name": "arabic-calligraphy-cache",
+    // }
+  ]
+}
