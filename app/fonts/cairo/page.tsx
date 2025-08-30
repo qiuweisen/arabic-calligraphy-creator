@@ -14,19 +14,27 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Cairo Font Free Download - Modern Arabic Sans-Serif | Perfect for UI/UX",
-  description: "Download Cairo Arabic font free! Clean, modern sans-serif perfect for websites, apps & logos. Bilingual Arabic-Latin support. Instant PNG/SVG download.",
-  keywords: "Cairo font free download, modern Arabic font, Arabic sans-serif, UI UX Arabic fonts, bilingual fonts, web fonts Arabic, clean Arabic typography",
+  title: "Cairo Arabic Font Download - Modern Sans-Serif for Web & App Design | Free Arabic Typography",
+  description: "Download Cairo Arabic font free - clean, modern sans-serif typeface perfect for websites, mobile apps, and UI design. Google Fonts compatible, bilingual Arabic-Latin support with multiple weights. Create stunning Arabic calligraphy instantly.",
+  keywords: "cairo arabic font download, modern arabic fonts, arabic sans serif font, arabic web fonts, arabic typography, ui ux arabic fonts, bilingual fonts arabic latin, google fonts arabic, arabic font generator, clean arabic typeface",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/fonts/cairo",
   },
   openGraph: {
-    title: "Cairo Font Free Download - Modern Arabic Sans-Serif | Perfect for UI/UX",
-    description: "Download Cairo Arabic font free! Clean, modern sans-serif perfect for websites, apps & logos. Bilingual Arabic-Latin support. Instant PNG/SVG download.",
+    title: "Cairo Arabic Font Download - Modern Sans-Serif for Web & App Design | Free Arabic Typography",
+    description: "Download Cairo Arabic font free - clean, modern sans-serif typeface perfect for websites, mobile apps, and UI design. Google Fonts compatible, bilingual Arabic-Latin support with multiple weights. Create stunning Arabic calligraphy instantly.",
     url: "https://arabic-calligraphy-generator.com/fonts/cairo",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
     locale: "en_US",
+    images: [
+      {
+        url: "https://arabic-calligraphy-generator.com/og-cairo-font.png",
+        width: 1200,
+        height: 630,
+        alt: "Cairo Arabic Font - Modern Sans-Serif Typography Sample"
+      }
+    ],
   },
 }
 

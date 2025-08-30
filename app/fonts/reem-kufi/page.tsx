@@ -14,19 +14,27 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Reem Kufi: Geometric Arabic Display Font",
-  description: "Discover Reem Kufi, a modern geometric Arabic font inspired by traditional Kufi calligraphy, perfect for headlines and display typography.",
-  keywords: "reem kufi font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  title: "Reem Kufi Arabic Font Download - Modern Geometric Display Font for Headlines | Free Typography",
+  description: "Download Reem Kufi Arabic font free - bold geometric display typeface inspired by traditional Kufi calligraphy. Perfect for logos, headlines, and modern branding. Create stunning Arabic display typography instantly.",
+  keywords: "reem kufi arabic font download, kufi arabic fonts, geometric display fonts arabic, modern kufi typography, arabic headline fonts, bold arabic fonts, arabic logo fonts, contemporary kufi calligraphy",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/fonts/reem-kufi",
   },
   openGraph: {
-    title: "Reem Kufi: Geometric Arabic Display Font",
-    description: "Discover Reem Kufi, a modern geometric Arabic font inspired by traditional Kufi calligraphy, perfect for headlines and display typography.",
+    title: "Reem Kufi Arabic Font Download - Modern Geometric Display Font for Headlines | Free Typography",
+    description: "Download Reem Kufi Arabic font free - bold geometric display typeface inspired by traditional Kufi calligraphy. Perfect for logos, headlines, and modern branding. Create stunning Arabic display typography instantly.",
     url: "https://arabic-calligraphy-generator.com/fonts/reem-kufi",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
     locale: "en_US",
+    images: [
+      {
+        url: "https://arabic-calligraphy-generator.com/og-reem-kufi-font.png",
+        width: 1200,
+        height: 630,
+        alt: "Reem Kufi Arabic Font - Modern Geometric Display Typography Sample"
+      }
+    ],
   },
 }
 
@@ -218,7 +226,7 @@ export default function ReemKufiFontPage() {
               ]}
             />
             
-            <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-800 hover:bg-amber-50">
+            <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-900 hover:bg-amber-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Fonts

@@ -79,7 +79,7 @@ const getCategoryColor = (category: string) => {
     "History": "bg-blue-100 text-blue-800",
     "Styles": "bg-green-100 text-green-800",
     "Digital": "bg-purple-100 text-purple-800",
-    "Masters": "bg-amber-100 text-amber-800",
+    "Masters": "bg-amber-200 text-amber-900",
     "Learning": "bg-red-100 text-red-800",
     "Culture": "bg-indigo-100 text-indigo-800"
   }
@@ -115,7 +115,7 @@ export default function BlogPage() {
 
           {/* Hero Section */}
           <header className="mb-12 text-center">
-            <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <div className="inline-flex items-center gap-2 bg-amber-200 text-amber-900 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <BookOpen className="h-4 w-4" />
               Knowledge Base
             </div>
@@ -231,7 +231,7 @@ export default function BlogPage() {
                                 {post.category}
                               </span>
                               {post.featured && (
-                                <span className="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-medium">
+                                <span className="px-2 py-1 bg-amber-200 text-amber-900 rounded-full text-xs font-medium">
                                   Featured
                                 </span>
                               )}

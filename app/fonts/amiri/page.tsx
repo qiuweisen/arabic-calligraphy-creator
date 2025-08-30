@@ -15,15 +15,15 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Amiri Font: Classical Naskh Arabic Typography",
-  description: "Discover Amiri, a revival of classical Naskh calligraphy by Dr. Khaled Hosny. Perfect for Quranic text, academic publishing, and authentic Arabic designs.",
-  keywords: "Amiri font, classical Naskh, Dr. Khaled Hosny, Bulaq Press, Arabic typography, Quranic font, Islamic calligraphy, Arabic fonts, traditional Arabic typeface, academic Arabic font",
+  title: "Amiri Arabic Font - Free Download | Classical Naskh Calligraphy",
+  description: "Download Amiri Arabic font free! Classical Naskh calligraphy perfect for Quran, books & designs. Try instantly in our generator or download now.",
+  keywords: "Amiri font download, free Arabic fonts, classical Naskh, Arabic calligraphy fonts, Islamic fonts, Quranic typography, traditional Arabic font, arabic font generator",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/fonts/amiri",
   },
   openGraph: {
-    title: "Amiri Font: Classical Naskh Arabic Typography",
-    description: "Discover Amiri, a revival of classical Naskh calligraphy by Dr. Khaled Hosny. Perfect for Quranic text, academic publishing, and authentic Arabic designs.",
+    title: "Amiri Arabic Font - Free Download | Classical Naskh Calligraphy",
+    description: "Download Amiri Arabic font free! Classical Naskh calligraphy perfect for Quran, books & designs. Try instantly in our generator.",
     url: "https://arabic-calligraphy-generator.com/fonts/amiri",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
@@ -223,12 +223,40 @@ export default function AmiriPage() {
               ]}
             />
             
-            <Button asChild variant="ghost" className="text-amber-600 hover:text-amber-800 hover:bg-amber-50 mb-6">
+            <Button asChild variant="ghost" className="text-amber-600 hover:text-amber-900 hover:bg-amber-50 mb-6">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Font Library
               </Link>
             </Button>
+
+            {/* Quick Action Bar */}
+            <div className="bg-amber-600 text-white rounded-lg p-4 mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="text-center sm:text-left">
+                <h2 className="text-xl font-bold mb-1">Ready to use Amiri?</h2>
+                <p className="text-amber-50">Download instantly or try in our generator</p>
+              </div>
+              <div className="flex gap-3">
+                <Button 
+                  size="lg" 
+                  className="bg-white text-amber-600 hover:bg-amber-50"
+                >
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Free
+                </Button>
+                <Button 
+                  asChild 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white hover:text-amber-600"
+                >
+                  <Link href="/?font=Amiri">
+                    <Type className="mr-2 h-5 w-5" />
+                    Try Now
+                  </Link>
+                </Button>
+              </div>
+            </div>
             
             <Card className="mb-8 border-amber-200 shadow-lg">
               <CardContent className="p-6 md:p-8">
@@ -259,6 +287,28 @@ export default function AmiriPage() {
                 </div>
               </CardContent>
             </Card>
+
+            {/* Page Navigation */}
+            <div className="bg-white rounded-lg border border-amber-200 p-4 mb-8">
+              <h3 className="text-lg font-semibold text-amber-800 mb-3">Quick Navigation</h3>
+              <div className="flex flex-wrap gap-2">
+                <Button variant="ghost" size="sm" asChild className="text-amber-600 hover:bg-amber-50">
+                  <a href="#distinctive-features">Features</a>
+                </Button>
+                <Button variant="ghost" size="sm" asChild className="text-amber-600 hover:bg-amber-50">
+                  <a href="#text-examples">Examples</a>
+                </Button>
+                <Button variant="ghost" size="sm" asChild className="text-amber-600 hover:bg-amber-50">
+                  <a href="#ideal-use-cases">Use Cases</a>
+                </Button>
+                <Button variant="ghost" size="sm" asChild className="text-amber-600 hover:bg-amber-50">
+                  <a href="#history-and-background">History</a>
+                </Button>
+                <Button variant="ghost" size="sm" asChild className="text-amber-600 hover:bg-amber-50">
+                  <a href="#technical-details">Technical</a>
+                </Button>
+              </div>
+            </div>
             
             <div className="prose prose-amber max-w-none">
               <h2 id="distinctive-features" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Distinctive Features of Amiri</h2>
@@ -362,11 +412,22 @@ export default function AmiriPage() {
                 ))}
               </div>
               
-              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center p-6 bg-amber-50 rounded-lg border border-amber-200">
-                 <h3 className="text-2xl font-semibold text-amber-800 text-center sm:text-left">Experience Amiri's Elegance</h3>
-                <Button asChild size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
-                  <Link href="/?font=Amiri">Use Amiri in Calligraphy Generator</Link>
-                </Button>
+              <div className="mt-12 text-center p-8 bg-gradient-to-r from-amber-100 to-orange-100 rounded-lg border border-amber-200">
+                 <h3 className="text-3xl font-bold text-amber-800 mb-4">Ready to Create with Amiri?</h3>
+                 <p className="text-lg text-amber-700 mb-6 max-w-2xl mx-auto">
+                   Experience the elegance of classical Arabic calligraphy in your designs. Download Amiri for free or try it instantly in our generator.
+                 </p>
+                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                   {fontInfo && (
+                     <DownloadButton 
+                       zipFileName={fontInfo.zipFileName}
+                       displayName={fontInfo.displayName}
+                     />
+                   )}
+                   <Button asChild size="lg" variant="outline" className="border-amber-600 text-amber-700 hover:bg-amber-50">
+                     <Link href="/?font=Amiri">Try in Calligraphy Generator</Link>
+                   </Button>
+                 </div>
               </div>
               
               <RelatedContent 

@@ -11,19 +11,27 @@ import { getContentSpecificLinks } from "@/lib/content-links"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Rakkas Font: Decorative Arabic Display Typography",
-  description: "Explore Rakkas, a decorative Arabic display font with ornamental features, ideal for artistic projects and traditional Arabic design applications.",
-  keywords: "rakkas font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  title: "Rakkas Arabic Font Download - Decorative Display Font for Artistic Designs | Free Typography",
+  description: "Download Rakkas Arabic font free - beautiful decorative display typeface perfect for artistic titles, logos, and creative projects. Ornamental Arabic typography with traditional Islamic design elements. Create stunning Arabic calligraphy.",
+  keywords: "rakkas arabic font download, decorative arabic fonts, ornamental arabic typography, artistic arabic fonts, islamic design fonts, display arabic fonts, creative arabic calligraphy, traditional arabic fonts",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/fonts/rakkas",
   },
   openGraph: {
-    title: "Rakkas Font: Decorative Arabic Display Typography",
-    description: "Explore Rakkas, a decorative Arabic display font with ornamental features, ideal for artistic projects and traditional Arabic design applications.",
+    title: "Rakkas Arabic Font Download - Decorative Display Font for Artistic Designs | Free Typography",
+    description: "Download Rakkas Arabic font free - beautiful decorative display typeface perfect for artistic titles, logos, and creative projects. Ornamental Arabic typography with traditional Islamic design elements. Create stunning Arabic calligraphy.",
     url: "https://arabic-calligraphy-generator.com/fonts/rakkas",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
     locale: "en_US",
+    images: [
+      {
+        url: "https://arabic-calligraphy-generator.com/og-rakkas-font.png",
+        width: 1200,
+        height: 630,
+        alt: "Rakkas Arabic Font - Decorative Display Typography Sample"
+      }
+    ],
   },
 }
 
@@ -119,7 +127,7 @@ export default function RakkasFontPage() {
               className="mb-6"
             />
 
-            <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-800 hover:bg-amber-50">
+            <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-900 hover:bg-amber-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Fonts

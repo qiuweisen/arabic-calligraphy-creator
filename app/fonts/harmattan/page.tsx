@@ -13,19 +13,27 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Harmattan Font: West African Arabic Typography",
-  description: "Discover Harmattan by SIL International, designed for West African Arabic scripts with support for Ajami languages and traditional letterforms.",
-  keywords: "harmattan font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  title: "Harmattan Arabic Font Download - West African Arabic Script Typography | SIL Fonts",
+  description: "Download Harmattan Arabic font free - specially designed for West African Arabic scripts and Ajami languages. SIL International design with traditional letterforms and comprehensive language support. Create authentic African Arabic typography.",
+  keywords: "harmattan arabic font download, west african arabic fonts, ajami fonts, sil international fonts, african arabic typography, traditional arabic scripts, multilingual arabic fonts, harmattan typeface",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/fonts/harmattan",
   },
   openGraph: {
-    title: "Harmattan Font: West African Arabic Typography",
-    description: "Discover Harmattan by SIL International, designed for West African Arabic scripts with support for Ajami languages and traditional letterforms.",
+    title: "Harmattan Arabic Font Download - West African Arabic Script Typography | SIL Fonts",
+    description: "Download Harmattan Arabic font free - specially designed for West African Arabic scripts and Ajami languages. SIL International design with traditional letterforms and comprehensive language support. Create authentic African Arabic typography.",
     url: "https://arabic-calligraphy-generator.com/fonts/harmattan",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
     locale: "en_US",
+    images: [
+      {
+        url: "https://arabic-calligraphy-generator.com/og-harmattan-font.png",
+        width: 1200,
+        height: 630,
+        alt: "Harmattan Arabic Font - West African Script Typography Sample"
+      }
+    ],
   },
 }
 
@@ -137,7 +145,7 @@ export default function HarmattanFontPage() {
               className="mb-6"
             />
 
-            <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-800 hover:bg-amber-50">
+            <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-900 hover:bg-amber-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Fonts

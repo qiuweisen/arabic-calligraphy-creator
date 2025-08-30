@@ -14,19 +14,27 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Lateef Font: Extended Arabic Script Typography",
-  description: "Discover Lateef by SIL International, an Arabic font with extensive character support for multilingual projects and minority language documentation.",
-  keywords: "lateef font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  title: "Lateef Arabic Font Download - Elegant Nastaliq Style for Urdu & Poetry | Free Typography",
+  description: "Download Lateef Arabic font free - elegant cursive Nastaliq style perfect for Urdu poetry, Sindhi text, and literary works. SIL International design with extensive character support. Create beautiful Arabic calligraphy online.",
+  keywords: "lateef arabic font download, urdu fonts, sindhi fonts, nastaliq arabic font, arabic poetry fonts, cursive arabic typography, urdu calligraphy, south asian fonts, sil fonts, arabic literary fonts",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/fonts/lateef",
   },
   openGraph: {
-    title: "Lateef Font: Extended Arabic Script Typography",
-    description: "Discover Lateef by SIL International, an Arabic font with extensive character support for multilingual projects and minority language documentation.",
+    title: "Lateef Arabic Font Download - Elegant Nastaliq Style for Urdu & Poetry | Free Typography",
+    description: "Download Lateef Arabic font free - elegant cursive Nastaliq style perfect for Urdu poetry, Sindhi text, and literary works. SIL International design with extensive character support. Create beautiful Arabic calligraphy online.",
     url: "https://arabic-calligraphy-generator.com/fonts/lateef",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
     locale: "en_US",
+    images: [
+      {
+        url: "https://arabic-calligraphy-generator.com/og-lateef-font.png",
+        width: 1200,
+        height: 630,
+        alt: "Lateef Arabic Font - Elegant Nastaliq Style Typography Sample"
+      }
+    ],
   },
 }
 
@@ -205,7 +213,7 @@ export default function LateefFontPage() {
               ]}
               className="mb-6"
             />
-            <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-800 hover:bg-amber-50">
+            <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-900 hover:bg-amber-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Fonts

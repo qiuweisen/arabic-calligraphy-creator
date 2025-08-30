@@ -15,19 +15,27 @@ import { Breadcrumb } from "@/components/breadcrumb"
 import { GeneratorCTA } from "@/components/generator-cta"
 
 export const metadata: Metadata = {
-  title: "Noto Naskh Arabic Font Free Download - Google's Best Arabic Font",
-  description: "Download Noto Naskh Arabic font free! Google's premium Arabic font with perfect screen readability. Supports all Arabic languages. Free PNG/SVG download.",
-  keywords: "Noto Naskh Arabic font free download, Google Arabic fonts, best Arabic fonts, screen optimized Arabic, free Google fonts, Arabic web fonts",
+  title: "Noto Naskh Arabic Font Download - Google's Premium Arabic Typography for Web & Print",
+  description: "Download Noto Naskh Arabic font free - Google's premium Naskh typeface with perfect screen readability and complete Arabic language support. Professional quality for books, websites, and documents. Create beautiful Arabic calligraphy.",
+  keywords: "noto naskh arabic font download, google arabic fonts, premium arabic typography, naskh arabic fonts, google fonts arabic, professional arabic fonts, web safe arabic fonts, readable arabic typography",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/fonts/noto-naskh-arabic",
   },
   openGraph: {
-    title: "Noto Naskh Arabic Font Free Download - Google's Best Arabic Font",
-    description: "Download Noto Naskh Arabic font free! Google's premium Arabic font with perfect screen readability. Supports all Arabic languages. Free PNG/SVG download.",
+    title: "Noto Naskh Arabic Font Download - Google's Premium Arabic Typography for Web & Print",
+    description: "Download Noto Naskh Arabic font free - Google's premium Naskh typeface with perfect screen readability and complete Arabic language support. Professional quality for books, websites, and documents. Create beautiful Arabic calligraphy.",
     url: "https://arabic-calligraphy-generator.com/fonts/noto-naskh-arabic",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
     locale: "en_US",
+    images: [
+      {
+        url: "https://arabic-calligraphy-generator.com/og-noto-naskh-arabic-font.png",
+        width: 1200,
+        height: 630,
+        alt: "Noto Naskh Arabic Font - Google's Premium Typography Sample"
+      }
+    ],
   },
 }
 
@@ -221,7 +229,7 @@ export default function NotoNaskhArabicFontPage() {
               className="mb-6"
             />
             
-            <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-800 hover:bg-amber-50">
+            <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-900 hover:bg-amber-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Fonts

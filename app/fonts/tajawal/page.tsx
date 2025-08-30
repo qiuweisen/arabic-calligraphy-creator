@@ -14,19 +14,27 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Tajawal Font: Geometric Arabic Sans-Serif",
-  description: "Discover Tajawal, a geometric Arabic sans-serif font perfect for modern bilingual designs, user interfaces, and contemporary Arabic typography.",
-  keywords: "tajawal font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  title: "Tajawal Arabic Font Download - Modern Geometric Sans-Serif for UI Design | Free Typography",
+  description: "Download Tajawal Arabic font free - clean geometric sans-serif perfect for modern websites, mobile apps, and corporate branding. Bilingual Arabic-Latin support with multiple weights. Create professional Arabic typography instantly.",
+  keywords: "tajawal arabic font download, geometric arabic fonts, modern arabic typography, arabic ui fonts, bilingual fonts arabic, corporate arabic fonts, geometric sans serif arabic, contemporary arabic design",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/fonts/tajawal",
   },
   openGraph: {
-    title: "Tajawal Font: Geometric Arabic Sans-Serif",
-    description: "Discover Tajawal, a geometric Arabic sans-serif font perfect for modern bilingual designs, user interfaces, and contemporary Arabic typography.",
+    title: "Tajawal Arabic Font Download - Modern Geometric Sans-Serif for UI Design | Free Typography",
+    description: "Download Tajawal Arabic font free - clean geometric sans-serif perfect for modern websites, mobile apps, and corporate branding. Bilingual Arabic-Latin support with multiple weights. Create professional Arabic typography instantly.",
     url: "https://arabic-calligraphy-generator.com/fonts/tajawal",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
     locale: "en_US",
+    images: [
+      {
+        url: "https://arabic-calligraphy-generator.com/og-tajawal-font.png",
+        width: 1200,
+        height: 630,
+        alt: "Tajawal Arabic Font - Modern Geometric Typography Sample"
+      }
+    ],
   },
 }
 

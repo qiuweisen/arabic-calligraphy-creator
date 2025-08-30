@@ -14,19 +14,27 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Mada Font: Clean Modern Arabic Typography",
-  description: "Explore Mada, a minimalist Arabic font designed for clarity and readability in digital and print media with contemporary geometric styling.",
-  keywords: "mada font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  title: "Mada Arabic Font Download - Clean Minimalist Typography for Modern Design | Free Font",
+  description: "Download Mada Arabic font free - clean, minimalist typeface with contemporary geometric styling. Perfect for modern websites, magazines, and digital media. Multiple weights available. Create elegant Arabic typography instantly.",
+  keywords: "mada arabic font download, minimalist arabic fonts, clean arabic typography, modern arabic design, geometric arabic fonts, contemporary arabic fonts, readable arabic typeface, digital arabic fonts",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/fonts/mada",
   },
   openGraph: {
-    title: "Mada Font: Clean Modern Arabic Typography",
-    description: "Explore Mada, a minimalist Arabic font designed for clarity and readability in digital and print media with contemporary geometric styling.",
+    title: "Mada Arabic Font Download - Clean Minimalist Typography for Modern Design | Free Font",
+    description: "Download Mada Arabic font free - clean, minimalist typeface with contemporary geometric styling. Perfect for modern websites, magazines, and digital media. Multiple weights available. Create elegant Arabic typography instantly.",
     url: "https://arabic-calligraphy-generator.com/fonts/mada",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
     locale: "en_US",
+    images: [
+      {
+        url: "https://arabic-calligraphy-generator.com/og-mada-font.png",
+        width: 1200,
+        height: 630,
+        alt: "Mada Arabic Font - Clean Minimalist Typography Sample"
+      }
+    ],
   },
 }
 

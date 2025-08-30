@@ -108,7 +108,7 @@ export default function GuidesPage() {
 
           {/* Hero Section */}
           <header className="mb-12 text-center">
-            <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <div className="inline-flex items-center gap-2 bg-amber-200 text-amber-900 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <GraduationCap className="h-4 w-4" />
               Learn & Master
             </div>
@@ -165,7 +165,7 @@ export default function GuidesPage() {
                           <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(guide.difficulty)}`}>
                             {guide.difficulty}
                           </span>
-                          <span className="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-medium">
+                          <span className="px-2 py-1 bg-amber-200 text-amber-900 rounded-full text-xs font-medium">
                             Popular
                           </span>
                         </div>

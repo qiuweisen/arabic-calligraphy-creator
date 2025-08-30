@@ -12,19 +12,27 @@ import { getContentSpecificLinks } from "@/lib/content-links"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Aref Ruqaa: Traditional Arabic Handwriting Font",
-  description: "Explore Aref Ruqaa, a digital revival of traditional Arabic Ruqaa handwriting style, perfect for informal texts and authentic Arabic designs.",
-  keywords: "aref ruqaa font, Arabic typography, Arabic fonts, Islamic calligraphy, Arabic script, digital typography, web fonts",
+  title: "Aref Ruqaa Arabic Font Download - Traditional Handwriting Style | Authentic Typography",
+  description: "Download Aref Ruqaa Arabic font free - authentic traditional handwriting style based on classical Ruqaa calligraphy. Perfect for informal texts, personal projects, and traditional Arabic designs. Create natural handwritten Arabic typography.",
+  keywords: "aref ruqaa arabic font download, ruqaa arabic fonts, traditional arabic handwriting, arabic handwriting fonts, authentic arabic typography, classical ruqaa style, informal arabic fonts, handwritten arabic",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/fonts/aref-ruqaa",
   },
   openGraph: {
-    title: "Aref Ruqaa: Traditional Arabic Handwriting Font",
-    description: "Explore Aref Ruqaa, a digital revival of traditional Arabic Ruqaa handwriting style, perfect for informal texts and authentic Arabic designs.",
+    title: "Aref Ruqaa Arabic Font Download - Traditional Handwriting Style | Authentic Typography",
+    description: "Download Aref Ruqaa Arabic font free - authentic traditional handwriting style based on classical Ruqaa calligraphy. Perfect for informal texts, personal projects, and traditional Arabic designs. Create natural handwritten Arabic typography.",
     url: "https://arabic-calligraphy-generator.com/fonts/aref-ruqaa",
     siteName: "Arabic Calligraphy Generator",
     type: "article",
     locale: "en_US",
+    images: [
+      {
+        url: "https://arabic-calligraphy-generator.com/og-aref-ruqaa-font.png",
+        width: 1200,
+        height: 630,
+        alt: "Aref Ruqaa Arabic Font - Traditional Handwriting Typography Sample"
+      }
+    ],
   },
 }
 
@@ -206,7 +214,7 @@ export default function ArefRuqaaFontPage() {
               className="mb-6"
             />
 
-            <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-800 hover:bg-amber-50">
+            <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-900 hover:bg-amber-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Fonts

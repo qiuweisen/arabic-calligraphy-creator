@@ -10,9 +10,19 @@ import { GeneratorCTA } from "@/components/generator-cta"
 import { MessageCircle, BookOpen, Star, HelpCircle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Arabic Calligraphy FAQ - Free Generator Help & Support Guide",
-  description: "Get instant answers about our free Arabic calligraphy generator! Font selection, downloads, commercial use, troubleshooting. Complete user guide.",
-  keywords: "Arabic calligraphy FAQ, free generator help, Arabic font questions, calligraphy support, generator guide, Arabic typography help",
+  title: "Arabic Calligraphy Generator FAQ - Free Tool Help & Font Questions",
+  description: "Get instant answers about our free Arabic calligraphy generator! Font selection, downloads, commercial use, troubleshooting. Complete user guide & support.",
+  keywords: "Arabic calligraphy FAQ, generator help, Arabic font questions, free calligraphy tool, font downloads, commercial use, generator support, Arabic typography help",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/faq",
+  },
+  openGraph: {
+    title: "Arabic Calligraphy Generator FAQ - Get Instant Help",
+    description: "Frequently asked questions about our free Arabic calligraphy generator. Learn about fonts, downloads, commercial use, and troubleshooting.",
+    url: "https://arabic-calligraphy-generator.com/faq",
+    siteName: "Arabic Calligraphy Generator",
+    type: "website",
+  },
 }
 
 const faqs = [
@@ -83,17 +93,28 @@ export default function FAQPage() {
   const generatorQuestionsStartIndex = 3;
   const generatorQuestionsEndIndex = 10;
 
+  // Structured data for SEO
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "Arabic Calligraphy Generator FAQ",
+    "description": "Frequently asked questions about our free Arabic calligraphy generator, fonts, downloads, and usage guide.",
+    "url": "https://arabic-calligraphy-generator.com/faq",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer.replace(/<[^>]*>/g, '') // Strip HTML tags for structured data
+      }
+    }))
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "name": "Arabic Calligraphy FAQ",
-      "description": "Frequently asked questions about Arabic calligraphy, our generator tool, fonts, and design techniques. Get expert answers to common questions.",
-      "url": "https://arabic-calligraphy-generator.com/faq"
-}) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
       />
       <StaticNavbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
@@ -108,7 +129,7 @@ export default function FAQPage() {
 
           {/* Hero Section */}
           <header className="mb-12 text-center">
-            <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <div className="inline-flex items-center gap-2 bg-amber-200 text-amber-900 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <HelpCircle className="h-4 w-4" />
               Need Help?
             </div>
@@ -122,27 +143,27 @@ export default function FAQPage() {
 
           {/* Quick Action Cards */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <Card className="text-center p-6 bg-gradient-to-b from-blue-50 to-blue-100 border-blue-200 hover:shadow-lg transition-shadow">
+            <Card className="text-center p-6 bg-gradient-to-b from-blue-50 to-blue-100 border-blue-200 hover:shadow-lg transition-shadow group">
               <Star className="h-8 w-8 text-blue-600 mx-auto mb-3" />
               <h3 className="font-semibold text-blue-900 mb-2">Quick Start</h3>
               <p className="text-sm text-blue-700 mb-4">Create your first calligraphy instantly</p>
-              <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700">
+              <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-md">
                 <Link href="/">Start Now</Link>
               </Button>
             </Card>
-            <Card className="text-center p-6 bg-gradient-to-b from-green-50 to-green-100 border-green-200 hover:shadow-lg transition-shadow">
+            <Card className="text-center p-6 bg-gradient-to-b from-green-50 to-green-100 border-green-200 hover:shadow-lg transition-shadow group">
               <BookOpen className="h-8 w-8 text-green-600 mx-auto mb-3" />
               <h3 className="font-semibold text-green-900 mb-2">Browse Examples</h3>
               <p className="text-sm text-green-700 mb-4">View beautiful calligraphy templates</p>
-              <Button variant="outline" size="sm" asChild>
+              <Button size="sm" asChild className="bg-green-600 hover:bg-green-700 text-white font-semibold border-2 border-green-600 shadow-md">
                 <Link href="/templates">View Templates</Link>
               </Button>
             </Card>
-            <Card className="text-center p-6 bg-gradient-to-b from-purple-50 to-purple-100 border-purple-200 hover:shadow-lg transition-shadow">
+            <Card className="text-center p-6 bg-gradient-to-b from-purple-50 to-purple-100 border-purple-200 hover:shadow-lg transition-shadow group">
               <MessageCircle className="h-8 w-8 text-purple-600 mx-auto mb-3" />
               <h3 className="font-semibold text-purple-900 mb-2">Learning Guides</h3>
               <p className="text-sm text-purple-700 mb-4">Learn about calligraphy art and techniques</p>
-              <Button variant="outline" size="sm" asChild>
+              <Button size="sm" asChild className="bg-purple-600 hover:bg-purple-700 text-white font-semibold border-2 border-purple-600 shadow-md">
                 <Link href="/guides">Learn More</Link>
               </Button>
             </Card>
