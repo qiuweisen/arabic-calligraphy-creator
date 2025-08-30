@@ -1,6 +1,6 @@
 import type React from "react"
 import "@/app/globals.css"
-import { Inter, Amiri } from "next/font/google"
+import { Inter } from "next/font/google"
 import Script from "next/script"
 import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -10,9 +10,8 @@ import { localeConfig } from "@/i18n"
 import { headers } from "next/headers"
 import type { Metadata } from 'next'
 
-// 字体配置 - 禁用自动预加载，使用CDN
+// 字体配置 - 只保留Inter，阿拉伯字体使用CDN
 const inter = Inter({ subsets: ["latin"], display: 'swap', variable: "--font-inter", preload: false })
-const amiri = Amiri({ subsets: ["latin", "arabic"], display: 'swap', weight: ["400", "700"], variable: "--font-amiri", preload: false })
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://arabic-calligraphy-generator.com'
 const cdnBaseUrl = 'https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev'
@@ -85,21 +84,20 @@ export default async function RootLayout({
   const dir = localeConfig[locale]?.dir || 'ltr';
 
   return (
-    <html className={`${inter.variable} ${amiri.variable}`} dir={dir} suppressHydrationWarning>
+    <html className={`${inter.variable}`} dir={dir} suppressHydrationWarning>
       <head>
-        {/* 字体预连接优化 */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* CDN字体加载策略 */}
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <link rel="preconnect" href="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev" />
+            <link rel="dns-prefetch" href="https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev" />
+          </>
+        )}
         
-        {/* 关键字体预加载 - 使用fallback平衡CLS和LCP */}
+        {/* 加载CDN阿拉伯字体CSS */}
         <link 
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=fallback&subset=arabic,latin"
-          as="style"
-        />
-        <link 
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=fallback&subset=arabic,latin"
+          rel="stylesheet" 
+          href="/arabic-fonts-cdn.css"
         />
       </head>
       <body className={`${inter.className} font-sans`}>

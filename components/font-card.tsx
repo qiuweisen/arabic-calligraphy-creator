@@ -1,5 +1,6 @@
 'use client';
 
+import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -17,7 +18,7 @@ interface FontCardProps {
   previewText?: string;
 }
 
-export function FontCard({ 
+export const FontCard = React.memo(function FontCard({ 
   name, 
   slug, 
   description, 
@@ -91,4 +92,4 @@ export function FontCard({
       </Card>
     </div>
   );
-} 
+});

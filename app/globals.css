@@ -64,6 +64,58 @@
 }
 
 .font-arabic {
-  font-family: "Amiri", "Scheherazade New", "Noto Naskh Arabic", serif;
+  font-family: "Amiri", "Scheherazade New", "Noto Naskh Arabic", "Times New Roman", "DejaVu Serif", serif;
   font-display: swap; /* 优化字体加载 */
+}
+
+/* 预览区域防止CLS的基础样式 */
+.arabic-preview {
+  min-height: 120px; /* 为常见文字预留最小高度 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: none; /* 禁用过渡动画减少视觉干扰 */
+}
+
+/* 字体加载状态提示 */
+.font-loading-indicator {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.font-loading-indicator::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #ddd;
+  border-top: 2px solid #8B5A2B;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 字体特定的优化兜底 */
+.font-amiri-fallback {
+  font-family: "Times New Roman", "DejaVu Serif", serif;
+  letter-spacing: 0.02em; /* 轻微字间距调整匹配Amiri */
+  line-height: 1.6; /* 匹配Amiri的行高特征 */
+}
+
+.font-cairo-fallback {
+  font-family: "Arial", "Helvetica Neue", sans-serif;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+}
+
+.font-kufi-fallback {
+  font-family: "Arial Black", "Helvetica", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.03em;
 }

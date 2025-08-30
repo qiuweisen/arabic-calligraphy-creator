@@ -145,7 +145,7 @@ export default function BlogPage() {
                             Font
                           </span>
                         </div>
-                        <h3 className="text-lg font-semibold text-amber-800 group-hover:text-amber-900 mb-2">
+                        <h3 className="text-lg font-semibold text-amber-800 group-hover:text-amber-800 mb-2">
                           {font.title}
                         </h3>
                         <p className="text-amber-600 text-sm mb-3">

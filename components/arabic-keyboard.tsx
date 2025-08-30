@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import React, { useState, useCallback } from "react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -17,16 +17,16 @@ const ARABIC_KEYS = [
 
 const ARABIC_SPECIAL_CHARS = ["،", "؛", ":", ".", "؟", "!", " ", "-", "_", "«", "»"]
 
-export function ArabicKeyboard({ onKeyPress }: ArabicKeyboardProps) {
+export const ArabicKeyboard = React.memo(function ArabicKeyboard({ onKeyPress }: ArabicKeyboardProps) {
   const [isShifted, setIsShifted] = useState(false)
 
-  const handleKeyPress = (char: string) => {
+  const handleKeyPress = useCallback((char: string) => {
     onKeyPress(char)
-  }
+  }, [onKeyPress])
 
-  const toggleShift = () => {
+  const toggleShift = useCallback(() => {
     setIsShifted(!isShifted)
-  }
+  }, [isShifted])
 
   return (
     <div className="bg-amber-50/70 border border-amber-200 rounded-lg p-3 w-full transition-all animate-in fade-in">
@@ -76,4 +76,4 @@ export function ArabicKeyboard({ onKeyPress }: ArabicKeyboardProps) {
       </div>
     </div>
   )
-}
+});

@@ -59,32 +59,32 @@ const TEXT_EXAMPLES = [
 
 const FONT_FEATURES = [
   {
-    icon: <Feather className="h-8 w-8 text-cyan-600 mb-2" />,
+    icon: <Feather className="h-8 w-8 text-amber-700 mb-2" />,
     title: "Elegant Naskh Inspiration",
     description: "Rooted in the grace of traditional Naskh calligraphy, refined for a sophisticated modern appearance."
   },
   {
-    icon: <Sparkles className="h-8 w-8 text-cyan-600 mb-2" />,
+    icon: <Sparkles className="h-8 w-8 text-amber-700 mb-2" />,
     title: "Modern & Open Forms",
     description: "Features more open counters and contemporary proportions compared to purely classical Naskh styles."
   },
   {
-    icon: <Palette className="h-8 w-8 text-cyan-600 mb-2" />,
+    icon: <Palette className="h-8 w-8 text-amber-700 mb-2" />,
     title: "Sophisticated Aesthetic",
     description: "Offers a refined and cultured look, suitable for projects requiring a touch of class and distinction."
   },
   {
-    icon: <Type className="h-8 w-8 text-cyan-600 mb-2" />,
+    icon: <Type className="h-8 w-8 text-amber-700 mb-2" />,
     title: "Good for Headlines & Display",
     description: "Excels in headlines, titles, and short to medium text blocks where its elegance can be appreciated."
   },
   {
-    icon: <Layers className="h-8 w-8 text-cyan-600 mb-2" />,
+    icon: <Layers className="h-8 w-8 text-amber-700 mb-2" />,
     title: "Multiple Weights",
     description: "Available in several weights (e.g., Regular, Medium, SemiBold, Bold) for typographic versatility."
   },
   {
-    icon: <Award className="h-8 w-8 text-cyan-600 mb-2" />,
+    icon: <Award className="h-8 w-8 text-amber-700 mb-2" />,
     title: "Designed by Mohamed Gaber",
     description: "A notable work by Egyptian type designer Mohamed Gaber, known for his contributions to modern Arabic typography."
   }
@@ -94,32 +94,32 @@ const IDEAL_USE_CASES = [
   {
     title: "Branding for Premium & Cultural Entities",
     description: "Lends an air of sophistication to logos, brand identities, and materials for cultural institutions or luxury goods.",
-    icon: <Award className="h-5 w-5 text-cyan-700" />
+    icon: <Award className="h-5 w-5 text-amber-700" />
   },
   {
     title: "Book Covers & Editorial Design",
     description: "Creates elegant and inviting titles and headings for books, magazines, and high-quality print publications.",
-    icon: <BookOpen className="h-5 w-5 text-cyan-700" />
+    icon: <BookOpen className="h-5 w-5 text-amber-700" />
   },
   {
     title: "Formal Invitations & Stationery",
     description: "Adds a touch of class and formality to wedding invitations, official correspondence, and certificates.",
-    icon: <Feather className="h-5 w-5 text-cyan-700" />
+    icon: <Feather className="h-5 w-5 text-amber-700" />
   },
   {
     title: "Website Headlines & Feature Text",
     description: "Elevates the visual appeal of websites with sophisticated headlines and introductory paragraphs.",
-    icon: <Type className="h-5 w-5 text-cyan-700" />
+    icon: <Type className="h-5 w-5 text-amber-700" />
   },
   {
     title: "Packaging for High-End Products",
     description: "Enhances the perceived value of luxury products through refined typographic packaging design.",
-    icon: <Palette className="h-5 w-5 text-cyan-700" />
+    icon: <Palette className="h-5 w-5 text-amber-700" />
   },
   {
     title: "Cultural & Art Event Promotion",
     description: "Its elegant Naskh roots make it perfect for promoting art exhibitions, theatre, and cultural festivals.",
-    icon: <Sparkles className="h-5 w-5 text-cyan-700" />
+    icon: <Sparkles className="h-5 w-5 text-amber-700" />
   }
 ];
 
@@ -219,7 +219,7 @@ export default function ElMessiriFontPage() {
               className="mb-6"
             />
 
-            <Button asChild variant="ghost" className="mb-4 text-cyan-600 hover:text-cyan-800 hover:bg-cyan-50">
+            <Button asChild variant="ghost" className="mb-4 text-amber-700 hover:text-amber-800 hover:bg-cyan-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Fonts
@@ -235,9 +235,9 @@ export default function ElMessiriFontPage() {
                     </div>
                   </div>
                   <div className="w-full md:w-2/3">
-                    <span className="text-xs text-cyan-600 font-medium px-2 py-1 bg-cyan-50 rounded-full mb-2 inline-block">Elegant Naskh (Modern)</span>
-                    <h1 className="text-4xl md:text-5xl font-bold text-cyan-800 mt-1 mb-3">El Messiri Font</h1>
-                    <p className="text-lg text-cyan-700 mb-6 leading-relaxed">
+                    <span className="text-xs text-amber-700 font-medium px-2 py-1 bg-cyan-50 rounded-full mb-2 inline-block">Elegant Naskh (Modern)</span>
+                    <h1 className="text-4xl md:text-5xl font-bold text-amber-800 mt-1 mb-3">El Messiri Font</h1>
+                    <p className="text-lg text-amber-700 mb-6 leading-relaxed">
                       El Messiri is an elegant Arabic typeface by Mohamed Gaber, inspired by traditional Naskh calligraphy but infused with modern, open forms. It offers sophistication for headlines, branding, and cultural projects.
                     </p>
                     <div className="flex gap-4">
@@ -257,26 +257,26 @@ export default function ElMessiriFontPage() {
             </Card>
 
             <div className="prose prose-cyan max-w-none">
-              <h2 id="distinctive-features" className="text-3xl font-bold text-cyan-800 mt-12 mb-6">Distinctive Features of El Messiri</h2>
+              <h2 id="distinctive-features" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Distinctive Features of El Messiri</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                 {FONT_FEATURES.map((feature) => (
                   <Card key={feature.title} className="border-cyan-200 flex flex-col bg-white">
                     <CardHeader className="items-center text-center">
                       {feature.icon}
-                      <CardTitle className="text-xl text-cyan-800">{feature.title}</CardTitle>
+                      <CardTitle className="text-xl text-amber-800">{feature.title}</CardTitle>
                     </CardHeader>
                     <CardContent className="text-center flex-grow">
-                      <p className="text-cyan-700 text-sm">{feature.description}</p>
+                      <p className="text-amber-700 text-sm">{feature.description}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
-              <h2 id="design-philosophy" className="text-3xl font-bold text-cyan-800 mt-12 mb-6">Design Philosophy: Graceful Naskh for the Modern Era</h2>
+              <h2 id="design-philosophy" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Design Philosophy: Graceful Naskh for the Modern Era</h2>
               <Card className="border-cyan-200 mb-12 bg-white">
-                <CardContent className="p-6 md:p-8 space-y-4 text-cyan-700 leading-relaxed">
+                <CardContent className="p-6 md:p-8 space-y-4 text-amber-700 leading-relaxed">
                   <p>
-                    El Messiri (المسيري), designed by the prominent Egyptian type designer <strong className="text-cyan-800">Mohamed Gaber</strong>, is a typeface that embodies elegance and a deep respect for the Naskh calligraphic tradition, skillfully adapted for contemporary usage. It seeks to provide a sophisticated yet highly usable Arabic font that carries the grace of classical forms into modern design contexts.
+                    El Messiri (المسيري), designed by the prominent Egyptian type designer <strong className="text-amber-800">Mohamed Gaber</strong>, is a typeface that embodies elegance and a deep respect for the Naskh calligraphic tradition, skillfully adapted for contemporary usage. It seeks to provide a sophisticated yet highly usable Arabic font that carries the grace of classical forms into modern design contexts.
                   </p>
                   <p>
                     The design is characterized by its refined letterforms, which, while rooted in Naskh, feature more open counters and slightly modernized proportions to enhance clarity and aesthetic appeal in digital and print media. El Messiri often strikes a balance between the fluidity of traditional calligraphy and the structured needs of a versatile typeface, making it suitable for headlines, subheadings, and even short blocks of text where a touch of distinction is desired.
@@ -287,11 +287,11 @@ export default function ElMessiriFontPage() {
                 </CardContent>
               </Card>
 
-              <h2 id="alphabet-showcase" className="text-3xl font-bold text-cyan-800 mt-12 mb-6">El Messiri Alphabet Showcase</h2>
+              <h2 id="alphabet-showcase" className="text-3xl font-bold text-amber-800 mt-12 mb-6">El Messiri Alphabet Showcase</h2>
               <Card className="border-cyan-200 mb-12 bg-white">
                 <CardHeader>
-                  <CardTitle className="text-xl text-cyan-800">Elegant & Refined Naskh Forms</CardTitle>
-                  <CardDescription className="text-cyan-600">Observe the graceful, Naskh-inspired letterforms of El Messiri.</CardDescription>
+                  <CardTitle className="text-xl text-amber-800">Elegant & Refined Naskh Forms</CardTitle>
+                  <CardDescription className="text-amber-700">Observe the graceful, Naskh-inspired letterforms of El Messiri.</CardDescription>
                 </CardHeader>
                 <CardContent className="p-6">
                   <div
@@ -303,7 +303,7 @@ export default function ElMessiriFontPage() {
                 </CardContent>
               </Card>
 
-              <h2 id="text-examples" className="text-3xl font-bold text-cyan-800 mt-12 mb-6">El Messiri in Action: Elegant Examples</h2>
+              <h2 id="text-examples" className="text-3xl font-bold text-amber-800 mt-12 mb-6">El Messiri in Action: Elegant Examples</h2>
               <Tabs defaultValue={TEXT_EXAMPLES[0].id} className="w-full mb-12">
                 <TabsList className="grid w-full" style={{ gridTemplateColumns: `repeat(${TEXT_EXAMPLES.length}, 1fr)` }}>
                   {TEXT_EXAMPLES.map((example, index) => (
@@ -322,44 +322,44 @@ export default function ElMessiriFontPage() {
                         >
                           {example.text}
                         </div>
-                        <p className="text-center font-medium text-cyan-700 mb-2">{example.translation}</p>
-                        <p className="text-center text-sm text-cyan-600">{example.context}</p>
+                        <p className="text-center font-medium text-amber-700 mb-2">{example.translation}</p>
+                        <p className="text-center text-sm text-amber-700">{example.context}</p>
                       </CardContent>
                     </Card>
                   </TabsContent>
                 ))}
               </Tabs>
 
-              <h2 id="use-cases" className="text-3xl font-bold text-cyan-800 mt-12 mb-6">Ideal Use Cases for El Messiri</h2>
+              <h2 id="use-cases" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Ideal Use Cases for El Messiri</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 {IDEAL_USE_CASES.map((useCase) => (
                   <Card key={useCase.title} className="border-cyan-200 flex bg-white">
                     <div className="p-6 pr-0 flex items-center">{useCase.icon}</div>
                     <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold text-cyan-800 mb-1">{useCase.title}</h3>
-                      <p className="text-cyan-700 text-sm">{useCase.description}</p>
+                      <h3 className="text-lg font-semibold text-amber-800 mb-1">{useCase.title}</h3>
+                      <p className="text-amber-700 text-sm">{useCase.description}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
-              <h2 id="technical-details" className="text-3xl font-bold text-cyan-800 mt-12 mb-6">Technical Specifications</h2>
+              <h2 id="technical-details" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Technical Specifications</h2>
               <div className="space-y-6 mb-12">
                 {TECHNICAL_DETAILS.map((detail) => (
                   <Card key={detail.title} className="border-cyan-200 bg-white">
                     <CardHeader>
-                      <CardTitle className="text-xl text-cyan-800">{detail.title}</CardTitle>
+                      <CardTitle className="text-xl text-amber-800">{detail.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-lg text-cyan-700 mb-1">{detail.value}</p>
-                      {detail.description && <p className="text-sm text-cyan-600">{detail.description}</p>}
+                      <p className="text-lg text-amber-700 mb-1">{detail.value}</p>
+                      {detail.description && <p className="text-sm text-amber-700">{detail.description}</p>}
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
               <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center p-6 bg-cyan-50 rounded-lg border border-cyan-200">
-                 <h3 className="text-2xl font-semibold text-cyan-800 text-center sm:text-left">Add Elegance with El Messiri</h3>
+                 <h3 className="text-2xl font-semibold text-amber-800 text-center sm:text-left">Add Elegance with El Messiri</h3>
                 <Button asChild size="lg" className="bg-cyan-600 hover:bg-cyan-700 text-white">
                   <Link href="/?font=El%20Messiri">Use El Messiri in Calligraphy Generator</Link>
                 </Button>

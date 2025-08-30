@@ -28,7 +28,7 @@ export function VideoShowcase() {
             <h3 className="text-white text-xl md:text-2xl font-bold">
               See How to Create Beautiful Arabic Calligraphy in 2 Minutes
             </h3>
-            <p className="text-amber-100 mt-2">
+            <p className="text-amber-600 mt-2">
               Watch our quick tutorial to learn all the features of our calligraphy generator
             </p>
           </div>

@@ -144,7 +144,7 @@ export default function FreeArabicFontsPage() {
           {/* License Information */}
           <Card className="mb-12 border-emerald-200 shadow-lg">
             <CardHeader className="bg-gradient-to-r from-emerald-100 to-teal-100">
-              <CardTitle className="text-2xl text-emerald-800">
+              <CardTitle className="text-2xl text-emerald-600">
                 📄 Licensing & Usage Rights
               </CardTitle>
             </CardHeader>
@@ -195,7 +195,7 @@ export default function FreeArabicFontsPage() {
                     {/* Font Preview */}
                     <div className="text-center">
                       <div className="bg-white border-2 border-gray-200 rounded-lg p-6 mb-4">
-                        <div className="text-3xl font-bold text-gray-800 mb-2" style={{fontFamily: 'serif'}}>
+                        <div className="text-3xl font-bold text-gray-900 mb-2" style={{fontFamily: 'serif'}}>
                           {font.previewText}
                         </div>
                         <div className="text-lg text-gray-600">
@@ -206,7 +206,7 @@ export default function FreeArabicFontsPage() {
                         {[...Array(5)].map((_, i) => (
                           <Star 
                             key={i} 
-                            className={`h-4 w-4 ${i < font.rating ? 'text-yellow-500 fill-current' : 'text-gray-300'}`} 
+                            className={`h-4 w-4 ${i < font.rating ? 'text-amber-600 fill-current' : 'text-gray-600'}`} 
                           />
                         ))}
                         <span className="text-sm text-gray-600 ml-2">({font.downloads} downloads)</span>
@@ -218,23 +218,23 @@ export default function FreeArabicFontsPage() {
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900 mb-2">{font.name}</h3>
                         <div className="flex items-center space-x-4 mb-3">
-                          <span className="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium">
+                          <span className="bg-emerald-100 text-emerald-600 px-3 py-1 rounded-full text-sm font-medium">
                             {font.category}
                           </span>
-                          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                          <span className="bg-blue-100 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">
                             {font.license}
                           </span>
                         </div>
-                        <p className="text-gray-700 mb-4">{font.description}</p>
+                        <p className="text-gray-600 mb-4">{font.description}</p>
                       </div>
 
                       <div>
-                        <h4 className="font-semibold text-gray-800 mb-2">Key Features:</h4>
+                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <div className="flex flex-wrap gap-2">
                           {font.features.map((feature, featureIndex) => (
                             <span 
                               key={featureIndex}
-                              className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm"
+                              className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-sm"
                             >
                               {feature}
                             </span>
@@ -256,7 +256,7 @@ export default function FreeArabicFontsPage() {
                           Try Online
                         </Button>
                       </Link>
-                      <div className="text-xs text-gray-500">
+                      <div className="text-xs text-gray-600">
                         Available in multiple formats:<br />
                         TTF, OTF, WOFF, WOFF2
                       </div>
@@ -270,21 +270,21 @@ export default function FreeArabicFontsPage() {
           {/* Installation Guide */}
           <Card className="mt-12 border-emerald-200 shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl text-emerald-800">
+              <CardTitle className="text-2xl text-emerald-600">
                 💻 Font Installation Guide
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="prose max-w-none">
-                <p className="text-gray-700 mb-6">
+                <p className="text-gray-600 mb-6">
                   Follow these simple steps to install Arabic fonts on your system and start using them 
                   in your design projects, documents, and applications.
                 </p>
 
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-blue-800 mb-4">🪟 Windows Installation</h4>
-                    <ol className="text-sm text-blue-600 space-y-2">
+                    <h4 className="font-semibold text-amber-800 mb-4">🪟 Windows Installation</h4>
+                    <ol className="text-sm text-amber-700 space-y-2">
                       <li>1. Download the font file (.ttf or .otf)</li>
                       <li>2. Right-click on the font file</li>
                       <li>3. Select "Install" from the context menu</li>
@@ -293,7 +293,7 @@ export default function FreeArabicFontsPage() {
                   </div>
 
                   <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-gray-800 mb-4">🍎 macOS Installation</h4>
+                    <h4 className="font-semibold text-gray-900 mb-4">🍎 macOS Installation</h4>
                     <ol className="text-sm text-gray-600 space-y-2">
                       <li>1. Download and double-click the font file</li>
                       <li>2. Font Book application will open</li>
@@ -303,8 +303,8 @@ export default function FreeArabicFontsPage() {
                   </div>
 
                   <div className="bg-orange-50 border border-orange-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-orange-800 mb-4">🐧 Linux Installation</h4>
-                    <ol className="text-sm text-orange-600 space-y-2">
+                    <h4 className="font-semibold text-amber-800 mb-4">🐧 Linux Installation</h4>
+                    <ol className="text-sm text-amber-700 space-y-2">
                       <li>1. Copy font files to ~/.fonts/ directory</li>
                       <li>2. Run: fc-cache -f -v</li>
                       <li>3. Restart applications if needed</li>
@@ -320,10 +320,10 @@ export default function FreeArabicFontsPage() {
           <div className="text-center mt-16 mb-12">
             <Card className="bg-gradient-to-r from-emerald-100 to-teal-100 border-emerald-200">
               <CardContent className="pt-8 pb-8">
-                <h2 className="text-3xl font-bold text-emerald-800 mb-4">
+                <h2 className="text-3xl font-bold text-emerald-600 mb-4">
                   Start Creating with Free Arabic Fonts
                 </h2>
-                <p className="text-emerald-700 mb-6 max-w-2xl mx-auto">
+                <p className="text-emerald-600 mb-6 max-w-2xl mx-auto">
                   Don't want to download? Use our online Arabic calligraphy generator to create 
                   beautiful designs instantly with all these fonts and more.
                 </p>

@@ -53,7 +53,7 @@ export function StaticNavbar() {
                   <DropdownMenuTrigger asChild>
                     <Button 
                       variant="ghost" 
-                      className="text-amber-800 hover:text-amber-900 hover:bg-amber-50 font-medium"
+                      className="text-amber-800 hover:text-amber-800 hover:bg-amber-50 font-medium"
                     >
                       {item.name}
                       <ChevronDown className="ml-1 h-4 w-4" />
@@ -64,7 +64,7 @@ export function StaticNavbar() {
                       <DropdownMenuItem key={subItem.name} asChild>
                         <Link 
                           href={subItem.href}
-                          className="w-full cursor-pointer text-gray-700 hover:text-amber-800"
+                          className="w-full cursor-pointer text-gray-600 hover:text-amber-800"
                         >
                           {subItem.name}
                         </Link>
@@ -76,7 +76,7 @@ export function StaticNavbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-amber-800 hover:text-amber-900 font-medium transition-colors"
+                  className="text-amber-800 hover:text-amber-800 font-medium transition-colors"
                 >
                   {item.name}
                 </Link>
@@ -90,7 +90,7 @@ export function StaticNavbar() {
               <Button
                 variant="ghost"
                 size="sm"
-                className="h-9 px-3 text-amber-800 hover:bg-amber-50 hover:text-amber-900"
+                className="h-9 px-3 text-amber-800 hover:bg-amber-50 hover:text-amber-800"
               >
                 🇺🇸 English
               </Button>
@@ -110,7 +110,7 @@ export function StaticNavbar() {
                   <div key={item.name}>
                     <Link
                       href={item.href}
-                      className="block text-lg font-medium text-amber-800 hover:text-amber-900 py-2"
+                      className="block text-lg font-medium text-amber-800 hover:text-amber-800 py-2"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.name}

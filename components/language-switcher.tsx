@@ -91,7 +91,7 @@ export function LanguageSwitcher() {
       <Button
         variant="ghost"
         size="sm"
-        className="h-9 px-3 text-amber-800 hover:bg-amber-50 hover:text-amber-900"
+        className="h-9 px-3 text-amber-800 hover:bg-amber-50 hover:text-amber-800"
         disabled
       >
         <Globe className="h-4 w-4 mr-2 language-switcher-icon" />
@@ -112,7 +112,7 @@ export function LanguageSwitcher() {
         <Button
           variant="ghost"
           size="sm"
-          className="h-9 px-3 text-amber-800 hover:bg-amber-50 hover:text-amber-900"
+          className="h-9 px-3 text-amber-800 hover:bg-amber-50 hover:text-amber-800"
         >
           <Globe className="h-4 w-4 mr-2 language-switcher-icon" />
           <span className="hidden sm:inline mr-1 language-switcher-text">
@@ -135,14 +135,14 @@ export function LanguageSwitcher() {
               onClick={() => handleLanguageChange(locale)}
               className={`cursor-pointer ${
                 isActive 
-                  ? 'bg-amber-50 text-amber-900 font-medium' 
-                  : 'text-gray-700 hover:bg-gray-50'
+                  ? 'bg-amber-50 text-amber-800 font-medium' 
+                  : 'text-gray-600 hover:bg-gray-50'
               }`}
             >
               <span className="mr-3 text-lg language-switcher-flag">{config.flag}</span>
               <div className="flex flex-col">
                 <span className="text-sm font-medium">{config.nativeName}</span>
-                <span className="text-xs text-gray-500">{config.name}</span>
+                <span className="text-xs text-gray-600">{config.name}</span>
               </div>
               {isActive && (
                 <span className="ml-auto text-amber-600 language-switcher-checkmark">✓</span>

@@ -97,7 +97,7 @@ export default function ArabicCalligraphyDesignTipsPage() {
           {/* Design Principles Overview */}
           <Card className="mb-12 border-emerald-200 shadow-lg">
             <CardHeader className="bg-gradient-to-r from-emerald-100 to-teal-100">
-              <CardTitle className="text-2xl text-emerald-800">
+              <CardTitle className="text-2xl text-emerald-600">
                 🎨 Core Design Principles
               </CardTitle>
             </CardHeader>
@@ -140,7 +140,7 @@ export default function ArabicCalligraphyDesignTipsPage() {
             {/* Composition & Layout */}
             <Card className="border-emerald-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-emerald-800 flex items-center">
+                <CardTitle className="text-2xl text-emerald-600 flex items-center">
                   <Layout className="h-6 w-6 mr-3" />
                   Composition & Layout Mastery
                 </CardTitle>
@@ -150,7 +150,7 @@ export default function ArabicCalligraphyDesignTipsPage() {
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-3">Visual Balance</h4>
-                      <ul className="text-sm text-gray-700 space-y-2">
+                      <ul className="text-sm text-gray-600 space-y-2">
                         <li>• <strong>Symmetrical Balance</strong>: Perfect for formal, traditional designs</li>
                         <li>• <strong>Asymmetrical Balance</strong>: Creates dynamic, modern compositions</li>
                         <li>• <strong>Radial Balance</strong>: Ideal for circular or mandala-style layouts</li>
@@ -160,7 +160,7 @@ export default function ArabicCalligraphyDesignTipsPage() {
                     
                     <div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-3">Alignment Techniques</h4>
-                      <ul className="text-sm text-gray-700 space-y-2">
+                      <ul className="text-sm text-gray-600 space-y-2">
                         <li>• <strong>Center Alignment</strong>: Creates formal, balanced appearance</li>
                         <li>• <strong>Right Alignment</strong>: Natural for Arabic text flow</li>
                         <li>• <strong>Justified Text</strong>: Professional look for longer passages</li>
@@ -172,7 +172,7 @@ export default function ArabicCalligraphyDesignTipsPage() {
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-3">Hierarchy & Flow</h4>
-                      <ul className="text-sm text-gray-700 space-y-2">
+                      <ul className="text-sm text-gray-600 space-y-2">
                         <li>• <strong>Size Contrast</strong>: Use varying font sizes for emphasis</li>
                         <li>• <strong>Reading Path</strong>: Guide the eye through your design</li>
                         <li>• <strong>Focal Points</strong>: Create clear areas of interest</li>
@@ -181,8 +181,8 @@ export default function ArabicCalligraphyDesignTipsPage() {
                     </div>
                     
                     <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
-                      <h5 className="font-semibold text-emerald-800 mb-2">💡 Pro Tip</h5>
-                      <p className="text-sm text-emerald-700">
+                      <h5 className="font-semibold text-emerald-600 mb-2">💡 Pro Tip</h5>
+                      <p className="text-sm text-emerald-600">
                         Arabic text flows from right to left, so consider this natural reading direction 
                         when planning your composition. Place the most important elements on the right side.
                       </p>
@@ -195,7 +195,7 @@ export default function ArabicCalligraphyDesignTipsPage() {
             {/* Color Theory */}
             <Card className="border-emerald-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-emerald-800 flex items-center">
+                <CardTitle className="text-2xl text-emerald-600 flex items-center">
                   <Palette className="h-6 w-6 mr-3" />
                   Color Theory & Psychology
                 </CardTitle>
@@ -203,7 +203,7 @@ export default function ArabicCalligraphyDesignTipsPage() {
               <CardContent className="space-y-6">
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                    <h4 className="font-semibold text-blue-800 mb-3">Traditional Colors</h4>
+                    <h4 className="font-semibold text-amber-800 mb-3">Traditional Colors</h4>
                     <div className="space-y-3">
                       <div className="flex items-center space-x-3">
                         <div className="w-6 h-6 bg-yellow-600 rounded-full"></div>
@@ -221,7 +221,7 @@ export default function ArabicCalligraphyDesignTipsPage() {
                   </div>
                   
                   <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                    <h4 className="font-semibold text-purple-800 mb-3">Modern Palettes</h4>
+                    <h4 className="font-semibold text-amber-800 mb-3">Modern Palettes</h4>
                     <div className="space-y-3">
                       <div className="flex items-center space-x-3">
                         <div className="w-6 h-6 bg-gray-800 rounded-full"></div>
@@ -239,8 +239,8 @@ export default function ArabicCalligraphyDesignTipsPage() {
                   </div>
                   
                   <div className="bg-rose-50 border border-rose-200 rounded-lg p-4">
-                    <h4 className="font-semibold text-rose-800 mb-3">Contrast Tips</h4>
-                    <ul className="text-sm text-rose-700 space-y-2">
+                    <h4 className="font-semibold text-gray-900 mb-3">Contrast Tips</h4>
+                    <ul className="text-sm text-gray-900 space-y-2">
                       <li>• High contrast for readability</li>
                       <li>• 60-30-10 color rule</li>
                       <li>• Test on different devices</li>
@@ -250,22 +250,22 @@ export default function ArabicCalligraphyDesignTipsPage() {
                 </div>
                 
                 <div className="bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 rounded-lg p-6">
-                  <h4 className="font-semibold text-emerald-800 mb-4">🎨 Color Harmony Techniques</h4>
+                  <h4 className="font-semibold text-emerald-600 mb-4">🎨 Color Harmony Techniques</h4>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <h5 className="font-medium text-emerald-700 mb-2">Complementary Colors</h5>
+                      <h5 className="font-medium text-emerald-600 mb-2">Complementary Colors</h5>
                       <p className="text-sm text-emerald-600">Use opposite colors on the color wheel for vibrant contrast</p>
                     </div>
                     <div>
-                      <h5 className="font-medium text-emerald-700 mb-2">Analogous Colors</h5>
+                      <h5 className="font-medium text-emerald-600 mb-2">Analogous Colors</h5>
                       <p className="text-sm text-emerald-600">Adjacent colors create harmonious, peaceful designs</p>
                     </div>
                     <div>
-                      <h5 className="font-medium text-emerald-700 mb-2">Monochromatic</h5>
+                      <h5 className="font-medium text-emerald-600 mb-2">Monochromatic</h5>
                       <p className="text-sm text-emerald-600">Different shades of one color for elegant simplicity</p>
                     </div>
                     <div>
-                      <h5 className="font-medium text-emerald-700 mb-2">Triadic Colors</h5>
+                      <h5 className="font-medium text-emerald-600 mb-2">Triadic Colors</h5>
                       <p className="text-sm text-emerald-600">Three evenly spaced colors for vibrant balance</p>
                     </div>
                   </div>
@@ -276,7 +276,7 @@ export default function ArabicCalligraphyDesignTipsPage() {
             {/* Typography & Font Pairing */}
             <Card className="border-emerald-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-emerald-800 flex items-center">
+                <CardTitle className="text-2xl text-emerald-600 flex items-center">
                   <Layers className="h-6 w-6 mr-3" />
                   Typography & Font Pairing
                 </CardTitle>
@@ -304,7 +304,7 @@ export default function ArabicCalligraphyDesignTipsPage() {
                     
                     <div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-3">Size Guidelines</h4>
-                      <ul className="text-sm text-gray-700 space-y-2">
+                      <ul className="text-sm text-gray-600 space-y-2">
                         <li>• <strong>Headlines</strong>: 24-72px for impact</li>
                         <li>• <strong>Body Text</strong>: 14-18px for readability</li>
                         <li>• <strong>Captions</strong>: 10-12px for details</li>
@@ -333,8 +333,8 @@ export default function ArabicCalligraphyDesignTipsPage() {
                     </div>
                     
                     <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                      <h5 className="font-semibold text-yellow-800 mb-2">⚠️ Avoid These Mistakes</h5>
-                      <ul className="text-sm text-yellow-700 space-y-1">
+                      <h5 className="font-semibold text-amber-800 mb-2">⚠️ Avoid These Mistakes</h5>
+                      <ul className="text-sm text-amber-700 space-y-1">
                         <li>• Using more than 3 fonts in one design</li>
                         <li>• Pairing two decorative fonts together</li>
                         <li>• Insufficient contrast between text levels</li>
@@ -351,10 +351,10 @@ export default function ArabicCalligraphyDesignTipsPage() {
           <div className="text-center mt-16 mb-12">
             <Card className="bg-gradient-to-r from-emerald-100 to-teal-100 border-emerald-200">
               <CardContent className="pt-8 pb-8">
-                <h2 className="text-3xl font-bold text-emerald-800 mb-4">
+                <h2 className="text-3xl font-bold text-emerald-600 mb-4">
                   Ready to Apply These Techniques?
                 </h2>
-                <p className="text-emerald-700 mb-6 max-w-2xl mx-auto">
+                <p className="text-emerald-600 mb-6 max-w-2xl mx-auto">
                   Put these professional design tips into practice with our Arabic calligraphy generator. 
                   Create stunning designs that combine beauty with cultural authenticity.
                 </p>

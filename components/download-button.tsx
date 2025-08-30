@@ -1,5 +1,6 @@
 'use client';
 
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { downloadFont } from "@/app/lib/font-download";
@@ -11,7 +12,7 @@ interface DownloadButtonProps {
   displayName: string;
 }
 
-export function DownloadButton({ zipFileName, displayName }: DownloadButtonProps) {
+export const DownloadButton = React.memo(function DownloadButton({ zipFileName, displayName }: DownloadButtonProps) {
   const [isDownloading, setIsDownloading] = useState(false);
 
   const handleDownload = async () => {
@@ -40,4 +41,4 @@ export function DownloadButton({ zipFileName, displayName }: DownloadButtonProps
       <Download className="mr-2 h-5 w-5" /> {isDownloading ? 'Downloading...' : 'Download Font'}
     </Button>
   );
-} 
+});

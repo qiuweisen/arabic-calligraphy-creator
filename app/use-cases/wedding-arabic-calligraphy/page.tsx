@@ -88,7 +88,7 @@ export default function WeddingArabicCalligraphyPage() {
                 </Button>
               </Link>
               <Link href="/tutorials/arabic-font-selection-guide">
-                <Button variant="outline" className="border-rose-600 text-rose-600 hover:bg-rose-50 px-6 py-3">
+                <Button variant="outline" className="border-rose-600 text-gray-600 hover:bg-rose-50 px-6 py-3">
                   Choose Wedding Fonts
                 </Button>
               </Link>
@@ -98,7 +98,7 @@ export default function WeddingArabicCalligraphyPage() {
           {/* Wedding Applications Overview */}
           <Card className="mb-12 border-rose-200 shadow-lg">
             <CardHeader className="bg-gradient-to-r from-rose-100 to-pink-100">
-              <CardTitle className="text-2xl text-rose-800">
+              <CardTitle className="text-2xl text-gray-900">
                 💒 Wedding Calligraphy Applications
               </CardTitle>
             </CardHeader>
@@ -106,28 +106,28 @@ export default function WeddingArabicCalligraphyPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Gift className="h-8 w-8 text-rose-600" />
+                    <Gift className="h-8 w-8 text-gray-600" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">Invitations</h3>
                   <p className="text-sm text-gray-600">Elegant wedding invitation cards with Arabic blessings</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Sparkles className="h-8 w-8 text-rose-600" />
+                    <Sparkles className="h-8 w-8 text-gray-600" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">Decorations</h3>
                   <p className="text-sm text-gray-600">Beautiful venue decorations and signage</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Calendar className="h-8 w-8 text-rose-600" />
+                    <Calendar className="h-8 w-8 text-gray-600" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">Save the Date</h3>
                   <p className="text-sm text-gray-600">Memorable save-the-date announcements</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="h-8 w-8 text-rose-600" />
+                    <Users className="h-8 w-8 text-gray-600" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">Programs</h3>
                   <p className="text-sm text-gray-600">Ceremony programs and menu cards</p>
@@ -141,14 +141,14 @@ export default function WeddingArabicCalligraphyPage() {
             {/* Popular Wedding Phrases */}
             <Card className="border-rose-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-rose-800 flex items-center">
+                <CardTitle className="text-2xl text-gray-900 flex items-center">
                   <Heart className="h-6 w-6 mr-3" />
                   Popular Arabic Wedding Phrases & Blessings
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     Arabic wedding calligraphy often features traditional Islamic blessings and Quranic verses 
                     that invoke Allah's blessings upon the couple. Here are the most popular phrases used in 
                     wedding invitations and decorations.
@@ -157,22 +157,22 @@ export default function WeddingArabicCalligraphyPage() {
                   <div className="grid md:grid-cols-2 gap-8 mb-8">
                     <div className="space-y-6">
                       <div className="bg-rose-50 border border-rose-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-rose-800 mb-4">Traditional Islamic Blessings</h4>
+                        <h4 className="font-semibold text-gray-900 mb-4">Traditional Islamic Blessings</h4>
                         <div className="space-y-4">
                           <div className="border-l-4 border-rose-400 pl-4">
                             <p className="text-lg font-arabic text-gray-900 mb-1">بسم الله الرحمن الرحيم</p>
                             <p className="text-sm text-gray-600 italic">In the name of Allah, the Most Gracious, the Most Merciful</p>
-                            <p className="text-xs text-gray-500 mt-1">Perfect for invitation headers</p>
+                            <p className="text-xs text-gray-600 mt-1">Perfect for invitation headers</p>
                           </div>
                           <div className="border-l-4 border-rose-400 pl-4">
                             <p className="text-lg font-arabic text-gray-900 mb-1">بارك الله لكما وبارك عليكما</p>
                             <p className="text-sm text-gray-600 italic">May Allah bless you both and bless your union</p>
-                            <p className="text-xs text-gray-500 mt-1">Traditional wedding blessing</p>
+                            <p className="text-xs text-gray-600 mt-1">Traditional wedding blessing</p>
                           </div>
                           <div className="border-l-4 border-rose-400 pl-4">
                             <p className="text-lg font-arabic text-gray-900 mb-1">وجعل بينكما مودة ورحمة</p>
                             <p className="text-sm text-gray-600 italic">And placed between you love and mercy</p>
-                            <p className="text-xs text-gray-500 mt-1">From Quran 30:21</p>
+                            <p className="text-xs text-gray-600 mt-1">From Quran 30:21</p>
                           </div>
                         </div>
                       </div>
@@ -180,22 +180,22 @@ export default function WeddingArabicCalligraphyPage() {
 
                     <div className="space-y-6">
                       <div className="bg-pink-50 border border-pink-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-pink-800 mb-4">Modern Wedding Phrases</h4>
+                        <h4 className="font-semibold text-gray-900 mb-4">Modern Wedding Phrases</h4>
                         <div className="space-y-4">
                           <div className="border-l-4 border-pink-400 pl-4">
                             <p className="text-lg font-arabic text-gray-900 mb-1">زفاف مبارك</p>
                             <p className="text-sm text-gray-600 italic">Blessed Wedding</p>
-                            <p className="text-xs text-gray-500 mt-1">Simple and elegant</p>
+                            <p className="text-xs text-gray-600 mt-1">Simple and elegant</p>
                           </div>
                           <div className="border-l-4 border-pink-400 pl-4">
                             <p className="text-lg font-arabic text-gray-900 mb-1">حفل زواج</p>
                             <p className="text-sm text-gray-600 italic">Wedding Ceremony</p>
-                            <p className="text-xs text-gray-500 mt-1">For ceremony programs</p>
+                            <p className="text-xs text-gray-600 mt-1">For ceremony programs</p>
                           </div>
                           <div className="border-l-4 border-pink-400 pl-4">
                             <p className="text-lg font-arabic text-gray-900 mb-1">احتفظوا بالتاريخ</p>
                             <p className="text-sm text-gray-600 italic">Save the Date</p>
-                            <p className="text-xs text-gray-500 mt-1">For announcements</p>
+                            <p className="text-xs text-gray-600 mt-1">For announcements</p>
                           </div>
                         </div>
                       </div>
@@ -219,90 +219,90 @@ export default function WeddingArabicCalligraphyPage() {
             {/* Font Recommendations */}
             <Card className="border-rose-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-rose-800 flex items-center">
+                <CardTitle className="text-2xl text-gray-900 flex items-center">
                   <Star className="h-6 w-6 mr-3" />
                   Best Arabic Fonts for Weddings
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     Choosing the right Arabic font is crucial for creating the perfect wedding atmosphere. 
                     Different fonts convey different emotions and suit various wedding styles.
                   </p>
 
                   <div className="grid md:grid-cols-3 gap-6 mb-8">
                     <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-blue-800 mb-4">Traditional & Formal</h4>
+                      <h4 className="font-semibold text-amber-800 mb-4">Traditional & Formal</h4>
                       <div className="space-y-4">
                         <div>
-                          <h5 className="font-semibold text-blue-700 mb-2">Amiri</h5>
+                          <h5 className="font-semibold text-amber-700 mb-2">Amiri</h5>
                           <div className="flex items-center mb-2">
-                            {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />)}
+                            {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-amber-600" />)}
                           </div>
-                          <p className="text-sm text-blue-600">Perfect for traditional Islamic weddings. Elegant and dignified.</p>
+                          <p className="text-sm text-amber-700">Perfect for traditional Islamic weddings. Elegant and dignified.</p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-blue-700 mb-2">Scheherazade</h5>
+                          <h5 className="font-semibold text-amber-700 mb-2">Scheherazade</h5>
                           <div className="flex items-center mb-2">
-                            {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />)}
+                            {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-amber-600" />)}
                           </div>
-                          <p className="text-sm text-blue-600">Classic Naskh style, ideal for religious texts and formal invitations.</p>
+                          <p className="text-sm text-amber-700">Classic Naskh style, ideal for religious texts and formal invitations.</p>
                         </div>
                       </div>
                     </div>
 
                     <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-green-800 mb-4">Modern & Contemporary</h4>
+                      <h4 className="font-semibold text-emerald-600 mb-4">Modern & Contemporary</h4>
                       <div className="space-y-4">
                         <div>
-                          <h5 className="font-semibold text-green-700 mb-2">Cairo</h5>
+                          <h5 className="font-semibold text-emerald-600 mb-2">Cairo</h5>
                           <div className="flex items-center mb-2">
-                            {[1,2,3,4].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />)}
-                            <Star className="h-3 w-3 text-gray-300" />
+                            {[1,2,3,4].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-amber-600" />)}
+                            <Star className="h-3 w-3 text-gray-600" />
                           </div>
-                          <p className="text-sm text-green-600">Clean and modern, perfect for contemporary wedding designs.</p>
+                          <p className="text-sm text-emerald-600">Clean and modern, perfect for contemporary wedding designs.</p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-green-700 mb-2">Tajawal</h5>
+                          <h5 className="font-semibold text-emerald-600 mb-2">Tajawal</h5>
                           <div className="flex items-center mb-2">
-                            {[1,2,3,4].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />)}
-                            <Star className="h-3 w-3 text-gray-300" />
+                            {[1,2,3,4].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-amber-600" />)}
+                            <Star className="h-3 w-3 text-gray-600" />
                           </div>
-                          <p className="text-sm text-green-600">Stylish and trendy, great for modern Muslim couples.</p>
+                          <p className="text-sm text-emerald-600">Stylish and trendy, great for modern Muslim couples.</p>
                         </div>
                       </div>
                     </div>
 
                     <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-purple-800 mb-4">Decorative & Artistic</h4>
+                      <h4 className="font-semibold text-amber-800 mb-4">Decorative & Artistic</h4>
                       <div className="space-y-4">
                         <div>
-                          <h5 className="font-semibold text-purple-700 mb-2">Lemonada</h5>
+                          <h5 className="font-semibold text-amber-700 mb-2">Lemonada</h5>
                           <div className="flex items-center mb-2">
-                            {[1,2,3,4].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />)}
-                            <Star className="h-3 w-3 text-gray-300" />
+                            {[1,2,3,4].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-amber-600" />)}
+                            <Star className="h-3 w-3 text-gray-600" />
                           </div>
-                          <p className="text-sm text-purple-600">Rounded and friendly, perfect for casual or outdoor weddings.</p>
+                          <p className="text-sm text-amber-700">Rounded and friendly, perfect for casual or outdoor weddings.</p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-purple-700 mb-2">Rakkas</h5>
+                          <h5 className="font-semibold text-amber-700 mb-2">Rakkas</h5>
                           <div className="flex items-center mb-2">
-                            {[1,2,3].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />)}
-                            {[4,5].map(i => <Star key={i} className="h-3 w-3 text-gray-300" />)}
+                            {[1,2,3].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-amber-600" />)}
+                            {[4,5].map(i => <Star key={i} className="h-3 w-3 text-gray-600" />)}
                           </div>
-                          <p className="text-sm text-purple-600">Bold and decorative, use sparingly for accent text only.</p>
+                          <p className="text-sm text-amber-700">Bold and decorative, use sparingly for accent text only.</p>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="bg-rose-50 border border-rose-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-rose-800 mb-4">🎨 Wedding Design Guidelines</h4>
+                    <h4 className="font-semibold text-gray-900 mb-4">🎨 Wedding Design Guidelines</h4>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <h5 className="font-semibold text-rose-700 mb-2">Font Hierarchy</h5>
-                        <ul className="text-sm text-rose-600 space-y-1">
+                        <h5 className="font-semibold text-gray-900 mb-2">Font Hierarchy</h5>
+                        <ul className="text-sm text-gray-600 space-y-1">
                           <li>• <strong>Main Blessing</strong>: Use traditional fonts (Amiri, Scheherazade)</li>
                           <li>• <strong>Couple Names</strong>: Elegant, readable fonts</li>
                           <li>• <strong>Details</strong>: Clean, modern fonts for dates and venues</li>
@@ -310,8 +310,8 @@ export default function WeddingArabicCalligraphyPage() {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-rose-700 mb-2">Color Recommendations</h5>
-                        <ul className="text-sm text-rose-600 space-y-1">
+                        <h5 className="font-semibold text-gray-900 mb-2">Color Recommendations</h5>
+                        <ul className="text-sm text-gray-600 space-y-1">
                           <li>• <strong>Gold & Cream</strong>: Classic and luxurious</li>
                           <li>• <strong>Deep Red & Gold</strong>: Traditional and rich</li>
                           <li>• <strong>Navy & Silver</strong>: Modern and elegant</li>
@@ -327,13 +327,13 @@ export default function WeddingArabicCalligraphyPage() {
             {/* Design Ideas & Inspiration */}
             <Card className="border-rose-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-rose-800">
+                <CardTitle className="text-2xl text-gray-900">
                   🎨 Wedding Design Ideas & Inspiration
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     Discover creative ways to incorporate Arabic calligraphy into every aspect of your wedding celebration.
                     From intimate details to grand displays, Arabic typography can transform your special day.
                   </p>
@@ -341,11 +341,11 @@ export default function WeddingArabicCalligraphyPage() {
                   <div className="grid md:grid-cols-2 gap-8 mb-8">
                     <div className="space-y-6">
                       <div className="bg-gradient-to-br from-rose-50 to-pink-50 border border-rose-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-rose-800 mb-4">Invitation Suite Ideas</h4>
+                        <h4 className="font-semibold text-gray-900 mb-4">Invitation Suite Ideas</h4>
                         <div className="space-y-4">
                           <div>
-                            <h5 className="font-semibold text-rose-700 mb-2">Main Invitation</h5>
-                            <ul className="text-sm text-rose-600 space-y-1">
+                            <h5 className="font-semibold text-gray-900 mb-2">Main Invitation</h5>
+                            <ul className="text-sm text-gray-600 space-y-1">
                               <li>• Feature Quranic verse about love and marriage</li>
                               <li>• Include couple's names in elegant Arabic calligraphy</li>
                               <li>• Add traditional Islamic geometric patterns</li>
@@ -353,8 +353,8 @@ export default function WeddingArabicCalligraphyPage() {
                             </ul>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-rose-700 mb-2">RSVP Cards</h5>
-                            <ul className="text-sm text-rose-600 space-y-1">
+                            <h5 className="font-semibold text-gray-900 mb-2">RSVP Cards</h5>
+                            <ul className="text-sm text-gray-600 space-y-1">
                               <li>• Simple "نعم" (Yes) and "لا" (No) options</li>
                               <li>• Include dietary preferences in Arabic</li>
                               <li>• Add small decorative Arabic motifs</li>
@@ -362,8 +362,8 @@ export default function WeddingArabicCalligraphyPage() {
                             </ul>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-rose-700 mb-2">Information Cards</h5>
-                            <ul className="text-sm text-rose-600 space-y-1">
+                            <h5 className="font-semibold text-gray-900 mb-2">Information Cards</h5>
+                            <ul className="text-sm text-gray-600 space-y-1">
                               <li>• Venue details with Arabic address</li>
                               <li>• Dress code suggestions in Arabic</li>
                               <li>• Gift registry information</li>
@@ -411,10 +411,10 @@ export default function WeddingArabicCalligraphyPage() {
                   </div>
 
                   <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-6 mb-6">
-                    <h4 className="font-semibold text-emerald-800 mb-4">💡 Creative Applications</h4>
+                    <h4 className="font-semibold text-emerald-600 mb-4">💡 Creative Applications</h4>
                     <div className="grid md:grid-cols-3 gap-6">
                       <div>
-                        <h5 className="font-semibold text-emerald-700 mb-2">Digital Elements</h5>
+                        <h5 className="font-semibold text-emerald-600 mb-2">Digital Elements</h5>
                         <ul className="text-sm text-emerald-600 space-y-1">
                           <li>• Wedding website headers</li>
                           <li>• Social media announcements</li>
@@ -423,7 +423,7 @@ export default function WeddingArabicCalligraphyPage() {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-emerald-700 mb-2">Keepsakes & Favors</h5>
+                        <h5 className="font-semibold text-emerald-600 mb-2">Keepsakes & Favors</h5>
                         <ul className="text-sm text-emerald-600 space-y-1">
                           <li>• Personalized prayer books</li>
                           <li>• Arabic calligraphy bookmarks</li>
@@ -432,7 +432,7 @@ export default function WeddingArabicCalligraphyPage() {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-emerald-700 mb-2">Photography Props</h5>
+                        <h5 className="font-semibold text-emerald-600 mb-2">Photography Props</h5>
                         <ul className="text-sm text-emerald-600 space-y-1">
                           <li>• Arabic quote signs for photos</li>
                           <li>• Calligraphy banners and flags</li>
@@ -449,13 +449,13 @@ export default function WeddingArabicCalligraphyPage() {
             {/* Cultural Guidelines & Etiquette */}
             <Card className="border-rose-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-rose-800">
+                <CardTitle className="text-2xl text-gray-900">
                   🕌 Cultural Guidelines & Islamic Wedding Etiquette
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     Understanding Islamic wedding traditions and cultural sensitivities is essential when creating
                     Arabic wedding calligraphy. Here are important guidelines to ensure your designs are respectful and appropriate.
                   </p>
@@ -463,11 +463,11 @@ export default function WeddingArabicCalligraphyPage() {
                   <div className="grid md:grid-cols-2 gap-8 mb-8">
                     <div className="space-y-6">
                       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-blue-800 mb-4">Religious Considerations</h4>
+                        <h4 className="font-semibold text-amber-800 mb-4">Religious Considerations</h4>
                         <div className="space-y-3">
                           <div>
-                            <h5 className="font-semibold text-blue-700 mb-2">Quranic Verses</h5>
-                            <ul className="text-sm text-blue-600 space-y-1">
+                            <h5 className="font-semibold text-amber-700 mb-2">Quranic Verses</h5>
+                            <ul className="text-sm text-amber-700 space-y-1">
                               <li>• Always verify accuracy with Islamic scholars</li>
                               <li>• Use complete verses, not partial quotes</li>
                               <li>• Ensure proper Arabic grammar and diacritics</li>
@@ -475,8 +475,8 @@ export default function WeddingArabicCalligraphyPage() {
                             </ul>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-blue-700 mb-2">Islamic Phrases</h5>
-                            <ul className="text-sm text-blue-600 space-y-1">
+                            <h5 className="font-semibold text-amber-700 mb-2">Islamic Phrases</h5>
+                            <ul className="text-sm text-amber-700 space-y-1">
                               <li>• Use authentic traditional blessings</li>
                               <li>• Avoid mixing religious and secular content inappropriately</li>
                               <li>• Respect the sacred nature of religious text</li>
@@ -489,11 +489,11 @@ export default function WeddingArabicCalligraphyPage() {
 
                     <div className="space-y-6">
                       <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-green-800 mb-4">Cultural Sensitivity</h4>
+                        <h4 className="font-semibold text-emerald-600 mb-4">Cultural Sensitivity</h4>
                         <div className="space-y-3">
                           <div>
-                            <h5 className="font-semibold text-green-700 mb-2">Family Traditions</h5>
-                            <ul className="text-sm text-green-600 space-y-1">
+                            <h5 className="font-semibold text-emerald-600 mb-2">Family Traditions</h5>
+                            <ul className="text-sm text-emerald-600 space-y-1">
                               <li>• Consult with both families about preferences</li>
                               <li>• Consider regional Arabic dialects</li>
                               <li>• Respect different Islamic schools of thought</li>
@@ -501,8 +501,8 @@ export default function WeddingArabicCalligraphyPage() {
                             </ul>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-green-700 mb-2">Guest Considerations</h5>
-                            <ul className="text-sm text-green-600 space-y-1">
+                            <h5 className="font-semibold text-emerald-600 mb-2">Guest Considerations</h5>
+                            <ul className="text-sm text-emerald-600 space-y-1">
                               <li>• Provide translations for non-Arabic speakers</li>
                               <li>• Explain the meaning of Arabic phrases</li>
                               <li>• Consider mixed-faith guest lists</li>
@@ -515,20 +515,20 @@ export default function WeddingArabicCalligraphyPage() {
                   </div>
 
                   <div className="bg-purple-50 border border-purple-200 rounded-lg p-6 mb-6">
-                    <h4 className="font-semibold text-purple-800 mb-4">📚 Recommended Quranic Verses for Weddings</h4>
+                    <h4 className="font-semibold text-amber-800 mb-4">📚 Recommended Quranic Verses for Weddings</h4>
                     <div className="space-y-4">
                       <div className="border-l-4 border-purple-400 pl-4">
-                        <p className="text-sm font-semibold text-purple-700 mb-1">Quran 30:21</p>
+                        <p className="text-sm font-semibold text-amber-700 mb-1">Quran 30:21</p>
                         <p className="text-lg font-arabic text-gray-900 mb-2">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</p>
-                        <p className="text-sm text-purple-600 italic">
+                        <p className="text-sm text-amber-700 italic">
                           "And among His signs is that He created for you from yourselves mates that you may find tranquility in them;
                           and He placed between you affection and mercy."
                         </p>
                       </div>
                       <div className="border-l-4 border-purple-400 pl-4">
-                        <p className="text-sm font-semibold text-purple-700 mb-1">Quran 2:187</p>
+                        <p className="text-sm font-semibold text-amber-700 mb-1">Quran 2:187</p>
                         <p className="text-lg font-arabic text-gray-900 mb-2">هُنَّ لِبَاسٌ لَّكُمْ وَأَنتُمْ لِبَاسٌ لَّهُنَّ</p>
-                        <p className="text-sm text-purple-600 italic">
+                        <p className="text-sm text-amber-700 italic">
                           "They are clothing for you and you are clothing for them."
                         </p>
                       </div>
@@ -536,8 +536,8 @@ export default function WeddingArabicCalligraphyPage() {
                   </div>
 
                   <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-red-800 mb-3">⚠️ Important Guidelines</h4>
-                    <ul className="text-sm text-red-700 space-y-2">
+                    <h4 className="font-semibold text-red-600 mb-3">⚠️ Important Guidelines</h4>
+                    <ul className="text-sm text-red-600 space-y-2">
                       <li>• <strong>Accuracy First</strong>: Always double-check Arabic text with native speakers or scholars</li>
                       <li>• <strong>Context Matters</strong>: Understand the full meaning and appropriate usage of religious texts</li>
                       <li>• <strong>Respect Traditions</strong>: Honor both families' cultural and religious backgrounds</li>
@@ -552,13 +552,13 @@ export default function WeddingArabicCalligraphyPage() {
             {/* Practical Tips & Implementation */}
             <Card className="border-rose-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-rose-800">
+                <CardTitle className="text-2xl text-gray-900">
                   🛠️ Practical Implementation Tips
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     Transform your Arabic calligraphy designs into beautiful wedding materials with these practical tips
                     for printing, digital use, and professional implementation.
                   </p>
@@ -566,7 +566,7 @@ export default function WeddingArabicCalligraphyPage() {
                   <div className="grid md:grid-cols-3 gap-6 mb-8">
                     <div className="bg-gray-50 rounded-lg p-6">
                       <h4 className="font-semibold text-gray-900 mb-4">Printing Guidelines</h4>
-                      <ul className="text-sm text-gray-700 space-y-2">
+                      <ul className="text-sm text-gray-600 space-y-2">
                         <li>• <strong>Resolution</strong>: Use 300 DPI minimum for print</li>
                         <li>• <strong>Color Mode</strong>: Convert to CMYK for printing</li>
                         <li>• <strong>Paper Choice</strong>: Consider texture and weight</li>
@@ -578,7 +578,7 @@ export default function WeddingArabicCalligraphyPage() {
 
                     <div className="bg-gray-50 rounded-lg p-6">
                       <h4 className="font-semibold text-gray-900 mb-4">Digital Applications</h4>
-                      <ul className="text-sm text-gray-700 space-y-2">
+                      <ul className="text-sm text-gray-600 space-y-2">
                         <li>• <strong>Website Headers</strong>: Use SVG for scalability</li>
                         <li>• <strong>Social Media</strong>: Optimize for platform sizes</li>
                         <li>• <strong>Email Signatures</strong>: Keep file sizes small</li>
@@ -590,7 +590,7 @@ export default function WeddingArabicCalligraphyPage() {
 
                     <div className="bg-gray-50 rounded-lg p-6">
                       <h4 className="font-semibold text-gray-900 mb-4">Timeline & Planning</h4>
-                      <ul className="text-sm text-gray-700 space-y-2">
+                      <ul className="text-sm text-gray-600 space-y-2">
                         <li>• <strong>6 Months Before</strong>: Finalize design concepts</li>
                         <li>• <strong>4 Months Before</strong>: Complete invitation designs</li>
                         <li>• <strong>3 Months Before</strong>: Send save-the-dates</li>
@@ -602,11 +602,11 @@ export default function WeddingArabicCalligraphyPage() {
                   </div>
 
                   <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-indigo-800 mb-4">💰 Budget Considerations</h4>
+                    <h4 className="font-semibold text-amber-800 mb-4">💰 Budget Considerations</h4>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <h5 className="font-semibold text-indigo-700 mb-2">Cost-Effective Options</h5>
-                        <ul className="text-sm text-indigo-600 space-y-1">
+                        <h5 className="font-semibold text-amber-700 mb-2">Cost-Effective Options</h5>
+                        <ul className="text-sm text-amber-700 space-y-1">
                           <li>• Use our free online generator for basic designs</li>
                           <li>• Print at home for small quantities</li>
                           <li>• Digital-only save-the-dates and RSVPs</li>
@@ -615,8 +615,8 @@ export default function WeddingArabicCalligraphyPage() {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-indigo-700 mb-2">Premium Upgrades</h5>
-                        <ul className="text-sm text-indigo-600 space-y-1">
+                        <h5 className="font-semibold text-amber-700 mb-2">Premium Upgrades</h5>
+                        <ul className="text-sm text-amber-700 space-y-1">
                           <li>• Professional calligraphy consultation</li>
                           <li>• Custom font creation and modification</li>
                           <li>• Luxury printing with foil and embossing</li>
@@ -635,10 +635,10 @@ export default function WeddingArabicCalligraphyPage() {
           <div className="text-center mt-16 mb-12">
             <Card className="bg-gradient-to-r from-rose-100 to-pink-100 border-rose-200">
               <CardContent className="pt-8 pb-8">
-                <h2 className="text-3xl font-bold text-rose-800 mb-4">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
                   Create Your Wedding Calligraphy
                 </h2>
-                <p className="text-rose-700 mb-6 max-w-2xl mx-auto">
+                <p className="text-gray-900 mb-6 max-w-2xl mx-auto">
                   Start designing beautiful Arabic calligraphy for your special day. 
                   Choose from traditional blessings or create custom text with our easy-to-use generator.
                 </p>
@@ -658,7 +658,7 @@ export default function WeddingArabicCalligraphyPage() {
                 <h3 className="font-semibold text-gray-900 mb-2">Font Selection Guide</h3>
                 <p className="text-sm text-gray-600 mb-4">Learn how to choose the perfect Arabic font for weddings</p>
                 <Link href="/tutorials/arabic-font-selection-guide">
-                  <Button variant="outline" size="sm" className="border-rose-600 text-rose-600 hover:bg-rose-50">
+                  <Button variant="outline" size="sm" className="border-rose-600 text-gray-600 hover:bg-rose-50">
                     Font Guide <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>
                 </Link>
@@ -670,7 +670,7 @@ export default function WeddingArabicCalligraphyPage() {
                 <h3 className="font-semibold text-gray-900 mb-2">Design Tips</h3>
                 <p className="text-sm text-gray-600 mb-4">Master professional Arabic calligraphy design techniques</p>
                 <Link href="/tutorials/arabic-calligraphy-design-tips">
-                  <Button variant="outline" size="sm" className="border-rose-600 text-rose-600 hover:bg-rose-50">
+                  <Button variant="outline" size="sm" className="border-rose-600 text-gray-600 hover:bg-rose-50">
                     Design Tips <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>
                 </Link>
@@ -682,7 +682,7 @@ export default function WeddingArabicCalligraphyPage() {
                 <h3 className="font-semibold text-gray-900 mb-2">Business Use Cases</h3>
                 <p className="text-sm text-gray-600 mb-4">Explore Arabic calligraphy for business and branding</p>
                 <Link href="/use-cases/business-logo-arabic-fonts">
-                  <Button variant="outline" size="sm" className="border-rose-600 text-rose-600 hover:bg-rose-50">
+                  <Button variant="outline" size="sm" className="border-rose-600 text-gray-600 hover:bg-rose-50">
                     Business Cases <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>
                 </Link>

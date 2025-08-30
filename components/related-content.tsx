@@ -76,7 +76,7 @@ export function RelatedContent({
                     </h4>
                     <p className="text-sm text-amber-700 line-clamp-2">{link.description}</p>
                   </div>
-                  <ArrowUpRight className="h-4 w-4 text-amber-400 mt-1 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform flex-shrink-0" />
+                  <ArrowUpRight className="h-4 w-4 text-amber-600 mt-1 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform flex-shrink-0" />
                 </div>
               </CardContent>
             </Card>

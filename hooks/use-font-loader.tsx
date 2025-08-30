@@ -65,10 +65,18 @@ export function useFontLoader() {
         loadingFonts.add(fontValue)
         forceUpdate({})
 
-        // 构建字体URL，使用font-display: fallback平衡CLS和LCP
+        // 构建字体URL，使用font-display: swap并优化加载
         const fontFamily = encodeURIComponent(config.family)
         const weights = config.weights.join(';')
-        const fontUrl = `https://fonts.googleapis.com/css2?family=${fontFamily}:wght@${weights}&display=fallback`
+        
+        // 开发环境跳过网络字体加载，直接使用回退字体
+        if (process.env.NODE_ENV === 'development') {
+          console.log(`[DEV] Using fallback font for: ${config.family}`)
+          loadedFonts.add(fontValue)
+          return true
+        }
+        
+        const fontUrl = `https://fonts.googleapis.com/css2?family=${fontFamily}:wght@${weights}&display=swap&subset=arabic,latin`
 
         // 检查是否已经有相同的link标签
         const existingLink = document.querySelector(`link[href="${fontUrl}"]`)
@@ -83,11 +91,12 @@ export function useFontLoader() {
         link.href = fontUrl
         link.crossOrigin = 'anonymous'
 
-        // 等待字体加载完成，增加超时机制
+        // 等待字体加载完成，增加超时机制（减少到3秒）
         await new Promise<void>((resolve, reject) => {
           const timeout = setTimeout(() => {
-            console.warn(`Font loading timeout: ${config.family}`)
-            // 不要reject，让字体加载继续
+            console.warn(`Font loading timeout: ${config.family}, using fallback`)
+            loadedFonts.add(fontValue) // 标记为已加载，使用回退字体
+            resolve() // 不要阻塞，继续执行
             resolve()
           }, 5000) // 减少到5秒超时
 

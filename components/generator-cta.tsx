@@ -12,7 +12,7 @@ export function GeneratorCTA({ variant = "default", className = "" }: GeneratorC
       <div className={`bg-gradient-to-r from-amber-50 to-amber-100 rounded-lg p-4 border border-amber-200 ${className}`}>
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="font-semibold text-amber-900 text-sm">Try Our Arabic Calligraphy Generator</h3>
+            <h3 className="font-semibold text-amber-800 text-sm">Try Our Arabic Calligraphy Generator</h3>
             <p className="text-amber-700 text-xs mt-1">Create beautiful calligraphy instantly</p>
           </div>
           <Link 
@@ -36,7 +36,7 @@ export function GeneratorCTA({ variant = "default", className = "" }: GeneratorC
           </div>
           <div className="flex-1">
             <h3 className="font-bold text-lg mb-2">Ready to Create Arabic Calligraphy?</h3>
-            <p className="text-amber-100 mb-4">
+            <p className="text-amber-600 mb-4">
               Use our free online Arabic calligraphy generator with 17+ beautiful fonts. 
               No signup required - start creating instantly!
             </p>
@@ -57,7 +57,7 @@ export function GeneratorCTA({ variant = "default", className = "" }: GeneratorC
   return (
     <div className={`bg-amber-50 border border-amber-200 rounded-lg p-6 ${className}`}>
       <div className="text-center">
-        <h3 className="font-bold text-amber-900 text-lg mb-2">
+        <h3 className="font-bold text-amber-800 text-lg mb-2">
           Try Our Free Arabic Calligraphy Generator
         </h3>
         <p className="text-amber-700 mb-4">

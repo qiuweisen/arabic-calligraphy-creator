@@ -237,9 +237,9 @@ export default function NotoNaskhArabicFontPage() {
                     </div>
                   </div>
                   <div className="w-full md:w-2/3">
-                    <span className="text-xs text-sky-700 font-medium px-2 py-1 bg-sky-50 rounded-full mb-2 inline-block">Modern Naskh (Screen Optimized)</span>
-                    <h1 className="text-4xl md:text-5xl font-bold text-sky-800 mt-1 mb-3">Noto Naskh Arabic</h1>
-                    <p className="text-lg text-sky-700 mb-6 leading-relaxed">
+                    <span className="text-xs text-amber-700 font-medium px-2 py-1 bg-sky-50 rounded-full mb-2 inline-block">Modern Naskh (Screen Optimized)</span>
+                    <h1 className="text-4xl md:text-5xl font-bold text-amber-800 mt-1 mb-3">Noto Naskh Arabic</h1>
+                    <p className="text-lg text-amber-700 mb-6 leading-relaxed">
                       Noto Naskh Arabic is a versatile and highly legible Arabic typeface designed by Google. It combines traditional Naskh aesthetics with modern digital optimization, making it perfect for both screen and print applications.
                     </p>
                     <div className="flex gap-4">
@@ -259,26 +259,26 @@ export default function NotoNaskhArabicFontPage() {
             </Card>
 
             <div className="prose prose-sky max-w-none">
-              <h2 id="distinctive-features" className="text-3xl font-bold text-sky-800 mt-12 mb-6">Key Features of Noto Naskh Arabic</h2>
+              <h2 id="distinctive-features" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Key Features of Noto Naskh Arabic</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                 {FONT_FEATURES.map((feature) => (
                   <Card key={feature.title} className="border-sky-200 flex flex-col bg-white">
                     <CardHeader className="items-center text-center">
                       {feature.icon}
-                      <CardTitle className="text-xl text-sky-800">{feature.title}</CardTitle>
+                      <CardTitle className="text-xl text-amber-800">{feature.title}</CardTitle>
                     </CardHeader>
                     <CardContent className="text-center flex-grow">
-                      <p className="text-sky-700 text-sm">{feature.description}</p>
+                      <p className="text-amber-700 text-sm">{feature.description}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
-              <h2 id="history-and-background" className="text-3xl font-bold text-sky-800 mt-12 mb-6">The Noto Project: A Universal Vision</h2>
+              <h2 id="history-and-background" className="text-3xl font-bold text-amber-800 mt-12 mb-6">The Noto Project: A Universal Vision</h2>
               <Card className="border-sky-200 mb-12 bg-white">
-                <CardContent className="p-6 md:p-8 space-y-4 text-sky-700 leading-relaxed">
+                <CardContent className="p-6 md:p-8 space-y-4 text-amber-700 leading-relaxed">
                   <p>
-                    Noto Naskh Arabic is a vital part of the <strong className="text-sky-800">Google Noto (No Tofu)</strong> font family. Launched by Google, the Noto project is an ambitious initiative to create a harmonious and comprehensive font collection that supports all scripts encoded in the Unicode standard. The name "Noto" signifies the goal of eliminating "tofu" – the blank rectangles (▯) that appear when a device or application lacks the necessary font to display specific characters.
+                    Noto Naskh Arabic is a vital part of the <strong className="text-amber-800">Google Noto (No Tofu)</strong> font family. Launched by Google, the Noto project is an ambitious initiative to create a harmonious and comprehensive font collection that supports all scripts encoded in the Unicode standard. The name "Noto" signifies the goal of eliminating "tofu" – the blank rectangles (▯) that appear when a device or application lacks the necessary font to display specific characters.
                   </p>
                   <p>
                     For the Arabic script, Noto Naskh Arabic provides a contemporary, highly legible Naskh typeface optimized for digital environments. It ensures that Arabic text is rendered accurately and consistently across websites, applications, operating systems (like Android and ChromeOS where it's a default), and digital documents. The font family also includes Noto Naskh Arabic UI, a version specifically tailored for user interface elements.
@@ -294,11 +294,11 @@ export default function NotoNaskhArabicFontPage() {
                 <GeneratorCTA variant="featured" />
               </div>
 
-              <h2 id="alphabet-showcase" className="text-3xl font-bold text-sky-800 mt-12 mb-6">Noto Naskh Arabic: Alphabet Clarity</h2>
+              <h2 id="alphabet-showcase" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Noto Naskh Arabic: Alphabet Clarity</h2>
               <Card className="border-sky-200 mb-12 bg-white">
                  <CardHeader>
-                  <CardTitle className="text-xl text-sky-800">Modern Naskh Letterforms</CardTitle>
-                  <CardDescription className="text-sky-600">Clean and clear Arabic characters designed for on-screen readability.</CardDescription>
+                  <CardTitle className="text-xl text-amber-800">Modern Naskh Letterforms</CardTitle>
+                  <CardDescription className="text-amber-700">Clean and clear Arabic characters designed for on-screen readability.</CardDescription>
                 </CardHeader>
                 <CardContent className="p-6">
                   <div 
@@ -307,11 +307,11 @@ export default function NotoNaskhArabicFontPage() {
                   >
                     {ARABIC_ALPHABET}
                   </div>
-                  <p className="text-center text-sm text-sky-600 mt-4">Note: Noto Naskh Arabic offers extensive Unicode coverage for Arabic and related scripts, ensuring comprehensive character display.</p>
+                  <p className="text-center text-sm text-amber-700 mt-4">Note: Noto Naskh Arabic offers extensive Unicode coverage for Arabic and related scripts, ensuring comprehensive character display.</p>
                 </CardContent>
               </Card>
               
-              <h2 id="text-examples" className="text-3xl font-bold text-sky-800 mt-12 mb-6">Noto Naskh Arabic in Digital Contexts</h2>
+              <h2 id="text-examples" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Noto Naskh Arabic in Digital Contexts</h2>
               <Tabs defaultValue={TEXT_EXAMPLES[0].id} className="w-full mb-12">
                 <TabsList className="grid w-full" style={{ gridTemplateColumns: `repeat(${TEXT_EXAMPLES.length}, 1fr)` }}>
                   {TEXT_EXAMPLES.map((example, index) => (
@@ -330,44 +330,44 @@ export default function NotoNaskhArabicFontPage() {
                         >
                           {example.text}
                         </div>
-                        <p className="text-center font-medium text-sky-700 mb-2">{example.translation}</p>
-                        <p className="text-center text-sm text-sky-600">{example.context}</p>
+                        <p className="text-center font-medium text-amber-700 mb-2">{example.translation}</p>
+                        <p className="text-center text-sm text-amber-700">{example.context}</p>
                       </CardContent>
                     </Card>
                   </TabsContent>
                 ))}
               </Tabs>
 
-              <h2 id="use-cases" className="text-3xl font-bold text-sky-800 mt-12 mb-6">Ideal Applications for Noto Naskh Arabic</h2>
+              <h2 id="use-cases" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Ideal Applications for Noto Naskh Arabic</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 {IDEAL_USE_CASES.map((useCase) => (
                   <Card key={useCase.title} className="border-sky-200 flex bg-white">
                     <div className="p-6 pr-0 flex items-center">{useCase.icon}</div>
                     <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold text-sky-800 mb-1">{useCase.title}</h3>
-                      <p className="text-sky-700 text-sm">{useCase.description}</p>
+                      <h3 className="text-lg font-semibold text-amber-800 mb-1">{useCase.title}</h3>
+                      <p className="text-amber-700 text-sm">{useCase.description}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
               
-              <h2 id="technical-details" className="text-3xl font-bold text-sky-800 mt-12 mb-6">Technical Specifications</h2>
+              <h2 id="technical-details" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Technical Specifications</h2>
               <div className="space-y-6 mb-12">
                 {TECHNICAL_DETAILS.map((detail) => (
                   <Card key={detail.title} className="border-sky-200 bg-white">
                     <CardHeader>
-                      <CardTitle className="text-xl text-sky-800">{detail.title}</CardTitle>
+                      <CardTitle className="text-xl text-amber-800">{detail.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-lg text-sky-700 mb-1">{detail.value}</p>
-                      {detail.description && <p className="text-sm text-sky-600">{detail.description}</p>}
+                      <p className="text-lg text-amber-700 mb-1">{detail.value}</p>
+                      {detail.description && <p className="text-sm text-amber-700">{detail.description}</p>}
                     </CardContent>
                   </Card>
                 ))}
               </div>
               
               <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center p-6 bg-sky-50 rounded-lg border border-sky-200">
-                 <h3 className="text-2xl font-semibold text-sky-800 text-center sm:text-left">Use Noto Naskh Arabic for Universal Clarity</h3>
+                 <h3 className="text-2xl font-semibold text-amber-800 text-center sm:text-left">Use Noto Naskh Arabic for Universal Clarity</h3>
                 <Button asChild size="lg" className="bg-sky-600 hover:bg-sky-700 text-white">
                   <Link href="/?font=Noto%20Naskh%20Arabic">Try Noto Naskh Arabic in Generator</Link>
                 </Button>

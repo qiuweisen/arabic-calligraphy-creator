@@ -6,7 +6,6 @@ import dynamic from "next/dynamic"
 import { useState, useEffect } from "react"
 import { useTranslations } from 'next-intl'
 import { LanguagePrompt } from "@/components/language-prompt"
-import { CalligraphyGenerator } from "@/components/calligraphy-generator"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
@@ -14,10 +13,16 @@ import { Check, Download, Palette, Type, ChevronRight, Laptop, Smartphone, Table
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { getFeaturedFonts, FONT_CATEGORIES } from "@/lib/content-links"
-import { getFontDetails } from "@/lib/font-details-data"
 
-const UseCasesSection = dynamic(() => 
-  import("@/components/home/use-cases-section").then((mod) => mod.UseCasesSection)
+import { CalligraphyGenerator } from "@/components/calligraphy-generator"
+
+// Dynamic import for use cases section (non-critical)
+const UseCasesSection = dynamic(
+  () => import("@/components/home/use-cases-section").then((mod) => ({ default: mod.UseCasesSection })),
+  {
+    loading: () => <div className="h-64 animate-pulse bg-gray-100 rounded-lg" />,
+    ssr: false,
+  }
 )
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://arabic-calligraphy-generator.com'; // Fallback for safety
@@ -44,101 +49,11 @@ const FONT_SLUG_TO_NAME: Record<string, string> = {
   'markazi-text': 'Markazi Text'
 }
 
-// Font details loading function (used by both featured and browse sections)
-function loadFontDetails(fontSlug: string, panelElement: Element) {
-  const fontDetails = getFontDetails(fontSlug);
-  
-  if (!fontDetails) {
-    panelElement.innerHTML = `
-      <div class="text-sm text-amber-700">
-        <p class="text-amber-600">Font details not available for this font yet.</p>
-      </div>
-    `;
-    return;
-  }
-
-  // Create detailed font information panel
-  panelElement.innerHTML = `
-    <div class="space-y-6">
-      <!-- Font Overview -->
-      <div>
-        <h5 class="font-semibold text-amber-900 mb-2">${fontDetails.name} Font</h5>
-        <p class="text-sm text-amber-700 mb-2">${fontDetails.fullDescription}</p>
-        <div class="flex gap-4 text-xs text-amber-600">
-          <span><strong>Category:</strong> ${fontDetails.category}</span>
-          <span><strong>Designer:</strong> ${fontDetails.designer}</span>
-        </div>
-      </div>
-
-      <!-- Key Features -->
-      <div>
-        <h6 class="font-medium text-amber-900 mb-2">Key Features</h6>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-          ${fontDetails.features.slice(0, 4).map(feature => `
-            <div class="flex items-start gap-2 text-xs">
-              <div class="w-1 h-1 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <span class="font-medium text-amber-800">${feature.title}:</span>
-                <span class="text-amber-700">${feature.description}</span>
-              </div>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-
-      <!-- Ideal Use Cases -->
-      <div>
-        <h6 class="font-medium text-amber-900 mb-2">Best Used For</h6>
-        <div class="space-y-1">
-          ${fontDetails.useCases.slice(0, 3).map(useCase => `
-            <div class="text-xs">
-              <span class="font-medium text-amber-800">${useCase.title}:</span>
-              <span class="text-amber-700">${useCase.description}</span>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-
-      <!-- Text Examples -->
-      ${fontDetails.textExamples.length > 0 ? `
-        <div>
-          <h6 class="font-medium text-amber-900 mb-2">Text Examples</h6>
-          <div class="space-y-2">
-            ${fontDetails.textExamples.slice(0, 2).map(example => `
-              <div class="bg-amber-50 p-2 rounded text-xs">
-                <div class="text-lg text-amber-900 font-arabic mb-1" dir="rtl">${example.text}</div>
-                <div class="text-amber-600 text-xs">${example.translation}</div>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      ` : ''}
-
-      <!-- Try Font Button -->
-      <div class="pt-2 border-t border-amber-200">
-        <button 
-          data-font-slug="${fontSlug}" 
-          class="try-font-button w-full px-3 py-2 bg-amber-600 text-white rounded text-xs hover:bg-amber-700 transition-colors"
-        >
-          Try ${fontDetails.name} in Generator
-        </button>
-      </div>
-    </div>
-  `;
-}
-
 export default function Home() {
   const t = useTranslations('homepage');
   const seoT = useTranslations('seo.structuredData');
 
   const [selectedFont, setSelectedFont] = useState<string | undefined>(undefined)
-  
-  // 分离左右两边的状态管理
-  const [featuredIsAllExpanded, setFeaturedIsAllExpanded] = useState(false)
-  const [featuredExpandedIds, setFeaturedExpandedIds] = useState<Set<string>>(new Set())
-  
-  const [browseExpandedCategories, setBrowseExpandedCategories] = useState<Set<string>>(new Set())
-  const [browseExpandedFonts, setBrowseExpandedFonts] = useState<Set<string>>(new Set())
   const [showAllFeaturedFonts, setShowAllFeaturedFonts] = useState(false)
 
   // Handle URL parameter for font selection
@@ -206,81 +121,6 @@ export default function Home() {
     newUrl.searchParams.set('font', fontName)
     window.history.replaceState({}, '', newUrl.toString())
   }
-
-  // Featured字体详情切换 - 只控制Featured部分
-  const toggleFeaturedFontDetails = (fontSlug: string | undefined) => {
-    if (!fontSlug) return
-    
-    const isCurrentlyExpanded = featuredExpandedIds.has(fontSlug)
-    
-    if (isCurrentlyExpanded) {
-      // 收缩这个字体
-      setFeaturedExpandedIds(prev => {
-        const newSet = new Set(prev)
-        newSet.delete(fontSlug)
-        return newSet
-      })
-      
-      const panelElement = document.getElementById(`featured-${fontSlug}-details`)
-      if (panelElement) {
-        panelElement.classList.add('hidden')
-      }
-      
-      // 如果是最后一个展开的字体，退出"全部展开"模式
-      if (featuredIsAllExpanded && featuredExpandedIds.size === 1) {
-        setFeaturedIsAllExpanded(false)
-      }
-    } else {
-      // 展开这个字体
-      setFeaturedExpandedIds(prev => {
-        const newSet = new Set(prev)
-        newSet.add(fontSlug)
-        return newSet
-      })
-      
-      const panelElement = document.getElementById(`featured-${fontSlug}-details`)
-      if (panelElement) {
-        panelElement.classList.remove('hidden')
-        loadFontDetails(fontSlug, panelElement)
-      }
-    }
-  }
-
-  // Browse字体详情切换 - 只控制Browse部分
-  const toggleBrowseFontDetails = (fontSlug: string | undefined) => {
-    if (!fontSlug) return
-    
-    const isCurrentlyExpanded = browseExpandedFonts.has(fontSlug)
-    
-    if (isCurrentlyExpanded) {
-      // 收缩这个字体
-      setBrowseExpandedFonts(prev => {
-        const newSet = new Set(prev)
-        newSet.delete(fontSlug)
-        return newSet
-      })
-      
-      const panelElement = document.getElementById(`browse-${fontSlug}-details`)
-      if (panelElement) {
-        panelElement.classList.add('hidden')
-      }
-    } else {
-      // 展开这个字体
-      setBrowseExpandedFonts(prev => {
-        const newSet = new Set(prev)
-        newSet.add(fontSlug)
-        return newSet
-      })
-      
-      const panelElement = document.getElementById(`browse-${fontSlug}-details`)
-      if (panelElement) {
-        panelElement.classList.remove('hidden')
-        loadFontDetails(fontSlug, panelElement)
-      }
-    }
-  }
-
-
 
   // 结构化数据 - SoftwareApplication Schema (多语言支持)
   const softwareApplicationSchema = {

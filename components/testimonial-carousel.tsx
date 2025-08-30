@@ -99,7 +99,7 @@ export function TestimonialCarousel() {
                             key={i}
                             className={cn(
                               "h-4 w-4",
-                              i < testimonial.rating ? "text-amber-500 fill-amber-500" : "text-gray-300",
+                              i < testimonial.rating ? "text-amber-600 fill-amber-500" : "text-gray-600",
                             )}
                           />
                         ))}

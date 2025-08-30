@@ -148,7 +148,7 @@ export default function ArabicCalligraphyHistoryPage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     Arabic calligraphy emerged in the 7th century alongside the revelation of the Quran and the rapid 
                     expansion of Islam. What began as a practical writing system quickly evolved into a sacred art form, 
                     deeply intertwined with Islamic spirituality and cultural identity.
@@ -181,19 +181,19 @@ export default function ArabicCalligraphyHistoryPage() {
 
                     <div className="space-y-6">
                       <div className="bg-orange-50 border border-orange-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-orange-800 mb-4">Cultural Significance</h4>
+                        <h4 className="font-semibold text-amber-800 mb-4">Cultural Significance</h4>
                         <div className="space-y-4">
                           <div>
-                            <h5 className="font-semibold text-orange-700 mb-2">Divine Connection</h5>
-                            <p className="text-sm text-orange-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Divine Connection</h5>
+                            <p className="text-sm text-amber-700">
                               In Islamic belief, Arabic is the language of divine revelation. This sacred 
                               association transformed calligraphy from mere writing into a spiritual practice, 
                               where beauty in script reflected divine beauty.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-orange-700 mb-2">Artistic Expression</h5>
-                            <p className="text-sm text-orange-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Artistic Expression</h5>
+                            <p className="text-sm text-amber-700">
                               As Islamic art developed its distinctive character, avoiding figurative 
                               representation in religious contexts, calligraphy became a primary means 
                               of artistic and spiritual expression.
@@ -205,19 +205,19 @@ export default function ArabicCalligraphyHistoryPage() {
                   </div>
 
                   <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-yellow-800 mb-4">📚 Key Historical Developments</h4>
+                    <h4 className="font-semibold text-amber-800 mb-4">📚 Key Historical Developments</h4>
                     <div className="grid md:grid-cols-3 gap-6">
                       <div>
-                        <h5 className="font-semibold text-yellow-700 mb-2">632 CE</h5>
-                        <p className="text-sm text-yellow-600">Compilation of the Quran under Caliph Abu Bakr, standardizing Arabic script</p>
+                        <h5 className="font-semibold text-amber-700 mb-2">632 CE</h5>
+                        <p className="text-sm text-amber-700">Compilation of the Quran under Caliph Abu Bakr, standardizing Arabic script</p>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-yellow-700 mb-2">650 CE</h5>
-                        <p className="text-sm text-yellow-600">Uthman's standardized Quranic text distributed throughout the Islamic world</p>
+                        <h5 className="font-semibold text-amber-700 mb-2">650 CE</h5>
+                        <p className="text-sm text-amber-700">Uthman's standardized Quranic text distributed throughout the Islamic world</p>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-yellow-700 mb-2">8th Century</h5>
-                        <p className="text-sm text-yellow-600">Development of diacritical marks to ensure accurate Quranic recitation</p>
+                        <h5 className="font-semibold text-amber-700 mb-2">8th Century</h5>
+                        <p className="text-sm text-amber-700">Development of diacritical marks to ensure accurate Quranic recitation</p>
                       </div>
                     </div>
                   </div>
@@ -235,7 +235,7 @@ export default function ArabicCalligraphyHistoryPage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     The Abbasid period marked the golden age of Arabic calligraphy, when the art form reached 
                     unprecedented heights of sophistication and beauty. This era saw the systematization of 
                     calligraphic styles and the emergence of master calligraphers whose influence continues today.
@@ -244,19 +244,19 @@ export default function ArabicCalligraphyHistoryPage() {
                   <div className="grid md:grid-cols-2 gap-8 mb-8">
                     <div className="space-y-6">
                       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-blue-800 mb-4">Ibn Muqla's Revolution</h4>
+                        <h4 className="font-semibold text-amber-800 mb-4">Ibn Muqla's Revolution</h4>
                         <div className="space-y-4">
                           <div>
-                            <h5 className="font-semibold text-blue-700 mb-2">The Master Calligrapher (886-940 CE)</h5>
-                            <p className="text-sm text-blue-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">The Master Calligrapher (886-940 CE)</h5>
+                            <p className="text-sm text-amber-700">
                               Abu Ali Muhammad ibn Muqla revolutionized Arabic calligraphy by establishing 
                               mathematical principles for letter proportions. His system, based on geometric 
                               relationships, created the foundation for classical Arabic scripts.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-blue-700 mb-2">The Six Classical Scripts</h5>
-                            <p className="text-sm text-blue-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">The Six Classical Scripts</h5>
+                            <p className="text-sm text-amber-700">
                               Ibn Muqla systematized six fundamental scripts: Thuluth, Naskh, Muhaqqaq, 
                               Rayhan, Tawqi, and Riqa. These became the classical foundation of Arabic 
                               calligraphy, each with specific proportions and applications.
@@ -268,19 +268,19 @@ export default function ArabicCalligraphyHistoryPage() {
 
                     <div className="space-y-6">
                       <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-green-800 mb-4">Cultural Flourishing</h4>
+                        <h4 className="font-semibold text-emerald-600 mb-4">Cultural Flourishing</h4>
                         <div className="space-y-4">
                           <div>
-                            <h5 className="font-semibold text-green-700 mb-2">House of Wisdom</h5>
-                            <p className="text-sm text-green-600">
+                            <h5 className="font-semibold text-emerald-600 mb-2">House of Wisdom</h5>
+                            <p className="text-sm text-emerald-600">
                               Baghdad's House of Wisdom became a center of learning where calligraphers, 
                               scholars, and artists collaborated. This intellectual environment fostered 
                               innovation in both content and artistic presentation.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-green-700 mb-2">Patronage System</h5>
-                            <p className="text-sm text-green-600">
+                            <h5 className="font-semibold text-emerald-600 mb-2">Patronage System</h5>
+                            <p className="text-sm text-emerald-600">
                               Abbasid caliphs and nobles became patrons of calligraphy, commissioning 
                               magnificent Qurans and literary works. This patronage elevated calligraphy's 
                               status and encouraged artistic excellence.
@@ -292,11 +292,11 @@ export default function ArabicCalligraphyHistoryPage() {
                   </div>
 
                   <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-indigo-800 mb-4">🎨 Artistic Innovations</h4>
+                    <h4 className="font-semibold text-amber-800 mb-4">🎨 Artistic Innovations</h4>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <h5 className="font-semibold text-indigo-700 mb-2">Geometric Principles</h5>
-                        <ul className="text-sm text-indigo-600 space-y-1">
+                        <h5 className="font-semibold text-amber-700 mb-2">Geometric Principles</h5>
+                        <ul className="text-sm text-amber-700 space-y-1">
                           <li>• Mathematical proportions based on the circle and square</li>
                           <li>• Standardized letter heights and widths</li>
                           <li>• Consistent spacing and alignment systems</li>
@@ -304,8 +304,8 @@ export default function ArabicCalligraphyHistoryPage() {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-indigo-700 mb-2">Aesthetic Developments</h5>
-                        <ul className="text-sm text-indigo-600 space-y-1">
+                        <h5 className="font-semibold text-amber-700 mb-2">Aesthetic Developments</h5>
+                        <ul className="text-sm text-amber-700 space-y-1">
                           <li>• Refined letter forms with elegant curves</li>
                           <li>• Sophisticated use of positive and negative space</li>
                           <li>• Integration of calligraphy with geometric patterns</li>
@@ -328,7 +328,7 @@ export default function ArabicCalligraphyHistoryPage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     The classical period witnessed the spread of Arabic calligraphy across the Islamic world,
                     leading to the development of distinct regional styles while maintaining core aesthetic principles.
                     This era saw the emergence of master calligraphers who refined and perfected the art form.
@@ -336,19 +336,19 @@ export default function ArabicCalligraphyHistoryPage() {
 
                   <div className="grid md:grid-cols-3 gap-6 mb-8">
                     <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-purple-800 mb-4">Mamluk Period (1250-1517)</h4>
+                      <h4 className="font-semibold text-amber-800 mb-4">Mamluk Period (1250-1517)</h4>
                       <div className="space-y-3">
                         <div>
-                          <h5 className="font-semibold text-purple-700 mb-2">Architectural Integration</h5>
-                          <p className="text-sm text-purple-600">
+                          <h5 className="font-semibold text-amber-700 mb-2">Architectural Integration</h5>
+                          <p className="text-sm text-amber-700">
                             Mamluk rulers commissioned magnificent mosques and madrasas featuring
                             monumental calligraphic inscriptions. The integration of calligraphy
                             with architecture reached new heights of sophistication.
                           </p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-purple-700 mb-2">Thuluth Mastery</h5>
-                          <p className="text-sm text-purple-600">
+                          <h5 className="font-semibold text-amber-700 mb-2">Thuluth Mastery</h5>
+                          <p className="text-sm text-amber-700">
                             The Thuluth script achieved its classical form during this period,
                             becoming the preferred choice for monumental inscriptions and
                             ceremonial manuscripts.
@@ -358,19 +358,19 @@ export default function ArabicCalligraphyHistoryPage() {
                     </div>
 
                     <div className="bg-teal-50 border border-teal-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-teal-800 mb-4">Ottoman Empire (1299-1922)</h4>
+                      <h4 className="font-semibold text-amber-800 mb-4">Ottoman Empire (1299-1922)</h4>
                       <div className="space-y-3">
                         <div>
-                          <h5 className="font-semibold text-teal-700 mb-2">Diwani Script</h5>
-                          <p className="text-sm text-teal-600">
+                          <h5 className="font-semibold text-amber-700 mb-2">Diwani Script</h5>
+                          <p className="text-sm text-amber-700">
                             The Ottomans developed the ornate Diwani script for official
                             correspondence, characterized by its flowing curves and
                             intricate letter connections.
                           </p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-teal-700 mb-2">Imperial Patronage</h5>
-                          <p className="text-sm text-teal-600">
+                          <h5 className="font-semibold text-amber-700 mb-2">Imperial Patronage</h5>
+                          <p className="text-sm text-amber-700">
                             Ottoman sultans were great patrons of calligraphy, establishing
                             schools and workshops that produced master calligraphers whose
                             influence spread throughout the empire.
@@ -380,19 +380,19 @@ export default function ArabicCalligraphyHistoryPage() {
                     </div>
 
                     <div className="bg-rose-50 border border-rose-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-rose-800 mb-4">Safavid Persia (1501-1736)</h4>
+                      <h4 className="font-semibold text-gray-900 mb-4">Safavid Persia (1501-1736)</h4>
                       <div className="space-y-3">
                         <div>
-                          <h5 className="font-semibold text-rose-700 mb-2">Nastaliq Excellence</h5>
-                          <p className="text-sm text-rose-600">
+                          <h5 className="font-semibold text-gray-900 mb-2">Nastaliq Excellence</h5>
+                          <p className="text-sm text-gray-600">
                             Persian calligraphers perfected the Nastaliq script, creating
                             a flowing, elegant style that became synonymous with Persian
                             poetry and literature.
                           </p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-rose-700 mb-2">Manuscript Illumination</h5>
-                          <p className="text-sm text-rose-600">
+                          <h5 className="font-semibold text-gray-900 mb-2">Manuscript Illumination</h5>
+                          <p className="text-sm text-gray-600">
                             The integration of calligraphy with miniature painting and
                             illumination reached extraordinary levels of artistic achievement
                             in Safavid manuscripts.
@@ -403,10 +403,10 @@ export default function ArabicCalligraphyHistoryPage() {
                   </div>
 
                   <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-gray-800 mb-4">🌍 Regional Characteristics</h4>
+                    <h4 className="font-semibold text-gray-900 mb-4">🌍 Regional Characteristics</h4>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <h5 className="font-semibold text-gray-700 mb-2">Maghrebi Style (North Africa & Spain)</h5>
+                        <h5 className="font-semibold text-gray-600 mb-2">Maghrebi Style (North Africa & Spain)</h5>
                         <ul className="text-sm text-gray-600 space-y-1">
                           <li>• Distinctive rounded letter forms</li>
                           <li>• Unique pointing system below the baseline</li>
@@ -415,7 +415,7 @@ export default function ArabicCalligraphyHistoryPage() {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-gray-700 mb-2">Eastern Styles (Central Asia & India)</h5>
+                        <h5 className="font-semibold text-gray-600 mb-2">Eastern Styles (Central Asia & India)</h5>
                         <ul className="text-sm text-gray-600 space-y-1">
                           <li>• Bihari script for Quranic texts</li>
                           <li>• Shikasta for rapid writing</li>
@@ -439,7 +439,7 @@ export default function ArabicCalligraphyHistoryPage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     The 20th and 21st centuries have witnessed a remarkable revival of Arabic calligraphy,
                     driven by cultural renaissance movements, technological advances, and global appreciation
                     for Islamic art. This modern era has seen both preservation of traditional techniques
@@ -449,27 +449,27 @@ export default function ArabicCalligraphyHistoryPage() {
                   <div className="grid md:grid-cols-2 gap-8 mb-8">
                     <div className="space-y-6">
                       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-blue-800 mb-4">20th Century Renaissance</h4>
+                        <h4 className="font-semibold text-amber-800 mb-4">20th Century Renaissance</h4>
                         <div className="space-y-4">
                           <div>
-                            <h5 className="font-semibold text-blue-700 mb-2">Cultural Awakening</h5>
-                            <p className="text-sm text-blue-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Cultural Awakening</h5>
+                            <p className="text-sm text-amber-700">
                               The Arab cultural renaissance (Nahda) of the late 19th and early 20th
                               centuries sparked renewed interest in Arabic calligraphy as a symbol
                               of cultural identity and artistic heritage.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-blue-700 mb-2">Modern Masters</h5>
-                            <p className="text-sm text-blue-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Modern Masters</h5>
+                            <p className="text-sm text-amber-700">
                               Calligraphers like Hashim al-Baghdadi, Hamid al-Amidi, and Mohamed Zakariya
                               revitalized traditional techniques while developing contemporary approaches
                               to the ancient art form.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-blue-700 mb-2">Educational Institutions</h5>
-                            <p className="text-sm text-blue-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Educational Institutions</h5>
+                            <p className="text-sm text-amber-700">
                               Formal calligraphy schools and programs were established in major
                               Islamic centers, ensuring the transmission of traditional knowledge
                               to new generations of artists.
@@ -481,27 +481,27 @@ export default function ArabicCalligraphyHistoryPage() {
 
                     <div className="space-y-6">
                       <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-green-800 mb-4">Digital Revolution</h4>
+                        <h4 className="font-semibold text-emerald-600 mb-4">Digital Revolution</h4>
                         <div className="space-y-4">
                           <div>
-                            <h5 className="font-semibold text-green-700 mb-2">Typography Development</h5>
-                            <p className="text-sm text-green-600">
+                            <h5 className="font-semibold text-emerald-600 mb-2">Typography Development</h5>
+                            <p className="text-sm text-emerald-600">
                               The development of Arabic digital fonts has made calligraphy accessible
                               to millions, enabling the creation of beautiful Arabic text in digital
                               media while preserving traditional aesthetics.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-green-700 mb-2">Online Tools & Platforms</h5>
-                            <p className="text-sm text-green-600">
+                            <h5 className="font-semibold text-emerald-600 mb-2">Online Tools & Platforms</h5>
+                            <p className="text-sm text-emerald-600">
                               Web-based calligraphy generators and design tools have democratized
                               access to Arabic typography, allowing users worldwide to create
                               professional-quality calligraphic designs.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-green-700 mb-2">Global Community</h5>
-                            <p className="text-sm text-green-600">
+                            <h5 className="font-semibold text-emerald-600 mb-2">Global Community</h5>
+                            <p className="text-sm text-emerald-600">
                               Social media and online platforms have created a global community
                               of calligraphy enthusiasts, fostering knowledge sharing and
                               collaborative learning across cultural boundaries.
@@ -513,11 +513,11 @@ export default function ArabicCalligraphyHistoryPage() {
                   </div>
 
                   <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-6 mb-6">
-                    <h4 className="font-semibold text-indigo-800 mb-4">🚀 Contemporary Innovations</h4>
+                    <h4 className="font-semibold text-amber-800 mb-4">🚀 Contemporary Innovations</h4>
                     <div className="grid md:grid-cols-3 gap-6">
                       <div>
-                        <h5 className="font-semibold text-indigo-700 mb-2">Digital Art</h5>
-                        <ul className="text-sm text-indigo-600 space-y-1">
+                        <h5 className="font-semibold text-amber-700 mb-2">Digital Art</h5>
+                        <ul className="text-sm text-amber-700 space-y-1">
                           <li>• Vector-based calligraphy design</li>
                           <li>• Interactive and animated typography</li>
                           <li>• 3D calligraphic sculptures</li>
@@ -525,8 +525,8 @@ export default function ArabicCalligraphyHistoryPage() {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-indigo-700 mb-2">Cross-Cultural Fusion</h5>
-                        <ul className="text-sm text-indigo-600 space-y-1">
+                        <h5 className="font-semibold text-amber-700 mb-2">Cross-Cultural Fusion</h5>
+                        <ul className="text-sm text-amber-700 space-y-1">
                           <li>• Integration with contemporary art movements</li>
                           <li>• Collaboration with international artists</li>
                           <li>• Adaptation to modern design principles</li>
@@ -534,8 +534,8 @@ export default function ArabicCalligraphyHistoryPage() {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-indigo-700 mb-2">Educational Technology</h5>
-                        <ul className="text-sm text-indigo-600 space-y-1">
+                        <h5 className="font-semibold text-amber-700 mb-2">Educational Technology</h5>
+                        <ul className="text-sm text-amber-700 space-y-1">
                           <li>• Online learning platforms</li>
                           <li>• Mobile apps for practice</li>
                           <li>• Virtual reality training</li>
@@ -546,19 +546,19 @@ export default function ArabicCalligraphyHistoryPage() {
                   </div>
 
                   <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-yellow-800 mb-4">📈 Future Prospects</h4>
+                    <h4 className="font-semibold text-amber-800 mb-4">📈 Future Prospects</h4>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <h5 className="font-semibold text-yellow-700 mb-2">Technological Integration</h5>
-                        <p className="text-sm text-yellow-600">
+                        <h5 className="font-semibold text-amber-700 mb-2">Technological Integration</h5>
+                        <p className="text-sm text-amber-700">
                           Emerging technologies like AI, machine learning, and advanced typography engines
                           promise to further enhance the accessibility and creative possibilities of
                           Arabic calligraphy while preserving its traditional essence.
                         </p>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-yellow-700 mb-2">Cultural Preservation</h5>
-                        <p className="text-sm text-yellow-600">
+                        <h5 className="font-semibold text-amber-700 mb-2">Cultural Preservation</h5>
+                        <p className="text-sm text-amber-700">
                           Digital archives, virtual museums, and online educational resources ensure
                           that the rich heritage of Arabic calligraphy will be preserved and transmitted
                           to future generations worldwide.
@@ -579,7 +579,7 @@ export default function ArabicCalligraphyHistoryPage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     Arabic calligraphy's influence extends far beyond the Islamic world, inspiring artists,
                     designers, and cultural movements globally. Its principles of harmony, proportion, and
                     spiritual expression continue to resonate with contemporary audiences seeking meaning
@@ -589,19 +589,19 @@ export default function ArabicCalligraphyHistoryPage() {
                   <div className="grid md:grid-cols-2 gap-8 mb-8">
                     <div className="space-y-6">
                       <div className="bg-rose-50 border border-rose-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-rose-800 mb-4">Spiritual Dimensions</h4>
+                        <h4 className="font-semibold text-gray-900 mb-4">Spiritual Dimensions</h4>
                         <div className="space-y-3">
                           <div>
-                            <h5 className="font-semibold text-rose-700 mb-2">Meditative Practice</h5>
-                            <p className="text-sm text-rose-600">
+                            <h5 className="font-semibold text-gray-900 mb-2">Meditative Practice</h5>
+                            <p className="text-sm text-gray-600">
                               The practice of calligraphy is considered a form of meditation and
                               spiritual discipline, requiring patience, concentration, and devotion
                               that cultivates inner peace and mindfulness.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-rose-700 mb-2">Sacred Geometry</h5>
-                            <p className="text-sm text-rose-600">
+                            <h5 className="font-semibold text-gray-900 mb-2">Sacred Geometry</h5>
+                            <p className="text-sm text-gray-600">
                               The mathematical principles underlying Arabic calligraphy reflect
                               Islamic concepts of divine order and cosmic harmony, making each
                               well-executed piece a reflection of spiritual truth.
@@ -613,10 +613,10 @@ export default function ArabicCalligraphyHistoryPage() {
 
                     <div className="space-y-6">
                       <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-emerald-800 mb-4">Contemporary Relevance</h4>
+                        <h4 className="font-semibold text-emerald-600 mb-4">Contemporary Relevance</h4>
                         <div className="space-y-3">
                           <div>
-                            <h5 className="font-semibold text-emerald-700 mb-2">Design Influence</h5>
+                            <h5 className="font-semibold text-emerald-600 mb-2">Design Influence</h5>
                             <p className="text-sm text-emerald-600">
                               Modern graphic designers and typographers draw inspiration from
                               Arabic calligraphy's principles of balance, rhythm, and visual
@@ -624,7 +624,7 @@ export default function ArabicCalligraphyHistoryPage() {
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-emerald-700 mb-2">Cultural Bridge</h5>
+                            <h5 className="font-semibold text-emerald-600 mb-2">Cultural Bridge</h5>
                             <p className="text-sm text-emerald-600">
                               Arabic calligraphy serves as a cultural bridge, fostering
                               understanding and appreciation between different communities
@@ -637,19 +637,19 @@ export default function ArabicCalligraphyHistoryPage() {
                   </div>
 
                   <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-purple-800 mb-4">🌟 Legacy and Continuation</h4>
+                    <h4 className="font-semibold text-amber-800 mb-4">🌟 Legacy and Continuation</h4>
                     <div className="grid md:grid-cols-3 gap-6">
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-purple-700 mb-1">1400+</div>
-                        <p className="text-sm text-purple-600">Years of continuous artistic tradition</p>
+                        <div className="text-2xl font-bold text-amber-700 mb-1">1400+</div>
+                        <p className="text-sm text-amber-700">Years of continuous artistic tradition</p>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-purple-700 mb-1">400M+</div>
-                        <p className="text-sm text-purple-600">Arabic speakers worldwide</p>
+                        <div className="text-2xl font-bold text-amber-700 mb-1">400M+</div>
+                        <p className="text-sm text-amber-700">Arabic speakers worldwide</p>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-purple-700 mb-1">Global</div>
-                        <p className="text-sm text-purple-600">Recognition as UNESCO cultural heritage</p>
+                        <div className="text-2xl font-bold text-amber-700 mb-1">Global</div>
+                        <p className="text-sm text-amber-700">Recognition as UNESCO cultural heritage</p>
                       </div>
                     </div>
                   </div>
@@ -666,7 +666,7 @@ export default function ArabicCalligraphyHistoryPage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     Arabic calligraphy's influence extends far beyond the Islamic world, inspiring artists,
                     designers, and cultural movements globally. Its principles of harmony, proportion, and
                     spiritual expression continue to resonate with contemporary audiences.
@@ -674,18 +674,18 @@ export default function ArabicCalligraphyHistoryPage() {
 
                   <div className="grid md:grid-cols-2 gap-8 mb-8">
                     <div className="bg-rose-50 border border-rose-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-rose-800 mb-4">Spiritual Dimensions</h4>
+                      <h4 className="font-semibold text-gray-900 mb-4">Spiritual Dimensions</h4>
                       <div className="space-y-3">
                         <div>
-                          <h5 className="font-semibold text-rose-700 mb-2">Meditative Practice</h5>
-                          <p className="text-sm text-rose-600">
+                          <h5 className="font-semibold text-gray-900 mb-2">Meditative Practice</h5>
+                          <p className="text-sm text-gray-600">
                             The practice of calligraphy is considered a form of meditation and
                             spiritual discipline, requiring patience, concentration, and devotion.
                           </p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-rose-700 mb-2">Sacred Geometry</h5>
-                          <p className="text-sm text-rose-600">
+                          <h5 className="font-semibold text-gray-900 mb-2">Sacred Geometry</h5>
+                          <p className="text-sm text-gray-600">
                             The mathematical principles underlying Arabic calligraphy reflect
                             Islamic concepts of divine order and cosmic harmony.
                           </p>
@@ -694,17 +694,17 @@ export default function ArabicCalligraphyHistoryPage() {
                     </div>
 
                     <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-emerald-800 mb-4">Contemporary Relevance</h4>
+                      <h4 className="font-semibold text-emerald-600 mb-4">Contemporary Relevance</h4>
                       <div className="space-y-3">
                         <div>
-                          <h5 className="font-semibold text-emerald-700 mb-2">Design Influence</h5>
+                          <h5 className="font-semibold text-emerald-600 mb-2">Design Influence</h5>
                           <p className="text-sm text-emerald-600">
                             Modern graphic designers draw inspiration from Arabic calligraphy's
                             principles of balance, rhythm, and visual hierarchy.
                           </p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-emerald-700 mb-2">Cultural Bridge</h5>
+                          <h5 className="font-semibold text-emerald-600 mb-2">Cultural Bridge</h5>
                           <p className="text-sm text-emerald-600">
                             Arabic calligraphy serves as a cultural bridge, fostering
                             understanding between different communities through beauty.
@@ -715,19 +715,19 @@ export default function ArabicCalligraphyHistoryPage() {
                   </div>
 
                   <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-purple-800 mb-4">🌟 Legacy Statistics</h4>
+                    <h4 className="font-semibold text-amber-800 mb-4">🌟 Legacy Statistics</h4>
                     <div className="grid md:grid-cols-3 gap-6">
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-purple-700 mb-1">1400+</div>
-                        <p className="text-sm text-purple-600">Years of continuous tradition</p>
+                        <div className="text-2xl font-bold text-amber-700 mb-1">1400+</div>
+                        <p className="text-sm text-amber-700">Years of continuous tradition</p>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-purple-700 mb-1">400M+</div>
-                        <p className="text-sm text-purple-600">Arabic speakers worldwide</p>
+                        <div className="text-2xl font-bold text-amber-700 mb-1">400M+</div>
+                        <p className="text-sm text-amber-700">Arabic speakers worldwide</p>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-purple-700 mb-1">Global</div>
-                        <p className="text-sm text-purple-600">UNESCO cultural heritage</p>
+                        <div className="text-2xl font-bold text-amber-700 mb-1">Global</div>
+                        <p className="text-sm text-amber-700">UNESCO cultural heritage</p>
                       </div>
                     </div>
                   </div>

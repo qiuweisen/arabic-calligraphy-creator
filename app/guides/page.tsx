@@ -110,7 +110,7 @@ export default function GuidesPage() {
                 <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
                   <Link href="/guides/arabic-calligraphy-beginner-guide">Start Learning</Link>
                 </Button>
-                <Button asChild variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+                <Button asChild variant="outline" className="border-blue-600 text-amber-700 hover:bg-blue-50">
                   <Link href="/">Try Generator</Link>
                 </Button>
               </div>
@@ -130,16 +130,16 @@ export default function GuidesPage() {
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4 mb-4">
                       <div className="mt-1">
-                        <BookOpen className="h-8 w-8 text-blue-600" />
+                        <BookOpen className="h-8 w-8 text-amber-700" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-blue-800 mb-2">{guide.title}</h3>
-                        <p className="text-blue-700 text-sm mb-4 leading-relaxed">{guide.description}</p>
+                        <h3 className="text-xl font-bold text-amber-800 mb-2">{guide.title}</h3>
+                        <p className="text-amber-700 text-sm mb-4 leading-relaxed">{guide.description}</p>
                       </div>
                     </div>
                     
                     <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center space-x-4 text-xs text-gray-500">
+                      <div className="flex items-center space-x-4 text-xs text-gray-600">
                         <div className="flex items-center">
                           <Users className="h-3 w-3 mr-1" />
                           {guide.difficulty}
@@ -153,7 +153,7 @@ export default function GuidesPage() {
                     
                     <Link 
                       href={guide.href}
-                      className="text-sm font-medium text-blue-600 hover:text-blue-800 flex items-center"
+                      className="text-sm font-medium text-amber-700 hover:text-amber-800 flex items-center"
                     >
                       Read Guide
                       <ArrowRight className="ml-1 h-4 w-4" />
@@ -166,11 +166,11 @@ export default function GuidesPage() {
             {/* CTA Section */}
             <div className="bg-blue-900 text-white rounded-lg p-8 text-center">
               <h2 className="text-2xl font-bold mb-4">Ready to Start Creating?</h2>
-              <p className="text-blue-200 mb-6 max-w-2xl mx-auto">
+              <p className="text-amber-600 mb-6 max-w-2xl mx-auto">
                 Put your knowledge into practice with our free Arabic calligraphy generator.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button asChild className="bg-white text-blue-900 hover:bg-gray-100">
+                <Button asChild className="bg-white text-amber-800 hover:bg-gray-100">
                   <Link href="/">Create Calligraphy</Link>
                 </Button>
                 <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
