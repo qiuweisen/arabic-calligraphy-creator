@@ -1,10 +1,3 @@
-/* 
-此文件已被优化并整合到 app/globals.css 中
-备份位置: /Users/qiuweisen/CascadeProjects/arabic-calligraphy-creator/docs/css-backups/2025-08-30T14-24-17-791Z/archived_styles_globals.css
-时间: 2025-08-30T14:24:17.811Z
-如需恢复，请运行 npm run css:rollback
-*/
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

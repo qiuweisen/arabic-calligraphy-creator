@@ -1,4 +1,4 @@
-/* 清理重复后的全局样式 - 基于分析报告优化 */
+/* 首屏关键CSS：包含首页渲染必需的最小样式集 */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,7 +8,7 @@
 
 @layer base {
   :root {
-    /* 主色彩系统 - 基于首页成功设计（统一后的变量） */
+    /* 主色彩系统 - 基于首页成功设计 */
     --background: 0 0% 100%;
     --foreground: 20 14.3% 4.1%;
     --card: 0 0% 100%;
@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 20 14.3% 4.1%;
     
-    /* 品牌主色 - 阿拉伯书法橙色调（保持首页风格） */
+    /* 品牌主色 - 阿拉伯书法橙色调 */
     --primary: 24 75% 50%;
     --primary-foreground: 60 9.1% 97.8%;
     
@@ -74,7 +74,7 @@
   }
 }
 
-/* 阿拉伯字体系统 - 首页核心功能（清理重复定义） */
+/* 阿拉伯字体系统 - 首页核心功能 */
 .font-arabic {
   font-family: "Amiri", "Scheherazade New", "Noto Naskh Arabic", "Times New Roman", "DejaVu Serif", serif;
   font-display: swap; /* 优化字体加载性能 */
@@ -132,23 +132,15 @@
   letter-spacing: 0.03em;
 }
 
-/* 响应式工具类 - 统一移动端/桌面端显示控制 */
-@media (max-width: 768px) {
-  .mobile-only {
-    display: block;
-  }
-  
-  .desktop-only {
-    display: none;
-  }
+/* 首页特定的关键组件样式 */
+.hero-section {
+  /* 保持现有首页英雄区样式 */
 }
 
-@media (min-width: 769px) {
-  .mobile-only {
-    display: none;
-  }
-  
-  .desktop-only {
-    display: block;
-  }
+.calligraphy-generator {
+  /* 保持现有生成器样式 */
+}
+
+.main-navigation {
+  /* 保持现有导航样式 */
 }

@@ -1,4 +1,4 @@
-/* 清理重复后的全局样式 - 基于分析报告优化 */
+/* 关键CSS：首屏渲染必需的基础样式 */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,36 +8,25 @@
 
 @layer base {
   :root {
-    /* 主色彩系统 - 基于首页成功设计（统一后的变量） */
     --background: 0 0% 100%;
     --foreground: 20 14.3% 4.1%;
     --card: 0 0% 100%;
     --card-foreground: 20 14.3% 4.1%;
     --popover: 0 0% 100%;
     --popover-foreground: 20 14.3% 4.1%;
-    
-    /* 品牌主色 - 阿拉伯书法橙色调（保持首页风格） */
     --primary: 24 75% 50%;
     --primary-foreground: 60 9.1% 97.8%;
-    
-    /* 辅助色彩 */
     --secondary: 60 4.8% 95.9%;
     --secondary-foreground: 24 9.8% 10%;
     --muted: 60 4.8% 95.9%;
     --muted-foreground: 25 5.3% 44.7%;
     --accent: 60 4.8% 95.9%;
     --accent-foreground: 24 9.8% 10%;
-    
-    /* 状态色彩 */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 60 9.1% 97.8%;
-    
-    /* 边框和输入框 */
     --border: 20 5.9% 90%;
     --input: 20 5.9% 90%;
     --ring: 24 75% 50%;
-    
-    /* 圆角系统 */
     --radius: 0.5rem;
   }
 
@@ -74,13 +63,12 @@
   }
 }
 
-/* 阿拉伯字体系统 - 首页核心功能（清理重复定义） */
 .font-arabic {
   font-family: "Amiri", "Scheherazade New", "Noto Naskh Arabic", "Times New Roman", "DejaVu Serif", serif;
-  font-display: swap; /* 优化字体加载性能 */
+  font-display: swap; /* 优化字体加载 */
 }
 
-/* 预览区域 - 防止CLS的关键样式 */
+/* 预览区域防止CLS的基础样式 */
 .arabic-preview {
   min-height: 120px; /* 为常见文字预留最小高度 */
   display: flex;
@@ -89,7 +77,7 @@
   transition: none; /* 禁用过渡动画减少视觉干扰 */
 }
 
-/* 字体加载状态指示器 */
+/* 字体加载状态提示 */
 .font-loading-indicator {
   opacity: 0.7;
   transition: opacity 0.2s ease-in-out;
@@ -113,7 +101,7 @@
   100% { transform: rotate(360deg); }
 }
 
-/* 字体降级策略 - 确保在字体加载失败时的体验 */
+/* 字体特定的优化兜底 */
 .font-amiri-fallback {
   font-family: "Times New Roman", "DejaVu Serif", serif;
   letter-spacing: 0.02em; /* 轻微字间距调整匹配Amiri */
@@ -130,25 +118,4 @@
   font-family: "Arial Black", "Helvetica", sans-serif;
   font-weight: bold;
   letter-spacing: 0.03em;
-}
-
-/* 响应式工具类 - 统一移动端/桌面端显示控制 */
-@media (max-width: 768px) {
-  .mobile-only {
-    display: block;
-  }
-  
-  .desktop-only {
-    display: none;
-  }
-}
-
-@media (min-width: 769px) {
-  .mobile-only {
-    display: none;
-  }
-  
-  .desktop-only {
-    display: block;
-  }
 }
