@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, useMemo, useCallback } from "react"
 import {
   Download,
   Share2,
@@ -337,16 +337,16 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
   }, [initialFont, font, loadFont])
 
   // Toggle keyboard visibility
-  const toggleKeyboard = () => {
+  const toggleKeyboard = useCallback(() => {
     setKeyboardVisible(!keyboardVisible)
-  }
+  }, [keyboardVisible])
 
   // Handle text insertion from virtual keyboard
-  const handleKeyPress = (char: string) => {
+  const handleKeyPress = useCallback((char: string) => {
     setText((prev) => prev + char)
-  }
+  }, [])
 
-  const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handleTextChange = useCallback((e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newText = e.target.value || DEFAULT_TEXT
     setText(newText)
     
@@ -359,7 +359,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
         has_content: newText.trim().length > 0
       });
     }
-  }
+  }, [])
 
   const handleFontChange = async (value: string) => {
     // 立即更新字体状态，使用fallback字体显示
@@ -394,27 +394,27 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
 
 
 
-  const handleAlignmentChange = (value: string) => {
+  const handleAlignmentChange = useCallback((value: string) => {
     setAlignment(value)
-  }
+  }, [])
 
-  const handleBackgroundPatternChange = (value: string) => {
+  const handleBackgroundPatternChange = useCallback((value: string) => {
     setBackgroundPattern(value)
     // Clear background image if a pattern is selected
     if (value !== "none") {
       setBackgroundImage("")
     }
-  }
+  }, [])
 
-  const handleFontWeightChange = (value: string) => {
+  const handleFontWeightChange = useCallback((value: string) => {
     setFontWeight(Number.parseInt(value))
-  }
+  }, [])
 
-  const handleFontStyleChange = (value: string) => {
+  const handleFontStyleChange = useCallback((value: string) => {
     setFontStyle(value)
-  }
+  }, [])
 
-  const toggleFavorite = (fontValue: string) => {
+  const toggleFavorite = useCallback((fontValue: string) => {
     setFavorites((prev) => {
       if (prev.includes(fontValue)) {
         return prev.filter((f) => f !== fontValue)
@@ -422,7 +422,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
         return [...prev, fontValue]
       }
     })
-  }
+  }, [])
 
   const handleBackgroundImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0]
@@ -889,6 +889,55 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
         backgroundImage: backgroundPattern,
       }
     }
+  }
+
+  // Get fallback font class based on font family
+  const getFallbackFontClass = (fontValue: string) => {
+    if (fontValue.includes("Amiri") || fontValue.includes("Scheherazade") || fontValue.includes("Noto Naskh")) {
+      return "font-amiri-fallback"
+    } else if (fontValue.includes("Cairo") || fontValue.includes("Tajawal") || fontValue.includes("Mada")) {
+      return "font-cairo-fallback"
+    } else if (fontValue.includes("Kufi") || fontValue.includes("Rakkas")) {
+      return "font-kufi-fallback"
+    }
+    return "font-amiri-fallback" // 默认兜底
+  }
+
+  // Enhanced CLS optimization: get reserved space for specific font families
+  const getReservedHeight = (fontValue: string, fontSize: number, lineHeight: number, padding: number) => {
+    // Base calculation from our testing: most shifts happen when height is underestimated
+    let heightMultiplier = 2.5; // default multiplier
+    let baseHeight = 280; // minimum base height from testing
+    
+    // Font-specific adjustments based on actual rendering characteristics
+    if (fontValue.includes("Amiri") || fontValue.includes("Scheherazade")) {
+      // Traditional fonts tend to be taller with more diacritics
+      heightMultiplier = 3.2;
+      baseHeight = 320;
+    } else if (fontValue.includes("Jomhuria") || fontValue.includes("Rakkas")) {
+      // Display fonts can be much taller
+      heightMultiplier = 3.8;
+      baseHeight = 360;
+    } else if (fontValue.includes("Cairo") || fontValue.includes("Tajawal") || fontValue.includes("Mada")) {
+      // Sans-serif fonts are typically more compact
+      heightMultiplier = 2.8;
+      baseHeight = 260;
+    } else if (fontValue.includes("Kufi") || fontValue.includes("Aref")) {
+      // Kufi and decorative fonts often have unique proportions
+      heightMultiplier = 3.0;
+      baseHeight = 300;
+    }
+    
+    // Calculate with text length consideration (longer text needs more space)
+    const textLength = text?.length || DEFAULT_TEXT.length;
+    const lengthFactor = Math.min(2.0, Math.max(1.0, textLength / 20)); // 1.0x to 2.0x based on length
+    
+    const calculatedHeight = Math.max(
+      baseHeight,
+      fontSize * lineHeight * heightMultiplier * lengthFactor + padding * 2
+    );
+    
+    return Math.ceil(calculatedHeight); // Round up to ensure adequate space
   }
 
   // Apply Kashida to text
@@ -1766,18 +1815,26 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
 
                 <div
                   ref={previewRef}
-                  className="relative overflow-hidden transition-all duration-300 ease-in-out animate-in fade-in"
+                  className={cn(
+                    "relative overflow-hidden transition-none animate-in fade-in arabic-preview",
+                    isFontLoading(font) && "font-loading-indicator"
+                  )}
                   style={{
                     ...getBackgroundStyle(),
                     borderRadius: `${borderRadius}px`,
                     border: border ? `${borderWidth}px solid ${borderColor}` : "none",
                     padding: `${padding}px`,
-                    minHeight: "200px",
+                    // Enhanced CLS optimization: use font-specific height calculation
+                    minHeight: `${getReservedHeight(font, fontSize, lineHeight, padding)}px`,
                   }}
                 >
                   <div
                     dir="rtl"
-                    className={cn("transition-all duration-300 ease-in-out break-words")}
+                    className={cn(
+                      "transition-opacity duration-200 ease-in-out break-words",
+                      // 应用字体特定的兜底样式
+                      !isFontLoaded(font) && getFallbackFontClass(font)
+                    )}
                     style={{
                       fontFamily: font,
                       fontSize: `${fontSize}px`,
@@ -1788,10 +1845,20 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                       letterSpacing: `${letterSpacing}px`,
                       lineHeight: lineHeight,
                       textShadow: getTextShadowStyle(),
+                      // 字体加载时保持透明度，加载完成后快速显现
+                      opacity: isFontLoading(font) ? 0.7 : 1,
                     }}
                   >
                     {getTextWithKashida(text || DEFAULT_TEXT)}
                   </div>
+                  {/* 字体加载状态提示 */}
+                  {isFontLoading(font) && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded pointer-events-none">
+                      <div className="text-xs text-amber-600 opacity-60">
+                        Loading font...
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <div className="mt-6 flex flex-wrap gap-3 justify-center">

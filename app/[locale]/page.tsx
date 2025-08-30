@@ -6,7 +6,6 @@ import dynamic from "next/dynamic"
 import { useState, useEffect } from "react"
 import { useTranslations } from 'next-intl'
 import { LanguagePrompt } from "@/components/language-prompt"
-import { CalligraphyGenerator } from "@/components/calligraphy-generator"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
@@ -16,8 +15,15 @@ import { Footer } from "@/components/footer"
 import { getFeaturedFonts, FONT_CATEGORIES } from "@/lib/content-links"
 import { getFontDetails } from "@/lib/font-details-data"
 
-const UseCasesSection = dynamic(() => 
-  import("@/components/home/use-cases-section").then((mod) => mod.UseCasesSection)
+import { CalligraphyGenerator } from "@/components/calligraphy-generator"
+
+// Dynamic import for use cases section (non-critical)
+const UseCasesSection = dynamic(
+  () => import("@/components/home/use-cases-section").then((mod) => ({ default: mod.UseCasesSection })),
+  {
+    loading: () => <div className="h-64 animate-pulse bg-gray-100 rounded-lg" />,
+    ssr: false,
+  }
 )
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://arabic-calligraphy-generator.com'; // Fallback for safety

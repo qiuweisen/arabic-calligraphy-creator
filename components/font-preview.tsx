@@ -1,5 +1,6 @@
 "use client"
 
+import React, { useMemo } from "react"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
@@ -14,16 +15,16 @@ interface FontPreviewProps {
   sampleText: string
 }
 
-export function FontPreview({ fonts, sampleText }: FontPreviewProps) {
-  // Group fonts by category
-  const categories = fonts.reduce<Record<string, Font[]>>((acc, font) => {
+export const FontPreview = React.memo(function FontPreview({ fonts, sampleText }: FontPreviewProps) {
+  // Group fonts by category with useMemo for optimization
+  const categories = useMemo(() => fonts.reduce<Record<string, Font[]>>((acc, font) => {
     const category = font.category || "Other"
     if (!acc[category]) {
       acc[category] = []
     }
     acc[category].push(font)
     return acc
-  }, {})
+  }, {}), [fonts])
 
   return (
     <div className="w-full">
@@ -61,4 +62,4 @@ export function FontPreview({ fonts, sampleText }: FontPreviewProps) {
       </Tabs>
     </div>
   )
-}
+});

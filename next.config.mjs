@@ -17,12 +17,17 @@ const nextConfig = {
       '@radix-ui/themes',
       'lucide-react',
     ],
+    // Note: PPR requires Next.js canary, so we'll skip it for now
+    // ppr: true,
   },
+  // Moved from experimental in Next.js 15
+  serverExternalPackages: ['sharp', 'html2canvas'],
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   poweredByHeader: false,
-  compress: true,
+  
+  // Enhanced modular imports
   modularizeImports: {
     '@radix-ui/react-icons': {
       transform: '@radix-ui/react-icons/dist/esm/icons/{{member}}',
@@ -31,48 +36,63 @@ const nextConfig = {
       transform: 'lucide-react/dist/esm/icons/{{member}}',
     },
   },
+  
+  // Image optimization configuration
   images: {
-    // 禁用 Vercel 图片优化以降低成本
-    // 图片已通过 Cloudflare CDN 优化提供
-    unoptimized: true,
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev',
         port: '',
-        pathname: '/**', // Allow any path under this hostname
+        pathname: '/**',
       },
-      // You can add other remote patterns here if needed in the future
     ],
+    // Enable optimization for better performance
+    unoptimized: false,
   },
+  
+  // Static generation optimization
+  generateBuildId: async () => {
+    return `build-${Date.now()}`
+  },
+  
   async redirects() {
     return [
-
-      
       // === 现有重定向规则 ===
       // Blog URL correction - 301 redirect to preserve SEO
       {
         source: '/blog/beginners-guide-to-arabic-calligraphy',
         destination: '/blog/beginners-guide-to-calligraphy',
-        permanent: true, // 301 redirect
-        statusCode: 301, // Explicitly set the status code
+        permanent: true,
+        statusCode: 301,
       },
-      
-      // Legacy language redirects (keeping existing ones for old URLs)
-      // Note: /bn is now supported as Bengali language, removed from redirects
-      // Note: /ar routes are now handled by next-intl, so removed from redirects
-      
-      // HTTP to HTTPS redirect for production (only for main domain)
-      // 注释掉以避免影响子域名访问
-      // {
-      //   source: '/:path*',
-      //   has: [
-      //     { type: 'header', key: 'x-forwarded-proto', value: 'http' },
-      //     { type: 'host', value: 'arabic-calligraphy-generator.com' }
-      //   ],
-      //   destination: 'https://arabic-calligraphy-generator.com/:path*',
-      //   permanent: true,
-      // },
+    ];
+  },
+  
+  // Headers for performance
+  async headers() {
+    return [
+      {
+        source: '/fonts/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
     ];
   },
 };

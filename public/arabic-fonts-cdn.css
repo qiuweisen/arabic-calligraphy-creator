@@ -1,0 +1,335 @@
+/* 
+ * Arabic Fonts - CDN Version
+ * 优化的字体加载，使用您的CDN
+ */
+
+/* Amiri */
+@font-face {
+  font-family: 'Amiri';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/amiri/Amiri-1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amiri';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/amiri/Amiri-2.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Aref Ruqaa */
+@font-face {
+  font-family: 'Aref Ruqaa';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/aref-ruqaa/ArefRuqaa-1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aref Ruqaa';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/aref-ruqaa/ArefRuqaa-2.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Cairo */
+@font-face {
+  font-family: 'Cairo';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/cairo/Cairo-1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cairo';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/cairo/Cairo-2.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* El Messiri */
+@font-face {
+  font-family: 'El Messiri';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/el-messiri/ElMessiri-1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'El Messiri';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/el-messiri/ElMessiri-2.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Harmattan */
+@font-face {
+  font-family: 'Harmattan';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/harmattan/Harmattan-1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Harmattan';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/harmattan/Harmattan-2.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Jomhuria */
+@font-face {
+  font-family: 'Jomhuria';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/jomhuria/Jomhuria-1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Lateef */
+@font-face {
+  font-family: 'Lateef';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/lateef/Lateef-1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lateef';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/lateef/Lateef-2.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Lemonada */
+@font-face {
+  font-family: 'Lemonada';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/lemonada/Lemonada-1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lemonada';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/lemonada/Lemonada-2.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Mada */
+@font-face {
+  font-family: 'Mada';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/mada/Mada-1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mada';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/mada/Mada-2.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Marhey */
+@font-face {
+  font-family: 'Marhey';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/marhey/Marhey-1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Marhey';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/marhey/Marhey-2.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Markazi Text */
+@font-face {
+  font-family: 'Markazi Text';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/markazi-text/MarkaziText-1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Markazi Text';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/markazi-text/MarkaziText-2.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Mirza */
+@font-face {
+  font-family: 'Mirza';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/mirza/Mirza-1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mirza';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/mirza/Mirza-2.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Noto Naskh Arabic */
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/noto-naskh-arabic/NotoNaskhArabic-1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/noto-naskh-arabic/NotoNaskhArabic-2.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Rakkas */
+@font-face {
+  font-family: 'Rakkas';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/rakkas/Rakkas-1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Reem Kufi */
+@font-face {
+  font-family: 'Reem Kufi';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/reem-kufi/ReemKufi-1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Reem Kufi';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/reem-kufi/ReemKufi-2.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Scheherazade */
+@font-face {
+  font-family: 'Scheherazade';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/scheherazade/Scheherazade-1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Scheherazade';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/scheherazade/Scheherazade-2.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tajawal */
+@font-face {
+  font-family: 'Tajawal';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/tajawal/Tajawal-1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url('https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/tajawal/Tajawal-2.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Arabic Font Classes with Fallbacks */
+.font-arabic {
+  font-family: 'Amiri', 'Arabic Typesetting', 'Traditional Arabic', serif;
+  direction: rtl;
+}
+
+.font-amiri {
+  font-family: 'Amiri', 'Arabic Typesetting', 'Traditional Arabic', serif;
+}
+.font-aref-ruqaa {
+  font-family: 'Aref Ruqaa', 'Arabic Typesetting', 'Traditional Arabic', serif;
+}
+.font-cairo {
+  font-family: 'Cairo', 'Arabic Typesetting', 'Traditional Arabic', serif;
+}
+.font-el-messiri {
+  font-family: 'El Messiri', 'Arabic Typesetting', 'Traditional Arabic', serif;
+}
+.font-harmattan {
+  font-family: 'Harmattan', 'Arabic Typesetting', 'Traditional Arabic', serif;
+}
+.font-jomhuria {
+  font-family: 'Jomhuria', 'Arabic Typesetting', 'Traditional Arabic', serif;
+}
+.font-lateef {
+  font-family: 'Lateef', 'Arabic Typesetting', 'Traditional Arabic', serif;
+}
+.font-lemonada {
+  font-family: 'Lemonada', 'Arabic Typesetting', 'Traditional Arabic', serif;
+}
+.font-mada {
+  font-family: 'Mada', 'Arabic Typesetting', 'Traditional Arabic', serif;
+}
+.font-marhey {
+  font-family: 'Marhey', 'Arabic Typesetting', 'Traditional Arabic', serif;
+}
+.font-markazi-text {
+  font-family: 'Markazi Text', 'Arabic Typesetting', 'Traditional Arabic', serif;
+}
+.font-mirza {
+  font-family: 'Mirza', 'Arabic Typesetting', 'Traditional Arabic', serif;
+}
+.font-noto-naskh-arabic {
+  font-family: 'Noto Naskh Arabic', 'Arabic Typesetting', 'Traditional Arabic', serif;
+}
+.font-rakkas {
+  font-family: 'Rakkas', 'Arabic Typesetting', 'Traditional Arabic', serif;
+}
+.font-reem-kufi {
+  font-family: 'Reem Kufi', 'Arabic Typesetting', 'Traditional Arabic', serif;
+}
+.font-scheherazade {
+  font-family: 'Scheherazade', 'Arabic Typesetting', 'Traditional Arabic', serif;
+}
+.font-tajawal {
+  font-family: 'Tajawal', 'Arabic Typesetting', 'Traditional Arabic', serif;
+}
