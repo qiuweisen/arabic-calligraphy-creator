@@ -165,7 +165,9 @@ export default function FAQPage() {
                       <AccordionTrigger className="text-left text-amber-800 font-medium">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-amber-700" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                      <AccordionContent className="text-amber-700">
+                        <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                      </AccordionContent>
                     </AccordionItem>
                   ))}
                 </Accordion>
@@ -187,7 +189,9 @@ export default function FAQPage() {
                       <AccordionTrigger className="text-left text-amber-800 font-medium">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-amber-700" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                      <AccordionContent className="text-amber-700">
+                        <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                      </AccordionContent>
                     </AccordionItem>
                   ))}
                 </Accordion>
@@ -210,7 +214,9 @@ export default function FAQPage() {
                     <AccordionTrigger className="text-left text-amber-800 font-medium">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-amber-700" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                    <AccordionContent className="text-amber-700">
+                      <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                    </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
