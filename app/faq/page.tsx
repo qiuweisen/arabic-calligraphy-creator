@@ -5,6 +5,9 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Breadcrumb } from "@/components/breadcrumb"
+import { GeneratorCTA } from "@/components/generator-cta"
+import { MessageCircle, BookOpen, Star, HelpCircle } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Arabic Calligraphy FAQ - Free Generator Help & Support Guide",
@@ -29,39 +32,34 @@ const faqs = [
       "Kashida (كشيدة), also known as tatweel, is a typographic feature in Arabic writing that involves elongating certain characters by inserting a straight line between connected letters. It's used for text justification, aesthetic enhancement, and emphasis. Our <strong>Arabic calligraphy generator</strong> allows you to adjust Kashida length to create more elegant text arrangements.",
   },
   {
-    question: "What is an Arabic calligraphy generator?",
+    question: "How do I use your Arabic calligraphy generator?",
     answer:
-      "An <strong>Arabic calligraphy generator</strong> is an online tool that transforms standard Arabic text into various artistic calligraphy styles. It allows users to customize fonts, colors, sizes, and other elements to create beautiful, stylized Arabic script art without needing manual calligraphy skills. Our platform is a user-friendly <strong>arabic calligraphy generator</strong>.",
+      "Using our <strong>Arabic calligraphy generator</strong> is simple: 1) Enter your Arabic text in the input field, 2) Select from various calligraphy styles and fonts, 3) Adjust size, color, and spacing options, 4) Preview your calligraphy in real-time, and 5) Download your creation as PNG, SVG, or PDF. The tool works directly in your browser without requiring any downloads or installations.",
   },
   {
-    question: "Is this Arabic calligraphy generator free to use?",
+    question: "Can I use the generated calligraphy commercially?",
     answer:
-      "Yes, our <strong>online Arabic calligraphy generator</strong> is completely free for all users. All core features, including access to various fonts, customization tools, and standard downloads (PNG, SVG), are available at no cost. We aim to provide an accessible <strong>free Arabic calligraphy generator</strong>.",
+      "Yes! All calligraphy created with our <strong>Arabic calligraphy generator</strong> is free for both personal and commercial use. You retain full rights to your creations. However, please note that while the generated output is yours to use freely, the underlying fonts may have their own licensing terms for direct distribution.",
   },
   {
-    question: "What types of Arabic fonts are available in the generator?",
+    question: "What formats can I download my calligraphy in?",
     answer:
-      "Our <strong>Arabic calligraphy generator</strong> includes over 13 premium Arabic fonts. These span traditional styles like Kufic, Naskh, Thuluth, and Diwani, as well as modern and decorative script options to suit various artistic preferences for your calligraphy work.",
+      "Our <strong>Arabic calligraphy generator</strong> supports multiple export formats: PNG (for web use and printing), SVG (scalable vector format ideal for logos and designs), and PDF (perfect for documents and high-quality printing). Each format has its advantages depending on your intended use.",
   },
   {
-    question: "Can I use the calligraphy generated with this tool commercially?",
+    question: "Why doesn't my Arabic text display correctly?",
     answer:
-      "Generally, yes. The calligraphy designs you create with our <strong>Arabic calligraphy generator</strong> can typically be used for both personal and commercial projects. However, always check the license terms for any specific premium fonts you choose, as some may have their own usage restrictions independent of our generator tool.",
+      "If Arabic text isn't displaying correctly in our <strong>Arabic calligraphy generator</strong>, try these solutions: 1) Ensure you're using a modern browser (Chrome, Firefox, Safari, or Edge), 2) Check that your text is properly formatted Arabic script, 3) Verify your device supports Arabic fonts, and 4) Try refreshing the page. Most display issues are resolved by using an updated browser.",
   },
   {
-    question: "How can I create a name with this Arabic calligraphy generator?",
+    question: "Can I save my work to continue later?",
     answer:
-      "To create name art, simply type the desired name into the text input field of our <strong>Arabic calligraphy generator</strong>. Then, experiment with different fonts—like Diwani or Thuluth for flowing name designs—adjust sizes, and add colors or effects until you achieve the perfect artistic representation of the name. This is a popular use for an <strong>arabic calligraphy generator for names</strong>.",
+      "Currently, our <strong>Arabic calligraphy generator</strong> doesn't include user accounts or cloud saving. However, you can bookmark specific designs by copying the URL when you're working on a piece, as the parameters are saved in the link. We recommend downloading your work as you create it to ensure you don't lose your designs.",
   },
   {
-    question: "Does this tool support Arabic text with Harakat (vowel marks)?",
+    question: "Which Arabic fonts are available in the generator?",
     answer:
-      "Yes, our <strong>Arabic calligraphy generator</strong> generally supports text with Harakat (اعراب). You can type or paste Arabic text that includes these vowel marks, and the generator will render them along with the letters according to the chosen font's capabilities. Font support for Harakat can vary, so previewing is recommended.",
-  },
-  {
-    question: "What makes this a good Kufic Arabic calligraphy generator?",
-    answer:
-      "Our tool serves as an excellent <strong>Kufic Arabic calligraphy generator</strong> because it includes authentic Kufic style fonts and provides customization options that allow you to refine the geometric and angular aesthetics characteristic of Kufic script. You can adjust letter spacing and size to perfect your Kufic designs.",
+      "Our <strong>Arabic calligraphy generator</strong> includes a carefully curated selection of Arabic fonts covering major calligraphy styles including modern interpretations of Kufic, Naskh-inspired fonts, decorative styles, and contemporary Arabic typefaces. Each font is optimized for digital display and includes proper Arabic text shaping and ligatures.",
   },
   {
     question: "Why doesn't my downloaded image match what I see in the preview?",
@@ -99,108 +97,146 @@ export default function FAQPage() {
       />
       <StaticNavbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
-      <div className="container mx-auto px-4 py-8 md:py-16">
-        <header className="mb-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-800 to-amber-600 mb-4">
-            Frequently Asked Questions
-          </h1>
-          <p className="text-xl text-amber-700 max-w-2xl mx-auto">
-            Find answers to common questions about Arabic calligraphy and our <strong>Arabic calligraphy generator</strong> tool.
-          </p>
-        </header>
+        <div className="container mx-auto px-4 py-8 md:py-16">
+          {/* Breadcrumb */}
+          <Breadcrumb 
+            items={[
+              { href: "/", name: "Home" },
+              { href: "/faq", name: "FAQ" }
+            ]} 
+          />
 
-        <Card className="border-amber-200 bg-white/80 backdrop-blur-sm mb-8">
-          <CardHeader>
-            <CardTitle className="text-2xl text-amber-800">General Calligraphy Questions</CardTitle>
-          </CardHeader>
-          <CardContent>
-            
-            <div className="grid md:grid-cols-3 gap-4 mb-8">
-              <div className="text-center p-4 bg-blue-50 rounded-lg">
-                <h3 className="font-semibold text-blue-900 mb-2">快速开始</h3>
-                <p className="text-sm text-blue-700 mb-3">立即生成您的第一个书法作品</p>
-                <GeneratorCTA variant="outline" size="sm" text="开始生成" />
-              </div>
-              <div className="text-center p-4 bg-green-50 rounded-lg">
-                <h3 className="font-semibold text-green-900 mb-2">浏览示例</h3>
-                <p className="text-sm text-green-700 mb-3">查看精美的书法作品示例</p>
-                <Button variant="outline" size="sm" asChild>
-                  <Link href="/templates">查看模板</Link>
-                </Button>
-              </div>
-              <div className="text-center p-4 bg-purple-50 rounded-lg">
-                <h3 className="font-semibold text-purple-900 mb-2">学习指南</h3>
-                <p className="text-sm text-purple-700 mb-3">了解书法艺术和使用技巧</p>
-                <Button variant="outline" size="sm" asChild>
-                  <Link href="/guides">学习更多</Link>
-                </Button>
-              </div>
+          {/* Hero Section */}
+          <header className="mb-12 text-center">
+            <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <HelpCircle className="h-4 w-4" />
+              Need Help?
             </div>
-                <Accordion type="single" collapsible className="w-full">
-              {faqs.slice(0, generalQuestionsEndIndex).map((faq, index) => (
-                <AccordionItem key={`general-${index}`} value={`general-item-${index}`}>
-                  <AccordionTrigger className="text-lg font-medium text-amber-800">{faq.question}</AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </CardContent>
-        </Card>
+            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-800 to-amber-600 mb-4">
+              Frequently Asked Questions
+            </h1>
+            <p className="text-xl text-amber-700 max-w-2xl mx-auto">
+              Find answers to common questions about Arabic calligraphy and our generator tool.
+            </p>
+          </header>
 
-        <Card className="border-amber-200 bg-white/80 backdrop-blur-sm mb-8">
-          <CardHeader>
-            <CardTitle className="text-2xl text-amber-800">About Our Arabic Calligraphy Generator</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <Accordion type="single" collapsible className="w-full">
-              {faqs.slice(generatorQuestionsStartIndex, generatorQuestionsEndIndex).map((faq, index) => (
-                <AccordionItem key={`generator-${index}`} value={`generator-item-${index}`}>
-                  <AccordionTrigger className="text-lg font-medium text-amber-800">{faq.question}</AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </CardContent>
-        </Card>
-
-        <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
-          <CardHeader>
-            <CardTitle className="text-2xl text-amber-800">Technical & Further Learning</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <Accordion type="single" collapsible className="w-full">
-              {faqs.slice(generatorQuestionsEndIndex).map((faq, index) => (
-                <AccordionItem key={`technical-${index}`} value={`technical-item-${index + generatorQuestionsEndIndex}`}>
-                  <AccordionTrigger className="text-lg font-medium text-amber-800">{faq.question}</AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </CardContent>
-        </Card>
-
-        <div className="mt-12 text-center">
-          <p className="mb-4 text-amber-700">
-            Didn't find what you're looking for? Our <strong>Arabic calligraphy generator</strong> is easy to use, or check our blog for more in-depth articles.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild className="bg-amber-600 hover:bg-amber-700">
-              <Link href="/">Try Our Calligraphy Generator</Link>
-            </Button>
-            <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
-              <Link href="/blog">Browse Our Blog</Link>
-            </Button>
+          {/* Quick Action Cards */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <Card className="text-center p-6 bg-gradient-to-b from-blue-50 to-blue-100 border-blue-200 hover:shadow-lg transition-shadow">
+              <Star className="h-8 w-8 text-blue-600 mx-auto mb-3" />
+              <h3 className="font-semibold text-blue-900 mb-2">Quick Start</h3>
+              <p className="text-sm text-blue-700 mb-4">Create your first calligraphy instantly</p>
+              <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700">
+                <Link href="/">Start Now</Link>
+              </Button>
+            </Card>
+            <Card className="text-center p-6 bg-gradient-to-b from-green-50 to-green-100 border-green-200 hover:shadow-lg transition-shadow">
+              <BookOpen className="h-8 w-8 text-green-600 mx-auto mb-3" />
+              <h3 className="font-semibold text-green-900 mb-2">Browse Examples</h3>
+              <p className="text-sm text-green-700 mb-4">View beautiful calligraphy templates</p>
+              <Button variant="outline" size="sm" asChild>
+                <Link href="/templates">View Templates</Link>
+              </Button>
+            </Card>
+            <Card className="text-center p-6 bg-gradient-to-b from-purple-50 to-purple-100 border-purple-200 hover:shadow-lg transition-shadow">
+              <MessageCircle className="h-8 w-8 text-purple-600 mx-auto mb-3" />
+              <h3 className="font-semibold text-purple-900 mb-2">Learning Guides</h3>
+              <p className="text-sm text-purple-700 mb-4">Learn about calligraphy art and techniques</p>
+              <Button variant="outline" size="sm" asChild>
+                <Link href="/guides">Learn More</Link>
+              </Button>
+            </Card>
           </div>
+
+          {/* FAQ Sections */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            {/* General Questions */}
+            <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="text-2xl text-amber-800 flex items-center gap-2">
+                  <BookOpen className="h-6 w-6" />
+                  General Calligraphy Questions
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Accordion type="single" collapsible>
+                  {faqs.slice(0, generalQuestionsEndIndex).map((faq, index) => (
+                    <AccordionItem key={index} value={`general-${index}`}>
+                      <AccordionTrigger className="text-left text-amber-800 font-medium">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-amber-700" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </CardContent>
+            </Card>
+
+            {/* Generator Questions */}
+            <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="text-2xl text-amber-800 flex items-center gap-2">
+                  <Star className="h-6 w-6" />
+                  Generator Tool Questions
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Accordion type="single" collapsible>
+                  {faqs.slice(generatorQuestionsStartIndex, generatorQuestionsEndIndex).map((faq, index) => (
+                    <AccordionItem key={index} value={`generator-${index}`}>
+                      <AccordionTrigger className="text-left text-amber-800 font-medium">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-amber-700" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Technical Questions */}
+          <Card className="border-amber-200 bg-white/80 backdrop-blur-sm mb-12">
+            <CardHeader>
+              <CardTitle className="text-2xl text-amber-800 flex items-center gap-2">
+                <MessageCircle className="h-6 w-6" />
+                Technical & Advanced Questions
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <Accordion type="single" collapsible>
+                {faqs.slice(generatorQuestionsEndIndex).map((faq, index) => (
+                  <AccordionItem key={index} value={`technical-${index}`}>
+                    <AccordionTrigger className="text-left text-amber-800 font-medium">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-amber-700" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </CardContent>
+          </Card>
+
+          {/* Call to Action */}
+          <GeneratorCTA variant="featured" className="mb-8" />
+
+          {/* Contact Section */}
+          <Card className="border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50">
+            <CardContent className="p-8 text-center">
+              <h3 className="text-2xl font-bold text-amber-800 mb-4">
+                Didn't find your answer?
+              </h3>
+              <p className="text-amber-700 mb-6 max-w-md mx-auto">
+                Our team is here to help! Contact us for personalized support and detailed answers.
+              </p>
+              <Button asChild className="bg-amber-600 hover:bg-amber-700">
+                <Link href="/contact">Contact Support</Link>
+              </Button>
+            </CardContent>
+          </Card>
         </div>
-      </div>
-    </main>
-    <Footer />
+      </main>
+      <Footer />
     </>
   )
 }
