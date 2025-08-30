@@ -217,11 +217,11 @@ export default function FontsPage() {
             </div>
 
             <section className="mb-12 p-6 bg-sky-100/30 border border-sky-200 rounded-lg shadow">
-              <h2 className="text-2xl font-semibold text-sky-800 mb-4 flex items-center">
-                <Info className="h-6 w-6 mr-3 text-sky-600" />
+              <h2 className="text-2xl font-semibold text-amber-800 mb-4 flex items-center">
+                <Info className="h-6 w-6 mr-3 text-amber-700" />
                 How to Choose the Right Arabic Font?
               </h2>
-              <div className="space-y-3 text-sky-700">
+              <div className="space-y-3 text-amber-700">
                 <p className="mb-1">Selecting the right Arabic font is crucial for conveying the desired tone and ensuring readability. Consider these points:</p>
                 <ul className="list-disc list-inside space-y-1.5 pl-2">
                   <li><strong>Define Your Purpose:</strong> Are you choosing a font for formal documents, artistic creations, website UI, or brand logos? For instance, traditional Naskh suits formal texts, while Kufi or Diwani are better for art and logos.</li>
@@ -246,7 +246,7 @@ export default function FontsPage() {
                     {categoryData.categoryApplications && categoryData.categoryApplications.length > 0 && (
                       <div className="mb-2">
                         <h4 className="font-semibold text-amber-700 mb-1.5 text-md flex items-center">
-                          <CheckCircle className="h-5 w-5 mr-2 text-green-600" />
+                          <CheckCircle className="h-5 w-5 mr-2 text-emerald-600" />
                           Common Applications:
                         </h4>
                         <ul className="list-disc list-inside text-amber-600 text-sm space-y-1 pl-5">
@@ -278,11 +278,11 @@ export default function FontsPage() {
 
             {/* Section for "Tips for Using Arabic Fonts Effectively" - Kept from previous changes */}
             <section className="mt-16 mb-12 p-6 bg-green-100/40 border border-green-200 rounded-lg shadow">
-              <h2 className="text-2xl font-bold text-green-800 mb-4 flex items-center">
-                <BookOpen className="h-6 w-6 mr-3 text-green-600" /> 
+              <h2 className="text-2xl font-bold text-emerald-600 mb-4 flex items-center">
+                <BookOpen className="h-6 w-6 mr-3 text-emerald-600" /> 
                 Diving Deeper into Arabic Typography
               </h2>
-              <div className="space-y-3 text-green-700">
+              <div className="space-y-3 text-emerald-600">
                 <p>
                   Want to further enhance your Arabic typography designs? These tips might inspire you:
                 </p>
@@ -314,7 +314,7 @@ export default function FontsPage() {
                   </li>
                 </ul>
                 <p className="mt-4">
-                  Experimentation is key! Feel free to use our <Link href="/" className="text-green-600 hover:text-green-800 underline font-semibold">Calligraphy Generator</Link> to preview how these fonts look with your text and styles.
+                  Experimentation is key! Feel free to use our <Link href="/" className="text-emerald-600 hover:text-emerald-600 underline font-semibold">Calligraphy Generator</Link> to preview how these fonts look with your text and styles.
                 </p>
               </div>
             </section>
@@ -334,7 +334,7 @@ export default function FontsPage() {
                       <Link href={blog.href} className="group">
                         <div className="flex items-start justify-between">
                           <div className="flex-1">
-                            <h3 className="text-lg font-semibold text-amber-800 group-hover:text-amber-900 mb-2">
+                            <h3 className="text-lg font-semibold text-amber-800 group-hover:text-amber-800 mb-2">
                               {blog.title}
                             </h3>
                             <p className="text-amber-600 text-sm mb-3">

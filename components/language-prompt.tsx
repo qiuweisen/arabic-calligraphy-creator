@@ -265,7 +265,7 @@ export function LanguagePrompt({ suggestedLocale, countryCode }: LanguagePromptP
             <div className="flex items-center space-x-2">
               <span className="text-2xl">{suggestedConfig.flag}</span>
               <div>
-                <h3 className="font-semibold text-amber-900 text-sm leading-tight">
+                <h3 className="font-semibold text-amber-800 text-sm leading-tight">
                   {content.title}
                 </h3>
                 <p className="text-xs text-amber-700 mt-1">

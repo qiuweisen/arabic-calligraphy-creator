@@ -132,7 +132,7 @@ export default function DownloadAndUseArabicFontsPage() {
                 </Button>
               </Link>
               <Link href="/fonts">
-                <Button variant="outline" className="border-violet-600 text-violet-600 hover:bg-violet-50 px-6 py-3">
+                <Button variant="outline" className="border-violet-600 text-amber-700 hover:bg-violet-50 px-6 py-3">
                   Browse Font Library
                 </Button>
               </Link>
@@ -142,7 +142,7 @@ export default function DownloadAndUseArabicFontsPage() {
           {/* Process Overview */}
           <Card className="mb-12 border-violet-200 shadow-lg">
             <CardHeader className="bg-gradient-to-r from-violet-100 to-purple-100">
-              <CardTitle className="text-2xl text-violet-800">
+              <CardTitle className="text-2xl text-amber-800">
                 📋 Download & Usage Process
               </CardTitle>
             </CardHeader>
@@ -150,28 +150,28 @@ export default function DownloadAndUseArabicFontsPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-violet-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Download className="h-8 w-8 text-violet-600" />
+                    <Download className="h-8 w-8 text-amber-700" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">1. Download</h3>
                   <p className="text-sm text-gray-600">Generate and download your Arabic calligraphy files</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-violet-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <FileText className="h-8 w-8 text-violet-600" />
+                    <FileText className="h-8 w-8 text-amber-700" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">2. Format</h3>
                   <p className="text-sm text-gray-600">Choose the right file format for your needs</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-violet-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Settings className="h-8 w-8 text-violet-600" />
+                    <Settings className="h-8 w-8 text-amber-700" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">3. Install</h3>
                   <p className="text-sm text-gray-600">Import into your design software or system</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-violet-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="h-8 w-8 text-violet-600" />
+                    <CheckCircle className="h-8 w-8 text-amber-700" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">4. Use</h3>
                   <p className="text-sm text-gray-600">Apply in your projects with best practices</p>
@@ -185,7 +185,7 @@ export default function DownloadAndUseArabicFontsPage() {
             {/* Step 1: Download Process */}
             <Card className="border-violet-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-violet-800 flex items-center">
+                <CardTitle className="text-2xl text-amber-800 flex items-center">
                   <span className="bg-violet-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-4">1</span>
                   Download Your Arabic Calligraphy
                 </CardTitle>
@@ -193,7 +193,7 @@ export default function DownloadAndUseArabicFontsPage() {
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Getting Started with Downloads</h3>
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     Our Arabic calligraphy generator creates high-quality downloadable files that you can use across 
                     various platforms and applications. The download process is straightforward and provides multiple format options.
                   </p>
@@ -202,10 +202,10 @@ export default function DownloadAndUseArabicFontsPage() {
                   <div className="grid md:grid-cols-2 gap-6 mb-8">
                     <div className="bg-gray-50 rounded-lg p-6">
                       <h5 className="font-semibold text-gray-900 mb-3 flex items-center">
-                        <Download className="h-5 w-5 text-violet-600 mr-2" />
+                        <Download className="h-5 w-5 text-amber-700 mr-2" />
                         Direct Download
                       </h5>
-                      <ul className="text-sm text-gray-700 space-y-2">
+                      <ul className="text-sm text-gray-600 space-y-2">
                         <li>• Click the download button after creating your design</li>
                         <li>• Files are generated instantly in your browser</li>
                         <li>• No registration or account required</li>
@@ -215,10 +215,10 @@ export default function DownloadAndUseArabicFontsPage() {
                     
                     <div className="bg-gray-50 rounded-lg p-6">
                       <h5 className="font-semibold text-gray-900 mb-3 flex items-center">
-                        <FileText className="h-5 w-5 text-violet-600 mr-2" />
+                        <FileText className="h-5 w-5 text-amber-700 mr-2" />
                         Batch Processing
                       </h5>
-                      <ul className="text-sm text-gray-700 space-y-2">
+                      <ul className="text-sm text-gray-600 space-y-2">
                         <li>• Create multiple designs in one session</li>
                         <li>• Download each design individually</li>
                         <li>• Maintain consistent naming conventions</li>
@@ -228,8 +228,8 @@ export default function DownloadAndUseArabicFontsPage() {
                   </div>
 
                   <div className="bg-violet-50 border border-violet-200 rounded-lg p-6 mb-6">
-                    <h4 className="font-semibold text-violet-800 mb-3">💡 Download Best Practices</h4>
-                    <ul className="text-sm text-violet-700 space-y-2">
+                    <h4 className="font-semibold text-amber-800 mb-3">💡 Download Best Practices</h4>
+                    <ul className="text-sm text-amber-700 space-y-2">
                       <li>• <strong>File Naming</strong>: Use descriptive names like "wedding-invitation-arabic-2024.png"</li>
                       <li>• <strong>Organization</strong>: Create folders by project type or date</li>
                       <li>• <strong>Backup</strong>: Save important designs to cloud storage</li>
@@ -271,25 +271,25 @@ export default function DownloadAndUseArabicFontsPage() {
             {/* Step 2: File Formats */}
             <Card className="border-violet-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-violet-800 flex items-center">
+                <CardTitle className="text-2xl text-amber-800 flex items-center">
                   <span className="bg-violet-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-4">2</span>
                   Understanding File Formats
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     Choosing the right file format is crucial for optimal results in your projects. 
                     Each format has specific advantages and use cases.
                   </p>
 
                   <div className="grid md:grid-cols-2 gap-8 mb-8">
                     <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-green-800 mb-4 text-lg">📱 PNG Format</h4>
+                      <h4 className="font-semibold text-emerald-600 mb-4 text-lg">📱 PNG Format</h4>
                       <div className="space-y-4">
                         <div>
-                          <h5 className="font-semibold text-green-700 mb-2">Advantages:</h5>
-                          <ul className="text-sm text-green-600 space-y-1">
+                          <h5 className="font-semibold text-emerald-600 mb-2">Advantages:</h5>
+                          <ul className="text-sm text-emerald-600 space-y-1">
                             <li>• Lossless compression maintains quality</li>
                             <li>• Supports transparent backgrounds</li>
                             <li>• Universal compatibility across all platforms</li>
@@ -298,8 +298,8 @@ export default function DownloadAndUseArabicFontsPage() {
                           </ul>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-green-700 mb-2">Best Use Cases:</h5>
-                          <ul className="text-sm text-green-600 space-y-1">
+                          <h5 className="font-semibold text-emerald-600 mb-2">Best Use Cases:</h5>
+                          <ul className="text-sm text-emerald-600 space-y-1">
                             <li>• Social media posts and stories</li>
                             <li>• Website headers and banners</li>
                             <li>• Print materials (business cards, flyers)</li>
@@ -310,11 +310,11 @@ export default function DownloadAndUseArabicFontsPage() {
                     </div>
 
                     <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-blue-800 mb-4 text-lg">🎨 SVG Format</h4>
+                      <h4 className="font-semibold text-amber-800 mb-4 text-lg">🎨 SVG Format</h4>
                       <div className="space-y-4">
                         <div>
-                          <h5 className="font-semibold text-blue-700 mb-2">Advantages:</h5>
-                          <ul className="text-sm text-blue-600 space-y-1">
+                          <h5 className="font-semibold text-amber-700 mb-2">Advantages:</h5>
+                          <ul className="text-sm text-amber-700 space-y-1">
                             <li>• Vector-based, infinitely scalable</li>
                             <li>• Small file sizes for web optimization</li>
                             <li>• Editable in design software</li>
@@ -323,8 +323,8 @@ export default function DownloadAndUseArabicFontsPage() {
                           </ul>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-blue-700 mb-2">Best Use Cases:</h5>
-                          <ul className="text-sm text-blue-600 space-y-1">
+                          <h5 className="font-semibold text-amber-700 mb-2">Best Use Cases:</h5>
+                          <ul className="text-sm text-amber-700 space-y-1">
                             <li>• Company logos and brand identity</li>
                             <li>• Website icons and graphics</li>
                             <li>• Large format printing (banners, posters)</li>
@@ -359,14 +359,14 @@ export default function DownloadAndUseArabicFontsPage() {
             {/* Step 3: Platform-Specific Installation */}
             <Card className="border-violet-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-violet-800 flex items-center">
+                <CardTitle className="text-2xl text-amber-800 flex items-center">
                   <span className="bg-violet-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-4">3</span>
                   Platform-Specific Usage Guide
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     Different platforms and applications have specific requirements for using Arabic fonts.
                     Here's how to optimize your downloaded files for various use cases.
                   </p>
@@ -374,14 +374,14 @@ export default function DownloadAndUseArabicFontsPage() {
                   <div className="grid md:grid-cols-2 gap-8 mb-8">
                     <div className="space-y-6">
                       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-blue-800 mb-4 flex items-center">
+                        <h4 className="font-semibold text-amber-800 mb-4 flex items-center">
                           <Monitor className="h-5 w-5 mr-2" />
                           Desktop Applications
                         </h4>
                         <div className="space-y-4">
                           <div>
-                            <h5 className="font-semibold text-blue-700 mb-2">Adobe Creative Suite</h5>
-                            <ul className="text-sm text-blue-600 space-y-1">
+                            <h5 className="font-semibold text-amber-700 mb-2">Adobe Creative Suite</h5>
+                            <ul className="text-sm text-amber-700 space-y-1">
                               <li>• Import SVG files directly into Illustrator</li>
                               <li>• Use PNG files in Photoshop for raster editing</li>
                               <li>• Place files in InDesign for layout design</li>
@@ -389,8 +389,8 @@ export default function DownloadAndUseArabicFontsPage() {
                             </ul>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-blue-700 mb-2">Microsoft Office</h5>
-                            <ul className="text-sm text-blue-600 space-y-1">
+                            <h5 className="font-semibold text-amber-700 mb-2">Microsoft Office</h5>
+                            <ul className="text-sm text-amber-700 space-y-1">
                               <li>• Insert PNG files as images in Word/PowerPoint</li>
                               <li>• Use SVG for scalable graphics in newer versions</li>
                               <li>• Maintain transparency for overlay effects</li>
@@ -398,8 +398,8 @@ export default function DownloadAndUseArabicFontsPage() {
                             </ul>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-blue-700 mb-2">Canva & Online Editors</h5>
-                            <ul className="text-sm text-blue-600 space-y-1">
+                            <h5 className="font-semibold text-amber-700 mb-2">Canva & Online Editors</h5>
+                            <ul className="text-sm text-amber-700 space-y-1">
                               <li>• Upload PNG files as custom elements</li>
                               <li>• Use transparent backgrounds for flexibility</li>
                               <li>• Resize without quality loss using SVG</li>
@@ -412,14 +412,14 @@ export default function DownloadAndUseArabicFontsPage() {
 
                     <div className="space-y-6">
                       <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-green-800 mb-4 flex items-center">
+                        <h4 className="font-semibold text-emerald-600 mb-4 flex items-center">
                           <Smartphone className="h-5 w-5 mr-2" />
                           Mobile & Web Platforms
                         </h4>
                         <div className="space-y-4">
                           <div>
-                            <h5 className="font-semibold text-green-700 mb-2">Social Media Platforms</h5>
-                            <ul className="text-sm text-green-600 space-y-1">
+                            <h5 className="font-semibold text-emerald-600 mb-2">Social Media Platforms</h5>
+                            <ul className="text-sm text-emerald-600 space-y-1">
                               <li>• Instagram: Use PNG for posts and stories</li>
                               <li>• Facebook: Optimize file size for fast loading</li>
                               <li>• Twitter: Maintain readability at small sizes</li>
@@ -427,8 +427,8 @@ export default function DownloadAndUseArabicFontsPage() {
                             </ul>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-green-700 mb-2">Website Integration</h5>
-                            <ul className="text-sm text-green-600 space-y-1">
+                            <h5 className="font-semibold text-emerald-600 mb-2">Website Integration</h5>
+                            <ul className="text-sm text-emerald-600 space-y-1">
                               <li>• Use SVG for responsive web design</li>
                               <li>• Optimize PNG files for web (compress)</li>
                               <li>• Implement lazy loading for large images</li>
@@ -436,8 +436,8 @@ export default function DownloadAndUseArabicFontsPage() {
                             </ul>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-green-700 mb-2">Mobile Apps</h5>
-                            <ul className="text-sm text-green-600 space-y-1">
+                            <h5 className="font-semibold text-emerald-600 mb-2">Mobile Apps</h5>
+                            <ul className="text-sm text-emerald-600 space-y-1">
                               <li>• Use PNG for app icons and graphics</li>
                               <li>• Provide multiple resolutions (@1x, @2x, @3x)</li>
                               <li>• Consider dark mode compatibility</li>
@@ -450,11 +450,11 @@ export default function DownloadAndUseArabicFontsPage() {
                   </div>
 
                   <div className="bg-purple-50 border border-purple-200 rounded-lg p-6 mb-6">
-                    <h4 className="font-semibold text-purple-800 mb-4">🔧 Technical Specifications</h4>
+                    <h4 className="font-semibold text-amber-800 mb-4">🔧 Technical Specifications</h4>
                     <div className="grid md:grid-cols-3 gap-6">
                       <div>
-                        <h5 className="font-semibold text-purple-700 mb-2">Print Quality</h5>
-                        <ul className="text-sm text-purple-600 space-y-1">
+                        <h5 className="font-semibold text-amber-700 mb-2">Print Quality</h5>
+                        <ul className="text-sm text-amber-700 space-y-1">
                           <li>• Minimum 300 DPI for print</li>
                           <li>• CMYK color mode preferred</li>
                           <li>• Vector formats for large prints</li>
@@ -462,8 +462,8 @@ export default function DownloadAndUseArabicFontsPage() {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-purple-700 mb-2">Web Optimization</h5>
-                        <ul className="text-sm text-purple-600 space-y-1">
+                        <h5 className="font-semibold text-amber-700 mb-2">Web Optimization</h5>
+                        <ul className="text-sm text-amber-700 space-y-1">
                           <li>• 72-96 DPI for screen display</li>
                           <li>• RGB color mode</li>
                           <li>• Compressed file sizes</li>
@@ -471,8 +471,8 @@ export default function DownloadAndUseArabicFontsPage() {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-purple-700 mb-2">Mobile Standards</h5>
-                        <ul className="text-sm text-purple-600 space-y-1">
+                        <h5 className="font-semibold text-amber-700 mb-2">Mobile Standards</h5>
+                        <ul className="text-sm text-amber-700 space-y-1">
                           <li>• Retina display compatibility</li>
                           <li>• Touch-friendly sizing</li>
                           <li>• Fast loading optimization</li>
@@ -488,7 +488,7 @@ export default function DownloadAndUseArabicFontsPage() {
             {/* Step 4: Best Practices & Troubleshooting */}
             <Card className="border-violet-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-violet-800 flex items-center">
+                <CardTitle className="text-2xl text-amber-800 flex items-center">
                   <span className="bg-violet-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-4">4</span>
                   Best Practices & Troubleshooting
                 </CardTitle>
@@ -501,7 +501,7 @@ export default function DownloadAndUseArabicFontsPage() {
                     <div className="space-y-6">
                       <div>
                         <h4 className="text-lg font-semibold text-gray-900 mb-3">File Management</h4>
-                        <ul className="text-sm text-gray-700 space-y-2">
+                        <ul className="text-sm text-gray-600 space-y-2">
                           <li>• <strong>Naming Convention</strong>: Use descriptive, consistent file names</li>
                           <li>• <strong>Version Control</strong>: Keep track of design iterations</li>
                           <li>• <strong>Backup Strategy</strong>: Store files in multiple locations</li>
@@ -512,7 +512,7 @@ export default function DownloadAndUseArabicFontsPage() {
 
                       <div>
                         <h4 className="text-lg font-semibold text-gray-900 mb-3">Quality Optimization</h4>
-                        <ul className="text-sm text-gray-700 space-y-2">
+                        <ul className="text-sm text-gray-600 space-y-2">
                           <li>• <strong>Resolution Settings</strong>: Match output requirements</li>
                           <li>• <strong>Color Profiles</strong>: Use appropriate color spaces</li>
                           <li>• <strong>Compression</strong>: Balance quality and file size</li>
@@ -525,7 +525,7 @@ export default function DownloadAndUseArabicFontsPage() {
                     <div className="space-y-6">
                       <div>
                         <h4 className="text-lg font-semibold text-gray-900 mb-3">Legal & Licensing</h4>
-                        <ul className="text-sm text-gray-700 space-y-2">
+                        <ul className="text-sm text-gray-600 space-y-2">
                           <li>• <strong>Commercial Use</strong>: Our fonts are free for commercial use</li>
                           <li>• <strong>Attribution</strong>: Not required but appreciated</li>
                           <li>• <strong>Modification</strong>: You can edit downloaded files</li>
@@ -536,7 +536,7 @@ export default function DownloadAndUseArabicFontsPage() {
 
                       <div>
                         <h4 className="text-lg font-semibold text-gray-900 mb-3">Performance Tips</h4>
-                        <ul className="text-sm text-gray-700 space-y-2">
+                        <ul className="text-sm text-gray-600 space-y-2">
                           <li>• <strong>File Size</strong>: Optimize for intended use</li>
                           <li>• <strong>Loading Speed</strong>: Consider web performance</li>
                           <li>• <strong>Caching</strong>: Implement browser caching</li>
@@ -548,49 +548,49 @@ export default function DownloadAndUseArabicFontsPage() {
                   </div>
 
                   <div className="bg-red-50 border border-red-200 rounded-lg p-6 mb-6">
-                    <h4 className="font-semibold text-red-800 mb-4 flex items-center">
+                    <h4 className="font-semibold text-red-600 mb-4 flex items-center">
                       <AlertTriangle className="h-5 w-5 mr-2" />
                       Common Issues & Solutions
                     </h4>
                     <div className="space-y-4">
                       <div>
-                        <h5 className="font-semibold text-red-700 mb-2">Download Problems</h5>
+                        <h5 className="font-semibold text-red-600 mb-2">Download Problems</h5>
                         <div className="grid md:grid-cols-2 gap-4">
                           <div>
                             <p className="text-sm text-red-600 mb-1"><strong>Issue:</strong> Download doesn't start</p>
-                            <p className="text-xs text-red-500">Solution: Check browser settings, disable ad blockers</p>
+                            <p className="text-xs text-red-600">Solution: Check browser settings, disable ad blockers</p>
                           </div>
                           <div>
                             <p className="text-sm text-red-600 mb-1"><strong>Issue:</strong> File appears corrupted</p>
-                            <p className="text-xs text-red-500">Solution: Clear browser cache, try different browser</p>
+                            <p className="text-xs text-red-600">Solution: Clear browser cache, try different browser</p>
                           </div>
                         </div>
                       </div>
 
                       <div>
-                        <h5 className="font-semibold text-red-700 mb-2">Display Issues</h5>
+                        <h5 className="font-semibold text-red-600 mb-2">Display Issues</h5>
                         <div className="grid md:grid-cols-2 gap-4">
                           <div>
                             <p className="text-sm text-red-600 mb-1"><strong>Issue:</strong> Blurry text on screens</p>
-                            <p className="text-xs text-red-500">Solution: Use SVG format or higher resolution PNG</p>
+                            <p className="text-xs text-red-600">Solution: Use SVG format or higher resolution PNG</p>
                           </div>
                           <div>
                             <p className="text-sm text-red-600 mb-1"><strong>Issue:</strong> Colors look different</p>
-                            <p className="text-xs text-red-500">Solution: Check color profiles, calibrate monitor</p>
+                            <p className="text-xs text-red-600">Solution: Check color profiles, calibrate monitor</p>
                           </div>
                         </div>
                       </div>
 
                       <div>
-                        <h5 className="font-semibold text-red-700 mb-2">Compatibility Problems</h5>
+                        <h5 className="font-semibold text-red-600 mb-2">Compatibility Problems</h5>
                         <div className="grid md:grid-cols-2 gap-4">
                           <div>
                             <p className="text-sm text-red-600 mb-1"><strong>Issue:</strong> SVG not supported</p>
-                            <p className="text-xs text-red-500">Solution: Use PNG format or update software</p>
+                            <p className="text-xs text-red-600">Solution: Use PNG format or update software</p>
                           </div>
                           <div>
                             <p className="text-sm text-red-600 mb-1"><strong>Issue:</strong> File too large</p>
-                            <p className="text-xs text-red-500">Solution: Compress image or use SVG format</p>
+                            <p className="text-xs text-red-600">Solution: Compress image or use SVG format</p>
                           </div>
                         </div>
                       </div>
@@ -598,10 +598,10 @@ export default function DownloadAndUseArabicFontsPage() {
                   </div>
 
                   <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-emerald-800 mb-4">🚀 Advanced Usage Tips</h4>
+                    <h4 className="font-semibold text-emerald-600 mb-4">🚀 Advanced Usage Tips</h4>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <h5 className="font-semibold text-emerald-700 mb-2">Automation & Workflows</h5>
+                        <h5 className="font-semibold text-emerald-600 mb-2">Automation & Workflows</h5>
                         <ul className="text-sm text-emerald-600 space-y-1">
                           <li>• Create design templates for repeated use</li>
                           <li>• Set up batch processing workflows</li>
@@ -610,7 +610,7 @@ export default function DownloadAndUseArabicFontsPage() {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-emerald-700 mb-2">Integration Strategies</h5>
+                        <h5 className="font-semibold text-emerald-600 mb-2">Integration Strategies</h5>
                         <ul className="text-sm text-emerald-600 space-y-1">
                           <li>• API integration for automated downloads</li>
                           <li>• Custom scripts for file processing</li>
@@ -627,7 +627,7 @@ export default function DownloadAndUseArabicFontsPage() {
             {/* Additional Resources */}
             <Card className="border-violet-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-violet-800">
+                <CardTitle className="text-2xl text-amber-800">
                   📚 Additional Resources & Tools
                 </CardTitle>
               </CardHeader>
@@ -635,7 +635,7 @@ export default function DownloadAndUseArabicFontsPage() {
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="bg-gray-50 rounded-lg p-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Design Software</h4>
-                    <ul className="text-sm text-gray-700 space-y-2">
+                    <ul className="text-sm text-gray-600 space-y-2">
                       <li>• <strong>Adobe Illustrator</strong>: Professional vector editing</li>
                       <li>• <strong>Figma</strong>: Collaborative design platform</li>
                       <li>• <strong>Canva</strong>: User-friendly design tool</li>
@@ -646,7 +646,7 @@ export default function DownloadAndUseArabicFontsPage() {
 
                   <div className="bg-gray-50 rounded-lg p-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Optimization Tools</h4>
-                    <ul className="text-sm text-gray-700 space-y-2">
+                    <ul className="text-sm text-gray-600 space-y-2">
                       <li>• <strong>TinyPNG</strong>: PNG compression</li>
                       <li>• <strong>SVGO</strong>: SVG optimization</li>
                       <li>• <strong>ImageOptim</strong>: Mac image optimizer</li>
@@ -657,7 +657,7 @@ export default function DownloadAndUseArabicFontsPage() {
 
                   <div className="bg-gray-50 rounded-lg p-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Learning Resources</h4>
-                    <ul className="text-sm text-gray-700 space-y-2">
+                    <ul className="text-sm text-gray-600 space-y-2">
                       <li>• <strong>Typography Guides</strong>: Learn design principles</li>
                       <li>• <strong>Color Theory</strong>: Master color combinations</li>
                       <li>• <strong>Arabic Culture</strong>: Understand cultural context</li>
@@ -674,10 +674,10 @@ export default function DownloadAndUseArabicFontsPage() {
           <div className="text-center mt-16 mb-12">
             <Card className="bg-gradient-to-r from-violet-100 to-purple-100 border-violet-200">
               <CardContent className="pt-8 pb-8">
-                <h2 className="text-3xl font-bold text-violet-800 mb-4">
+                <h2 className="text-3xl font-bold text-amber-800 mb-4">
                   Ready to Download Your First Font?
                 </h2>
-                <p className="text-violet-700 mb-6 max-w-2xl mx-auto">
+                <p className="text-amber-700 mb-6 max-w-2xl mx-auto">
                   Start creating beautiful Arabic calligraphy and download high-quality files 
                   for your projects. No installation required - everything works in your browser.
                 </p>
@@ -697,7 +697,7 @@ export default function DownloadAndUseArabicFontsPage() {
                 <h3 className="font-semibold text-gray-900 mb-2">Creation Tutorial</h3>
                 <p className="text-sm text-gray-600 mb-4">Learn how to create Arabic calligraphy from scratch</p>
                 <Link href="/tutorials/how-to-create-arabic-calligraphy-online">
-                  <Button variant="outline" size="sm" className="border-violet-600 text-violet-600 hover:bg-violet-50">
+                  <Button variant="outline" size="sm" className="border-violet-600 text-amber-700 hover:bg-violet-50">
                     View Tutorial <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>
                 </Link>
@@ -709,7 +709,7 @@ export default function DownloadAndUseArabicFontsPage() {
                 <h3 className="font-semibold text-gray-900 mb-2">Font Selection</h3>
                 <p className="text-sm text-gray-600 mb-4">Choose the perfect Arabic font for your project</p>
                 <Link href="/tutorials/arabic-font-selection-guide">
-                  <Button variant="outline" size="sm" className="border-violet-600 text-violet-600 hover:bg-violet-50">
+                  <Button variant="outline" size="sm" className="border-violet-600 text-amber-700 hover:bg-violet-50">
                     Font Guide <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>
                 </Link>
@@ -721,7 +721,7 @@ export default function DownloadAndUseArabicFontsPage() {
                 <h3 className="font-semibold text-gray-900 mb-2">Design Tips</h3>
                 <p className="text-sm text-gray-600 mb-4">Master professional Arabic calligraphy design</p>
                 <Link href="/tutorials/arabic-calligraphy-design-tips">
-                  <Button variant="outline" size="sm" className="border-violet-600 text-violet-600 hover:bg-violet-50">
+                  <Button variant="outline" size="sm" className="border-violet-600 text-amber-700 hover:bg-violet-50">
                     Learn Tips <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>
                 </Link>

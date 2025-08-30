@@ -87,7 +87,7 @@ export default function ArabicFontSelectionGuidePage() {
                 </Button>
               </Link>
               <Link href="/fonts">
-                <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3">
+                <Button variant="outline" className="border-blue-600 text-amber-700 hover:bg-blue-50 px-6 py-3">
                   Browse All Fonts
                 </Button>
               </Link>
@@ -97,7 +97,7 @@ export default function ArabicFontSelectionGuidePage() {
           {/* Font Categories Overview */}
           <Card className="mb-12 border-blue-200 shadow-lg">
             <CardHeader className="bg-gradient-to-r from-blue-100 to-indigo-100">
-              <CardTitle className="text-2xl text-blue-800">
+              <CardTitle className="text-2xl text-amber-800">
                 🎨 Font Categories Overview
               </CardTitle>
             </CardHeader>
@@ -105,31 +105,31 @@ export default function ArabicFontSelectionGuidePage() {
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Crown className="h-8 w-8 text-blue-600" />
+                    <Crown className="h-8 w-8 text-amber-700" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">Traditional Classic</h3>
                   <p className="text-sm text-gray-600">Heritage fonts carrying historical culture, perfect for formal occasions and religious texts</p>
-                  <div className="mt-3 text-xs text-blue-600">
+                  <div className="mt-3 text-xs text-amber-700">
                     Amiri • Scheherazade • Lateef
                   </div>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Zap className="h-8 w-8 text-green-600" />
+                    <Zap className="h-8 w-8 text-emerald-600" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">Modern Contemporary</h3>
                   <p className="text-sm text-gray-600">Clean modern design style, ideal for brand identity and digital media</p>
-                  <div className="mt-3 text-xs text-green-600">
+                  <div className="mt-3 text-xs text-emerald-600">
                     Cairo • Tajawal • Mada
                   </div>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Palette className="h-8 w-8 text-purple-600" />
+                    <Palette className="h-8 w-8 text-amber-700" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">Decorative Artistic</h3>
                   <p className="text-sm text-gray-600">Creative decorative fonts, perfect for poster design and artistic creation</p>
-                  <div className="mt-3 text-xs text-purple-600">
+                  <div className="mt-3 text-xs text-amber-700">
                     Rakkas • Jomhuria • Lemonada
                   </div>
                 </div>
@@ -140,7 +140,7 @@ export default function ArabicFontSelectionGuidePage() {
           {/* Selection Criteria */}
           <Card className="mb-12 border-blue-200 shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl text-blue-800">
+              <CardTitle className="text-2xl text-amber-800">
                 🎯 Key Factors in Font Selection
               </CardTitle>
             </CardHeader>
@@ -149,10 +149,10 @@ export default function ArabicFontSelectionGuidePage() {
                 <div className="space-y-6">
                   <div className="bg-gray-50 rounded-lg p-4">
                     <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
-                      <Eye className="h-5 w-5 text-blue-600 mr-2" />
+                      <Eye className="h-5 w-5 text-amber-700 mr-2" />
                       Readability Considerations
                     </h4>
-                    <ul className="text-sm text-gray-700 space-y-2">
+                    <ul className="text-sm text-gray-600 space-y-2">
                       <li>• <strong>Text Length</strong>: Choose simple fonts for long text, decorative for short text</li>
                       <li>• <strong>Display Size</strong>: Prefer clear fonts for small sizes, artistic fonts for large sizes</li>
                       <li>• <strong>Reading Distance</strong>: Distant viewing requires bolder, clearer fonts</li>
@@ -165,7 +165,7 @@ export default function ArabicFontSelectionGuidePage() {
                       <Heart className="h-5 w-5 text-red-600 mr-2" />
                       Emotional Expression
                     </h4>
-                    <ul className="text-sm text-gray-700 space-y-2">
+                    <ul className="text-sm text-gray-600 space-y-2">
                       <li>• <strong>Dignity</strong>: Traditional fonts convey authority and respect</li>
                       <li>• <strong>Modernity</strong>: Geometric fonts reflect innovation and efficiency</li>
                       <li>• <strong>Warmth</strong>: Rounded fonts increase warmth and friendliness</li>
@@ -177,10 +177,10 @@ export default function ArabicFontSelectionGuidePage() {
                 <div className="space-y-6">
                   <div className="bg-gray-50 rounded-lg p-4">
                     <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
-                      <Star className="h-5 w-5 text-yellow-600 mr-2" />
+                      <Star className="h-5 w-5 text-amber-700 mr-2" />
                       Application Scenarios
                     </h4>
-                    <ul className="text-sm text-gray-700 space-y-2">
+                    <ul className="text-sm text-gray-600 space-y-2">
                       <li>• <strong>Religious Texts</strong>: Choose traditional, dignified fonts</li>
                       <li>• <strong>Business Brands</strong>: Modern, professional fonts are more suitable</li>
                       <li>• <strong>Social Media</strong>: Eye-catching decorative fonts</li>
@@ -190,7 +190,7 @@ export default function ArabicFontSelectionGuidePage() {
                   
                   <div className="bg-gray-50 rounded-lg p-4">
                     <h4 className="font-semibold text-gray-900 mb-3">🔧 Technical Requirements</h4>
-                    <ul className="text-sm text-gray-700 space-y-2">
+                    <ul className="text-sm text-gray-600 space-y-2">
                       <li>• <strong>File Format</strong>: Consider output format compatibility</li>
                       <li>• <strong>Character Support</strong>: Ensure inclusion of required special characters</li>
                       <li>• <strong>Scalability</strong>: Vector fonts suitable for multi-size applications</li>
@@ -211,7 +211,7 @@ export default function ArabicFontSelectionGuidePage() {
             {/* Wedding & Events */}
             <Card className="border-pink-200 shadow-lg">
               <CardHeader className="bg-gradient-to-r from-pink-100 to-rose-100">
-                <CardTitle className="text-xl text-pink-800">
+                <CardTitle className="text-xl text-gray-900">
                   💒 Weddings & Celebrations
                 </CardTitle>
               </CardHeader>
@@ -223,7 +223,7 @@ export default function ArabicFontSelectionGuidePage() {
                       <div className="flex items-center justify-between">
                         <span className="text-sm font-medium">Amiri</span>
                         <div className="flex">
-                          {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />)}
+                          {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-amber-600" />)}
                         </div>
                       </div>
                       <p className="text-xs text-gray-600">Elegant traditional style, perfect for formal invitations</p>
@@ -236,8 +236,8 @@ export default function ArabicFontSelectionGuidePage() {
                       <div className="flex items-center justify-between">
                         <span className="text-sm font-medium">Scheherazade</span>
                         <div className="flex">
-                          {[1,2,3,4].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />)}
-                          <Star className="h-3 w-3 text-gray-300" />
+                          {[1,2,3,4].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-amber-600" />)}
+                          <Star className="h-3 w-3 text-gray-600" />
                         </div>
                       </div>
                       <p className="text-xs text-gray-600">Classic Naskh style, dignified and elegant</p>
@@ -250,8 +250,8 @@ export default function ArabicFontSelectionGuidePage() {
                       <div className="flex items-center justify-between">
                         <span className="text-sm font-medium">Lemonada</span>
                         <div className="flex">
-                          {[1,2,3,4].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />)}
-                          <Star className="h-3 w-3 text-gray-300" />
+                          {[1,2,3,4].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-amber-600" />)}
+                          <Star className="h-3 w-3 text-gray-600" />
                         </div>
                       </div>
                       <p className="text-xs text-gray-600">Rounded and lovely, suitable for modern weddings</p>
@@ -260,8 +260,8 @@ export default function ArabicFontSelectionGuidePage() {
                 </div>
                 
                 <div className="mt-6 bg-pink-50 rounded-lg p-4">
-                  <h5 className="font-semibold text-pink-800 mb-2">💡 Design Suggestions</h5>
-                  <ul className="text-sm text-pink-700 space-y-1">
+                  <h5 className="font-semibold text-gray-900 mb-2">💡 Design Suggestions</h5>
+                  <ul className="text-sm text-gray-900 space-y-1">
                     <li>• Use gold or dark text with light backgrounds</li>
                     <li>• Add appropriate shadow effects for depth</li>
                     <li>• Consider adding decorative borders or patterns</li>
@@ -274,7 +274,7 @@ export default function ArabicFontSelectionGuidePage() {
             {/* Business & Corporate */}
             <Card className="border-green-200 shadow-lg">
               <CardHeader className="bg-gradient-to-r from-green-100 to-emerald-100">
-                <CardTitle className="text-xl text-green-800">
+                <CardTitle className="text-xl text-emerald-600">
                   🏢 Business & Corporate
                 </CardTitle>
               </CardHeader>
@@ -286,7 +286,7 @@ export default function ArabicFontSelectionGuidePage() {
                       <div className="flex items-center justify-between">
                         <span className="text-sm font-medium">Cairo</span>
                         <div className="flex">
-                          {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />)}
+                          {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-amber-600" />)}
                         </div>
                       </div>
                       <p className="text-xs text-gray-600">Modern and clean, top choice for brand identity</p>
@@ -299,7 +299,7 @@ export default function ArabicFontSelectionGuidePage() {
                       <div className="flex items-center justify-between">
                         <span className="text-sm font-medium">Tajawal</span>
                         <div className="flex">
-                          {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />)}
+                          {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-amber-600" />)}
                         </div>
                       </div>
                       <p className="text-xs text-gray-600">Stylish design, favored by tech companies</p>
@@ -312,8 +312,8 @@ export default function ArabicFontSelectionGuidePage() {
                       <div className="flex items-center justify-between">
                         <span className="text-sm font-medium">Mada</span>
                         <div className="flex">
-                          {[1,2,3,4].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />)}
-                          <Star className="h-3 w-3 text-gray-300" />
+                          {[1,2,3,4].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-amber-600" />)}
+                          <Star className="h-3 w-3 text-gray-600" />
                         </div>
                       </div>
                       <p className="text-xs text-gray-600">Strong geometric feel, suitable for architecture</p>
@@ -322,8 +322,8 @@ export default function ArabicFontSelectionGuidePage() {
                 </div>
 
                 <div className="mt-6 bg-green-50 rounded-lg p-4">
-                  <h5 className="font-semibold text-green-800 mb-2">💼 Business Application Tips</h5>
-                  <ul className="text-sm text-green-700 space-y-1">
+                  <h5 className="font-semibold text-emerald-600 mb-2">💼 Business Application Tips</h5>
+                  <ul className="text-sm text-emerald-600 space-y-1">
                     <li>• Choose neutral colors to reflect professionalism</li>
                     <li>• Ensure clarity at small sizes</li>
                     <li>• Consider brand color coordination</li>
@@ -336,7 +336,7 @@ export default function ArabicFontSelectionGuidePage() {
             {/* Social Media */}
             <Card className="border-purple-200 shadow-lg">
               <CardHeader className="bg-gradient-to-r from-purple-100 to-violet-100">
-                <CardTitle className="text-xl text-purple-800">
+                <CardTitle className="text-xl text-amber-800">
                   📱 Social Media
                 </CardTitle>
               </CardHeader>
@@ -348,7 +348,7 @@ export default function ArabicFontSelectionGuidePage() {
                       <div className="flex items-center justify-between">
                         <span className="text-sm font-medium">Rakkas</span>
                         <div className="flex">
-                          {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />)}
+                          {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-amber-600" />)}
                         </div>
                       </div>
                       <p className="text-xs text-gray-600">Bold decorative style, Instagram favorite</p>
@@ -361,8 +361,8 @@ export default function ArabicFontSelectionGuidePage() {
                       <div className="flex items-center justify-between">
                         <span className="text-sm font-medium">Jomhuria</span>
                         <div className="flex">
-                          {[1,2,3,4].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />)}
-                          <Star className="h-3 w-3 text-gray-300" />
+                          {[1,2,3,4].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-amber-600" />)}
+                          <Star className="h-3 w-3 text-gray-600" />
                         </div>
                       </div>
                       <p className="text-xs text-gray-600">Unique design, suitable for creative content</p>
@@ -375,8 +375,8 @@ export default function ArabicFontSelectionGuidePage() {
                       <div className="flex items-center justify-between">
                         <span className="text-sm font-medium">Lemonada</span>
                         <div className="flex">
-                          {[1,2,3,4].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />)}
-                          <Star className="h-3 w-3 text-gray-300" />
+                          {[1,2,3,4].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-amber-600" />)}
+                          <Star className="h-3 w-3 text-gray-600" />
                         </div>
                       </div>
                       <p className="text-xs text-gray-600">Rounded and friendly, loved by lifestyle bloggers</p>
@@ -385,8 +385,8 @@ export default function ArabicFontSelectionGuidePage() {
                 </div>
 
                 <div className="mt-6 bg-purple-50 rounded-lg p-4">
-                  <h5 className="font-semibold text-purple-800 mb-2">📸 Social Media Design Tips</h5>
-                  <ul className="text-sm text-purple-700 space-y-1">
+                  <h5 className="font-semibold text-amber-800 mb-2">📸 Social Media Design Tips</h5>
+                  <ul className="text-sm text-amber-700 space-y-1">
                     <li>• Use high-contrast color combinations</li>
                     <li>• Consider mobile display effects</li>
                     <li>• Appropriate use of gradients and shadow effects</li>
@@ -411,7 +411,7 @@ export default function ArabicFontSelectionGuidePage() {
                       <div className="flex items-center justify-between">
                         <span className="text-sm font-medium">Amiri</span>
                         <div className="flex">
-                          {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />)}
+                          {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-amber-600" />)}
                         </div>
                       </div>
                       <p className="text-xs text-gray-600">Ideal choice for Quranic texts</p>
@@ -424,7 +424,7 @@ export default function ArabicFontSelectionGuidePage() {
                       <div className="flex items-center justify-between">
                         <span className="text-sm font-medium">Lateef</span>
                         <div className="flex">
-                          {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />)}
+                          {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-amber-600" />)}
                         </div>
                       </div>
                       <p className="text-xs text-gray-600">Top choice for educational materials</p>
@@ -437,7 +437,7 @@ export default function ArabicFontSelectionGuidePage() {
                       <div className="flex items-center justify-between">
                         <span className="text-sm font-medium">Scheherazade</span>
                         <div className="flex">
-                          {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />)}
+                          {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-yellow-400 text-amber-600" />)}
                         </div>
                       </div>
                       <p className="text-xs text-gray-600">Professional choice for academic literature</p>
@@ -460,7 +460,7 @@ export default function ArabicFontSelectionGuidePage() {
             {/* Font Comparison Table */}
             <Card className="border-gray-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-gray-800">
+                <CardTitle className="text-2xl text-gray-900">
                   📊 Font Characteristics Comparison
                 </CardTitle>
               </CardHeader>
@@ -517,8 +517,8 @@ export default function ArabicFontSelectionGuidePage() {
                 </div>
 
                 <div className="mt-6 bg-blue-50 rounded-lg p-4">
-                  <h5 className="font-semibold text-blue-800 mb-2">📝 Usage Guide</h5>
-                  <p className="text-sm text-blue-700">
+                  <h5 className="font-semibold text-amber-800 mb-2">📝 Usage Guide</h5>
+                  <p className="text-sm text-amber-700">
                     This comparison table helps you quickly understand different font characteristics.
                     High readability fonts are suitable for long texts, while highly decorative fonts
                     are perfect for headlines and short texts. Choose the most appropriate font based on your specific needs.
@@ -532,10 +532,10 @@ export default function ArabicFontSelectionGuidePage() {
           <div className="text-center mt-16 mb-12">
             <Card className="bg-gradient-to-r from-blue-100 to-indigo-100 border-blue-200">
               <CardContent className="pt-8 pb-8">
-                <h2 className="text-3xl font-bold text-blue-800 mb-4">
+                <h2 className="text-3xl font-bold text-amber-800 mb-4">
                   Start Choosing Your Perfect Font
                 </h2>
-                <p className="text-blue-700 mb-6 max-w-2xl mx-auto">
+                <p className="text-amber-700 mb-6 max-w-2xl mx-auto">
                   Use our font selection tool to preview different fonts in real-time and 
                   find the perfect Arabic font for your project.
                 </p>
@@ -555,7 +555,7 @@ export default function ArabicFontSelectionGuidePage() {
                 <h3 className="font-semibold text-gray-900 mb-2">Creation Tutorial</h3>
                 <p className="text-sm text-gray-600 mb-4">Learn how to create Arabic calligraphy using our online tool</p>
                 <Link href="/tutorials/how-to-create-arabic-calligraphy-online">
-                  <Button variant="outline" size="sm" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+                  <Button variant="outline" size="sm" className="border-blue-600 text-amber-700 hover:bg-blue-50">
                     View Tutorial <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>
                 </Link>
@@ -567,7 +567,7 @@ export default function ArabicFontSelectionGuidePage() {
                 <h3 className="font-semibold text-gray-900 mb-2">Design Tips</h3>
                 <p className="text-sm text-gray-600 mb-4">Master professional Arabic calligraphy design techniques</p>
                 <Link href="/tutorials/arabic-calligraphy-design-tips">
-                  <Button variant="outline" size="sm" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+                  <Button variant="outline" size="sm" className="border-blue-600 text-amber-700 hover:bg-blue-50">
                     Learn Tips <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>
                 </Link>
@@ -579,7 +579,7 @@ export default function ArabicFontSelectionGuidePage() {
                 <h3 className="font-semibold text-gray-900 mb-2">Font Library</h3>
                 <p className="text-sm text-gray-600 mb-4">Browse our curated collection of 17 Arabic fonts</p>
                 <Link href="/fonts">
-                  <Button variant="outline" size="sm" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+                  <Button variant="outline" size="sm" className="border-blue-600 text-amber-700 hover:bg-blue-50">
                     Browse Fonts <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>
                 </Link>

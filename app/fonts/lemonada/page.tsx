@@ -59,32 +59,32 @@ const TEXT_EXAMPLES = [
 
 const FONT_FEATURES = [
   {
-    icon: <Smile className="h-8 w-8 text-lime-600 mb-2" />,
+    icon: <Smile className="h-8 w-8 text-emerald-600 mb-2" />,
     title: "Friendly & Approachable",
     description: "Characterized by its soft, rounded letterforms that create a warm, inviting, and approachable aesthetic."
   },
   {
-    icon: <Blend className="h-8 w-8 text-lime-600 mb-2" />,
+    icon: <Blend className="h-8 w-8 text-emerald-600 mb-2" />,
     title: "Modern & Versatile",
     description: "A contemporary design that adapts well to various applications, from digital interfaces to print materials."
   },
   {
-    icon: <Type className="h-8 w-8 text-lime-600 mb-2" />,
+    icon: <Type className="h-8 w-8 text-emerald-600 mb-2" />,
     title: "Excellent Readability",
     description: "Despite its stylistic rounding, Lemonada maintains good clarity and readability, especially in medium sizes."
   },
   {
-    icon: <Layers className="h-8 w-8 text-lime-600 mb-2" />,
+    icon: <Layers className="h-8 w-8 text-emerald-600 mb-2" />,
     title: "Multiple Weights",
     description: "Available in a range of weights (e.g., Light, Regular, Medium, SemiBold, Bold), offering typographic flexibility."
   },
   {
-    icon: <Palette className="h-8 w-8 text-lime-600 mb-2" />,
+    icon: <Palette className="h-8 w-8 text-emerald-600 mb-2" />,
     title: "Bilingual Support (Arabic & Latin)",
     description: "Often designed with a harmonious Latin counterpart, making it suitable for multilingual designs."
   },
   {
-    icon: <Zap className="h-8 w-8 text-lime-600 mb-2" />,
+    icon: <Zap className="h-8 w-8 text-emerald-600 mb-2" />,
     title: "Distinctive Personality",
     description: "Its unique rounded style gives text a distinctive character and a touch of playful elegance."
   }
@@ -94,32 +94,32 @@ const IDEAL_USE_CASES = [
   {
     title: "Branding for Casual & Lifestyle Products",
     description: "Perfect for brands aiming for a friendly, modern, and approachable image (e.g., food, children's products, cafes).",
-    icon: <Smile className="h-5 w-5 text-lime-700" />
+    icon: <Smile className="h-5 w-5 text-emerald-600" />
   },
   {
     title: "User Interfaces (UI) for Apps & Websites",
     description: "Adds a soft and welcoming touch to buttons, menus, and text in digital interfaces, enhancing user experience.",
-    icon: <Zap className="h-5 w-5 text-lime-700" />
+    icon: <Zap className="h-5 w-5 text-emerald-600" />
   },
   {
     title: "Children's Books & Educational Materials",
     description: "Its playful and legible nature makes it ideal for content aimed at younger audiences.",
-    icon: <Type className="h-5 w-5 text-lime-700" />
+    icon: <Type className="h-5 w-5 text-emerald-600" />
   },
   {
     title: "Social Media Graphics & Marketing",
     description: "Creates engaging and visually appealing posts and advertisements with a friendly vibe.",
-    icon: <Palette className="h-5 w-5 text-lime-700" />
+    icon: <Palette className="h-5 w-5 text-emerald-600" />
   },
   {
     title: "Packaging Design",
     description: "Can make product packaging look more inviting and distinctive on shelves.",
-    icon: <Layers className="h-5 w-5 text-lime-700" />
+    icon: <Layers className="h-5 w-5 text-emerald-600" />
   },
   {
     title: "Informal Communications & Invitations",
     description: "Adds a personal and cheerful touch to invitations, greeting cards, and informal notes.",
-    icon: <CheckCircle className="h-5 w-5 text-lime-700" />
+    icon: <CheckCircle className="h-5 w-5 text-emerald-600" />
   }
 ];
 
@@ -220,7 +220,7 @@ export default function LemonadaFontPage() {
               className="mb-6"
             />
 
-            <Button asChild variant="ghost" className="mb-4 text-lime-600 hover:text-lime-800 hover:bg-lime-50">
+            <Button asChild variant="ghost" className="mb-4 text-emerald-600 hover:text-emerald-600 hover:bg-lime-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Fonts
@@ -236,9 +236,9 @@ export default function LemonadaFontPage() {
                     </div>
                   </div>
                   <div className="w-full md:w-2/3">
-                    <span className="text-xs text-lime-600 font-medium px-2 py-1 bg-lime-50 rounded-full mb-2 inline-block">Rounded Sans-Serif (Bilingual)</span>
-                    <h1 className="text-4xl md:text-5xl font-bold text-lime-800 mt-1 mb-3">Lemonada Font</h1>
-                    <p className="text-lg text-lime-700 mb-6 leading-relaxed">
+                    <span className="text-xs text-emerald-600 font-medium px-2 py-1 bg-lime-50 rounded-full mb-2 inline-block">Rounded Sans-Serif (Bilingual)</span>
+                    <h1 className="text-4xl md:text-5xl font-bold text-emerald-600 mt-1 mb-3">Lemonada Font</h1>
+                    <p className="text-lg text-emerald-600 mb-6 leading-relaxed">
                       Lemonada is a modern and friendly Arabic typeface featuring distinctive rounded letterforms. Designed by Eduardo Tunni, it brings warmth and personality to branding, UI, and casual designs, supporting both Arabic and Latin scripts.
                     </p>
                     <div className="flex gap-4">
@@ -258,26 +258,26 @@ export default function LemonadaFontPage() {
             </Card>
 
             <div className="prose prose-lime max-w-none">
-              <h2 id="distinctive-features" className="text-3xl font-bold text-lime-800 mt-12 mb-6">Distinctive Features of Lemonada</h2>
+              <h2 id="distinctive-features" className="text-3xl font-bold text-emerald-600 mt-12 mb-6">Distinctive Features of Lemonada</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                 {FONT_FEATURES.map((feature) => (
                   <Card key={feature.title} className="border-lime-200 flex flex-col bg-white">
                     <CardHeader className="items-center text-center">
                       {feature.icon}
-                      <CardTitle className="text-xl text-lime-800">{feature.title}</CardTitle>
+                      <CardTitle className="text-xl text-emerald-600">{feature.title}</CardTitle>
                     </CardHeader>
                     <CardContent className="text-center flex-grow">
-                      <p className="text-lime-700 text-sm">{feature.description}</p>
+                      <p className="text-emerald-600 text-sm">{feature.description}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
-              <h2 id="design-philosophy" className="text-3xl font-bold text-lime-800 mt-12 mb-6">Design Philosophy: Friendly Modernity</h2>
+              <h2 id="design-philosophy" className="text-3xl font-bold text-emerald-600 mt-12 mb-6">Design Philosophy: Friendly Modernity</h2>
               <Card className="border-lime-200 mb-12 bg-white">
-                <CardContent className="p-6 md:p-8 space-y-4 text-lime-700 leading-relaxed">
+                <CardContent className="p-6 md:p-8 space-y-4 text-emerald-600 leading-relaxed">
                   <p>
-                    Lemonada, designed by <strong className="text-lime-800">Eduardo Tunni</strong>, is a typeface that beautifully balances modernity with a friendly, approachable character. Its most defining feature is the consistent use of rounded terminals and soft curves throughout both its Arabic and Latin letterforms. This deliberate design choice imbues the font with a sense of warmth and playfulness, making it stand out from more traditional or strictly geometric sans-serifs.
+                    Lemonada, designed by <strong className="text-emerald-600">Eduardo Tunni</strong>, is a typeface that beautifully balances modernity with a friendly, approachable character. Its most defining feature is the consistent use of rounded terminals and soft curves throughout both its Arabic and Latin letterforms. This deliberate design choice imbues the font with a sense of warmth and playfulness, making it stand out from more traditional or strictly geometric sans-serifs.
                   </p>
                   <p>
                     The font was conceived to be highly versatile, suitable for a wide range of applications where a touch of personality is desired without sacrificing clarity. The Arabic script in Lemonada is designed to harmonize with the Latin, ensuring visual coherence in bilingual settings. This makes it an excellent choice for international brands, user interfaces that cater to diverse audiences, and any project that benefits from a typeface that feels contemporary and inviting.
@@ -288,21 +288,21 @@ export default function LemonadaFontPage() {
                 </CardContent>
               </Card>
 
-              <h2 id="alphabet-showcase" className="text-3xl font-bold text-lime-800 mt-12 mb-6">Lemonada Alphabet Showcase (Arabic & Latin)</h2>
+              <h2 id="alphabet-showcase" className="text-3xl font-bold text-emerald-600 mt-12 mb-6">Lemonada Alphabet Showcase (Arabic & Latin)</h2>
               <Card className="border-lime-200 mb-12 bg-white">
                 <CardHeader>
-                  <CardTitle className="text-xl text-lime-800">Soft & Rounded Letterforms</CardTitle>
-                  <CardDescription className="text-lime-600">Observe the friendly, rounded style of Lemonada in both Arabic and Latin scripts.</CardDescription>
+                  <CardTitle className="text-xl text-emerald-600">Soft & Rounded Letterforms</CardTitle>
+                  <CardDescription className="text-emerald-600">Observe the friendly, rounded style of Lemonada in both Arabic and Latin scripts.</CardDescription>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-lime-700 mb-2 text-center">Arabic</h3>
+                  <h3 className="text-lg font-semibold text-emerald-600 mb-2 text-center">Arabic</h3>
                   <div
                     className="text-center leading-loose mb-6"
                     style={{ fontFamily: "'Lemonada', cursive", fontSize: "30px", direction: "rtl" }}
                   >
                     {ARABIC_ALPHABET_LEMONADA}
                   </div>
-                  <h3 className="text-lg font-semibold text-lime-700 mb-2 text-center">Latin</h3>
+                  <h3 className="text-lg font-semibold text-emerald-600 mb-2 text-center">Latin</h3>
                   <div
                     className="text-center leading-loose"
                     style={{ fontFamily: "'Lemonada', cursive", fontSize: "24px" }}
@@ -312,7 +312,7 @@ export default function LemonadaFontPage() {
                 </CardContent>
               </Card>
 
-              <h2 id="text-examples" className="text-3xl font-bold text-lime-800 mt-12 mb-6">Lemonada in Action: Text Examples</h2>
+              <h2 id="text-examples" className="text-3xl font-bold text-emerald-600 mt-12 mb-6">Lemonada in Action: Text Examples</h2>
               <Tabs defaultValue={TEXT_EXAMPLES[0].id} className="w-full mb-12">
                 <TabsList className="grid w-full" style={{ gridTemplateColumns: `repeat(${TEXT_EXAMPLES.length}, 1fr)` }}>
                   {TEXT_EXAMPLES.map((example, index) => (
@@ -331,44 +331,44 @@ export default function LemonadaFontPage() {
                         >
                           {example.text}
                         </div>
-                        <p className="text-center font-medium text-lime-700 mb-2">{example.translation}</p>
-                        <p className="text-center text-sm text-lime-600">{example.context}</p>
+                        <p className="text-center font-medium text-emerald-600 mb-2">{example.translation}</p>
+                        <p className="text-center text-sm text-emerald-600">{example.context}</p>
                       </CardContent>
                     </Card>
                   </TabsContent>
                 ))}
               </Tabs>
 
-              <h2 id="use-cases" className="text-3xl font-bold text-lime-800 mt-12 mb-6">Ideal Use Cases for Lemonada</h2>
+              <h2 id="use-cases" className="text-3xl font-bold text-emerald-600 mt-12 mb-6">Ideal Use Cases for Lemonada</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 {IDEAL_USE_CASES.map((useCase) => (
                   <Card key={useCase.title} className="border-lime-200 flex bg-white">
                     <div className="p-6 pr-0 flex items-center">{useCase.icon}</div>
                     <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold text-lime-800 mb-1">{useCase.title}</h3>
-                      <p className="text-lime-700 text-sm">{useCase.description}</p>
+                      <h3 className="text-lg font-semibold text-emerald-600 mb-1">{useCase.title}</h3>
+                      <p className="text-emerald-600 text-sm">{useCase.description}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
-              <h2 id="technical-details" className="text-3xl font-bold text-lime-800 mt-12 mb-6">Technical Specifications</h2>
+              <h2 id="technical-details" className="text-3xl font-bold text-emerald-600 mt-12 mb-6">Technical Specifications</h2>
               <div className="space-y-6 mb-12">
                 {TECHNICAL_DETAILS.map((detail) => (
                   <Card key={detail.title} className="border-lime-200 bg-white">
                     <CardHeader>
-                      <CardTitle className="text-xl text-lime-800">{detail.title}</CardTitle>
+                      <CardTitle className="text-xl text-emerald-600">{detail.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-lg text-lime-700 mb-1">{detail.value}</p>
-                      {detail.description && <p className="text-sm text-lime-600">{detail.description}</p>}
+                      <p className="text-lg text-emerald-600 mb-1">{detail.value}</p>
+                      {detail.description && <p className="text-sm text-emerald-600">{detail.description}</p>}
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
               <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center p-6 bg-lime-50 rounded-lg border border-lime-200">
-                 <h3 className="text-2xl font-semibold text-lime-800 text-center sm:text-left">Add a Friendly Touch with Lemonada</h3>
+                 <h3 className="text-2xl font-semibold text-emerald-600 text-center sm:text-left">Add a Friendly Touch with Lemonada</h3>
                 <Button asChild size="lg" className="bg-lime-600 hover:bg-lime-700 text-white">
                   <Link href="/?font=Lemonada">Use Lemonada in Calligraphy Generator</Link>
                 </Button>

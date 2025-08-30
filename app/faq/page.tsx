@@ -117,7 +117,7 @@ export default function FAQPage() {
             <Accordion type="single" collapsible className="w-full">
               {faqs.slice(0, generalQuestionsEndIndex).map((faq, index) => (
                 <AccordionItem key={`general-${index}`} value={`general-item-${index}`}>
-                  <AccordionTrigger className="text-lg font-medium text-amber-900">{faq.question}</AccordionTrigger>
+                  <AccordionTrigger className="text-lg font-medium text-amber-800">{faq.question}</AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
                     <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                   </AccordionContent>
@@ -135,7 +135,7 @@ export default function FAQPage() {
             <Accordion type="single" collapsible className="w-full">
               {faqs.slice(generatorQuestionsStartIndex, generatorQuestionsEndIndex).map((faq, index) => (
                 <AccordionItem key={`generator-${index}`} value={`generator-item-${index}`}>
-                  <AccordionTrigger className="text-lg font-medium text-amber-900">{faq.question}</AccordionTrigger>
+                  <AccordionTrigger className="text-lg font-medium text-amber-800">{faq.question}</AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
                     <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                   </AccordionContent>
@@ -153,7 +153,7 @@ export default function FAQPage() {
             <Accordion type="single" collapsible className="w-full">
               {faqs.slice(generatorQuestionsEndIndex).map((faq, index) => (
                 <AccordionItem key={`technical-${index}`} value={`technical-item-${index + generatorQuestionsEndIndex}`}>
-                  <AccordionTrigger className="text-lg font-medium text-amber-900">{faq.question}</AccordionTrigger>
+                  <AccordionTrigger className="text-lg font-medium text-amber-800">{faq.question}</AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
                     <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                   </AccordionContent>

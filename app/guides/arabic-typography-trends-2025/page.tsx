@@ -89,7 +89,7 @@ export default function ArabicTypographyTrends2025Page() {
                 </Button>
               </Link>
               <Link href="/guides/best-arabic-fonts-2025">
-                <Button variant="outline" className="border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-6 py-3">
+                <Button variant="outline" className="border-indigo-600 text-amber-700 hover:bg-indigo-50 px-6 py-3">
                   Best Fonts 2025
                 </Button>
               </Link>
@@ -99,7 +99,7 @@ export default function ArabicTypographyTrends2025Page() {
           {/* Trend Categories */}
           <Card className="mb-12 border-indigo-200 shadow-lg">
             <CardHeader className="bg-gradient-to-r from-indigo-100 to-purple-100">
-              <CardTitle className="text-2xl text-indigo-800">
+              <CardTitle className="text-2xl text-amber-800">
                 📈 2025 Typography Trend Categories
               </CardTitle>
             </CardHeader>
@@ -107,28 +107,28 @@ export default function ArabicTypographyTrends2025Page() {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Zap className="h-8 w-8 text-indigo-600" />
+                    <Zap className="h-8 w-8 text-amber-700" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">AI Integration</h3>
                   <p className="text-sm text-gray-600">Machine learning enhanced typography and automated design</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Smartphone className="h-8 w-8 text-indigo-600" />
+                    <Smartphone className="h-8 w-8 text-amber-700" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">Mobile-First</h3>
                   <p className="text-sm text-gray-600">Optimized for mobile reading and touch interfaces</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Globe className="h-8 w-8 text-indigo-600" />
+                    <Globe className="h-8 w-8 text-amber-700" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">Cultural Fusion</h3>
                   <p className="text-sm text-gray-600">Blending traditional Arabic with global design trends</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Eye className="h-8 w-8 text-indigo-600" />
+                    <Eye className="h-8 w-8 text-amber-700" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">Accessibility</h3>
                   <p className="text-sm text-gray-600">Inclusive design for diverse reading abilities</p>
@@ -142,14 +142,14 @@ export default function ArabicTypographyTrends2025Page() {
             {/* AI-Powered Typography */}
             <Card className="border-indigo-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-indigo-800 flex items-center">
+                <CardTitle className="text-2xl text-amber-800 flex items-center">
                   <Zap className="h-6 w-6 mr-3" />
                   AI-Powered Arabic Typography Revolution
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     Artificial Intelligence is transforming Arabic typography in unprecedented ways. From automated 
                     font generation to intelligent text layout optimization, AI is making Arabic design more accessible 
                     and sophisticated than ever before.
@@ -160,12 +160,12 @@ export default function ArabicTypographyTrends2025Page() {
                     <div className="text-center">
                       <div className="w-full h-48 bg-white rounded-lg shadow-inner flex items-center justify-center mb-4">
                         <div className="text-center">
-                          <div className="text-4xl font-bold text-gray-400 mb-2">🤖</div>
-                          <p className="text-gray-500 text-sm">AI-Generated Arabic Font Variations</p>
-                          <p className="text-xs text-gray-400 mt-2">Interactive demo showing AI font generation process</p>
+                          <div className="text-4xl font-bold text-gray-600 mb-2">🤖</div>
+                          <p className="text-gray-600 text-sm">AI-Generated Arabic Font Variations</p>
+                          <p className="text-xs text-gray-600 mt-2">Interactive demo showing AI font generation process</p>
                         </div>
                       </div>
-                      <p className="text-sm text-blue-700 italic">
+                      <p className="text-sm text-amber-700 italic">
                         Example: AI-powered font generation creating multiple Arabic style variations from a single input
                       </p>
                     </div>
@@ -174,25 +174,25 @@ export default function ArabicTypographyTrends2025Page() {
                   <div className="grid md:grid-cols-2 gap-8 mb-8">
                     <div className="space-y-6">
                       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-blue-800 mb-4">🎯 AI Applications in 2025</h4>
+                        <h4 className="font-semibold text-amber-800 mb-4">🎯 AI Applications in 2025</h4>
                         <div className="space-y-3">
                           <div>
-                            <h5 className="font-semibold text-blue-700 mb-2">Smart Font Pairing</h5>
-                            <p className="text-sm text-blue-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Smart Font Pairing</h5>
+                            <p className="text-sm text-amber-700">
                               AI algorithms analyze Arabic text characteristics to suggest optimal font combinations 
                               for multilingual designs, ensuring harmony between Arabic and Latin scripts.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-blue-700 mb-2">Automated Kerning</h5>
-                            <p className="text-sm text-blue-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Automated Kerning</h5>
+                            <p className="text-sm text-amber-700">
                               Machine learning optimizes letter spacing and positioning for Arabic text, 
                               accounting for complex contextual forms and ligatures automatically.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-blue-700 mb-2">Style Transfer</h5>
-                            <p className="text-sm text-blue-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Style Transfer</h5>
+                            <p className="text-sm text-amber-700">
                               AI can adapt traditional calligraphy styles to modern digital fonts, 
                               preserving cultural authenticity while ensuring technical functionality.
                             </p>
@@ -203,25 +203,25 @@ export default function ArabicTypographyTrends2025Page() {
 
                     <div className="space-y-6">
                       <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-purple-800 mb-4">🚀 Emerging Technologies</h4>
+                        <h4 className="font-semibold text-amber-800 mb-4">🚀 Emerging Technologies</h4>
                         <div className="space-y-3">
                           <div>
-                            <h5 className="font-semibold text-purple-700 mb-2">Variable Font AI</h5>
-                            <p className="text-sm text-purple-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Variable Font AI</h5>
+                            <p className="text-sm text-amber-700">
                               AI-driven variable fonts that adapt weight, width, and style based on 
                               reading context, device type, and user preferences in real-time.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-purple-700 mb-2">Contextual Optimization</h5>
-                            <p className="text-sm text-purple-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Contextual Optimization</h5>
+                            <p className="text-sm text-amber-700">
                               Smart typography that adjusts based on content type, reading environment, 
                               and user behavior patterns for optimal Arabic text presentation.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-purple-700 mb-2">Accessibility AI</h5>
-                            <p className="text-sm text-purple-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Accessibility AI</h5>
+                            <p className="text-sm text-amber-700">
                               Intelligent systems that automatically enhance Arabic text readability 
                               for users with visual impairments or reading difficulties.
                             </p>
@@ -232,23 +232,23 @@ export default function ArabicTypographyTrends2025Page() {
                   </div>
 
                   <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-green-800 mb-4">📊 AI Impact Statistics 2025</h4>
+                    <h4 className="font-semibold text-emerald-600 mb-4">📊 AI Impact Statistics 2025</h4>
                     <div className="grid md:grid-cols-4 gap-6">
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-green-700 mb-1">67%</div>
-                        <p className="text-sm text-green-600">of designers use AI typography tools</p>
+                        <div className="text-2xl font-bold text-emerald-600 mb-1">67%</div>
+                        <p className="text-sm text-emerald-600">of designers use AI typography tools</p>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-green-700 mb-1">45%</div>
-                        <p className="text-sm text-green-600">faster font selection process</p>
+                        <div className="text-2xl font-bold text-emerald-600 mb-1">45%</div>
+                        <p className="text-sm text-emerald-600">faster font selection process</p>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-green-700 mb-1">89%</div>
-                        <p className="text-sm text-green-600">improved readability scores</p>
+                        <div className="text-2xl font-bold text-emerald-600 mb-1">89%</div>
+                        <p className="text-sm text-emerald-600">improved readability scores</p>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-green-700 mb-1">156%</div>
-                        <p className="text-sm text-green-600">increase in custom font creation</p>
+                        <div className="text-2xl font-bold text-emerald-600 mb-1">156%</div>
+                        <p className="text-sm text-emerald-600">increase in custom font creation</p>
                       </div>
                     </div>
                   </div>
@@ -259,14 +259,14 @@ export default function ArabicTypographyTrends2025Page() {
             {/* Mobile-First Arabic Design */}
             <Card className="border-indigo-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-indigo-800 flex items-center">
+                <CardTitle className="text-2xl text-amber-800 flex items-center">
                   <Smartphone className="h-6 w-6 mr-3" />
                   Mobile-First Arabic Typography
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     With over 85% of Arabic content consumed on mobile devices, 2025 sees a fundamental shift 
                     toward mobile-first Arabic typography design. This trend prioritizes thumb-friendly interfaces, 
                     optimized reading experiences, and performance-conscious font choices.
@@ -277,7 +277,7 @@ export default function ArabicTypographyTrends2025Page() {
                     <div className="grid md:grid-cols-3 gap-6">
                       <div className="text-center">
                         <div className="w-32 h-56 bg-white rounded-2xl shadow-lg mx-auto mb-4 p-4 border">
-                          <div className="text-xs text-gray-400 mb-2">📱 Phone (375px)</div>
+                          <div className="text-xs text-gray-600 mb-2">📱 Phone (375px)</div>
                           <div className="space-y-2">
                             <div className="h-3 bg-blue-200 rounded"></div>
                             <div className="h-2 bg-gray-200 rounded w-3/4"></div>
@@ -289,7 +289,7 @@ export default function ArabicTypographyTrends2025Page() {
                       </div>
                       <div className="text-center">
                         <div className="w-40 h-56 bg-white rounded-2xl shadow-lg mx-auto mb-4 p-4 border">
-                          <div className="text-xs text-gray-400 mb-2">📱 Tablet (768px)</div>
+                          <div className="text-xs text-gray-600 mb-2">📱 Tablet (768px)</div>
                           <div className="space-y-2">
                             <div className="h-4 bg-blue-200 rounded"></div>
                             <div className="h-2 bg-gray-200 rounded w-4/5"></div>
@@ -301,7 +301,7 @@ export default function ArabicTypographyTrends2025Page() {
                       </div>
                       <div className="text-center">
                         <div className="w-48 h-56 bg-white rounded-lg shadow-lg mx-auto mb-4 p-4 border">
-                          <div className="text-xs text-gray-400 mb-2">💻 Desktop (1200px)</div>
+                          <div className="text-xs text-gray-600 mb-2">💻 Desktop (1200px)</div>
                           <div className="space-y-2">
                             <div className="h-5 bg-blue-200 rounded"></div>
                             <div className="h-2 bg-gray-200 rounded"></div>
@@ -319,8 +319,8 @@ export default function ArabicTypographyTrends2025Page() {
 
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="bg-orange-50 border border-orange-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-orange-800 mb-4">📱 Mobile Optimization Strategies</h4>
-                      <ul className="text-sm text-orange-600 space-y-2">
+                      <h4 className="font-semibold text-amber-800 mb-4">📱 Mobile Optimization Strategies</h4>
+                      <ul className="text-sm text-amber-700 space-y-2">
                         <li>• <strong>Thumb-Zone Typography</strong>: Key text positioned within easy thumb reach</li>
                         <li>• <strong>Progressive Enhancement</strong>: Basic fonts load first, enhanced styles follow</li>
                         <li>• <strong>Touch-Friendly Sizing</strong>: Minimum 16px for body text, 44px touch targets</li>
@@ -330,8 +330,8 @@ export default function ArabicTypographyTrends2025Page() {
                     </div>
 
                     <div className="bg-teal-50 border border-teal-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-teal-800 mb-4">⚡ Performance Priorities</h4>
-                      <ul className="text-sm text-teal-600 space-y-2">
+                      <h4 className="font-semibold text-amber-800 mb-4">⚡ Performance Priorities</h4>
+                      <ul className="text-sm text-amber-700 space-y-2">
                         <li>• <strong>Font Subsetting</strong>: Load only required Arabic characters</li>
                         <li>• <strong>Variable Fonts</strong>: Single file for multiple weights and styles</li>
                         <li>• <strong>Critical CSS</strong>: Inline essential typography styles</li>
@@ -347,14 +347,14 @@ export default function ArabicTypographyTrends2025Page() {
             {/* Cultural Fusion & Global Integration */}
             <Card className="border-indigo-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-indigo-800 flex items-center">
+                <CardTitle className="text-2xl text-amber-800 flex items-center">
                   <Globe className="h-6 w-6 mr-3" />
                   Cultural Fusion & Global Integration
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     2025 marks a new era of cultural fusion in Arabic typography, where traditional Islamic calligraphy
                     meets global design trends. This movement respects cultural heritage while embracing international
                     aesthetic sensibilities, creating truly universal Arabic typography.
@@ -365,16 +365,16 @@ export default function ArabicTypographyTrends2025Page() {
                     <h4 className="font-semibold text-amber-800 mb-6 text-center">Cross-Cultural Typography Examples</h4>
                     <div className="grid md:grid-cols-2 gap-8">
                       <div className="bg-white rounded-lg p-6 shadow-sm">
-                        <h5 className="font-semibold text-gray-800 mb-3">🌸 Arabic + Japanese Minimalism</h5>
+                        <h5 className="font-semibold text-gray-900 mb-3">🌸 Arabic + Japanese Minimalism</h5>
                         <div className="h-24 bg-gray-100 rounded mb-3 flex items-center justify-center">
-                          <span className="text-2xl text-gray-400">أناقة</span>
+                          <span className="text-2xl text-gray-600">أناقة</span>
                         </div>
                         <p className="text-xs text-gray-600">Clean lines, generous white space, subtle elegance</p>
                       </div>
                       <div className="bg-white rounded-lg p-6 shadow-sm">
-                        <h5 className="font-semibold text-gray-800 mb-3">🎨 Arabic + Scandinavian Design</h5>
+                        <h5 className="font-semibold text-gray-900 mb-3">🎨 Arabic + Scandinavian Design</h5>
                         <div className="h-24 bg-gray-100 rounded mb-3 flex items-center justify-center">
-                          <span className="text-2xl text-gray-400">بساطة</span>
+                          <span className="text-2xl text-gray-600">بساطة</span>
                         </div>
                         <p className="text-xs text-gray-600">Functional beauty, natural colors, human-centered design</p>
                       </div>
@@ -386,55 +386,55 @@ export default function ArabicTypographyTrends2025Page() {
 
                   <div className="grid md:grid-cols-3 gap-6 mb-8">
                     <div className="bg-rose-50 border border-rose-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-rose-800 mb-4">🌍 Global Influences</h4>
+                      <h4 className="font-semibold text-gray-900 mb-4">🌍 Global Influences</h4>
                       <div className="space-y-3">
                         <div>
-                          <h5 className="font-semibold text-rose-700 mb-1">Bauhaus Geometry</h5>
-                          <p className="text-xs text-rose-600">Clean geometric forms applied to Arabic letterforms</p>
+                          <h5 className="font-semibold text-gray-900 mb-1">Bauhaus Geometry</h5>
+                          <p className="text-xs text-gray-600">Clean geometric forms applied to Arabic letterforms</p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-rose-700 mb-1">Swiss Typography</h5>
-                          <p className="text-xs text-rose-600">Grid-based layouts and systematic approach to Arabic text</p>
+                          <h5 className="font-semibold text-gray-900 mb-1">Swiss Typography</h5>
+                          <p className="text-xs text-gray-600">Grid-based layouts and systematic approach to Arabic text</p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-rose-700 mb-1">Art Deco Revival</h5>
-                          <p className="text-xs text-rose-600">Luxurious, ornamental Arabic fonts with vintage appeal</p>
+                          <h5 className="font-semibold text-gray-900 mb-1">Art Deco Revival</h5>
+                          <p className="text-xs text-gray-600">Luxurious, ornamental Arabic fonts with vintage appeal</p>
                         </div>
                       </div>
                     </div>
 
                     <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-blue-800 mb-4">🎭 Cultural Preservation</h4>
+                      <h4 className="font-semibold text-amber-800 mb-4">🎭 Cultural Preservation</h4>
                       <div className="space-y-3">
                         <div>
-                          <h5 className="font-semibold text-blue-700 mb-1">Traditional Respect</h5>
-                          <p className="text-xs text-blue-600">Maintaining authentic Arabic calligraphy principles</p>
+                          <h5 className="font-semibold text-amber-700 mb-1">Traditional Respect</h5>
+                          <p className="text-xs text-amber-700">Maintaining authentic Arabic calligraphy principles</p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-blue-700 mb-1">Regional Variations</h5>
-                          <p className="text-xs text-blue-600">Celebrating Maghrebi, Persian, and Ottoman styles</p>
+                          <h5 className="font-semibold text-amber-700 mb-1">Regional Variations</h5>
+                          <p className="text-xs text-amber-700">Celebrating Maghrebi, Persian, and Ottoman styles</p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-blue-700 mb-1">Scholarly Consultation</h5>
-                          <p className="text-xs text-blue-600">Involving cultural experts in design processes</p>
+                          <h5 className="font-semibold text-amber-700 mb-1">Scholarly Consultation</h5>
+                          <p className="text-xs text-amber-700">Involving cultural experts in design processes</p>
                         </div>
                       </div>
                     </div>
 
                     <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-green-800 mb-4">🤝 Collaborative Design</h4>
+                      <h4 className="font-semibold text-emerald-600 mb-4">🤝 Collaborative Design</h4>
                       <div className="space-y-3">
                         <div>
-                          <h5 className="font-semibold text-green-700 mb-1">Cross-Cultural Teams</h5>
-                          <p className="text-xs text-green-600">International designers working with Arabic specialists</p>
+                          <h5 className="font-semibold text-emerald-600 mb-1">Cross-Cultural Teams</h5>
+                          <p className="text-xs text-emerald-600">International designers working with Arabic specialists</p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-green-700 mb-1">Community Input</h5>
-                          <p className="text-xs text-green-600">User feedback from diverse Arabic-speaking communities</p>
+                          <h5 className="font-semibold text-emerald-600 mb-1">Community Input</h5>
+                          <p className="text-xs text-emerald-600">User feedback from diverse Arabic-speaking communities</p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-green-700 mb-1">Open Source</h5>
-                          <p className="text-xs text-green-600">Collaborative font development and sharing</p>
+                          <h5 className="font-semibold text-emerald-600 mb-1">Open Source</h5>
+                          <p className="text-xs text-emerald-600">Collaborative font development and sharing</p>
                         </div>
                       </div>
                     </div>
@@ -446,14 +446,14 @@ export default function ArabicTypographyTrends2025Page() {
             {/* Accessibility & Inclusive Design */}
             <Card className="border-indigo-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-indigo-800 flex items-center">
+                <CardTitle className="text-2xl text-amber-800 flex items-center">
                   <Eye className="h-6 w-6 mr-3" />
                   Accessibility & Inclusive Arabic Typography
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     2025 brings unprecedented focus on accessible Arabic typography. With growing awareness of diverse
                     reading needs, designers are creating Arabic fonts that serve users with dyslexia, visual impairments,
                     and other accessibility requirements while maintaining aesthetic excellence.
@@ -461,16 +461,16 @@ export default function ArabicTypographyTrends2025Page() {
 
                   {/* Accessibility Features Showcase */}
                   <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-lg p-8 mb-8">
-                    <h4 className="font-semibold text-green-800 mb-6 text-center">Accessibility Features in Modern Arabic Fonts</h4>
+                    <h4 className="font-semibold text-emerald-600 mb-6 text-center">Accessibility Features in Modern Arabic Fonts</h4>
                     <div className="grid md:grid-cols-2 gap-8">
                       <div className="space-y-4">
                         <div className="bg-white rounded-lg p-4 border">
-                          <h5 className="font-semibold text-gray-800 mb-2">👁️ High Contrast Design</h5>
+                          <h5 className="font-semibold text-gray-900 mb-2">👁️ High Contrast Design</h5>
                           <div className="flex space-x-4">
                             <div className="flex-1 bg-black text-white p-2 rounded text-center text-sm">
                               نص عالي التباين
                             </div>
-                            <div className="flex-1 bg-gray-200 text-gray-800 p-2 rounded text-center text-sm">
+                            <div className="flex-1 bg-gray-200 text-gray-900 p-2 rounded text-center text-sm">
                               نص منخفض التباين
                             </div>
                           </div>
@@ -478,7 +478,7 @@ export default function ArabicTypographyTrends2025Page() {
                         </div>
 
                         <div className="bg-white rounded-lg p-4 border">
-                          <h5 className="font-semibold text-gray-800 mb-2">📏 Dyslexia-Friendly Features</h5>
+                          <h5 className="font-semibold text-gray-900 mb-2">📏 Dyslexia-Friendly Features</h5>
                           <div className="space-y-2">
                             <div className="text-lg">كلمات واضحة ومميزة</div>
                             <div className="text-sm text-gray-600">• Increased letter spacing</div>
@@ -490,7 +490,7 @@ export default function ArabicTypographyTrends2025Page() {
 
                       <div className="space-y-4">
                         <div className="bg-white rounded-lg p-4 border">
-                          <h5 className="font-semibold text-gray-800 mb-2">🔍 Scalable Design</h5>
+                          <h5 className="font-semibold text-gray-900 mb-2">🔍 Scalable Design</h5>
                           <div className="space-y-2">
                             <div className="text-xs">نص صغير للقراءة العادية</div>
                             <div className="text-base">نص متوسط للقراءة المريحة</div>
@@ -500,9 +500,9 @@ export default function ArabicTypographyTrends2025Page() {
                         </div>
 
                         <div className="bg-white rounded-lg p-4 border">
-                          <h5 className="font-semibold text-gray-800 mb-2">🌙 Dark Mode Optimization</h5>
+                          <h5 className="font-semibold text-gray-900 mb-2">🌙 Dark Mode Optimization</h5>
                           <div className="grid grid-cols-2 gap-2">
-                            <div className="bg-white text-black p-2 rounded text-center text-sm">
+                            <div className="bg-white text-gray-900 p-2 rounded text-center text-sm">
                               الوضع النهاري
                             </div>
                             <div className="bg-gray-900 text-white p-2 rounded text-center text-sm">
@@ -517,8 +517,8 @@ export default function ArabicTypographyTrends2025Page() {
 
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-purple-800 mb-4">♿ Accessibility Standards</h4>
-                      <ul className="text-sm text-purple-600 space-y-2">
+                      <h4 className="font-semibold text-amber-800 mb-4">♿ Accessibility Standards</h4>
+                      <ul className="text-sm text-amber-700 space-y-2">
                         <li>• <strong>WCAG 2.1 AA/AAA</strong>: Meeting international accessibility guidelines</li>
                         <li>• <strong>Screen Reader Support</strong>: Proper Unicode implementation for assistive technology</li>
                         <li>• <strong>Cognitive Load Reduction</strong>: Simplified letterforms for easier processing</li>
@@ -528,8 +528,8 @@ export default function ArabicTypographyTrends2025Page() {
                     </div>
 
                     <div className="bg-cyan-50 border border-cyan-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-cyan-800 mb-4">🎯 Inclusive Design Principles</h4>
-                      <ul className="text-sm text-cyan-600 space-y-2">
+                      <h4 className="font-semibold text-amber-800 mb-4">🎯 Inclusive Design Principles</h4>
+                      <ul className="text-sm text-amber-700 space-y-2">
                         <li>• <strong>Universal Design</strong>: Fonts that work for everyone, not just specific groups</li>
                         <li>• <strong>Cultural Sensitivity</strong>: Respecting diverse Arabic-speaking communities</li>
                         <li>• <strong>Age-Inclusive</strong>: Readable for children, adults, and elderly users</li>
@@ -540,23 +540,23 @@ export default function ArabicTypographyTrends2025Page() {
                   </div>
 
                   <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mt-8">
-                    <h4 className="font-semibold text-yellow-800 mb-4">📈 Accessibility Impact Metrics 2025</h4>
+                    <h4 className="font-semibold text-amber-800 mb-4">📈 Accessibility Impact Metrics 2025</h4>
                     <div className="grid md:grid-cols-4 gap-6">
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-yellow-700 mb-1">78%</div>
-                        <p className="text-sm text-yellow-600">improved reading speed for dyslexic users</p>
+                        <div className="text-2xl font-bold text-amber-700 mb-1">78%</div>
+                        <p className="text-sm text-amber-700">improved reading speed for dyslexic users</p>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-yellow-700 mb-1">92%</div>
-                        <p className="text-sm text-yellow-600">screen reader compatibility rate</p>
+                        <div className="text-2xl font-bold text-amber-700 mb-1">92%</div>
+                        <p className="text-sm text-amber-700">screen reader compatibility rate</p>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-yellow-700 mb-1">65%</div>
-                        <p className="text-sm text-yellow-600">reduction in eye strain reports</p>
+                        <div className="text-2xl font-bold text-amber-700 mb-1">65%</div>
+                        <p className="text-sm text-amber-700">reduction in eye strain reports</p>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-yellow-700 mb-1">156%</div>
-                        <p className="text-sm text-yellow-600">increase in accessible font adoption</p>
+                        <div className="text-2xl font-bold text-amber-700 mb-1">156%</div>
+                        <p className="text-sm text-amber-700">increase in accessible font adoption</p>
                       </div>
                     </div>
                   </div>
@@ -567,14 +567,14 @@ export default function ArabicTypographyTrends2025Page() {
             {/* Sustainable Typography */}
             <Card className="border-indigo-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-indigo-800 flex items-center">
+                <CardTitle className="text-2xl text-amber-800 flex items-center">
                   <Palette className="h-6 w-6 mr-3" />
                   Sustainable & Eco-Conscious Typography
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     Environmental consciousness reaches Arabic typography in 2025, with designers focusing on
                     sustainable practices, reduced digital carbon footprints, and eco-friendly design choices
                     that don't compromise on beauty or functionality.
@@ -582,8 +582,8 @@ export default function ArabicTypographyTrends2025Page() {
 
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-green-800 mb-4">🌱 Eco-Friendly Practices</h4>
-                      <ul className="text-sm text-green-600 space-y-2">
+                      <h4 className="font-semibold text-emerald-600 mb-4">🌱 Eco-Friendly Practices</h4>
+                      <ul className="text-sm text-emerald-600 space-y-2">
                         <li>• <strong>Optimized File Sizes</strong>: Smaller fonts reduce bandwidth and energy consumption</li>
                         <li>• <strong>Dark Mode Priority</strong>: Reducing screen energy usage with dark-optimized fonts</li>
                         <li>• <strong>Efficient Rendering</strong>: Fonts designed for minimal processing power</li>
@@ -593,8 +593,8 @@ export default function ArabicTypographyTrends2025Page() {
                     </div>
 
                     <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-blue-800 mb-4">⚡ Performance Benefits</h4>
-                      <ul className="text-sm text-blue-600 space-y-2">
+                      <h4 className="font-semibold text-amber-800 mb-4">⚡ Performance Benefits</h4>
+                      <ul className="text-sm text-amber-700 space-y-2">
                         <li>• <strong>Faster Loading</strong>: Optimized fonts improve user experience</li>
                         <li>• <strong>Reduced Bandwidth</strong>: Lower data usage for mobile users</li>
                         <li>• <strong>Battery Efficiency</strong>: Less processing power required</li>
@@ -605,18 +605,18 @@ export default function ArabicTypographyTrends2025Page() {
                   </div>
 
                   <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-6 mt-6">
-                    <h4 className="font-semibold text-emerald-800 mb-4">🌍 Environmental Impact Reduction</h4>
+                    <h4 className="font-semibold text-emerald-600 mb-4">🌍 Environmental Impact Reduction</h4>
                     <div className="grid md:grid-cols-3 gap-6">
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-emerald-700 mb-1">-34%</div>
+                        <div className="text-2xl font-bold text-emerald-600 mb-1">-34%</div>
                         <p className="text-sm text-emerald-600">reduction in data transfer</p>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-emerald-700 mb-1">-28%</div>
+                        <div className="text-2xl font-bold text-emerald-600 mb-1">-28%</div>
                         <p className="text-sm text-emerald-600">lower energy consumption</p>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-emerald-700 mb-1">-45%</div>
+                        <div className="text-2xl font-bold text-emerald-600 mb-1">-45%</div>
                         <p className="text-sm text-emerald-600">decreased carbon footprint</p>
                       </div>
                     </div>
@@ -630,10 +630,10 @@ export default function ArabicTypographyTrends2025Page() {
           <div className="text-center mt-16 mb-12">
             <Card className="bg-gradient-to-r from-indigo-100 to-purple-100 border-indigo-200">
               <CardContent className="pt-8 pb-8">
-                <h2 className="text-3xl font-bold text-indigo-800 mb-4">
+                <h2 className="text-3xl font-bold text-amber-800 mb-4">
                   Experience 2025 Typography Trends
                 </h2>
-                <p className="text-indigo-700 mb-6 max-w-2xl mx-auto">
+                <p className="text-amber-700 mb-6 max-w-2xl mx-auto">
                   Try the latest Arabic typography innovations with our cutting-edge generator. 
                   Experiment with AI-powered suggestions and mobile-optimized designs.
                 </p>
@@ -653,7 +653,7 @@ export default function ArabicTypographyTrends2025Page() {
                 <h3 className="font-semibold text-gray-900 mb-2">Best Fonts 2025</h3>
                 <p className="text-sm text-gray-600 mb-4">Discover the top-rated Arabic fonts for this year</p>
                 <Link href="/guides/best-arabic-fonts-2025">
-                  <Button variant="outline" size="sm" className="border-indigo-600 text-indigo-600 hover:bg-indigo-50">
+                  <Button variant="outline" size="sm" className="border-indigo-600 text-amber-700 hover:bg-indigo-50">
                     View Rankings <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>
                 </Link>
@@ -665,7 +665,7 @@ export default function ArabicTypographyTrends2025Page() {
                 <h3 className="font-semibold text-gray-900 mb-2">Font Comparison</h3>
                 <p className="text-sm text-gray-600 mb-4">Compare features and performance of Arabic fonts</p>
                 <Link href="/guides/arabic-font-comparison">
-                  <Button variant="outline" size="sm" className="border-indigo-600 text-indigo-600 hover:bg-indigo-50">
+                  <Button variant="outline" size="sm" className="border-indigo-600 text-amber-700 hover:bg-indigo-50">
                     Compare Fonts <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>
                 </Link>
@@ -677,7 +677,7 @@ export default function ArabicTypographyTrends2025Page() {
                 <h3 className="font-semibold text-gray-900 mb-2">Design Tutorials</h3>
                 <p className="text-sm text-gray-600 mb-4">Learn modern Arabic typography techniques</p>
                 <Link href="/tutorials/arabic-calligraphy-design-tips">
-                  <Button variant="outline" size="sm" className="border-indigo-600 text-indigo-600 hover:bg-indigo-50">
+                  <Button variant="outline" size="sm" className="border-indigo-600 text-amber-700 hover:bg-indigo-50">
                     Learn Design <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>
                 </Link>

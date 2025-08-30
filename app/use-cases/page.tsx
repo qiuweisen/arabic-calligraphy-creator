@@ -16,7 +16,7 @@ const USE_CASES = [
   {
     title: "Wedding Arabic Calligraphy",
     description: "Create breathtaking Arabic calligraphy for your special day. From elegant wedding invitations to beautiful ceremony decorations, discover how Arabic typography can add cultural richness and spiritual meaning to your Islamic wedding celebration.",
-    icon: <Heart className="h-8 w-8 text-rose-600" />,
+    icon: <Heart className="h-8 w-8 text-gray-600" />,
     color: "rose",
     features: ["Wedding Invitations", "Ceremony Decorations", "Save the Date", "Programs & Menus"],
     link: "/use-cases/wedding-arabic-calligraphy",
@@ -25,7 +25,7 @@ const USE_CASES = [
   {
     title: "Business Logo Arabic Fonts",
     description: "Elevate your brand with professional Arabic typography. Create powerful business logos, corporate identities, and brand materials that resonate with Arabic-speaking markets while maintaining global appeal and professional credibility.",
-    icon: <Building className="h-8 w-8 text-blue-600" />,
+    icon: <Building className="h-8 w-8 text-amber-700" />,
     color: "blue",
     features: ["Company Logos", "Corporate Materials", "Digital Presence", "Brand Recognition"],
     link: "/use-cases/business-logo-arabic-fonts",
@@ -34,7 +34,7 @@ const USE_CASES = [
   {
     title: "Social Media Arabic Typography",
     description: "Transform your social media presence with captivating Arabic typography. Create viral content, boost engagement, and connect with Arabic-speaking audiences across Instagram, TikTok, Facebook, and Twitter with culturally authentic designs.",
-    icon: <Share2 className="h-8 w-8 text-purple-600" />,
+    icon: <Share2 className="h-8 w-8 text-amber-700" />,
     color: "purple",
     features: ["Instagram Posts", "TikTok Content", "Facebook Posts", "Twitter Graphics"],
     link: "/use-cases/social-media-arabic-typography",
@@ -57,34 +57,34 @@ export default function UseCasesPage() {
       rose: {
         border: "border-rose-200",
         hoverBorder: "hover:border-rose-400",
-        text: "text-rose-800",
-        subtext: "text-rose-700",
-        badge: "bg-rose-100 text-rose-800",
-        link: "text-rose-600 hover:text-rose-800"
+        text: "text-gray-900",
+        subtext: "text-gray-900",
+        badge: "bg-rose-100 text-gray-900",
+        link: "text-gray-600 hover:text-gray-900"
       },
       blue: {
         border: "border-blue-200",
         hoverBorder: "hover:border-blue-400",
-        text: "text-blue-800",
-        subtext: "text-blue-700",
-        badge: "bg-blue-100 text-blue-800",
-        link: "text-blue-600 hover:text-blue-800"
+        text: "text-amber-800",
+        subtext: "text-amber-700",
+        badge: "bg-blue-100 text-amber-800",
+        link: "text-amber-700 hover:text-amber-800"
       },
       purple: {
         border: "border-purple-200",
         hoverBorder: "hover:border-purple-400",
-        text: "text-purple-800",
-        subtext: "text-purple-700",
-        badge: "bg-purple-100 text-purple-800",
-        link: "text-purple-600 hover:text-purple-800"
+        text: "text-amber-800",
+        subtext: "text-amber-700",
+        badge: "bg-purple-100 text-amber-800",
+        link: "text-amber-700 hover:text-amber-800"
       },
       emerald: {
         border: "border-emerald-200",
         hoverBorder: "hover:border-emerald-400",
-        text: "text-emerald-800",
-        subtext: "text-emerald-700",
-        badge: "bg-emerald-100 text-emerald-800",
-        link: "text-emerald-600 hover:text-emerald-800"
+        text: "text-emerald-600",
+        subtext: "text-emerald-600",
+        badge: "bg-emerald-100 text-emerald-600",
+        link: "text-emerald-600 hover:text-emerald-600"
       }
     }
     return colorMap[color as keyof typeof colorMap] || colorMap.blue
@@ -124,7 +124,7 @@ export default function UseCasesPage() {
           </div>
           
           <div className="flex items-center justify-between">
-            <div className="flex items-center text-xs text-gray-500">
+            <div className="flex items-center text-xs text-gray-600">
               <Users className="h-3 w-3 mr-1" />
               Comprehensive Guide
             </div>
@@ -222,7 +222,7 @@ export default function UseCasesPage() {
             {/* CTA Section */}
             <div className="bg-gray-900 text-white rounded-lg p-8 text-center">
               <h2 className="text-2xl font-bold mb-4">Ready to Create Your Arabic Calligraphy?</h2>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
                 Start with our free online Arabic calligraphy generator. No registration required, 
                 no downloads needed - create beautiful Arabic typography in minutes.
               </p>
@@ -238,7 +238,7 @@ export default function UseCasesPage() {
 
             {/* Related Resources */}
             <div className="mt-12 text-center">
-              <h2 className="text-xl font-bold text-gray-800 mb-6">Related Resources</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-6">Related Resources</h2>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
                   <Link href="/tutorials/arabic-font-selection-guide">Font Selection Guide</Link>

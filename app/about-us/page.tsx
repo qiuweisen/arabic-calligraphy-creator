@@ -28,7 +28,7 @@ export default function AboutUsPage() {
 
             <div className="bg-white p-6 md:p-10 rounded-xl shadow-xl border border-amber-100">
               <div className="text-center mb-10">
-                <Target className="h-16 w-16 text-amber-500 mx-auto mb-4" />
+                <Target className="h-16 w-16 text-amber-600 mx-auto mb-4" />
                 <h1 className="text-4xl md:text-5xl font-bold text-amber-800 mb-4">Our Mission</h1>
                 <p className="text-lg text-amber-700 max-w-2xl mx-auto">
                   To empower creativity by providing a beautiful, powerful, and user-friendly online Arabic calligraphy generator that surpasses existing tools in aesthetics, functionality, and overall experience.
@@ -51,20 +51,20 @@ export default function AboutUsPage() {
 
               <section className="mb-12">
                 <h2 className="text-3xl font-semibold text-amber-800 mb-6 flex items-center">
-                  <Sparkles className="h-8 w-8 text-amber-500 mr-3" />
+                  <Sparkles className="h-8 w-8 text-amber-600 mr-3" />
                   What We Aim For
                 </h2>
-                <p className="text-gray-700 mb-6 text-lg leading-relaxed">
+                <p className="text-gray-600 mb-6 text-lg leading-relaxed">
                   We are passionate about Arabic calligraphy, a timeless art form rich in history and beauty. Our goal is to make this art accessible to everyone, from seasoned artists to curious beginners. We believe that technology can enhance tradition, and our platform is built on this philosophy.
                 </p>
-                <p className="text-gray-700 text-lg leading-relaxed">
+                <p className="text-gray-600 text-lg leading-relaxed">
                   Our project, the "Next-Generation Arabic Calligraphy Online Generator (Deluxe Edition)," is driven by the desire to offer an unparalleled creative experience. We're not just building another tool; we're crafting an environment where art and technology meet seamlessly.
                 </p>
               </section>
 
               <section className="mb-12">
                 <h2 className="text-3xl font-semibold text-amber-800 mb-8 flex items-center">
-                  <Palette className="h-8 w-8 text-amber-500 mr-3" />
+                  <Palette className="h-8 w-8 text-amber-600 mr-3" />
                   Core Principles Guiding Us
                 </h2>
                 <div className="grid md:grid-cols-2 gap-8">
@@ -117,13 +117,13 @@ export default function AboutUsPage() {
               
               <section className="mb-10">
                 <h2 className="text-3xl font-semibold text-amber-800 mb-6 flex items-center">
-                  <Zap className="h-8 w-8 text-amber-500 mr-3" />
+                  <Zap className="h-8 w-8 text-amber-600 mr-3" />
                   Our Commitment
                 </h2>
-                <p className="text-gray-700 mb-6 text-lg leading-relaxed">
+                <p className="text-gray-600 mb-6 text-lg leading-relaxed">
                   We are committed to continuous improvement, listening to our users, and evolving our platform to meet the needs of the creative community. Our vision is to be the leading resource for online Arabic calligraphy creation, fostering a space where art, culture, and technology thrive together.
                 </p>
-                <p className="text-gray-700 text-lg leading-relaxed">
+                <p className="text-gray-600 text-lg leading-relaxed">
                   Explore our <Link href="/" className="text-amber-600 hover:text-amber-700 font-semibold">calligraphy generator</Link>, dive into our <Link href="/blog" className="text-amber-600 hover:text-amber-700 font-semibold">blog</Link>, or browse our <Link href="/fonts" className="text-amber-600 hover:text-amber-700 font-semibold">font library</Link> to start your journey with us.
                 </p>
               </section>

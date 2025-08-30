@@ -88,7 +88,7 @@ export default function BestArabicFonts2024Page() {
                 </Button>
               </Link>
               <Link href="/fonts">
-                <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3">
+                <Button variant="outline" className="border-blue-600 text-amber-700 hover:bg-blue-50 px-6 py-3">
                   Browse All Fonts
                 </Button>
               </Link>
@@ -98,7 +98,7 @@ export default function BestArabicFonts2024Page() {
           {/* Selection Criteria */}
           <Card className="mb-12 border-blue-200 shadow-lg">
             <CardHeader className="bg-gradient-to-r from-blue-100 to-indigo-100">
-              <CardTitle className="text-2xl text-blue-800">
+              <CardTitle className="text-2xl text-amber-800">
                 🏆 Our Selection Criteria
               </CardTitle>
             </CardHeader>
@@ -106,28 +106,28 @@ export default function BestArabicFonts2024Page() {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Star className="h-8 w-8 text-blue-600" />
+                    <Star className="h-8 w-8 text-amber-700" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">Design Quality</h3>
                   <p className="text-sm text-gray-600">Exceptional letterform design and aesthetic appeal</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="h-8 w-8 text-blue-600" />
+                    <Users className="h-8 w-8 text-amber-700" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">Professional Use</h3>
                   <p className="text-sm text-gray-600">Proven track record in professional design projects</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Zap className="h-8 w-8 text-blue-600" />
+                    <Zap className="h-8 w-8 text-amber-700" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">Versatility</h3>
                   <p className="text-sm text-gray-600">Adaptable across different media and applications</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="h-8 w-8 text-blue-600" />
+                    <TrendingUp className="h-8 w-8 text-amber-700" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">2024 Trends</h3>
                   <p className="text-sm text-gray-600">Alignment with current design trends and preferences</p>
@@ -147,14 +147,14 @@ export default function BestArabicFonts2024Page() {
                 </div>
               </div>
               <CardHeader>
-                <CardTitle className="text-2xl text-yellow-800 flex items-center">
+                <CardTitle className="text-2xl text-amber-800 flex items-center">
                   <Award className="h-6 w-6 mr-3" />
                   1. Cairo - The Universal Champion
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     Cairo stands as the undisputed champion of modern Arabic typography, combining exceptional 
                     readability with contemporary aesthetics. Developed by Google Fonts, this typeface has 
                     become the gold standard for digital Arabic text across web and mobile applications.
@@ -163,31 +163,31 @@ export default function BestArabicFonts2024Page() {
                   <div className="grid md:grid-cols-2 gap-8 mb-8">
                     <div className="space-y-6">
                       <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-yellow-800 mb-4">Why Cairo Leads</h4>
+                        <h4 className="font-semibold text-amber-800 mb-4">Why Cairo Leads</h4>
                         <div className="space-y-3">
                           <div className="flex items-start space-x-3">
-                            <Star className="h-5 w-5 text-yellow-600 mt-0.5" />
+                            <Star className="h-5 w-5 text-amber-700 mt-0.5" />
                             <div>
-                              <h5 className="font-semibold text-yellow-700 mb-1">Perfect Readability</h5>
-                              <p className="text-sm text-yellow-600">
+                              <h5 className="font-semibold text-amber-700 mb-1">Perfect Readability</h5>
+                              <p className="text-sm text-amber-700">
                                 Optimized for screen reading with excellent legibility at all sizes
                               </p>
                             </div>
                           </div>
                           <div className="flex items-start space-x-3">
-                            <Star className="h-5 w-5 text-yellow-600 mt-0.5" />
+                            <Star className="h-5 w-5 text-amber-700 mt-0.5" />
                             <div>
-                              <h5 className="font-semibold text-yellow-700 mb-1">Modern Aesthetics</h5>
-                              <p className="text-sm text-yellow-600">
+                              <h5 className="font-semibold text-amber-700 mb-1">Modern Aesthetics</h5>
+                              <p className="text-sm text-amber-700">
                                 Clean, contemporary design that works in any context
                               </p>
                             </div>
                           </div>
                           <div className="flex items-start space-x-3">
-                            <Star className="h-5 w-5 text-yellow-600 mt-0.5" />
+                            <Star className="h-5 w-5 text-amber-700 mt-0.5" />
                             <div>
-                              <h5 className="font-semibold text-yellow-700 mb-1">Technical Excellence</h5>
-                              <p className="text-sm text-yellow-600">
+                              <h5 className="font-semibold text-amber-700 mb-1">Technical Excellence</h5>
+                              <p className="text-sm text-amber-700">
                                 Superior hinting and OpenType features for professional use
                               </p>
                             </div>
@@ -198,10 +198,10 @@ export default function BestArabicFonts2024Page() {
 
                     <div className="space-y-6">
                       <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-gray-800 mb-4">Best Applications</h4>
+                        <h4 className="font-semibold text-gray-900 mb-4">Best Applications</h4>
                         <div className="space-y-3">
                           <div>
-                            <h5 className="font-semibold text-gray-700 mb-2">Digital Platforms</h5>
+                            <h5 className="font-semibold text-gray-600 mb-2">Digital Platforms</h5>
                             <ul className="text-sm text-gray-600 space-y-1">
                               <li>• Websites and web applications</li>
                               <li>• Mobile app interfaces</li>
@@ -210,7 +210,7 @@ export default function BestArabicFonts2024Page() {
                             </ul>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-gray-700 mb-2">Print Materials</h5>
+                            <h5 className="font-semibold text-gray-600 mb-2">Print Materials</h5>
                             <ul className="text-sm text-gray-600 space-y-1">
                               <li>• Business documents and reports</li>
                               <li>• Educational materials</li>
@@ -224,23 +224,23 @@ export default function BestArabicFonts2024Page() {
                   </div>
 
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-blue-800 mb-4">🎯 Professional Rating</h4>
+                    <h4 className="font-semibold text-amber-800 mb-4">🎯 Professional Rating</h4>
                     <div className="grid md:grid-cols-4 gap-6">
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-blue-700 mb-1">9.8/10</div>
-                        <p className="text-sm text-blue-600">Overall Score</p>
+                        <div className="text-2xl font-bold text-amber-700 mb-1">9.8/10</div>
+                        <p className="text-sm text-amber-700">Overall Score</p>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-blue-700 mb-1">10/10</div>
-                        <p className="text-sm text-blue-600">Readability</p>
+                        <div className="text-2xl font-bold text-amber-700 mb-1">10/10</div>
+                        <p className="text-sm text-amber-700">Readability</p>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-blue-700 mb-1">9.5/10</div>
-                        <p className="text-sm text-blue-600">Versatility</p>
+                        <div className="text-2xl font-bold text-amber-700 mb-1">9.5/10</div>
+                        <p className="text-sm text-amber-700">Versatility</p>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-blue-700 mb-1">10/10</div>
-                        <p className="text-sm text-blue-600">Technical Quality</p>
+                        <div className="text-2xl font-bold text-amber-700 mb-1">10/10</div>
+                        <p className="text-sm text-amber-700">Technical Quality</p>
                       </div>
                     </div>
                   </div>
@@ -251,14 +251,14 @@ export default function BestArabicFonts2024Page() {
             {/* #2 Font */}
             <Card className="border-blue-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-blue-800 flex items-center">
+                <CardTitle className="text-2xl text-amber-800 flex items-center">
                   <Award className="h-6 w-6 mr-3" />
                   2. Amiri - The Traditional Master
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     Amiri represents the pinnacle of traditional Arabic typography, offering unmatched elegance 
                     and cultural authenticity. This Naskh-style typeface is the preferred choice for formal 
                     documents, religious texts, and projects requiring classical Arabic aesthetics.
@@ -266,8 +266,8 @@ export default function BestArabicFonts2024Page() {
 
                   <div className="grid md:grid-cols-3 gap-6 mb-6">
                     <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                      <h4 className="font-semibold text-blue-800 mb-3">Strengths</h4>
-                      <ul className="text-sm text-blue-600 space-y-1">
+                      <h4 className="font-semibold text-amber-800 mb-3">Strengths</h4>
+                      <ul className="text-sm text-amber-700 space-y-1">
                         <li>• Authentic traditional design</li>
                         <li>• Excellent for formal contexts</li>
                         <li>• Superior Arabic typography</li>
@@ -275,8 +275,8 @@ export default function BestArabicFonts2024Page() {
                       </ul>
                     </div>
                     <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                      <h4 className="font-semibold text-green-800 mb-3">Best For</h4>
-                      <ul className="text-sm text-green-600 space-y-1">
+                      <h4 className="font-semibold text-emerald-600 mb-3">Best For</h4>
+                      <ul className="text-sm text-emerald-600 space-y-1">
                         <li>• Religious and cultural content</li>
                         <li>• Academic publications</li>
                         <li>• Formal invitations</li>
@@ -284,7 +284,7 @@ export default function BestArabicFonts2024Page() {
                       </ul>
                     </div>
                     <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                      <h4 className="font-semibold text-purple-800 mb-3">Rating</h4>
+                      <h4 className="font-semibold text-amber-800 mb-3">Rating</h4>
                       <div className="space-y-2">
                         <div className="flex justify-between">
                           <span className="text-sm">Overall</span>
@@ -308,7 +308,7 @@ export default function BestArabicFonts2024Page() {
             {/* #3-5 Fonts */}
             <Card className="border-blue-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-blue-800">
+                <CardTitle className="text-2xl text-amber-800">
                   🥉 Top 3-5: Rising Stars & Specialists
                 </CardTitle>
               </CardHeader>
@@ -317,7 +317,7 @@ export default function BestArabicFonts2024Page() {
                   <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-6">
                     <div className="flex items-center mb-4">
                       <span className="bg-emerald-600 text-white text-sm font-bold px-2 py-1 rounded mr-3">#3</span>
-                      <h4 className="font-semibold text-emerald-800">Tajawal</h4>
+                      <h4 className="font-semibold text-emerald-600">Tajawal</h4>
                     </div>
                     <p className="text-sm text-emerald-600 mb-4">
                       The modern choice for contemporary Arabic design. Clean, geometric, and perfect for tech companies and startups.
@@ -341,9 +341,9 @@ export default function BestArabicFonts2024Page() {
                   <div className="bg-orange-50 border border-orange-200 rounded-lg p-6">
                     <div className="flex items-center mb-4">
                       <span className="bg-orange-600 text-white text-sm font-bold px-2 py-1 rounded mr-3">#4</span>
-                      <h4 className="font-semibold text-orange-800">Lateef</h4>
+                      <h4 className="font-semibold text-amber-800">Lateef</h4>
                     </div>
-                    <p className="text-sm text-orange-600 mb-4">
+                    <p className="text-sm text-amber-700 mb-4">
                       Reliable and readable, Lateef excels in educational content and long-form reading. A solid choice for academic work.
                     </p>
                     <div className="space-y-2">
@@ -365,9 +365,9 @@ export default function BestArabicFonts2024Page() {
                   <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
                     <div className="flex items-center mb-4">
                       <span className="bg-purple-600 text-white text-sm font-bold px-2 py-1 rounded mr-3">#5</span>
-                      <h4 className="font-semibold text-purple-800">Scheherazade</h4>
+                      <h4 className="font-semibold text-amber-800">Scheherazade</h4>
                     </div>
-                    <p className="text-sm text-purple-600 mb-4">
+                    <p className="text-sm text-amber-700 mb-4">
                       Traditional Naskh style with excellent Unicode support. Perfect for multilingual projects and scholarly work.
                     </p>
                     <div className="space-y-2">
@@ -392,13 +392,13 @@ export default function BestArabicFonts2024Page() {
             {/* Honorable Mentions */}
             <Card className="border-gray-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-gray-800">
+                <CardTitle className="text-2xl text-gray-900">
                   🌟 Honorable Mentions & Specialized Fonts
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     These fonts excel in specific use cases and deserve recognition for their unique contributions
                     to Arabic typography. While they may not be as universally applicable as our top 5, they
                     shine in their specialized domains.
@@ -407,23 +407,23 @@ export default function BestArabicFonts2024Page() {
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="space-y-6">
                       <div className="bg-rose-50 border border-rose-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-rose-800 mb-4">Creative & Artistic</h4>
+                        <h4 className="font-semibold text-gray-900 mb-4">Creative & Artistic</h4>
                         <div className="space-y-4">
                           <div>
-                            <h5 className="font-semibold text-rose-700 mb-2">Rakkas</h5>
-                            <p className="text-sm text-rose-600 mb-2">
+                            <h5 className="font-semibold text-gray-900 mb-2">Rakkas</h5>
+                            <p className="text-sm text-gray-600 mb-2">
                               Bold and expressive, perfect for headlines and artistic projects.
                               High impact but use sparingly.
                             </p>
-                            <div className="text-xs text-rose-500">Best for: Logos, posters, artistic displays</div>
+                            <div className="text-xs text-gray-600">Best for: Logos, posters, artistic displays</div>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-rose-700 mb-2">Lemonada</h5>
-                            <p className="text-sm text-rose-600 mb-2">
+                            <h5 className="font-semibold text-gray-900 mb-2">Lemonada</h5>
+                            <p className="text-sm text-gray-600 mb-2">
                               Friendly and approachable with rounded letterforms.
                               Great for children's content and casual designs.
                             </p>
-                            <div className="text-xs text-rose-500">Best for: Children's books, casual branding, friendly interfaces</div>
+                            <div className="text-xs text-gray-600">Best for: Children's books, casual branding, friendly interfaces</div>
                           </div>
                         </div>
                       </div>
@@ -431,23 +431,23 @@ export default function BestArabicFonts2024Page() {
 
                     <div className="space-y-6">
                       <div className="bg-teal-50 border border-teal-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-teal-800 mb-4">Specialized Applications</h4>
+                        <h4 className="font-semibold text-amber-800 mb-4">Specialized Applications</h4>
                         <div className="space-y-4">
                           <div>
-                            <h5 className="font-semibold text-teal-700 mb-2">Mada</h5>
-                            <p className="text-sm text-teal-600 mb-2">
+                            <h5 className="font-semibold text-amber-700 mb-2">Mada</h5>
+                            <p className="text-sm text-amber-700 mb-2">
                               Geometric and modern, excellent for UI/UX design.
                               Clean lines make it perfect for digital interfaces.
                             </p>
-                            <div className="text-xs text-teal-500">Best for: App interfaces, modern websites, tech branding</div>
+                            <div className="text-xs text-amber-600">Best for: App interfaces, modern websites, tech branding</div>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-teal-700 mb-2">Jomhuria</h5>
-                            <p className="text-sm text-teal-600 mb-2">
+                            <h5 className="font-semibold text-amber-700 mb-2">Jomhuria</h5>
+                            <p className="text-sm text-amber-700 mb-2">
                               Unique display font with strong character.
                               Makes a statement in headlines and branding.
                             </p>
-                            <div className="text-xs text-teal-500">Best for: Display text, unique branding, editorial design</div>
+                            <div className="text-xs text-amber-600">Best for: Display text, unique branding, editorial design</div>
                           </div>
                         </div>
                       </div>
@@ -460,21 +460,21 @@ export default function BestArabicFonts2024Page() {
             {/* 2024 Trends Analysis */}
             <Card className="border-indigo-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-indigo-800">
+                <CardTitle className="text-2xl text-amber-800">
                   📈 2024 Arabic Typography Trends
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     The Arabic typography landscape in 2024 is characterized by a balance between tradition and innovation.
                     Here are the key trends shaping font selection and usage this year.
                   </p>
 
                   <div className="grid md:grid-cols-3 gap-6 mb-8">
                     <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-indigo-800 mb-4">🚀 Digital-First Design</h4>
-                      <ul className="text-sm text-indigo-600 space-y-2">
+                      <h4 className="font-semibold text-amber-800 mb-4">🚀 Digital-First Design</h4>
+                      <ul className="text-sm text-amber-700 space-y-2">
                         <li>• Optimized for screen reading</li>
                         <li>• Variable font technology adoption</li>
                         <li>• Mobile-responsive typography</li>
@@ -483,8 +483,8 @@ export default function BestArabicFonts2024Page() {
                     </div>
 
                     <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-green-800 mb-4">🌍 Cultural Authenticity</h4>
-                      <ul className="text-sm text-green-600 space-y-2">
+                      <h4 className="font-semibold text-emerald-600 mb-4">🌍 Cultural Authenticity</h4>
+                      <ul className="text-sm text-emerald-600 space-y-2">
                         <li>• Respect for traditional forms</li>
                         <li>• Regional style preferences</li>
                         <li>• Cultural context awareness</li>
@@ -504,22 +504,22 @@ export default function BestArabicFonts2024Page() {
                   </div>
 
                   <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-gray-800 mb-4">📊 Usage Statistics 2024</h4>
+                    <h4 className="font-semibold text-gray-900 mb-4">📊 Usage Statistics 2024</h4>
                     <div className="grid md:grid-cols-4 gap-6">
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-gray-700 mb-1">45%</div>
+                        <div className="text-2xl font-bold text-gray-600 mb-1">45%</div>
                         <p className="text-sm text-gray-600">Cairo adoption rate</p>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-gray-700 mb-1">28%</div>
+                        <div className="text-2xl font-bold text-gray-600 mb-1">28%</div>
                         <p className="text-sm text-gray-600">Traditional fonts (Amiri, etc.)</p>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-gray-700 mb-1">18%</div>
+                        <div className="text-2xl font-bold text-gray-600 mb-1">18%</div>
                         <p className="text-sm text-gray-600">Modern fonts (Tajawal, Mada)</p>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-gray-700 mb-1">9%</div>
+                        <div className="text-2xl font-bold text-gray-600 mb-1">9%</div>
                         <p className="text-sm text-gray-600">Specialized/Display fonts</p>
                       </div>
                     </div>
@@ -533,10 +533,10 @@ export default function BestArabicFonts2024Page() {
           <div className="text-center mt-16 mb-12">
             <Card className="bg-gradient-to-r from-blue-100 to-indigo-100 border-blue-200">
               <CardContent className="pt-8 pb-8">
-                <h2 className="text-3xl font-bold text-blue-800 mb-4">
+                <h2 className="text-3xl font-bold text-amber-800 mb-4">
                   Try These Award-Winning Fonts
                 </h2>
-                <p className="text-blue-700 mb-6 max-w-2xl mx-auto">
+                <p className="text-amber-700 mb-6 max-w-2xl mx-auto">
                   Experience the best Arabic fonts of 2024 with our free online generator. 
                   Create professional designs using these expert-recommended typefaces.
                 </p>
@@ -556,7 +556,7 @@ export default function BestArabicFonts2024Page() {
                 <h3 className="font-semibold text-gray-900 mb-2">Font Selection Guide</h3>
                 <p className="text-sm text-gray-600 mb-4">Learn how to choose the perfect Arabic font</p>
                 <Link href="/tutorials/arabic-font-selection-guide">
-                  <Button variant="outline" size="sm" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+                  <Button variant="outline" size="sm" className="border-blue-600 text-amber-700 hover:bg-blue-50">
                     Selection Guide <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>
                 </Link>
@@ -568,7 +568,7 @@ export default function BestArabicFonts2024Page() {
                 <h3 className="font-semibold text-gray-900 mb-2">Font Comparison</h3>
                 <p className="text-sm text-gray-600 mb-4">Compare different Arabic font styles and features</p>
                 <Link href="/guides/arabic-font-comparison">
-                  <Button variant="outline" size="sm" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+                  <Button variant="outline" size="sm" className="border-blue-600 text-amber-700 hover:bg-blue-50">
                     Compare Fonts <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>
                 </Link>
@@ -580,7 +580,7 @@ export default function BestArabicFonts2024Page() {
                 <h3 className="font-semibold text-gray-900 mb-2">Design Trends</h3>
                 <p className="text-sm text-gray-600 mb-4">Explore the latest Arabic typography trends</p>
                 <Link href="/guides/arabic-typography-trends-2024">
-                  <Button variant="outline" size="sm" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+                  <Button variant="outline" size="sm" className="border-blue-600 text-amber-700 hover:bg-blue-50">
                     View Trends <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>
                 </Link>

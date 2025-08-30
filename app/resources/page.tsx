@@ -16,7 +16,7 @@ const RESOURCES = [
   {
     title: "Free Arabic Fonts",
     description: "Access our curated collection of high-quality free Arabic fonts suitable for both personal and commercial projects.",
-    icon: <Download className="h-8 w-8 text-blue-600" />,
+    icon: <Download className="h-8 w-8 text-amber-700" />,
     href: "/resources/free-arabic-fonts",
     color: "blue",
     popular: false
@@ -68,20 +68,20 @@ export default function ResourcesPage() {
       purple: {
         border: "border-purple-200",
         hoverBorder: "hover:border-purple-400",
-        text: "text-purple-800",
-        link: "text-purple-600 hover:text-purple-800"
+        text: "text-amber-800",
+        link: "text-amber-700 hover:text-amber-800"
       },
       green: {
         border: "border-green-200", 
         hoverBorder: "hover:border-green-400",
-        text: "text-green-800",
-        link: "text-green-600 hover:text-green-800"
+        text: "text-emerald-600",
+        link: "text-emerald-600 hover:text-emerald-600"
       },
       blue: {
         border: "border-blue-200",
         hoverBorder: "hover:border-blue-400", 
-        text: "text-blue-800",
-        link: "text-blue-600 hover:text-blue-800"
+        text: "text-amber-800",
+        link: "text-amber-700 hover:text-amber-800"
       }
     }
     return colorMap[color as keyof typeof colorMap] || colorMap.blue
@@ -109,7 +109,7 @@ export default function ResourcesPage() {
                 <Button asChild className="bg-green-600 hover:bg-green-700 text-white">
                   <Link href="/">Create Design</Link>
                 </Button>
-                <Button asChild variant="outline" className="border-green-600 text-green-600 hover:bg-green-50">
+                <Button asChild variant="outline" className="border-green-600 text-emerald-600 hover:bg-green-50">
                   <Link href="/">Create Now</Link>
                 </Button>
               </div>
@@ -151,8 +151,8 @@ export default function ResourcesPage() {
             {/* Featured Section */}
             <div className="bg-gradient-to-r from-green-100 to-emerald-100 border border-green-200 rounded-lg p-8 mb-12">
               <div className="text-center mb-8">
-                <h2 className="text-2xl font-bold text-green-800 mb-4">Why Use Our Resources?</h2>
-                <p className="text-green-700 max-w-2xl mx-auto">
+                <h2 className="text-2xl font-bold text-emerald-600 mb-4">Why Use Our Resources?</h2>
+                <p className="text-emerald-600 max-w-2xl mx-auto">
                   All our resources are carefully curated, culturally authentic, and designed to help you create 
                   professional Arabic calligraphy with confidence.
                 </p>
@@ -161,24 +161,24 @@ export default function ResourcesPage() {
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Star className="h-8 w-8 text-green-600" />
+                    <Star className="h-8 w-8 text-emerald-600" />
                   </div>
-                  <h3 className="font-semibold text-green-800 mb-2">High Quality</h3>
-                  <p className="text-sm text-green-700">Professional-grade resources suitable for commercial use</p>
+                  <h3 className="font-semibold text-emerald-600 mb-2">High Quality</h3>
+                  <p className="text-sm text-emerald-600">Professional-grade resources suitable for commercial use</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Lightbulb className="h-8 w-8 text-green-600" />
+                    <Lightbulb className="h-8 w-8 text-emerald-600" />
                   </div>
-                  <h3 className="font-semibold text-green-800 mb-2">Culturally Authentic</h3>
-                  <p className="text-sm text-green-700">Respectful and accurate representation of Arabic culture</p>
+                  <h3 className="font-semibold text-emerald-600 mb-2">Culturally Authentic</h3>
+                  <p className="text-sm text-emerald-600">Respectful and accurate representation of Arabic culture</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Download className="h-8 w-8 text-green-600" />
+                    <Download className="h-8 w-8 text-emerald-600" />
                   </div>
-                  <h3 className="font-semibold text-green-800 mb-2">Easy to Use</h3>
-                  <p className="text-sm text-green-700">Ready-to-use formats with clear instructions</p>
+                  <h3 className="font-semibold text-emerald-600 mb-2">Easy to Use</h3>
+                  <p className="text-sm text-emerald-600">Ready-to-use formats with clear instructions</p>
                 </div>
               </div>
             </div>
@@ -186,11 +186,11 @@ export default function ResourcesPage() {
             {/* CTA Section */}
             <div className="bg-green-900 text-white rounded-lg p-8 text-center">
               <h2 className="text-2xl font-bold mb-4">Start Creating Today</h2>
-              <p className="text-green-200 mb-6 max-w-2xl mx-auto">
+              <p className="text-emerald-600 mb-6 max-w-2xl mx-auto">
                 Use our resources with our free online Arabic calligraphy generator to create beautiful designs instantly.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button asChild className="bg-white text-green-900 hover:bg-gray-100">
+                <Button asChild className="bg-white text-emerald-600 hover:bg-gray-100">
                   <Link href="/">Try Generator</Link>
                 </Button>
                 <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">

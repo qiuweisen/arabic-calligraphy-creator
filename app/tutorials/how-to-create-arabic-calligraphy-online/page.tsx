@@ -193,7 +193,7 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     The first step in creating beautiful Arabic calligraphy online is entering your desired text.
                     Our generator provides multiple convenient ways to input Arabic text, making it accessible
                     for users of all technical levels.
@@ -202,25 +202,25 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
                   <div className="grid md:grid-cols-2 gap-8 mb-8">
                     <div className="space-y-6">
                       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-blue-800 mb-4">Text Input Methods</h4>
+                        <h4 className="font-semibold text-amber-800 mb-4">Text Input Methods</h4>
                         <div className="space-y-4">
                           <div>
-                            <h5 className="font-semibold text-blue-700 mb-2">1. Direct Typing</h5>
-                            <p className="text-sm text-blue-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">1. Direct Typing</h5>
+                            <p className="text-sm text-amber-700">
                               If you have an Arabic keyboard enabled on your device, simply click in the text
                               input box and start typing your Arabic text directly.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-blue-700 mb-2">2. Virtual Keyboard</h5>
-                            <p className="text-sm text-blue-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">2. Virtual Keyboard</h5>
+                            <p className="text-sm text-amber-700">
                               Use our built-in virtual Arabic keyboard to type characters by clicking on
                               the on-screen keys. Perfect for users without Arabic keyboard layouts.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-blue-700 mb-2">3. Copy and Paste</h5>
-                            <p className="text-sm text-blue-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">3. Copy and Paste</h5>
+                            <p className="text-sm text-amber-700">
                               Copy Arabic text from any source (websites, documents, messages) and paste
                               it directly into our text input field.
                             </p>
@@ -231,25 +231,25 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
 
                     <div className="space-y-6">
                       <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-green-800 mb-4">Preset Examples</h4>
+                        <h4 className="font-semibold text-emerald-600 mb-4">Preset Examples</h4>
                         <div className="space-y-4">
                           <div>
-                            <h5 className="font-semibold text-green-700 mb-2">Religious Phrases</h5>
-                            <p className="text-sm text-green-600">
+                            <h5 className="font-semibold text-emerald-600 mb-2">Religious Phrases</h5>
+                            <p className="text-sm text-emerald-600">
                               Quick access to common Islamic phrases like "بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ"
                               (Bismillah), "الله" (Allah), and "محمد" (Muhammad).
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-green-700 mb-2">Common Greetings</h5>
-                            <p className="text-sm text-green-600">
+                            <h5 className="font-semibold text-emerald-600 mb-2">Common Greetings</h5>
+                            <p className="text-sm text-emerald-600">
                               Popular Arabic greetings and expressions like "السلام عليكم" (Peace be upon you),
                               "مرحبا" (Welcome), and "شكرا" (Thank you).
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-green-700 mb-2">Names and Titles</h5>
-                            <p className="text-sm text-green-600">
+                            <h5 className="font-semibold text-emerald-600 mb-2">Names and Titles</h5>
+                            <p className="text-sm text-emerald-600">
                               Common Arabic names and titles for wedding invitations, business cards,
                               and personal projects.
                             </p>
@@ -260,11 +260,11 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
                   </div>
 
                   <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-yellow-800 mb-4">💡 Pro Tips for Text Input</h4>
+                    <h4 className="font-semibold text-amber-800 mb-4">💡 Pro Tips for Text Input</h4>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <h5 className="font-semibold text-yellow-700 mb-2">Text Length Considerations</h5>
-                        <ul className="text-sm text-yellow-600 space-y-1">
+                        <h5 className="font-semibold text-amber-700 mb-2">Text Length Considerations</h5>
+                        <ul className="text-sm text-amber-700 space-y-1">
                           <li>• Short phrases (1-5 words) work best for decorative designs</li>
                           <li>• Longer texts are suitable for quotes and verses</li>
                           <li>• Consider line breaks for multi-line compositions</li>
@@ -272,8 +272,8 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-yellow-700 mb-2">Character Support</h5>
-                        <ul className="text-sm text-yellow-600 space-y-1">
+                        <h5 className="font-semibold text-amber-700 mb-2">Character Support</h5>
+                        <ul className="text-sm text-amber-700 space-y-1">
                           <li>• Full Arabic alphabet including diacritics</li>
                           <li>• Persian and Urdu additional characters</li>
                           <li>• Numbers in both Arabic and Hindi-Arabic numerals</li>
@@ -296,7 +296,7 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     Selecting the right font is crucial for creating impactful Arabic calligraphy. Our generator
                     offers 17 carefully curated Arabic fonts, each with its own character and best use cases.
                     Understanding the differences will help you make the perfect choice for your project.
@@ -304,25 +304,25 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
 
                   <div className="grid md:grid-cols-3 gap-6 mb-8">
                     <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-purple-800 mb-4">Traditional Fonts</h4>
+                      <h4 className="font-semibold text-amber-800 mb-4">Traditional Fonts</h4>
                       <div className="space-y-3">
                         <div>
-                          <h5 className="font-semibold text-purple-700 mb-2">Amiri</h5>
-                          <p className="text-sm text-purple-600">
+                          <h5 className="font-semibold text-amber-700 mb-2">Amiri</h5>
+                          <p className="text-sm text-amber-700">
                             Classical Naskh style, perfect for Quranic verses and formal documents.
                             Excellent readability and traditional aesthetics.
                           </p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-purple-700 mb-2">Scheherazade</h5>
-                          <p className="text-sm text-purple-600">
+                          <h5 className="font-semibold text-amber-700 mb-2">Scheherazade</h5>
+                          <p className="text-sm text-amber-700">
                             Extended Arabic script support with beautiful curves. Ideal for
                             literary texts and elegant compositions.
                           </p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-purple-700 mb-2">Aref Ruqaa</h5>
-                          <p className="text-sm text-purple-600">
+                          <h5 className="font-semibold text-amber-700 mb-2">Aref Ruqaa</h5>
+                          <p className="text-sm text-amber-700">
                             Based on the traditional Ruqaa script. Great for handwritten-style
                             calligraphy and personal messages.
                           </p>
@@ -331,25 +331,25 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
                     </div>
 
                     <div className="bg-teal-50 border border-teal-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-teal-800 mb-4">Modern Fonts</h4>
+                      <h4 className="font-semibold text-amber-800 mb-4">Modern Fonts</h4>
                       <div className="space-y-3">
                         <div>
-                          <h5 className="font-semibold text-teal-700 mb-2">Cairo</h5>
-                          <p className="text-sm text-teal-600">
+                          <h5 className="font-semibold text-amber-700 mb-2">Cairo</h5>
+                          <p className="text-sm text-amber-700">
                             Contemporary sans-serif design. Perfect for modern logos,
                             business cards, and digital applications.
                           </p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-teal-700 mb-2">Tajawal</h5>
-                          <p className="text-sm text-teal-600">
+                          <h5 className="font-semibold text-amber-700 mb-2">Tajawal</h5>
+                          <p className="text-sm text-amber-700">
                             Clean and minimalist style. Excellent for web design,
                             presentations, and modern branding.
                           </p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-teal-700 mb-2">Mada</h5>
-                          <p className="text-sm text-teal-600">
+                          <h5 className="font-semibold text-amber-700 mb-2">Mada</h5>
+                          <p className="text-sm text-amber-700">
                             Geometric and structured design. Ideal for technical
                             documents and contemporary art projects.
                           </p>
@@ -358,25 +358,25 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
                     </div>
 
                     <div className="bg-rose-50 border border-rose-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-rose-800 mb-4">Decorative Fonts</h4>
+                      <h4 className="font-semibold text-gray-900 mb-4">Decorative Fonts</h4>
                       <div className="space-y-3">
                         <div>
-                          <h5 className="font-semibold text-rose-700 mb-2">Lemonada</h5>
-                          <p className="text-sm text-rose-600">
+                          <h5 className="font-semibold text-gray-900 mb-2">Lemonada</h5>
+                          <p className="text-sm text-gray-600">
                             Playful and rounded characters. Perfect for children's content,
                             casual designs, and friendly branding.
                           </p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-rose-700 mb-2">Rakkas</h5>
-                          <p className="text-sm text-rose-600">
+                          <h5 className="font-semibold text-gray-900 mb-2">Rakkas</h5>
+                          <p className="text-sm text-gray-600">
                             Bold and expressive style. Great for headlines, posters,
                             and attention-grabbing designs.
                           </p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-rose-700 mb-2">Jomhuria</h5>
-                          <p className="text-sm text-rose-600">
+                          <h5 className="font-semibold text-gray-900 mb-2">Jomhuria</h5>
+                          <p className="text-sm text-gray-600">
                             Unique and artistic appearance. Ideal for creative projects,
                             artistic expressions, and distinctive branding.
                           </p>
@@ -386,11 +386,11 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
                   </div>
 
                   <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-indigo-800 mb-4">🎨 Font Selection Guidelines</h4>
+                    <h4 className="font-semibold text-amber-800 mb-4">🎨 Font Selection Guidelines</h4>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <h5 className="font-semibold text-indigo-700 mb-2">Consider Your Purpose</h5>
-                        <ul className="text-sm text-indigo-600 space-y-1">
+                        <h5 className="font-semibold text-amber-700 mb-2">Consider Your Purpose</h5>
+                        <ul className="text-sm text-amber-700 space-y-1">
                           <li>• Religious texts: Use traditional fonts like Amiri or Scheherazade</li>
                           <li>• Business branding: Choose modern fonts like Cairo or Tajawal</li>
                           <li>• Wedding invitations: Elegant fonts like El Messiri work well</li>
@@ -398,8 +398,8 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-indigo-700 mb-2">Technical Considerations</h5>
-                        <ul className="text-sm text-indigo-600 space-y-1">
+                        <h5 className="font-semibold text-amber-700 mb-2">Technical Considerations</h5>
+                        <ul className="text-sm text-amber-700 space-y-1">
                           <li>• Preview each font with your specific text</li>
                           <li>• Consider readability at different sizes</li>
                           <li>• Test how the font looks with your chosen colors</li>
@@ -427,7 +427,7 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     This is where your creativity truly shines. Our advanced customization options allow you
                     to transform basic text into stunning visual art. Learn how to use each tool effectively
                     to achieve professional-quality results.
@@ -436,25 +436,25 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
                   <div className="grid md:grid-cols-2 gap-8 mb-8">
                     <div className="space-y-6">
                       <div className="bg-orange-50 border border-orange-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-orange-800 mb-4">Typography Controls</h4>
+                        <h4 className="font-semibold text-amber-800 mb-4">Typography Controls</h4>
                         <div className="space-y-4">
                           <div>
-                            <h5 className="font-semibold text-orange-700 mb-2">Font Size</h5>
-                            <p className="text-sm text-orange-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Font Size</h5>
+                            <p className="text-sm text-amber-700">
                               Adjust from 12px to 200px. Larger sizes work better for decorative pieces,
                               while smaller sizes are ideal for detailed text work.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-orange-700 mb-2">Letter Spacing</h5>
-                            <p className="text-sm text-orange-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Letter Spacing</h5>
+                            <p className="text-sm text-amber-700">
                               Fine-tune the space between characters. Tighter spacing creates density,
                               while looser spacing improves readability.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-orange-700 mb-2">Line Height</h5>
-                            <p className="text-sm text-orange-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Line Height</h5>
+                            <p className="text-sm text-amber-700">
                               Control vertical spacing for multi-line text. Proper line height
                               ensures optimal readability and visual balance.
                             </p>
@@ -465,25 +465,25 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
 
                     <div className="space-y-6">
                       <div className="bg-cyan-50 border border-cyan-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-cyan-800 mb-4">Color and Effects</h4>
+                        <h4 className="font-semibold text-amber-800 mb-4">Color and Effects</h4>
                         <div className="space-y-4">
                           <div>
-                            <h5 className="font-semibold text-cyan-700 mb-2">Text Color</h5>
-                            <p className="text-sm text-cyan-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Text Color</h5>
+                            <p className="text-sm text-amber-700">
                               Choose from preset colors or use the color picker for custom shades.
                               Consider contrast and cultural color meanings.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-cyan-700 mb-2">Shadow Effects</h5>
-                            <p className="text-sm text-cyan-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Shadow Effects</h5>
+                            <p className="text-sm text-amber-700">
                               Add depth with drop shadows. Adjust blur, offset, and color to create
                               subtle elegance or dramatic impact.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-cyan-700 mb-2">Background Options</h5>
-                            <p className="text-sm text-cyan-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Background Options</h5>
+                            <p className="text-sm text-amber-700">
                               Choose transparent, solid colors, or gradient backgrounds.
                               Transparent backgrounds are perfect for overlaying on other designs.
                             </p>
@@ -494,10 +494,10 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
                   </div>
 
                   <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-gray-800 mb-4">🎯 Design Best Practices</h4>
+                    <h4 className="font-semibold text-gray-900 mb-4">🎯 Design Best Practices</h4>
                     <div className="grid md:grid-cols-3 gap-6">
                       <div>
-                        <h5 className="font-semibold text-gray-700 mb-2">Color Harmony</h5>
+                        <h5 className="font-semibold text-gray-600 mb-2">Color Harmony</h5>
                         <ul className="text-sm text-gray-600 space-y-1">
                           <li>• Use complementary colors for contrast</li>
                           <li>• Consider cultural color associations</li>
@@ -506,7 +506,7 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-gray-700 mb-2">Visual Balance</h5>
+                        <h5 className="font-semibold text-gray-600 mb-2">Visual Balance</h5>
                         <ul className="text-sm text-gray-600 space-y-1">
                           <li>• Don't overuse effects - less is often more</li>
                           <li>• Ensure text remains readable</li>
@@ -515,7 +515,7 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-gray-700 mb-2">Professional Tips</h5>
+                        <h5 className="font-semibold text-gray-600 mb-2">Professional Tips</h5>
                         <ul className="text-sm text-gray-600 space-y-1">
                           <li>• Save multiple versions for comparison</li>
                           <li>• Get feedback before finalizing</li>
@@ -539,7 +539,7 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-600 mb-6">
                     Once you're satisfied with your design, it's time to download and use your Arabic calligraphy.
                     Understanding the different file formats and their applications will help you make the most
                     of your creation.
@@ -548,25 +548,25 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
                   <div className="grid md:grid-cols-2 gap-8 mb-8">
                     <div className="space-y-6">
                       <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-emerald-800 mb-4">File Format Options</h4>
+                        <h4 className="font-semibold text-emerald-600 mb-4">File Format Options</h4>
                         <div className="space-y-4">
                           <div>
-                            <h5 className="font-semibold text-emerald-700 mb-2">PNG Format</h5>
+                            <h5 className="font-semibold text-emerald-600 mb-2">PNG Format</h5>
                             <p className="text-sm text-emerald-600">
                               High-quality raster format with transparency support. Perfect for web use,
                               social media, presentations, and when you need pixel-perfect quality.
                             </p>
-                            <div className="mt-2 text-xs text-emerald-500">
+                            <div className="mt-2 text-xs text-emerald-600">
                               Best for: Web graphics, social media, presentations, print (small sizes)
                             </div>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-emerald-700 mb-2">SVG Format</h5>
+                            <h5 className="font-semibold text-emerald-600 mb-2">SVG Format</h5>
                             <p className="text-sm text-emerald-600">
                               Scalable vector format that maintains quality at any size. Ideal for logos,
                               large prints, professional branding, and when you need infinite scalability.
                             </p>
-                            <div className="mt-2 text-xs text-emerald-500">
+                            <div className="mt-2 text-xs text-emerald-600">
                               Best for: Logos, large prints, professional design, web scalability
                             </div>
                           </div>
@@ -576,25 +576,25 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
 
                     <div className="space-y-6">
                       <div className="bg-violet-50 border border-violet-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-violet-800 mb-4">Quality Settings</h4>
+                        <h4 className="font-semibold text-amber-800 mb-4">Quality Settings</h4>
                         <div className="space-y-4">
                           <div>
-                            <h5 className="font-semibold text-violet-700 mb-2">Resolution Options</h5>
-                            <p className="text-sm text-violet-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Resolution Options</h5>
+                            <p className="text-sm text-amber-700">
                               Choose from standard (72 DPI) for web use, high (150 DPI) for general printing,
                               or ultra-high (300 DPI) for professional printing and large formats.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-violet-700 mb-2">Size Presets</h5>
-                            <p className="text-sm text-violet-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Size Presets</h5>
+                            <p className="text-sm text-amber-700">
                               Quick presets for common use cases: social media posts, business cards,
                               posters, and custom dimensions for specific requirements.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-violet-700 mb-2">Background Options</h5>
-                            <p className="text-sm text-violet-600">
+                            <h5 className="font-semibold text-amber-700 mb-2">Background Options</h5>
+                            <p className="text-sm text-amber-700">
                               Download with transparent background for maximum flexibility, or choose
                               white/colored backgrounds for immediate use.
                             </p>
@@ -605,11 +605,11 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
                   </div>
 
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-blue-800 mb-4">📱 Usage Applications</h4>
+                    <h4 className="font-semibold text-amber-800 mb-4">📱 Usage Applications</h4>
                     <div className="grid md:grid-cols-4 gap-6">
                       <div>
-                        <h5 className="font-semibold text-blue-700 mb-2">Digital Media</h5>
-                        <ul className="text-sm text-blue-600 space-y-1">
+                        <h5 className="font-semibold text-amber-700 mb-2">Digital Media</h5>
+                        <ul className="text-sm text-amber-700 space-y-1">
                           <li>• Website headers and logos</li>
                           <li>• Social media posts and stories</li>
                           <li>• Digital presentations</li>
@@ -618,8 +618,8 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-blue-700 mb-2">Print Materials</h5>
-                        <ul className="text-sm text-blue-600 space-y-1">
+                        <h5 className="font-semibold text-amber-700 mb-2">Print Materials</h5>
+                        <ul className="text-sm text-amber-700 space-y-1">
                           <li>• Business cards and letterheads</li>
                           <li>• Wedding invitations</li>
                           <li>• Posters and banners</li>
@@ -628,8 +628,8 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-blue-700 mb-2">Personal Projects</h5>
-                        <ul className="text-sm text-blue-600 space-y-1">
+                        <h5 className="font-semibold text-amber-700 mb-2">Personal Projects</h5>
+                        <ul className="text-sm text-amber-700 space-y-1">
                           <li>• Home decoration and wall art</li>
                           <li>• Personalized gifts</li>
                           <li>• Scrapbooking and crafts</li>
@@ -638,8 +638,8 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-semibold text-blue-700 mb-2">Commercial Use</h5>
-                        <ul className="text-sm text-blue-600 space-y-1">
+                        <h5 className="font-semibold text-amber-700 mb-2">Commercial Use</h5>
+                        <ul className="text-sm text-amber-700 space-y-1">
                           <li>• Brand identity and logos</li>
                           <li>• Marketing materials</li>
                           <li>• Product packaging</li>
@@ -665,24 +665,24 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="space-y-6">
                       <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-red-800 mb-4">Common Issues & Solutions</h4>
+                        <h4 className="font-semibold text-red-600 mb-4">Common Issues & Solutions</h4>
                         <div className="space-y-4">
                           <div>
-                            <h5 className="font-semibold text-red-700 mb-2">Text Not Displaying Correctly</h5>
+                            <h5 className="font-semibold text-red-600 mb-2">Text Not Displaying Correctly</h5>
                             <p className="text-sm text-red-600">
                               Ensure your browser supports Arabic text rendering. Try refreshing the page
                               or switching to a different browser (Chrome, Firefox, Safari recommended).
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-red-700 mb-2">Font Not Loading</h5>
+                            <h5 className="font-semibold text-red-600 mb-2">Font Not Loading</h5>
                             <p className="text-sm text-red-600">
                               Check your internet connection. Fonts are loaded from Google Fonts and
                               require a stable connection. Try selecting a different font temporarily.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-red-700 mb-2">Download Issues</h5>
+                            <h5 className="font-semibold text-red-600 mb-2">Download Issues</h5>
                             <p className="text-sm text-red-600">
                               Ensure pop-ups are enabled for our site. Some browsers block automatic
                               downloads. Check your download folder or try right-clicking to save.
@@ -694,25 +694,25 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
 
                     <div className="space-y-6">
                       <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-green-800 mb-4">Pro Tips for Better Results</h4>
+                        <h4 className="font-semibold text-emerald-600 mb-4">Pro Tips for Better Results</h4>
                         <div className="space-y-4">
                           <div>
-                            <h5 className="font-semibold text-green-700 mb-2">Optimize for Your Use Case</h5>
-                            <p className="text-sm text-green-600">
+                            <h5 className="font-semibold text-emerald-600 mb-2">Optimize for Your Use Case</h5>
+                            <p className="text-sm text-emerald-600">
                               For web use, prioritize smaller file sizes. For print, choose higher
                               resolutions. For logos, always use SVG format for scalability.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-green-700 mb-2">Test Before Finalizing</h5>
-                            <p className="text-sm text-green-600">
+                            <h5 className="font-semibold text-emerald-600 mb-2">Test Before Finalizing</h5>
+                            <p className="text-sm text-emerald-600">
                               Preview your design at the intended size and context. What looks good
                               on screen might need adjustments for print or different backgrounds.
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-green-700 mb-2">Save Your Settings</h5>
-                            <p className="text-sm text-green-600">
+                            <h5 className="font-semibold text-emerald-600 mb-2">Save Your Settings</h5>
+                            <p className="text-sm text-emerald-600">
                               Take note of successful color combinations and settings for future projects.
                               Consider creating a style guide for consistent branding.
                             </p>

@@ -59,32 +59,32 @@ const TEXT_EXAMPLES = [
 
 const FONT_FEATURES = [
   {
-    icon: <Box className="h-8 w-8 text-indigo-600 mb-2" />,
+    icon: <Box className="h-8 w-8 text-amber-700 mb-2" />,
     title: "Geometric Construction",
     description: "Based on clear geometric shapes, giving it a structured, modern, and clean appearance."
   },
   {
-    icon: <Globe className="h-8 w-8 text-indigo-600 mb-2" />,
+    icon: <Globe className="h-8 w-8 text-amber-700 mb-2" />,
     title: "Bilingual: Arabic & Latin",
     description: "Offers harmonious designs for both Arabic and Latin scripts, ensuring consistency in multilingual projects."
   },
   {
-    icon: <CheckCircle className="h-8 w-8 text-indigo-600 mb-2" />,
+    icon: <CheckCircle className="h-8 w-8 text-amber-700 mb-2" />,
     title: "Excellent Legibility",
     description: "Designed for high readability across various sizes and media, especially on digital screens."
   },
   {
-    icon: <Layers className="h-8 w-8 text-indigo-600 mb-2" />,
+    icon: <Layers className="h-8 w-8 text-amber-700 mb-2" />,
     title: "Extensive Weight Range",
     description: "Available in multiple weights (from ExtraLight to Black), providing broad typographic flexibility."
   },
   {
-    icon: <MonitorPlay className="h-8 w-8 text-indigo-600 mb-2" />,
+    icon: <MonitorPlay className="h-8 w-8 text-amber-700 mb-2" />,
     title: "Optimized for Screens",
     description: "Performs exceptionally well in UI/UX design, web content, and digital applications."
   },
   {
-    icon: <Zap className="h-8 w-8 text-indigo-600 mb-2" />,
+    icon: <Zap className="h-8 w-8 text-amber-700 mb-2" />,
     title: "Modern & Professional",
     description: "Its contemporary and clean style lends a professional and forward-looking tone to designs."
   }
@@ -94,32 +94,32 @@ const IDEAL_USE_CASES = [
   {
     title: "User Interfaces (UI/UX)",
     description: "Perfect for all elements of digital interfaces, from navigation to body text, in both Arabic and Latin.",
-    icon: <MonitorPlay className="h-5 w-5 text-indigo-700" />
+    icon: <MonitorPlay className="h-5 w-5 text-amber-700" />
   },
   {
     title: "Web Design & Applications",
     description: "Ensures a modern, clean, and legible experience for websites and web-based applications.",
-    icon: <Globe className="h-5 w-5 text-indigo-700" />
+    icon: <Globe className="h-5 w-5 text-amber-700" />
   },
   {
     title: "Branding & Corporate Identity",
     description: "Its geometric and professional style is well-suited for contemporary branding and corporate communications.",
-    icon: <Zap className="h-5 w-5 text-indigo-700" />
+    icon: <Zap className="h-5 w-5 text-amber-700" />
   },
   {
     title: "Digital & Print Publications",
     description: "Offers a clear and modern typographic voice for reports, magazines, and online articles.",
-    icon: <Type className="h-5 w-5 text-indigo-700" />
+    icon: <Type className="h-5 w-5 text-amber-700" />
   },
   {
     title: "Mobile App Development",
     description: "Provides excellent readability and a modern aesthetic for multilingual mobile applications.",
-    icon: <Layers className="h-5 w-5 text-indigo-700" />
+    icon: <Layers className="h-5 w-5 text-amber-700" />
   },
   {
     title: "Wayfinding & Signage Systems",
     description: "Its clarity and geometric forms make it suitable for modern, bilingual signage.",
-    icon: <CheckCircle className="h-5 w-5 text-indigo-700" />
+    icon: <CheckCircle className="h-5 w-5 text-amber-700" />
   }
 ];
 
@@ -220,7 +220,7 @@ export default function TajawalFontPage() {
               className="mb-6"
             />
             
-            <Button asChild variant="ghost" className="mb-4 text-indigo-600 hover:text-indigo-800 hover:bg-indigo-50">
+            <Button asChild variant="ghost" className="mb-4 text-amber-700 hover:text-amber-800 hover:bg-indigo-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Fonts
@@ -236,9 +236,9 @@ export default function TajawalFontPage() {
                     </div>
                   </div>
                   <div className="w-full md:w-2/3">
-                    <span className="text-xs text-indigo-600 font-medium px-2 py-1 bg-indigo-50 rounded-full mb-2 inline-block">Geometric Sans-Serif (Bilingual)</span>
-                    <h1 className="text-4xl md:text-5xl font-bold text-indigo-800 mt-1 mb-3">Tajawal Font</h1>
-                    <p className="text-lg text-indigo-700 mb-6 leading-relaxed">
+                    <span className="text-xs text-amber-700 font-medium px-2 py-1 bg-indigo-50 rounded-full mb-2 inline-block">Geometric Sans-Serif (Bilingual)</span>
+                    <h1 className="text-4xl md:text-5xl font-bold text-amber-800 mt-1 mb-3">Tajawal Font</h1>
+                    <p className="text-lg text-amber-700 mb-6 leading-relaxed">
                       Tajawal is a modern geometric sans-serif typeface that supports both Arabic and Latin scripts. Known for its clarity, contemporary feel, and extensive weight range, it is an excellent choice for UI/UX, web design, and branding projects.
                     </p>
                     <div className="flex gap-4">
@@ -258,26 +258,26 @@ export default function TajawalFontPage() {
             </Card>
 
             <div className="prose prose-indigo max-w-none">
-              <h2 id="distinctive-features" className="text-3xl font-bold text-indigo-800 mt-12 mb-6">Distinctive Features of Tajawal</h2>
+              <h2 id="distinctive-features" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Distinctive Features of Tajawal</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                 {FONT_FEATURES.map((feature) => (
                   <Card key={feature.title} className="border-indigo-200 flex flex-col bg-white">
                     <CardHeader className="items-center text-center">
                       {feature.icon}
-                      <CardTitle className="text-xl text-indigo-800">{feature.title}</CardTitle>
+                      <CardTitle className="text-xl text-amber-800">{feature.title}</CardTitle>
                     </CardHeader>
                     <CardContent className="text-center flex-grow">
-                      <p className="text-indigo-700 text-sm">{feature.description}</p>
+                      <p className="text-amber-700 text-sm">{feature.description}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
-              <h2 id="design-philosophy" className="text-3xl font-bold text-indigo-800 mt-12 mb-6">Design Philosophy: Geometric Clarity & Bilingual Harmony</h2>
+              <h2 id="design-philosophy" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Design Philosophy: Geometric Clarity & Bilingual Harmony</h2>
               <Card className="border-indigo-200 mb-12 bg-white">
-                <CardContent className="p-6 md:p-8 space-y-4 text-indigo-700 leading-relaxed">
+                <CardContent className="p-6 md:p-8 space-y-4 text-amber-700 leading-relaxed">
                   <p>
-                    Tajawal (تجول, meaning "to roam" or "to wander") is a bilingual typeface that masterfully blends <strong className="text-indigo-800">geometric precision with a modern, accessible feel</strong>. It was designed to serve the needs of contemporary digital and print media, offering robust support for both Arabic and Latin scripts.
+                    Tajawal (تجول, meaning "to roam" or "to wander") is a bilingual typeface that masterfully blends <strong className="text-amber-800">geometric precision with a modern, accessible feel</strong>. It was designed to serve the needs of contemporary digital and print media, offering robust support for both Arabic and Latin scripts.
                   </p>
                   <p>
                     The design of Tajawal is rooted in geometric principles, resulting in clean, well-defined letterforms. This clarity makes it highly legible across various screen sizes and resolutions, a key consideration for UI/UX and web design. The Arabic and Latin characters are crafted to work harmoniously together, ensuring visual consistency in multilingual contexts. This makes Tajawal particularly valuable for international branding and global digital products.
@@ -288,21 +288,21 @@ export default function TajawalFontPage() {
                 </CardContent>
               </Card>
 
-              <h2 id="alphabet-showcase" className="text-3xl font-bold text-indigo-800 mt-12 mb-6">Tajawal Alphabet Showcase (Arabic & Latin)</h2>
+              <h2 id="alphabet-showcase" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Tajawal Alphabet Showcase (Arabic & Latin)</h2>
               <Card className="border-indigo-200 mb-12 bg-white">
                 <CardHeader>
-                  <CardTitle className="text-xl text-indigo-800">Clean Geometric Letterforms</CardTitle>
-                  <CardDescription className="text-indigo-600">Observe the modern, geometric style of Tajawal in both Arabic and Latin scripts.</CardDescription>
+                  <CardTitle className="text-xl text-amber-800">Clean Geometric Letterforms</CardTitle>
+                  <CardDescription className="text-amber-700">Observe the modern, geometric style of Tajawal in both Arabic and Latin scripts.</CardDescription>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-indigo-700 mb-2 text-center">Arabic</h3>
+                  <h3 className="text-lg font-semibold text-amber-700 mb-2 text-center">Arabic</h3>
                   <div
                     className="text-center leading-relaxed mb-6"
                     style={{ fontFamily: "'Tajawal', sans-serif", fontSize: "30px", direction: "rtl" }}
                   >
                     {ARABIC_ALPHABET_TAJAWAL}
                   </div>
-                  <h3 className="text-lg font-semibold text-indigo-700 mb-2 text-center">Latin</h3>
+                  <h3 className="text-lg font-semibold text-amber-700 mb-2 text-center">Latin</h3>
                   <div
                     className="text-center leading-relaxed"
                     style={{ fontFamily: "'Tajawal', sans-serif", fontSize: "24px" }}
@@ -312,7 +312,7 @@ export default function TajawalFontPage() {
                 </CardContent>
               </Card>
 
-              <h2 id="text-examples" className="text-3xl font-bold text-indigo-800 mt-12 mb-6">Tajawal in Action: Text Examples</h2>
+              <h2 id="text-examples" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Tajawal in Action: Text Examples</h2>
               <Tabs defaultValue={TEXT_EXAMPLES[0].id} className="w-full mb-12">
                 <TabsList className="grid w-full" style={{ gridTemplateColumns: `repeat(${TEXT_EXAMPLES.length}, 1fr)` }}>
                   {TEXT_EXAMPLES.map((example, index) => (
@@ -331,44 +331,44 @@ export default function TajawalFontPage() {
                         >
                           {example.text}
                         </div>
-                        <p className="text-center font-medium text-indigo-700 mb-2">{example.translation}</p>
-                        <p className="text-center text-sm text-indigo-600">{example.context}</p>
+                        <p className="text-center font-medium text-amber-700 mb-2">{example.translation}</p>
+                        <p className="text-center text-sm text-amber-700">{example.context}</p>
                       </CardContent>
                     </Card>
                   </TabsContent>
                 ))}
               </Tabs>
 
-              <h2 id="use-cases" className="text-3xl font-bold text-indigo-800 mt-12 mb-6">Ideal Use Cases for Tajawal</h2>
+              <h2 id="use-cases" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Ideal Use Cases for Tajawal</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 {IDEAL_USE_CASES.map((useCase) => (
                   <Card key={useCase.title} className="border-indigo-200 flex bg-white">
                     <div className="p-6 pr-0 flex items-center">{useCase.icon}</div>
                     <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold text-indigo-800 mb-1">{useCase.title}</h3>
-                      <p className="text-indigo-700 text-sm">{useCase.description}</p>
+                      <h3 className="text-lg font-semibold text-amber-800 mb-1">{useCase.title}</h3>
+                      <p className="text-amber-700 text-sm">{useCase.description}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
-              <h2 id="technical-details" className="text-3xl font-bold text-indigo-800 mt-12 mb-6">Technical Specifications</h2>
+              <h2 id="technical-details" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Technical Specifications</h2>
               <div className="space-y-6 mb-12">
                 {TECHNICAL_DETAILS.map((detail) => (
                   <Card key={detail.title} className="border-indigo-200 bg-white">
                     <CardHeader>
-                      <CardTitle className="text-xl text-indigo-800">{detail.title}</CardTitle>
+                      <CardTitle className="text-xl text-amber-800">{detail.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-lg text-indigo-700 mb-1">{detail.value}</p>
-                      {detail.description && <p className="text-sm text-indigo-600">{detail.description}</p>}
+                      <p className="text-lg text-amber-700 mb-1">{detail.value}</p>
+                      {detail.description && <p className="text-sm text-amber-700">{detail.description}</p>}
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
               <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center p-6 bg-indigo-50 rounded-lg border border-indigo-200">
-                 <h3 className="text-2xl font-semibold text-indigo-800 text-center sm:text-left">Design with Tajawal's Geometric Elegance</h3>
+                 <h3 className="text-2xl font-semibold text-amber-800 text-center sm:text-left">Design with Tajawal's Geometric Elegance</h3>
                 <Button asChild size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white">
                   <Link href="/?font=Tajawal">Use Tajawal in Calligraphy Generator</Link>
                 </Button>

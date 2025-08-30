@@ -92,32 +92,32 @@ const IDEAL_USE_CASES = [
   {
     title: "Posters & Event Promotion",
     description: "Commands attention on posters, flyers, and digital promotions for events and campaigns.",
-    icon: <Megaphone className="h-5 w-5 text-red-700" />
+    icon: <Megaphone className="h-5 w-5 text-red-600" />
   },
   {
     title: "Logos & Branding",
     description: "Creates strong, memorable logotypes and brand marks with a distinct Arabic character.",
-    icon: <Bold className="h-5 w-5 text-red-700" />
+    icon: <Bold className="h-5 w-5 text-red-600" />
   },
   {
     title: "Book & Magazine Covers",
     description: "Makes titles pop on book covers, magazine layouts, and editorial designs.",
-    icon: <Type className="h-5 w-5 text-red-700" />
+    icon: <Type className="h-5 w-5 text-red-600" />
   },
   {
     title: "Exhibition & Signage Graphics",
     description: "Ideal for large-scale graphics in exhibitions, museums, and impactful signage.",
-    icon: <Eye className="h-5 w-5 text-red-700" />
+    icon: <Eye className="h-5 w-5 text-red-600" />
   },
   {
     title: "Creative Headlines on Web & Social Media",
     description: "Adds a powerful visual punch to website banners, social media graphics, and digital campaigns.",
-    icon: <Sparkles className="h-5 w-5 text-red-700" />
+    icon: <Sparkles className="h-5 w-5 text-red-600" />
   },
   {
     title: "Artistic & Cultural Projects",
     description: "Its Kufi-inspired aesthetic lends itself well to projects related to art, culture, and heritage.",
-    icon: <Palette className="h-5 w-5 text-red-700" />
+    icon: <Palette className="h-5 w-5 text-red-600" />
   }
 ];
 
@@ -201,7 +201,7 @@ export default function JomhuriaFontPage() {
               className="mb-6"
             />
 
-            <Button asChild variant="ghost" className="mb-4 text-red-600 hover:text-red-800 hover:bg-red-50">
+            <Button asChild variant="ghost" className="mb-4 text-red-600 hover:text-red-600 hover:bg-red-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Fonts
@@ -218,8 +218,8 @@ export default function JomhuriaFontPage() {
                   </div>
                   <div className="w-full md:w-2/3">
                     <span className="text-xs text-red-600 font-medium px-2 py-1 bg-red-50 rounded-full mb-2 inline-block">Display (Kufi Inspired)</span>
-                    <h1 className="text-4xl md:text-5xl font-bold text-red-800 mt-1 mb-3">Jomhuria Font</h1>
-                    <p className="text-lg text-red-700 mb-6 leading-relaxed">
+                    <h1 className="text-4xl md:text-5xl font-bold text-red-600 mt-1 mb-3">Jomhuria Font</h1>
+                    <p className="text-lg text-red-600 mb-6 leading-relaxed">
                       Jomhuria is a powerful Arabic display font designed by Kourosh Beigpour for TitraShop. Its bold, Kufi-inspired letterforms are crafted to make a strong visual statement, perfect for headlines, posters, and impactful branding.
                     </p>
                     <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white">
@@ -231,26 +231,26 @@ export default function JomhuriaFontPage() {
             </Card>
 
             <div className="prose prose-red max-w-none">
-              <h2 id="distinctive-features" className="text-3xl font-bold text-red-800 mt-12 mb-6">Distinctive Features of Jomhuria</h2>
+              <h2 id="distinctive-features" className="text-3xl font-bold text-red-600 mt-12 mb-6">Distinctive Features of Jomhuria</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                 {FONT_FEATURES.map((feature) => (
                   <Card key={feature.title} className="border-red-200 flex flex-col bg-white">
                     <CardHeader className="items-center text-center">
                       {feature.icon}
-                      <CardTitle className="text-xl text-red-800">{feature.title}</CardTitle>
+                      <CardTitle className="text-xl text-red-600">{feature.title}</CardTitle>
                     </CardHeader>
                     <CardContent className="text-center flex-grow">
-                      <p className="text-red-700 text-sm">{feature.description}</p>
+                      <p className="text-red-600 text-sm">{feature.description}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
-              <h2 id="design-philosophy" className="text-3xl font-bold text-red-800 mt-12 mb-6">Design Philosophy: Boldness & Kufi Heritage</h2>
+              <h2 id="design-philosophy" className="text-3xl font-bold text-red-600 mt-12 mb-6">Design Philosophy: Boldness & Kufi Heritage</h2>
               <Card className="border-red-200 mb-12 bg-white">
-                <CardContent className="p-6 md:p-8 space-y-4 text-red-700 leading-relaxed">
+                <CardContent className="p-6 md:p-8 space-y-4 text-red-600 leading-relaxed">
                   <p>
-                    Jomhuria (جمهورية, meaning "Republic") is a typeface that embodies strength and modernity through its bold letterforms and clear Kufi influences. Designed by <strong className="text-red-800">Kourosh Beigpour</strong> for TitraShop, Jomhuria is intended for display purposes where visual impact is paramount.
+                    Jomhuria (جمهورية, meaning "Republic") is a typeface that embodies strength and modernity through its bold letterforms and clear Kufi influences. Designed by <strong className="text-red-600">Kourosh Beigpour</strong> for TitraShop, Jomhuria is intended for display purposes where visual impact is paramount.
                   </p>
                   <p>
                     The design draws inspiration from various historical Kufi styles, particularly the geometric and monumental aspects, but reinterprets them with a contemporary sensibility. The characters are often thick-stroked, with a strong emphasis on geometric shapes and a distinct rhythm. This makes Jomhuria exceptionally well-suited for headlines, logos, posters, and any application that needs to command attention and convey a sense of authority or artistic boldness.
@@ -261,10 +261,10 @@ export default function JomhuriaFontPage() {
                 </CardContent>
               </Card>
 
-              <h2 id="alphabet-showcase" className="text-3xl font-bold text-red-800 mt-12 mb-6">Jomhuria Showcase: Impactful Words</h2>
+              <h2 id="alphabet-showcase" className="text-3xl font-bold text-red-600 mt-12 mb-6">Jomhuria Showcase: Impactful Words</h2>
               <Card className="border-red-200 mb-12 bg-white">
                 <CardHeader>
-                  <CardTitle className="text-xl text-red-800">Bold Kufi-Inspired Letterforms</CardTitle>
+                  <CardTitle className="text-xl text-red-600">Bold Kufi-Inspired Letterforms</CardTitle>
                   <CardDescription className="text-red-600">Observe the strong, geometric, and impactful style of Jomhuria.</CardDescription>
                 </CardHeader>
                 <CardContent className="p-6">
@@ -278,7 +278,7 @@ export default function JomhuriaFontPage() {
                 </CardContent>
               </Card>
 
-              <h2 id="text-examples" className="text-3xl font-bold text-red-800 mt-12 mb-6">Jomhuria in Action: Display Examples</h2>
+              <h2 id="text-examples" className="text-3xl font-bold text-red-600 mt-12 mb-6">Jomhuria in Action: Display Examples</h2>
               <Tabs defaultValue={TEXT_EXAMPLES[0].id} className="w-full mb-12">
                 <TabsList className="grid w-full" style={{ gridTemplateColumns: `repeat(${TEXT_EXAMPLES.length}, 1fr)` }}>
                   {TEXT_EXAMPLES.map((example, index) => (
@@ -297,7 +297,7 @@ export default function JomhuriaFontPage() {
                         >
                           {example.text}
                         </div>
-                        <p className="text-center font-medium text-red-700 mb-2">{example.translation}</p>
+                        <p className="text-center font-medium text-red-600 mb-2">{example.translation}</p>
                         <p className="text-center text-sm text-red-600">{example.context}</p>
                       </CardContent>
                     </Card>
@@ -305,28 +305,28 @@ export default function JomhuriaFontPage() {
                 ))}
               </Tabs>
 
-              <h2 id="use-cases" className="text-3xl font-bold text-red-800 mt-12 mb-6">Ideal Use Cases for Jomhuria</h2>
+              <h2 id="use-cases" className="text-3xl font-bold text-red-600 mt-12 mb-6">Ideal Use Cases for Jomhuria</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 {IDEAL_USE_CASES.map((useCase) => (
                   <Card key={useCase.title} className="border-red-200 flex bg-white">
                     <div className="p-6 pr-0 flex items-center">{useCase.icon}</div>
                     <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold text-red-800 mb-1">{useCase.title}</h3>
-                      <p className="text-red-700 text-sm">{useCase.description}</p>
+                      <h3 className="text-lg font-semibold text-red-600 mb-1">{useCase.title}</h3>
+                      <p className="text-red-600 text-sm">{useCase.description}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
-              <h2 id="technical-details" className="text-3xl font-bold text-red-800 mt-12 mb-6">Technical Specifications</h2>
+              <h2 id="technical-details" className="text-3xl font-bold text-red-600 mt-12 mb-6">Technical Specifications</h2>
               <div className="space-y-6 mb-12">
                 {TECHNICAL_DETAILS.map((detail) => (
                   <Card key={detail.title} className="border-red-200 bg-white">
                     <CardHeader>
-                      <CardTitle className="text-xl text-red-800">{detail.title}</CardTitle>
+                      <CardTitle className="text-xl text-red-600">{detail.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-lg text-red-700 mb-1">{detail.value}</p>
+                      <p className="text-lg text-red-600 mb-1">{detail.value}</p>
                       {detail.description && <p className="text-sm text-red-600">{detail.description}</p>}
                     </CardContent>
                   </Card>
@@ -334,7 +334,7 @@ export default function JomhuriaFontPage() {
               </div>
 
               <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center p-6 bg-red-50 rounded-lg border border-red-200">
-                 <h3 className="text-2xl font-semibold text-red-800 text-center sm:text-left">Make a Statement with Jomhuria</h3>
+                 <h3 className="text-2xl font-semibold text-red-600 text-center sm:text-left">Make a Statement with Jomhuria</h3>
                 <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white">
                   <Link href="/?font=Jomhuria">Use Jomhuria in Calligraphy Generator</Link>
                 </Button>

@@ -39,10 +39,10 @@ export function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
           {items.map((item, index) => (
             <li key={item.href} className="flex items-center">
               {index > 0 && (
-                <ChevronRight className="h-4 w-4 mx-2 text-amber-400" />
+                <ChevronRight className="h-4 w-4 mx-2 text-amber-600" />
               )}
               {index === 0 && (
-                <Home className="h-4 w-4 mr-2 text-amber-500" />
+                <Home className="h-4 w-4 mr-2 text-amber-600" />
               )}
               {index === items.length - 1 ? (
                 <span className="font-medium text-amber-800" aria-current="page">

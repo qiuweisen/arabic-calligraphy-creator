@@ -94,32 +94,32 @@ const IDEAL_USE_CASES = [
   {
     title: "E-books & Digital Publishing",
     description: "Provides a comfortable and engaging reading experience for lengthy texts on digital devices.",
-    icon: <BookOpen className="h-5 w-5 text-emerald-700" />
+    icon: <BookOpen className="h-5 w-5 text-emerald-600" />
   },
   {
     title: "Online Newspapers & Magazines",
     description: "Ensures excellent legibility for articles and news content, enhancing reader engagement.",
-    icon: <MonitorPlay className="h-5 w-5 text-emerald-700" />
+    icon: <MonitorPlay className="h-5 w-5 text-emerald-600" />
   },
   {
     title: "Academic Journals & Research Papers",
     description: "Its clarity and formal Naskh roots make it suitable for scholarly and academic publications.",
-    icon: <Feather className="h-5 w-5 text-emerald-700" />
+    icon: <Feather className="h-5 w-5 text-emerald-600" />
   },
   {
     title: "Website Content (Long-Form Articles)",
     description: "Perfect for blogs, detailed articles, and any web page with substantial text content.",
-    icon: <Type className="h-5 w-5 text-emerald-700" />
+    icon: <Type className="h-5 w-5 text-emerald-600" />
   },
   {
     title: "Educational Texts & Materials",
     description: "Supports clear communication in textbooks, learning materials, and instructional content.",
-    icon: <Edit3 className="h-5 w-5 text-emerald-700" />
+    icon: <Edit3 className="h-5 w-5 text-emerald-600" />
   },
   {
     title: "Corporate Reports & Documentation",
     description: "Lends a professional and highly readable quality to official documents and reports.",
-    icon: <Layers className="h-5 w-5 text-emerald-700" />
+    icon: <Layers className="h-5 w-5 text-emerald-600" />
   }
 ];
 
@@ -227,7 +227,7 @@ export default function MarkaziTextFontPage() {
               className="mb-6"
             />
 
-            <Button asChild variant="ghost" className="mb-4 text-emerald-600 hover:text-emerald-800 hover:bg-emerald-50">
+            <Button asChild variant="ghost" className="mb-4 text-emerald-600 hover:text-emerald-600 hover:bg-emerald-50">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Fonts
@@ -244,8 +244,8 @@ export default function MarkaziTextFontPage() {
                   </div>
                   <div className="w-full md:w-2/3">
                     <span className="text-xs text-emerald-600 font-medium px-2 py-1 bg-emerald-50 rounded-full mb-2 inline-block">Naskh (Optimized for Text)</span>
-                    <h1 className="text-4xl md:text-5xl font-bold text-emerald-800 mt-1 mb-3">Markazi Text Font</h1>
-                    <p className="text-lg text-emerald-700 mb-6 leading-relaxed">
+                    <h1 className="text-4xl md:text-5xl font-bold text-emerald-600 mt-1 mb-3">Markazi Text Font</h1>
+                    <p className="text-lg text-emerald-600 mb-6 leading-relaxed">
                       Markazi Text is a Naskh-inspired Arabic typeface masterfully designed by Borna Izadpanah for optimal readability in extended text. It beautifully balances traditional aesthetics with modern screen performance, making it ideal for digital publications and academic content.
                     </p>
                     <div className="flex gap-4">
@@ -265,26 +265,26 @@ export default function MarkaziTextFontPage() {
             </Card>
 
             <div className="prose prose-emerald max-w-none">
-              <h2 id="distinctive-features" className="text-3xl font-bold text-emerald-800 mt-12 mb-6">Distinctive Features of Markazi Text</h2>
+              <h2 id="distinctive-features" className="text-3xl font-bold text-emerald-600 mt-12 mb-6">Distinctive Features of Markazi Text</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                 {FONT_FEATURES.map((feature) => (
                   <Card key={feature.title} className="border-emerald-200 flex flex-col bg-white">
                     <CardHeader className="items-center text-center">
                       {feature.icon}
-                      <CardTitle className="text-xl text-emerald-800">{feature.title}</CardTitle>
+                      <CardTitle className="text-xl text-emerald-600">{feature.title}</CardTitle>
                     </CardHeader>
                     <CardContent className="text-center flex-grow">
-                      <p className="text-emerald-700 text-sm">{feature.description}</p>
+                      <p className="text-emerald-600 text-sm">{feature.description}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
-              <h2 id="design-philosophy" className="text-3xl font-bold text-emerald-800 mt-12 mb-6">Design Philosophy: Readability Rooted in Tradition</h2>
+              <h2 id="design-philosophy" className="text-3xl font-bold text-emerald-600 mt-12 mb-6">Design Philosophy: Readability Rooted in Tradition</h2>
               <Card className="border-emerald-200 mb-12 bg-white">
-                <CardContent className="p-6 md:p-8 space-y-4 text-emerald-700 leading-relaxed">
+                <CardContent className="p-6 md:p-8 space-y-4 text-emerald-600 leading-relaxed">
                   <p>
-                    Markazi Text (مركزي, meaning "central" or "primary") is an Arabic typeface specifically designed by <strong className="text-emerald-800">Borna Izadpanah</strong>, with contributions from Fiona Ross and Tim Holloway for Google Fonts. Its primary goal is to provide an exceptional reading experience for extended Arabic text, particularly on digital screens.
+                    Markazi Text (مركزي, meaning "central" or "primary") is an Arabic typeface specifically designed by <strong className="text-emerald-600">Borna Izadpanah</strong>, with contributions from Fiona Ross and Tim Holloway for Google Fonts. Its primary goal is to provide an exceptional reading experience for extended Arabic text, particularly on digital screens.
                   </p>
                   <p>
                     The design draws deep inspiration from the classical Naskh calligraphic style, which has long been the standard for legible Arabic text. However, Markazi Text is not merely a digitization of historical forms; it is a careful reinterpretation and optimization for contemporary typographic needs. It features well-defined letter shapes, generous counters, and carefully considered spacing to enhance clarity and reduce reader fatigue during long reading sessions.
@@ -295,21 +295,21 @@ export default function MarkaziTextFontPage() {
                 </CardContent>
               </Card>
 
-              <h2 id="alphabet-showcase" className="text-3xl font-bold text-emerald-800 mt-12 mb-6">Markazi Text Alphabet Showcase (Arabic & Latin)</h2>
+              <h2 id="alphabet-showcase" className="text-3xl font-bold text-emerald-600 mt-12 mb-6">Markazi Text Alphabet Showcase (Arabic & Latin)</h2>
               <Card className="border-emerald-200 mb-12 bg-white">
                 <CardHeader>
-                  <CardTitle className="text-xl text-emerald-800">Clear Naskh-Inspired Letterforms</CardTitle>
+                  <CardTitle className="text-xl text-emerald-600">Clear Naskh-Inspired Letterforms</CardTitle>
                   <CardDescription className="text-emerald-600">Observe the legible and traditional yet modern style of Markazi Text.</CardDescription>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-emerald-700 mb-2 text-center">Arabic</h3>
+                  <h3 className="text-lg font-semibold text-emerald-600 mb-2 text-center">Arabic</h3>
                   <div
                     className="text-center leading-loose mb-6"
                     style={{ fontFamily: "'Markazi Text', serif", fontSize: "30px", direction: "rtl" }}
                   >
                     {ARABIC_ALPHABET_MARKAZI}
                   </div>
-                  <h3 className="text-lg font-semibold text-emerald-700 mb-2 text-center">Latin (Example)</h3>
+                  <h3 className="text-lg font-semibold text-emerald-600 mb-2 text-center">Latin (Example)</h3>
                   <div
                     className="text-center leading-loose"
                     style={{ fontFamily: "'Markazi Text', serif", fontSize: "24px" }}
@@ -319,7 +319,7 @@ export default function MarkaziTextFontPage() {
                 </CardContent>
               </Card>
 
-              <h2 id="text-examples" className="text-3xl font-bold text-emerald-800 mt-12 mb-6">Markazi Text in Action: Reading Examples</h2>
+              <h2 id="text-examples" className="text-3xl font-bold text-emerald-600 mt-12 mb-6">Markazi Text in Action: Reading Examples</h2>
               <Tabs defaultValue={TEXT_EXAMPLES[0].id} className="w-full mb-12">
                 <TabsList className="grid w-full" style={{ gridTemplateColumns: `repeat(${TEXT_EXAMPLES.length}, 1fr)` }}>
                   {TEXT_EXAMPLES.map((example, index) => (
@@ -338,7 +338,7 @@ export default function MarkaziTextFontPage() {
                         >
                           {example.text}
                         </div>
-                        <p className="text-center font-medium text-emerald-700 mb-2">{example.translation}</p>
+                        <p className="text-center font-medium text-emerald-600 mb-2">{example.translation}</p>
                         <p className="text-center text-sm text-emerald-600">{example.context}</p>
                       </CardContent>
                     </Card>
@@ -346,28 +346,28 @@ export default function MarkaziTextFontPage() {
                 ))}
               </Tabs>
 
-              <h2 id="use-cases" className="text-3xl font-bold text-emerald-800 mt-12 mb-6">Ideal Use Cases for Markazi Text</h2>
+              <h2 id="use-cases" className="text-3xl font-bold text-emerald-600 mt-12 mb-6">Ideal Use Cases for Markazi Text</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 {IDEAL_USE_CASES.map((useCase) => (
                   <Card key={useCase.title} className="border-emerald-200 flex bg-white">
                     <div className="p-6 pr-0 flex items-center">{useCase.icon}</div>
                     <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold text-emerald-800 mb-1">{useCase.title}</h3>
-                      <p className="text-emerald-700 text-sm">{useCase.description}</p>
+                      <h3 className="text-lg font-semibold text-emerald-600 mb-1">{useCase.title}</h3>
+                      <p className="text-emerald-600 text-sm">{useCase.description}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
-              <h2 id="technical-details" className="text-3xl font-bold text-emerald-800 mt-12 mb-6">Technical Specifications</h2>
+              <h2 id="technical-details" className="text-3xl font-bold text-emerald-600 mt-12 mb-6">Technical Specifications</h2>
               <div className="space-y-6 mb-12">
                 {TECHNICAL_DETAILS.map((detail) => (
                   <Card key={detail.title} className="border-emerald-200 bg-white">
                     <CardHeader>
-                      <CardTitle className="text-xl text-emerald-800">{detail.title}</CardTitle>
+                      <CardTitle className="text-xl text-emerald-600">{detail.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-lg text-emerald-700 mb-1">{detail.value}</p>
+                      <p className="text-lg text-emerald-600 mb-1">{detail.value}</p>
                       {detail.description && <p className="text-sm text-emerald-600">{detail.description}</p>}
                     </CardContent>
                   </Card>
@@ -375,7 +375,7 @@ export default function MarkaziTextFontPage() {
               </div>
 
               <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center p-6 bg-emerald-50 rounded-lg border border-emerald-200">
-                 <h3 className="text-2xl font-semibold text-emerald-800 text-center sm:text-left">Experience Superior Readability with Markazi Text</h3>
+                 <h3 className="text-2xl font-semibold text-emerald-600 text-center sm:text-left">Experience Superior Readability with Markazi Text</h3>
                 <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
                   <Link href="/?font=Markazi%20Text">Use Markazi Text in Calligraphy Generator</Link>
                 </Button>

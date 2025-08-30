@@ -174,7 +174,7 @@ export default function TutorialsPage() {
             <h3 className="text-lg font-semibold text-amber-800 mb-2">{tutorial.title}</h3>
             <p className="text-amber-700 text-sm mb-3">{tutorial.description}</p>
             <div className="flex items-center justify-between">
-              <span className="text-xs text-amber-500">{tutorial.duration} read</span>
+              <span className="text-xs text-amber-600">{tutorial.duration} read</span>
               <Link 
                 href={getTutorialLink(tutorial)}
                 className="text-sm font-medium text-amber-600 hover:text-amber-800 flex items-center"
