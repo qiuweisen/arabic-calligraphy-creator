@@ -15,8 +15,10 @@ export function Navbar() {
   const t = useTranslations('navigation')
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
+    setIsClient(true)
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
     }
@@ -64,7 +66,7 @@ export function Navbar() {
     <header
       className={cn(
         "sticky top-0 z-50 transition-all duration-300",
-        isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-2" : "bg-transparent py-4",
+        isClient && isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-2" : "bg-transparent py-4",
       )}
     >
       <div className="container mx-auto px-4">

@@ -16,6 +16,23 @@ import { getFeaturedFonts, FONT_CATEGORIES } from "@/lib/content-links"
 
 import { CalligraphyGenerator } from "@/components/calligraphy-generator"
 
+// Dynamic import for CalligraphyGenerator to avoid hydration issues
+const DynamicCalligraphyGenerator = dynamic(
+  () => import("@/components/calligraphy-generator").then((mod) => ({ default: mod.CalligraphyGenerator })),
+  {
+    loading: () => (
+      <div className="bg-white rounded-xl p-8 shadow-sm border text-center">
+        <div className="animate-pulse">
+          <div className="h-6 bg-gray-200 rounded w-1/3 mx-auto mb-4"></div>
+          <div className="h-32 bg-gray-200 rounded mb-4"></div>
+          <div className="h-10 bg-gray-200 rounded w-1/4 mx-auto"></div>
+        </div>
+      </div>
+    ),
+    ssr: false,
+  }
+)
+
 // Dynamic import for use cases section (non-critical)
 const UseCasesSection = dynamic(
   () => import("@/components/home/use-cases-section").then((mod) => ({ default: mod.UseCasesSection })),
@@ -55,9 +72,11 @@ export default function Home() {
 
   const [selectedFont, setSelectedFont] = useState<string | undefined>(undefined)
   const [showAllFeaturedFonts, setShowAllFeaturedFonts] = useState(false)
+  const [isClient, setIsClient] = useState(false)
 
   // Handle URL parameter for font selection
   useEffect(() => {
+    setIsClient(true)
     if (typeof window !== 'undefined') {
       const urlParams = new URLSearchParams(window.location.search)
       const fontParam = urlParams.get('font')
@@ -285,8 +304,8 @@ export default function Home() {
               </div>
             </noscript>
 
-            <CalligraphyGenerator
-              initialFont={selectedFont}
+            <DynamicCalligraphyGenerator
+              initialFont={isClient ? selectedFont : undefined}
               onFontChange={handleGeneratorFontChange}
             />
           </div>
