@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react"
+import { Breadcrumb } from "@/components/breadcrumb"
+import { GeneratorCTA } from "@/components/generator-cta"
 
 export const metadata: Metadata = {
   title: "Contact Us | Arabic Calligraphy Generator",
@@ -31,6 +33,7 @@ export default function ContactPage() {
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            <Breadcrumb items={[{"label":"联系我们"}]} />
             <div className="text-center mb-12">
               <h1 className="text-3xl md:text-4xl font-bold text-amber-800 mb-4">Contact Us</h1>
               <p className="text-amber-700 text-lg max-w-2xl mx-auto">

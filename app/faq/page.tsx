@@ -114,7 +114,29 @@ export default function FAQPage() {
             <CardTitle className="text-2xl text-amber-800">General Calligraphy Questions</CardTitle>
           </CardHeader>
           <CardContent>
-            <Accordion type="single" collapsible className="w-full">
+            
+            <div className="grid md:grid-cols-3 gap-4 mb-8">
+              <div className="text-center p-4 bg-blue-50 rounded-lg">
+                <h3 className="font-semibold text-blue-900 mb-2">快速开始</h3>
+                <p className="text-sm text-blue-700 mb-3">立即生成您的第一个书法作品</p>
+                <GeneratorCTA variant="outline" size="sm" text="开始生成" />
+              </div>
+              <div className="text-center p-4 bg-green-50 rounded-lg">
+                <h3 className="font-semibold text-green-900 mb-2">浏览示例</h3>
+                <p className="text-sm text-green-700 mb-3">查看精美的书法作品示例</p>
+                <Button variant="outline" size="sm" asChild>
+                  <Link href="/templates">查看模板</Link>
+                </Button>
+              </div>
+              <div className="text-center p-4 bg-purple-50 rounded-lg">
+                <h3 className="font-semibold text-purple-900 mb-2">学习指南</h3>
+                <p className="text-sm text-purple-700 mb-3">了解书法艺术和使用技巧</p>
+                <Button variant="outline" size="sm" asChild>
+                  <Link href="/guides">学习更多</Link>
+                </Button>
+              </div>
+            </div>
+                <Accordion type="single" collapsible className="w-full">
               {faqs.slice(0, generalQuestionsEndIndex).map((faq, index) => (
                 <AccordionItem key={`general-${index}`} value={`general-item-${index}`}>
                   <AccordionTrigger className="text-lg font-medium text-amber-800">{faq.question}</AccordionTrigger>

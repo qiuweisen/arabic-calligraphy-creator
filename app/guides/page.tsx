@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { BookOpen, ArrowRight, Star, Clock, Users } from "lucide-react"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
   title: "Arabic Calligraphy Learning Guides | Comprehensive Study Path",
@@ -98,6 +99,7 @@ export default function GuidesPage() {
       <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
+            <Breadcrumb items={[{"label":"使用指南"}]} />
             <div className="text-center mb-12">
               <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
                 Arabic Calligraphy Guides

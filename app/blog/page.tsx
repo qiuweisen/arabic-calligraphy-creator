@@ -4,6 +4,8 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { ArrowRight, Type } from "lucide-react"
+import { Breadcrumb } from "@/components/breadcrumb"
+import { GeneratorCTA } from "@/components/generator-cta"
 import { getFeaturedFonts } from "@/lib/content-links"
 import { StaticNavbar } from "@/components/static-navbar"
 import { Footer } from "@/components/footer"
@@ -82,14 +84,38 @@ export default function BlogPage() {
       <StaticNavbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
       <div className="container mx-auto px-4 py-8 md:py-16">
-        <header className="mb-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-800 to-amber-600 mb-4">
-            الخط العربي Blog
-          </h1>
-          <p className="text-xl text-amber-700 max-w-2xl mx-auto">
-            Explore the rich world of Arabic calligraphy through our articles about history, styles, techniques, and
-            more.
-          </p>
+        {/* Breadcrumb Navigation */}
+        <Breadcrumb 
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Blog", href: "/blog" }
+          ]}
+          className="mb-6"
+        />
+
+        {/* Hero Section */}
+        <header className="mb-16 text-center relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-amber-100/50 to-orange-100/50 rounded-2xl -z-10"></div>
+          <div className="relative py-12 px-6">
+            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-800 to-amber-600 mb-6">
+              Arabic Calligraphy Knowledge Hub
+            </h1>
+            <p className="text-xl text-amber-700 max-w-3xl mx-auto leading-relaxed">
+              Discover the timeless art of Arabic calligraphy through expert insights, historical perspectives, 
+              and practical guides. From ancient scripts to modern digital typography.
+            </p>
+            <div className="mt-8">
+              <GeneratorCTA 
+                variant="default"
+                size="lg"
+                text="Start Creating Now"
+                className="mr-4"
+              />
+              <Button asChild variant="outline" size="lg" className="border-amber-600 text-amber-600 hover:bg-amber-50">
+                <Link href="#featured-articles">Explore Articles</Link>
+              </Button>
+            </div>
+          </div>
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -119,6 +145,14 @@ export default function BlogPage() {
                 <CardDescription>{post.description}</CardDescription>
               </CardHeader>
               <CardFooter>
+                <div className="mt-4 pt-4 border-t">
+                  <GeneratorCTA 
+                    variant="outline" 
+                    size="sm" 
+                    text="用此风格生成" 
+                    className="w-full"
+                  />
+                </div>
                 <Button asChild variant="link" className="ml-auto text-amber-600 hover:text-amber-700 p-0">
                   <Link href={`/blog/${post.id}`}>
                     Read More <ArrowRight className="ml-1 h-4 w-4" />
