@@ -1731,7 +1731,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
     </>
   )
 
-  // Mobile UI Component for Templates
+  // Mobile UI Component for Templates - 简化版
   const MobileTemplateDrawer = () => (
     <Drawer open={isTemplateDialogOpen} onOpenChange={setIsTemplateDialogOpen}>
       <DrawerContent>
@@ -1739,29 +1739,36 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
           <DrawerTitle className="text-xl font-semibold text-amber-800 text-center">{t('ui.featuredTemplates')}</DrawerTitle>
         </DrawerHeader>
         <div className="px-4 pb-6">
-          <div className="grid grid-cols-1 gap-4 max-h-[60vh] overflow-y-auto pb-6">
-            {COMMON_PHRASES.map((phrase, index) => (
+          <div className="grid grid-cols-1 gap-3 max-h-[60vh] overflow-y-auto pb-6">
+            {COMMON_PHRASES.slice(0, 6).map((phrase, index) => (
               <div
                 key={index}
-                className="p-4 rounded-lg cursor-pointer hover:shadow-md transition-shadow border border-amber-100 bg-gradient-to-r from-amber-50 to-white"
-                onClick={() => handleTemplateSelect({ text: phrase.text })}
+                className="p-4 rounded-lg cursor-pointer hover:bg-amber-50 transition-colors border border-amber-100 bg-white"
+                onClick={() => {
+                  setText(phrase.text)
+                  setIsTemplateDialogOpen(false)
+                  toast({
+                    title: t('toasts.templateApplied'),
+                    description: t('toasts.templateAppliedDesc'),
+                  })
+                }}
               >
                 <div
                   dir="rtl"
-                  className="text-center py-2 font-arabic"
-                  style={{
-                    fontFamily: ARABIC_FONTS[index % ARABIC_FONTS.length].value,
-                    fontSize: "24px",
-                    color: "#8B5A2B",
-                  }}
+                  className="text-center py-2 text-lg font-medium text-amber-800"
                 >
                   {phrase.text}
                 </div>
-                <div className="text-xs text-center text-amber-700 mt-2">
-                  {t(`commonPhrases.${['bismillah', 'alhamdulillah', 'mashallah', 'subhanallah', 'allahuakbar', 'lailahaillallah', 'astaghfirullah', 'allahummasalli'][index]}`)}
+                <div className="text-sm text-center text-amber-600 mt-1">
+                  {phrase.translation}
                 </div>
               </div>
             ))}
+          </div>
+          <div className="text-center pt-2 border-t border-amber-200">
+            <Button variant="link" className="text-amber-600" asChild>
+              <a href="/templates">{t('ui.browseAllTemplates')}</a>
+            </Button>
           </div>
         </div>
       </DrawerContent>
@@ -2015,7 +2022,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
               </CardContent>
             </Card>
 
-            {/* Templates Card */}
+            {/* Simplified Featured Templates */}
             <Card className="overflow-hidden border-amber-200 bg-white/80 backdrop-blur-sm">
               <CardContent className="p-6">
                 <div className="flex justify-between items-center mb-4">
@@ -2024,57 +2031,30 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                     {t('featuredDesigns.topPicks')}
                   </Badge>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                {/* 简化的静态图片网格 */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                   {[
-                    {
-                      text: "بسم الله الرحمن الرحيم",
-                      font: ARABIC_FONTS[0].value, // Amiri (Traditional)
-                      color: "#8B4513",
-                      bg: "#FFF8E1",
-                      svg: "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/default-images/featured-1.svg"
-                    },
-                    {
-                      text: "الحمد لله",
-                      font: ARABIC_FONTS[7].value, // Cairo (Modern)
-                      color: "#006400",
-                      bg: "#F0FFF0",
-                      svg: "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/default-images/featured-2.svg"
-                    },
-                    {
-                      text: "سبحان الله",
-                      font: ARABIC_FONTS[4].value, // Reem Kufi (Kufi)
-                      color: "#4B0082",
-                      bg: "#F8F4FF",
-                      svg: "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/default-images/featured-3.svg"
-                    },
-                    {
-                      text: "الله أكبر",
-                      font: ARABIC_FONTS[3].value, // Aref Ruqaa (Diwani)
-                      color: "#800000",
-                      bg: "#FFF0F0",
-                      svg: "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/default-images/featured-4.svg"
-                    },
-                  ].map((design, index) => (
+                    { text: "بسم الله الرحمن الرحيم", svg: "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/default-images/featured-1.svg" },
+                    { text: "الحمد لله", svg: "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/default-images/featured-2.svg" },
+                    { text: "سبحان الله", svg: "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/default-images/featured-3.svg" },
+                    { text: "الله أكبر", svg: "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/default-images/featured-4.svg" },
+                  ].map((template, index) => (
                     <div
                       key={index}
-                      className="cursor-pointer hover:shadow-md transition-shadow rounded-lg overflow-hidden"
+                      className="cursor-pointer hover:scale-105 transition-transform rounded-lg overflow-hidden border border-amber-100"
                       onClick={() => {
-                        setText(design.text)
-                        setFont(design.font)
-                        setTextColor(design.color)
-                        setBackgroundColor(design.bg)
-                        setUseGradient(false)
-
+                        // 简化：只设置文本，让用户自己调整样式
+                        setText(template.text)
                         toast({
-                          title: t('toasts.designApplied'),
-                          description: t('toasts.designAppliedDesc'),
+                          title: t('toasts.templateApplied'),
+                          description: t('toasts.templateAppliedDesc'),
                         })
                       }}
                     >
-                      {/* 使用静态SVG图片替代动态渲染 */}
                       <img 
-                        src={design.svg} 
-                        alt={design.text}
+                        src={template.svg} 
+                        alt={template.text}
                         className="w-full h-auto"
                         loading="lazy"
                       />
@@ -2082,9 +2062,11 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                   ))}
                 </div>
 
-                <Button variant="link" className="mt-4 text-amber-600 hover:text-amber-700" asChild>
-                  <a href="#features">{t('ui.viewAllTemplates')}</a>
-                </Button>
+                <div className="mt-4 text-center">
+                  <Button variant="link" className="text-amber-600 hover:text-amber-700" asChild>
+                    <a href="/templates">{t('ui.viewAllTemplates')}</a>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </div>
