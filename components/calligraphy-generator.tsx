@@ -19,14 +19,11 @@ import {
   Bookmark,
   SlidersHorizontal,
   Edit,
-  BookOpen,
-  HelpCircle,
   ChevronRight,
   Sparkles,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Slider } from "@/components/ui/slider"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
@@ -961,18 +958,36 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
             <DrawerHeader className="border-b border-amber-200">
               <DrawerTitle className="text-xl font-semibold text-amber-800 text-center">{t('ui.calligraphyControls')}</DrawerTitle>
             </DrawerHeader>
-            <Tabs defaultValue="text" className="w-full flex-grow flex flex-col">
-              <TabsList className="grid grid-cols-3 m-4 mb-0">
-                <TabsTrigger value="text" className="flex items-center gap-2"><Type className="h-4 w-4" /><span>{t('ui.text')}</span></TabsTrigger>
-                <TabsTrigger value="style" className="flex items-center gap-2"><Palette className="h-4 w-4" /><span>{t('ui.style')}</span></TabsTrigger>
-                <TabsTrigger value="advanced" className="flex items-center gap-2"><Sliders className="h-4 w-4" /><span>{t('ui.advanced')}</span></TabsTrigger>
-              </TabsList>
-              <ScrollArea className="flex-grow p-4">
-                <TabsContent value="text" className="space-y-6 mt-0"><TextTabContent /></TabsContent>
-                <TabsContent value="style" className="space-y-6 mt-0"><StyleTabContent /></TabsContent>
-                <TabsContent value="advanced" className="space-y-6 mt-0"><AdvancedTabContent /></TabsContent>
-              </ScrollArea>
-            </Tabs>
+            <ScrollArea className="flex-grow p-4">
+              <div className="space-y-8">
+                {/* 📝 文本输入分组 */}
+                <div className="space-y-6">
+                  <div className="flex items-center gap-2 pb-2 border-b border-amber-200">
+                    <Type className="h-5 w-5 text-amber-600" />
+                    <h3 className="text-lg font-semibold text-amber-800">{t('tabs.text')}</h3>
+                  </div>
+                  <TextTabContent />
+                </div>
+
+                {/* 🎨 样式设置分组 */}
+                <div className="space-y-6">
+                  <div className="flex items-center gap-2 pb-2 border-b border-amber-200">
+                    <Palette className="h-5 w-5 text-amber-600" />
+                    <h3 className="text-lg font-semibold text-amber-800">{t('tabs.style')}</h3>
+                  </div>
+                  <StyleTabContent />
+                </div>
+
+                {/* ⚙️ 高级选项分组 */}
+                <div className="space-y-6">
+                  <div className="flex items-center gap-2 pb-2 border-b border-amber-200">
+                    <Sliders className="h-5 w-5 text-amber-600" />
+                    <h3 className="text-lg font-semibold text-amber-800">{t('tabs.advanced')}</h3>
+                  </div>
+                  <AdvancedTabContent />
+                </div>
+              </div>
+            </ScrollArea>
           </div>
         </DrawerContent>
       </Drawer>
@@ -1674,36 +1689,36 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
         <div className={cn("lg:col-span-1 space-y-6", isMobile && "hidden")}>
           <Card className="overflow-hidden border-amber-200 bg-white/80 backdrop-blur-sm">
             <CardContent className="p-6">
-              <Tabs defaultValue="text" className="w-full">
-                <TabsList className="grid grid-cols-3 mb-4">
-                  <TabsTrigger value="text" className="flex items-center gap-2">
-                    <Type className="h-4 w-4" />
-                    <span>{t('tabs.text')}</span>
-                  </TabsTrigger>
-                  <TabsTrigger value="style" className="flex items-center gap-2">
-                    <Palette className="h-4 w-4" />
-                    <span>{t('tabs.style')}</span>
-                  </TabsTrigger>
-                  <TabsTrigger value="advanced" className="flex items-center gap-2">
-                    <Sliders className="h-4 w-4" />
-                    <span>{t('tabs.advanced')}</span>
-                  </TabsTrigger>
-                </TabsList>
-
-                <ScrollArea className="h-[600px] lg:h-[calc(100vh-320px)] lg:min-h-[500px]">
-                  <TabsContent value="text" className="space-y-4">
+              <ScrollArea className="h-[600px] lg:h-[calc(100vh-320px)] lg:min-h-[500px]">
+                <div className="space-y-8">
+                  {/* 📝 文本输入分组 */}
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2 pb-2 border-b border-amber-100">
+                      <Type className="h-5 w-5 text-amber-600" />
+                      <h3 className="text-lg font-semibold text-amber-800">{t('tabs.text')}</h3>
+                    </div>
                     <TextTabContent />
-                  </TabsContent>
+                  </div>
 
-                  <TabsContent value="style" className="space-y-4">
+                  {/* 🎨 样式设置分组 */}
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2 pb-2 border-b border-amber-100">
+                      <Palette className="h-5 w-5 text-amber-600" />
+                      <h3 className="text-lg font-semibold text-amber-800">{t('tabs.style')}</h3>
+                    </div>
                     <StyleTabContent />
-                  </TabsContent>
+                  </div>
 
-                  <TabsContent value="advanced" className="space-y-4">
+                  {/* ⚙️ 高级选项分组 */}
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2 pb-2 border-b border-amber-100">
+                      <Sliders className="h-5 w-5 text-amber-600" />
+                      <h3 className="text-lg font-semibold text-amber-800">{t('tabs.advanced')}</h3>
+                    </div>
                     <AdvancedTabContent />
-                  </TabsContent>
-                </ScrollArea>
-              </Tabs>
+                  </div>
+                </div>
+              </ScrollArea>
 
               <div className="flex justify-between mt-6">
                 <TooltipProvider>
@@ -1750,27 +1765,6 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                     </div>
                   </PopoverContent>
                 </Popover>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Quick Links for Desktop */}
-          <Card className="overflow-hidden border-amber-200 bg-white/80 backdrop-blur-sm">
-            <CardContent className="p-6">
-              <h3 className="text-lg font-semibold text-amber-800 mb-3">{t('quickLinks.title')}</h3>
-              <div className="grid grid-cols-2 gap-3">
-                <Button variant="outline" className="justify-start border-amber-200" asChild>
-                  <a href="/blog">
-                    <BookOpen className="h-4 w-4 mr-2" />
-                    {t('quickLinks.blog')}
-                  </a>
-                </Button>
-                <Button variant="outline" className="justify-start border-amber-200" asChild>
-                  <a href="/faq">
-                    <HelpCircle className="h-4 w-4 mr-2" />
-                    {t('quickLinks.faq')}
-                  </a>
-                </Button>
               </div>
             </CardContent>
           </Card>
