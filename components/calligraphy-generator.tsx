@@ -38,7 +38,6 @@ import { Separator } from "@/components/ui/separator"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { useMobile } from "@/hooks/use-mobile"
 import { useFontLoader } from "@/hooks/use-font-loader"
-import { ArabicKeyboard } from "@/components/arabic-keyboard"
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle } from "@/components/ui/drawer"
 import { TemplateBrowser } from "@/components/template-browser"
 import { FontPreview } from "@/components/font-preview"
@@ -292,9 +291,9 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
   const [fontWeight, setFontWeight] = useState(400)
   const [fontStyle, setFontStyle] = useState("normal")
   const [favorites, setFavorites] = useState<Array<string>>([])
-  const [keyboardVisible, setKeyboardVisible] = useState(false)
   const [isTemplateDialogOpen, setIsTemplateDialogOpen] = useState(false)
   const [isControlsSheetOpen, setIsControlsSheetOpen] = useState(false)
+  const [showAdvancedOnMobile, setShowAdvancedOnMobile] = useState(false)
 
   // 追踪用户是否已开始编辑（避免重复追踪）
   const [hasStartedEditing, setHasStartedEditing] = useState(false)
@@ -332,16 +331,6 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
       }
     }
   }, [initialFont, font, loadFont])
-
-  // Toggle keyboard visibility
-  const toggleKeyboard = useCallback(() => {
-    setKeyboardVisible(!keyboardVisible)
-  }, [keyboardVisible])
-
-  // Handle text insertion from virtual keyboard
-  const handleKeyPress = useCallback((char: string) => {
-    setText((prev) => prev + char)
-  }, [])
 
   const handleTextChange = useCallback((e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newText = e.target.value || DEFAULT_TEXT
@@ -969,22 +958,33 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                   <TextTabContent />
                 </div>
 
-                {/* 🎨 样式设置分组 */}
+                {/* 🎨 样式设置分组 - 移动端简化版 */}
                 <div className="space-y-6">
                   <div className="flex items-center gap-2 pb-2 border-b border-amber-200">
                     <Palette className="h-5 w-5 text-amber-600" />
                     <h3 className="text-lg font-semibold text-amber-800">{t('tabs.style')}</h3>
                   </div>
-                  <StyleTabContent />
+                  <MobileStyleTabContent />
                 </div>
 
-                {/* ⚙️ 高级选项分组 */}
+                {/* ⚙️ 高级选项分组 - 移动端可折叠 */}
                 <div className="space-y-6">
-                  <div className="flex items-center gap-2 pb-2 border-b border-amber-200">
-                    <Sliders className="h-5 w-5 text-amber-600" />
-                    <h3 className="text-lg font-semibold text-amber-800">{t('tabs.advanced')}</h3>
+                  <div 
+                    className="flex items-center justify-between pb-2 border-b border-amber-200 cursor-pointer"
+                    onClick={() => setShowAdvancedOnMobile(!showAdvancedOnMobile)}
+                  >
+                    <div className="flex items-center gap-2">
+                      <Sliders className="h-5 w-5 text-amber-600" />
+                      <h3 className="text-lg font-semibold text-amber-800">{t('tabs.advanced')}</h3>
+                    </div>
+                    <ChevronRight 
+                      className={cn(
+                        "h-5 w-5 text-amber-600 transition-transform duration-200",
+                        showAdvancedOnMobile && "rotate-90"
+                      )} 
+                    />
                   </div>
-                  <AdvancedTabContent />
+                  {showAdvancedOnMobile && <AdvancedTabContent />}
                 </div>
               </div>
             </ScrollArea>
@@ -1020,12 +1020,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
     return (
     <>
       <div className="space-y-3">
-        <div className="flex items-center justify-between">
-          <Label htmlFor="arabic-text" className="text-base font-medium">{t('textTab.arabicText')}</Label>
-          <Button variant="ghost" size="sm" onClick={toggleKeyboard} className="h-8 px-3 text-sm">
-            {keyboardVisible ? t('textTab.hideKeyboard') : t('textTab.showKeyboard')}
-          </Button>
-        </div>
+        <Label htmlFor="arabic-text" className="text-base font-medium">{t('textTab.arabicText')}</Label>
         <Textarea
           id="arabic-text"
           dir="rtl"
@@ -1034,11 +1029,6 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
           onChange={handleTextChange}
           className="min-h-[120px] font-arabic text-lg p-4 touch-manipulation"
         />
-        {keyboardVisible && (
-          <div className="pt-2">
-            <ArabicKeyboard onKeyPress={handleKeyPress} />
-          </div>
-        )}
       </div>
 
       <div className="flex justify-between gap-4">
@@ -1492,6 +1482,144 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
       </div>
     </>
   )
+  }
+
+  // Mobile Style Tab Content - 只包含高频样式选项
+  const MobileStyleTabContent = () => {
+    // 使用useState和useEffect确保组件在客户端渲染时保持一致
+    const [mounted, setMounted] = useState(false)
+    
+    useEffect(() => {
+      setMounted(true)
+    }, [])
+    
+    // 在客户端渲染之前，返回一个简单的占位符
+    if (!mounted) {
+      return <div className="space-y-4 animate-pulse">
+        <div className="h-12 bg-gray-100 rounded-md"></div>
+        <div className="h-16 bg-gray-100 rounded-md"></div>
+        <div className="h-12 bg-gray-100 rounded-md"></div>
+      </div>
+    }
+    
+    return (
+    <>
+      {/* 文本颜色 - 高频 */}
+      <div className="space-y-3">
+        <div className="flex items-center justify-between">
+          <Label className="text-base font-medium">{t('ui.textColor')}</Label>
+          <Switch 
+            checked={useGradient} 
+            onCheckedChange={setUseGradient}
+          />
+        </div>
+        
+        {useGradient ? (
+          <div className="grid grid-cols-2 gap-3">
+            <div className="space-y-2">
+              <Label className="text-sm">{t('ui.from')}</Label>
+              <div className="flex gap-2">
+                <input
+                  type="color"
+                  value={gradientColors.from}
+                  onChange={(e) => setGradientColors((prev) => ({ ...prev, from: e.target.value }))}
+                  className="w-10 h-10 rounded border border-input touch-manipulation"
+                />
+                <input
+                  type="text"
+                  value={gradientColors.from}
+                  onChange={(e) => setGradientColors((prev) => ({ ...prev, from: e.target.value }))}
+                  className="flex-1 px-2 py-1 text-sm border border-input rounded-md"
+                />
+              </div>
+            </div>
+            <div className="space-y-2">
+              <Label className="text-sm">{t('ui.to')}</Label>
+              <div className="flex gap-2">
+                <input
+                  type="color"
+                  value={gradientColors.to}
+                  onChange={(e) => setGradientColors((prev) => ({ ...prev, to: e.target.value }))}
+                  className="w-10 h-10 rounded border border-input touch-manipulation"
+                />
+                <input
+                  type="text"
+                  value={gradientColors.to}
+                  onChange={(e) => setGradientColors((prev) => ({ ...prev, to: e.target.value }))}
+                  className="flex-1 px-2 py-1 text-sm border border-input rounded-md"
+                />
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="flex gap-3">
+            <input
+              type="color"
+              value={textColor}
+              onChange={(e) => handleTextColorChange(e.target.value)}
+              className="w-12 h-12 rounded border border-input touch-manipulation"
+            />
+            <input
+              type="text"
+              value={textColor}
+              onChange={(e) => handleTextColorChange(e.target.value)}
+              className="flex-1 px-3 py-2 text-base border border-input rounded-md"
+            />
+          </div>
+        )}
+      </div>
+
+      {/* 背景颜色 - 高频 */}
+      <div className="space-y-3">
+        <Label className="text-base font-medium">{t('ui.backgroundColor')}</Label>
+        <div className="flex gap-3">
+          <input
+            type="color"
+            value={backgroundColor}
+            onChange={(e) => handleBackgroundColorChange(e.target.value)}
+            className="w-12 h-12 rounded border border-input touch-manipulation"
+          />
+          <input
+            type="text"
+            value={backgroundColor}
+            onChange={(e) => handleBackgroundColorChange(e.target.value)}
+            className="flex-1 px-3 py-2 text-base border border-input rounded-md"
+          />
+        </div>
+      </div>
+
+      {/* 对齐方式 - 高频 */}
+      <div className="space-y-3">
+        <Label className="text-base font-medium">{t('ui.alignment')}</Label>
+        <div className="flex gap-2">
+          <Button
+            variant={alignment === "right" ? "default" : "outline"}
+            size="lg"
+            onClick={() => handleAlignmentChange("right")}
+            className={cn("flex-1 h-12 touch-manipulation", alignment === "right" ? "bg-amber-600 hover:bg-amber-700" : "")}
+          >
+            <AlignRight className="h-5 w-5" />
+          </Button>
+          <Button
+            variant={alignment === "center" ? "default" : "outline"}
+            size="lg"
+            onClick={() => handleAlignmentChange("center")}
+            className={cn("flex-1 h-12 touch-manipulation", alignment === "center" ? "bg-amber-600 hover:bg-amber-700" : "")}
+          >
+            <AlignCenter className="h-5 w-5" />
+          </Button>
+          <Button
+            variant={alignment === "left" ? "default" : "outline"}
+            size="lg"
+            onClick={() => handleAlignmentChange("left")}
+            className={cn("flex-1 h-12 touch-manipulation", alignment === "left" ? "bg-amber-600 hover:bg-amber-700" : "")}
+          >
+            <AlignLeft className="h-5 w-5" />
+          </Button>
+        </div>
+      </div>
+    </>
+    )
   }
 
   const AdvancedTabContent = () => (
