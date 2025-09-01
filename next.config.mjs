@@ -61,6 +61,60 @@ const nextConfig = {
   
   async redirects() {
     return [
+      // === 域名统一重定向 - 修复GSC重复内容问题 ===
+      // 处理根路径：prod域名根路径重定向到主域名
+      {
+        source: '/',
+        has: [
+          {
+            type: 'host',
+            value: 'prod.arabic-calligraphy-generator.com',
+          },
+        ],
+        destination: 'https://arabic-calligraphy-generator.com/',
+        permanent: true,
+        statusCode: 301,
+      },
+      // 处理子路径：prod域名子路径重定向到主域名（一个或多个路径段）
+      {
+        source: '/:path+',
+        has: [
+          {
+            type: 'host',
+            value: 'prod.arabic-calligraphy-generator.com',
+          },
+        ],
+        destination: 'https://arabic-calligraphy-generator.com/:path+',
+        permanent: true,
+        statusCode: 301,
+      },
+      // 处理根路径：staging域名根路径重定向到主域名
+      {
+        source: '/',
+        has: [
+          {
+            type: 'host',
+            value: 'staging.arabic-calligraphy-generator.com',
+          },
+        ],
+        destination: 'https://arabic-calligraphy-generator.com/',
+        permanent: true,
+        statusCode: 301,
+      },
+      // 处理子路径：staging域名子路径重定向到主域名（一个或多个路径段）
+      {
+        source: '/:path+',
+        has: [
+          {
+            type: 'host',
+            value: 'staging.arabic-calligraphy-generator.com',
+          },
+        ],
+        destination: 'https://arabic-calligraphy-generator.com/:path+',
+        permanent: true,
+        statusCode: 301,
+      },
+      
       // === 现有重定向规则 ===
       // Blog URL correction - 301 redirect to preserve SEO
       {
