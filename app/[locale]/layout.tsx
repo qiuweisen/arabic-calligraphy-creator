@@ -38,13 +38,16 @@ export async function generateMetadata({
   const userAgent = headersList.get('user-agent') || '';
   const isDesktop = !(/Mobile|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent));
 
-  // 根据设备类型和语言选择描述
+  // 根据设备类型和语言选择标题和描述
+  const title = (isDesktop && locale === 'en')
+    ? t('title_desktop')
+    : t('title');
   const description = (isDesktop && locale === 'en')
     ? t('description_desktop')
     : t('description');
 
   return {
-    title: t('title'),
+    title,
     description,
     keywords: t('keywords'),
     alternates: {
@@ -64,7 +67,7 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: t('title'),
+      title,
       description,
       locale: getOpenGraphLocale(locale),
       alternateLocale: locale === 'en' ? 'ar_SA' : 'en_US',
@@ -73,7 +76,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('title'),
+      title,
       description,
     },
     robots: {
