@@ -683,14 +683,68 @@ export default function Home() {
 
             {/* 用户评价网格 */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {t.raw('testimonials.reviews').map((review: any, index: number) => (
+              {t.raw('testimonials.reviews').map((review: any, index: number) => {
+                // 使用客户端组件来处理头像加载
+                const AvatarComponent = () => {
+                  const [imageError, setImageError] = useState(false);
+                  const [imageLoaded, setImageLoaded] = useState(false);
+                  const [clientReady, setClientReady] = useState(false);
+                  
+                  useEffect(() => {
+                    // 延迟一点时间再切换到真实头像，避免闪烁
+                    const timer = setTimeout(() => setClientReady(true), 100);
+                    return () => clearTimeout(timer);
+                  }, []);
+                  
+                  // 使用可靠的真人头像源
+                  const avatars = [
+                    'https://randomuser.me/api/portraits/women/44.jpg',
+                    'https://randomuser.me/api/portraits/men/32.jpg',
+                    'https://randomuser.me/api/portraits/women/68.jpg',
+                    'https://randomuser.me/api/portraits/men/46.jpg',
+                    'https://randomuser.me/api/portraits/women/55.jpg',
+                    'https://randomuser.me/api/portraits/men/73.jpg'
+                  ];
+                  const avatarUrl = avatars[index % avatars.length];
+                  
+                  // 显示首字母头像的情况：未就绪、加载错误、或图片未加载完成
+                  if (!clientReady || imageError || !imageLoaded) {
+                    return (
+                      <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center border-2 border-amber-200">
+                        <span className="text-amber-600 font-bold text-lg">{review.name.charAt(0)}</span>
+                        {/* 隐藏预加载图片 */}
+                        {clientReady && !imageError && (
+                          <img 
+                            src={avatarUrl}
+                            alt=""
+                            className="hidden"
+                            onLoad={() => setImageLoaded(true)}
+                            onError={() => setImageError(true)}
+                          />
+                        )}
+                      </div>
+                    );
+                  }
+                  
+                  return (
+                    <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-200 bg-gray-100">
+                      <img 
+                        src={avatarUrl}
+                        alt={`${review.name} avatar`}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                        onError={() => setImageError(true)}
+                      />
+                    </div>
+                  );
+                };
+                
+                return (
                 <Card key={index} className="border-amber-200 bg-white/80 backdrop-blur-sm hover:shadow-md transition-shadow">
                   <CardContent className="p-6">
                     {/* 用户头像和信息 */}
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center">
-                        <span className="text-amber-600 font-bold text-lg">{review.name.charAt(0)}</span>
-                      </div>
+                      <AvatarComponent />
                       <div>
                         <h3 className="font-bold text-amber-900">{review.name}</h3>
                         <p className="text-sm text-amber-600">{review.title}</p>
@@ -713,7 +767,8 @@ export default function Home() {
                     <p className="text-xs text-amber-500">{review.date}</p>
                   </CardContent>
                 </Card>
-              ))}
+                );
+              })}
             </div>
           </section>
 
