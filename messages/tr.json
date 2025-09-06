@@ -1,6 +1,6 @@
 {
 	"metadata": {
-		"title": "Arapça Hat Sanatı Jeneratörü - Ücretsiz Araç | الخط العربي",
+		"title": "Arapça Hat Sanatı Jeneratörü - Ücretsiz Çevrimiçi Araç",
 		"description": "🎨 ÜCRETSİZ Arapça Hat Sanatı Jeneratörü | Anında göz alıcı İslami sanat eserleri yaratın! 13+ yazı tipi, anında PNG/SVG indirme. Kayıt gerekmez ✨",
 		"description_desktop": "Profesyonel Arapça Hat Sanatı Jeneratörü - 13+ Premium Yazı Tipiyle İslami Sanat Yaratın. Tasarımcılar, öğrenciler ve işletmeler için ücretsiz online araç. Anında PNG/SVG indirme.",
 		"keywords": "Arapça hat sanatı jeneratörü, Arapça yazı tipleri, İslami hat sanatı, Arapça metin oluşturucu, ücretsiz Arapça yazı tipleri, online hat sanatı yapıcı"
@@ -86,7 +86,7 @@
 	},
 	"homepage": {
 		"title": "Arapça Hat Sanatı Jeneratörü",
-		"subtitle": "الخط العربي",
+		"subtitle": "Güzel Tasarımlar Yaratın",
 		"description": "Anında Göz Alıcı Arapça Yazı Sanatı Oluşturun",
 		"intro": "Ücretsiz online Arapça hat sanatı jeneratörümüzle herhangi bir Arapça metni harika bir kaligrafiye dönüştürün. Bu güçlü Arapça metin oluşturucu, 13'ten fazla premium online Arapça yazı tipine sahiptir. Kayıt olmadan anında çarpıcı tasarımlar yaratın!",
 		"hero": {
@@ -131,7 +131,28 @@
 					"Ölçeklenebilir SVG formatı",
 					"Baskıya hazır kalite"
 				]
-			}
+			},
+			"preview": {
+				"title": "Gerçek Zamanlı Arap Kaligrafi Önizlemesi",
+				"description": "Yazı tiplerini, renkleri ve efektleri özelleştirirken canlı önizleme ile Arap kaligrafi değişikliklerinizi anında görün."
+			},
+			"mobile": {
+				"title": "Mobil Uyumlu Arap Üretici",
+				"description": "Herhangi bir cihazda Arap kaligrafi oluşturun - masaüstü, tablet veya akıllı telefon tam duyarlı işlevsellik ile."
+			},
+			"free": {
+				"title": "%100 Ücretsiz Arap Kaligrafi Üretici",
+				"description": "Kayıt yok, filigran yok, gizli maliyet yok - sonsuza kadar tamamen ücretsiz Arap kaligrafi üretici."
+			},
+			"sharing": {
+				"title": "Kolay Arap Kaligrafi Paylaşımı",
+				"description": "Arap kaligrafi tasarımlarınızı doğrudan sosyal medya platformlarında paylaşın veya anında panoya kopyalayın."
+			},
+			"privacy": {
+				"title": "Gizlilik Korumalı Arap Üretici",
+				"description": "Arap metniniz tamamen özel kalır - içeriğinizi saklamıyoruz veya kişisel bilgi gerektirmiyoruz."
+			},
+			"description": "Ücretsiz Arap kaligrafi yazı tipi üreticimiz, profesyonel kalitede sonuçlarla çarpıcı Arap kaligrafi tasarımları, logolar ve metin sanatı oluşturmak için ihtiyacınız olan her şeyi sağlar."
 		},
 		"quickStart": {
 			"title": "Hızlı Başlangıç:",
@@ -150,7 +171,13 @@
 			"step3": {
 				"title": "İndirin ve Paylaşın",
 				"description": "Hat eserinizi PNG veya SVG olarak indirin ve istediğiniz yerde paylaşın"
-			}
+			},
+			"cta": {
+				"title": "Çarpıcı Arap Kaligrafi Oluşturmaya Hazır mısınız?",
+				"description": "Tasarım ihtiyaçları için Arap kaligrafi üreticimize güvenen binlerce kullanıcıya katılın",
+				"button": "Şimdi Arap Kaligrafi Oluşturmaya Başlayın"
+			},
+			"description": "Ücretsiz çevrimiçi Arap kaligrafi yazı tipi üreticimizle üç kolay adımda güzel Arap kaligrafi tasarımları oluşturun. Deneyim gerekmez!"
 		},
 		"useCases": {
 			"title": "Her Durum İçin Mükemmel",
@@ -301,7 +328,8 @@
 		"detailedFaq": {
 			"title": "Arapça Hat Sanatı Jeneratörü SSS",
 			"viewAll": "Tüm SSS'leri Görüntüle",
-			"questions": [{
+			"questions": [
+				{
 					"question": "Bu Arapça hat sanatı jeneratörü tamamen ücretsiz mi?",
 					"answer": "Evet! Arapça hat sanatı jeneratörümüz %100 ücretsizdir ve hiçbir gizli maliyet, abonelik veya kayıt gerektirmez. 13'ten fazla premium yazı tipi, özelleştirme özellikleri ve dışa aktarma seçenekleri ücretsiz olarak dahildir."
 				},
@@ -510,7 +538,8 @@
 				"islamic": "İslami sanat ve ayetler",
 				"modern": "Modern hat sanatı",
 				"traditional": "Geleneksel Arapça yazılar"
-			}
+			},
+			"description": "Arap kaligrafi üreticimizin çeşitli endüstrilerde ve kişisel projelerde farklı yaratıcı ihtiyaçlara nasıl hizmet ettiğini keşfedin"
 		}
 	},
 	"generator": {

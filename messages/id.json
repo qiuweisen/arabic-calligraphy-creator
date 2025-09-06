@@ -1,6 +1,6 @@
 {
 	"metadata": {
-		"title": "Generator Kaligrafi Arab - Alat Gratis | الخط العربي",
+		"title": "Generator Kaligrafi Arab - Alat Gratis Online",
 		"description": "🎨 Generator Kaligrafi Arab GRATIS | Buat seni Islam yang menakjubkan online secara instan! 13+ font, unduh instan PNG/SVG. Tanpa signup diperlukan ✨",
 		"keywords": "generator kaligrafi arab, font arab, kaligrafi islam, generator teks arab, font arab gratis, pembuat kaligrafi online"
 	},
@@ -85,7 +85,7 @@
 	},
 	"homepage": {
 		"title": "Generator Kaligrafi Arab",
-		"subtitle": "الخط العربي",
+		"subtitle": "Buat Desain Indah",
 		"description": "Ciptakan Seni Tulisan Arab yang Menakjubkan Secara Instan",
 		"intro": "Ubah teks Arab apa pun menjadi kaligrafi indah dengan generator kaligrafi Arab online gratis kami. Alat pembuat teks Arab canggih ini memiliki 13+ font Arab premium online. Buat desain menakjubkan secara instan - tanpa perlu registrasi!",
 		"hero": {
@@ -130,7 +130,28 @@
 					"Format SVG yang dapat diskalakan",
 					"Kualitas siap cetak"
 				]
-			}
+			},
+			"preview": {
+				"title": "Pratinjau Kaligrafi Arab Real-time",
+				"description": "Lihat perubahan kaligrafi Arab Anda secara instan dengan pratinjau langsung saat Anda menyesuaikan font, warna, dan efek."
+			},
+			"mobile": {
+				"title": "Generator Arab Responsif Mobile",
+				"description": "Buat kaligrafi Arab di perangkat apa pun - desktop, tablet, atau smartphone dengan fungsionalitas responsif penuh."
+			},
+			"free": {
+				"title": "Generator Kaligrafi Arab 100% Gratis",
+				"description": "Tanpa pendaftaran, tanpa watermark, tanpa biaya tersembunyi - generator kaligrafi Arab yang sepenuhnya gratis selamanya."
+			},
+			"sharing": {
+				"title": "Berbagi Kaligrafi Arab Mudah",
+				"description": "Bagikan desain kaligrafi Arab Anda langsung di platform media sosial atau salin ke clipboard secara instan."
+			},
+			"privacy": {
+				"title": "Generator Arab Terlindungi Privasi",
+				"description": "Teks Arab Anda tetap sepenuhnya pribadi - kami tidak menyimpan konten Anda atau memerlukan informasi pribadi."
+			},
+			"description": "Generator font kaligrafi Arab gratis kami menyediakan semua yang Anda butuhkan untuk membuat desain kaligrafi Arab yang menakjubkan, logo, dan seni teks dengan hasil berkualitas profesional."
 		},
 		"quickStart": {
 			"title": "Mulai Cepat:",
@@ -149,7 +170,13 @@
 			"step3": {
 				"title": "Unduh & Bagikan",
 				"description": "Unduh kaligrafi Anda sebagai PNG atau SVG dan bagikan di mana saja"
-			}
+			},
+			"cta": {
+				"title": "Siap Membuat Kaligrafi Arab yang Menakjubkan?",
+				"description": "Bergabunglah dengan ribuan pengguna yang mempercayai generator kaligrafi Arab kami untuk kebutuhan desain mereka",
+				"button": "Mulai Membuat Kaligrafi Arab Sekarang"
+			},
+			"description": "Buat desain kaligrafi Arab yang indah dalam tiga langkah mudah dengan generator font kaligrafi Arab online gratis kami. Tidak perlu pengalaman!"
 		},
 		"useCases": {
 			"title": "Sempurna untuk Setiap Kebutuhan",
@@ -300,7 +327,8 @@
 		"detailedFaq": {
 			"title": "FAQ Generator Kaligrafi Arab",
 			"viewAll": "Lihat Semua FAQ",
-			"questions": [{
+			"questions": [
+				{
 					"question": "Apakah generator kaligrafi Arab ini sepenuhnya gratis?",
 					"answer": "Ya! Generator kaligrafi Arab kami 100% gratis tanpa biaya tersembunyi, langganan, atau registrasi. Semua 13+ font premium, fitur kustomisasi, dan opsi ekspor sudah termasuk tanpa biaya."
 				},
@@ -509,7 +537,8 @@
 				"islamic": "Seni dan ayat-ayat Islami",
 				"modern": "Seni kaligrafi modern",
 				"traditional": "Aksara Arab tradisional"
-			}
+			},
+			"description": "Temukan bagaimana generator kaligrafi Arab kami melayani kebutuhan kreatif yang berbeda di berbagai industri dan proyek pribadi"
 		}
 	},
 	"generator": {

@@ -1,6 +1,6 @@
 {
 	"metadata": {
-		"title": "Penjana Kaligrafi Arab - Alat Percuma | الخط العربي",
+		"title": "Penjana Kaligrafi Arab - Alat Percuma Dalam Talian",
 		"description": "🎨 Penjana Kaligrafi Arab PERCUMA | Cipta seni Islam yang menakjubkan dalam talian dengan serta-merta! 13+ fon, muat turun segera PNG/SVG. Tiada pendaftaran diperlukan ✨",
 		"keywords": "penjana kaligrafi arab, fon arab, kaligrafi islam, penjana teks arab, fon arab percuma, pembuat kaligrafi dalam talian"
 	},
@@ -85,7 +85,7 @@
 	},
 	"homepage": {
 		"title": "Penjana Kaligrafi Arab",
-		"subtitle": "الخط العربي",
+		"subtitle": "Cipta Reka Bentuk Cantik",
 		"description": "Cipta Seni Khat Arab Yang Menakjubkan Serta-merta",
 		"intro": "Ubah mana-mana teks Arab menjadi kaligrafi yang indah dengan penjana kaligrafi Arab dalam talian kami yang percuma. Penjana teks Arab yang berkuasa ini mempunyai 13+ fon Arab premium dalam talian. Cipta reka bentuk yang menakjubkan serta-merta - tiada pendaftaran diperlukan!",
 		"hero": {
@@ -130,7 +130,28 @@
 					"Format SVG boleh skala",
 					"Kualiti sedia-cetak"
 				]
-			}
+			},
+			"preview": {
+				"title": "Pratonton Kaligrafi Arab Masa Nyata",
+				"description": "Lihat perubahan kaligrafi Arab anda dengan serta-merta melalui pratonton langsung semasa anda menyesuaikan fon, warna dan kesan."
+			},
+			"mobile": {
+				"title": "Penjana Arab Responsif Mudah Alih",
+				"description": "Cipta kaligrafi Arab pada mana-mana peranti - desktop, tablet atau telefon pintar dengan fungsi responsif penuh."
+			},
+			"free": {
+				"title": "Penjana Kaligrafi Arab 100% Percuma",
+				"description": "Tiada pendaftaran, tiada tera air, tiada kos tersembunyi - penjana kaligrafi Arab yang benar-benar percuma selama-lamanya."
+			},
+			"sharing": {
+				"title": "Perkongsian Kaligrafi Arab Mudah",
+				"description": "Kongsi reka bentuk kaligrafi Arab anda secara terus di platform media sosial atau salin ke papan keratan dengan serta-merta."
+			},
+			"privacy": {
+				"title": "Penjana Arab Dilindungi Privasi",
+				"description": "Teks Arab anda kekal benar-benar peribadi - kami tidak menyimpan kandungan anda atau memerlukan maklumat peribadi."
+			},
+			"description": "Penjana fon kaligrafi Arab percuma kami menyediakan semua yang anda perlukan untuk mencipta reka bentuk kaligrafi Arab yang menakjubkan, logo dan seni teks dengan hasil berkualiti profesional."
 		},
 		"quickStart": {
 			"title": "Mula Pantas:",
@@ -149,7 +170,13 @@
 			"step3": {
 				"title": "Muat Turun & Kongsi",
 				"description": "Muat turun kaligrafi anda sebagai PNG atau SVG dan kongsi di mana sahaja"
-			}
+			},
+			"cta": {
+				"title": "Bersedia untuk Mencipta Kaligrafi Arab yang Menakjubkan?",
+				"description": "Sertai beribu-ribu pengguna yang mempercayai penjana kaligrafi Arab kami untuk keperluan reka bentuk mereka",
+				"button": "Mula Mencipta Kaligrafi Arab Sekarang"
+			},
+			"description": "Cipta reka bentuk kaligrafi Arab yang cantik dalam tiga langkah mudah dengan penjana fon kaligrafi Arab dalam talian percuma kami. Tiada pengalaman diperlukan!"
 		},
 		"useCases": {
 			"title": "Sesuai untuk Setiap Majlis",
@@ -300,7 +327,8 @@
 		"detailedFaq": {
 			"title": "Soalan Lazim Penjana Kaligrafi Arab",
 			"viewAll": "Lihat Semua Soalan Lazim",
-			"questions": [{
+			"questions": [
+				{
 					"question": "Adakah penjana kaligrafi Arab ini percuma sepenuhnya?",
 					"answer": "Ya! Penjana kaligrafi Arab kami adalah 100% percuma tanpa kos tersembunyi, langganan, atau pendaftaran diperlukan. Semua 13+ fon premium, ciri penyesuaian, dan pilihan eksport disertakan tanpa sebarang bayaran."
 				},
@@ -509,7 +537,8 @@
 				"islamic": "Seni dan ayat-ayat Islam",
 				"modern": "Seni kaligrafi moden",
 				"traditional": "Skrip Arab tradisional"
-			}
+			},
+			"description": "Temui bagaimana penjana kaligrafi Arab kami melayani keperluan kreatif yang berbeza merentas industri dan projek peribadi"
 		}
 	},
 	"generator": {

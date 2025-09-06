@@ -1,6 +1,6 @@
 {
 	"metadata": {
-		"title": "Arabische Kalligraphie Generator - Kostenloses Tool | الخط العربي",
+		"title": "Arabische Kalligraphie Generator - Kostenloses Online-Tool",
 		"title_desktop": "Professionelles Arabische Kalligraphie Tool | 17+ Premium Schriftarten | Design-Plattform",
 		"description": "🎨 KOSTENLOSER Arabische Kalligraphie Generator | Erstellen Sie sofort atemberaubende islamische Kunst online! 13+ Schriftarten, sofortiger PNG/SVG-Download. Keine Anmeldung erforderlich ✨",
 		"description_desktop": "Professionelles Arabische Kalligraphie Design-Tool | Erstellen Sie atemberaubende islamische Kunst mit 17+ Premium-Schriftarten. Vertraut von 50K+ Designern & Unternehmen. Hochwertige PNG/SVG-Exporte. Erweiterte Typografie-Features.",
@@ -87,7 +87,7 @@
 	},
 	"homepage": {
 		"title": "Arabische Kalligraphie Generator",
-		"subtitle": "الخط العربي",
+		"subtitle": "Schöne Designs Erstellen",
 		"description": "Erstellen Sie sofort atemberaubende arabische Schriftkunst",
 		"intro": "Verwandeln Sie jeden arabischen Text in wunderschöne Kalligraphie mit unserem kostenlosen Online-Generator für arabische Kalligraphie. Dieser leistungsstarke arabische Textgenerator bietet über 13 Premium-Schriftarten online. Erstellen Sie sofort atemberaubende Designs – keine Registrierung erforderlich!",
 		"hero": {
@@ -329,7 +329,8 @@
 		"detailedFaq": {
 			"title": "FAQ zum Arabische Kalligraphie Generator",
 			"viewAll": "Alle FAQs anzeigen",
-			"questions": [{
+			"questions": [
+				{
 					"question": "Ist dieser Arabische Kalligraphie Generator komplett kostenlos?",
 					"answer": "Ja! Unser Arabische Kalligraphie Generator ist zu 100 % kostenlos, ohne versteckte Kosten, Abonnements oder Registrierung. Alle 13+ Premium-Schriftarten, Anpassungsfunktionen und Exportoptionen sind kostenlos enthalten."
 				},
@@ -538,7 +539,8 @@
 				"islamic": "Islamische Kunst und Verse",
 				"modern": "Moderne Kalligraphiekunst",
 				"traditional": "Traditionelle arabische Schriften"
-			}
+			},
+			"description": "Entdecken Sie, wie unser arabischer Kalligrafie-Generator verschiedene kreative Bedürfnisse in verschiedenen Branchen und persönlichen Projekten erfüllt"
 		}
 	},
 	"generator": {
