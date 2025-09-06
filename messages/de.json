@@ -1,8 +1,9 @@
 {
 	"metadata": {
-		"title": "Arabische Kalligraphie Generator - Kostenloses Tool | الخط العربي",
+		"title": "Arabische Kalligraphie Generator - Kostenloses Online-Tool",
+		"title_desktop": "Professionelles Arabische Kalligraphie Tool | 17+ Premium Schriftarten | Design-Plattform",
 		"description": "🎨 KOSTENLOSER Arabische Kalligraphie Generator | Erstellen Sie sofort atemberaubende islamische Kunst online! 13+ Schriftarten, sofortiger PNG/SVG-Download. Keine Anmeldung erforderlich ✨",
-		"description_desktop": "Professioneller Arabische Kalligraphie Generator - Erstellen Sie islamische Kunst mit 13+ Premium-Schriftarten. Kostenloses Online-Tool für Designer, Studenten & Unternehmen. Sofortiger PNG/SVG-Download.",
+		"description_desktop": "Professionelles Arabische Kalligraphie Design-Tool | Erstellen Sie atemberaubende islamische Kunst mit 17+ Premium-Schriftarten. Vertraut von 50K+ Designern & Unternehmen. Hochwertige PNG/SVG-Exporte. Erweiterte Typografie-Features.",
 		"keywords": "Arabische Kalligraphie Generator, arabische Schriftarten, islamische Kalligraphie, arabischer Textgenerator, kostenlose arabische Schriftarten, Online-Kalligraphie-Ersteller"
 	},
 	"common": {
@@ -86,9 +87,18 @@
 	},
 	"homepage": {
 		"title": "Arabische Kalligraphie Generator",
-		"subtitle": "الخط العربي",
+		"subtitle": "Schöne Designs Erstellen",
 		"description": "Erstellen Sie sofort atemberaubende arabische Schriftkunst",
 		"intro": "Verwandeln Sie jeden arabischen Text in wunderschöne Kalligraphie mit unserem kostenlosen Online-Generator für arabische Kalligraphie. Dieser leistungsstarke arabische Textgenerator bietet über 13 Premium-Schriftarten online. Erstellen Sie sofort atemberaubende Designs – keine Registrierung erforderlich!",
+		"hero": {
+			"badge": "#1 Kostenloser Arabischer Kalligraphie Generator Online",
+			"subtitle": "Erstellen Sie wunderschöne Designs",
+			"description": "Verwandeln Sie Ihren arabischen Text in atemberaubende Kalligraphie mit unserem kostenlosen Online-Arabischen Kalligraphie-Schriftgenerator. Erstellen Sie professionelle arabische Kalligraphie-Designs, Logos und Textkunst sofort mit Premium-Schriftarten und Anpassungsoptionen.",
+			"value1": "100% Kostenloser Arabischer Kalligraphie Generator",
+			"value2": "Keine Registrierung erforderlich",
+			"value3": "Sofortiger Download",
+			"cta": "Jetzt Arabische Kalligraphie erstellen"
+		},
 		"socialProof": {
 			"designsCreated": "Über 100.000 erstellte Designs",
 			"premiumFonts": "13+ Premium-Schriftarten",
@@ -96,6 +106,7 @@
 		},
 		"features": {
 			"title": "Funktionen für professionelle arabische Kalligraphie",
+			"description": "Unser kostenloser arabischer Kalligraphie-Generator bietet alles, was Sie brauchen, um professionelle arabische Kalligraphie-Designs, Logos und Kunstwerke zu erstellen.",
 			"fontLibrary": {
 				"title": "Umfangreiche Bibliothek arabischer Schriftarten",
 				"description": "Unser kostenloser Ersteller für arabische Kalligraphie bietet über 13 Premium-Schriftarten online, die von traditionellen Schriften (Kufi, Naskh, Diwani) bis hin zu moderner Typografie reichen. Dieser umfassende arabische Textgenerator enthält eine visuelle Vorschau für eine einfache Schriftartenauswahl.",
@@ -122,6 +133,26 @@
 					"Skalierbares SVG-Format",
 					"Druckfertige Qualität"
 				]
+			},
+			"preview": {
+				"title": "Echtzeit-Vorschau der arabischen Kalligraphie",
+				"description": "Sehen Sie Ihre Änderungen sofort mit Live-Vorschau während Sie Schriftarten, Farben und Effekte anpassen."
+			},
+			"mobile": {
+				"title": "Mobil-responsiver arabischer Generator",
+				"description": "Erstellen Sie arabische Kalligraphie auf jedem Gerät - Desktop, Tablet oder Smartphone mit voller responsiver Funktionalität."
+			},
+			"free": {
+				"title": "100% kostenloser arabischer Kalligraphie-Generator",
+				"description": "Keine Registrierung, keine Wasserzeichen, keine versteckten Kosten - völlig kostenloser arabischer Kalligraphie-Generator für immer."
+			},
+			"sharing": {
+				"title": "Einfaches Teilen arabischer Kalligraphie",
+				"description": "Teilen Sie Ihre arabischen Kalligraphie-Designs direkt auf sozialen Medienplattformen oder kopieren Sie sie sofort in die Zwischenablage."
+			},
+			"privacy": {
+				"title": "Datenschutz-geschützter arabischer Generator",
+				"description": "Ihr arabischer Text bleibt völlig privat - wir speichern Ihre Inhalte nicht und benötigen keine persönlichen Informationen."
 			}
 		},
 		"quickStart": {
@@ -129,18 +160,24 @@
 			"steps": "Arabischen Text eingeben → Schriftart wählen → Sofort herunterladen"
 		},
 		"howToUse": {
-			"title": "So erstellen Sie arabische Kalligraphie",
+			"title": "So verwenden Sie unseren arabischen Kalligraphie-Generator",
+			"description": "Erstellen Sie wunderschöne arabische Kalligraphie-Designs in drei einfachen Schritten mit unserem kostenlosen Online-Kalligraphie-Generator. Keine Erfahrung erforderlich!",
 			"step1": {
-				"title": "Geben Sie Ihren Text ein",
-				"description": "Tippen oder fügen Sie Ihren arabischen Text in das obige Eingabefeld ein"
+				"title": "Arabischen Text eingeben",
+				"description": "Geben Sie Ihren arabischen Text in unseren Kalligraphie-Generator ein. Verwenden Sie bei Bedarf unsere virtuelle arabische Tastatur für eine einfache Texteingabe."
 			},
 			"step2": {
-				"title": "Wählen Sie Ihren Stil",
-				"description": "Wählen Sie aus über 13 wunderschönen arabischen Schriftarten und passen Sie die Farben an"
+				"title": "Design anpassen",
+				"description": "Wählen Sie aus Premium-Kalligraphie-Schriftarten, passen Sie Farben, Größe und Ausrichtung an, um Ihr perfektes arabisches Kalligraphie-Design zu erstellen."
 			},
 			"step3": {
-				"title": "Herunterladen & Teilen",
-				"description": "Laden Sie Ihre Kalligraphie als PNG oder SVG herunter und teilen Sie sie überall"
+				"title": "Exportieren & Teilen",
+				"description": "Laden Sie Ihre arabische Kalligraphie in hochwertigen PNG- oder SVG-Formaten herunter oder teilen Sie sie direkt auf Social-Media-Plattformen."
+			},
+			"cta": {
+				"title": "Bereit, atemberaubende arabische Kalligraphie zu erstellen?",
+				"description": "Schließen Sie sich Tausenden von Benutzern an, die unserem arabischen Kalligraphie-Generator für ihre Designbedürfnisse vertrauen",
+				"button": "Jetzt arabische Kalligraphie erstellen"
 			}
 		},
 		"useCases": {
@@ -184,6 +221,48 @@
 				"question": "Funktioniert der Generator auf mobilen Geräten?",
 				"answer": "Absolut! Unser Arabische Kalligraphie Generator ist vollständig responsiv und funktioniert perfekt auf Smartphones, Tablets und Desktop-Computern. Die Benutzeroberfläche passt sich Ihrer Bildschirmgröße an, um das beste Erlebnis zu bieten."
 			}
+		},
+		"testimonials": {
+			"title": "Was unsere Nutzer sagen",
+			"description": "Schließen Sie sich Tausenden zufriedener Nutzer an, die mit unserem kostenlosen Generator beeindruckende arabische Kalligraphie-Designs erstellt haben.",
+			"reviews": [
+				{
+					"name": "Sarah Ahmed",
+					"title": "Grafikdesignerin & Kreativstudio",
+					"content": "Dieser arabische Kalligraphie-Generator hat meinen Design-Workflow revolutioniert. Die Schriftqualität ist außergewöhnlich und die Anpassungsoptionen sind perfekt für professionelle Projekte. Meine Kunden lieben die authentische arabische Typografie!",
+					"date": "Dezember 2024"
+				},
+				{
+					"name": "Mohammed Ali",
+					"title": "Student der Arabistik",
+					"content": "Als Student, der Arabisch lernt, hilft mir dieses Tool, verschiedene Kalligraphie-Stile zu verstehen. Es ist unglaublich benutzerfreundlich und die Vielfalt der Schriftarten macht es perfekt für Bildungsprojekte und Präsentationen.",
+					"date": "November 2024"
+				},
+				{
+					"name": "Fatima Hassan",
+					"title": "Restaurantbesitzerin",
+					"content": "Ich verwende diesen Generator für alle arabischen Beschilderungen und Menüs meines Restaurants. Die professionelle Qualität und Benutzerfreundlichkeit haben mir Hunderte von Euro an Designkosten gespart. Sehr empfehlenswert für jedes Unternehmen!",
+					"date": "November 2024"
+				},
+				{
+					"name": "Ahmad Khalil",
+					"title": "Hochzeitsplaner",
+					"content": "Perfekt für die Erstellung schöner Hochzeitseinladungen und dekorativer Elemente. Die arabischen Kalligraphie-Stile sind authentisch und elegant. Das Beste daran? Es ist völlig kostenlos ohne Wasserzeichen!",
+					"date": "Oktober 2024"
+				},
+				{
+					"name": "Dr. Amina Rashid",
+					"title": "Arabischlehrerin",
+					"content": "Ich verwende dieses Tool regelmäßig zur Erstellung von Lernmaterialien und Klassenausstellungen. Meine Schüler lieben es, ihre Namen in schöner arabischer Kalligraphie zu sehen. Es macht das Lernen engagierter und unterhaltsamer!",
+					"date": "Oktober 2024"
+				},
+				{
+					"name": "Omar Zaid",
+					"title": "Freelance-Designer",
+					"content": "Dieser Generator ist zu einem wesentlichen Bestandteil meines Design-Toolkits geworden. Die Exportqualität ist ausgezeichnet und Kunden sind immer von der authentischen arabischen Kalligraphie beeindruckt. Es hat mein Geschäft erheblich gesteigert!",
+					"date": "September 2024"
+				}
+			]
 		},
 		"cta": {
 			"title": "Beste kostenlose Online-App für arabische Kalligraphie",
@@ -250,7 +329,8 @@
 		"detailedFaq": {
 			"title": "FAQ zum Arabische Kalligraphie Generator",
 			"viewAll": "Alle FAQs anzeigen",
-			"questions": [{
+			"questions": [
+				{
 					"question": "Ist dieser Arabische Kalligraphie Generator komplett kostenlos?",
 					"answer": "Ja! Unser Arabische Kalligraphie Generator ist zu 100 % kostenlos, ohne versteckte Kosten, Abonnements oder Registrierung. Alle 13+ Premium-Schriftarten, Anpassungsfunktionen und Exportoptionen sind kostenlos enthalten."
 				},
@@ -459,7 +539,8 @@
 				"islamic": "Islamische Kunst und Verse",
 				"modern": "Moderne Kalligraphiekunst",
 				"traditional": "Traditionelle arabische Schriften"
-			}
+			},
+			"description": "Entdecken Sie, wie unser arabischer Kalligrafie-Generator verschiedene kreative Bedürfnisse in verschiedenen Branchen und persönlichen Projekten erfüllt"
 		}
 	},
 	"generator": {

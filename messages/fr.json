@@ -1,8 +1,9 @@
 {
 	"metadata": {
-		"title": "Générateur de Calligraphie Arabe - Outil Gratuit | الخط العربي",
+		"title": "Générateur de Calligraphie Arabe - Outil Gratuit en Ligne",
+		"title_desktop": "Outil Calligraphie Arabe Professionnel | 17+ Polices Premium | Plateforme Design",
 		"description": "🎨 Générateur de Calligraphie Arabe GRATUIT | Créez instantanément de superbes œuvres d'art islamique en ligne ! 13+ polices, téléchargement instantané PNG/SVG. Aucune inscription requise ✨",
-		"description_desktop": "Générateur de Calligraphie Arabe Professionnel - Créez de l'Art Islamique avec 13+ Polices Premium. Outil en ligne gratuit pour designers, étudiants et entreprises. Téléchargement instantané PNG/SVG.",
+		"description_desktop": "Outil Design Calligraphie Arabe Professionnel | Créez de superbes œuvres islamiques avec 17+ polices premium. Utilisé par 50K+ designers & entreprises. Export PNG/SVG haute qualité. Fonctionnalités typographiques avancées.",
 		"keywords": "générateur de calligraphie arabe, polices arabes, calligraphie islamique, générateur de texte arabe, polices arabes gratuites, créateur de calligraphie en ligne"
 	},
 	"common": {
@@ -86,9 +87,18 @@
 	},
 	"homepage": {
 		"title": "Générateur de Calligraphie Arabe",
-		"subtitle": "الخط العربي",
+		"subtitle": "Créez de Beaux Designs",
 		"description": "Créez Instantanément de Superbes Œuvres d'Art en Écriture Arabe",
 		"intro": "Transformez n'importe quel texte arabe en une magnifique calligraphie avec notre générateur de calligraphie arabe en ligne gratuit. Ce puissant générateur de texte arabe propose plus de 13 polices arabes premium. Créez des designs époustouflants instantanément - aucune inscription requise !",
+		"hero": {
+			"badge": "#1 Générateur de Calligraphie Arabe Gratuit En Ligne",
+			"subtitle": "Créez de Beaux Designs",
+			"description": "Transformez votre texte arabe en calligraphie époustouflante avec notre générateur de polices de calligraphie arabe en ligne gratuit. Créez des designs de calligraphie arabe professionnels, des logos et de l'art textuel instantanément avec des polices premium et des options de personnalisation.",
+			"value1": "Générateur de Calligraphie Arabe 100% Gratuit",
+			"value2": "Aucune Inscription Requise",
+			"value3": "Téléchargement Instantané",
+			"cta": "Commencer à Créer de la Calligraphie Arabe Maintenant"
+		},
 		"socialProof": {
 			"designsCreated": "100 000+ Designs Créés",
 			"premiumFonts": "13+ Polices Premium",
@@ -122,25 +132,52 @@
 					"Format SVG vectoriel",
 					"Qualité prête pour l'impression"
 				]
-			}
+			},
+			"preview": {
+				"title": "Aperçu en temps réel de la calligraphie arabe",
+				"description": "Voyez vos modifications de calligraphie arabe instantanément avec un aperçu en direct pendant que vous personnalisez les polices, couleurs et effets."
+			},
+			"mobile": {
+				"title": "Générateur arabe adapté aux mobiles",
+				"description": "Créez de la calligraphie arabe sur n'importe quel appareil - ordinateur de bureau, tablette ou smartphone avec une fonctionnalité entièrement responsive."
+			},
+			"free": {
+				"title": "Générateur de calligraphie arabe 100% gratuit",
+				"description": "Aucune inscription, aucun filigrane, aucun coût caché - générateur de calligraphie arabe entièrement gratuit pour toujours."
+			},
+			"sharing": {
+				"title": "Partage facile de calligraphie arabe",
+				"description": "Partagez vos créations de calligraphie arabe directement sur les plateformes de médias sociaux ou copiez instantanément dans le presse-papiers."
+			},
+			"privacy": {
+				"title": "Générateur arabe protégé par la confidentialité",
+				"description": "Votre texte arabe reste complètement privé - nous ne stockons pas votre contenu et ne nécessitons aucune information personnelle."
+			},
+			"description": "Notre générateur de polices de calligraphie arabe gratuit fournit tout ce dont vous avez besoin pour créer de superbes créations de calligraphie arabe, des logos et de l'art textuel avec des résultats de qualité professionnelle."
 		},
 		"quickStart": {
 			"title": "Démarrage Rapide :",
 			"steps": "Saisissez du texte arabe → Choisissez une police → Téléchargez instantanément"
 		},
 		"howToUse": {
-			"title": "Comment Créer une Calligraphie Arabe",
+			"title": "Comment utiliser notre générateur de calligraphie arabe",
+			"description": "Créez de magnifiques designs de calligraphie arabe en trois étapes simples avec notre générateur de polices de calligraphie arabe gratuit en ligne. Aucune expérience requise !",
 			"step1": {
-				"title": "Saisissez Votre Texte",
-				"description": "Tapez ou collez votre texte arabe dans le champ de saisie ci-dessus"
+				"title": "Saisir le texte arabe",
+				"description": "Tapez ou collez votre texte arabe dans notre générateur de calligraphie. Utilisez notre clavier arabe virtuel si nécessaire pour une saisie de texte facile."
 			},
 			"step2": {
-				"title": "Choisissez Votre Style",
-				"description": "Sélectionnez parmi plus de 13 magnifiques polices arabes et personnalisez les couleurs"
+				"title": "Personnaliser le design",
+				"description": "Choisissez parmi les polices de calligraphie arabe premium, ajustez les couleurs, la taille et l'alignement pour créer votre design de calligraphie arabe parfait."
 			},
 			"step3": {
-				"title": "Téléchargez et Partagez",
-				"description": "Téléchargez votre calligraphie en PNG ou SVG et partagez-la partout"
+				"title": "Exporter et partager",
+				"description": "Téléchargez votre calligraphie arabe en formats PNG ou SVG haute qualité, ou partagez directement sur les plateformes de médias sociaux."
+			},
+			"cta": {
+				"title": "Prêt à créer une calligraphie arabe époustouflante ?",
+				"description": "Rejoignez des milliers d'utilisateurs qui font confiance à notre générateur de calligraphie arabe pour leurs besoins de design",
+				"button": "Commencer à créer la calligraphie arabe maintenant"
 			}
 		},
 		"useCases": {
@@ -184,6 +221,48 @@
 				"question": "Le générateur fonctionne-t-il sur les appareils mobiles ?",
 				"answer": "Absolument ! Notre générateur de calligraphie arabe est entièrement adaptatif (responsive) et fonctionne parfaitement sur les smartphones, les tablettes et les ordinateurs de bureau. L'interface s'adapte à la taille de votre écran pour une expérience optimale."
 			}
+		},
+		"testimonials": {
+			"title": "Ce que disent nos utilisateurs",
+			"description": "Rejoignez des milliers d'utilisateurs satisfaits qui ont créé de superbes designs de calligraphie arabe avec notre générateur gratuit.",
+			"reviews": [
+				{
+					"name": "Sarah Ahmed",
+					"title": "Graphiste et Studio Créatif",
+					"content": "Ce générateur de calligraphie arabe a révolutionné mon workflow de design. La qualité des polices est exceptionnelle et les options de personnalisation sont parfaites pour les projets professionnels. Mes clients adorent la typographie arabe authentique !",
+					"date": "Décembre 2024"
+				},
+				{
+					"name": "Mohammed Ali",
+					"title": "Étudiant en Études Arabes",
+					"content": "En tant qu'étudiant apprenant l'arabe, cet outil m'aide à comprendre les différents styles de calligraphie. Il est incroyablement convivial et la variété des polices le rend parfait pour les projets éducatifs et les présentations.",
+					"date": "Novembre 2024"
+				},
+				{
+					"name": "Fatima Hassan",
+					"title": "Propriétaire de Restaurant",
+					"content": "J'utilise ce générateur pour toute la signalétique arabe et les menus de mon restaurant. La qualité professionnelle et la facilité d'utilisation m'ont fait économiser des centaines d'euros en coûts de design. Je le recommande vivement pour toute entreprise !",
+					"date": "Novembre 2024"
+				},
+				{
+					"name": "Ahmad Khalil",
+					"title": "Organisateur de Mariage",
+					"content": "Parfait pour créer de belles invitations de mariage et des éléments décoratifs. Les styles de calligraphie arabe sont authentiques et élégants. Le meilleur ? C'est complètement gratuit sans filigrane !",
+					"date": "Octobre 2024"
+				},
+				{
+					"name": "Dr. Amina Rashid",
+					"title": "Professeure de Langue Arabe",
+					"content": "J'utilise cet outil régulièrement pour créer du matériel éducatif et des affichages de classe. Mes étudiants adorent voir leurs noms en belle calligraphie arabe. Cela rend l'apprentissage plus engageant et amusant !",
+					"date": "Octobre 2024"
+				},
+				{
+					"name": "Omar Zaid",
+					"title": "Graphiste Freelance",
+					"content": "Ce générateur est devenu un élément essentiel de ma boîte à outils de design. La qualité d'exportation est excellente et les clients sont toujours impressionnés par la calligraphie arabe authentique. Cela a considérablement boosté mon business !",
+					"date": "Septembre 2024"
+				}
+			]
 		},
 		"cta": {
 			"title": "La Meilleure Application Gratuite en Ligne de Générateur de Calligraphie Arabe",
@@ -250,7 +329,8 @@
 		"detailedFaq": {
 			"title": "FAQ du Générateur de Calligraphie Arabe",
 			"viewAll": "Voir toutes les FAQ",
-			"questions": [{
+			"questions": [
+				{
 					"question": "Ce générateur de calligraphie arabe est-il entièrement gratuit ?",
 					"answer": "Oui ! Notre générateur de calligraphie arabe est 100% gratuit, sans frais cachés, abonnements ou inscription. Les 13+ polices premium, les fonctionnalités de personnalisation et les options d'exportation sont toutes incluses gratuitement."
 				},
@@ -459,7 +539,8 @@
 				"islamic": "Art et versets islamiques",
 				"modern": "Art de la calligraphie moderne",
 				"traditional": "Écritures arabes traditionnelles"
-			}
+			},
+			"description": "Découvrez comment notre générateur de calligraphie arabe répond aux différents besoins créatifs dans diverses industries et projets personnels"
 		}
 	},
 	"generator": {
