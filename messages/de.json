@@ -90,6 +90,15 @@
 		"subtitle": "الخط العربي",
 		"description": "Erstellen Sie sofort atemberaubende arabische Schriftkunst",
 		"intro": "Verwandeln Sie jeden arabischen Text in wunderschöne Kalligraphie mit unserem kostenlosen Online-Generator für arabische Kalligraphie. Dieser leistungsstarke arabische Textgenerator bietet über 13 Premium-Schriftarten online. Erstellen Sie sofort atemberaubende Designs – keine Registrierung erforderlich!",
+		"hero": {
+			"badge": "#1 Kostenloser Arabischer Kalligraphie Generator Online",
+			"subtitle": "Erstellen Sie wunderschöne Designs",
+			"description": "Verwandeln Sie Ihren arabischen Text in atemberaubende Kalligraphie mit unserem kostenlosen Online-Arabischen Kalligraphie-Schriftgenerator. Erstellen Sie professionelle arabische Kalligraphie-Designs, Logos und Textkunst sofort mit Premium-Schriftarten und Anpassungsoptionen.",
+			"value1": "100% Kostenloser Arabischer Kalligraphie Generator",
+			"value2": "Keine Registrierung erforderlich",
+			"value3": "Sofortiger Download",
+			"cta": "Jetzt Arabische Kalligraphie erstellen"
+		},
 		"socialProof": {
 			"designsCreated": "Über 100.000 erstellte Designs",
 			"premiumFonts": "13+ Premium-Schriftarten",
@@ -97,6 +106,7 @@
 		},
 		"features": {
 			"title": "Funktionen für professionelle arabische Kalligraphie",
+			"description": "Unser kostenloser arabischer Kalligraphie-Generator bietet alles, was Sie brauchen, um professionelle arabische Kalligraphie-Designs, Logos und Kunstwerke zu erstellen.",
 			"fontLibrary": {
 				"title": "Umfangreiche Bibliothek arabischer Schriftarten",
 				"description": "Unser kostenloser Ersteller für arabische Kalligraphie bietet über 13 Premium-Schriftarten online, die von traditionellen Schriften (Kufi, Naskh, Diwani) bis hin zu moderner Typografie reichen. Dieser umfassende arabische Textgenerator enthält eine visuelle Vorschau für eine einfache Schriftartenauswahl.",
@@ -123,6 +133,26 @@
 					"Skalierbares SVG-Format",
 					"Druckfertige Qualität"
 				]
+			},
+			"preview": {
+				"title": "Echtzeit-Vorschau der arabischen Kalligraphie",
+				"description": "Sehen Sie Ihre Änderungen sofort mit Live-Vorschau während Sie Schriftarten, Farben und Effekte anpassen."
+			},
+			"mobile": {
+				"title": "Mobil-responsiver arabischer Generator",
+				"description": "Erstellen Sie arabische Kalligraphie auf jedem Gerät - Desktop, Tablet oder Smartphone mit voller responsiver Funktionalität."
+			},
+			"free": {
+				"title": "100% kostenloser arabischer Kalligraphie-Generator",
+				"description": "Keine Registrierung, keine Wasserzeichen, keine versteckten Kosten - völlig kostenloser arabischer Kalligraphie-Generator für immer."
+			},
+			"sharing": {
+				"title": "Einfaches Teilen arabischer Kalligraphie",
+				"description": "Teilen Sie Ihre arabischen Kalligraphie-Designs direkt auf sozialen Medienplattformen oder kopieren Sie sie sofort in die Zwischenablage."
+			},
+			"privacy": {
+				"title": "Datenschutz-geschützter arabischer Generator",
+				"description": "Ihr arabischer Text bleibt völlig privat - wir speichern Ihre Inhalte nicht und benötigen keine persönlichen Informationen."
 			}
 		},
 		"quickStart": {
@@ -191,6 +221,48 @@
 				"question": "Funktioniert der Generator auf mobilen Geräten?",
 				"answer": "Absolut! Unser Arabische Kalligraphie Generator ist vollständig responsiv und funktioniert perfekt auf Smartphones, Tablets und Desktop-Computern. Die Benutzeroberfläche passt sich Ihrer Bildschirmgröße an, um das beste Erlebnis zu bieten."
 			}
+		},
+		"testimonials": {
+			"title": "Was unsere Nutzer sagen",
+			"description": "Schließen Sie sich Tausenden zufriedener Nutzer an, die mit unserem kostenlosen Generator beeindruckende arabische Kalligraphie-Designs erstellt haben.",
+			"reviews": [
+				{
+					"name": "Sarah Ahmed",
+					"title": "Grafikdesignerin & Kreativstudio",
+					"content": "Dieser arabische Kalligraphie-Generator hat meinen Design-Workflow revolutioniert. Die Schriftqualität ist außergewöhnlich und die Anpassungsoptionen sind perfekt für professionelle Projekte. Meine Kunden lieben die authentische arabische Typografie!",
+					"date": "Dezember 2024"
+				},
+				{
+					"name": "Mohammed Ali",
+					"title": "Student der Arabistik",
+					"content": "Als Student, der Arabisch lernt, hilft mir dieses Tool, verschiedene Kalligraphie-Stile zu verstehen. Es ist unglaublich benutzerfreundlich und die Vielfalt der Schriftarten macht es perfekt für Bildungsprojekte und Präsentationen.",
+					"date": "November 2024"
+				},
+				{
+					"name": "Fatima Hassan",
+					"title": "Restaurantbesitzerin",
+					"content": "Ich verwende diesen Generator für alle arabischen Beschilderungen und Menüs meines Restaurants. Die professionelle Qualität und Benutzerfreundlichkeit haben mir Hunderte von Euro an Designkosten gespart. Sehr empfehlenswert für jedes Unternehmen!",
+					"date": "November 2024"
+				},
+				{
+					"name": "Ahmad Khalil",
+					"title": "Hochzeitsplaner",
+					"content": "Perfekt für die Erstellung schöner Hochzeitseinladungen und dekorativer Elemente. Die arabischen Kalligraphie-Stile sind authentisch und elegant. Das Beste daran? Es ist völlig kostenlos ohne Wasserzeichen!",
+					"date": "Oktober 2024"
+				},
+				{
+					"name": "Dr. Amina Rashid",
+					"title": "Arabischlehrerin",
+					"content": "Ich verwende dieses Tool regelmäßig zur Erstellung von Lernmaterialien und Klassenausstellungen. Meine Schüler lieben es, ihre Namen in schöner arabischer Kalligraphie zu sehen. Es macht das Lernen engagierter und unterhaltsamer!",
+					"date": "Oktober 2024"
+				},
+				{
+					"name": "Omar Zaid",
+					"title": "Freelance-Designer",
+					"content": "Dieser Generator ist zu einem wesentlichen Bestandteil meines Design-Toolkits geworden. Die Exportqualität ist ausgezeichnet und Kunden sind immer von der authentischen arabischen Kalligraphie beeindruckt. Es hat mein Geschäft erheblich gesteigert!",
+					"date": "September 2024"
+				}
+			]
 		},
 		"cta": {
 			"title": "Beste kostenlose Online-App für arabische Kalligraphie",

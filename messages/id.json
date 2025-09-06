@@ -88,6 +88,15 @@
 		"subtitle": "الخط العربي",
 		"description": "Ciptakan Seni Tulisan Arab yang Menakjubkan Secara Instan",
 		"intro": "Ubah teks Arab apa pun menjadi kaligrafi indah dengan generator kaligrafi Arab online gratis kami. Alat pembuat teks Arab canggih ini memiliki 13+ font Arab premium online. Buat desain menakjubkan secara instan - tanpa perlu registrasi!",
+		"hero": {
+			"badge": "#1 Generator Kaligrafi Arab Gratis Online",
+			"subtitle": "Buat Desain yang Indah",
+			"description": "Ubah teks Arab Anda menjadi kaligrafi yang menakjubkan dengan generator font kaligrafi Arab online gratis kami. Buat desain kaligrafi Arab profesional, logo, dan seni teks secara instan dengan font premium dan opsi kustomisasi.",
+			"value1": "Generator Kaligrafi Arab 100% Gratis",
+			"value2": "Tidak Perlu Registrasi",
+			"value3": "Download Instan",
+			"cta": "Mulai Membuat Kaligrafi Arab Sekarang"
+		},
 		"socialProof": {
 			"designsCreated": "100.000+ Desain Dibuat",
 			"premiumFonts": "13+ Font Premium",
@@ -193,6 +202,48 @@
 				"free": "100% Gratis",
 				"instantDownload": "Unduh Instan"
 			}
+		},
+		"testimonials": {
+			"title": "Apa Kata Pengguna Kami",
+			"description": "Bergabunglah dengan ribuan pengguna yang puas yang telah menciptakan desain kaligrafi Arab yang menakjubkan dengan generator gratis kami.",
+			"reviews": [
+				{
+					"name": "Sarah Ahmed",
+					"title": "Desainer Grafis & Studio Kreatif",
+					"content": "Generator kaligrafi Arab ini telah merevolusi alur kerja desain saya. Kualitas font sangat luar biasa dan opsi kustomisasi sempurna untuk proyek profesional. Klien saya menyukai tipografi Arab yang autentik!",
+					"date": "Desember 2024"
+				},
+				{
+					"name": "Mohammed Ali",
+					"title": "Mahasiswa Studi Arab",
+					"content": "Sebagai mahasiswa yang belajar bahasa Arab, alat ini membantu saya memahami berbagai gaya kaligrafi. Sangat user-friendly dan variasi font membuatnya sempurna untuk proyek edukasi dan presentasi.",
+					"date": "November 2024"
+				},
+				{
+					"name": "Fatima Hassan",
+					"title": "Pemilik Restoran",
+					"content": "Saya menggunakan generator ini untuk semua papan tanda Arab dan menu restoran saya. Kualitas profesional dan kemudahan penggunaan telah menghemat ratusan dolar biaya desain. Sangat direkomendasikan untuk bisnis apa pun!",
+					"date": "November 2024"
+				},
+				{
+					"name": "Ahmad Khalil",
+					"title": "Perencana Pernikahan",
+					"content": "Sempurna untuk membuat undangan pernikahan yang indah dan elemen dekoratif. Gaya kaligrafi Arab sangat autentik dan elegan. Yang terbaik? Benar-benar gratis tanpa watermark!",
+					"date": "Oktober 2024"
+				},
+				{
+					"name": "Dr. Amina Rashid",
+					"title": "Guru Bahasa Arab",
+					"content": "Saya secara rutin menggunakan alat ini untuk membuat materi edukasi dan tampilan kelas. Siswa saya senang melihat nama mereka dalam kaligrafi Arab yang indah. Ini membuat pembelajaran lebih menarik dan menyenangkan!",
+					"date": "Oktober 2024"
+				},
+				{
+					"name": "Omar Zaid",
+					"title": "Desainer Freelance",
+					"content": "Generator ini telah menjadi bagian penting dari toolkit desain saya. Kualitas ekspor sangat baik dan klien selalu terkesan dengan kaligrafi Arab yang otentik. Ini telah meningkatkan bisnis saya secara signifikan!",
+					"date": "September 2024"
+				}
+			]
 		},
 		"technicalFeatures": {
 			"title": "Fitur Tipografi Arab Lanjutan",

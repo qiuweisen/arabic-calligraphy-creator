@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl'
 import { LanguagePrompt } from "@/components/language-prompt"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Check, Download, Palette, Type, ChevronRight, Laptop, Smartphone, Tablet, ArrowRight, Info } from "lucide-react"
+import { Check, Download, Palette, Type, ChevronRight, Laptop, Smartphone, Tablet, ArrowRight, Info, Edit3, Settings, Share2 } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { getFeaturedFonts, FONT_CATEGORIES } from "@/lib/content-links"
@@ -271,18 +271,18 @@ export default function Home() {
           {/* Hero Section - 简洁直观设计 */}
           <header className="mb-12 text-center">
             {/* 权威性标识 - 多语言适配 */}
-            <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <span className="text-blue-500">⭐</span>
+            <div className="inline-flex items-center gap-2 bg-amber-50 text-amber-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <span className="text-amber-500">⭐</span>
               {t('hero.badge')}
             </div>
             
             {/* 主标题 */}
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl md:text-6xl font-bold text-amber-800 mb-4">
               {t('title')}
             </h1>
             
             {/* 副标题 - 突出核心价值 */}
-            <h2 className="text-2xl md:text-4xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold text-amber-700 mb-6">
               {t('hero.subtitle')}
             </h2>
             
@@ -293,22 +293,22 @@ export default function Home() {
             
             {/* 核心价值主张 - 三个勾选项 */}
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 mb-8">
-              <div className="flex items-center gap-2 text-green-700">
-                <span className="text-green-600 font-bold text-lg">✓</span>
+              <div className="flex items-center gap-2 text-amber-700">
+                <span className="text-amber-600 font-bold text-lg">✓</span>
                 <span className="font-semibold">{t('hero.value1')}</span>
               </div>
-              <div className="flex items-center gap-2 text-green-700">
-                <span className="text-green-600 font-bold text-lg">✓</span>
+              <div className="flex items-center gap-2 text-amber-700">
+                <span className="text-amber-600 font-bold text-lg">✓</span>
                 <span className="font-semibold">{t('hero.value2')}</span>
               </div>
-              <div className="flex items-center gap-2 text-green-700">
-                <span className="text-green-600 font-bold text-lg">✓</span>
+              <div className="flex items-center gap-2 text-amber-700">
+                <span className="text-amber-600 font-bold text-lg">✓</span>
                 <span className="font-semibold">{t('hero.value3')}</span>
               </div>
             </div>
             
             {/* 主要CTA按钮 */}
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105 mb-4">
+            <button className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105 mb-4">
               <span className="flex items-center justify-center gap-2">
                 <span>✨</span>
                 {t('hero.cta')}
@@ -385,14 +385,14 @@ export default function Home() {
           </div>
 
           {/* How to Use - Visual Guide */}
-          <section className="mb-16 bg-gradient-to-b from-gray-50 to-white py-16">
+          <section className="mb-16 bg-gradient-to-b from-amber-50 to-white py-16">
             <div className="max-w-6xl mx-auto px-4">
               {/* Section Header */}
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-amber-800 mb-4">
                   {t('howToUse.title')}
                 </h2>
-                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                <p className="text-lg text-amber-700 max-w-3xl mx-auto">
                   {t('howToUse.description')}
                 </p>
               </div>
@@ -405,69 +405,69 @@ export default function Home() {
                   {/* Step 1: Enter Arabic Text */}
                   <div className="text-center flex-1">
                     {/* Step Number Circle */}
-                    <div className="w-20 h-20 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                    <div className="w-20 h-20 bg-amber-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
                       1
                     </div>
                     {/* Step Icon */}
-                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <span className="text-3xl">📝</span>
+                    <div className="w-16 h-16 bg-amber-50 border border-amber-200 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <Edit3 className="h-8 w-8 text-amber-600" />
                     </div>
                     {/* Step Title */}
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    <h3 className="text-xl font-bold text-amber-800 mb-3">
                       {t('howToUse.step1.title')}
                     </h3>
                     {/* Step Description */}
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-amber-700 leading-relaxed">
                       {t('howToUse.step1.description')}
                     </p>
                   </div>
 
                   {/* Arrow 1 */}
                   <div className="flex items-center justify-center px-8">
-                    <ArrowRight className="w-8 h-8 text-gray-400" />
+                    <ArrowRight className="w-8 h-8 text-amber-400" />
                   </div>
 
-                  {/* Step 2: Customize Design */}
+                    {/* Step 2: Customize Design */}
                   <div className="text-center flex-1">
                     {/* Step Number Circle */}
-                    <div className="w-20 h-20 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                    <div className="w-20 h-20 bg-amber-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
                       2
                     </div>
                     {/* Step Icon */}
-                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <span className="text-3xl">🎨</span>
+                    <div className="w-16 h-16 bg-amber-50 border border-amber-200 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <Settings className="h-8 w-8 text-amber-600" />
                     </div>
                     {/* Step Title */}
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    <h3 className="text-xl font-bold text-amber-800 mb-3">
                       {t('howToUse.step2.title')}
                     </h3>
                     {/* Step Description */}
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-amber-700 leading-relaxed">
                       {t('howToUse.step2.description')}
                     </p>
                   </div>
 
                   {/* Arrow 2 */}
                   <div className="flex items-center justify-center px-8">
-                    <ArrowRight className="w-8 h-8 text-gray-400" />
+                    <ArrowRight className="w-8 h-8 text-amber-400" />
                   </div>
 
                   {/* Step 3: Export & Share */}
                   <div className="text-center flex-1">
                     {/* Step Number Circle */}
-                    <div className="w-20 h-20 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                    <div className="w-20 h-20 bg-amber-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
                       3
                     </div>
                     {/* Step Icon */}
-                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <span className="text-3xl">⬇️</span>
+                    <div className="w-16 h-16 bg-amber-50 border border-amber-200 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <Share2 className="h-8 w-8 text-amber-600" />
                     </div>
                     {/* Step Title */}
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    <h3 className="text-xl font-bold text-amber-800 mb-3">
                       {t('howToUse.step3.title')}
                     </h3>
                     {/* Step Description */}
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-amber-700 leading-relaxed">
                       {t('howToUse.step3.description')}
                     </p>
                   </div>
@@ -480,19 +480,19 @@ export default function Home() {
                   {/* Step 1: Enter Arabic Text */}
                   <div className="text-center">
                     {/* Step Number Circle */}
-                    <div className="w-20 h-20 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                    <div className="w-20 h-20 bg-amber-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
                       1
                     </div>
                     {/* Step Icon */}
-                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <span className="text-3xl">📝</span>
+                    <div className="w-16 h-16 bg-amber-50 border border-amber-200 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <Edit3 className="h-8 w-8 text-amber-600" />
                     </div>
                     {/* Step Title */}
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    <h3 className="text-xl font-bold text-amber-800 mb-3">
                       {t('howToUse.step1.title')}
                     </h3>
                     {/* Step Description */}
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-amber-700 leading-relaxed">
                       {t('howToUse.step1.description')}
                     </p>
                   </div>
@@ -500,19 +500,19 @@ export default function Home() {
                   {/* Step 2: Customize Design */}
                   <div className="text-center">
                     {/* Step Number Circle */}
-                    <div className="w-20 h-20 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                    <div className="w-20 h-20 bg-amber-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
                       2
                     </div>
                     {/* Step Icon */}
-                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <span className="text-3xl">🎨</span>
+                    <div className="w-16 h-16 bg-amber-50 border border-amber-200 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <Settings className="h-8 w-8 text-amber-600" />
                     </div>
                     {/* Step Title */}
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    <h3 className="text-xl font-bold text-amber-800 mb-3">
                       {t('howToUse.step2.title')}
                     </h3>
                     {/* Step Description */}
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-amber-700 leading-relaxed">
                       {t('howToUse.step2.description')}
                     </p>
                   </div>
@@ -520,19 +520,19 @@ export default function Home() {
                   {/* Step 3: Export & Share */}
                   <div className="text-center">
                     {/* Step Number Circle */}
-                    <div className="w-20 h-20 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                    <div className="w-20 h-20 bg-amber-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
                       3
                     </div>
                     {/* Step Icon */}
-                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <span className="text-3xl">⬇️</span>
+                    <div className="w-16 h-16 bg-amber-50 border border-amber-200 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <Share2 className="h-8 w-8 text-amber-600" />
                     </div>
                     {/* Step Title */}
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    <h3 className="text-xl font-bold text-amber-800 mb-3">
                       {t('howToUse.step3.title')}
                     </h3>
                     {/* Step Description */}
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-amber-700 leading-relaxed">
                       {t('howToUse.step3.description')}
                     </p>
                   </div>
@@ -540,26 +540,28 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* CTA Section */}
-              <div className="text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  {t('howToUse.cta.title')}
-                </h3>
-                <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                  {t('howToUse.cta.description')}
-                </p>
-                <button 
-                  onClick={() => document.getElementById('calligraphy-tool-section')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
-                >
-                  <span className="flex items-center justify-center gap-2">
-                    <span>✨</span>
-                    {t('howToUse.cta.button')}
-                    <ArrowRight className="w-5 h-5" />
-                  </span>
-                </button>
-              </div>
+            </div>
+          </section>
 
+          {/* Ready to Create CTA Section - 独立分离 */}
+          <section className="mb-16">
+            <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg p-8 text-center">
+              <h3 className="text-2xl font-bold text-amber-800 mb-4">
+                {t('howToUse.cta.title')}
+              </h3>
+              <p className="text-amber-700 mb-6 max-w-2xl mx-auto">
+                {t('howToUse.cta.description')}
+              </p>
+              <button 
+                onClick={() => document.getElementById('calligraphy-tool-section')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
+              >
+                <span className="flex items-center justify-center gap-2">
+                  <span>✨</span>
+                  {t('howToUse.cta.button')}
+                  <ArrowRight className="w-5 h-5" />
+                </span>
+              </button>
             </div>
           </section>
 

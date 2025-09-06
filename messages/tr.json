@@ -89,6 +89,15 @@
 		"subtitle": "الخط العربي",
 		"description": "Anında Göz Alıcı Arapça Yazı Sanatı Oluşturun",
 		"intro": "Ücretsiz online Arapça hat sanatı jeneratörümüzle herhangi bir Arapça metni harika bir kaligrafiye dönüştürün. Bu güçlü Arapça metin oluşturucu, 13'ten fazla premium online Arapça yazı tipine sahiptir. Kayıt olmadan anında çarpıcı tasarımlar yaratın!",
+		"hero": {
+			"badge": "#1 Ücretsiz Arapça Hat Sanatı Jeneratörü Online",
+			"subtitle": "Güzel Tasarımlar Oluşturun",
+			"description": "Ücretsiz online Arapça hat sanatı yazı tipi jeneratörümüzle Arapça metninizi çarpıcı kaligrafiye dönüştürün. Premium yazı tipleri ve özelleştirme seçenekleriyle anında profesyonel Arapça hat sanatı tasarımları, logolar ve metin sanatı oluşturun.",
+			"value1": "%100 Ücretsiz Arapça Hat Sanatı Jeneratörü",
+			"value2": "Kayıt Gerekmez",
+			"value3": "Anında İndirme",
+			"cta": "Şimdi Arapça Hat Sanatı Oluşturmaya Başlayın"
+		},
 		"socialProof": {
 			"designsCreated": "100.000+ Tasarım Oluşturuldu",
 			"premiumFonts": "13+ Premium Yazı Tipi",
@@ -194,6 +203,48 @@
 				"free": "%100 Ücretsiz",
 				"instantDownload": "Anında İndirme"
 			}
+		},
+		"testimonials": {
+			"title": "Kullanıcılarımız Ne Diyor",
+			"description": "Ücretsiz oluşturucumuzla çarpıcı Arapça hat sanatı tasarımları yaratmış binlerce memnun kullanıcıya katılın.",
+			"reviews": [
+				{
+					"name": "Sarah Ahmed",
+					"title": "Grafik Tasarımcı ve Yaratıcı Stüdyo",
+					"content": "Bu Arapça hat sanatı oluşturucu tasarım iş akışımda devrim yarattı. Yazı tipi kalitesi olağanüstü ve özelleştirme seçenekleri profesyonel projeler için mükemmel. Müşterilerim otantik Arapça tipografiyi çok seviyorlar!",
+					"date": "Aralık 2024"
+				},
+				{
+					"name": "Mohammed Ali",
+					"title": "Arapça Çalışmaları Öğrencisi",
+					"content": "Arapça öğrenen bir öğrenci olarak, bu araç farklı hat sanatı stillerini anlamama yardımcı oluyor. İnanılmaz derecede kullanıcı dostu ve yazı tipi çeşitliliği onu eğitim projeleri ve sunumlar için mükemmel yapıyor.",
+					"date": "Kasım 2024"
+				},
+				{
+					"name": "Fatima Hassan",
+					"title": "Restoran Sahibi",
+					"content": "Restoranımın tüm Arapça tabelaları ve menüleri için bu oluşturucuyu kullanıyorum. Profesyonel kalite ve kullanım kolaylığı tasarım maliyetlerinde yüzlerce dolar tasarruf ettirdi. Herhangi bir işletme için şiddetle tavsiye ederim!",
+					"date": "Kasım 2024"
+				},
+				{
+					"name": "Ahmad Khalil",
+					"title": "Düğün Planlayıcısı",
+					"content": "Güzel düğün davetiyeleri ve dekoratif unsurlar oluşturmak için mükemmel. Arapça hat sanatı stilleri otantik ve zarif. En iyi yanı? Su damgası olmadan tamamen ücretsiz!",
+					"date": "Ekim 2024"
+				},
+				{
+					"name": "Dr. Amina Rashid",
+					"title": "Arapça Dil Öğretmeni",
+					"content": "Eğitim materyalleri ve sınıf görüntüleri oluşturmak için bu aracı düzenli olarak kullanıyorum. Öğrencilerim isimlerini güzel Arapça hat sanatında görmeyi seviyorlar. Öğrenmeyi daha ilgi çekici ve eğlenceli hale getiriyor!",
+					"date": "Ekim 2024"
+				},
+				{
+					"name": "Omar Zaid",
+					"title": "Serbest Tasarımcı",
+					"content": "Bu oluşturucu tasarım araç setimin temel bir parçası haline geldi. Dışa aktarma kalitesi mükemmel ve müşteriler her zaman otantik Arapça hat sanatından etkileniyorlar. İşimi önemli ölçüde artırdı!",
+					"date": "Eylül 2024"
+				}
+			]
 		},
 		"technicalFeatures": {
 			"title": "Gelişmiş Arapça Tipografi Özellikleri",

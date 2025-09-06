@@ -53,29 +53,29 @@ export function UseCasesSection() {
         {/* 左侧：场景列表 */}
         <div className="space-y-2">
           {useCases.map((useCase) => (
-            <div key={useCase.id} className="border border-gray-200 rounded-lg overflow-hidden">
+            <div key={useCase.id} className="border border-amber-200 rounded-lg overflow-hidden">
               {/* 场景标题 */}
               <button
-                className={`w-full px-4 py-3 text-left flex items-center justify-between hover:bg-gray-50 transition-colors ${
-                  activeCase === useCase.id ? 'bg-amber-50 border-amber-200' : ''
+                className={`w-full px-4 py-3 text-left flex items-center justify-between hover:bg-amber-50 transition-colors ${
+                  activeCase === useCase.id ? 'bg-amber-100 border-amber-300 text-amber-900 font-semibold' : 'text-amber-700'
                 }`}
-                onClick={() => setActiveCase(activeCase === useCase.id ? '' : useCase.id)}
+                onClick={() => setActiveCase(useCase.id)} // 修改点击逻辑，始终选中
               >
                 <div className="flex items-center gap-3">
                   <span className="text-xl">{useCase.icon}</span>
-                  <span className="font-semibold text-gray-900">{useCase.title}</span>
+                  <span className="font-semibold text-amber-900">{useCase.title}</span>
                 </div>
                 {activeCase === useCase.id ? (
-                  <ChevronDown className="w-5 h-5 text-gray-500" />
+                  <ChevronDown className="w-5 h-5 text-amber-500" />
                 ) : (
-                  <ChevronRight className="w-5 h-5 text-gray-500" />
+                  <ChevronRight className="w-5 h-5 text-amber-500" />
                 )}
               </button>
               
               {/* 展开的描述 */}
               {activeCase === useCase.id && (
                 <div className="px-4 pb-4 pt-2 bg-amber-50 border-t border-amber-200">
-                  <p className="text-sm text-gray-700">{useCase.description}</p>
+                  <p className="text-sm text-amber-700">{useCase.description}</p>
                 </div>
               )}
             </div>
@@ -85,7 +85,7 @@ export function UseCasesSection() {
         {/* 右侧：对应图片 */}
         <div className="flex items-center justify-center">
           {activeCase && (
-            <div className="relative w-full h-64 lg:h-80 rounded-lg overflow-hidden border border-gray-200">
+            <div className="relative w-full h-64 lg:h-80 rounded-lg overflow-hidden border border-amber-200">
               <Image
                 src={`https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/${useCases.find(uc => uc.id === activeCase)?.image}`}
                 alt={`${useCases.find(uc => uc.id === activeCase)?.title} example`}
@@ -97,8 +97,8 @@ export function UseCasesSection() {
             </div>
           )}
           {!activeCase && (
-            <div className="flex items-center justify-center w-full h-64 lg:h-80 bg-gray-100 rounded-lg border border-gray-200">
-              <p className="text-gray-500 text-center">
+            <div className="flex items-center justify-center w-full h-64 lg:h-80 bg-amber-50 rounded-lg border border-amber-200">
+              <p className="text-amber-600 text-center">
                 点击左侧场景查看示例图片
               </p>
             </div>

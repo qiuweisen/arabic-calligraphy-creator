@@ -88,6 +88,15 @@
 		"subtitle": "الخط العربي",
 		"description": "Cipta Seni Khat Arab Yang Menakjubkan Serta-merta",
 		"intro": "Ubah mana-mana teks Arab menjadi kaligrafi yang indah dengan penjana kaligrafi Arab dalam talian kami yang percuma. Penjana teks Arab yang berkuasa ini mempunyai 13+ fon Arab premium dalam talian. Cipta reka bentuk yang menakjubkan serta-merta - tiada pendaftaran diperlukan!",
+		"hero": {
+			"badge": "#1 Penjana Kaligrafi Arab Percuma Dalam Talian",
+			"subtitle": "Cipta Reka Bentuk Yang Indah",
+			"description": "Ubah teks Arab anda menjadi kaligrafi yang menakjubkan dengan penjana fon kaligrafi Arab dalam talian kami yang percuma. Cipta reka bentuk kaligrafi Arab profesional, logo, dan seni teks serta-merta dengan fon premium dan pilihan penyesuaian.",
+			"value1": "Penjana Kaligrafi Arab 100% Percuma",
+			"value2": "Tiada Pendaftaran Diperlukan",
+			"value3": "Muat Turun Serta-merta",
+			"cta": "Mula Cipta Kaligrafi Arab Sekarang"
+		},
 		"socialProof": {
 			"designsCreated": "100,000+ Reka Bentuk Dicipta",
 			"premiumFonts": "13+ Fon Premium",
@@ -193,6 +202,48 @@
 				"free": "100% Percuma",
 				"instantDownload": "Muat Turun Segera"
 			}
+		},
+		"testimonials": {
+			"title": "Apa Kata Pengguna Kami",
+			"description": "Sertai ribuan pengguna yang berpuas hati yang telah mencipta reka bentuk kaligrafi Arab yang menakjubkan dengan penjana percuma kami.",
+			"reviews": [
+				{
+					"name": "Sarah Ahmed",
+					"title": "Pereka Grafik & Studio Kreatif",
+					"content": "Penjana kaligrafi Arab ini telah merevolusikan aliran kerja reka bentuk saya. Kualiti fon sangat luar biasa dan pilihan penyesuaian sempurna untuk projek profesional. Pelanggan saya menyukai tipografi Arab yang asli!",
+					"date": "Disember 2024"
+				},
+				{
+					"name": "Mohammed Ali",
+					"title": "Pelajar Kajian Arab",
+					"content": "Sebagai pelajar yang mempelajari bahasa Arab, alat ini membantu saya memahami gaya kaligrafi yang berbeza. Ia sangat mesra pengguna dan kepelbagaian fon menjadikannya sempurna untuk projek pendidikan dan pembentangan.",
+					"date": "November 2024"
+				},
+				{
+					"name": "Fatima Hassan",
+					"title": "Pemilik Restoran",
+					"content": "Saya menggunakan penjana ini untuk semua papan tanda Arab dan menu restoran saya. Kualiti profesional dan kemudahan penggunaan telah menjimatkan ratusan dolar kos reka bentuk. Sangat disyorkan untuk mana-mana perniagaan!",
+					"date": "November 2024"
+				},
+				{
+					"name": "Ahmad Khalil",
+					"title": "Perancang Perkahwinan",
+					"content": "Sempurna untuk mencipta jemputan perkahwinan yang cantik dan elemen hiasan. Gaya kaligrafi Arab adalah asli dan elegan. Yang terbaik? Ia benar-benar percuma tanpa tanda air!",
+					"date": "Oktober 2024"
+				},
+				{
+					"name": "Dr. Amina Rashid",
+					"title": "Guru Bahasa Arab",
+					"content": "Saya kerap menggunakan alat ini untuk mencipta bahan pendidikan dan paparan bilik darjah. Pelajar saya suka melihat nama mereka dalam kaligrafi Arab yang cantik. Ia menjadikan pembelajaran lebih menarik dan menyeronokkan!",
+					"date": "Oktober 2024"
+				},
+				{
+					"name": "Omar Zaid",
+					"title": "Pereka Bebas",
+					"content": "Penjana ini telah menjadi bahagian penting dalam kit alat reka bentuk saya. Kualiti eksport sangat baik dan pelanggan sentiasa terkesan dengan kaligrafi Arab yang asli. Ia telah meningkatkan perniagaan saya dengan ketara!",
+					"date": "September 2024"
+				}
+			]
 		},
 		"technicalFeatures": {
 			"title": "Ciri-ciri Tipografi Arab Lanjutan",
