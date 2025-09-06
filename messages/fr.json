@@ -130,18 +130,24 @@
 			"steps": "Saisissez du texte arabe → Choisissez une police → Téléchargez instantanément"
 		},
 		"howToUse": {
-			"title": "Comment Créer une Calligraphie Arabe",
+			"title": "Comment utiliser notre générateur de calligraphie arabe",
+			"description": "Créez de magnifiques designs de calligraphie arabe en trois étapes simples avec notre générateur de polices de calligraphie arabe gratuit en ligne. Aucune expérience requise !",
 			"step1": {
-				"title": "Saisissez Votre Texte",
-				"description": "Tapez ou collez votre texte arabe dans le champ de saisie ci-dessus"
+				"title": "Saisir le texte arabe",
+				"description": "Tapez ou collez votre texte arabe dans notre générateur de calligraphie. Utilisez notre clavier arabe virtuel si nécessaire pour une saisie de texte facile."
 			},
 			"step2": {
-				"title": "Choisissez Votre Style",
-				"description": "Sélectionnez parmi plus de 13 magnifiques polices arabes et personnalisez les couleurs"
+				"title": "Personnaliser le design",
+				"description": "Choisissez parmi les polices de calligraphie arabe premium, ajustez les couleurs, la taille et l'alignement pour créer votre design de calligraphie arabe parfait."
 			},
 			"step3": {
-				"title": "Téléchargez et Partagez",
-				"description": "Téléchargez votre calligraphie en PNG ou SVG et partagez-la partout"
+				"title": "Exporter et partager",
+				"description": "Téléchargez votre calligraphie arabe en formats PNG ou SVG haute qualité, ou partagez directement sur les plateformes de médias sociaux."
+			},
+			"cta": {
+				"title": "Prêt à créer une calligraphie arabe époustouflante ?",
+				"description": "Rejoignez des milliers d'utilisateurs qui font confiance à notre générateur de calligraphie arabe pour leurs besoins de design",
+				"button": "Commencer à créer la calligraphie arabe maintenant"
 			}
 		},
 		"useCases": {

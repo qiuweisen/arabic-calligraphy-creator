@@ -130,18 +130,24 @@
 			"steps": "Arabischen Text eingeben → Schriftart wählen → Sofort herunterladen"
 		},
 		"howToUse": {
-			"title": "So erstellen Sie arabische Kalligraphie",
+			"title": "So verwenden Sie unseren arabischen Kalligraphie-Generator",
+			"description": "Erstellen Sie wunderschöne arabische Kalligraphie-Designs in drei einfachen Schritten mit unserem kostenlosen Online-Kalligraphie-Generator. Keine Erfahrung erforderlich!",
 			"step1": {
-				"title": "Geben Sie Ihren Text ein",
-				"description": "Tippen oder fügen Sie Ihren arabischen Text in das obige Eingabefeld ein"
+				"title": "Arabischen Text eingeben",
+				"description": "Geben Sie Ihren arabischen Text in unseren Kalligraphie-Generator ein. Verwenden Sie bei Bedarf unsere virtuelle arabische Tastatur für eine einfache Texteingabe."
 			},
 			"step2": {
-				"title": "Wählen Sie Ihren Stil",
-				"description": "Wählen Sie aus über 13 wunderschönen arabischen Schriftarten und passen Sie die Farben an"
+				"title": "Design anpassen",
+				"description": "Wählen Sie aus Premium-Kalligraphie-Schriftarten, passen Sie Farben, Größe und Ausrichtung an, um Ihr perfektes arabisches Kalligraphie-Design zu erstellen."
 			},
 			"step3": {
-				"title": "Herunterladen & Teilen",
-				"description": "Laden Sie Ihre Kalligraphie als PNG oder SVG herunter und teilen Sie sie überall"
+				"title": "Exportieren & Teilen",
+				"description": "Laden Sie Ihre arabische Kalligraphie in hochwertigen PNG- oder SVG-Formaten herunter oder teilen Sie sie direkt auf Social-Media-Plattformen."
+			},
+			"cta": {
+				"title": "Bereit, atemberaubende arabische Kalligraphie zu erstellen?",
+				"description": "Schließen Sie sich Tausenden von Benutzern an, die unserem arabischen Kalligraphie-Generator für ihre Designbedürfnisse vertrauen",
+				"button": "Jetzt arabische Kalligraphie erstellen"
 			}
 		},
 		"useCases": {

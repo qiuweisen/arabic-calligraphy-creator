@@ -8,7 +8,6 @@ import { useTranslations } from 'next-intl'
 import { LanguagePrompt } from "@/components/language-prompt"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Check, Download, Palette, Type, ChevronRight, Laptop, Smartphone, Tablet, ArrowRight, Info } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
@@ -269,62 +268,56 @@ export default function Home() {
       <Navbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
         <div className="container mx-auto px-4 py-8 md:py-16">
-          {/* Header */}
-          <header className="mb-8 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-800 to-amber-600 mb-4">
+          {/* Hero Section - 简洁直观设计 */}
+          <header className="mb-12 text-center">
+            {/* 权威性标识 - 多语言适配 */}
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <span className="text-blue-500">⭐</span>
+              {t('hero.badge')}
+            </div>
+            
+            {/* 主标题 */}
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
               {t('title')}
             </h1>
-            <p className="text-lg md:text-xl text-amber-700 font-medium mt-2 max-w-3xl mx-auto">
-              {t('subtitle')}
+            
+            {/* 副标题 - 突出核心价值 */}
+            <h2 className="text-2xl md:text-4xl font-bold text-blue-600 mb-6">
+              {t('hero.subtitle')}
+            </h2>
+            
+            {/* 简洁描述 */}
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+              {t('hero.description')}
             </p>
-            <p className="mt-4 text-amber-700 max-w-2xl mx-auto">
-              {t('intro')}
-            </p>
-
-            {/* Enhanced Social Proof Cards */}
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
-              <div className="bg-white/70 backdrop-blur-sm border border-amber-200 rounded-2xl p-6 text-center hover:transform hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                <div className="text-3xl mb-3">🎨</div>
-                <div className="text-2xl font-bold text-amber-800 mb-1">100,000+</div>
-                <div className="text-sm text-amber-600 font-medium">Designs Created</div>
+            
+            {/* 核心价值主张 - 三个勾选项 */}
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 mb-8">
+              <div className="flex items-center gap-2 text-green-700">
+                <span className="text-green-600 font-bold text-lg">✓</span>
+                <span className="font-semibold">{t('hero.value1')}</span>
               </div>
-              <div className="bg-white/70 backdrop-blur-sm border border-amber-200 rounded-2xl p-6 text-center hover:transform hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                <div className="text-3xl mb-3">⚡</div>
-                <div className="text-2xl font-bold text-amber-800 mb-1">13+</div>
-                <div className="text-sm text-amber-600 font-medium">Premium Fonts</div>
+              <div className="flex items-center gap-2 text-green-700">
+                <span className="text-green-600 font-bold text-lg">✓</span>
+                <span className="font-semibold">{t('hero.value2')}</span>
               </div>
-              <div className="bg-white/70 backdrop-blur-sm border border-amber-200 rounded-2xl p-6 text-center hover:transform hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                <div className="text-3xl mb-3">🌍</div>
-                <div className="text-2xl font-bold text-amber-800 mb-1">Free</div>
-                <div className="text-sm text-amber-600 font-medium">Forever</div>
+              <div className="flex items-center gap-2 text-green-700">
+                <span className="text-green-600 font-bold text-lg">✓</span>
+                <span className="font-semibold">{t('hero.value3')}</span>
               </div>
             </div>
+            
+            {/* 主要CTA按钮 */}
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105 mb-4">
+              <span className="flex items-center justify-center gap-2">
+                <span>✨</span>
+                {t('hero.cta')}
+              </span>
+            </button>
           </header>
 
           {/* Main Tool Section */}
           <div className="mb-12" id="calligraphy-tool-section">
-            {/* Tool Introduction */}
-            <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-amber-800 mb-4">
-                Free Arabic Calligraphy Generator Tool
-              </h2>
-              <p className="text-amber-700 max-w-3xl mx-auto mb-6">
-                Create stunning Arabic calligraphy designs instantly with our professional online generator. 
-                Choose from 13+ premium Arabic fonts, customize colors and styles, then download high-quality 
-                PNG or SVG files - completely free, no registration required.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 text-sm">
-                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full font-medium">
-                  ✓ 100% Free Forever
-                </span>
-                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-medium">
-                  ✓ No Registration Required
-                </span>
-                <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
-                  ✓ Commercial Use Allowed
-                </span>
-              </div>
-            </div>
 
             {/* NoScript fallback for search engines - Enhanced SEO content */}
             <noscript>
@@ -391,248 +384,355 @@ export default function Home() {
             />
           </div>
 
-          {/* Quick Start Guide - Simplified */}
-          <section className="mb-8">
-            <div className="text-center">
-              <p className="text-amber-700 mb-4">
-                <span className="font-semibold">{t('quickStart.title')}</span> {t('quickStart.steps')}
-              </p>
+          {/* How to Use - Visual Guide */}
+          <section className="mb-16 bg-gradient-to-b from-gray-50 to-white py-16">
+            <div className="max-w-6xl mx-auto px-4">
+              {/* Section Header */}
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  {t('howToUse.title')}
+                </h2>
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  {t('howToUse.description')}
+                </p>
+              </div>
+
+              {/* 3-Step Process */}
+              <div className="mb-12">
+                {/* Desktop Layout */}
+                <div className="hidden md:flex items-center justify-between max-w-5xl mx-auto">
+                  
+                  {/* Step 1: Enter Arabic Text */}
+                  <div className="text-center flex-1">
+                    {/* Step Number Circle */}
+                    <div className="w-20 h-20 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                      1
+                    </div>
+                    {/* Step Icon */}
+                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <span className="text-3xl">📝</span>
+                    </div>
+                    {/* Step Title */}
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {t('howToUse.step1.title')}
+                    </h3>
+                    {/* Step Description */}
+                    <p className="text-gray-600 leading-relaxed">
+                      {t('howToUse.step1.description')}
+                    </p>
+                  </div>
+
+                  {/* Arrow 1 */}
+                  <div className="flex items-center justify-center px-8">
+                    <ArrowRight className="w-8 h-8 text-gray-400" />
+                  </div>
+
+                  {/* Step 2: Customize Design */}
+                  <div className="text-center flex-1">
+                    {/* Step Number Circle */}
+                    <div className="w-20 h-20 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                      2
+                    </div>
+                    {/* Step Icon */}
+                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <span className="text-3xl">🎨</span>
+                    </div>
+                    {/* Step Title */}
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {t('howToUse.step2.title')}
+                    </h3>
+                    {/* Step Description */}
+                    <p className="text-gray-600 leading-relaxed">
+                      {t('howToUse.step2.description')}
+                    </p>
+                  </div>
+
+                  {/* Arrow 2 */}
+                  <div className="flex items-center justify-center px-8">
+                    <ArrowRight className="w-8 h-8 text-gray-400" />
+                  </div>
+
+                  {/* Step 3: Export & Share */}
+                  <div className="text-center flex-1">
+                    {/* Step Number Circle */}
+                    <div className="w-20 h-20 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                      3
+                    </div>
+                    {/* Step Icon */}
+                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <span className="text-3xl">⬇️</span>
+                    </div>
+                    {/* Step Title */}
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {t('howToUse.step3.title')}
+                    </h3>
+                    {/* Step Description */}
+                    <p className="text-gray-600 leading-relaxed">
+                      {t('howToUse.step3.description')}
+                    </p>
+                  </div>
+
+                </div>
+
+                {/* Mobile Layout */}
+                <div className="md:hidden space-y-8">
+                  
+                  {/* Step 1: Enter Arabic Text */}
+                  <div className="text-center">
+                    {/* Step Number Circle */}
+                    <div className="w-20 h-20 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                      1
+                    </div>
+                    {/* Step Icon */}
+                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <span className="text-3xl">📝</span>
+                    </div>
+                    {/* Step Title */}
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {t('howToUse.step1.title')}
+                    </h3>
+                    {/* Step Description */}
+                    <p className="text-gray-600 leading-relaxed">
+                      {t('howToUse.step1.description')}
+                    </p>
+                  </div>
+
+                  {/* Step 2: Customize Design */}
+                  <div className="text-center">
+                    {/* Step Number Circle */}
+                    <div className="w-20 h-20 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                      2
+                    </div>
+                    {/* Step Icon */}
+                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <span className="text-3xl">🎨</span>
+                    </div>
+                    {/* Step Title */}
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {t('howToUse.step2.title')}
+                    </h3>
+                    {/* Step Description */}
+                    <p className="text-gray-600 leading-relaxed">
+                      {t('howToUse.step2.description')}
+                    </p>
+                  </div>
+
+                  {/* Step 3: Export & Share */}
+                  <div className="text-center">
+                    {/* Step Number Circle */}
+                    <div className="w-20 h-20 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                      3
+                    </div>
+                    {/* Step Icon */}
+                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <span className="text-3xl">⬇️</span>
+                    </div>
+                    {/* Step Title */}
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {t('howToUse.step3.title')}
+                    </h3>
+                    {/* Step Description */}
+                    <p className="text-gray-600 leading-relaxed">
+                      {t('howToUse.step3.description')}
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+
+              {/* CTA Section */}
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {t('howToUse.cta.title')}
+                </h3>
+                <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                  {t('howToUse.cta.description')}
+                </p>
+                <button 
+                  onClick={() => document.getElementById('calligraphy-tool-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
+                >
+                  <span className="flex items-center justify-center gap-2">
+                    <span>✨</span>
+                    {t('howToUse.cta.button')}
+                    <ArrowRight className="w-5 h-5" />
+                  </span>
+                </button>
+              </div>
+
             </div>
           </section>
 
-          {/* Key Features Section - Enhanced */}
+
+
+
+
+
+          {/* Enhanced Features Section - 多语言适配 */}
           <section id="features" className="mb-12">
             <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">{t('features.title')}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-              <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
-                <CardContent className="p-6 text-center">
-                  <div className="mb-4 w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mx-auto">
-                    <Type className="h-6 w-6 text-amber-600" />
-                  </div>
-                  <h3 className="text-lg font-bold text-amber-800 mb-2">{t('features.fontLibrary.title')}</h3>
-                  <p className="text-amber-700 mb-3">
-                    {t('features.fontLibrary.description')}
-                  </p>
-                  <ul className="text-xs text-amber-600 text-left space-y-1">
-                    <li>• {t('features.fontLibrary.items.0')}</li>
-                    <li>• {t('features.fontLibrary.items.1')}</li>
-                    <li>• {t('features.fontLibrary.items.2')}</li>
-                  </ul>
-                  <div className="mt-4">
-                    <Link href="/fonts" className="text-xs text-amber-700 hover:text-amber-800 font-medium underline">
-                      Explore All Arabic Fonts →
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
-                <CardContent className="p-6 text-center">
-                  <div className="mb-4 w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mx-auto">
-                    <Palette className="h-6 w-6 text-amber-600" />
-                  </div>
-                  <h3 className="text-lg font-bold text-amber-800 mb-2">{t('features.customization.title')}</h3>
-                  <p className="text-amber-700 mb-3">
-                    {t('features.customization.description')}
-                  </p>
-                  <ul className="text-xs text-amber-600 text-left space-y-1">
-                    <li>• {t('features.customization.items.0')}</li>
-                    <li>• {t('features.customization.items.1')}</li>
-                    <li>• {t('features.customization.items.2')}</li>
-                  </ul>
-                  <div className="mt-4">
-                    <Link href="/tutorials/arabic-calligraphy-design-tips" className="text-xs text-amber-700 hover:text-amber-800 font-medium underline">
-                      Learn Design Tips →
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
-                <CardContent className="p-6 text-center">
-                  <div className="mb-4 w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mx-auto">
-                    <Download className="h-6 w-6 text-amber-600" />
-                  </div>
-                  <h3 className="text-lg font-bold text-amber-800 mb-2">{t('features.export.title')}</h3>
-                  <p className="text-amber-700 mb-3">
-                    {t('features.export.description')}
-                  </p>
-                  <ul className="text-xs text-amber-600 text-left space-y-1">
-                    <li>• {t('features.export.items.0')}</li>
-                    <li>• {t('features.export.items.1')}</li>
-                    <li>• {t('features.export.items.2')}</li>
-                  </ul>
-                  <div className="mt-4">
-                    <Link href="/tutorials/download-and-use-arabic-fonts" className="text-xs text-amber-700 hover:text-amber-800 font-medium underline">
-                      Download Guide →
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
-
-
-
-
-
-          {/* Technical Capabilities - 简洁实用设计 */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">{t('technicalFeatures.title')}</h2>
+            <p className="text-amber-700 text-center mb-8 max-w-3xl mx-auto">
+              {t('features.description')}
+            </p>
             
-            {/* 信任度建设 - 核心价值主张 */}
-            <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8 text-center">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-amber-800">
-                <div className="flex items-center justify-center gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
-                  <span className="font-semibold">100% Free Forever</span>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
-                  <span className="font-semibold">No Registration Required</span>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
-                  <span className="font-semibold">Commercial Use Allowed</span>
-                </div>
-              </div>
-            </div>
-            
-            {/* 简洁的功能列表 */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* 8个核心功能卡片 - 采用我们自己的设计风格 */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               
               {/* 字体库 */}
-              <div className="bg-white border border-amber-200 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-amber-800 mb-3">13+ Premium Arabic Fonts</h3>
-                <ul className="space-y-2 text-amber-700">
-                  <li>• Traditional scripts: Amiri, Scheherazade, Noto Naskh</li>
-                  <li>• Modern fonts: Cairo, Tajawal, IBM Plex Arabic</li>
-                  <li>• Display styles: Reem Kufi, Rakkas, Katibeh</li>
-                </ul>
+              <div className="bg-white border border-amber-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mb-4 mx-auto">
+                  <Type className="h-6 w-6 text-amber-600" />
+                </div>
+                <h3 className="text-lg font-bold text-amber-800 mb-3 text-center">{t('features.fontLibrary.title')}</h3>
+                <p className="text-amber-700 text-sm text-center">
+                  {t('features.fontLibrary.description')}
+                </p>
               </div>
-              
+
+              {/* 定制功能 */}
+              <div className="bg-white border border-amber-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mb-4 mx-auto">
+                  <Palette className="h-6 w-6 text-amber-600" />
+                </div>
+                <h3 className="text-lg font-bold text-amber-800 mb-3 text-center">{t('features.customization.title')}</h3>
+                <p className="text-amber-700 text-sm text-center">
+                  {t('features.customization.description')}
+                </p>
+              </div>
+
               {/* 导出功能 */}
-              <div className="bg-white border border-amber-200 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-amber-800 mb-3">High-Quality Export</h3>
-                <ul className="space-y-2 text-amber-700">
-                  <li>• PNG format with transparent background</li>
-                  <li>• SVG vector format for scalable designs</li>
-                  <li>• Print-ready quality for professional use</li>
-                </ul>
+              <div className="bg-white border border-amber-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mb-4 mx-auto">
+                  <Download className="h-6 w-6 text-amber-600" />
+                </div>
+                <h3 className="text-lg font-bold text-amber-800 mb-3 text-center">{t('features.export.title')}</h3>
+                <p className="text-amber-700 text-sm text-center">
+                  {t('features.export.description')}
+                </p>
               </div>
-              
-              {/* 技术特性 */}
-              <div className="bg-white border border-amber-200 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-amber-800 mb-3">Professional Features</h3>
-                <ul className="space-y-2 text-amber-700">
-                  <li>• Full RTL (Right-to-Left) text support</li>
-                  <li>• Arabic diacritics and Kashida support</li>
-                  <li>• Real-time preview and customization</li>
-                </ul>
+
+              {/* 实时预览 */}
+              <div className="bg-white border border-amber-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mb-4 mx-auto">
+                  <span className="text-xl">👁️</span>
+                </div>
+                <h3 className="text-lg font-bold text-amber-800 mb-3 text-center">{t('features.preview.title')}</h3>
+                <p className="text-amber-700 text-sm text-center">
+                  {t('features.preview.description')}
+                </p>
               </div>
-              
-              {/* 兼容性 */}
-              <div className="bg-white border border-amber-200 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-amber-800 mb-3">Universal Compatibility</h3>
-                <ul className="space-y-2 text-amber-700">
-                  <li>• Works on all modern browsers</li>
-                  <li>• Mobile responsive design</li>
-                  <li>• No software installation needed</li>
-                </ul>
+
+              {/* 移动设备 */}
+              <div className="bg-white border border-amber-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mb-4 mx-auto">
+                  <span className="text-xl">📱</span>
+                </div>
+                <h3 className="text-lg font-bold text-amber-800 mb-3 text-center">{t('features.mobile.title')}</h3>
+                <p className="text-amber-700 text-sm text-center">
+                  {t('features.mobile.description')}
+                </p>
               </div>
-              
+
+              {/* 完全免费 */}
+              <div className="bg-white border border-amber-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mb-4 mx-auto">
+                  <span className="text-xl">💎</span>
+                </div>
+                <h3 className="text-lg font-bold text-amber-800 mb-3 text-center">{t('features.free.title')}</h3>
+                <p className="text-amber-700 text-sm text-center">
+                  {t('features.free.description')}
+                </p>
+              </div>
+
+              {/* 便捷分享 */}
+              <div className="bg-white border border-amber-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mb-4 mx-auto">
+                  <span className="text-xl">🔗</span>
+                </div>
+                <h3 className="text-lg font-bold text-amber-800 mb-3 text-center">{t('features.sharing.title')}</h3>
+                <p className="text-amber-700 text-sm text-center">
+                  {t('features.sharing.description')}
+                </p>
+              </div>
+
+              {/* 隐私保护 */}
+              <div className="bg-white border border-amber-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mb-4 mx-auto">
+                  <span className="text-xl">🛡️</span>
+                </div>
+                <h3 className="text-lg font-bold text-amber-800 mb-3 text-center">{t('features.privacy.title')}</h3>
+                <p className="text-amber-700 text-sm text-center">
+                  {t('features.privacy.description')}
+                </p>
+              </div>
+
             </div>
           </section>
 
           {/* Use Cases Section - Now dynamically loaded */}
           <UseCasesSection />
 
-          {/* Professional Use Cases */}
+          {/* Testimonials Section - 用户评价 */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">{t('professionalUse.title')}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-amber-800 mb-4">{t('professionalUse.business.title')}</h3>
-                  <div className="space-y-3 text-amber-700">
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
-                      <div>
-                        <p className="font-medium">{t('professionalUse.business.logo.title')}</p>
-                        <p className="text-sm text-amber-600">{t('professionalUse.business.logo.description')}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
-                      <div>
-                        <p className="font-medium">{t('professionalUse.business.restaurant.title')}</p>
-                        <p className="text-sm text-amber-600">{t('professionalUse.business.restaurant.description')}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
-                      <div>
-                        <p className="font-medium">{t('professionalUse.business.marketing.title')}</p>
-                        <p className="text-sm text-amber-600">{t('professionalUse.business.marketing.description')}</p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">{t('testimonials.title')}</h2>
+            <p className="text-amber-700 text-center mb-8 max-w-3xl mx-auto">
+              {t('testimonials.description')}
+            </p>
 
-              <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-amber-800 mb-4">{t('professionalUse.personal.title')}</h3>
-                  <div className="space-y-3 text-amber-700">
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
+            {/* 用户评价网格 */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {t.raw('testimonials.reviews').map((review: any, index: number) => (
+                <Card key={index} className="border-amber-200 bg-white/80 backdrop-blur-sm hover:shadow-md transition-shadow">
+                  <CardContent className="p-6">
+                    {/* 用户头像和信息 */}
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center">
+                        <span className="text-amber-600 font-bold text-lg">{review.name.charAt(0)}</span>
+                      </div>
                       <div>
-                        <p className="font-medium">{t('professionalUse.personal.wedding.title')}</p>
-                        <p className="text-sm text-amber-600">{t('professionalUse.personal.wedding.description')}</p>
+                        <h3 className="font-bold text-amber-900">{review.name}</h3>
+                        <p className="text-sm text-amber-600">{review.title}</p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
-                      <div>
-                        <p className="font-medium">{t('professionalUse.personal.islamic.title')}</p>
-                        <p className="text-sm text-amber-600">{t('professionalUse.personal.islamic.description')}</p>
-                      </div>
+
+                    {/* 星级评分 */}
+                    <div className="flex gap-1 mb-3">
+                      {[...Array(5)].map((_, i) => (
+                        <span key={i} className="text-yellow-400">⭐</span>
+                      ))}
                     </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
-                      <div>
-                        <p className="font-medium">{t('professionalUse.personal.social.title')}</p>
-                        <p className="text-sm text-amber-600">{t('professionalUse.personal.social.description')}</p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+
+                    {/* 评价内容 */}
+                    <p className="text-amber-700 leading-relaxed mb-3">
+                      "{review.content}"
+                    </p>
+
+                    {/* 日期 */}
+                    <p className="text-xs text-amber-500">{review.date}</p>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </section>
 
-          {/* FAQ Section - Comprehensive but User-Friendly */}
+          {/* FAQ Section - 平铺展示 */}
           <section id="faq" className="mb-12">
             <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">{t('detailedFaq.title')}</h2>
-            <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
-              <CardContent className="p-6">
-                <Accordion type="single" collapsible className="w-full">
-                  {t.raw('detailedFaq.questions').map((faq: any, index: number) => (
-                    <AccordionItem key={index} value={`item-${index}`}>
-                      <AccordionTrigger className="text-lg font-medium text-amber-900">{faq.question}</AccordionTrigger>
-                      <AccordionContent className="text-amber-700">
-                        {faq.answer}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-                <div className="mt-4 text-center">
-                  <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
-                    <Link href="/faq">{t('detailedFaq.viewAll')}</Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="space-y-6">
+              {t.raw('detailedFaq.questions').map((faq: any, index: number) => (
+                <Card key={index} className="border-amber-200 bg-white/80 backdrop-blur-sm">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-bold text-amber-900 mb-3">{faq.question}</h3>
+                    <p className="text-amber-700 leading-relaxed">{faq.answer}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            <div className="mt-8 text-center">
+              <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
+                <Link href="/faq">{t('detailedFaq.viewAll')}</Link>
+              </Button>
+            </div>
           </section>
 
           {/* CTA Section - Simplified */}

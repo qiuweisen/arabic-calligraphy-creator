@@ -1,201 +1,109 @@
 "use client";
 
-import Link from "next/link";
+import { useState } from "react";
 import Image from "next/image";
-import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
+import { ChevronDown, ChevronRight } from "lucide-react";
 import { useTranslations } from 'next-intl';
-
-const cdnBaseUrl = 'https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev';
 
 export function UseCasesSection() {
   const t = useTranslations('homepage.useCasesSection');
+  const [activeCase, setActiveCase] = useState('socialMedia');
+
+  const useCases = [
+    {
+      id: 'socialMedia',
+      icon: '📱',
+      title: t('socialMedia.title'),
+      description: t('socialMedia.description'),
+      image: 'arabic-calligraphy-in-twitter-post.png'
+    },
+    {
+      id: 'print',
+      icon: '🎨',
+      title: t('print.title'),
+      description: t('print.description'),
+      image: 'business-cards-with-arabic-typography.png'
+    },
+    {
+      id: 'web',
+      icon: '🌐',
+      title: t('web.title'),
+      description: t('web.description'),
+      image: 'website-with-arabic-typography.png'
+    },
+    {
+      id: 'art',
+      icon: '🕌',
+      title: t('art.title'),
+      description: t('art.description'),
+      image: 'arabic-calligraphy-flat-lay-composition.png'
+    }
+  ];
 
   return (
     <section className="mb-12">
       <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">{t('title')}</h2>
       <p className="text-amber-700 text-center mb-8 max-w-3xl mx-auto">
-        Discover how our Arabic calligraphy generator serves different creative needs across industries and personal projects
+        {t('description')}
       </p>
       
-      {/* 四象限网格布局 - 替代Tab切换 */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      {/* 左右分栏布局：左侧列表，右侧图片 */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         
-        {/* Social Media Card */}
-        <Card className="border-amber-200 bg-white hover:shadow-md transition-shadow duration-200">
-          <CardContent className="p-6">
-            <h3 className="text-lg font-bold text-amber-800 mb-3">{t('socialMedia.title')}</h3>
-            
-            <p className="text-amber-700 mb-4 text-sm">
-              {t('socialMedia.description')}
-            </p>
-            
-            <div className="space-y-2 mb-4">
-              <div className="flex items-center text-sm text-amber-700">
-                <span className="text-amber-600 mr-2">•</span>
-                <span>{t('socialMedia.instagram')}</span>
-              </div>
-              <div className="flex items-center text-sm text-amber-700">
-                <span className="text-amber-600 mr-2">•</span>
-                <span>{t('socialMedia.facebook')}</span>
-              </div>
-              <div className="flex items-center text-sm text-amber-700">
-                <span className="text-amber-600 mr-2">•</span>
-                <span>{t('socialMedia.twitter')}</span>
-              </div>
+        {/* 左侧：场景列表 */}
+        <div className="space-y-2">
+          {useCases.map((useCase) => (
+            <div key={useCase.id} className="border border-gray-200 rounded-lg overflow-hidden">
+              {/* 场景标题 */}
+              <button
+                className={`w-full px-4 py-3 text-left flex items-center justify-between hover:bg-gray-50 transition-colors ${
+                  activeCase === useCase.id ? 'bg-amber-50 border-amber-200' : ''
+                }`}
+                onClick={() => setActiveCase(activeCase === useCase.id ? '' : useCase.id)}
+              >
+                <div className="flex items-center gap-3">
+                  <span className="text-xl">{useCase.icon}</span>
+                  <span className="font-semibold text-gray-900">{useCase.title}</span>
+                </div>
+                {activeCase === useCase.id ? (
+                  <ChevronDown className="w-5 h-5 text-gray-500" />
+                ) : (
+                  <ChevronRight className="w-5 h-5 text-gray-500" />
+                )}
+              </button>
+              
+              {/* 展开的描述 */}
+              {activeCase === useCase.id && (
+                <div className="px-4 pb-4 pt-2 bg-amber-50 border-t border-amber-200">
+                  <p className="text-sm text-gray-700">{useCase.description}</p>
+                </div>
+              )}
             </div>
-            
-            <div className="relative w-full h-32 mb-4 rounded border border-amber-200 overflow-hidden">
+          ))}
+        </div>
+        
+        {/* 右侧：对应图片 */}
+        <div className="flex items-center justify-center">
+          {activeCase && (
+            <div className="relative w-full h-64 lg:h-80 rounded-lg overflow-hidden border border-gray-200">
               <Image
-                src={`${cdnBaseUrl}/arabic-calligraphy-in-twitter-post.png`}
-                alt={t('socialMedia.imageAlt')}
+                src={`https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/${useCases.find(uc => uc.id === activeCase)?.image}`}
+                alt={`${useCases.find(uc => uc.id === activeCase)?.title} example`}
                 fill
                 style={{ objectFit: 'cover' }}
-                className="rounded"
-                sizes="(max-width: 768px) 100vw, 300px"
+                className="rounded-lg"
+                sizes="(max-width: 768px) 100vw, 400px"
               />
             </div>
-            
-            <Link 
-              href="/use-cases/social-media-arabic-typography" 
-              className="inline-flex items-center text-amber-700 hover:text-amber-800 font-medium text-sm"
-            >
-              Learn More →
-            </Link>
-          </CardContent>
-        </Card>
-        
-        {/* Print & Wedding Card */}
-        <Card className="border-amber-200 bg-white hover:shadow-md transition-shadow duration-200">
-          <CardContent className="p-6">
-            <h3 className="text-lg font-bold text-amber-800 mb-3">{t('print.title')}</h3>
-            
-            <p className="text-amber-700 mb-4 text-sm">
-              {t('print.description')}
-            </p>
-            
-            <div className="space-y-2 mb-4">
-              <div className="flex items-center text-sm text-amber-700">
-                <span className="text-amber-600 mr-2">•</span>
-                <span>{t('print.business')}</span>
-              </div>
-              <div className="flex items-center text-sm text-amber-700">
-                <span className="text-amber-600 mr-2">•</span>
-                <span>{t('print.invitations')}</span>
-              </div>
-              <div className="flex items-center text-sm text-amber-700">
-                <span className="text-amber-600 mr-2">•</span>
-                <span>{t('print.posters')}</span>
-              </div>
+          )}
+          {!activeCase && (
+            <div className="flex items-center justify-center w-full h-64 lg:h-80 bg-gray-100 rounded-lg border border-gray-200">
+              <p className="text-gray-500 text-center">
+                点击左侧场景查看示例图片
+              </p>
             </div>
-            
-            <div className="relative w-full h-32 mb-4 rounded border border-amber-200 overflow-hidden">
-              <Image
-                src={`${cdnBaseUrl}/business-cards-with-arabic-typography.png`}
-                alt="Print examples"
-                fill
-                style={{ objectFit: 'cover' }}
-                className="rounded"
-                sizes="(max-width: 768px) 100vw, 300px"
-              />
-            </div>
-            
-            <Link 
-              href="/use-cases/wedding-arabic-calligraphy" 
-              className="inline-flex items-center text-amber-700 hover:text-amber-800 font-medium text-sm"
-            >
-              Learn More →
-            </Link>
-          </CardContent>
-        </Card>
-        
-        {/* Web & Business Card */}
-        <Card className="border-amber-200 bg-white hover:shadow-md transition-shadow duration-200">
-          <CardContent className="p-6">
-            <h3 className="text-lg font-bold text-amber-800 mb-3">{t('web.title')}</h3>
-            
-            <p className="text-amber-700 mb-4 text-sm">
-              {t('web.description')}
-            </p>
-            
-            <div className="space-y-2 mb-4">
-              <div className="flex items-center text-sm text-amber-700">
-                <span className="text-amber-600 mr-2">•</span>
-                <span>{t('web.logos')}</span>
-              </div>
-              <div className="flex items-center text-sm text-amber-700">
-                <span className="text-amber-600 mr-2">•</span>
-                <span>{t('web.banners')}</span>
-              </div>
-              <div className="flex items-center text-sm text-amber-700">
-                <span className="text-amber-600 mr-2">•</span>
-                <span>{t('web.icons')}</span>
-              </div>
-            </div>
-            
-            <div className="relative w-full h-32 mb-4 rounded border border-amber-200 overflow-hidden">
-              <Image
-                src={`${cdnBaseUrl}/website-with-arabic-typography.png`}
-                alt="Web design examples"
-                fill
-                style={{ objectFit: 'cover' }}
-                className="rounded"
-                sizes="(max-width: 768px) 100vw, 300px"
-              />
-            </div>
-            
-            <Link 
-              href="/use-cases/business-logo-arabic-fonts" 
-              className="inline-flex items-center text-amber-700 hover:text-amber-800 font-medium text-sm"
-            >
-              Learn More →
-            </Link>
-          </CardContent>
-        </Card>
-        
-        {/* Islamic Art & Decoration Card */}
-        <Card className="border-amber-200 bg-white hover:shadow-md transition-shadow duration-200">
-          <CardContent className="p-6">
-            <h3 className="text-lg font-bold text-amber-800 mb-3">{t('art.title')}</h3>
-            
-            <p className="text-amber-700 mb-4 text-sm">
-              {t('art.description')}
-            </p>
-            
-            <div className="space-y-2 mb-4">
-              <div className="flex items-center text-sm text-amber-700">
-                <span className="text-amber-600 mr-2">•</span>
-                <span>{t('art.wallArt')}</span>
-              </div>
-              <div className="flex items-center text-sm text-amber-700">
-                <span className="text-amber-600 mr-2">•</span>
-                <span>{t('art.islamic')}</span>
-              </div>
-              <div className="flex items-center text-sm text-amber-700">
-                <span className="text-amber-600 mr-2">•</span>
-                <span>{t('art.modern')}</span>
-              </div>
-            </div>
-            
-            <div className="relative w-full h-32 mb-4 rounded border border-amber-200 overflow-hidden">
-              <Image
-                src={`${cdnBaseUrl}/arabic-calligraphy-flat-lay-composition.png`}
-                alt="Art examples"
-                fill
-                style={{ objectFit: 'cover' }}
-                className="rounded"
-                sizes="(max-width: 768px) 100vw, 300px"
-              />
-            </div>
-            
-            <Link 
-              href="/use-cases/religious-arabic-calligraphy" 
-              className="inline-flex items-center text-amber-700 hover:text-amber-800 font-medium text-sm"
-            >
-              Learn More →
-            </Link>
-          </CardContent>
-        </Card>
+          )}
+        </div>
         
       </div>
     </section>
