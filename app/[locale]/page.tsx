@@ -308,7 +308,10 @@ export default function Home() {
             </div>
             
             {/* 主要CTA按钮 */}
-            <button className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105 mb-4">
+            <button 
+              onClick={() => document.getElementById('calligraphy-tool-section')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105 mb-4"
+            >
               <span className="flex items-center justify-center gap-2">
                 <span>✨</span>
                 {t('hero.cta')}
