@@ -1,9 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Check } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useTranslations } from 'next-intl';
 
 const cdnBaseUrl = 'https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev';
@@ -14,190 +14,190 @@ export function UseCasesSection() {
   return (
     <section className="mb-12">
       <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">{t('title')}</h2>
-      <Tabs defaultValue="social" className="w-full">
-        <TabsList className="grid w-full max-w-md mx-auto grid-cols-4 mb-6">
-          <TabsTrigger value="social">{t('socialMedia.title')}</TabsTrigger>
-          <TabsTrigger value="print">{t('print.title')}</TabsTrigger>
-          <TabsTrigger value="web">{t('web.title')}</TabsTrigger>
-          <TabsTrigger value="art">{t('art.title')}</TabsTrigger>
-        </TabsList>
-        <TabsContent value="social">
-          <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
-            <CardContent className="p-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="text-lg font-bold text-amber-800 mb-3">{t('socialMedia.subtitle')}</h3>
-                  <p className="text-amber-700 mb-4">
-                    {t('socialMedia.description')}
-                  </p>
-                  <ul className="space-y-2 text-amber-700">
-                    <li className="flex items-start">
-                      <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>{t('socialMedia.instagram')}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>{t('socialMedia.facebook')}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>{t('socialMedia.twitter')}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>{t('socialMedia.profiles')}</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="flex items-center justify-center">
-                  <div className="relative w-[300px] h-[200px] rounded-lg border border-amber-200">
-                    <Image
-                      src={`${cdnBaseUrl}/arabic-calligraphy-in-twitter-post.png`}
-                      alt={t('socialMedia.imageAlt')}
-                      fill
-                      style={{ objectFit: 'cover' }}
-                      className="rounded-lg"
-                      sizes="300px"
-                    />
-                  </div>
-                </div>
+      <p className="text-amber-700 text-center mb-8 max-w-3xl mx-auto">
+        Discover how our Arabic calligraphy generator serves different creative needs across industries and personal projects
+      </p>
+      
+      {/* 四象限网格布局 - 替代Tab切换 */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        
+        {/* Social Media Card */}
+        <Card className="border-amber-200 bg-white hover:shadow-md transition-shadow duration-200">
+          <CardContent className="p-6">
+            <h3 className="text-lg font-bold text-amber-800 mb-3">{t('socialMedia.title')}</h3>
+            
+            <p className="text-amber-700 mb-4 text-sm">
+              {t('socialMedia.description')}
+            </p>
+            
+            <div className="space-y-2 mb-4">
+              <div className="flex items-center text-sm text-amber-700">
+                <span className="text-amber-600 mr-2">•</span>
+                <span>{t('socialMedia.instagram')}</span>
               </div>
-            </CardContent>
-          </Card>
-        </TabsContent>
-        <TabsContent value="print">
-          <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
-            <CardContent className="p-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="text-lg font-bold text-amber-800 mb-3">{t('print.subtitle')}</h3>
-                  <p className="text-amber-700 mb-4">
-                    {t('print.description')}
-                  </p>
-                  <ul className="space-y-2 text-amber-700">
-                    <li className="flex items-start">
-                      <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>{t('print.business')}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>{t('print.invitations')}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>{t('print.posters')}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>{t('print.certificates')}</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="flex items-center justify-center">
-                  <div className="relative w-[300px] h-[200px] rounded-lg border border-amber-200">
-                    <Image
-                      src={`${cdnBaseUrl}/business-cards-with-arabic-typography.png`}
-                      alt="Print examples"
-                      fill
-                      style={{ objectFit: 'cover' }}
-                      className="rounded-lg"
-                      sizes="300px"
-                    />
-                  </div>
-                </div>
+              <div className="flex items-center text-sm text-amber-700">
+                <span className="text-amber-600 mr-2">•</span>
+                <span>{t('socialMedia.facebook')}</span>
               </div>
-            </CardContent>
-          </Card>
-        </TabsContent>
-        <TabsContent value="web">
-          <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
-            <CardContent className="p-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="text-lg font-bold text-amber-800 mb-3">{t('web.subtitle')}</h3>
-                  <p className="text-amber-700 mb-4">
-                    {t('web.description')}
-                  </p>
-                  <ul className="space-y-2 text-amber-700">
-                    <li className="flex items-start">
-                      <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>{t('web.logos')}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>{t('web.banners')}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>{t('web.icons')}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>{t('web.graphics')}</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="flex items-center justify-center">
-                  <div className="relative w-[300px] h-[200px] rounded-lg border border-amber-200">
-                    <Image
-                      src={`${cdnBaseUrl}/website-with-arabic-typography.png`}
-                      alt="Web design examples"
-                      fill
-                      style={{ objectFit: 'cover' }}
-                      className="rounded-lg"
-                      sizes="300px"
-                    />
-                  </div>
-                </div>
+              <div className="flex items-center text-sm text-amber-700">
+                <span className="text-amber-600 mr-2">•</span>
+                <span>{t('socialMedia.twitter')}</span>
               </div>
-            </CardContent>
-          </Card>
-        </TabsContent>
-        <TabsContent value="art">
-          <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
-            <CardContent className="p-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="text-lg font-bold text-amber-800 mb-3">{t('art.subtitle')}</h3>
-                  <p className="text-amber-700 mb-4">
-                    {t('art.description')}
-                  </p>
-                  <ul className="space-y-2 text-amber-700">
-                    <li className="flex items-start">
-                      <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>{t('art.wallArt')}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>{t('art.islamic')}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>{t('art.modern')}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-4 w-4 text-amber-600 mr-2 mt-0.5" />
-                      <span>{t('art.traditional')}</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="flex items-center justify-center">
-                  <div className="relative w-[300px] h-[200px] rounded-lg border border-amber-200">
-                    <Image
-                      src={`${cdnBaseUrl}/arabic-calligraphy-flat-lay-composition.png`}
-                      alt="Art examples"
-                      fill
-                      style={{ objectFit: 'cover' }}
-                      className="rounded-lg"
-                      sizes="300px"
-                    />
-                  </div>
-                </div>
+            </div>
+            
+            <div className="relative w-full h-32 mb-4 rounded border border-amber-200 overflow-hidden">
+              <Image
+                src={`${cdnBaseUrl}/arabic-calligraphy-in-twitter-post.png`}
+                alt={t('socialMedia.imageAlt')}
+                fill
+                style={{ objectFit: 'cover' }}
+                className="rounded"
+                sizes="(max-width: 768px) 100vw, 300px"
+              />
+            </div>
+            
+            <Link 
+              href="/use-cases/social-media-arabic-typography" 
+              className="inline-flex items-center text-amber-700 hover:text-amber-800 font-medium text-sm"
+            >
+              Learn More →
+            </Link>
+          </CardContent>
+        </Card>
+        
+        {/* Print & Wedding Card */}
+        <Card className="border-amber-200 bg-white hover:shadow-md transition-shadow duration-200">
+          <CardContent className="p-6">
+            <h3 className="text-lg font-bold text-amber-800 mb-3">{t('print.title')}</h3>
+            
+            <p className="text-amber-700 mb-4 text-sm">
+              {t('print.description')}
+            </p>
+            
+            <div className="space-y-2 mb-4">
+              <div className="flex items-center text-sm text-amber-700">
+                <span className="text-amber-600 mr-2">•</span>
+                <span>{t('print.business')}</span>
               </div>
-            </CardContent>
-          </Card>
-        </TabsContent>
-      </Tabs>
+              <div className="flex items-center text-sm text-amber-700">
+                <span className="text-amber-600 mr-2">•</span>
+                <span>{t('print.invitations')}</span>
+              </div>
+              <div className="flex items-center text-sm text-amber-700">
+                <span className="text-amber-600 mr-2">•</span>
+                <span>{t('print.posters')}</span>
+              </div>
+            </div>
+            
+            <div className="relative w-full h-32 mb-4 rounded border border-amber-200 overflow-hidden">
+              <Image
+                src={`${cdnBaseUrl}/business-cards-with-arabic-typography.png`}
+                alt="Print examples"
+                fill
+                style={{ objectFit: 'cover' }}
+                className="rounded"
+                sizes="(max-width: 768px) 100vw, 300px"
+              />
+            </div>
+            
+            <Link 
+              href="/use-cases/wedding-arabic-calligraphy" 
+              className="inline-flex items-center text-amber-700 hover:text-amber-800 font-medium text-sm"
+            >
+              Learn More →
+            </Link>
+          </CardContent>
+        </Card>
+        
+        {/* Web & Business Card */}
+        <Card className="border-amber-200 bg-white hover:shadow-md transition-shadow duration-200">
+          <CardContent className="p-6">
+            <h3 className="text-lg font-bold text-amber-800 mb-3">{t('web.title')}</h3>
+            
+            <p className="text-amber-700 mb-4 text-sm">
+              {t('web.description')}
+            </p>
+            
+            <div className="space-y-2 mb-4">
+              <div className="flex items-center text-sm text-amber-700">
+                <span className="text-amber-600 mr-2">•</span>
+                <span>{t('web.logos')}</span>
+              </div>
+              <div className="flex items-center text-sm text-amber-700">
+                <span className="text-amber-600 mr-2">•</span>
+                <span>{t('web.banners')}</span>
+              </div>
+              <div className="flex items-center text-sm text-amber-700">
+                <span className="text-amber-600 mr-2">•</span>
+                <span>{t('web.icons')}</span>
+              </div>
+            </div>
+            
+            <div className="relative w-full h-32 mb-4 rounded border border-amber-200 overflow-hidden">
+              <Image
+                src={`${cdnBaseUrl}/website-with-arabic-typography.png`}
+                alt="Web design examples"
+                fill
+                style={{ objectFit: 'cover' }}
+                className="rounded"
+                sizes="(max-width: 768px) 100vw, 300px"
+              />
+            </div>
+            
+            <Link 
+              href="/use-cases/business-logo-arabic-fonts" 
+              className="inline-flex items-center text-amber-700 hover:text-amber-800 font-medium text-sm"
+            >
+              Learn More →
+            </Link>
+          </CardContent>
+        </Card>
+        
+        {/* Islamic Art & Decoration Card */}
+        <Card className="border-amber-200 bg-white hover:shadow-md transition-shadow duration-200">
+          <CardContent className="p-6">
+            <h3 className="text-lg font-bold text-amber-800 mb-3">{t('art.title')}</h3>
+            
+            <p className="text-amber-700 mb-4 text-sm">
+              {t('art.description')}
+            </p>
+            
+            <div className="space-y-2 mb-4">
+              <div className="flex items-center text-sm text-amber-700">
+                <span className="text-amber-600 mr-2">•</span>
+                <span>{t('art.wallArt')}</span>
+              </div>
+              <div className="flex items-center text-sm text-amber-700">
+                <span className="text-amber-600 mr-2">•</span>
+                <span>{t('art.islamic')}</span>
+              </div>
+              <div className="flex items-center text-sm text-amber-700">
+                <span className="text-amber-600 mr-2">•</span>
+                <span>{t('art.modern')}</span>
+              </div>
+            </div>
+            
+            <div className="relative w-full h-32 mb-4 rounded border border-amber-200 overflow-hidden">
+              <Image
+                src={`${cdnBaseUrl}/arabic-calligraphy-flat-lay-composition.png`}
+                alt="Art examples"
+                fill
+                style={{ objectFit: 'cover' }}
+                className="rounded"
+                sizes="(max-width: 768px) 100vw, 300px"
+              />
+            </div>
+            
+            <Link 
+              href="/use-cases/religious-arabic-calligraphy" 
+              className="inline-flex items-center text-amber-700 hover:text-amber-800 font-medium text-sm"
+            >
+              Learn More →
+            </Link>
+          </CardContent>
+        </Card>
+        
+      </div>
     </section>
   );
 } 

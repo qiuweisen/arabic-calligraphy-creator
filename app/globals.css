@@ -141,6 +141,23 @@
   .desktop-only {
     display: none;
   }
+  
+  /* 移动端触摸优化 */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* 移动端间距优化 */
+  .mobile-spacing {
+    padding: 1rem;
+  }
+  
+  /* 移动端字体大小调整 */
+  .mobile-text-adjust {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
 }
 
 @media (min-width: 769px) {
