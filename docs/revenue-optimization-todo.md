@@ -10,8 +10,10 @@
 - [ ] 复核 hreflang / canonical / 双 CTA 组件，保证 SEO 基础稳定
 
 ## 阶段 1｜高价值流量提升 (Week 2-4)
-- [ ] 批量调整 Title/Meta（首页、/fonts、/resources、/tutorials…），突出 Free / SVG / Download / Illustrator / Islamic Design
+- [x] 批量调整 Title/Meta（首页、/fonts、/resources、/tutorials…），突出 Free / SVG / Download / Illustrator / Islamic Design（2025-09-30 完成）
 - [ ] 首页/下载页/教程页补齐 SoftwareApplication + FAQ + HowTo JSON-LD，并在 GSC 验证
+	- [x] 结构化数据脚本已在首页、下载页、教程页上线（2025-09-30）
+	- [ ] 提交并通过 GSC 验证
 - [ ] 上线 `/arabic-fonts-download` 中枢页，导航加入 Download Fonts
 - [ ] 发布长尾页面 `/tattoo` `/wedding-card` `/logo` `/islamic-art` `/svg-download`，含 SEO 内容 + CTA
 - [ ] 资源页首屏增加 “Download Free TTF/OTF → Preview Online” 模块

@@ -7,9 +7,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { PlayCircle, Book, Lightbulb, Palette, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Arabic Calligraphy How-to Tutorials | Step-by-Step Instructions",
-  description: "Step-by-step tutorials for creating Arabic calligraphy. Practical instructions for font selection, design techniques, and using our generator tool effectively.",
-  keywords: "how to create arabic calligraphy, arabic calligraphy tutorial, step by step calligraphy guide, arabic font selection tutorial, calligraphy design tips",
+  title: "Arabic Calligraphy Tutorials – Download SVG Fonts & Illustrator Guides",
+  description: "Learn how to create Islamic calligraphy, export free SVG files, and use Arabic fonts in Illustrator with step-by-step tutorials and design tips.",
+  keywords: "arabic calligraphy tutorial svg, illustrator arabic font guide, free islamic design tutorial, download arabic calligraphy svg, arabic calligraphy design tips",
 }
 
 const BEGINNER_TUTORIALS = [
@@ -160,6 +160,87 @@ export default function TutorialsPage() {
     }
   }
 
+  const howToSteps = [
+    {
+      title: "Pick a tutorial that matches your skill level",
+      description: "Start with beginner guides to learn the generator basics, then progress to intermediate and advanced lessons as you gain confidence."
+    },
+    {
+      title: "Follow the step-by-step instructions",
+      description: "Each tutorial includes actionable tips for font selection, layout, and exporting SVG or PNG files for Illustrator or Cricut."
+    },
+    {
+      title: "Apply the techniques inside the generator",
+      description: "Use the Arabic Calligraphy Generator to recreate lessons, customize colors, and download final artwork for your projects."
+    }
+  ]
+
+  const faqItems = [
+    {
+      question: "Do I need prior design experience to follow these tutorials?",
+      answer: "No. The beginner lessons cover the fundamentals of Arabic calligraphy design, so you can create professional artwork even if you're new to design software."
+    },
+    {
+      question: "Can I export SVG files for Adobe Illustrator or Cricut?",
+      answer: "Yes. Every tutorial highlights how to export SVG files from the generator so you can use them in Illustrator, Cricut Design Space, or other creative tools."
+    },
+    {
+      question: "Are the tutorials free to access?",
+      answer: "All tutorials on this page are free. You can view detailed walkthroughs, download resources, and practice using the generator without paying anything."
+    }
+  ]
+
+  const softwareApplicationSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Arabic Calligraphy Generator",
+    "description": "Free Arabic calligraphy generator with SVG and PNG export plus 30+ Islamic fonts for tutorials and design projects.",
+    "url": "https://arabic-calligraphy-generator.com",
+    "image": "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/og-image.png",
+    "applicationCategory": "DesignApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Modern web browser with JavaScript enabled",
+    "softwareVersion": "2.0",
+    "fileFormat": ["PNG", "SVG"],
+    "featureList": [
+      "Step-by-step tutorials for Arabic calligraphy",
+      "Instant SVG and PNG export",
+      "Commercial use allowed",
+      "No registration required"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "priceValidUntil": "2030-12-31"
+    }
+  }
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map((item) => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  }
+
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use Arabic calligraphy tutorials",
+    "description": "Follow these steps to learn Arabic calligraphy online, practice inside the generator, and export SVG designs.",
+    "step": howToSteps.map((step) => ({
+      "@type": "HowToStep",
+      "name": step.title,
+      "text": step.description
+    }))
+  }
+
   // 修改为使用每个教程项中预定义的link属性，而不是构建可能不存在的链接
   const getTutorialLink = (tutorial: any) => {
     return tutorial.link || "/"; // 如果没有指定链接，则返回首页
@@ -195,6 +276,18 @@ export default function TutorialsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <StaticNavbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
@@ -207,6 +300,23 @@ export default function TutorialsPage() {
                 and practical applications for weddings, business, social media, and religious purposes.
               </p>
             </div>
+
+            <section className="bg-white border border-amber-200 rounded-xl shadow-sm p-8 mb-12">
+              <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">How to Use These Tutorials</h2>
+              <ol className="space-y-6">
+                {howToSteps.map((step, index) => (
+                  <li key={step.title} className="flex items-start gap-4">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-600 text-white text-lg font-semibold">
+                      {index + 1}
+                    </span>
+                    <div>
+                      <h3 className="text-lg font-semibold text-amber-800 mb-2">{step.title}</h3>
+                      <p className="text-amber-700 text-sm leading-relaxed">{step.description}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </section>
 
             <div className="space-y-12">
               <section>
@@ -251,6 +361,20 @@ export default function TutorialsPage() {
                   <Link href="/">Try the Calligraphy Generator</Link>
                 </Button>
               </div>
+
+              <section className="mt-12">
+                <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">Frequently Asked Questions</h2>
+                <div className="grid md:grid-cols-3 gap-6">
+                  {faqItems.map((item) => (
+                    <Card key={item.question} className="border-amber-200">
+                      <CardContent className="p-6">
+                        <h3 className="font-semibold text-amber-800 mb-3">{item.question}</h3>
+                        <p className="text-sm text-amber-700 leading-relaxed">{item.answer}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </section>
             </div>
 
             <div className="mt-12 text-center">

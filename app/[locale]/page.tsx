@@ -225,6 +225,30 @@ export default function Home() {
     ]
   };
 
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": t('howToUse.title'),
+    "description": t('howToUse.description'),
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": t('howToUse.step1.title'),
+        "text": t('howToUse.step1.description')
+      },
+      {
+        "@type": "HowToStep",
+        "name": t('howToUse.step2.title'),
+        "text": t('howToUse.step2.description')
+      },
+      {
+        "@type": "HowToStep",
+        "name": t('howToUse.step3.title'),
+        "text": t('howToUse.step3.description')
+      }
+    ]
+  };
+
   // Organization结构化数据
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -263,6 +287,12 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+
+      {/* HowTo结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
 
       <Navbar />

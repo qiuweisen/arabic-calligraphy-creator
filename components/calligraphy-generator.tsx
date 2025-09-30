@@ -47,6 +47,7 @@ import { TemplateBrowser } from "@/components/template-browser"
 import { FontPreview } from "@/components/font-preview"
 import { MobileFab } from "@/components/mobile-fab"
 import { useTranslations } from 'next-intl'
+import { trackDownloadEvent, getUserCountry, getDeviceType } from "@/lib/analytics"
 
 // Helper function to generate canvas from preview
 async function generatePreviewCanvas(
@@ -508,18 +509,17 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
       link.href = dataUrl;
       link.click();
 
-      // 追踪下载事件
-      if (typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
-        (window as any).trackCalligraphyEvent('Download', {
-          step: '5_conversion_download',
-          format: 'PNG',
-          font: font,
-          fontSize: fontSize,
-          hasGradient: useGradient,
-          hasBackground: backgroundImage ? 'image' : backgroundPattern !== 'none' ? 'pattern' : 'color',
-          conversion_type: 'download_png'
-        });
-      }
+      // 使用新的增强追踪函数
+      trackDownloadEvent('png', {
+        font: font,
+        fontSize: fontSize,
+        hasGradient: useGradient,
+        hasBackground: backgroundImage ? 'image' : backgroundPattern !== 'none' ? 'pattern' : 'color',
+        textLength: text.length,
+        isPaid: false, // 目前都是免费
+        templateId: undefined,
+        planType: 'free'
+      });
 
       toast({
         title: t('toasts.downloadComplete'),
@@ -609,18 +609,17 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
       link.click();
       setTimeout(() => URL.revokeObjectURL(link.href), 100);
 
-      // 追踪SVG下载事件
-      if (typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
-        (window as any).trackCalligraphyEvent('Download', {
-          step: '5_conversion_download',
-          format: 'SVG',
-          font: font,
-          fontSize: fontSize,
-          hasGradient: useGradient,
-          hasBackground: backgroundImage ? 'image' : backgroundPattern !== 'none' ? 'pattern' : 'color',
-          conversion_type: 'download_svg'
-        });
-      }
+      // 使用新的增强追踪函数
+      trackDownloadEvent('svg', {
+        font: font,
+        fontSize: fontSize,
+        hasGradient: useGradient,
+        hasBackground: backgroundImage ? 'image' : backgroundPattern !== 'none' ? 'pattern' : 'color',
+        textLength: text.length,
+        isPaid: false, // 目前都是免费
+        templateId: undefined,
+        planType: 'free'
+      });
 
       toast({
         title: t('toasts.downloadComplete'),
