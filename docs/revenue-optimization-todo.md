@@ -14,14 +14,19 @@
 - [ ] 首页/下载页/教程页补齐 SoftwareApplication + FAQ + HowTo JSON-LD，并在 GSC 验证
 	- [x] 结构化数据脚本已在首页、下载页、教程页上线（2025-09-30）
 	- [ ] 提交并通过 GSC 验证
-- [ ] 上线 `/arabic-fonts-download` 中枢页，导航加入 Download Fonts
-- [ ] 发布长尾页面 `/tattoo` `/wedding-card` `/logo` `/islamic-art` `/svg-download`，含 SEO 内容 + CTA
-- [ ] 资源页首屏增加 “Download Free TTF/OTF → Preview Online” 模块
+- [x] 上线 `/arabic-fonts-download` 中枢页，导航加入 Download Fonts（2025-09-30 完成，新增导航与 sitemap 即时更新）
+- [x] 发布长尾页面 `/tattoo` `/wedding-card` `/logo` `/islamic-art` `/svg-download`，含 SEO 内容 + CTA（2025-09-30 完成，新增长尾入口与结构化数据）
+- [ ] 将现有长尾 URL 直接重命名为“Arabic Calligraphy + 场景”格式（`/tattoo` → `/arabic-tattoo-calligraphy`、`/wedding-card` → `/arabic-calligraphy-wedding-invitation`、`/logo` → `/arabic-calligraphy-logo`、`/islamic-art` → `/quran-verse-calligraphy` 等），并同步更新 canonical/openGraph/JSON-LD/站内链接
+- [x] 资源页首屏增加 “Download Free TTF/OTF → Preview Online” 模块（2025-09-30 完成，新增首屏工作流卡片）
 - [ ] `/fonts/{font}` 拆分：明确内容页 vs 下载页结构，试点 `/font-downloads/amiri`、`/font-downloads/reem-kufi`
 - [ ] 调整 `/fonts/{font}` 指向：聚焦历史/用例 + 生成器 CTA，显著引导至下载页；设置 canonical / 内链策略
 - [ ] 监控美国 CTR、关键词排名与下载量，必要时调整文案/Schema
 
 ## 阶段 2｜长尾内容验证 (Week 5)
+- [ ] 创建通用基础组件工具包（HeroSection、GeneratorEmbed、WorkflowSteps、FaqSection 等），支持高度定制化的 props 和 ReactNode 插槽
+- [ ] 为每个场景开发专属特色组件（TattooSafetyWarnings、ArabicWeddingCulturalGuide、BrandApplicationShowcase、QuranVerseGuide），确保内容独特性
+- [ ] 手工重构 Tattoo / Wedding / Logo / Quran 页面，通过组件组装+场景特色内容实现差异化，避免模板化嫌疑
+- [ ] 扩展 `trackCalligraphyEvent` / GA4 事件，增加 `tool_page`、模板使用等属性，搭建场景漏斗看板
 - [ ] 观察新页面收录与 CTR，补充示例/FAQ/内链增强排名
 - [ ] 下载页进行内容版本对比（含生成器截屏 vs 纯文本），记录跳出率与点击率
 - [ ] 将首页/长尾页面 CTA 文案更新为具体收益描述（如节省设计费、避免纹身错误）

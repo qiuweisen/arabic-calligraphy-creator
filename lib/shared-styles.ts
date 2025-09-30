@@ -60,6 +60,7 @@ export const NAVIGATION_ITEMS = {
   en: [
     { label: "Generator", href: "/" },
     { label: "Arabic Fonts", href: "/fonts" },
+    { label: "Download Fonts", href: "/arabic-fonts-download" },
     { 
       label: "Learning Guides", 
       href: "/guides",
@@ -88,6 +89,11 @@ export const NAVIGATION_ITEMS = {
         { label: "Social Media Arabic Typography", href: "/use-cases/social-media-arabic-typography" },
         { label: "Wedding Arabic Calligraphy", href: "/use-cases/wedding-arabic-calligraphy" },
         { label: "Religious Arabic Calligraphy", href: "/use-cases/religious-arabic-calligraphy" },
+        { label: "Arabic Tattoo Planner", href: "/arabic-tattoo-calligraphy" },
+        { label: "Wedding Invitation Playbook", href: "/arabic-calligraphy-wedding-invitation" },
+        { label: "Arabic Logo Guide", href: "/arabic-calligraphy-logo" },
+        { label: "Islamic Art Composition", href: "/quran-verse-calligraphy" },
+        { label: "SVG Export Workflow", href: "/svg-download" },
       ]
     },
     { label: "Blog", href: "/blog" },
@@ -107,6 +113,7 @@ export const FOOTER_DATA = {
       title: "Quick Links",
       links: [
         { label: "Generator", href: "/" },
+        { label: "Download Fonts", href: "/arabic-fonts-download" },
         { label: "Arabic Fonts", href: "/fonts" },
         { label: "Learning Guides", href: "/guides" },
         { label: "Tutorials", href: "/tutorials" },
@@ -118,6 +125,11 @@ export const FOOTER_DATA = {
         { label: "Blog", href: "/blog" },
         { label: "Use Cases", href: "/use-cases" },
         { label: "FAQ", href: "/faq" },
+        { label: "Arabic Tattoo Planner", href: "/arabic-tattoo-calligraphy" },
+        { label: "Wedding Invitation Playbook", href: "/arabic-calligraphy-wedding-invitation" },
+        { label: "Arabic Logo Guide", href: "/arabic-calligraphy-logo" },
+        { label: "Islamic Art Composition", href: "/quran-verse-calligraphy" },
+        { label: "SVG Export Workflow", href: "/svg-download" },
         { label: "Contact", href: "/contact" },
       ]
     },
