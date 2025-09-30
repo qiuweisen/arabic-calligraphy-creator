@@ -47,6 +47,21 @@ const intlMiddleware = createMiddleware({
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // URL重定向规则 - 旧URL到新URL的映射
+  const urlRedirects: Record<string, string> = {
+    '/tattoo': '/arabic-tattoo-calligraphy',
+    '/wedding-card': '/arabic-calligraphy-wedding-invitation',
+    '/logo': '/arabic-calligraphy-logo',
+    '/islamic-art': '/quran-verse-calligraphy'
+  };
+
+  // 检查是否需要重定向
+  if (urlRedirects[pathname]) {
+    const url = request.nextUrl.clone();
+    url.pathname = urlRedirects[pathname];
+    return NextResponse.redirect(url, 301); // 301永久重定向
+  }
+
   // 判断是否需要多语言处理
   if (isMultilingualPath(pathname)) {
     // 快速路径：检查已缓存的用户语言偏好

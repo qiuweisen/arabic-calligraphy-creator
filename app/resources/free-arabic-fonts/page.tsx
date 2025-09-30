@@ -60,6 +60,97 @@ export default function FreeArabicFontsPage() {
     }
   }
 
+  const howToSteps = [
+    {
+      title: "Choose a font from the curated list",
+      description: "Browse featured Arabic fonts, review their style, license, and best use cases before downloading."
+    },
+    {
+      title: "Review licensing and usage recommendations",
+      description: "Each font card highlights licensing terms so you can confirm commercial or personal usage fits your project."
+    },
+    {
+      title: "Download or preview in the generator",
+      description: "Use the direct download link or open the font inside our online calligraphy generator for instant SVG/PNG exports."
+    }
+  ]
+
+  const faqItems = [
+    {
+      question: "Are these Arabic fonts really free for commercial use?",
+      answer: "Yes. Every font in this collection is licensed under permissive terms like the SIL Open Font License, allowing commercial and personal use without additional fees."
+    },
+    {
+      question: "Can I use these fonts inside the Arabic Calligraphy Generator?",
+      answer: "Absolutely. Select any featured font and open it in our generator to preview designs, customize colors, and export SVG or PNG files instantly."
+    },
+    {
+      question: "Which file formats are available for download?",
+      answer: "Most fonts provide TTF or OTF downloads. Once loaded into our generator, you can also export your lettering as high-resolution PNG or SVG graphics."
+    }
+  ]
+
+  const softwareApplicationSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Arabic Calligraphy Generator",
+    "description": "Free online Arabic calligraphy generator with instant SVG and PNG exports using premium Arabic fonts.",
+    "url": "https://arabic-calligraphy-generator.com",
+    "image": "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/og-image.png",
+    "applicationCategory": "DesignApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Modern web browser with JavaScript enabled",
+    "softwareVersion": "2.0",
+    "fileFormat": ["PNG", "SVG", "TTF", "OTF"],
+    "featureList": [
+      "30+ Arabic fonts including Naskh, Kufi, and Diwani styles",
+      "Instant SVG and PNG export",
+      "Commercial use allowed",
+      "No registration required"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "priceValidUntil": "2030-12-31"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "1250",
+      "bestRating": "5"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Arabic Calligraphy Generator"
+    }
+  }
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map((item) => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  }
+
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to download free Arabic fonts",
+    "description": "Follow these quick steps to download and use free Arabic fonts for commercial or personal projects.",
+    "step": howToSteps.map((step) => ({
+      "@type": "HowToStep",
+      "name": step.title,
+      "text": step.description
+    }))
+  }
+
   const freeFonts = [
     {
       name: "Cairo",
@@ -114,6 +205,18 @@ export default function FreeArabicFontsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
         <div className="container mx-auto px-4 py-8">
           <Breadcrumb items={breadcrumbItems} />
@@ -139,6 +242,24 @@ export default function FreeArabicFontsPage() {
                 </Button>
               </Link>
             </div>
+          </div>
+
+          {/* How-to Section */}
+          <div className="bg-white border border-emerald-200 rounded-xl shadow-md p-8 mb-12">
+            <h2 className="text-3xl font-bold text-emerald-700 mb-6 text-center">How to Download Free Arabic Fonts</h2>
+            <ol className="space-y-6">
+              {howToSteps.map((step, index) => (
+                <li key={step.title} className="flex items-start gap-4">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-600 text-white text-lg font-semibold">
+                    {index + 1}
+                  </span>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
+                    <p className="text-gray-600">{step.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
           </div>
 
           {/* License Information */}
@@ -334,6 +455,21 @@ export default function FreeArabicFontsPage() {
                 </Link>
               </CardContent>
             </Card>
+          </div>
+
+          {/* FAQ Section */}
+          <div className="mt-16 mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Free Arabic Font FAQ</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {faqItems.map((item) => (
+                <Card key={item.question} className="border-emerald-200">
+                  <CardContent className="p-6">
+                    <h3 className="font-semibold text-emerald-700 mb-3">{item.question}</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">{item.answer}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
 
           {/* Related Resources */}

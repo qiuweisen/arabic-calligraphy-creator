@@ -11,15 +11,15 @@ import { FontCard } from "@/components/font-card"
 import { BLOG_LINKS } from "@/lib/content-links"
 
 export const metadata: Metadata = {
-  title: "Arabic Font Collection | Browse 17+ Calligraphy Fonts",
-  description: "Browse our curated Arabic font collection featuring Traditional Naskh, Kufi, Diwani, Modern & Display fonts. Complete font library for your calligraphy projects.",
-  keywords: "Arabic font collection, Arabic fonts library, calligraphy fonts, Naskh fonts, Kufi fonts, Diwani fonts, Arabic typography fonts",
+  title: "Download Free Arabic Fonts – SVG Ready Islamic Calligraphy",
+  description: "Browse 17 Arabic calligraphy fonts and download SVG/PNG files optimized for Illustrator, Cricut, and Islamic design projects.",
+  keywords: "free arabic fonts download, svg islamic calligraphy fonts, illustrator arabic fonts, kufi svg font, naskh font download, arabic typography library",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/fonts",
   },
   openGraph: {
-    title: "Explore Arabic Calligraphy Fonts: Naskh, Kufi, Diwani & More",
-    description: "Your ultimate library of Arabic fonts for calligraphy, Islamic art, and modern typography. Find usage guides and inspiration.",
+    title: "Free Arabic Fonts for SVG Download & Islamic Design",
+    description: "Discover 17+ Arabic fonts with instant SVG/PNG downloads for Islamic art, Illustrator, and branding projects.",
     url: "https://arabic-calligraphy-generator.com/fonts",
     siteName: "Arabic Calligraphy Generator",
     locale: "en_US",

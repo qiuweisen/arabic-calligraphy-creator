@@ -9,6 +9,8 @@ import { CssLoader } from "@/components/css-loader"
 import { localeConfig } from "@/i18n"
 import { headers } from "next/headers"
 import type { Metadata } from 'next'
+import { NextIntlClientProvider } from 'next-intl'
+import enMessages from '@/messages/en.json'
 
 // 字体配置 - 只保留Inter，阿拉伯字体使用CDN
 const inter = Inter({ subsets: ["latin"], display: 'swap', variable: "--font-inter", preload: false })
@@ -101,12 +103,14 @@ export default async function RootLayout({
         />
       </head>
       <body className={`${inter.className} font-sans`}>
-        <ThemeProvider attribute="class" defaultTheme="system">
-          {children}
-          <Toaster />
-          <ScrollToTop />
-          <CssLoader />
-        </ThemeProvider>
+        <NextIntlClientProvider locale={locale} messages={locale === 'en' ? enMessages : {}}>
+          <ThemeProvider attribute="class" defaultTheme="system">
+            {children}
+            <Toaster />
+            <ScrollToTop />
+            <CssLoader />
+          </ThemeProvider>
+        </NextIntlClientProvider>
 
         {isProduction && (
           <>

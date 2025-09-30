@@ -70,6 +70,8 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "chrome-launcher": "^1.2.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.4",
     "lighthouse": "^12.8.2",
     "postcss": "^8",
     "puppeteer": "^24.17.1",

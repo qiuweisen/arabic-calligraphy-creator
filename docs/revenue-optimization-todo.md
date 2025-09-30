@@ -1,0 +1,134 @@
+# 收入提升执行待办清单
+
+> 更新日期：2024-12-19 ｜ 目标：广告 ≥$3/天、付费 ≥$4–7/天，重点国家下载→付费 ≥0.5%，桌面 CTR ≥6%
+
+---
+
+## 阶段 0｜数据与基础校准 (Week 1)
+- [ ] 校验 GA4 事件：Download/paywall* 参数齐全（country/export_type/template_id/plan_type），并设为转化
+- [ ] 搭建重点国家 Segment + 周度仪表板（CTR / 下载 / 付费 / 广告）
+- [ ] 复核 hreflang / canonical / 双 CTA 组件，保证 SEO 基础稳定
+
+## 阶段 1｜高价值流量提升 (Week 2-4)
+- [x] 批量调整 Title/Meta（首页、/fonts、/resources、/tutorials…），突出 Free / SVG / Download / Illustrator / Islamic Design（2025-09-30 完成）
+- [ ] 首页/下载页/教程页补齐 SoftwareApplication + FAQ + HowTo JSON-LD，并在 GSC 验证
+	- [x] 结构化数据脚本已在首页、下载页、教程页上线（2025-09-30）
+	- [ ] 提交并通过 GSC 验证
+- [x] 上线 `/arabic-fonts-download` 中枢页，导航加入 Download Fonts（2025-09-30 完成，新增导航与 sitemap 即时更新）
+- [x] 发布长尾页面 `/tattoo` `/wedding-card` `/logo` `/islamic-art` `/svg-download`，含 SEO 内容 + CTA（2025-09-30 完成，新增长尾入口与结构化数据）
+- [ ] 将现有长尾 URL 直接重命名为“Arabic Calligraphy + 场景”格式（`/tattoo` → `/arabic-tattoo-calligraphy`、`/wedding-card` → `/arabic-calligraphy-wedding-invitation`、`/logo` → `/arabic-calligraphy-logo`、`/islamic-art` → `/quran-verse-calligraphy` 等），并同步更新 canonical/openGraph/JSON-LD/站内链接
+- [x] 资源页首屏增加 “Download Free TTF/OTF → Preview Online” 模块（2025-09-30 完成，新增首屏工作流卡片）
+- [ ] `/fonts/{font}` 拆分：明确内容页 vs 下载页结构，试点 `/font-downloads/amiri`、`/font-downloads/reem-kufi`
+- [ ] 调整 `/fonts/{font}` 指向：聚焦历史/用例 + 生成器 CTA，显著引导至下载页；设置 canonical / 内链策略
+- [ ] 监控美国 CTR、关键词排名与下载量，必要时调整文案/Schema
+
+## 阶段 2｜长尾内容验证 (Week 5)
+- [ ] 创建通用基础组件工具包（HeroSection、GeneratorEmbed、WorkflowSteps、FaqSection 等），支持高度定制化的 props 和 ReactNode 插槽
+- [ ] 为每个场景开发专属特色组件（TattooSafetyWarnings、ArabicWeddingCulturalGuide、BrandApplicationShowcase、QuranVerseGuide），确保内容独特性
+- [ ] 手工重构 Tattoo / Wedding / Logo / Quran 页面，通过组件组装+场景特色内容实现差异化，避免模板化嫌疑
+- [ ] 扩展 `trackCalligraphyEvent` / GA4 事件，增加 `tool_page`、模板使用等属性，搭建场景漏斗看板
+- [ ] 观察新页面收录与 CTR，补充示例/FAQ/内链增强排名
+- [ ] 下载页进行内容版本对比（含生成器截屏 vs 纯文本），记录跳出率与点击率
+- [ ] 将首页/长尾页面 CTA 文案更新为具体收益描述（如节省设计费、避免纹身错误）
+
+## 阶段 3｜广告收益优化 (Week 6)
+- [ ] 部署手动广告位：下载按钮上方、结果页底部、教程正文首段后
+- [ ] 保留 Anchor / Side rail / Vignette 自动广告，监控与手动位的配合情况
+- [ ] A/B 测试按钮上方 vs 下方广告，记录可见率/CTR/RPM
+- [ ] 建立广告数据看板，追踪曝光、可见率、RPM、收入
+
+## 阶段 4｜积分制基础架构 (Week 7-8)
+- [ ] 仅对 US/CA/UK/DE/FR/UAE/SA/MY 灰度展示付费入口，其他地区保持免费
+- [ ] 桌面/移动端支付流程 E2E 测试（信用卡/Apple Pay），失败有兜底提示
+- [ ] 免费额度：每月 3 次高清导出自动重置；新注册赠送 10 积分体验
+- [ ] 积分消耗：高清 PNG(1)、SVG(1)、模板(1)、批量下载(2)、商用证书(1)
+- [ ] 用户字段：credits_balance / subscription_status / free_downloads_used / free_downloads_reset_at
+- [ ] 权限校验：统一在服务端 & 前端中间件判断积分/订阅/免费额度
+- [ ] Stripe 集成：CREDIT_PACK_099 与 PRO_MONTHLY_499，Webhook 写入积分或订阅状态，并上报 GA4
+
+## 阶段 5｜核心增值功能上线 (Week 9)
+- [ ] 重构导出弹窗：显示免费额度、积分选项（1 积分解锁）、订阅选项（$4.99/月）
+- [ ] 批量字体样式下载（JSZip/后端），消耗 2 积分或订阅解锁
+- [ ] 商用授权证书自动生成，消耗 1 积分或订阅解锁
+- [ ] 导航/弹窗展示积分余额；订阅用户标记 “Pro”
+- [ ] 在付费区域展示“用 1 积分节省 $150+ 外包费”等价值提示
+- [ ] GA4 记录 export_type 与 credit_usage，闭合 paywall_view → purchase → usage 漏斗
+
+## 阶段 6｜支付与订阅运营 (Week 10)
+- [ ] Stripe 错误处理完善：失败重试、超时告警、Webhook 重放
+- [ ] 免费额度重置任务（cron/队列）落地并记录日志
+- [ ] 发票/收据与客服流程打通，文档化退款路径
+- [ ] 端到端测试：灰度国家 + 退款/失败场景 + 免费恢复流程
+- [ ] 定价实验：积分 $0.99 vs $1.49，订阅 $4.99 vs $5.99；监控退款率、二购率、积分消耗
+
+## 阶段 7｜高级功能与模板扩展 (Week 11-12)
+- [ ] SVG 基础导出（文本版）上线，验证 Illustrator/Figma 兼容性
+- [ ] 模板 JSON MVP（婚礼/Logo/Tattoo 各 1），仅文本变量，监控使用率与订单贡献
+- [ ] 结果页/模板页增加 Free vs Pro 对比表，突出高清/模板/批量/授权价值
+- [ ] 多样式分页 + 懒加载优化；Pro 用户支持 ZIP 打包
+- [ ] `/font-downloads` 灰度上线后两周复盘 GSC CTR/排名，必要时调整 canonical 或内链
+
+## 阶段 8｜转化率与价值验证 (Week 13+)
+- [ ] Free vs Pro 组件统一，突出全套权益
+- [ ] A/B 测试积分按钮文案（“用 1 积分解锁” vs “$0.99 即享”）与订阅锚定（“重度用户无限次”）
+- [ ] 梳理用户评价，制作 4.7★ / 1,200+ designers 社会证明，评估 AggregateRating Schema
+- [ ] 按国家/设备/导出类型分析漏斗，识别弱项并调优
+- [ ] 监控订阅续费、退款、客服；根据数据调整价格或权益
+- [ ] 周度复盘：CTR / Download / Paywall 转化 / ARPU / 积分消耗
+- [ ] 上线价值计算器，与积分/订阅价格卡片联动展示节省金额
+
+## 阶段 9｜广告与收入验证 (Week 15-16)
+- [ ] 申请 Ezoic（如流量符合要求），保留 AdSense 混合填充
+- [ ] 手动广告位最终调优，确定最佳 RPM 组合
+- [ ] 验收总收入是否达到 ≥$7/天目标
+- [ ] **达成目标后停止进一步优化，转入维护模式**
+
+---
+
+## KPI 基准
+```markdown
+阶段0：GA4 事件准确
+阶段1：美国 CTR 提升 ≥20%
+阶段3：广告 RPM 提升 ≥30%
+阶段4：积分购买成功率 ≥95%
+阶段5：付费转化率 ≥0.3%
+阶段6：支付成功率 ≥98%
+阶段7：模板使用率 ≥30%
+阶段8：付费转化率 ≥0.5%，ARPU ≥$2
+阶段9：广告收入 ≥$3/天，总收入 ≥$7/天
+```
+
+## 最终验收目标
+```markdown
+广告 ≥$3/天（$90+/月）
+付费 ≥$4–7/天（$120–210/月）
+总收入 ≥$7/天（$210+/月）
+重点国家下载→付费 ≥0.5%
+积分用户月均消费 ≥2 次，订阅续费率 ≥70%
+```
+
+---
+
+## 风险管控
+```markdown
+【简化原则】发现问题即关闭付费功能，免费服务不受影响
+【技术风险】支付失败或积分错乱 → 立即暂停新付费，修复后恢复
+【用户体验】投诉或退款率 >10% → 调整定价或暂停相关功能
+【法律合规】任何地区合规问题 → 该地区立即停止收费
+【止损机制】连续3周未达成阶段KPI → 暂停该功能开发，保持现状
+```
+
+## 关键DoD (Definition of Done)
+```markdown
+阶段0：GA4转化事件可正常触发，重点国家数据准确显示
+阶段1-2：GSC验证Schema生效，目标页面排名提升可见
+阶段3：广告收入可稳定统计，RPM数据实时可查
+阶段4-5：积分购买-消耗-余额显示闭环正常
+阶段6：支付成功率≥95%，Webhook处理无遗漏
+阶段7-8：付费转化率可统计，ARPU计算准确
+阶段9：总收入统计准确，达成目标即停止新功能开发
+```
+
+---
+
+> 若需要我输出积分说明文案、价值计算器原型或广告实验排期，可在对应阶段前提出。
