@@ -1,12 +1,12 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, BookOpen, CheckCircle, Feather, Globe, Languages, Layers, PenTool, Sparkles, Type, Users, MonitorPlay, Edit3, Award } from "lucide-react"
+import { ArrowLeft, BookOpen, Layers, Globe, HelpCircle, CheckCircle, FileText, Type, Download } from "lucide-react"
 import { StaticNavbar } from "@/components/static-navbar"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { RelatedContent } from "@/components/related-content"
 import { getContentSpecificLinks } from "@/lib/content-links"
 import { getFontInfoBySlug } from "@/app/lib/font-data"
@@ -14,192 +14,121 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Scheherazade Font - Free Download | Beautiful Arabic Naskh Typography",
-  description: "Download Scheherazade Arabic font free! Perfect for elegant calligraphy, books, and professional documents. Supports 100+ languages. Instant download PNG/SVG.",
-  keywords: "Scheherazade font free download, Arabic Naskh font, beautiful Arabic typography, free Arabic fonts, calligraphy fonts, multilingual Arabic font, professional Arabic typeface",
+  title: "Scheherazade Font Download Free - TTF Files | Traditional Arabic Naskh",
+  description: "Download Scheherazade New Arabic font instantly. Free TTF files, 2 weights (Regular & Bold). Perfect for academic texts and multilingual documents. 100% free for commercial use. Supports 100+ languages.",
+  keywords: "scheherazade font download, scheherazade new font free, arabic naskh font, academic arabic font, multilingual arabic fonts, free arabic fonts, scheherazade ttf",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/fonts/scheherazade",
   },
   openGraph: {
-    title: "Scheherazade Font - Free Download | Beautiful Arabic Naskh Typography",
-    description: "Download Scheherazade Arabic font free! Perfect for elegant calligraphy, books, and professional documents. Supports 100+ languages. Instant download PNG/SVG.",
+    title: "Scheherazade Font Download Free - Traditional Arabic Naskh",
+    description: "Download Scheherazade New instantly. 2 weights, 100+ languages supported. Perfect for academic publishing.",
     url: "https://arabic-calligraphy-generator.com/fonts/scheherazade",
     siteName: "Arabic Calligraphy Generator",
-    type: "article",
+    type: "website",
     locale: "en_US",
   },
 }
 
-const TEXT_EXAMPLES = [
-  {
-    id: "quran-rahman",
-    text: "فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ",
-    translation: "Then which of the favors of your Lord will you deny?",
-    context: "A recurring verse from Surah Ar-Rahman in the Quran. Scheherazade New excels in rendering fully vocalized religious texts with utmost clarity."
-  },
-  {
-    id: "hadith-actions",
-    text: "إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى",
-    translation: "Verily, actions are by intentions, and every person will have only what they intended.",
-    context: "A foundational Hadith (prophetic tradition). Ideal for Islamic scholarly works requiring precise diacritics and excellent readability."
-  },
-  {
-    id: "literature-alf-layla",
-    text: "قَالَتْ شَهْرَزَاد: بَلَغَنِي أَيُّهَا الْمَلِكُ السَّعِيدُ، ذُو الرَّأْيِ الرَّشِيدِ...",
-    translation: "Scheherazade said: It has reached me, O fortunate King, possessor of sound judgment...",
-    context: "An excerpt from \"One Thousand and One Nights\" (Alf Layla wa-Layla), after which the font is named. Its readability suits lengthy narratives."
-  },
-  {
-    id: "proverb-knowledge-china",
-    text: "اُطْلُبُوا الْعِلْمَ وَلَوْ فِي الصِّينِ",
-    translation: "Seek knowledge even if it is in China.",
-    context: "A famous proverb encouraging the pursuit of knowledge. Scheherazade New is well-suited for educational and wisdom literature across cultures."
-  }
-];
+// 核心预览示例
+const PREVIEW_TEXT = {
+  text: "فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ",
+  translation: "Then which of the favors of your Lord will you deny?",
+  description: "Quran 55:13 - Traditional Naskh with Full Diacritics"
+};
 
-const FONT_FEATURES = [
+// 核心特性 - 3个最重要的卖点
+const KEY_FEATURES = [
   {
     icon: <BookOpen className="h-8 w-8 text-amber-600 mb-2" />,
-    title: "Optimized for Erudition",
-    description: "Specifically engineered for academic and scholarly publications, ensuring exceptional clarity for extensive reading."
-  },
-  {
-    icon: <CheckCircle className="h-8 w-8 text-amber-600 mb-2" />,
-    title: "Unambiguous Letterforms",
-    description: "Features distinct character shapes, generous counters, and appropriate spacing for maximum legibility, even at small sizes."
+    title: "Perfect for Academic Texts",
+    description: "Traditional Naskh style optimized for scholarly publications, religious texts, and extended reading."
   },
   {
     icon: <Globe className="h-8 w-8 text-amber-600 mb-2" />,
-    title: "Broad Language Coverage",
-    description: "Provides an extensive character set supporting numerous Arabic script-based languages beyond Arabic, including Persian, Urdu, Sindhi, and many Ajami scripts."
+    title: "100+ Languages Supported",
+    description: "Extensive character set for Arabic, Persian, Urdu, Kurdish, Pashto, Sindhi, and many Ajami scripts."
   },
   {
     icon: <Layers className="h-8 w-8 text-amber-600 mb-2" />,
-    title: "Full Vocalization & Diacritics",
-    description: "Comprehensive support for all Arabic diacritical marks (tashkil) and common scholarly notations, ensuring accurate text representation."
-  },
-  {
-    icon: <Users className="h-8 w-8 text-amber-600 mb-2" />,
-    title: "Community-Focused Design",
-    description: "Developed by SIL International, serving linguists, translators, and minority language communities worldwide."
-  },
-  {
-    icon: <PenTool className="h-8 w-8 text-amber-600 mb-2" />,
-    title: "Regular & Bold Weights",
-    description: "Available in Regular and Bold, providing essential typographic hierarchy for complex document structures."
+    title: "Full Diacritics & Marks",
+    description: "Comprehensive support for all Arabic diacritical marks (tashkil) and scholarly notations."
   }
 ];
 
-const IDEAL_USE_CASES = [
+// 使用场景
+const USE_CASES = [
   {
-    title: "Academic & Scholarly Publishing",
-    description: "The gold standard for journals, monographs, critical editions, and linguistic research papers using Arabic script.",
-    icon: <BookOpen className="h-5 w-5 text-amber-700" />
+    title: "Academic & Religious Publishing",
+    description: "Ideal for journals, research papers, Quran, Hadith, and classical Islamic texts."
   },
   {
-    title: "Multilingual Documentation & Literature",
-    description: "Ideal for projects involving Arabic, Persian, Urdu, Kurdish, Pashto, Sindhi, and various Ajami scripts due to its vast character set.",
-    icon: <Languages className="h-5 w-5 text-amber-700" />
+    title: "Multilingual Documentation",
+    description: "Perfect for dictionaries, linguistic resources, and minority language preservation projects."
   },
   {
-    title: "Lexicography & Dictionaries",
-    description: "Its clarity and comprehensive glyph coverage make it suitable for complex dictionary entries and linguistic resources.",
-    icon: <Type className="h-5 w-5 text-amber-700" />
-  },
-  {
-    title: "Religious & Classical Texts",
-    description: "Provides a clear, respectful, and accurate rendering of the Quran, Hadith, and other classical religious or literary works.",
-    icon: <Sparkles className="h-5 w-5 text-amber-700" />
-  },
-  {
-    title: "Educational Materials for Arabic Script Languages",
-    description: "Excellent for textbooks, literacy materials, and software aimed at learners of Arabic and other related languages.",
-    icon: <Feather className="h-5 w-5 text-amber-700" />
-  },
-  {
-    title: "Digital Archives & Libraries",
-    description: "Ensures long-term readability and accurate representation of historical and contemporary texts in digital formats.",
-    icon: <Layers className="h-5 w-5 text-amber-700" />
+    title: "Educational Materials",
+    description: "Excellent for textbooks, literacy programs, and Arabic language learning resources."
   }
 ];
 
-const TECHNICAL_DETAILS = [
+// 文件信息
+const FILE_INFO = [
+  { label: "File Size", value: "~1.5 MB" },
+  { label: "Format", value: "TTF (TrueType Font)" },
+  { label: "Fonts Included", value: "2 (Regular, Bold)" },
+  { label: "License", value: "SIL Open Font License 1.1" },
+  { label: "Commercial Use", value: "Yes, 100% Free" },
+  { label: "Developer", value: "SIL International" },
+];
+
+// FAQ
+const FAQ_ITEMS = [
   {
-    title: "Designer/Developer",
-    value: "SIL International (Updated by Bob Hallissy, et al.)",
-    description: "SIL International is a faith-based nonprofit organization focused on language development, literacy, and translation globally."
+    question: "Is Scheherazade New really free?",
+    answer: "Yes! Scheherazade New is 100% free for both personal and commercial use under the SIL Open Font License 1.1. It's developed by SIL International, a non-profit organization dedicated to language development."
   },
   {
-    title: "Latest Version",
-    value: "Scheherazade New (Version 3.300, released 2021)",
-    description: "The \"New\" version offers significant improvements over the legacy Scheherazade font, including Graphite and enhanced OpenType support."
+    question: "What's included in the download?",
+    answer: "The ZIP file includes 2 TTF font files: ScheherazadeNew-Regular and ScheherazadeNew-Bold, plus the license file. The font supports extensive Arabic script coverage for multiple languages."
   },
   {
-    title: "Key OpenType/Graphite Features",
-    value: "Contextual alternates (calt), ligatures (liga, dlig), kerning (kern), mark positioning (mark, mkmk), localized forms (locl), character variants.",
-    description: "Advanced features ensure correct script behavior and provide fine-grained typographic control for complex layouts."
+    question: "How do I install Scheherazade New?",
+    answer: "Windows: Right-click the TTF file and select 'Install'. Mac: Double-click the TTF file and click 'Install Font'. Linux: Copy TTF files to ~/.fonts/ directory."
   },
   {
-    title: "Unicode Coverage",
-    value: "Extensive, covering Arabic, Arabic Supplement, Arabic Extended-A, Arabic Presentation Forms-A/B, and more.",
-    description: "Supports a wide array of characters for Arabic and numerous other languages using the Arabic script."
-  },
-  {
-    title: "Supported Scripts",
-    value: "Arabic (Core), Persian, Urdu, Kurdish (Sorani & Kurmanji), Pashto, Sindhi, Uyghur, Balochi, Kashmiri, and many other Ajami scripts.",
-    description: "One of the most comprehensive fonts for minority languages using the Arabic script."
-  },
-  {
-    title: "License",
-    value: "SIL Open Font License 1.1 (OFL-1.1)",
-    description: "Allows free use, modification, and redistribution, promoting its accessibility and use in diverse linguistic projects."
+    question: "What languages does it support?",
+    answer: "Scheherazade New supports 100+ languages using Arabic script including Arabic, Persian (Farsi), Urdu, Kurdish, Pashto, Sindhi, Uyghur, Balochi, Kashmiri, and various Ajami scripts."
   }
 ];
 
-// Simplified alphabet, full range shown in use cases
-const ARABIC_ALPHABET = "ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي";
-
-export default function ScheherazadeFontPage() {
-  // Get font info for the current page
+export default function ScheherazadePage() {
   const fontInfo = getFontInfoBySlug('scheherazade');
-
-  // Structured data for the font
+  
+  // Structured data - 不包含虚假评分
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "CreativeWork",
+    "@type": "SoftwareApplication",
     "name": "Scheherazade New Font",
-    "description": "A traditional Naskh-style Arabic typeface by SIL International, optimized for scholarly publishing and multilingual Arabic script texts with extensive character support.",
-    "genre": "Typography",
-    "creator": {
+    "applicationCategory": "DesignApplication",
+    "description": "Traditional Naskh Arabic font perfect for scholarly publications and multilingual texts. Supports 100+ languages.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "operatingSystem": "Windows, macOS, Linux",
+    "fileFormat": "TTF",
+    "fileSize": "1.5MB",
+    "downloadUrl": "https://arabic-calligraphy-generator.com/fonts/scheherazade",
+    "license": "https://scripts.sil.org/OFL",
+    "author": {
       "@type": "Organization",
       "name": "SIL International",
-      "description": "Faith-based nonprofit organization focused on language development, literacy, and translation globally"
-    },
-    "publisher": {
-      "@type": "Organization", 
-      "name": "SIL International",
       "url": "https://software.sil.org"
-    },
-    "datePublished": "2025",
-    "license": "https://scripts.sil.org/OFL",
-    "encodingFormat": "OpenType",
-    "keywords": ["Arabic font", "Naskh", "Scholarly typography", "Multilingual", "Academic publishing", "Traditional Arabic"],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.7",
-      "ratingCount": "120",
-      "bestRating": "5"
-    },
-    "about": [
-      "Traditional Naskh design",
-      "Scholarly text optimization", 
-      "Multilingual Arabic script support",
-      "Comprehensive diacritics",
-      "Academic publishing focus",
-      "Cross-platform compatibility"
-    ]
+    }
   };
-
+  
   return (
     <>
       <script
@@ -207,10 +136,9 @@ export default function ScheherazadeFontPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <StaticNavbar />
-      <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
+      <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-12">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            {/* 面包屑导航 */}
+          <div className="max-w-5xl mx-auto">
             <Breadcrumb 
               items={[
                 { name: "Home", href: "/" },
@@ -219,162 +147,368 @@ export default function ScheherazadeFontPage() {
               ]}
             />
             
-            <Button asChild variant="ghost" className="mb-4 text-amber-600 hover:text-amber-800 hover:bg-amber-50">
+            <Button asChild variant="ghost" className="text-amber-600 hover:text-amber-900 hover:bg-amber-50 mb-6">
               <Link href="/fonts">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Fonts
               </Link>
             </Button>
 
-            <Card className="mb-8 border-amber-200 shadow-lg">
-              <CardContent className="p-6 md:p-8">
-                <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center">
-                  <div className="w-full md:w-1/3 flex items-center justify-center rounded-lg bg-gradient-to-br from-amber-100 to-amber-200 p-6 aspect-square">
-                    <div style={{ fontFamily: "'Scheherazade New', serif", fontSize: "clamp(2.5rem, 13vw, 5rem)", color: "#854d0e", lineHeight: 1.3, direction: 'rtl' }}>
-                      أبجدية
-                    </div>
+            {/* Hero Section - Download CTA 突出 */}
+            <div className="bg-gradient-to-br from-amber-600 to-orange-700 text-white rounded-2xl p-8 md:p-12 mb-8 shadow-2xl">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <span className="text-xs bg-white/20 text-white px-3 py-1 rounded-full mb-3 inline-block">Traditional Naskh</span>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                    Download Scheherazade New Free
+                  </h1>
+                  <p className="text-amber-100 text-lg mb-6">
+                    Traditional Arabic Naskh font for scholarly texts. Perfect for academic publishing, religious texts, and multilingual projects. 100+ languages supported, instant download.
+                  </p>
+                  
+                  {/* Key benefits badges */}
+                  <div className="flex flex-wrap gap-3 mb-8">
+                    <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4" />
+                      100% Free
+                    </span>
+                    <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                      <Globe className="h-4 w-4" />
+                      100+ Languages
+                    </span>
+                    <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                      <BookOpen className="h-4 w-4" />
+                      Academic Use
+                    </span>
                   </div>
-                  <div className="w-full md:w-2/3">
-                    <span className="text-xs text-amber-600 font-medium px-2 py-1 bg-amber-50 rounded-full mb-2 inline-block">Traditional Naskh (Scholarly)</span>
-                    <h1 className="text-4xl md:text-5xl font-bold text-amber-800 mt-1 mb-3">Scheherazade New</h1>
-                    <p className="text-lg text-amber-700 mb-6 leading-relaxed">
-                      Scheherazade is a traditional Naskh-style Arabic typeface that excels in readability and authenticity. Perfect for extended reading, academic texts, and projects requiring a classic Arabic aesthetic.
-                    </p>
-                    <div className="flex gap-4">
+
+                  {/* CTA Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    {fontInfo && (
+                      <DownloadButton 
+                        zipFileName={fontInfo.zipFileName}
+                        displayName={fontInfo.displayName}
+                      />
+                    )}
+                    <Button 
+                      asChild 
+                      size="lg" 
+                      variant="outline" 
+                      className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20"
+                    >
+                      <Link href="/?font=Scheherazade%20New">
+                        Try Online First
+                        <Type className="ml-2 h-5 w-5" />
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Font Preview */}
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center">
+                  <div 
+                    style={{ 
+                      fontFamily: "'Scheherazade New', serif", 
+                      fontSize: "clamp(2.5rem, 7vw, 4.5rem)", 
+                      lineHeight: 1.3,
+                      direction: 'rtl'
+                    }}
+                    className="text-white mb-4"
+                  >
+                    شهرزاد
+                  </div>
+                  <p className="text-amber-100 text-sm">Scheherazade - شهرزاد</p>
+                </div>
+              </div>
+            </div>
+
+            {/* File Info Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <Card className="border-amber-200 bg-gradient-to-br from-amber-50 to-white">
+                <CardContent className="pt-6 text-center">
+                  <Download className="h-10 w-10 text-amber-600 mx-auto mb-3" />
+                  <div className="text-3xl font-bold text-amber-600 mb-1">1.5 MB</div>
+                  <div className="text-sm text-gray-600">Complete Package</div>
+                  <div className="text-xs text-gray-500 mt-2">2 font files + license</div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-green-200 bg-gradient-to-br from-green-50 to-white">
+                <CardContent className="pt-6 text-center">
+                  <FileText className="h-10 w-10 text-green-600 mx-auto mb-3" />
+                  <div className="text-3xl font-bold text-green-600 mb-1">TTF</div>
+                  <div className="text-sm text-gray-600">Universal Format</div>
+                  <div className="text-xs text-gray-500 mt-2">Works on all systems</div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-blue-200 bg-gradient-to-br from-blue-50 to-white">
+                <CardContent className="pt-6 text-center">
+                  <CheckCircle className="h-10 w-10 text-blue-600 mx-auto mb-3" />
+                  <div className="text-3xl font-bold text-blue-600 mb-1">Free</div>
+                  <div className="text-sm text-gray-600">SIL OFL 1.1 License</div>
+                  <div className="text-xs text-gray-500 mt-2">Commercial use allowed</div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Download Options Tabs */}
+            <Tabs defaultValue="download" className="mb-8">
+              <TabsList className="grid w-full grid-cols-2">
+                <TabsTrigger value="download">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download Files
+                </TabsTrigger>
+                <TabsTrigger value="info">
+                  <FileText className="mr-2 h-4 w-4" />
+                  Installation Guide
+                </TabsTrigger>
+              </TabsList>
+
+              <TabsContent value="download">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Download Scheherazade New Package</CardTitle>
+                    <CardDescription>
+                      Get both Regular and Bold weights in TTF format. Perfect for academic and multilingual publishing.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="bg-amber-50 border border-amber-200 rounded-lg p-6">
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="bg-white p-3 rounded-lg">
+                          <Download className="h-6 w-6 text-amber-600" />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-gray-900 mb-2">What's included:</h4>
+                          <ul className="space-y-1 text-sm text-gray-600">
+                            <li className="flex items-center gap-2">
+                              <CheckCircle className="h-4 w-4 text-green-600" />
+                              ScheherazadeNew-Regular.ttf
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <CheckCircle className="h-4 w-4 text-green-600" />
+                              ScheherazadeNew-Bold.ttf
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <CheckCircle className="h-4 w-4 text-green-600" />
+                              Supports 100+ languages
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <CheckCircle className="h-4 w-4 text-green-600" />
+                              Full diacritics & OpenType features
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <CheckCircle className="h-4 w-4 text-green-600" />
+                              OFL.txt (license file)
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                       {fontInfo && (
                         <DownloadButton 
                           zipFileName={fontInfo.zipFileName}
                           displayName={fontInfo.displayName}
                         />
                       )}
-                      <Button asChild size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
-                        <Link href="/?font=Scheherazade">Try Scheherazade in Our Generator</Link>
-                      </Button>
+                      <p className="text-xs text-gray-500 mt-3">
+                        ✓ No registration required • ✓ Instant download • ✓ 100% free
+                      </p>
                     </div>
-                  </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="info">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Installation Instructions</CardTitle>
+                    <CardDescription>
+                      Quick guide to install Scheherazade New on your system
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Windows</h4>
+                      <p className="text-sm text-gray-600">Right-click the TTF file and select "Install" or "Install for all users". The font will be available immediately in all applications.</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">macOS</h4>
+                      <p className="text-sm text-gray-600">Double-click the TTF file to open Font Book, then click "Install Font". Restart applications to use the font.</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Linux</h4>
+                      <p className="text-sm text-gray-600">Copy the TTF files to <code className="bg-gray-100 px-1 rounded">~/.fonts/</code> directory, then run <code className="bg-gray-100 px-1 rounded">fc-cache -f -v</code>.</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+            </Tabs>
+
+            {/* Key Features */}
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose Scheherazade New?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              {KEY_FEATURES.map((feature) => (
+                <Card key={feature.title} className="border-amber-200">
+                  <CardHeader className="items-center text-center">
+                    {feature.icon}
+                    <CardTitle className="text-lg">{feature.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-sm text-gray-600">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Preview Example */}
+            <Card className="mb-8 border-amber-200">
+              <CardHeader>
+                <CardTitle>Font Preview</CardTitle>
+                <CardDescription>{PREVIEW_TEXT.description}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div 
+                  className="text-center p-8 bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg"
+                  style={{ fontFamily: "'Scheherazade New', serif", fontSize: "clamp(1.8rem, 5vw, 3rem)", direction: "rtl", lineHeight: 1.8 }}
+                >
+                  {PREVIEW_TEXT.text}
+                </div>
+                <p className="text-center text-gray-600 mt-4 italic">{PREVIEW_TEXT.translation}</p>
+              </CardContent>
+            </Card>
+
+            {/* Use Cases */}
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Perfect For</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              {USE_CASES.map((useCase) => (
+                <Card key={useCase.title} className="border-gray-200">
+                  <CardHeader>
+                    <CardTitle className="text-lg">{useCase.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-gray-600">{useCase.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Technical Specifications */}
+            <Card className="mb-8 border-gray-200">
+              <CardHeader>
+                <CardTitle>Technical Specifications</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                  {FILE_INFO.map((info) => (
+                    <div key={info.label} className="flex justify-between items-center py-2 border-b border-gray-100">
+                      <span className="text-sm text-gray-600">{info.label}</span>
+                      <span className="text-sm font-medium text-gray-900">{info.value}</span>
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>
 
-            <div className="prose prose-amber max-w-none">
-              <h2 id="distinctive-features" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Key Features of Scheherazade New</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                {FONT_FEATURES.map((feature) => (
-                  <Card key={feature.title} className="border-amber-200 flex flex-col">
-                    <CardHeader className="items-center text-center">
-                      {feature.icon}
-                      <CardTitle className="text-xl text-amber-800">{feature.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-center flex-grow">
-                      <p className="text-amber-700 text-sm">{feature.description}</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-
-              <h2 id="history-and-background" className="text-3xl font-bold text-amber-800 mt-12 mb-6">A Legacy of Linguistic Support: The Story of Scheherazade</h2>
-              <Card className="border-amber-200 mb-12">
-                <CardContent className="p-6 md:p-8 space-y-4 text-amber-700 leading-relaxed">
-                  <p>
-                    Named after the legendary storyteller of "One Thousand and One Nights," the Scheherazade typeface family is a testament to <strong className="text-amber-800">SIL International's</strong> commitment to serving language communities worldwide. SIL (Summer Institute of Linguistics) is a global, faith-based nonprofit that works with communities to develop language solutions that promote literacy, education, and cultural heritage.
-                  </p>
-                  <p>
-                    The original Scheherazade font was designed to provide a high-quality, Unicode-compliant Naskh typeface for a wide range of Arabic script-based languages, particularly those requiring extensive diacritics or special characters not always found in standard Arabic fonts. The goal was to create a font that is not only aesthetically pleasing but also highly functional for complex scholarly and multilingual typesetting.
-                  </p>
-                  <p>
-                    The <strong className="text-amber-800">Scheherazade New</strong> version, significantly updated in 2021, builds upon this legacy. It incorporates improved outlines, expanded character sets (including more support for Ajami scripts used in Africa and Asia), and enhanced OpenType and Graphite features. This makes it an even more robust and versatile tool for linguists, translators, publishers, and educators working with Arabic script languages.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <h2 id="alphabet-showcase" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Scheherazade New Alphabet Showcase</h2>
-              <Card className="border-amber-200 mb-12">
-                 <CardHeader>
-                  <CardTitle className="text-xl text-amber-800">Basic Arabic Letterforms</CardTitle>
-                  <CardDescription className="text-amber-600">Observe the clarity and traditional Naskh style of Scheherazade New characters.</CardDescription>
-                </CardHeader>
-                <CardContent className="p-6">
-                  <div 
-                    className="text-center leading-loose"
-                    style={{ fontFamily: "'Scheherazade New', serif", fontSize: "40px", direction: "rtl" }}
-                  >
-                    {ARABIC_ALPHABET}
+            {/* About Scheherazade - 增加内容深度 */}
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">About Scheherazade New Font</h2>
+              <Card className="border-amber-200">
+                <CardContent className="p-6 md:p-8">
+                  <div className="prose prose-amber max-w-none">
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Named after the legendary storyteller of <em>"One Thousand and One Nights"</em>, <strong>Scheherazade New</strong> is a traditional Naskh-style Arabic typeface developed by <strong>SIL International</strong>, a global non-profit organization dedicated to language development and literacy. First released in 2021 as an improved version of the original Scheherazade, it represents one of the most comprehensive Arabic fonts for scholarly and multilingual work.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      The font's design philosophy centers on <strong>readability and linguistic inclusivity</strong>. Unlike many Arabic fonts that focus solely on Modern Standard Arabic, Scheherazade New provides extensive character coverage for <strong>100+ languages</strong> using the Arabic script, including Persian (Farsi), Urdu, Pashto, Sindhi, Kurdish, Uyghur, and numerous Ajami scripts used in African and Asian minority languages.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed mb-6">
+                      What distinguishes Scheherazade New is its sophisticated <strong>OpenType and Graphite features</strong>, including contextual alternates, extensive ligature support, and comprehensive diacritical mark positioning. This makes it ideal for complex scholarly publications, religious texts requiring full vocalization, and linguistic research materials.
+                    </p>
+                    
+                    {/* 相关链接 */}
+                    <div className="bg-amber-50 border-l-4 border-amber-600 p-4 rounded-r-lg">
+                      <h4 className="font-semibold text-amber-900 mb-2">Learn More About Arabic Typography</h4>
+                      <ul className="space-y-2 text-sm">
+                        <li>
+                          <Link href="/blog/six-major-calligraphy-styles" className="text-amber-700 hover:text-amber-900 underline">
+                            The Six Major Arabic Calligraphy Styles
+                          </Link>
+                          {" "}- Explore Naskh and other traditional scripts
+                        </li>
+                        <li>
+                          <Link href="/guides/arabic-font-comparison" className="text-amber-700 hover:text-amber-900 underline">
+                            Arabic Font Comparison Guide
+                          </Link>
+                          {" "}- Compare Scheherazade with other academic fonts
+                        </li>
+                        <li>
+                          <Link href="/tutorials/download-and-use-arabic-fonts" className="text-amber-700 hover:text-amber-900 underline">
+                            How to Download and Use Arabic Fonts
+                          </Link>
+                          {" "}- Installation and font usage tutorial
+                        </li>
+                        <li>
+                          <Link href="/fonts" className="text-amber-700 hover:text-amber-900 underline">
+                            Browse All Arabic Fonts
+                          </Link>
+                          {" "}- Discover 17+ free Arabic fonts
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                  <p className="text-center text-sm text-amber-600 mt-4">Note: Scheherazade New supports a much wider range of Arabic script characters, including those for Persian, Urdu, Sindhi, Pashto, and numerous other languages. Full character set details are available on the SIL website.</p>
                 </CardContent>
               </Card>
-              
-              <h2 id="text-examples" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Scheherazade New in Context: Text Examples</h2>
-              <Tabs defaultValue={TEXT_EXAMPLES[0].id} className="w-full mb-12">
-                <TabsList className="grid w-full" style={{ gridTemplateColumns: `repeat(${TEXT_EXAMPLES.length}, 1fr)` }}>
-                  {TEXT_EXAMPLES.map((example, index) => (
-                    <TabsTrigger key={example.id} value={example.id}>
-                      Example {index + 1}
-                    </TabsTrigger>
-                  ))}
-                </TabsList>
-                {TEXT_EXAMPLES.map((example) => (
-                  <TabsContent key={example.id} value={example.id}>
-                    <Card className="border-amber-200">
-                      <CardContent className="p-6">
-                        <div 
-                          className="mb-4 text-center whitespace-pre-line"
-                          style={{ fontFamily: "'Scheherazade New', serif", fontSize: "30px", direction: "rtl", lineHeight: 1.8 }}
-                        >
-                          {example.text}
-                        </div>
-                        <p className="text-center font-medium text-amber-700 mb-2">{example.translation}</p>
-                        <p className="text-center text-sm text-amber-600">{example.context}</p>
-                      </CardContent>
-                    </Card>
-                  </TabsContent>
-                ))}
-              </Tabs>
+            </div>
 
-              <h2 id="use-cases" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Ideal Applications for Scheherazade New</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                {IDEAL_USE_CASES.map((useCase) => (
-                  <Card key={useCase.title} className="border-amber-200 flex">
-                    <div className="p-6 pr-0 flex items-center">{useCase.icon}</div>
-                    <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold text-amber-800 mb-1">{useCase.title}</h3>
-                      <p className="text-amber-700 text-sm">{useCase.description}</p>
-                    </CardContent>
-                  </Card>
+            {/* FAQ */}
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                <HelpCircle className="h-8 w-8 text-amber-600" />
+                Frequently Asked Questions
+              </h2>
+              <Accordion type="single" collapsible className="w-full">
+                {FAQ_ITEMS.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`}>
+                    <AccordionTrigger className="text-left font-semibold">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-gray-600">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
                 ))}
-              </div>
-              
-              <h2 id="technical-details" className="text-3xl font-bold text-amber-800 mt-12 mb-6">Technical Specifications</h2>
-              <div className="space-y-6 mb-12">
-                {TECHNICAL_DETAILS.map((detail) => (
-                  <Card key={detail.title} className="border-amber-200">
-                    <CardHeader>
-                      <CardTitle className="text-xl text-amber-800">{detail.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-lg text-amber-700 mb-1">{detail.value}</p>
-                      {detail.description && <p className="text-sm text-amber-600">{detail.description}</p>}
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-              
-              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center p-6 bg-amber-50 rounded-lg border border-amber-200">
-                 <h3 className="text-2xl font-semibold text-amber-800 text-center sm:text-left">Utilize Scheherazade New's Clarity</h3>
-                <Button asChild size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
-                  <Link href="/?font=Scheherazade%20New">Use Scheherazade New in Generator</Link>
+              </Accordion>
+            </div>
+
+            {/* Final CTA */}
+            <div className="bg-gradient-to-r from-amber-600 to-orange-700 text-white rounded-2xl p-8 md:p-12 text-center mb-8">
+              <h3 className="text-3xl font-bold mb-4">Ready to Download Scheherazade New?</h3>
+              <p className="text-amber-100 mb-6 max-w-2xl mx-auto text-lg">
+                Get started with this comprehensive traditional Naskh font. Perfect for scholarly work and multilingual publishing. Free forever.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                {fontInfo && (
+                  <DownloadButton 
+                    zipFileName={fontInfo.zipFileName}
+                    displayName={fontInfo.displayName}
+                  />
+                )}
+                <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20">
+                  <Link href="/?font=Scheherazade%20New">Try in Generator</Link>
                 </Button>
               </div>
-              
-              <RelatedContent 
-                title="Further Reading & Similar Fonts"
-                links={getContentSpecificLinks('font', 'scheherazade')} // slug might need to be 'scheherazade-new'
-              />
             </div>
+
+            {/* Related Content */}
+            <RelatedContent 
+              title="Explore More Arabic Fonts"
+              links={getContentSpecificLinks('font', 'scheherazade')}
+            />
           </div>
         </div>
       </main>
       <Footer />
     </>
   )
-} 
+}
