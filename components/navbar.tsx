@@ -2,20 +2,28 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Menu, ChevronDown } from "lucide-react"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from "@/components/ui/dropdown-menu"
+import { Menu, ChevronDown, User, LogOut, Crown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { SharedLogo } from "@/components/shared/logo"
 import { useTranslations } from 'next-intl'
+import { authClient } from "@/lib/auth-client"
+import { useSubscriptionStatus } from "@/hooks/use-subscription"
 
 export function Navbar() {
   const t = useTranslations('navigation')
+  const router = useRouter()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isClient, setIsClient] = useState(false)
+  
+  // Auth state
+  const { data: session } = authClient.useSession()
+  const { isPro, loading: isSubscriptionLoading } = useSubscriptionStatus()
 
   useEffect(() => {
     setIsClient(true)
@@ -25,6 +33,11 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  const handleLogout = async () => {
+    await authClient.signOut()
+    router.refresh()
+  }
 
   const navItems = [
     { label: t('generator'), href: "/" },
@@ -115,6 +128,42 @@ export function Navbar() {
             <div className="ml-2 pl-2 border-l border-amber-200 navbar-language-container">
               <LanguageSwitcher />
             </div>
+
+            {/* Auth Buttons */}
+            <div className="ml-2 pl-2 border-l border-amber-200 flex items-center gap-2">
+              {session?.user ? (
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" className="text-amber-800 hover:text-amber-600 hover:bg-amber-50">
+                      <User className="h-4 w-4 mr-2" />
+                      {session.user.email}
+                      {isPro && <Crown className="h-4 w-4 ml-2 text-yellow-600" />}
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end">
+                    <DropdownMenuItem asChild>
+                      <Link href="/pricing" className="w-full">
+                        {isPro ? 'Manage Subscription' : 'Upgrade to Pro'}
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem onClick={handleLogout} className="text-red-600">
+                      <LogOut className="h-4 w-4 mr-2" />
+                      Logout
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <>
+                  <Button variant="ghost" asChild className="text-amber-800 hover:text-amber-600 hover:bg-amber-50">
+                    <Link href="/login">Login</Link>
+                  </Button>
+                  <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
+                    <Link href="/register">Sign Up</Link>
+                  </Button>
+                </>
+              )}
+            </div>
           </div>
 
           {/* Mobile Menu Trigger - Increased touch area */}
@@ -161,6 +210,58 @@ export function Navbar() {
                     </div>
                   ))}
                 </nav>
+
+                {/* Mobile Auth Section */}
+                <div className="mt-6 pt-6 border-t border-amber-200">
+                  {session?.user ? (
+                    <div className="space-y-2">
+                      <div className="px-4 py-2 text-sm text-amber-800 flex items-center">
+                        <User className="h-4 w-4 mr-2" />
+                        {session.user.email}
+                        {isPro && <Crown className="h-4 w-4 ml-2 text-yellow-600" />}
+                      </div>
+                      <Button
+                        variant="ghost"
+                        asChild
+                        className="w-full justify-start text-amber-800 hover:bg-amber-50"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <Link href="/pricing">
+                          {isPro ? 'Manage Subscription' : 'Upgrade to Pro'}
+                        </Link>
+                      </Button>
+                      <Button
+                        variant="ghost"
+                        onClick={() => {
+                          handleLogout()
+                          setIsMobileMenuOpen(false)
+                        }}
+                        className="w-full justify-start text-red-600 hover:bg-red-50"
+                      >
+                        <LogOut className="h-4 w-4 mr-2" />
+                        Logout
+                      </Button>
+                    </div>
+                  ) : (
+                    <div className="space-y-2">
+                      <Button
+                        variant="ghost"
+                        asChild
+                        className="w-full text-amber-800 hover:bg-amber-50"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <Link href="/login">Login</Link>
+                      </Button>
+                      <Button
+                        asChild
+                        className="w-full bg-amber-600 hover:bg-amber-700 text-white"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <Link href="/register">Sign Up</Link>
+                      </Button>
+                    </div>
+                  )}
+                </div>
 
                 {/* Mobile Language Switcher */}
                 <div className="mt-6 pt-6 border-t border-amber-200">

@@ -1,0 +1,10 @@
+// 积分系统类型定义占位 - 暂不启用
+
+export const CREDIT_TRANSACTION_TYPE = {
+  PURCHASE_PACKAGE: 'PURCHASE_PACKAGE',
+  SUBSCRIPTION: 'SUBSCRIPTION',
+  LIFETIME_MONTHLY: 'LIFETIME_MONTHLY',
+} as const;
+
+export type CreditTransactionType =
+  (typeof CREDIT_TRANSACTION_TYPE)[keyof typeof CREDIT_TRANSACTION_TYPE];

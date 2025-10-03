@@ -23,6 +23,7 @@ import {
   HelpCircle,
   ChevronRight,
   Sparkles,
+  Crown,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Slider } from "@/components/ui/slider"
@@ -47,6 +48,8 @@ import { TemplateBrowser } from "@/components/template-browser"
 import { FontPreview } from "@/components/font-preview"
 import { MobileFab } from "@/components/mobile-fab"
 import { useTranslations } from 'next-intl'
+import { useSubscriptionStatus } from "@/hooks/use-subscription"
+import { useRouter } from "next/navigation"
 
 // Helper function to generate canvas from preview
 async function generatePreviewCanvas(
@@ -252,8 +255,10 @@ interface CalligraphyGeneratorProps {
 
 export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyGeneratorProps = {}) {
   const t = useTranslations('generator')
+  const router = useRouter()
   const isMobile = useMobile()
   const { loadFont, isFontLoaded, isFontLoading } = useFontLoader()
+  const { isPro, loading: isSubscriptionLoading } = useSubscriptionStatus()
   const [text, setText] = useState(DEFAULT_TEXT)
   
   // Initialize font based on initialFont prop or default
@@ -502,6 +507,20 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
         return;
       }
 
+      // Add watermark for free users
+      if (!isPro) {
+        const ctx = canvas.getContext('2d');
+        if (ctx) {
+          ctx.save();
+          ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
+          ctx.font = '20px Arial';
+          ctx.textAlign = 'right';
+          ctx.textBaseline = 'bottom';
+          ctx.fillText('arabic-calligraphy-creator.com', canvas.width - 20, canvas.height - 20);
+          ctx.restore();
+        }
+      }
+
       const dataUrl = canvas.toDataURL('image/png', 1.0);
       const link = document.createElement('a');
       link.download = `arabic-calligraphy-${new Date().getTime()}.png`;
@@ -517,13 +536,14 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
           fontSize: fontSize,
           hasGradient: useGradient,
           hasBackground: backgroundImage ? 'image' : backgroundPattern !== 'none' ? 'pattern' : 'color',
-          conversion_type: 'download_png'
+          conversion_type: 'download_png',
+          isPro: isPro
         });
       }
 
       toast({
         title: t('toasts.downloadComplete'),
-        description: t('toasts.downloadCompletePNG'),
+        description: isPro ? t('toasts.downloadCompletePNG') : 'PNG downloaded with watermark. Upgrade to Pro for watermark-free downloads!',
       });
     } catch (error) {
       console.error('PNG download failed:', error);
@@ -539,6 +559,17 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
   };
 
   const handleDownloadSVG = async () => {
+    // Check if user has Pro subscription
+    if (!isPro) {
+      toast({
+        title: 'Pro Feature',
+        description: 'SVG download is available for Pro users only.',
+        variant: "default",
+      });
+      router.push('/pricing');
+      return;
+    }
+
     if (!previewRef.current) return;
     
     const currentOptions = {
@@ -1865,6 +1896,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                   <Button onClick={handleDownloadPNG} className="bg-amber-600 hover:bg-amber-700">
                     <Download className="mr-2 h-4 w-4" />
                     {t('preview.downloadPNG')}
+                    {!isPro && <span className="ml-2 text-xs opacity-75">(with watermark)</span>}
                   </Button>
                   <Button
                     onClick={handleDownloadSVG}
@@ -1873,6 +1905,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                   >
                     <Download className="mr-2 h-4 w-4" />
                     {t('preview.downloadSVG')}
+                    {!isPro && <Crown className="ml-2 h-4 w-4" />}
                   </Button>
                   <Button
                     onClick={() => {
