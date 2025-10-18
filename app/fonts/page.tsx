@@ -208,12 +208,52 @@ export default function FontsPage() {
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            {/* Page Introduction and Quick Tips */}
-            <div className="mb-12 text-center">
+            {/* Page Introduction */}
+            <div className="mb-8 text-center">
               <h1 className="text-3xl md:text-4xl font-bold text-amber-800 mb-4">Explore the World of Arabic Calligraphy Fonts</h1>
               <p className="text-lg text-amber-700 leading-relaxed max-w-3xl mx-auto">
-                Welcome to our Arabic font library! Discover and learn about various styles of Arabic calligraphy fonts to find the perfect inspiration for your creative projects, artistic designs, or academic research.
+                Welcome to our Arabic font library! Discover and download instantly - over 17+ premium Arabic fonts for your creative projects. 100% free, no signup required.
               </p>
+            </div>
+
+            {/* Quick Download Section - Most Popular */}
+            <div className="mb-12 bg-gradient-to-br from-amber-600 to-orange-700 text-white rounded-2xl p-6 md:p-8 shadow-xl">
+              <div className="flex items-center gap-3 mb-4">
+                <Download className="h-6 w-6" />
+                <h2 className="text-2xl font-bold">Download Instantly - Most Popular Fonts</h2>
+              </div>
+              <p className="text-amber-100 mb-6">Start with our community favorites. Click any font below to download or preview online.</p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                {[
+                  { name: "Amiri", slug: "amiri", tag: "Best for Quran" },
+                  { name: "Cairo", slug: "cairo", tag: "Modern & Clean" },
+                  { name: "Reem Kufi", slug: "reem-kufi", tag: "Bold & Geometric" },
+                  { name: "Scheherazade", slug: "scheherazade", tag: "Classic Naskh" }
+                ].map(font => (
+                  <Link 
+                    key={font.slug}
+                    href={`/fonts/${font.slug}`}
+                    className="bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/30 rounded-lg p-4 text-center transition-all hover:scale-105"
+                  >
+                    <div className="font-semibold mb-1">{font.name}</div>
+                    <div className="text-xs text-amber-200">{font.tag}</div>
+                  </Link>
+                ))}
+              </div>
+              <div className="mt-6 flex flex-wrap gap-3 justify-center">
+                <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4" />
+                  TTF/OTF formats
+                </span>
+                <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4" />
+                  Commercial use allowed
+                </span>
+                <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4" />
+                  No attribution required
+                </span>
+              </div>
             </div>
 
             <section className="mb-12 p-6 bg-sky-100/30 border border-sky-200 rounded-lg shadow">
@@ -373,4 +413,4 @@ export default function FontsPage() {
       <StaticFooter />
     </>
   )
-} 
+}

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Best Arabic Fonts 2025 - Top Rated Typography for Professional Design',
     description: 'Discover the best Arabic fonts of 2025 chosen by design professionals. Compare top-rated Arabic typography for web, print, and branding.',
     type: 'article',
-    url: 'https://arabic-calligraphy-creator.com/guides/best-arabic-fonts-2025',
+    url: 'https://arabic-calligraphy-generator.com/guides/best-arabic-fonts-2025',
   },
   twitter: {
     card: 'summary_large_image',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Discover the best Arabic fonts of 2025 chosen by design professionals. Compare top-rated Arabic typography for web, print, and branding.',
   },
   alternates: {
-    canonical: 'https://arabic-calligraphy-creator.com/guides/best-arabic-fonts-2025',
+    canonical: 'https://arabic-calligraphy-generator.com/guides/best-arabic-fonts-2025',
   },
 }
 
@@ -39,24 +39,24 @@ export default function BestArabicFonts2024Page() {
     "@type": "Article",
     "headline": "Best Arabic Fonts 2024 - Top Rated Typography for Professional Design",
     "description": "Expert-curated list of the best Arabic fonts for 2024, featuring professional recommendations for web, print, and digital design applications",
-    "image": "https://arabic-calligraphy-creator.com/best-fonts-2024-og.png",
+    "image": "https://arabic-calligraphy-generator.com/best-fonts-2024-og.png",
     "author": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator"
+      "name": "Arabic Calligraphy Generator"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator",
+      "name": "Arabic Calligraphy Generator",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://arabic-calligraphy-creator.com/logo.png"
+        "url": "https://arabic-calligraphy-generator.com/logo.png"
       }
     },
     "datePublished": "2024-01-01",
     "dateModified": "2024-01-01",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://arabic-calligraphy-creator.com/guides/best-arabic-fonts-2024"
+      "@id": "https://arabic-calligraphy-generator.com/guides/best-arabic-fonts-2024"
     }
   }
 

@@ -120,7 +120,7 @@ export default function ScheherazadePage() {
     "operatingSystem": "Windows, macOS, Linux",
     "fileFormat": "TTF",
     "fileSize": "1.5MB",
-    "downloadUrl": "https://arabic-calligraphy-generator.com/fonts/scheherazade",
+    "downloadUrl": "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/Scheherazade_New.zip",
     "license": "https://scripts.sil.org/OFL",
     "author": {
       "@type": "Organization",
@@ -129,11 +129,29 @@ export default function ScheherazadePage() {
     }
   };
   
+  // FAQPage structured data
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQ_ITEMS.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
+  
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
       />
       <StaticNavbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-12">

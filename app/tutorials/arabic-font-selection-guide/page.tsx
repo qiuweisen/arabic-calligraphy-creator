@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Arabic Font Selection Guide - Best Arabic Fonts 2024',
     description: 'Professional Arabic font selection guide covering 17 curated fonts with characteristics, use cases, and pairing recommendations.',
     type: 'article',
-    url: 'https://arabic-calligraphy-creator.com/tutorials/arabic-font-selection-guide',
+    url: 'https://arabic-calligraphy-generator.com/tutorials/arabic-font-selection-guide',
   },
   twitter: {
     card: 'summary_large_image',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Professional Arabic font selection guide covering 17 curated fonts with characteristics, use cases, and pairing recommendations.',
   },
   alternates: {
-    canonical: 'https://arabic-calligraphy-creator.com/tutorials/arabic-font-selection-guide',
+    canonical: 'https://arabic-calligraphy-generator.com/tutorials/arabic-font-selection-guide',
   },
 }
 
@@ -39,24 +39,24 @@ export default function ArabicFontSelectionGuidePage() {
     "@type": "Article",
     "headline": "Arabic Font Selection Guide - Best Arabic Fonts 2024",
     "description": "Professional Arabic font selection guide covering 17 curated fonts with characteristics, use cases, and pairing recommendations",
-    "image": "https://arabic-calligraphy-creator.com/og-image.png",
+    "image": "https://arabic-calligraphy-generator.com/og-image.png",
     "author": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator"
+      "name": "Arabic Calligraphy Generator"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator",
+      "name": "Arabic Calligraphy Generator",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://arabic-calligraphy-creator.com/logo.png"
+        "url": "https://arabic-calligraphy-generator.com/logo.png"
       }
     },
     "datePublished": "2024-01-01",
     "dateModified": "2024-01-01",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://arabic-calligraphy-creator.com/tutorials/arabic-font-selection-guide"
+      "@id": "https://arabic-calligraphy-generator.com/tutorials/arabic-font-selection-guide"
     }
   }
 

@@ -22,6 +22,19 @@ export const metadata: Metadata = {
   description: "🎨 FREE Arabic Calligraphy Generator | Create stunning Islamic art online instantly! 17+ premium fonts, instant download PNG/SVG. No signup required ✨",
   alternates: {
     canonical: '/',
+    languages: {
+      'en': '/',
+      'ar': '/ar',
+      'ur': '/ur',
+      'bn': '/bn',
+      'ms': '/ms',
+      'id': '/id',
+      'de': '/de',
+      'hi': '/hi',
+      'fr': '/fr',
+      'tr': '/tr',
+      'x-default': '/',
+    },
   },
   openGraph: {
     title: "Arabic Calligraphy Generator - Free Online Tool",

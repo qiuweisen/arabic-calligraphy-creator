@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Arabic Calligraphy Beginner Guide 2025 - Complete Tutorial for Beginners',
     description: 'Complete beginner guide to Arabic calligraphy and Islamic art. Learn basic techniques, tools, fonts, and design principles.',
     type: 'article',
-    url: 'https://arabic-calligraphy-creator.com/guides/arabic-calligraphy-beginner-guide',
+    url: 'https://arabic-calligraphy-generator.com/guides/arabic-calligraphy-beginner-guide',
   },
   twitter: {
     card: 'summary_large_image',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Complete beginner guide to Arabic calligraphy and Islamic art. Learn basic techniques and design principles.',
   },
   alternates: {
-    canonical: 'https://arabic-calligraphy-creator.com/guides/arabic-calligraphy-beginner-guide',
+    canonical: 'https://arabic-calligraphy-generator.com/guides/arabic-calligraphy-beginner-guide',
   },
 }
 
@@ -39,24 +39,24 @@ export default function ArabicCalligraphyBeginnerGuidePage() {
     "@type": "Article",
     "headline": "Arabic Calligraphy Beginner Guide 2025 - Complete Tutorial for Beginners",
     "description": "Comprehensive beginner guide to Arabic calligraphy covering basic techniques, tools, fonts, design principles, and step-by-step tutorials",
-    "image": "https://arabic-calligraphy-creator.com/beginner-guide-og.png",
+    "image": "https://arabic-calligraphy-generator.com/beginner-guide-og.png",
     "author": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator"
+      "name": "Arabic Calligraphy Generator"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator",
+      "name": "Arabic Calligraphy Generator",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://arabic-calligraphy-creator.com/logo.png"
+        "url": "https://arabic-calligraphy-generator.com/logo.png"
       }
     },
     "datePublished": "2025-01-01",
     "dateModified": "2025-01-01",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://arabic-calligraphy-creator.com/guides/arabic-calligraphy-beginner-guide"
+      "@id": "https://arabic-calligraphy-generator.com/guides/arabic-calligraphy-beginner-guide"
     }
   }
 

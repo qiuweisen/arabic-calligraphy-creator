@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Religious Arabic Calligraphy - Islamic Art, Quranic Verses, Islamic Typography',
     description: 'Create beautiful religious Arabic calligraphy for Islamic art, Quranic verses, mosque decorations, and spiritual content with cultural authenticity.',
     type: 'article',
-    url: 'https://arabic-calligraphy-creator.com/use-cases/religious-arabic-calligraphy',
+    url: 'https://arabic-calligraphy-generator.com/use-cases/religious-arabic-calligraphy',
   },
   twitter: {
     card: 'summary_large_image',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Create beautiful religious Arabic calligraphy for Islamic art, Quranic verses, mosque decorations, and spiritual content with cultural authenticity.',
   },
   alternates: {
-    canonical: 'https://arabic-calligraphy-creator.com/use-cases/religious-arabic-calligraphy',
+    canonical: 'https://arabic-calligraphy-generator.com/use-cases/religious-arabic-calligraphy',
   },
 }
 
@@ -39,24 +39,24 @@ export default function ReligiousArabicCalligraphyPage() {
     "@type": "Article",
     "headline": "Religious Arabic Calligraphy - Islamic Art, Quranic Verses, Islamic Typography",
     "description": "Create beautiful religious Arabic calligraphy for Islamic art, Quranic verses, mosque decorations, and spiritual content",
-    "image": "https://arabic-calligraphy-creator.com/religious-calligraphy-og.png",
+    "image": "https://arabic-calligraphy-generator.com/religious-calligraphy-og.png",
     "author": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator"
+      "name": "Arabic Calligraphy Generator"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator",
+      "name": "Arabic Calligraphy Generator",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://arabic-calligraphy-creator.com/logo.png"
+        "url": "https://arabic-calligraphy-generator.com/logo.png"
       }
     },
     "datePublished": "2024-01-01",
     "dateModified": "2024-01-01",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://arabic-calligraphy-creator.com/use-cases/religious-arabic-calligraphy"
+      "@id": "https://arabic-calligraphy-generator.com/use-cases/religious-arabic-calligraphy"
     }
   }
 

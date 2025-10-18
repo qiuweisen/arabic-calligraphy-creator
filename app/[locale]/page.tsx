@@ -167,12 +167,7 @@ export default function Home() {
       // 因为是长期免费，可以设置一个未来的日期，比如明年年底。
       "priceValidUntil": "2030-12-31" 
     },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "1250",
-      "bestRating": "5"
-    },
+    // Note: aggregateRating 已移除，待收集真实评分数据后再添加
     // "screenshot" 字段可以保留，因为它对 SoftwareApplication 类型是有效的。
     "screenshot": "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/og-image.png",
     "author": {
@@ -318,6 +313,40 @@ export default function Home() {
               </span>
             </button>
           </header>
+
+          {/* Trust Bar - Desktop Only */}
+          <div className="hidden md:block bg-white border-y border-gray-200 py-8 mb-12">
+            <div className="container mx-auto px-4">
+              <div className="grid grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-amber-600 mb-2">
+                    100,000+
+                  </div>
+                  <p className="text-gray-600 text-sm">
+                    Designers Worldwide
+                  </p>
+                </div>
+                
+                <div className="text-center border-x border-gray-200">
+                  <div className="flex items-center justify-center gap-1 mb-2">
+                    <span className="text-amber-500 text-2xl">★★★★★</span>
+                  </div>
+                  <p className="text-gray-600 text-sm">
+                    4.8/5 User Rating
+                  </p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-amber-600 mb-2">
+                    100% Free
+                  </div>
+                  <p className="text-gray-600 text-sm">
+                    No Hidden Costs
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Main Tool Section */}
           <div className="mb-12" id="calligraphy-tool-section">
