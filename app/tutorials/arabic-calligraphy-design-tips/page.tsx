@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Arabic Calligraphy Design Tips - Professional Typography Techniques',
     description: 'Master professional Arabic calligraphy design with expert tips on composition, color theory, typography hierarchy, and cultural considerations.',
     type: 'article',
-    url: 'https://arabic-calligraphy-creator.com/tutorials/arabic-calligraphy-design-tips',
+    url: 'https://arabic-calligraphy-generator.com/tutorials/arabic-calligraphy-design-tips',
   },
   twitter: {
     card: 'summary_large_image',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Master professional Arabic calligraphy design with expert tips on composition, color theory, typography hierarchy, and cultural considerations.',
   },
   alternates: {
-    canonical: 'https://arabic-calligraphy-creator.com/tutorials/arabic-calligraphy-design-tips',
+    canonical: 'https://arabic-calligraphy-generator.com/tutorials/arabic-calligraphy-design-tips',
   },
 }
 
@@ -39,24 +39,24 @@ export default function ArabicCalligraphyDesignTipsPage() {
     "@type": "Article",
     "headline": "Arabic Calligraphy Design Tips - Professional Typography Techniques",
     "description": "Master professional Arabic calligraphy design with expert tips on composition, color theory, typography hierarchy, and cultural considerations",
-    "image": "https://arabic-calligraphy-creator.com/og-image.png",
+    "image": "https://arabic-calligraphy-generator.com/og-image.png",
     "author": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator"
+      "name": "Arabic Calligraphy Generator"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator",
+      "name": "Arabic Calligraphy Generator",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://arabic-calligraphy-creator.com/logo.png"
+        "url": "https://arabic-calligraphy-generator.com/logo.png"
       }
     },
     "datePublished": "2024-01-01",
     "dateModified": "2024-01-01",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://arabic-calligraphy-creator.com/tutorials/arabic-calligraphy-design-tips"
+      "@id": "https://arabic-calligraphy-generator.com/tutorials/arabic-calligraphy-design-tips"
     }
   }
 

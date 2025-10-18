@@ -8,22 +8,22 @@ import { ArrowRight, Download, Star, Shield, Globe, Gift } from 'lucide-react'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Free Arabic Fonts Download 2025 - High Quality Typography Resources | Open Source Collection',
-  description: 'Download free Arabic fonts for commercial and personal use. Curated collection of high-quality open source Arabic typography with direct download links and licensing information.',
-  keywords: 'free arabic fonts download,open source arabic fonts,commercial use arabic fonts,free islamic fonts,arabic typography resources,google fonts arabic',
+  title: 'Free Arabic Fonts Download 2025 - Commercial Use OK | 17+ Open Source Fonts',
+  description: 'Download 17+ free Arabic fonts for commercial use. High-quality TTF files, instant download, no signup required. Perfect for designers, developers & content creators.',
+  keywords: 'free arabic fonts download,commercial use arabic fonts,open source arabic fonts,free islamic fonts,arabic typography,google fonts arabic,ttf arabic fonts',
   openGraph: {
-    title: 'Free Arabic Fonts Download 2025 - High Quality Typography Resources',
-    description: 'Download free Arabic fonts for commercial and personal use. Curated collection of high-quality open source Arabic typography.',
+    title: 'Free Arabic Fonts Download 2025 - Commercial Use OK',
+    description: 'Download 17+ free Arabic fonts for commercial use. High-quality TTF files, instant download, no signup required.',
     type: 'article',
-    url: 'https://arabic-calligraphy-creator.com/resources/free-arabic-fonts',
+    url: 'https://arabic-calligraphy-generator.com/resources/free-arabic-fonts',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Arabic Fonts Download 2025 - High Quality Typography Resources',
-    description: 'Download free Arabic fonts for commercial and personal use. Curated collection of high-quality open source Arabic typography.',
+    title: 'Free Arabic Fonts Download 2025 - Commercial Use OK',
+    description: 'Download 17+ free Arabic fonts for commercial use. High-quality TTF files, instant download, no signup required.',
   },
   alternates: {
-    canonical: 'https://arabic-calligraphy-creator.com/resources/free-arabic-fonts',
+    canonical: 'https://arabic-calligraphy-generator.com/resources/free-arabic-fonts',
   },
 }
 
@@ -39,24 +39,24 @@ export default function FreeArabicFontsPage() {
     "@type": "Article",
     "headline": "Free Arabic Fonts Download 2025 - High Quality Typography Resources",
     "description": "Comprehensive collection of free Arabic fonts for download, including licensing information and usage guidelines for commercial and personal projects",
-    "image": "https://arabic-calligraphy-creator.com/free-fonts-og.png",
+    "image": "https://arabic-calligraphy-generator.com/free-fonts-og.png",
     "author": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator"
+      "name": "Arabic Calligraphy Generator"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator",
+      "name": "Arabic Calligraphy Generator",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://arabic-calligraphy-creator.com/logo.png"
+        "url": "https://arabic-calligraphy-generator.com/logo.png"
       }
     },
     "datePublished": "2025-01-01",
     "dateModified": "2025-01-01",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://arabic-calligraphy-creator.com/resources/free-arabic-fonts"
+      "@id": "https://arabic-calligraphy-generator.com/resources/free-arabic-fonts"
     }
   }
 

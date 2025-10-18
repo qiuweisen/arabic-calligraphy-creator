@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Wedding Arabic Calligraphy - Beautiful Islamic Wedding Invitations',
     description: 'Create stunning Arabic wedding calligraphy for invitations, decorations, and ceremonies. Discover traditional and modern Arabic fonts perfect for Islamic weddings.',
     type: 'article',
-    url: 'https://arabic-calligraphy-creator.com/use-cases/wedding-arabic-calligraphy',
+    url: 'https://arabic-calligraphy-generator.com/use-cases/wedding-arabic-calligraphy',
   },
   twitter: {
     card: 'summary_large_image',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Create stunning Arabic wedding calligraphy for invitations, decorations, and ceremonies. Discover traditional and modern Arabic fonts perfect for Islamic weddings.',
   },
   alternates: {
-    canonical: 'https://arabic-calligraphy-creator.com/use-cases/wedding-arabic-calligraphy',
+    canonical: 'https://arabic-calligraphy-generator.com/use-cases/wedding-arabic-calligraphy',
   },
 }
 
@@ -39,24 +39,24 @@ export default function WeddingArabicCalligraphyPage() {
     "@type": "Article",
     "headline": "Wedding Arabic Calligraphy - Beautiful Islamic Wedding Invitations",
     "description": "Create stunning Arabic wedding calligraphy for invitations, decorations, and ceremonies with traditional and modern Arabic fonts",
-    "image": "https://arabic-calligraphy-creator.com/wedding-calligraphy-og.png",
+    "image": "https://arabic-calligraphy-generator.com/wedding-calligraphy-og.png",
     "author": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator"
+      "name": "Arabic Calligraphy Generator"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator",
+      "name": "Arabic Calligraphy Generator",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://arabic-calligraphy-creator.com/logo.png"
+        "url": "https://arabic-calligraphy-generator.com/logo.png"
       }
     },
     "datePublished": "2024-01-01",
     "dateModified": "2024-01-01",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://arabic-calligraphy-creator.com/use-cases/wedding-arabic-calligraphy"
+      "@id": "https://arabic-calligraphy-generator.com/use-cases/wedding-arabic-calligraphy"
     }
   }
 

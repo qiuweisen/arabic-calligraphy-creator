@@ -1,4 +1,27 @@
 import { MetadataRoute } from 'next'
+import { statSync } from 'node:fs'
+import { join } from 'node:path'
+
+const PROJECT_ROOT = process.cwd()
+const DEFAULT_LAST_MODIFIED = new Date('2025-01-01T00:00:00Z')
+const lastModifiedCache = new Map<string, Date>()
+
+function getLastModified(relativePath: string, fallback: Date = DEFAULT_LAST_MODIFIED): Date {
+  if (lastModifiedCache.has(relativePath)) {
+    return lastModifiedCache.get(relativePath)!
+  }
+
+  try {
+    const stats = statSync(join(PROJECT_ROOT, relativePath))
+    const date = stats.mtime
+    lastModifiedCache.set(relativePath, date)
+    return date
+  } catch {
+    const date = new Date(fallback.getTime())
+    lastModifiedCache.set(relativePath, date)
+    return date
+  }
+}
 
 // Blog posts data - using actual directory names (shorter URLs are better)
 const BLOG_POSTS = [
@@ -70,127 +93,132 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Homepage - fully internationalized
     {
       url: baseUrl,
-      lastModified: new Date(),
+      file: 'app/[locale]/page.tsx',
       changeFrequency: 'monthly' as const,
       priority: 1.0,
     },
     {
       url: `${baseUrl}/ar`,
-      lastModified: new Date(),
+      file: 'app/[locale]/page.tsx',
       changeFrequency: 'monthly' as const,
       priority: 1.0,
     },
     {
       url: `${baseUrl}/ur`,
-      lastModified: new Date(),
+      file: 'app/[locale]/page.tsx',
       changeFrequency: 'monthly' as const,
       priority: 1.0,
     },
     {
       url: `${baseUrl}/bn`,
-      lastModified: new Date(),
+      file: 'app/[locale]/page.tsx',
       changeFrequency: 'monthly' as const,
       priority: 1.0,
     },
     {
       url: `${baseUrl}/ms`,
-      lastModified: new Date(),
+      file: 'app/[locale]/page.tsx',
       changeFrequency: 'monthly' as const,
       priority: 1.0,
     },
     {
       url: `${baseUrl}/id`,
-      lastModified: new Date(),
+      file: 'app/[locale]/page.tsx',
       changeFrequency: 'monthly' as const,
       priority: 1.0,
     },
     // Other pages - keep original English-only URLs until they are internationalized
     {
       url: `${baseUrl}/fonts`,
-      lastModified: new Date(),
+      file: 'app/fonts/page.tsx',
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/guides`,
-      lastModified: new Date(),
+      file: 'app/guides/page.tsx',
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/tutorials`,
-      lastModified: new Date(),
+      file: 'app/tutorials/page.tsx',
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/resources`,
-      lastModified: new Date(),
+      file: 'app/resources/page.tsx',
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
 
     {
       url: `${baseUrl}/use-cases`,
-      lastModified: new Date(),
+      file: 'app/use-cases/page.tsx',
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(),
+      file: 'app/blog/page.tsx',
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/faq`,
-      lastModified: new Date(),
+      file: 'app/faq/page.tsx',
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
+      file: 'app/contact/page.tsx',
       changeFrequency: 'yearly' as const,
       priority: 0.5,
     },
     {
       url: `${baseUrl}/privacy-policy`,
-      lastModified: new Date(),
+      file: 'app/privacy-policy/page.tsx',
       changeFrequency: 'yearly' as const,
       priority: 0.5,
     },
     {
       url: `${baseUrl}/terms-of-service`,
-      lastModified: new Date(),
+      file: 'app/terms-of-service/page.tsx',
       changeFrequency: 'yearly' as const,
       priority: 0.5,
     },
     {
       url: `${baseUrl}/about-us`,
-      lastModified: new Date(),
+      file: 'app/about-us/page.tsx',
       changeFrequency: 'yearly' as const,
       priority: 0.5,
     },
     {
       url: `${baseUrl}/features`,
-      lastModified: new Date(),
+      file: 'app/features/page.tsx',
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     },
 
     {
       url: `${baseUrl}/about/arabic-calligraphy-history`,
-      lastModified: new Date(),
+      file: 'app/about/arabic-calligraphy-history/page.tsx',
       changeFrequency: 'yearly' as const,
       priority: 0.6,
     },
   ]
 
+  const staticPageEntries = staticPages.map(({ file, ...rest }) => ({
+    ...rest,
+    lastModified: getLastModified(file),
+  }))
+
   // Blog post pages
   const blogPages = BLOG_POSTS.map(slug => ({
     url: `${baseUrl}/blog/${slug}`,
-    lastModified: new Date(),
+    lastModified: getLastModified(`app/blog/${slug}/page.tsx`),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }))
@@ -198,7 +226,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Font detail pages
   const fontPages = FONT_PAGES.map(slug => ({
     url: `${baseUrl}/fonts/${slug}`,
-    lastModified: new Date(),
+    lastModified: getLastModified(`app/fonts/${slug}/page.tsx`),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
@@ -206,7 +234,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Guides pages
   const guidesPages = GUIDES_PAGES.map(slug => ({
     url: `${baseUrl}/guides/${slug}`,
-    lastModified: new Date(),
+    lastModified: getLastModified(`app/guides/${slug}/page.tsx`),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }))
@@ -214,7 +242,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Tutorials pages
   const tutorialsPages = TUTORIALS_PAGES.map(slug => ({
     url: `${baseUrl}/tutorials/${slug}`,
-    lastModified: new Date(),
+    lastModified: getLastModified(`app/tutorials/${slug}/page.tsx`),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
@@ -222,7 +250,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Resources pages
   const resourcesPages = RESOURCES_PAGES.map(slug => ({
     url: `${baseUrl}/resources/${slug}`,
-    lastModified: new Date(),
+    lastModified: getLastModified(`app/resources/${slug}/page.tsx`),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }))
@@ -230,7 +258,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Use cases pages
   const useCasesPages = USE_CASES_PAGES.map(slug => ({
     url: `${baseUrl}/use-cases/${slug}`,
-    lastModified: new Date(),
+    lastModified: getLastModified(`app/use-cases/${slug}/page.tsx`),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
@@ -238,7 +266,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
 
   return [
-    ...staticPages,
+    ...staticPageEntries,
     ...blogPages,
     ...fontPages,
     ...guidesPages,

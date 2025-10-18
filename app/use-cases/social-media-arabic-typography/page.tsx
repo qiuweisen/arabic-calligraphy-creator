@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Arabic Fonts for Social Media - Free Instagram, TikTok & Facebook Typography',
     description: 'Create viral Arabic social media posts! Free Arabic fonts perfect for Instagram stories, TikTok videos & Facebook posts. Boost engagement instantly.',
     type: 'article',
-    url: 'https://arabic-calligraphy-creator.com/use-cases/social-media-arabic-typography',
+    url: 'https://arabic-calligraphy-generator.com/use-cases/social-media-arabic-typography',
   },
   twitter: {
     card: 'summary_large_image',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Create viral Arabic social media posts! Free Arabic fonts perfect for Instagram stories, TikTok videos & Facebook posts. Boost engagement instantly.',
   },
   alternates: {
-    canonical: 'https://arabic-calligraphy-creator.com/use-cases/social-media-arabic-typography',
+    canonical: 'https://arabic-calligraphy-generator.com/use-cases/social-media-arabic-typography',
   },
 }
 
@@ -39,24 +39,24 @@ export default function SocialMediaArabicTypographyPage() {
     "@type": "Article",
     "headline": "Social Media Arabic Typography - Instagram, Facebook, TikTok Arabic Fonts",
     "description": "Create viral social media content with stunning Arabic typography for Instagram, Facebook, TikTok, and other platforms",
-    "image": "https://arabic-calligraphy-creator.com/social-media-arabic-og.png",
+    "image": "https://arabic-calligraphy-generator.com/social-media-arabic-og.png",
     "author": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator"
+      "name": "Arabic Calligraphy Generator"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator",
+      "name": "Arabic Calligraphy Generator",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://arabic-calligraphy-creator.com/logo.png"
+        "url": "https://arabic-calligraphy-generator.com/logo.png"
       }
     },
     "datePublished": "2024-01-01",
     "dateModified": "2024-01-01",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://arabic-calligraphy-creator.com/use-cases/social-media-arabic-typography"
+      "@id": "https://arabic-calligraphy-generator.com/use-cases/social-media-arabic-typography"
     }
   }
 

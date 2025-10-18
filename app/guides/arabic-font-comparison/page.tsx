@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Arabic Font Comparison 2024 - Side-by-Side Typography Analysis',
     description: 'Compare Arabic fonts side-by-side with detailed analysis of features, readability, and use cases. Make informed decisions with our comprehensive guide.',
     type: 'article',
-    url: 'https://arabic-calligraphy-creator.com/guides/arabic-font-comparison',
+    url: 'https://arabic-calligraphy-generator.com/guides/arabic-font-comparison',
   },
   twitter: {
     card: 'summary_large_image',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Compare Arabic fonts side-by-side with detailed analysis of features, readability, and use cases.',
   },
   alternates: {
-    canonical: 'https://arabic-calligraphy-creator.com/guides/arabic-font-comparison',
+    canonical: 'https://arabic-calligraphy-generator.com/guides/arabic-font-comparison',
   },
 }
 
@@ -39,24 +39,24 @@ export default function ArabicFontComparisonPage() {
     "@type": "Article",
     "headline": "Arabic Font Comparison 2024 - Side-by-Side Typography Analysis",
     "description": "Comprehensive comparison of Arabic fonts with detailed analysis of features, readability, performance, and use cases for informed typography decisions",
-    "image": "https://arabic-calligraphy-creator.com/font-comparison-og.png",
+    "image": "https://arabic-calligraphy-generator.com/font-comparison-og.png",
     "author": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator"
+      "name": "Arabic Calligraphy Generator"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator",
+      "name": "Arabic Calligraphy Generator",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://arabic-calligraphy-creator.com/logo.png"
+        "url": "https://arabic-calligraphy-generator.com/logo.png"
       }
     },
     "datePublished": "2024-01-01",
     "dateModified": "2024-01-01",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://arabic-calligraphy-creator.com/guides/arabic-font-comparison"
+      "@id": "https://arabic-calligraphy-generator.com/guides/arabic-font-comparison"
     }
   }
 

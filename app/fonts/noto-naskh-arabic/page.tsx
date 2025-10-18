@@ -120,7 +120,7 @@ export default function NotoNaskhArabicPage() {
     "operatingSystem": "Windows, macOS, Linux, Android",
     "fileFormat": "TTF",
     "fileSize": "2MB",
-    "downloadUrl": "https://arabic-calligraphy-generator.com/fonts/noto-naskh-arabic",
+    "downloadUrl": "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/Noto_Naskh_Arabic.zip",
     "license": "https://scripts.sil.org/OFL",
     "author": {
       "@type": "Organization",
@@ -129,11 +129,29 @@ export default function NotoNaskhArabicPage() {
     }
   };
   
+  // FAQPage structured data
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQ_ITEMS.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
+  
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
       />
       <StaticNavbar />
       <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-8 md:py-12">

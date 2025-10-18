@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'History of Arabic Calligraphy - Cultural Heritage & Evolution',
     description: 'Explore the rich history and cultural significance of Arabic calligraphy from its origins to modern times. Discover the evolution of Islamic art and calligraphy styles.',
     type: 'article',
-    url: 'https://arabic-calligraphy-creator.com/about/arabic-calligraphy-history',
+    url: 'https://arabic-calligraphy-generator.com/about/arabic-calligraphy-history',
   },
   twitter: {
     card: 'summary_large_image',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Explore the rich history and cultural significance of Arabic calligraphy from its origins to modern times.',
   },
   alternates: {
-    canonical: 'https://arabic-calligraphy-creator.com/about/arabic-calligraphy-history',
+    canonical: 'https://arabic-calligraphy-generator.com/about/arabic-calligraphy-history',
   },
 }
 
@@ -39,24 +39,24 @@ export default function ArabicCalligraphyHistoryPage() {
     "@type": "Article",
     "headline": "History of Arabic Calligraphy - Cultural Heritage & Evolution",
     "description": "Comprehensive exploration of Arabic calligraphy history, from its origins to modern evolution, covering cultural significance and artistic development",
-    "image": "https://arabic-calligraphy-creator.com/history-og.png",
+    "image": "https://arabic-calligraphy-generator.com/history-og.png",
     "author": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator"
+      "name": "Arabic Calligraphy Generator"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator",
+      "name": "Arabic Calligraphy Generator",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://arabic-calligraphy-creator.com/logo.png"
+        "url": "https://arabic-calligraphy-generator.com/logo.png"
       }
     },
     "datePublished": "2024-01-01",
     "dateModified": "2024-01-01",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://arabic-calligraphy-creator.com/about/arabic-calligraphy-history"
+      "@id": "https://arabic-calligraphy-generator.com/about/arabic-calligraphy-history"
     }
   }
 

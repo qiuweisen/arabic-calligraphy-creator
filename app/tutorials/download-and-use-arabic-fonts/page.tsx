@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'How to Download and Use Arabic Fonts - Complete Installation Guide',
     description: 'Comprehensive guide on downloading, installing, and using Arabic fonts across different platforms. Learn file formats, installation methods, and troubleshooting.',
     type: 'article',
-    url: 'https://arabic-calligraphy-creator.com/tutorials/download-and-use-arabic-fonts',
+    url: 'https://arabic-calligraphy-generator.com/tutorials/download-and-use-arabic-fonts',
   },
   twitter: {
     card: 'summary_large_image',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Comprehensive guide on downloading, installing, and using Arabic fonts across different platforms. Learn file formats, installation methods, and troubleshooting.',
   },
   alternates: {
-    canonical: 'https://arabic-calligraphy-creator.com/tutorials/download-and-use-arabic-fonts',
+    canonical: 'https://arabic-calligraphy-generator.com/tutorials/download-and-use-arabic-fonts',
   },
 }
 
@@ -39,7 +39,7 @@ export default function DownloadAndUseArabicFontsPage() {
     "@type": "HowTo",
     "name": "How to Download and Use Arabic Fonts",
     "description": "Complete guide on downloading, installing, and using Arabic fonts across different platforms and applications",
-    "image": "https://arabic-calligraphy-creator.com/og-image.png",
+    "image": "https://arabic-calligraphy-generator.com/og-image.png",
     "totalTime": "PT15M",
     "estimatedCost": {
       "@type": "MonetaryAmount",
@@ -64,7 +64,7 @@ export default function DownloadAndUseArabicFontsPage() {
       {
         "@type": "HowToTool",
         "name": "Arabic Calligraphy Generator",
-        "url": "https://arabic-calligraphy-creator.com"
+        "url": "https://arabic-calligraphy-generator.com"
       }
     ],
     "step": [
@@ -72,36 +72,36 @@ export default function DownloadAndUseArabicFontsPage() {
         "@type": "HowToStep",
         "name": "Download Font Files",
         "text": "Generate and download your Arabic calligraphy as PNG or SVG files from our online generator",
-        "image": "https://arabic-calligraphy-creator.com/tutorial-download1.png"
+        "image": "https://arabic-calligraphy-generator.com/tutorial-download1.png"
       },
       {
         "@type": "HowToStep", 
         "name": "Choose File Format",
         "text": "Select the appropriate format (PNG for images, SVG for scalable graphics) based on your intended use",
-        "image": "https://arabic-calligraphy-creator.com/tutorial-download2.png"
+        "image": "https://arabic-calligraphy-generator.com/tutorial-download2.png"
       },
       {
         "@type": "HowToStep",
         "name": "Install and Use", 
         "text": "Import downloaded files into your design software or use directly in your projects",
-        "image": "https://arabic-calligraphy-creator.com/tutorial-download3.png"
+        "image": "https://arabic-calligraphy-generator.com/tutorial-download3.png"
       },
       {
         "@type": "HowToStep",
         "name": "Optimize for Use",
         "text": "Apply best practices for file management, quality optimization, and cross-platform compatibility",
-        "image": "https://arabic-calligraphy-creator.com/tutorial-download4.png"
+        "image": "https://arabic-calligraphy-generator.com/tutorial-download4.png"
       }
     ],
     "author": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator",
-      "url": "https://arabic-calligraphy-creator.com"
+      "name": "Arabic Calligraphy Generator",
+      "url": "https://arabic-calligraphy-generator.com"
     },
     "publisher": {
       "@type": "Organization", 
-      "name": "Arabic Calligraphy Creator",
-      "url": "https://arabic-calligraphy-creator.com"
+      "name": "Arabic Calligraphy Generator",
+      "url": "https://arabic-calligraphy-generator.com"
     }
   }
 

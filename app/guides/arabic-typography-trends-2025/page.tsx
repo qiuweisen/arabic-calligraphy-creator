@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: 'Arabic Typography Trends 2025 - Latest Design Innovations & Font Styles',
     description: 'Explore the latest Arabic typography trends for 2025. Discover emerging font styles, design innovations, and modern approaches to Arabic calligraphy.',
     type: 'article',
-    url: 'https://arabic-calligraphy-creator.com/guides/arabic-typography-trends-2025',
+    url: 'https://arabic-calligraphy-generator.com/guides/arabic-typography-trends-2025',
   },
   twitter: {
     card: 'summary_large_image',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: 'Explore the latest Arabic typography trends for 2025. Discover emerging font styles and design innovations.',
   },
   alternates: {
-    canonical: 'https://arabic-calligraphy-creator.com/guides/arabic-typography-trends-2025',
+    canonical: 'https://arabic-calligraphy-generator.com/guides/arabic-typography-trends-2025',
   },
 }
 
@@ -40,24 +40,24 @@ export default function ArabicTypographyTrends2025Page() {
     "@type": "Article",
     "headline": "Arabic Typography Trends 2025 - Latest Design Innovations & Font Styles",
     "description": "Comprehensive guide to Arabic typography trends for 2025, covering emerging font styles, design innovations, and modern digital applications",
-    "image": "https://arabic-calligraphy-creator.com/typography-trends-2025-og.png",
+    "image": "https://arabic-calligraphy-generator.com/typography-trends-2025-og.png",
     "author": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator"
+      "name": "Arabic Calligraphy Generator"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator",
+      "name": "Arabic Calligraphy Generator",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://arabic-calligraphy-creator.com/logo.png"
+        "url": "https://arabic-calligraphy-generator.com/logo.png"
       }
     },
     "datePublished": "2025-01-01",
     "dateModified": "2025-01-01",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://arabic-calligraphy-creator.com/guides/arabic-typography-trends-2025"
+      "@id": "https://arabic-calligraphy-generator.com/guides/arabic-typography-trends-2025"
     }
   }
 

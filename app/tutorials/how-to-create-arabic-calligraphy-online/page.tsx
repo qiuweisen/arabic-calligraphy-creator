@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: 'How to Create Arabic Calligraphy Online - Complete Tutorial Guide',
     description: 'Learn how to create beautiful Arabic calligraphy online with our comprehensive tutorial. Step-by-step guide from text input to downloading your masterpiece.',
     type: 'article',
-    url: 'https://arabic-calligraphy-creator.com/tutorials/how-to-create-arabic-calligraphy-online',
+    url: 'https://arabic-calligraphy-generator.com/tutorials/how-to-create-arabic-calligraphy-online',
   },
   twitter: {
     card: 'summary_large_image',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: 'Learn how to create beautiful Arabic calligraphy online with our comprehensive tutorial. Step-by-step guide from text input to downloading your masterpiece.',
   },
   alternates: {
-    canonical: 'https://arabic-calligraphy-creator.com/tutorials/how-to-create-arabic-calligraphy-online',
+    canonical: 'https://arabic-calligraphy-generator.com/tutorials/how-to-create-arabic-calligraphy-online',
   },
 }
 
@@ -40,7 +40,7 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
     "@type": "HowTo",
     "name": "How to Create Arabic Calligraphy Online",
     "description": "Complete tutorial guide on creating beautiful Arabic calligraphy using our online generator tool",
-    "image": "https://arabic-calligraphy-creator.com/og-image.png",
+    "image": "https://arabic-calligraphy-generator.com/og-image.png",
     "totalTime": "PT10M",
     "estimatedCost": {
       "@type": "MonetaryAmount",
@@ -65,7 +65,7 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
       {
         "@type": "HowToTool",
         "name": "Arabic Calligraphy Generator",
-        "url": "https://arabic-calligraphy-creator.com"
+        "url": "https://arabic-calligraphy-generator.com"
       }
     ],
     "step": [
@@ -73,36 +73,36 @@ export default function HowToCreateArabicCalligraphyOnlinePage() {
         "@type": "HowToStep",
         "name": "Enter Arabic Text",
         "text": "Input your desired Arabic text using the text input box, virtual keyboard, copy-paste, or select from preset examples",
-        "image": "https://arabic-calligraphy-creator.com/tutorial-step1.png"
+        "image": "https://arabic-calligraphy-generator.com/tutorial-step1.png"
       },
       {
         "@type": "HowToStep",
         "name": "Choose Arabic Font",
         "text": "Select from 17 beautiful Arabic fonts that best suit your needs, including traditional, modern, and decorative styles",
-        "image": "https://arabic-calligraphy-creator.com/tutorial-step2.png"
+        "image": "https://arabic-calligraphy-generator.com/tutorial-step2.png"
       },
       {
         "@type": "HowToStep",
         "name": "Customize Style Effects",
         "text": "Adjust font size, colors, shadows, backgrounds and other style parameters to create unique visual effects",
-        "image": "https://arabic-calligraphy-creator.com/tutorial-step3.png"
+        "image": "https://arabic-calligraphy-generator.com/tutorial-step3.png"
       },
       {
         "@type": "HowToStep",
         "name": "Download Your Artwork",
         "text": "Choose PNG or SVG format to download your Arabic calligraphy artwork with high-quality output and transparent background support",
-        "image": "https://arabic-calligraphy-creator.com/tutorial-step4.png"
+        "image": "https://arabic-calligraphy-generator.com/tutorial-step4.png"
       }
     ],
     "author": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator",
-      "url": "https://arabic-calligraphy-creator.com"
+      "name": "Arabic Calligraphy Generator",
+      "url": "https://arabic-calligraphy-generator.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator",
-      "url": "https://arabic-calligraphy-creator.com"
+      "name": "Arabic Calligraphy Generator",
+      "url": "https://arabic-calligraphy-generator.com"
     }
   }
 

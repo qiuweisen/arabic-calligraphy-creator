@@ -105,7 +105,7 @@ const FAQ_ITEMS = [
 export default function AmiriPage() {
   const fontInfo = getFontInfoBySlug('amiri');
   
-  // Structured data - 不包含虚假评分
+  // Structured data - SoftwareApplication
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -120,7 +120,7 @@ export default function AmiriPage() {
     "operatingSystem": "Windows, macOS, Linux",
     "fileFormat": "TTF",
     "fileSize": "809KB",
-    "downloadUrl": "https://arabic-calligraphy-generator.com/fonts/amiri",
+    "downloadUrl": "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/fonts/Amiri.zip",
     "license": "https://scripts.sil.org/OFL",
     "author": {
       "@type": "Person",
@@ -128,11 +128,29 @@ export default function AmiriPage() {
     }
   };
   
+  // FAQPage structured data
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQ_ITEMS.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
+  
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
       />
       <StaticNavbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-12">

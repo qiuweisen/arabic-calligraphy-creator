@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Business Logo Arabic Fonts - Professional Arabic Typography for Brands',
     description: 'Create powerful business logos with Arabic fonts. Discover professional Arabic typography for corporate branding, company logos, and business identity design.',
     type: 'article',
-    url: 'https://arabic-calligraphy-creator.com/use-cases/business-logo-arabic-fonts',
+    url: 'https://arabic-calligraphy-generator.com/use-cases/business-logo-arabic-fonts',
   },
   twitter: {
     card: 'summary_large_image',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Create powerful business logos with Arabic fonts. Discover professional Arabic typography for corporate branding, company logos, and business identity design.',
   },
   alternates: {
-    canonical: 'https://arabic-calligraphy-creator.com/use-cases/business-logo-arabic-fonts',
+    canonical: 'https://arabic-calligraphy-generator.com/use-cases/business-logo-arabic-fonts',
   },
 }
 
@@ -39,24 +39,24 @@ export default function BusinessLogoArabicFontsPage() {
     "@type": "Article",
     "headline": "Business Logo Arabic Fonts - Professional Arabic Typography for Brands",
     "description": "Create powerful business logos with Arabic fonts for corporate branding, company identity, and professional business applications",
-    "image": "https://arabic-calligraphy-creator.com/business-arabic-fonts-og.png",
+    "image": "https://arabic-calligraphy-generator.com/business-arabic-fonts-og.png",
     "author": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator"
+      "name": "Arabic Calligraphy Generator"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Arabic Calligraphy Creator",
+      "name": "Arabic Calligraphy Generator",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://arabic-calligraphy-creator.com/logo.png"
+        "url": "https://arabic-calligraphy-generator.com/logo.png"
       }
     },
     "datePublished": "2024-01-01",
     "dateModified": "2024-01-01",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://arabic-calligraphy-creator.com/use-cases/business-logo-arabic-fonts"
+      "@id": "https://arabic-calligraphy-generator.com/use-cases/business-logo-arabic-fonts"
     }
   }
 
