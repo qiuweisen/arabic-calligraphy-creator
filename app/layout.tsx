@@ -99,6 +99,8 @@ export default async function RootLayout({
   return (
     <html className={`${inter.variable}`} dir={dir} suppressHydrationWarning>
       <head>
+        {/* SEO/联盟营销验证 Meta 标签 */}
+        <meta name="impact-site-verification" content="d8ac4ffd-0e51-4512-b187-7deeef66dab3" />
         {/* CDN字体加载策略 */}
         {process.env.NODE_ENV === 'production' && (
           <>
