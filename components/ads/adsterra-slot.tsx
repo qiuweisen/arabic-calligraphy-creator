@@ -96,6 +96,7 @@ const normalizeSrc = (src: string) => {
 
 export function AdsterraSlot({ placement, className, style }: AdsterraSlotProps) {
   const containerRef = useRef<HTMLDivElement>(null)
+  const adMountRef = useRef<HTMLDivElement>(null)
   const [isLoaded, setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
   const [isInView, setIsInView] = useState(false)
@@ -145,13 +146,15 @@ export function AdsterraSlot({ placement, className, style }: AdsterraSlotProps)
   }, [])
 
   useEffect(() => {
-    const container = containerRef.current
-    if (!container || !config || !isInView) return
+    const adMount = adMountRef.current
+    if (!adMount || !config || !isInView) return
 
     // Reset states
     setIsLoaded(false)
     setHasError(false)
-    container.innerHTML = ""
+    
+    // 只清空我们控制的挂载点，不触碰 React 的容器
+    adMount.replaceChildren()
 
     try {
       const iframe = document.createElement("iframe")
@@ -194,7 +197,8 @@ export function AdsterraSlot({ placement, className, style }: AdsterraSlotProps)
         }
       }
 
-      container.appendChild(iframe)
+      // 只向我们的挂载点添加 iframe
+      adMount.appendChild(iframe)
 
       const doc = iframe.contentDocument || iframe.contentWindow?.document
       if (!doc) {
@@ -253,9 +257,17 @@ export function AdsterraSlot({ placement, className, style }: AdsterraSlotProps)
         </html>
       `
 
-      doc.open()
-      doc.write(html)
-      doc.close()
+      // 加强错误处理，确保 doc.write 不会破坏页面
+      try {
+        doc.open()
+        doc.write(html)
+        doc.close()
+      } catch (docError) {
+        console.error('Error writing to iframe document:', docError)
+        setHasError(true)
+        setIsLoaded(true)
+        return
+      }
 
       // Listen for error messages from iframe
       const handleMessage = (event: MessageEvent) => {
@@ -277,7 +289,10 @@ export function AdsterraSlot({ placement, className, style }: AdsterraSlotProps)
       window.addEventListener('message', handleMessage)
 
       return () => {
-        container.innerHTML = ""
+        // 只清空我们的挂载点，保存 iframe 引用以便安全移除
+        if (adMount && iframe && adMount.contains(iframe)) {
+          adMount.removeChild(iframe)
+        }
         window.removeEventListener('message', handleMessage)
       }
     } catch (error) {
@@ -296,15 +311,26 @@ export function AdsterraSlot({ placement, className, style }: AdsterraSlotProps)
       ref={containerRef}
       className={cn("adsterra-slot flex justify-center", className)}
       style={{
+        position: "relative", // 修复：为 absolute 定位的占位元素提供定位上下文
         width: "100%",
         maxWidth: `${config.width}px`,
         minHeight: `${config.height}px`,
         ...style,
       }}
     >
+      {/* 专门的广告挂载点，由我们完全控制，不让 React 管理其内部内容 */}
+      <div
+        ref={adMountRef}
+        style={{
+          width: "100%",
+          height: `${config.height}px`,
+          position: "relative"
+        }}
+      />
+      
       {!isInView && (
         <div 
-          className="flex items-center justify-center bg-gray-50 text-gray-400 text-sm"
+          className="absolute inset-0 flex items-center justify-center bg-gray-50 text-gray-400 text-sm"
           style={{ width: '100%', height: `${config.height}px` }}
         >
           <div className="animate-pulse">Loading ad...</div>
@@ -313,7 +339,7 @@ export function AdsterraSlot({ placement, className, style }: AdsterraSlotProps)
       
       {isInView && !isLoaded && !hasError && (
         <div 
-          className="flex items-center justify-center bg-gray-50 text-gray-400 text-sm"
+          className="absolute inset-0 flex items-center justify-center bg-gray-50 text-gray-400 text-sm"
           style={{ width: '100%', height: `${config.height}px` }}
         >
           <div className="animate-pulse">Loading ad...</div>
@@ -322,7 +348,7 @@ export function AdsterraSlot({ placement, className, style }: AdsterraSlotProps)
       
       {hasError && (
         <div 
-          className="flex items-center justify-center bg-gray-100 text-gray-500 text-xs rounded border"
+          className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500 text-xs rounded border"
           style={{ width: '100%', height: `${config.height}px` }}
         >
           Advertisement space
