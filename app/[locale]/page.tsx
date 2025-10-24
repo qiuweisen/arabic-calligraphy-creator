@@ -262,6 +262,33 @@ export default function Home() {
       />
 
       <Navbar />
+      
+      {/* 顶部横幅广告 - Google风格布局 */}
+      {(() => {
+        const isProduction = process.env.NODE_ENV === 'production'
+        const adsterraEnvSetting = process.env.NEXT_PUBLIC_ADSTERRA_ENABLED
+        const isAdsterraEnabled = adsterraEnvSetting !== undefined 
+          ? adsterraEnvSetting !== 'false' 
+          : isProduction
+        
+        return isAdsterraEnabled && (
+          <div className="border-b border-gray-100 bg-gray-50/30">
+            <div className="container mx-auto px-4 py-4">
+              <AdsterraSlot 
+                placement="leaderboard" 
+                className="hidden md:flex justify-center"
+                style={{ opacity: 0.8 }}
+              />
+              <AdsterraSlot 
+                placement="mobileBanner" 
+                className="md:hidden flex justify-center"
+                style={{ opacity: 0.8 }}
+              />
+            </div>
+          </div>
+        )
+      })()}
+      
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
         <div className="container mx-auto px-4 py-8 md:py-16">
           {/* Hero Section - 简洁直观设计 */}
@@ -314,32 +341,6 @@ export default function Home() {
               </span>
             </button>
           </header>
-
-          {/* Adsterra Leaderboard (Desktop) - 生产环境默认启用 */}
-          {(() => {
-            const isProduction = process.env.NODE_ENV === 'production'
-            const adsterraEnvSetting = process.env.NEXT_PUBLIC_ADSTERRA_ENABLED
-            const isAdsterraEnabled = adsterraEnvSetting !== undefined 
-              ? adsterraEnvSetting !== 'false' 
-              : isProduction
-            
-            return isAdsterraEnabled && (
-              <AdsterraSlot placement="leaderboard" className="hidden md:flex mb-12" />
-            )
-          })()}
-
-          {/* Adsterra Mobile Banner - 生产环境默认启用 */}
-          {(() => {
-            const isProduction = process.env.NODE_ENV === 'production'
-            const adsterraEnvSetting = process.env.NEXT_PUBLIC_ADSTERRA_ENABLED
-            const isAdsterraEnabled = adsterraEnvSetting !== undefined 
-              ? adsterraEnvSetting !== 'false' 
-              : isProduction
-            
-            return isAdsterraEnabled && (
-              <AdsterraSlot placement="mobileBanner" className="md:hidden mb-8" />
-            )
-          })()}
 
           {/* Trust Bar - Desktop Only */}
           <div className="hidden md:block bg-white border-y border-gray-200 py-8 mb-12">
@@ -930,6 +931,28 @@ export default function Home() {
           </div>
         </div>
       </main>
+      
+      {/* 页面底部广告区域 */}
+      {(() => {
+        const isProduction = process.env.NODE_ENV === 'production'
+        const adsterraEnvSetting = process.env.NEXT_PUBLIC_ADSTERRA_ENABLED
+        const isAdsterraEnabled = adsterraEnvSetting !== undefined 
+          ? adsterraEnvSetting !== 'false' 
+          : isProduction
+        
+        return isAdsterraEnabled && (
+          <div className="border-t border-gray-100 bg-gray-50/30 py-8">
+            <div className="container mx-auto px-4">
+              <AdsterraSlot 
+                placement="mobileBanner" 
+                className="flex justify-center"
+                style={{ opacity: 0.8 }}
+              />
+            </div>
+          </div>
+        )
+      })()}
+      
       <Footer />
 
       {/* 语言建议弹窗 */}

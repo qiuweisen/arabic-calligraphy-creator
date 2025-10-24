@@ -55,7 +55,7 @@ const ADSTERRA_PLACEMENTS: Record<PlacementKey, PlacementConfig> = {
   },
   mobileBanner: {
     width: 320,
-    height: 50,
+    height: 50, // 恢复为文档中的正确尺寸
     title: "Adsterra 320x50",
     scriptSrc: "//www.highperformanceformat.com/562c9f0f4e987ffd83c60aae1c7f79f1/invoke.js",
     atOptions: {
@@ -311,10 +311,13 @@ export function AdsterraSlot({ placement, className, style }: AdsterraSlotProps)
       ref={containerRef}
       className={cn("adsterra-slot flex justify-center", className)}
       style={{
-        position: "relative", // 修复：为 absolute 定位的占位元素提供定位上下文
+        position: "relative",
         width: "100%",
         maxWidth: `${config.width}px`,
         minHeight: `${config.height}px`,
+        backgroundColor: "transparent",
+        borderRadius: "8px",
+        overflow: "hidden",
         ...style,
       }}
     >
@@ -324,34 +327,50 @@ export function AdsterraSlot({ placement, className, style }: AdsterraSlotProps)
         style={{
           width: "100%",
           height: `${config.height}px`,
-          position: "relative"
+          position: "relative",
+          borderRadius: "8px",
+          overflow: "hidden",
         }}
       />
       
       {!isInView && (
         <div 
-          className="absolute inset-0 flex items-center justify-center bg-gray-50 text-gray-400 text-sm"
-          style={{ width: '100%', height: `${config.height}px` }}
+          className="absolute inset-0 flex items-center justify-center bg-gray-50/40 text-gray-400 text-xs"
+          style={{ 
+            width: '100%', 
+            height: `${config.height}px`,
+            borderRadius: "8px",
+            border: "1px solid rgba(0,0,0,0.06)"
+          }}
         >
-          <div className="animate-pulse">Loading ad...</div>
+          <div className="animate-pulse text-gray-300">•••</div>
         </div>
       )}
       
       {isInView && !isLoaded && !hasError && (
         <div 
-          className="absolute inset-0 flex items-center justify-center bg-gray-50 text-gray-400 text-sm"
-          style={{ width: '100%', height: `${config.height}px` }}
+          className="absolute inset-0 flex items-center justify-center bg-gray-50/40 text-gray-400 text-xs"
+          style={{ 
+            width: '100%', 
+            height: `${config.height}px`,
+            borderRadius: "8px",
+            border: "1px solid rgba(0,0,0,0.06)"
+          }}
         >
-          <div className="animate-pulse">Loading ad...</div>
+          <div className="animate-pulse text-gray-300">•••</div>
         </div>
       )}
       
       {hasError && (
         <div 
-          className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500 text-xs rounded border"
-          style={{ width: '100%', height: `${config.height}px` }}
+          className="absolute inset-0 flex items-center justify-center bg-transparent"
+          style={{ 
+            width: '100%', 
+            height: `${config.height}px`,
+            borderRadius: "8px"
+          }}
         >
-          Advertisement space
+          {/* 完全透明的错误状态，不显示任何内容 */}
         </div>
       )}
     </div>
