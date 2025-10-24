@@ -94,12 +94,39 @@ const normalizeSrc = (src: string) => {
   return `https://${src.replace(/^\/+/, "")}`
 }
 
+// 错误上报抽样函数 - 10% 抽样率，避免过多错误日志
+const shouldReportError = () => {
+  return Math.random() < 0.1
+}
+
+// 安全的错误上报函数
+const reportAdError = (placement: string, errorType: string, force = false) => {
+  // 生产环境 + (抽样通过 或 强制上报) + 存在上报函数
+  if (typeof window !== 'undefined' && 
+      process.env.NODE_ENV === 'production' && 
+      (force || shouldReportError()) && 
+      (window as any).trackCalligraphyEvent) {
+    
+    try {
+      (window as any).trackCalligraphyEvent('ad_error', {
+        ad_provider: 'adsterra',
+        placement: placement,
+        error_type: errorType
+      })
+    } catch (reportError) {
+      // 静默处理上报函数本身的错误，避免二次错误
+      console.warn('Failed to report ad error:', reportError)
+    }
+  }
+}
+
 export function AdsterraSlot({ placement, className, style }: AdsterraSlotProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const adMountRef = useRef<HTMLDivElement>(null)
   const [isLoaded, setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
   const [isInView, setIsInView] = useState(false)
+  const errorReportedRef = useRef(false) // 防止重复上报同一个广告位的错误
   const config = ADSTERRA_PLACEMENTS[placement]
 
   // 检查Adsterra是否启用 - 生产环境默认启用，开发环境默认禁用
@@ -174,26 +201,30 @@ export function AdsterraSlot({ placement, className, style }: AdsterraSlotProps)
         setHasError(true)
         setIsLoaded(true)
         
-        // Track ad error event
-        if (typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
-          (window as any).trackCalligraphyEvent('ad_error', {
-            ad_provider: 'adsterra',
-            placement: placement,
-            error_type: 'iframe_load_error'
-          })
+        // 使用抽样机制上报错误，避免过多无效上报
+        if (!errorReportedRef.current) {
+          reportAdError(placement, 'iframe_load_error')
+          errorReportedRef.current = true
         }
       }
 
       iframe.onload = () => {
         setIsLoaded(true)
         
-        // Track ad load event
-        if (typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
-          (window as any).trackCalligraphyEvent('ad_loaded', {
-            ad_provider: 'adsterra',
-            placement: placement,
-            ad_size: `${config.width}x${config.height}`
-          })
+        // 成功加载也使用抽样，减少上报频率
+        if (typeof window !== 'undefined' && 
+            process.env.NODE_ENV === 'production' && 
+            shouldReportError() && 
+            (window as any).trackCalligraphyEvent) {
+          try {
+            (window as any).trackCalligraphyEvent('ad_loaded', {
+              ad_provider: 'adsterra',
+              placement: placement,
+              ad_size: `${config.width}x${config.height}`
+            })
+          } catch (reportError) {
+            console.warn('Failed to report ad success:', reportError)
+          }
         }
       }
 
@@ -275,13 +306,10 @@ export function AdsterraSlot({ placement, className, style }: AdsterraSlotProps)
           setHasError(true)
           setIsLoaded(true)
           
-          // Track script error event
-          if (typeof window !== 'undefined' && (window as any).trackCalligraphyEvent) {
-            (window as any).trackCalligraphyEvent('ad_error', {
-              ad_provider: 'adsterra',
-              placement: placement,
-              error_type: 'script_load_error'
-            })
+          // 使用抽样机制上报脚本加载错误，避免同一广告位重复上报
+          if (!errorReportedRef.current) {
+            reportAdError(placement, 'script_load_error')
+            errorReportedRef.current = true
           }
         }
       }
@@ -299,6 +327,12 @@ export function AdsterraSlot({ placement, className, style }: AdsterraSlotProps)
       console.error('Error loading Adsterra ad:', error)
       setHasError(true)
       setIsLoaded(true)
+      
+      // 对于严重的加载错误，使用更高的上报概率
+      if (!errorReportedRef.current) {
+        reportAdError(placement, 'critical_load_error', shouldReportError() || Math.random() < 0.3)
+        errorReportedRef.current = true
+      }
     }
   }, [config, isInView])
 

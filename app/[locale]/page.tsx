@@ -944,8 +944,13 @@ export default function Home() {
           <div className="border-t border-gray-100 bg-gray-50/30 py-8">
             <div className="container mx-auto px-4">
               <AdsterraSlot 
+                placement="leaderboard" 
+                className="hidden md:flex justify-center"
+                style={{ opacity: 0.8 }}
+              />
+              <AdsterraSlot 
                 placement="mobileBanner" 
-                className="flex justify-center"
+                className="md:hidden flex justify-center"
                 style={{ opacity: 0.8 }}
               />
             </div>
