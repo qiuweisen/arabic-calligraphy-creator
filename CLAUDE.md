@@ -51,7 +51,6 @@ An Arabic Calligraphy Generator web application built with Next.js 15, featuring
   - `use-cases/` - Use case content
   - `layout.tsx` - Root layout
 - `components/` - React components
-  - `ads/` - Advertising components (Adsterra)
   - `ui/` - UI components (Radix UI wrappers)
 - `lib/` - Utility functions
   - `fonts/` - Font definitions and utilities
@@ -67,16 +66,8 @@ An Arabic Calligraphy Generator web application built with Next.js 15, featuring
 - Virtual Arabic keyboard
 - Responsive design
 - SEO-optimized content
-- Adsterra advertising integration (configurable)
 
 ## Configuration
-
-### Adsterra Advertising
-- Controlled via `NEXT_PUBLIC_ADSTERRA_ENABLED` environment variable
-- Ads are lazy-loaded and only rendered when in viewport
-- Error handling and sampling for ad load failures
-- Different ad placements: leaderboard, mobileBanner, mediumRectangle, stickyContainer
-- Files: `components/ads/adsterra-slot.tsx`, `components/ads/adsterra-conditional.tsx`
 
 ### Cloudflare Deployment
 - Configured in `wrangler.jsonc` (production) and `wrangler.staging.jsonc` (staging)
@@ -91,19 +82,15 @@ An Arabic Calligraphy Generator web application built with Next.js 15, featuring
 ## Important Files
 - `app/[locale]/page.tsx` - Main calligraphy generator page
 - `lib/fonts/index.ts` - Font registry and utilities
-- `components/ads/adsterra-slot.tsx` - Adsterra ad component with lazy loading
 - `wrangler.jsonc` - Production Cloudflare deployment config
 - `i18n.ts` - Internationalization configuration (supported languages, directions)
 - `tailwind.config.ts` - Tailwind CSS configuration with RTL support
 
 ## Development Notes
 - The app uses internationalization with path-based locales
-- Ads are disabled by default in development
 - Cloudflare deployment uses OpenNext for Workers compatibility
 - Fonts are imported as Next.js Fonts or loaded via CDN
 - Critical CSS is optimized for performance
 
 ## Git Workflow
-- Current branch: adsterra_1024 (working on Adsterra integration)
 - Main branch: master
-- Recent focus: Adsterra ad placement and optimization

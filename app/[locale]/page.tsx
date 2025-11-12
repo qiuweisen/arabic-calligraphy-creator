@@ -11,7 +11,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Check, Download, Palette, Type, ChevronRight, Laptop, Smartphone, Tablet, ArrowRight, Info, Edit3, Settings, Share2 } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { AdsterraSlot } from "@/components/ads/adsterra-slot"
 import { getFeaturedFonts, FONT_CATEGORIES } from "@/lib/content-links"
 
 import { CalligraphyGenerator } from "@/components/calligraphy-generator"
@@ -315,31 +314,6 @@ export default function Home() {
             </button>
           </header>
 
-          {/* Adsterra Leaderboard (Desktop) - 生产环境默认启用 */}
-          {(() => {
-            const isProduction = process.env.NODE_ENV === 'production'
-            const adsterraEnvSetting = process.env.NEXT_PUBLIC_ADSTERRA_ENABLED
-            const isAdsterraEnabled = adsterraEnvSetting !== undefined 
-              ? adsterraEnvSetting !== 'false' 
-              : isProduction
-            
-            return isAdsterraEnabled && (
-              <AdsterraSlot placement="leaderboard" className="hidden md:flex mb-12" />
-            )
-          })()}
-
-          {/* Adsterra Mobile Banner - 生产环境默认启用 */}
-          {(() => {
-            const isProduction = process.env.NODE_ENV === 'production'
-            const adsterraEnvSetting = process.env.NEXT_PUBLIC_ADSTERRA_ENABLED
-            const isAdsterraEnabled = adsterraEnvSetting !== undefined 
-              ? adsterraEnvSetting !== 'false' 
-              : isProduction
-            
-            return isAdsterraEnabled && (
-              <AdsterraSlot placement="mobileBanner" className="md:hidden mb-8" />
-            )
-          })()}
 
           {/* Trust Bar - Desktop Only */}
           <div className="hidden md:block bg-white border-y border-gray-200 py-8 mb-12">
@@ -442,18 +416,6 @@ export default function Home() {
               onFontChange={handleGeneratorFontChange}
             />
 
-            {/* Adsterra Medium Rectangle - 生产环境默认启用 */}
-            {(() => {
-              const isProduction = process.env.NODE_ENV === 'production'
-              const adsterraEnvSetting = process.env.NEXT_PUBLIC_ADSTERRA_ENABLED
-              const isAdsterraEnabled = adsterraEnvSetting !== undefined 
-                ? adsterraEnvSetting !== 'false' 
-                : isProduction
-              
-              return isAdsterraEnabled && (
-                <AdsterraSlot placement="mediumRectangle" className="mt-10" />
-              )
-            })()}
           </div>
 
           {/* How to Use - Visual Guide */}

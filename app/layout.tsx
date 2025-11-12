@@ -109,24 +109,6 @@ export default async function RootLayout({
           </>
         )}
 
-        {/* Adsterra DNS预连接优化 - 生产环境默认启用 */}
-        {(() => {
-          const isProduction = process.env.NODE_ENV === 'production'
-          const adsterraEnvSetting = process.env.NEXT_PUBLIC_ADSTERRA_ENABLED
-          const isAdsterraEnabled = adsterraEnvSetting !== undefined 
-            ? adsterraEnvSetting !== 'false' 
-            : isProduction
-          
-          return isAdsterraEnabled && (
-            <>
-              <link rel="preconnect" href="https://www.highperformanceformat.com" />
-              <link rel="dns-prefetch" href="https://www.highperformanceformat.com" />
-              <link rel="preconnect" href="https://pl27914488.effectivegatecpm.com" />
-              <link rel="dns-prefetch" href="https://pl27914488.effectivegatecpm.com" />
-            </>
-          )
-        })()}
-        
         {/* 加载CDN阿拉伯字体CSS */}
         <link 
           rel="stylesheet" 
