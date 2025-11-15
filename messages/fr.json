@@ -21,6 +21,10 @@
 		"yes": "Oui",
 		"no": "Non"
 	},
+	"ads": {
+		"sponsored": "Sponsorisé",
+		"supportUs": "Soutenez-nous"
+	},
 	"navigation": {
 		"generator": "Générateur",
 		"arabicFonts": "Polices Arabes",

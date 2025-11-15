@@ -19,6 +19,10 @@
 		"yes": "ہاں",
 		"no": "نہیں"
 	},
+	"ads": {
+		"sponsored": "Sponsored",
+		"supportUs": "Support Us"
+	},
 	"navigation": {
 		"generator": "جنریٹر",
 		"arabicFonts": "عربی فونٹس",

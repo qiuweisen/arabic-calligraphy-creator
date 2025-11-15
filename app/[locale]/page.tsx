@@ -12,8 +12,8 @@ import { Check, Download, Palette, Type, ChevronRight, Laptop, Smartphone, Table
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { getFeaturedFonts, FONT_CATEGORIES } from "@/lib/content-links"
-
 import { CalligraphyGenerator } from "@/components/calligraphy-generator"
+import { trackLandingFromURL } from "@/lib/analytics"
 
 // Dynamic import for CalligraphyGenerator to avoid hydration issues
 const DynamicCalligraphyGenerator = dynamic(
@@ -76,6 +76,10 @@ export default function Home() {
   // Handle URL parameter for font selection
   useEffect(() => {
     setIsClient(true)
+    
+    // Track landing page conversion from URL parameters
+    trackLandingFromURL()
+    
     if (typeof window !== 'undefined') {
       const urlParams = new URLSearchParams(window.location.search)
       const fontParam = urlParams.get('font')

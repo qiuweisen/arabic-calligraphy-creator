@@ -19,6 +19,10 @@
 		"yes": "نعم",
 		"no": "لا"
 	},
+	"ads": {
+		"sponsored": "برعاية",
+		"supportUs": "ادعمنا"
+	},
 	"navigation": {
 		"generator": "المولد",
 		"arabicFonts": "الخطوط العربية",
