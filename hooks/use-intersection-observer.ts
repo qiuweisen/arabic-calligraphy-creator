@@ -7,7 +7,7 @@ interface ObserverOptions extends IntersectionObserverInit {
 }
 
 export function useIntersectionObserver(
-  ref: RefObject<Element>,
+  ref: RefObject<Element | null>,
   options: ObserverOptions = {}
 ): boolean {
   const { once = true, ...observerOptions } = options
