@@ -21,6 +21,10 @@
 		"yes": "Yes",
 		"no": "No"
 	},
+	"ads": {
+		"sponsored": "Sponsored",
+		"supportUs": "Support Us"
+	},
 	"navigation": {
 		"generator": "Generator",
 		"arabicFonts": "Arabic Fonts",
@@ -89,14 +93,14 @@
 		"title": "Arabic Calligraphy Generator",
 		"subtitle": "Instantly create beautiful Arabic calligraphy online. Choose from 13+ free premium fonts with our powerful generator.",
 		"description": "Create Stunning Arabic Script Art Instantly",
-		"intro": "Transform any Arabic text into beautiful calligraphy with our free online Arabic calligraphy generator. This powerful Arabic text generator features 13+ premium Arabic fonts online. Create stunning designs instantly - no registration required!",
+		"intro": "Transform any Arabic text into beautiful calligraphy with our free online Arabic calligraphy generator. This powerful AI-assisted Arabic text generator features 13+ premium Arabic fonts online. Create stunning designs instantly - no software download or registration required!",
 		"hero": {
 			"badge": "#1 Free Arabic Calligraphy Generator Online",
-			"subtitle": "Create Beautiful Designs",
-			"description": "Transform your Arabic text into stunning calligraphy with our free online Arabic calligraphy font generator. Create professional Arabic calligraphy designs, logos, and text art instantly with premium fonts and customization options.",
+			"subtitle": "Create Online Instantly with AI-Powered Design",
+			"description": "Transform your Arabic text into stunning calligraphy with our free online Arabic calligraphy font generator. Create professional Arabic calligraphy designs, logos, and text art instantly with premium fonts and AI-powered customization options - no software download or registration required!",
 			"value1": "100% Free Arabic Calligraphy Generator",
-			"value2": "No Registration Required", 
-			"value3": "Instant Download",
+			"value2": "No Registration or Download Required", 
+			"value3": "AI-Assisted Design & Instant Export",
 			"cta": "Start Creating Arabic Calligraphy Now"
 		},
 		"socialProof": {
@@ -172,7 +176,7 @@
 			},
 			"step3": {
 				"title": "Export & Share",
-				"description": "Download your Arabic calligraphy in high-quality PNG or SVG format, or share directly on social media platforms."
+				"description": "Download high-quality PNG/SVG instantly, or share online directly on social media platforms."
 			},
 			"cta": {
 				"title": "Ready to Create Stunning Arabic Calligraphy?",

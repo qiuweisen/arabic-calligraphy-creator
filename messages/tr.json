@@ -20,6 +20,10 @@
 		"yes": "Evet",
 		"no": "Hayır"
 	},
+	"ads": {
+		"sponsored": "Sponsored",
+		"supportUs": "Support Us"
+	},
 	"navigation": {
 		"generator": "Jeneratör",
 		"arabicFonts": "Arapça Yazı Tipleri",

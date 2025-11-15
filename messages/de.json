@@ -21,6 +21,10 @@
 		"yes": "Ja",
 		"no": "Nein"
 	},
+	"ads": {
+		"sponsored": "Gesponsert",
+		"supportUs": "Unterstützen"
+	},
 	"navigation": {
 		"generator": "Generator",
 		"arabicFonts": "Arabische Schriftarten",
