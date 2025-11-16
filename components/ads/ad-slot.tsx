@@ -33,6 +33,7 @@ export function AdSlot({
     threshold: 0.25,
     rootMargin: "100px 0px",
   })
+  const isProd = process.env.NODE_ENV === "production"
 
   const shouldRenderForDevice = useCallback(() => {
     if (typeof window === "undefined") return true
@@ -46,13 +47,20 @@ export function AdSlot({
     if (!isVisible || adPushed || !shouldRenderForDevice()) return
 
     const timer = setTimeout(() => {
+      if (!isProd || typeof window === "undefined") {
+        setAdPushed(true)
+        return
+      }
+
       try {
         if (!(window as any).adsbygoogle) {
-          throw new Error("AdSense script not loaded")
+          console.warn("AdSense script not loaded yet")
+          return
         }
 
         ;(window as any).adsbygoogle.push({})
         setAdLoaded(true)
+        setAdPushed(true)
         trackAdSlotView({
           slotId,
           format,
@@ -61,13 +69,11 @@ export function AdSlot({
         })
       } catch (error) {
         console.error("AdSlot load error:", error)
-      } finally {
-        setAdPushed(true)
       }
-    }, 100)
+    }, 150)
 
     return () => clearTimeout(timer)
-  }, [adPushed, format, isVisible, shouldRenderForDevice, slotId])
+  }, [adPushed, format, isVisible, isProd, shouldRenderForDevice, slotId])
 
   if (!shouldRenderForDevice()) {
     return null

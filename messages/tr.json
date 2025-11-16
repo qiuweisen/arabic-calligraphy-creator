@@ -1,784 +1,823 @@
 {
-	"metadata": {
-		"title": "Arapça Hat Sanatı Jeneratörü - Ücretsiz Çevrimiçi Araç",
-		"description": "🎨 ÜCRETSİZ Arapça Hat Sanatı Jeneratörü | Anında göz alıcı İslami sanat eserleri yaratın! 13+ yazı tipi, anında PNG/SVG indirme. Kayıt gerekmez ✨",
-		"description_desktop": "Profesyonel Arapça Hat Sanatı Jeneratörü - 13+ Premium Yazı Tipiyle İslami Sanat Yaratın. Tasarımcılar, öğrenciler ve işletmeler için ücretsiz online araç. Anında PNG/SVG indirme.",
-		"keywords": "Arapça hat sanatı jeneratörü, Arapça yazı tipleri, İslami hat sanatı, Arapça metin oluşturucu, ücretsiz Arapça yazı tipleri, online hat sanatı yapıcı"
-	},
-	"common": {
-		"loading": "Yükleniyor...",
-		"error": "Hata",
-		"close": "Kapat",
-		"continue": "Devam Et",
-		"cancel": "İptal",
-		"confirm": "Onayla",
-		"save": "Kaydet",
-		"download": "İndir",
-		"share": "Paylaş",
-		"copy": "Kopyala",
-		"copied": "Kopyalandı!",
-		"yes": "Evet",
-		"no": "Hayır"
-	},
-	"ads": {
-		"sponsored": "Sponsored",
-		"supportUs": "Support Us"
-	},
-	"navigation": {
-		"generator": "Jeneratör",
-		"arabicFonts": "Arapça Yazı Tipleri",
-		"learningGuides": "Öğrenim Rehberleri",
-		"howToTutorials": "Uygulama Rehberleri",
-		"freeResources": "Ücretsiz Kaynaklar",
-		"useCases": "Kullanım Alanları",
-		"blog": "Blog",
-		"faq": "SSS",
-		"contact": "İletişim",
-		"dropdown": {
-			"completeBeginner": "Yeni Başlayanlar İçin Kapsamlı Rehber",
-			"fontComparison": "Yazı Tipi Karşılaştırma Rehberi",
-			"bestFonts2025": "2025'in En İyi Arapça Yazı Tipleri",
-			"typographyTrends": "Tipografi Trendleri 2025",
-			"createOnline": "Online Hat Sanatı Oluşturma",
-			"fontSelection": "Yazı Tipi Seçim Rehberi",
-			"designTips": "Tasarım İpuçları",
-			"downloadFonts": "Yazı Tiplerini İndirme ve Kullanma",
-			"freeArabicFonts": "Ücretsiz Arapça Yazı Tipleri"
-		}
-	},
-	"languageSwitcher": {
-		"selectLanguage": "Dil Seçin",
-		"currentLanguage": "Mevcut Dil"
-	},
-	"languagePrompt": {
-		"title": "Hoş geldiniz! Sitemizi sizin dilinizde de sunuyoruz",
-		"subtitle": "{language} diline geçmek ister misiniz?",
-		"useLanguage": "{language} kullan",
-		"continueEnglish": "İngilizce devam et",
-		"dontShowAgain": "Tekrar gösterme"
-	},
-	"footer": {
-		"description": "Ücretsiz online Arapça hat sanatı jeneratörümüzle birbirinden güzel Arapça hat eserleri yaratın.",
-		"arabicCalligraphy": "Arapça Hat Sanatı",
-		"generator": "Arapça Hat Sanatı Jeneratörü",
-		"features": "Jeneratör Özellikleri",
-		"blog": "Hat Sanatı Blogu",
-		"faq": "Jeneratör SSS",
-		"contact": "Bize Ulaşın",
-		"fonts": "Arapça Yazı Tipleri",
-		"fontLibrary": "Yazı Tipi Kütüphanesi",
-		"fontComparison": "Yazı Tipi Karşılaştırması",
-		"fontDownloads": "Yazı Tipi İndirmeleri",
-		"learning": "Öğrenim Kaynakları",
-		"beginnerGuide": "Yeni Başlayanlar Rehberi",
-		"tutorials": "Rehberler",
-		"designTips": "Tasarım İpuçları",
-		"company": "Şirket",
-		"about": "Hakkımızda",
-		"privacy": "Gizlilik Politikası",
-		"terms": "Hizmet Şartları",
-		"copyright": "© 2010-{year} Arapça Hat Sanatı Jeneratörü. Tüm hakları saklıdır.",
-		"popular": {
-			"title": "Popüler",
-			"amiriFont": "Amiri Yazı Tipi",
-			"cairoFont": "Cairo Yazı Tipi",
-			"weddingCalligraphy": "Düğün Hat Sanatı",
-			"businessLogos": "İşletme Logoları",
-			"privacyPolicy": "Gizlilik Politikası",
-			"termsOfService": "Hizmet Şartları"
-		}
-	},
-	"homepage": {
-		"title": "Arapça Hat Sanatı Jeneratörü",
-		"subtitle": "Güzel Tasarımlar Yaratın",
-		"description": "Anında Göz Alıcı Arapça Yazı Sanatı Oluşturun",
-		"intro": "Ücretsiz online Arapça hat sanatı jeneratörümüzle herhangi bir Arapça metni harika bir kaligrafiye dönüştürün. Bu güçlü Arapça metin oluşturucu, 13'ten fazla premium online Arapça yazı tipine sahiptir. Kayıt olmadan anında çarpıcı tasarımlar yaratın!",
-		"hero": {
-			"badge": "#1 Ücretsiz Arapça Hat Sanatı Jeneratörü Online",
-			"subtitle": "Güzel Tasarımlar Oluşturun",
-			"description": "Ücretsiz online Arapça hat sanatı yazı tipi jeneratörümüzle Arapça metninizi çarpıcı kaligrafiye dönüştürün. Premium yazı tipleri ve özelleştirme seçenekleriyle anında profesyonel Arapça hat sanatı tasarımları, logolar ve metin sanatı oluşturun.",
-			"value1": "%100 Ücretsiz Arapça Hat Sanatı Jeneratörü",
-			"value2": "Kayıt Gerekmez",
-			"value3": "Anında İndirme",
-			"cta": "Şimdi Arapça Hat Sanatı Oluşturmaya Başlayın"
-		},
-		"socialProof": {
-			"designsCreated": "100.000+ Tasarım Oluşturuldu",
-			"premiumFonts": "13+ Premium Yazı Tipi",
-			"freeForever": "Sonsuza Dek Ücretsiz"
-		},
-		"features": {
-			"title": "Profesyonel Arapça Hat Sanatı Özellikleri",
-			"fontLibrary": {
-				"title": "Geniş Arapça Yazı Tipi Kütüphanesi",
-				"description": "Ücretsiz Arapça hat sanatı oluşturucumuz, geleneksel yazılardan (Kufi, Nesih, Divani) modern tipografiye kadar 13'ten fazla premium online Arapça yazı tipi sunar. Bu kapsamlı Arapça metin jeneratörü, kolay yazı tipi seçimi için görsel önizleme içerir.",
-				"items": [
-					"Geleneksel hat sanatı stilleri",
-					"Modern Arapça yazı tipleri",
-					"Dekoratif ve gösterişli seçenekler"
-				]
-			},
-			"customization": {
-				"title": "Gelişmiş Özelleştirme Seçenekleri",
-				"description": "Bu online ve ücretsiz Arapça hat sanatı jeneratörü, gradyan metin efektleri, özel arka planlar, gölgeler ve mükemmel hat sanatı sonuçları için hassas tipografi kontrolleri dahil olmak üzere profesyonel düzeyde stil seçenekleri sunar.",
-				"items": [
-					"Gradyan metin efektleri",
-					"Özel arka plan desenleri",
-					"Gölge ve parlama efektleri"
-				]
-			},
-			"export": {
-				"title": "Profesyonel Dışa Aktarma Seçenekleri",
-				"description": "Arapça hat eserinizi birden fazla yüksek kaliteli formatta indirin. Arapça metin jeneratörümüz, web kullanımı için PNG ve baskı uygulamaları için SVG'yi destekleyerek tasarımlarınızın her boyutta mükemmel görünmesini sağlar.",
-				"items": [
-					"Yüksek çözünürlüklü PNG çıktısı",
-					"Ölçeklenebilir SVG formatı",
-					"Baskıya hazır kalite"
-				]
-			},
-			"preview": {
-				"title": "Gerçek Zamanlı Arap Kaligrafi Önizlemesi",
-				"description": "Yazı tiplerini, renkleri ve efektleri özelleştirirken canlı önizleme ile Arap kaligrafi değişikliklerinizi anında görün."
-			},
-			"mobile": {
-				"title": "Mobil Uyumlu Arap Üretici",
-				"description": "Herhangi bir cihazda Arap kaligrafi oluşturun - masaüstü, tablet veya akıllı telefon tam duyarlı işlevsellik ile."
-			},
-			"free": {
-				"title": "%100 Ücretsiz Arap Kaligrafi Üretici",
-				"description": "Kayıt yok, filigran yok, gizli maliyet yok - sonsuza kadar tamamen ücretsiz Arap kaligrafi üretici."
-			},
-			"sharing": {
-				"title": "Kolay Arap Kaligrafi Paylaşımı",
-				"description": "Arap kaligrafi tasarımlarınızı doğrudan sosyal medya platformlarında paylaşın veya anında panoya kopyalayın."
-			},
-			"privacy": {
-				"title": "Gizlilik Korumalı Arap Üretici",
-				"description": "Arap metniniz tamamen özel kalır - içeriğinizi saklamıyoruz veya kişisel bilgi gerektirmiyoruz."
-			},
-			"description": "Ücretsiz Arap kaligrafi yazı tipi üreticimiz, profesyonel kalitede sonuçlarla çarpıcı Arap kaligrafi tasarımları, logolar ve metin sanatı oluşturmak için ihtiyacınız olan her şeyi sağlar."
-		},
-		"quickStart": {
-			"title": "Hızlı Başlangıç:",
-			"steps": "Arapça metin yaz → Yazı tipi seç → Anında indir"
-		},
-		"howToUse": {
-			"title": "Arapça Hat Sanatı Nasıl Oluşturulur",
-			"step1": {
-				"title": "Metninizi Girin",
-				"description": "Arapça metninizi yukarıdaki giriş alanına yazın veya yapıştırın"
-			},
-			"step2": {
-				"title": "Stilinizi Seçin",
-				"description": "13'ten fazla güzel Arapça yazı tipi arasından seçim yapın ve renkleri özelleştirin"
-			},
-			"step3": {
-				"title": "İndirin ve Paylaşın",
-				"description": "Hat eserinizi PNG veya SVG olarak indirin ve istediğiniz yerde paylaşın"
-			},
-			"cta": {
-				"title": "Çarpıcı Arap Kaligrafi Oluşturmaya Hazır mısınız?",
-				"description": "Tasarım ihtiyaçları için Arap kaligrafi üreticimize güvenen binlerce kullanıcıya katılın",
-				"button": "Şimdi Arap Kaligrafi Oluşturmaya Başlayın"
-			},
-			"description": "Ücretsiz çevrimiçi Arap kaligrafi yazı tipi üreticimizle üç kolay adımda güzel Arap kaligrafi tasarımları oluşturun. Deneyim gerekmez!"
-		},
-		"useCases": {
-			"title": "Her Durum İçin Mükemmel",
-			"wedding": {
-				"title": "Düğün Davetiyeleri",
-				"description": "Düğün kartları ve davetiyeler için zarif Arapça hat sanatı eserleri yaratın"
-			},
-			"business": {
-				"title": "Kurumsal Markalaşma",
-				"description": "Arapça tipografi ile profesyonel logolar ve marka materyalleri tasarlayın"
-			},
-			"social": {
-				"title": "Sosyal Medya",
-				"description": "Instagram, Facebook ve daha fazlası için güzel Arapça alıntılar ve gönderiler oluşturun"
-			},
-			"religious": {
-				"title": "Dini Sanat",
-				"description": "Kuran ayetleri ve dini metinler için çarpıcı İslami hat sanatı eserleri yaratın"
-			}
-		},
-		"faq": {
-			"title": "Arapça Hat Sanatı Jeneratörü SSS",
-			"q1": {
-				"question": "Bu Arapça hat sanatı jeneratörü tamamen ücretsiz mi?",
-				"answer": "Evet! Arapça hat sanatı jeneratörümüz %100 ücretsizdir ve hiçbir gizli maliyet, abonelik veya kayıt gerektirmez. 13'ten fazla premium yazı tipi, özelleştirme özellikleri ve dışa aktarma seçenekleri ücretsiz olarak dahildir."
-			},
-			"q2": {
-				"question": "Hangi dosya formatlarını indirebilirim?",
-				"answer": "Arapça hat eserinizi iki formatta indirebilirsiniz: PNG (fotoğraflar ve sosyal medya için) ve SVG (baskı ve ölçeklenebilir grafikler için). Her iki format da yüksek kaliteyi korur."
-			},
-			"q3": {
-				"question": "Kaç tane Arapça yazı tipi mevcut?",
-				"answer": "Nesih ve Sülüs gibi geleneksel stillerin yanı sıra Kufi gibi modern yazı tipleri ve dekoratif seçenekler de dahil olmak üzere özenle seçilmiş 13'ten fazla Arapça yazı tipi sunuyoruz. Her yazı tipi, en iyi okunabilirlik için profesyonelce tasarlanmıştır."
-			},
-			"q4": {
-				"question": "Oluşturulan hat sanatını ticari olarak kullanabilir miyim?",
-				"answer": "Evet, oluşturduğunuz Arapça hat sanatını hem kişisel hem de ticari amaçlarla kullanabilirsiniz. Kullandığımız yazı tipleri ya açık kaynaklıdır ya da ticari kullanım için uygun şekilde lisanslanmıştır."
-			},
-			"q5": {
-				"question": "Jeneratör mobil cihazlarda çalışıyor mu?",
-				"answer": "Kesinlikle! Arapça hat sanatı jeneratörümüz tamamen mobil uyumludur ve akıllı telefonlarda, tabletlerde ve masaüstü bilgisayarlarda sorunsuz çalışır. Arayüz, en iyi deneyim için ekran boyutunuza uyum sağlar."
-			}
-		},
-		"cta": {
-			"title": "En İyi Ücretsiz Online Arapça Hat Sanatı Jeneratör Uygulaması",
-			"description": "Mevcut en kapsamlı online ve ücretsiz Arapça hat sanatı jeneratör aracını deneyimleyin. Arapça metin oluşturucumuzla çarpıcı Arapça tasarımlar yaratan binlerce kullanıcıya katılın. Şimdi başlayın - tamamen ücretsiz!",
-			"button": "Şimdi Oluşturmaya Başla",
-			"features": {
-				"noRegistration": "Kayıt Gerekmez",
-				"free": "%100 Ücretsiz",
-				"instantDownload": "Anında İndirme"
-			}
-		},
-		"testimonials": {
-			"title": "Kullanıcılarımız Ne Diyor",
-			"description": "Ücretsiz oluşturucumuzla çarpıcı Arapça hat sanatı tasarımları yaratmış binlerce memnun kullanıcıya katılın.",
-			"reviews": [
-				{
-					"name": "Sarah Ahmed",
-					"title": "Grafik Tasarımcı ve Yaratıcı Stüdyo",
-					"content": "Bu Arapça hat sanatı oluşturucu tasarım iş akışımda devrim yarattı. Yazı tipi kalitesi olağanüstü ve özelleştirme seçenekleri profesyonel projeler için mükemmel. Müşterilerim otantik Arapça tipografiyi çok seviyorlar!",
-					"date": "Aralık 2024"
-				},
-				{
-					"name": "Mohammed Ali",
-					"title": "Arapça Çalışmaları Öğrencisi",
-					"content": "Arapça öğrenen bir öğrenci olarak, bu araç farklı hat sanatı stillerini anlamama yardımcı oluyor. İnanılmaz derecede kullanıcı dostu ve yazı tipi çeşitliliği onu eğitim projeleri ve sunumlar için mükemmel yapıyor.",
-					"date": "Kasım 2024"
-				},
-				{
-					"name": "Fatima Hassan",
-					"title": "Restoran Sahibi",
-					"content": "Restoranımın tüm Arapça tabelaları ve menüleri için bu oluşturucuyu kullanıyorum. Profesyonel kalite ve kullanım kolaylığı tasarım maliyetlerinde yüzlerce dolar tasarruf ettirdi. Herhangi bir işletme için şiddetle tavsiye ederim!",
-					"date": "Kasım 2024"
-				},
-				{
-					"name": "Ahmad Khalil",
-					"title": "Düğün Planlayıcısı",
-					"content": "Güzel düğün davetiyeleri ve dekoratif unsurlar oluşturmak için mükemmel. Arapça hat sanatı stilleri otantik ve zarif. En iyi yanı? Su damgası olmadan tamamen ücretsiz!",
-					"date": "Ekim 2024"
-				},
-				{
-					"name": "Dr. Amina Rashid",
-					"title": "Arapça Dil Öğretmeni",
-					"content": "Eğitim materyalleri ve sınıf görüntüleri oluşturmak için bu aracı düzenli olarak kullanıyorum. Öğrencilerim isimlerini güzel Arapça hat sanatında görmeyi seviyorlar. Öğrenmeyi daha ilgi çekici ve eğlenceli hale getiriyor!",
-					"date": "Ekim 2024"
-				},
-				{
-					"name": "Omar Zaid",
-					"title": "Serbest Tasarımcı",
-					"content": "Bu oluşturucu tasarım araç setimin temel bir parçası haline geldi. Dışa aktarma kalitesi mükemmel ve müşteriler her zaman otantik Arapça hat sanatından etkileniyorlar. İşimi önemli ölçüde artırdı!",
-					"date": "Eylül 2024"
-				}
-			]
-		},
-		"technicalFeatures": {
-			"title": "Gelişmiş Arapça Tipografi Özellikleri",
-			"fontCollection": {
-				"title": "Yazı Tipi Koleksiyonu ve Stilleri",
-				"traditional": "Geleneksel Yazılar: Amiri (Nesih), Scheherazade, Lateef, Markazi Text",
-				"decorative": "Dekoratif Stiller: Aref Ruqaa (Divani), Jomhuria, Rakkas, Lemonada",
-				"modern": "Modern Tipografi: Cairo, Harmattan, Mada, Tajawal, El Messiri",
-				"specialized": "Özel: Reem Kufi (Geometrik), Mirza (Nestalik), Marhey (Gösterişli)",
-				"note": "Tüm yazı tipleri, otantik hat sanatı için sağdan sola (RTL) metin yönünü, Arapça harekeleri (Harakat) ve Kashida uzatmasını destekler."
-			},
-			"export": {
-				"title": "Dışa Aktarma ve Uyumluluk",
-				"formats": "Çıktı Formatları: PNG (şeffaf arka plan), SVG (ölçeklenebilir vektör)",
-				"quality": "Kalite Seçenekleri: Baskı ve dijital kullanıma uygun yüksek çözünürlüklü çıktı",
-				"browsers": "Tarayıcı Desteği: Chrome, Firefox, Safari, Edge - tüm modern tarayıcılar",
-				"devices": "Cihaz Uyumluluğu: Masaüstü, tablet ve mobil uyumlu tasarım",
-				"note": "Ticari kullanım için ücretsizdir. Filigran yok, kayıt gerekmez. Gizlilik için tamamen tarayıcınızda çalışır."
-			}
-		},
-		"professionalUse": {
-			"title": "Profesyonel Arapça Hat Sanatı Uygulamaları",
-			"business": {
-				"title": "İşletme ve Markalaşma",
-				"logo": {
-					"title": "Kurumsal Logolar ve Kimlik",
-					"description": "Geleneksel veya modern hat sanatı stilleriyle ayırt edici Arapça marka isimleri oluşturun"
-				},
-				"restaurant": {
-					"title": "Restoran ve Konaklama",
-					"description": "Otantik Arapça tabelalar, menüler ve tanıtım materyalleri tasarlayın"
-				},
-				"marketing": {
-					"title": "Pazarlama Materyalleri",
-					"description": "Broşürler, reklamlar ve dijital kampanyalar için profesyonel Arapça tipografi"
-				}
-			},
-			"personal": {
-				"title": "Kişisel ve Kültürel",
-				"wedding": {
-					"title": "Düğün ve Etkinlik Davetiyeleri",
-					"description": "Özel günler ve kutlamalar için zarif Arapça hat sanatı"
-				},
-				"islamic": {
-					"title": "İslami Sanat ve Dekorasyon",
-					"description": "Ev dekorasyonu için güzel Kuran ayetleri, Hadisler ve İslami ifadeler"
-				},
-				"social": {
-					"title": "Sosyal Medya İçeriği",
-					"description": "Instagram, Facebook ve diğer platformlar için göz alıcı Arapça gönderiler"
-				}
-			}
-		},
-		"detailedFaq": {
-			"title": "Arapça Hat Sanatı Jeneratörü SSS",
-			"viewAll": "Tüm SSS'leri Görüntüle",
-			"questions": [
-				{
-					"question": "Bu Arapça hat sanatı jeneratörü tamamen ücretsiz mi?",
-					"answer": "Evet! Arapça hat sanatı jeneratörümüz %100 ücretsizdir ve hiçbir gizli maliyet, abonelik veya kayıt gerektirmez. 13'ten fazla premium yazı tipi, özelleştirme özellikleri ve dışa aktarma seçenekleri ücretsiz olarak dahildir."
-				},
-				{
-					"question": "Hangi Arapça yazı tipleri ve hat sanatı stilleri mevcut?",
-					"answer": "Geleneksel hat sanatı stillerini (Kufi, Nesih, Divani, Nestalik) ve modern Arapça tipografisini kapsayan 13'ten fazla özenle seçilmiş Arapça yazı tipi sunuyoruz. Her yazı tipi sağdan sola metin yönünü, Arapça harekeleri (Harakat) ve otantik Arapça yazı oluşturmayı destekler."
-				},
-				{
-					"question": "Hangi dosya formatlarını ve hangi kalitede indirebilirim?",
-					"answer": "Arapça hat eserinizi yüksek çözünürlüklü PNG dosyaları (şeffaf arka planlı) veya ölçeklenebilir SVG vektör dosyaları olarak dışa aktarabilirsiniz. Her iki format da profesyonel baskı, dijital medya ve ticari uygulamalar için uygundur."
-				},
-				{
-					"question": "Oluşturulan hat sanatını ticari projeler için kullanabilir miyim?",
-					"answer": "Evet, oluşturduğunuz Arapça hat sanatı tasarımlarını herhangi bir kısıtlama olmaksızın hem kişisel hem de ticari projeler için kullanabilirsiniz. Buna işletme logoları, pazarlama materyalleri, düğün davetiyeleri ve diğer tüm ticari uygulamalar dahildir."
-				},
-				{
-					"question": "Bu Arapça hat sanatı jeneratörü mobil cihazlarda çalışıyor mu?",
-					"answer": "Kesinlikle! Arapça hat sanatı jeneratörümüz tamamen mobil uyumludur ve akıllı telefonlar, tabletler ve masaüstü bilgisayarlar için optimize edilmiştir. Arayüz, tam işlevselliği korurken ekran boyutunuza uyum sağlar."
-				},
-				{
-					"question": "Bu, mevcut en iyi ücretsiz online Arapça hat sanatı jeneratörü mü?",
-					"answer": "Ücretsiz online Arapça hat sanatı jeneratörümüz, 13'ten fazla premium online Arapça yazı tipi, anında PNG/SVG indirme ve kayıt gerektirmemesiyle öne çıkıyor. Abonelik gerektiren birçok Arapça metin oluşturucunun aksine, Arapça hat sanatı yapma uygulamamız profesyonel kalitede sonuçları tamamen ücretsiz olarak sunar."
-				},
-				{
-					"question": "Araç, harekeli (Harakat) Arapça metni destekliyor mu?",
-					"answer": "Evet, Arapça hat sanatı jeneratörümüz harekeli (Harakat/اعراب) Arapça metni destekler. Sesli harf işaretleri olan metinleri girebilirsiniz ve jeneratör bunları her yazı tipinin yeteneklerine göre oluşturacaktır. Bu, Kuran ayetleri ve resmi Arapça metinler için gereklidir."
-				},
-				{
-					"question": "Bu Arapça hat sanatı yapıcısı masaüstü yazılımlarla nasıl karşılaştırılır?",
-					"answer": "Ücretsiz online Arapça hat sanatı jeneratörümüz, masaüstü yazılımlara göre birçok avantaj sunar: indirme olmadan anında erişim, otomatik güncellemeler, platformlar arası uyumluluk ve bulut tabanlı kolaylık. Masaüstü yazılımlar daha gelişmiş özellikler sunabilse de, Arapça metin jeneratörümüz çoğu kullanıcının ihtiyacı için işlevsellik ve erişilebilirlik arasında mükemmel bir denge sağlar."
-				}
-			]
-		},
-		"generator": {
-			"title": "Arapça Hat Sanatı Jeneratörü Özellikleri",
-			"availableFonts": "Mevcut Arapça Yazı Tipleri:",
-			"toolFeatures": "Araç Özellikleri:",
-			"fonts": {
-				"amiri": "Amiri (Geleneksel Nesih)",
-				"scheherazade": "Scheherazade (Geleneksel)",
-				"reemKufi": "Reem Kufi (Modern Kufi)",
-				"arefRuqaa": "Aref Ruqaa (Divani Stili)",
-				"cairo": "Cairo (Modern Sans-serif)",
-				"moreFonts": "Ve 8'den fazla premium yazı tipi"
-			},
-			"features": {
-				"freeGenerator": "Ücretsiz online Arapça metin jeneratörü",
-				"instantDownload": "Anında PNG ve SVG indirme",
-				"colorCustomization": "Gradyan ve renk özelleştirme",
-				"backgroundPatterns": "Arka plan desenleri ve resimleri",
-				"mobileFriendly": "Mobil uyumlu arayüz",
-				"noRegistration": "Kayıt gerekmez"
-			},
-			"jsRequired": "Bu Arapça hat sanatı yapıcısının çalışması için JavaScript gereklidir. Etkileşimli aracı kullanmak için lütfen tarayıcınızda JavaScript'i etkinleştirin.",
-			"tabs": {
-				"text": "Metin",
-				"style": "Stil",
-				"advanced": "Gelişmiş"
-			},
-			"textTab": {
-				"arabicText": "Arapça Metin",
-				"hideKeyboard": "Klavyeyi Gizle",
-				"showKeyboard": "Klavyeyi Göster",
-				"placeholder": "Arapça metni buraya girin...",
-				"templates": "Şablonlar",
-				"font": "Yazı Tipi",
-				"preview": "Önizleme",
-				"selectFont": "Yazı tipi seçin",
-				"categories": "Kategoriler",
-				"fontSize": "Yazı Tipi Boyutu",
-				"resetText": "Metni Sıfırla"
-			},
-			"styleTab": {
-				"textColor": "Metin Rengi",
-				"useGradient": "Gradyan Kullan",
-				"gradientFrom": "Gradyan Başlangıç",
-				"gradientTo": "Gradyan Bitiş",
-				"backgroundColor": "Arka Plan Rengi",
-				"backgroundImage": "Arka Plan Resmi",
-				"uploadImage": "Resim Yükle",
-				"backgroundPattern": "Arka Plan Deseni",
-				"alignment": "Metin Hizalama",
-				"left": "Sol",
-				"center": "Orta",
-				"right": "Sağ"
-			},
-			"advancedTab": {
-				"fontWeight": "Yazı Tipi Kalınlığı",
-				"fontStyle": "Yazı Tipi Stili",
-				"normal": "Normal",
-				"italic": "İtalik",
-				"letterSpacing": "Harf Aralığı",
-				"lineHeight": "Satır Yüksekliği",
-				"shadow": "Metin Gölgesi",
-				"shadowX": "Gölge X",
-				"shadowY": "Gölge Y",
-				"shadowBlur": "Gölge Bulanıklığı",
-				"shadowColor": "Gölge Rengi",
-				"border": "Kenarlık",
-				"borderColor": "Kenarlık Rengi",
-				"borderWidth": "Kenarlık Kalınlığı",
-				"borderRadius": "Kenarlık Yuvarlaklığı",
-				"padding": "İç Boşluk",
-				"kashida": "Kashida Uzantısı",
-				"kashidaLength": "Kashida Uzunluğu"
-			},
-			"preview": {
-				"title": "Önizleme",
-				"downloadPNG": "PNG İndir",
-				"downloadSVG": "SVG İndir",
-				"share": "Paylaş"
-			},
-			"featuredDesigns": {
-				"title": "Öne Çıkan Tasarımlar",
-				"topPicks": "En İyiler",
-				"viewAllTemplates": "Tüm Şablonları Görüntüle"
-			},
-			"quickLinks": {
-				"title": "Hızlı Bağlantılar",
-				"blog": "Blog",
-				"faq": "SSS"
-			},
-			"tooltips": {
-				"resetDefaults": "Varsayılanlara sıfırla",
-				"fullscreen": "Tam ekran önizleme",
-				"exitFullscreen": "Tam ekrandan çık"
-			},
-			"toasts": {
-				"downloadStarted": "İndirme Başlatıldı",
-				"preparingPNG": "Arapça hat eseriniz PNG olarak hazırlanıyor...",
-				"preparingSVG": "Arapça hat eseriniz SVG olarak hazırlanıyor...",
-				"downloadFailed": "İndirme Başarısız Oldu",
-				"downloadError": "Hat eserinizi indirirken bir hata oluştu. Lütfen tekrar deneyin.",
-				"preparingImage": "Resim Hazırlanıyor",
-				"generatingImage": "Paylaşım için resim oluşturuluyor...",
-				"designApplied": "Tasarım Uygulandı",
-				"designAppliedDesc": "Öne çıkan tasarım tuvalinize uygulandı.",
-				"shareTitle": "Arapça Hat Sanatı Tasarımı",
-				"shareText": "Oluşturduğum bu harika Arapça hat sanatına bir göz atın!"
-			},
-			"noScript": {
-				"title": "Arapça Hat Sanatı Oluşturucu",
-				"description": "Ücretsiz çevrimiçi oluşturucumuzla anında güzel Arapça hat sanatı oluşturun. 13+ profesyonel fonttan seçim yapın, renkleri ve arka planları özelleştirin, yüksek kaliteli PNG/SVG dosyalarını indirin.",
-				"useCases": {
-					"title": "Popüler Kullanım Alanları",
-					"weddingInvitations": "Düğün davetiyeleri",
-					"islamicArt": "İslami sanat projeleri",
-					"socialMedia": "Sosyal medya gönderileri",
-					"businessLogos": "İş logoları",
-					"educational": "Eğitim materyalleri",
-					"religious": "Dini süslemeler"
-				},
-				"keywords": "Anahtar kelimeler: Arapça hat sanatı oluşturucu, İslami sanat, Arapça fontlar, hat sanatı yapıcı, Arapça metin tasarımı, İslami hat sanatı, Arapça tipografi, ücretsiz hat sanatı aracı"
-			},
-			"fontTooltip": {
-				"textExamples": "Metin Örnekleri",
-				"tryFont": "Oluşturucuda {fontName} Deneyin"
-			},
-			"seoContent": {
-				"aboutTitle": "Arapça Hat Sanatı Oluşturucu Hakkında",
-				"professionalTypography": {
-					"title": "Profesyonel Arapça Tipografi",
-					"description1": "Arapça hat sanatı oluşturucumuz, çarpıcı İslami sanat, düğün davetiyeleri, iş logoları ve eğitim materyalleri oluşturmak için profesyonel düzeyde tipografi araçları sunar. 13'ten fazla özenle seçilmiş Arapça fontla, geleneksel Arapça yazı estetiğine saygı duyan otantik hat sanatı oluşturabilirsiniz.",
-					"description2": "Koleksiyonumuzdaki her font farklı kaligrafi stillerini temsil eder: klasik Nesih ve Sülüs'ten modern Kufi ve çağdaş sans-serif tasarımlara kadar. Geleneksel İslami sanat projeleri ve modern grafik tasarım ihtiyaçları için mükemmel."
-				},
-				"featuresTitle": "Ücretsiz Çevrimiçi Araç Özellikleri",
-				"keywordsTitle": "Popüler Anahtar Kelimeler",
-				"keywordsList": "Arapça hat sanatı oluşturucu, İslami sanat yapıcı, Arapça font oluşturucu, kaligrafi tasarım aracı, Arapça tipografi, İslami kaligrafi oluşturucu, Arapça metin tasarımı, ücretsiz kaligrafi yapıcı, Arapça yazı oluşturucu, İslami sanat oluşturucu, Arapça logo yapıcı, düğün davetiyeleri için Arapça metin"
-			}
-		},
-		"useCasesSection": {
-			"title": "Neler Yaratabilirsiniz?",
-			"socialMedia": {
-				"title": "Sosyal Medya",
-				"subtitle": "Sosyal Medya İçin Mükemmel",
-				"description": "Güzel Arapça tipografi ile göz alıcı gönderiler, hikayeler ve profil grafikleri oluşturun.",
-				"instagram": "Instagram gönderileri ve hikayeleri",
-				"facebook": "Facebook kapak fotoğrafları",
-				"twitter": "Twitter grafikleri",
-				"profiles": "Arapça monogramlı profil resimleri",
-				"imageAlt": "Sosyal medya örnekleri"
-			},
-			"print": {
-				"title": "Baskı",
-				"subtitle": "Baskı Materyalleri",
-				"description": "Yüksek kaliteli Arapça hat sanatı ile profesyonel baskı materyalleri tasarlayın.",
-				"invitations": "Düğün ve etkinlik davetiyeleri",
-				"business": "Kartvizitler ve antetli kağıtlar",
-				"posters": "Afişler ve pankartlar",
-				"certificates": "Sertifikalar ve ödüller"
-			},
-			"web": {
-				"title": "Web",
-				"subtitle": "Web Grafikleri",
-				"description": "Arapça tipografi ile çarpıcı web grafikleri ve dijital içerikler oluşturun.",
-				"logos": "Web sitesi logoları ve başlıkları",
-				"banners": "Web bannerları ve reklamları",
-				"icons": "Özel Arapça ikonlar",
-				"graphics": "Dijital grafikler ve illüstrasyonlar"
-			},
-			"art": {
-				"title": "Sanat",
-				"subtitle": "Sanatsal Eserler",
-				"description": "Sanatsal Arapça hat sanatı tasarımlarıyla yaratıcılığınızı ifade edin.",
-				"wallArt": "Duvar sanatı ve dekorasyonları",
-				"islamic": "İslami sanat ve ayetler",
-				"modern": "Modern hat sanatı",
-				"traditional": "Geleneksel Arapça yazılar"
-			},
-			"description": "Arap kaligrafi üreticimizin çeşitli endüstrilerde ve kişisel projelerde farklı yaratıcı ihtiyaçlara nasıl hizmet ettiğini keşfedin"
-		}
-	},
-	"generator": {
-		"title": "Arapça Hat Sanatı Jeneratörü Özellikleri",
-		"availableFonts": "Mevcut Arapça Yazı Tipleri:",
-		"toolFeatures": "Araç Özellikleri:",
-		"jsRequired": "Arapça hat sanatı jeneratörünü kullanmak için JavaScript gereklidir. Lütfen tarayıcınızda JavaScript'i etkinleştirin.",
-		"fonts": {
-			"amiri": "Amiri (Geleneksel Nesih)",
-			"scheherazade": "Scheherazade (Geleneksel)",
-			"reemKufi": "Reem Kufi (Geometrik)",
-			"arefRuqaa": "Aref Ruqaa (Divani Stili)",
-			"cairo": "Cairo (Modern Sans-serif)",
-			"moreFonts": "Ve 8'den fazla premium yazı tipi"
-		},
-		"features": {
-			"freeGenerator": "Ücretsiz online Arapça metin jeneratörü",
-			"instantDownload": "Anında PNG ve SVG indirme",
-			"colorCustomization": "Gradyan ve renk özelleştirme",
-			"backgroundPatterns": "Arka plan desenleri ve resimleri",
-			"mobileFriendly": "Mobil uyumlu arayüz",
-			"noRegistration": "Kayıt gerekmez"
-		},
-		"tabs": {
-			"text": "Metin",
-			"style": "Stil",
-			"advanced": "Gelişmiş"
-		},
-		"textTab": {
-			"arabicText": "Arapça Metin",
-			"hideKeyboard": "Klavyeyi Gizle",
-			"showKeyboard": "Klavyeyi Göster",
-			"placeholder": "Arapça metni buraya girin...",
-			"templates": "Şablonlar",
-			"font": "Yazı Tipi",
-			"preview": "Önizleme",
-			"selectFont": "Yazı tipi seçin",
-			"categories": "Kategoriler",
-			"fontSize": "Yazı Tipi Boyutu",
-			"resetText": "Metni Sıfırla"
-		},
-		"styleTab": {
-			"textColor": "Metin Rengi",
-			"useGradient": "Gradyan Kullan",
-			"gradientFrom": "Gradyan Başlangıç",
-			"gradientTo": "Gradyan Bitiş",
-			"backgroundColor": "Arka Plan Rengi",
-			"backgroundImage": "Arka Plan Resmi",
-			"uploadImage": "Resim Yükle",
-			"backgroundPattern": "Arka Plan Deseni",
-			"alignment": "Metin Hizalama",
-			"left": "Sol",
-			"center": "Orta",
-			"right": "Sağ"
-		},
-		"advancedTab": {
-			"fontWeight": "Yazı Tipi Kalınlığı",
-			"fontStyle": "Yazı Tipi Stili",
-			"normal": "Normal",
-			"italic": "İtalik",
-			"letterSpacing": "Harf Aralığı",
-			"lineHeight": "Satır Yüksekliği",
-			"shadow": "Metin Gölgesi",
-			"shadowX": "Gölge X",
-			"shadowY": "Gölge Y",
-			"shadowBlur": "Gölge Bulanıklığı",
-			"shadowColor": "Gölge Rengi",
-			"border": "Kenarlık",
-			"borderColor": "Kenarlık Rengi",
-			"borderWidth": "Kenarlık Kalınlığı",
-			"borderRadius": "Kenarlık Yuvarlaklığı",
-			"padding": "İç Boşluk",
-			"kashida": "Kashida (Uzatma)",
-			"kashidaLength": "Kashida Uzunluğu"
-		},
-		"preview": {
-			"title": "Önizleme",
-			"downloadPNG": "PNG İndir",
-			"downloadSVG": "SVG İndir",
-			"share": "Paylaş"
-		},
-		"featuredDesigns": {
-			"title": "Öne Çıkan Tasarımlar",
-			"topPicks": "En İyiler",
-			"viewAllTemplates": "Tüm Şablonları Görüntüle"
-		},
-		"quickLinks": {
-			"title": "Hızlı Bağlantılar",
-			"blog": "Blog",
-			"faq": "SSS"
-		},
-		"tooltips": {
-			"resetDefaults": "Varsayılanlara sıfırla",
-			"fullscreen": "Tam ekran önizleme",
-			"exitFullscreen": "Tam ekrandan çık"
-		},
-		"toasts": {
-			"downloadStarted": "İndirme Başlatıldı",
-			"preparingPNG": "Arapça hat eseriniz PNG olarak hazırlanıyor...",
-			"preparingSVG": "Arapça hat eseriniz SVG olarak hazırlanıyor...",
-			"downloadFailed": "İndirme Başarısız Oldu",
-			"downloadError": "Hat eserinizi indirirken bir hata oluştu. Lütfen tekrar deneyin.",
-			"preparingImage": "Resim Hazırlanıyor",
-			"generatingImage": "Paylaşım için resim oluşturuluyor...",
-			"designApplied": "Tasarım Uygulandı",
-			"designAppliedDesc": "Seçilen tasarım tuvalinize uygulandı.",
-			"shareTitle": "Arapça Hat Sanatı Tasarımı",
-			"shareText": "Oluşturduğum bu harika Arapça hat sanatına bir göz atın!",
-			"templateApplied": "Şablon Uygulandı",
-			"templateAppliedDesc": "Seçilen şablon tuvalinize uygulandı.",
-			"downloadComplete": "İndirme Tamamlandı",
-			"downloadCompletePNG": "Arapça hat eseriniz PNG olarak indirildi.",
-			"downloadCompleteSVG": "Arapça hat eseriniz SVG olarak indirildi.",
-			"imageGenerationFailed": "Resim Oluşturma Başarısız Oldu",
-			"imageGenerationFailedDesc": "Resim oluşturulamadı. Lütfen tekrar deneyin.",
-			"copyingImage": "Resim Kopyalanıyor",
-			"copyingImageDesc": "Resim panoya kopyalanmak üzere hazırlanıyor...",
-			"imageCopied": "Resim Kopyalandı",
-			"imageCopiedDesc": "Hat sanatı resmi panonuza kopyalandı.",
-			"copyFailed": "Kopyalama Başarısız Oldu",
-			"copyFailedDesc": "Resim kopyalanamadı. Tarayıcınız bu özelliği desteklemiyor veya izin reddedilmiş olabilir.",
-			"copyError": "Kopyalama Hatası",
-			"copyErrorDesc": "Kopyalamak için resim blobu oluşturulamadı.",
-			"copyErrorUnexpected": "Resmi kopyalamaya çalışırken beklenmedik bir hata oluştu.",
-			"copiedToClipboard": "Panoya Kopyalandı",
-			"copiedToClipboardDesc": "Metniniz panoya kopyalandı.",
-			"copyFailedText": "Panoya kopyalanırken bir hata oluştu.",
-			"error": "Hata",
-			"previewNotFound": "Önizleme öğesi bulunamadı.",
-			"previewNotFoundShare": "Önizleme öğesi bulunamadı. Paylaşım için resim hazırlanamıyor.",
-			"sharingNotAvailable": "Paylaşım Mevcut Değil",
-			"sharingNotAvailableDesc": "Tarayıcınız Web Paylaşım API'sini desteklemiyor. Paylaşmak için resmi indirmeyi deneyin.",
-			"imageShareNotSupported": "Resim Paylaşımı Tam Desteklenmiyor",
-			"imageShareNotSupportedDesc": "Tarayıcınız veya seçilen paylaşım hedefi, resimleri doğrudan paylaşmayı desteklemeyebilir. Bunun yerine metin içeriği paylaşılıyor.",
-			"sharedSuccessfully": "Başarıyla Paylaşıldı",
-			"sharedSuccessfullyDesc": "Hat eseriniz paylaşıldı.",
-			"shareFailed": "Paylaşım Başarısız Oldu",
-			"shareFailedDesc": "Hat eserinizi paylaşırken bir hata oluştu. Lütfen tekrar deneyin veya resmi indirin.",
-			"resetComplete": "Sıfırlama Tamamlandı",
-			"resetCompleteDesc": "Tüm ayarlar varsayılanlara sıfırlandı."
-		},
-		"fontCategories": {
-			"Traditional": "Geleneksel",
-			"Diwani": "Divani",
-			"Kufi": "Kufi",
-			"Nastaliq": "Nestalik",
-			"Modern": "Modern",
-			"Display": "Gösterişli"
-		},
-		"backgroundPatterns": {
-			"None": "Yok",
-			"Geometric": "Geometrik",
-			"Arabesque": "Arabesk",
-			"Islamic Patterns": "İslami Desenler",
-			"Dots": "Noktalar"
-		},
-		"commonPhrases": {
-			"bismillah": "Rahman ve Rahim olan Allah'ın adıyla",
-			"alhamdulillah": "Allah'a hamd olsun",
-			"mashallah": "Maşallah",
-			"subhanallah": "Sübhanallah",
-			"allahuakbar": "Allahu Ekber",
-			"lailahaillallah": "Allah'tan başka ilah yoktur",
-			"astaghfirullah": "Allah'tan af dilerim",
-			"allahummasalli": "Allah'ım, Muhammed'e salat ve selam eyle"
-		},
-		"ui": {
-			"calligraphyControls": "Hat Sanatı Kontrolleri",
-			"text": "Metin",
-			"style": "Stil",
-			"advanced": "Gelişmiş",
-			"textColor": "Metin Rengi",
-			"gradient": "Gradyan",
-			"from": "Başlangıç",
-			"to": "Bitiş",
-			"background": "Arka Plan",
-			"color": "Renk",
-			"image": "Resim",
-			"pattern": "Desen",
-			"upload": "Yükle",
-			"backgroundPattern": "Arka Plan Deseni",
-			"selectPattern": "Desen seçin",
-			"textShadow": "Metin Gölgesi",
-			"horizontal": "Yatay",
-			"vertical": "Dikey",
-			"blur": "Bulanıklık",
-			"opacity": "Opaklık",
-			"fontWeight": "Yazı Tipi Kalınlığı",
-			"fontStyle": "Yazı Tipi Stili",
-			"selectWeight": "Kalınlık seçin",
-			"selectStyle": "Stil seçin",
-			"light": "İnce",
-			"regular": "Normal",
-			"medium": "Orta",
-			"bold": "Kalın",
-			"normal": "Normal",
-			"italic": "İtalik",
-			"alignment": "Hizalama",
-			"letterSpacing": "Harf Aralığı",
-			"lineHeight": "Satır Yüksekliği",
-			"kashida": "Kashida (Uzatma)",
-			"kashidaDesc": "Kashida, belirli Arapça harflere uzatma ekleyerek metnin estetik kalitesini artırır.",
-			"length": "Uzunluk",
-			"border": "Kenarlık",
-			"borderColor": "Kenarlık Rengi",
-			"borderWidth": "Kenarlık Kalınlığı",
-			"borderRadius": "Kenarlık Yuvarlaklığı",
-			"padding": "İç Boşluk",
-			"featuredTemplates": "Öne Çıkan Şablonlar",
-			"favorites": "Favoriler",
-			"aboutArabicCalligraphy": "Arapça Hat Sanatı Hakkında",
-			"aboutArabicCalligraphyDesc": "Arapça hat sanatı (خط عربي), Arap alfabesine dayanan el yazısı ve kaligrafi sanatıdır. Arapçada 'çizgi', 'tasarım' veya 'inşa' kelimelerinden türeyen 'khatt' olarak bilinir.",
-			"readMoreHistory": "Arapça hat sanatının tarihi hakkında daha fazla bilgi edinin",
-			"exploreFonts": "Yazı tipi koleksiyonumuzu keşfedin",
-			"viewAllTemplates": "Tüm Şablonları Görüntüle"
-		},
-		"sponsor": {
-			"supportButton": "☕ Bizi Destekle ($3)"
-		}
-	},
-	"seo": {
-		"structuredData": {
-			"featureList": [
-				"Kufi, Nesih, Divani stilleri dahil 13+ Arapça yazı tipi",
-				"Gerçek zamanlı Arapça metin oluşturma",
-				"Gradyan ve renk özelleştirme",
-				"Arka plan desenleri ve resimleri",
-				"PNG ve SVG olarak dışa aktarma",
-				"Mobil uyumlu arayüz",
-				"Kayıt gerekmez"
-			],
-			"applicationCategory": "TasarımUygulaması",
-			"operatingSystem": "Web Tarayıcısı",
-			"browserRequirements": "JavaScript'in etkinleştirilmesini gerektirir",
-			"authorName": "Arapça Hat Sanatı Jeneratörü"
-		}
-	}
+  "metadata": {
+    "title": "Arapça Hat Sanatı Jeneratörü - Ücretsiz Çevrimiçi Araç",
+    "description": "🎨 ÜCRETSİZ Arapça Hat Sanatı Jeneratörü | Anında göz alıcı İslami sanat eserleri yaratın! 13+ yazı tipi, anında PNG/SVG indirme. Kayıt gerekmez ✨",
+    "description_desktop": "Profesyonel Arapça Hat Sanatı Jeneratörü - 13+ Premium Yazı Tipiyle İslami Sanat Yaratın. Tasarımcılar, öğrenciler ve işletmeler için ücretsiz online araç. Anında PNG/SVG indirme.",
+    "keywords": "Arapça hat sanatı jeneratörü, Arapça yazı tipleri, İslami hat sanatı, Arapça metin oluşturucu, ücretsiz Arapça yazı tipleri, online hat sanatı yapıcı"
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "close": "Kapat",
+    "continue": "Devam Et",
+    "cancel": "İptal",
+    "confirm": "Onayla",
+    "save": "Kaydet",
+    "download": "İndir",
+    "share": "Paylaş",
+    "copy": "Kopyala",
+    "copied": "Kopyalandı!",
+    "yes": "Evet",
+    "no": "Hayır"
+  },
+  "ads": {
+    "sponsored": "Sponsored",
+    "supportUs": "Support Us"
+  },
+  "navigation": {
+    "generator": "Jeneratör",
+    "arabicFonts": "Arapça Yazı Tipleri",
+    "learningGuides": "Öğrenim Rehberleri",
+    "howToTutorials": "Uygulama Rehberleri",
+    "freeResources": "Ücretsiz Kaynaklar",
+    "useCases": "Kullanım Alanları",
+    "blog": "Blog",
+    "faq": "SSS",
+    "contact": "İletişim",
+    "dropdown": {
+      "completeBeginner": "Yeni Başlayanlar İçin Kapsamlı Rehber",
+      "fontComparison": "Yazı Tipi Karşılaştırma Rehberi",
+      "bestFonts2025": "2025'in En İyi Arapça Yazı Tipleri",
+      "typographyTrends": "Tipografi Trendleri 2025",
+      "createOnline": "Online Hat Sanatı Oluşturma",
+      "fontSelection": "Yazı Tipi Seçim Rehberi",
+      "designTips": "Tasarım İpuçları",
+      "downloadFonts": "Yazı Tiplerini İndirme ve Kullanma",
+      "freeArabicFonts": "Ücretsiz Arapça Yazı Tipleri"
+    }
+  },
+  "languageSwitcher": {
+    "selectLanguage": "Dil Seçin",
+    "currentLanguage": "Mevcut Dil"
+  },
+  "languagePrompt": {
+    "title": "Hoş geldiniz! Sitemizi sizin dilinizde de sunuyoruz",
+    "subtitle": "{language} diline geçmek ister misiniz?",
+    "useLanguage": "{language} kullan",
+    "continueEnglish": "İngilizce devam et",
+    "dontShowAgain": "Tekrar gösterme"
+  },
+  "footer": {
+    "description": "Ücretsiz online Arapça hat sanatı jeneratörümüzle birbirinden güzel Arapça hat eserleri yaratın.",
+    "arabicCalligraphy": "Arapça Hat Sanatı",
+    "generator": "Arapça Hat Sanatı Jeneratörü",
+    "features": "Jeneratör Özellikleri",
+    "blog": "Hat Sanatı Blogu",
+    "faq": "Jeneratör SSS",
+    "contact": "Bize Ulaşın",
+    "fonts": "Arapça Yazı Tipleri",
+    "fontLibrary": "Yazı Tipi Kütüphanesi",
+    "fontComparison": "Yazı Tipi Karşılaştırması",
+    "fontDownloads": "Yazı Tipi İndirmeleri",
+    "learning": "Öğrenim Kaynakları",
+    "beginnerGuide": "Yeni Başlayanlar Rehberi",
+    "tutorials": "Rehberler",
+    "designTips": "Tasarım İpuçları",
+    "company": "Şirket",
+    "about": "Hakkımızda",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Hizmet Şartları",
+    "copyright": "© 2010-{year} Arapça Hat Sanatı Jeneratörü. Tüm hakları saklıdır.",
+    "popular": {
+      "title": "Popüler",
+      "amiriFont": "Amiri Yazı Tipi",
+      "cairoFont": "Cairo Yazı Tipi",
+      "weddingCalligraphy": "Düğün Hat Sanatı",
+      "businessLogos": "İşletme Logoları",
+      "privacyPolicy": "Gizlilik Politikası",
+      "termsOfService": "Hizmet Şartları"
+    },
+    "generatorTools": {
+      "title": "Jeneratör Araçları",
+      "arabicCalligraphy": {
+        "title": "Arapça Hat Sanatı Jeneratörü",
+        "desc": "Çarpıcı Arap hat sanatı tasarımları oluşturun"
+      },
+      "arabicFont": {
+        "title": "Arapça Yazı Tipi Jeneratörü",
+        "desc": "17+ özgün Arapça yazı tipi çevrimiçi"
+      },
+      "arabicLogo": {
+        "title": "Arapça Logo Jeneratörü",
+        "desc": "Profesyonel Arapça logolar tasarlayın"
+      },
+      "arabicName": {
+        "title": "Arapça İsim Jeneratörü",
+        "desc": "Kişiselleştirilmiş Arapça isim hat sanatı"
+      },
+      "kuficScript": {
+        "title": "Kufi Yazı Jeneratörü",
+        "desc": "Geometrik Kufi hat sanatı stilleri"
+      },
+      "kuficCalligraphy": {
+        "title": "Kufi Hat Sanatı Jeneratörü",
+        "desc": "Geleneksel Kufi yazı tasarımları"
+      }
+    }
+  },
+  "homepage": {
+    "title": "Arapça Hat Sanatı Jeneratörü",
+    "subtitle": "Güzel Tasarımlar Yaratın",
+    "description": "Anında Göz Alıcı Arapça Yazı Sanatı Oluşturun",
+    "intro": "Ücretsiz online Arapça hat sanatı jeneratörümüzle herhangi bir Arapça metni harika bir kaligrafiye dönüştürün. Bu güçlü Arapça metin oluşturucu, 13'ten fazla premium online Arapça yazı tipine sahiptir. Kayıt olmadan anında çarpıcı tasarımlar yaratın!",
+    "hero": {
+      "badge": "#1 Ücretsiz Arapça Hat Sanatı Jeneratörü Online",
+      "subtitle": "Güzel Tasarımlar Oluşturun",
+      "description": "Ücretsiz online Arapça hat sanatı yazı tipi jeneratörümüzle Arapça metninizi çarpıcı kaligrafiye dönüştürün. Premium yazı tipleri ve özelleştirme seçenekleriyle anında profesyonel Arapça hat sanatı tasarımları, logolar ve metin sanatı oluşturun.",
+      "value1": "%100 Ücretsiz Arapça Hat Sanatı Jeneratörü",
+      "value2": "Kayıt Gerekmez",
+      "value3": "Anında İndirme",
+      "cta": "Şimdi Arapça Hat Sanatı Oluşturmaya Başlayın"
+    },
+    "socialProof": {
+      "designsCreated": "100.000+ Tasarım Oluşturuldu",
+      "premiumFonts": "13+ Premium Yazı Tipi",
+      "freeForever": "Sonsuza Dek Ücretsiz"
+    },
+    "features": {
+      "title": "Profesyonel Arapça Hat Sanatı Özellikleri",
+      "fontLibrary": {
+        "title": "Geniş Arapça Yazı Tipi Kütüphanesi",
+        "description": "Ücretsiz Arapça hat sanatı oluşturucumuz, geleneksel yazılardan (Kufi, Nesih, Divani) modern tipografiye kadar 13'ten fazla premium online Arapça yazı tipi sunar. Bu kapsamlı Arapça metin jeneratörü, kolay yazı tipi seçimi için görsel önizleme içerir.",
+        "items": [
+          "Geleneksel hat sanatı stilleri",
+          "Modern Arapça yazı tipleri",
+          "Dekoratif ve gösterişli seçenekler"
+        ]
+      },
+      "customization": {
+        "title": "Gelişmiş Özelleştirme Seçenekleri",
+        "description": "Bu online ve ücretsiz Arapça hat sanatı jeneratörü, gradyan metin efektleri, özel arka planlar, gölgeler ve mükemmel hat sanatı sonuçları için hassas tipografi kontrolleri dahil olmak üzere profesyonel düzeyde stil seçenekleri sunar.",
+        "items": [
+          "Gradyan metin efektleri",
+          "Özel arka plan desenleri",
+          "Gölge ve parlama efektleri"
+        ]
+      },
+      "export": {
+        "title": "Profesyonel Dışa Aktarma Seçenekleri",
+        "description": "Arapça hat eserinizi birden fazla yüksek kaliteli formatta indirin. Arapça metin jeneratörümüz, web kullanımı için PNG ve baskı uygulamaları için SVG'yi destekleyerek tasarımlarınızın her boyutta mükemmel görünmesini sağlar.",
+        "items": [
+          "Yüksek çözünürlüklü PNG çıktısı",
+          "Ölçeklenebilir SVG formatı",
+          "Baskıya hazır kalite"
+        ]
+      },
+      "preview": {
+        "title": "Gerçek Zamanlı Arap Kaligrafi Önizlemesi",
+        "description": "Yazı tiplerini, renkleri ve efektleri özelleştirirken canlı önizleme ile Arap kaligrafi değişikliklerinizi anında görün."
+      },
+      "mobile": {
+        "title": "Mobil Uyumlu Arap Üretici",
+        "description": "Herhangi bir cihazda Arap kaligrafi oluşturun - masaüstü, tablet veya akıllı telefon tam duyarlı işlevsellik ile."
+      },
+      "free": {
+        "title": "%100 Ücretsiz Arap Kaligrafi Üretici",
+        "description": "Kayıt yok, filigran yok, gizli maliyet yok - sonsuza kadar tamamen ücretsiz Arap kaligrafi üretici."
+      },
+      "sharing": {
+        "title": "Kolay Arap Kaligrafi Paylaşımı",
+        "description": "Arap kaligrafi tasarımlarınızı doğrudan sosyal medya platformlarında paylaşın veya anında panoya kopyalayın."
+      },
+      "privacy": {
+        "title": "Gizlilik Korumalı Arap Üretici",
+        "description": "Arap metniniz tamamen özel kalır - içeriğinizi saklamıyoruz veya kişisel bilgi gerektirmiyoruz."
+      },
+      "description": "Ücretsiz Arap kaligrafi yazı tipi üreticimiz, profesyonel kalitede sonuçlarla çarpıcı Arap kaligrafi tasarımları, logolar ve metin sanatı oluşturmak için ihtiyacınız olan her şeyi sağlar."
+    },
+    "quickStart": {
+      "title": "Hızlı Başlangıç:",
+      "steps": "Arapça metin yaz → Yazı tipi seç → Anında indir"
+    },
+    "howToUse": {
+      "title": "Arapça Hat Sanatı Nasıl Oluşturulur",
+      "step1": {
+        "title": "Metninizi Girin",
+        "description": "Arapça metninizi yukarıdaki giriş alanına yazın veya yapıştırın"
+      },
+      "step2": {
+        "title": "Stilinizi Seçin",
+        "description": "13'ten fazla güzel Arapça yazı tipi arasından seçim yapın ve renkleri özelleştirin"
+      },
+      "step3": {
+        "title": "İndirin ve Paylaşın",
+        "description": "Hat eserinizi PNG veya SVG olarak indirin ve istediğiniz yerde paylaşın"
+      },
+      "cta": {
+        "title": "Çarpıcı Arap Kaligrafi Oluşturmaya Hazır mısınız?",
+        "description": "Tasarım ihtiyaçları için Arap kaligrafi üreticimize güvenen binlerce kullanıcıya katılın",
+        "button": "Şimdi Arap Kaligrafi Oluşturmaya Başlayın"
+      },
+      "description": "Ücretsiz çevrimiçi Arap kaligrafi yazı tipi üreticimizle üç kolay adımda güzel Arap kaligrafi tasarımları oluşturun. Deneyim gerekmez!"
+    },
+    "useCases": {
+      "title": "Her Durum İçin Mükemmel",
+      "wedding": {
+        "title": "Düğün Davetiyeleri",
+        "description": "Düğün kartları ve davetiyeler için zarif Arapça hat sanatı eserleri yaratın"
+      },
+      "business": {
+        "title": "Kurumsal Markalaşma",
+        "description": "Arapça tipografi ile profesyonel logolar ve marka materyalleri tasarlayın"
+      },
+      "social": {
+        "title": "Sosyal Medya",
+        "description": "Instagram, Facebook ve daha fazlası için güzel Arapça alıntılar ve gönderiler oluşturun"
+      },
+      "religious": {
+        "title": "Dini Sanat",
+        "description": "Kuran ayetleri ve dini metinler için çarpıcı İslami hat sanatı eserleri yaratın"
+      }
+    },
+    "faq": {
+      "title": "Arapça Hat Sanatı Jeneratörü SSS",
+      "q1": {
+        "question": "Bu Arapça hat sanatı jeneratörü tamamen ücretsiz mi?",
+        "answer": "Evet! Arapça hat sanatı jeneratörümüz %100 ücretsizdir ve hiçbir gizli maliyet, abonelik veya kayıt gerektirmez. 13'ten fazla premium yazı tipi, özelleştirme özellikleri ve dışa aktarma seçenekleri ücretsiz olarak dahildir."
+      },
+      "q2": {
+        "question": "Hangi dosya formatlarını indirebilirim?",
+        "answer": "Arapça hat eserinizi iki formatta indirebilirsiniz: PNG (fotoğraflar ve sosyal medya için) ve SVG (baskı ve ölçeklenebilir grafikler için). Her iki format da yüksek kaliteyi korur."
+      },
+      "q3": {
+        "question": "Kaç tane Arapça yazı tipi mevcut?",
+        "answer": "Nesih ve Sülüs gibi geleneksel stillerin yanı sıra Kufi gibi modern yazı tipleri ve dekoratif seçenekler de dahil olmak üzere özenle seçilmiş 13'ten fazla Arapça yazı tipi sunuyoruz. Her yazı tipi, en iyi okunabilirlik için profesyonelce tasarlanmıştır."
+      },
+      "q4": {
+        "question": "Oluşturulan hat sanatını ticari olarak kullanabilir miyim?",
+        "answer": "Evet, oluşturduğunuz Arapça hat sanatını hem kişisel hem de ticari amaçlarla kullanabilirsiniz. Kullandığımız yazı tipleri ya açık kaynaklıdır ya da ticari kullanım için uygun şekilde lisanslanmıştır."
+      },
+      "q5": {
+        "question": "Jeneratör mobil cihazlarda çalışıyor mu?",
+        "answer": "Kesinlikle! Arapça hat sanatı jeneratörümüz tamamen mobil uyumludur ve akıllı telefonlarda, tabletlerde ve masaüstü bilgisayarlarda sorunsuz çalışır. Arayüz, en iyi deneyim için ekran boyutunuza uyum sağlar."
+      }
+    },
+    "cta": {
+      "title": "En İyi Ücretsiz Online Arapça Hat Sanatı Jeneratör Uygulaması",
+      "description": "Mevcut en kapsamlı online ve ücretsiz Arapça hat sanatı jeneratör aracını deneyimleyin. Arapça metin oluşturucumuzla çarpıcı Arapça tasarımlar yaratan binlerce kullanıcıya katılın. Şimdi başlayın - tamamen ücretsiz!",
+      "button": "Şimdi Oluşturmaya Başla",
+      "features": {
+        "noRegistration": "Kayıt Gerekmez",
+        "free": "%100 Ücretsiz",
+        "instantDownload": "Anında İndirme"
+      }
+    },
+    "testimonials": {
+      "title": "Kullanıcılarımız Ne Diyor",
+      "description": "Ücretsiz oluşturucumuzla çarpıcı Arapça hat sanatı tasarımları yaratmış binlerce memnun kullanıcıya katılın.",
+      "reviews": [
+        {
+          "name": "Sarah Ahmed",
+          "title": "Grafik Tasarımcı ve Yaratıcı Stüdyo",
+          "content": "Bu Arapça hat sanatı oluşturucu tasarım iş akışımda devrim yarattı. Yazı tipi kalitesi olağanüstü ve özelleştirme seçenekleri profesyonel projeler için mükemmel. Müşterilerim otantik Arapça tipografiyi çok seviyorlar!",
+          "date": "Aralık 2024"
+        },
+        {
+          "name": "Mohammed Ali",
+          "title": "Arapça Çalışmaları Öğrencisi",
+          "content": "Arapça öğrenen bir öğrenci olarak, bu araç farklı hat sanatı stillerini anlamama yardımcı oluyor. İnanılmaz derecede kullanıcı dostu ve yazı tipi çeşitliliği onu eğitim projeleri ve sunumlar için mükemmel yapıyor.",
+          "date": "Kasım 2024"
+        },
+        {
+          "name": "Fatima Hassan",
+          "title": "Restoran Sahibi",
+          "content": "Restoranımın tüm Arapça tabelaları ve menüleri için bu oluşturucuyu kullanıyorum. Profesyonel kalite ve kullanım kolaylığı tasarım maliyetlerinde yüzlerce dolar tasarruf ettirdi. Herhangi bir işletme için şiddetle tavsiye ederim!",
+          "date": "Kasım 2024"
+        },
+        {
+          "name": "Ahmad Khalil",
+          "title": "Düğün Planlayıcısı",
+          "content": "Güzel düğün davetiyeleri ve dekoratif unsurlar oluşturmak için mükemmel. Arapça hat sanatı stilleri otantik ve zarif. En iyi yanı? Su damgası olmadan tamamen ücretsiz!",
+          "date": "Ekim 2024"
+        },
+        {
+          "name": "Dr. Amina Rashid",
+          "title": "Arapça Dil Öğretmeni",
+          "content": "Eğitim materyalleri ve sınıf görüntüleri oluşturmak için bu aracı düzenli olarak kullanıyorum. Öğrencilerim isimlerini güzel Arapça hat sanatında görmeyi seviyorlar. Öğrenmeyi daha ilgi çekici ve eğlenceli hale getiriyor!",
+          "date": "Ekim 2024"
+        },
+        {
+          "name": "Omar Zaid",
+          "title": "Serbest Tasarımcı",
+          "content": "Bu oluşturucu tasarım araç setimin temel bir parçası haline geldi. Dışa aktarma kalitesi mükemmel ve müşteriler her zaman otantik Arapça hat sanatından etkileniyorlar. İşimi önemli ölçüde artırdı!",
+          "date": "Eylül 2024"
+        }
+      ]
+    },
+    "technicalFeatures": {
+      "title": "Gelişmiş Arapça Tipografi Özellikleri",
+      "fontCollection": {
+        "title": "Yazı Tipi Koleksiyonu ve Stilleri",
+        "traditional": "Geleneksel Yazılar: Amiri (Nesih), Scheherazade, Lateef, Markazi Text",
+        "decorative": "Dekoratif Stiller: Aref Ruqaa (Divani), Jomhuria, Rakkas, Lemonada",
+        "modern": "Modern Tipografi: Cairo, Harmattan, Mada, Tajawal, El Messiri",
+        "specialized": "Özel: Reem Kufi (Geometrik), Mirza (Nestalik), Marhey (Gösterişli)",
+        "note": "Tüm yazı tipleri, otantik hat sanatı için sağdan sola (RTL) metin yönünü, Arapça harekeleri (Harakat) ve Kashida uzatmasını destekler."
+      },
+      "export": {
+        "title": "Dışa Aktarma ve Uyumluluk",
+        "formats": "Çıktı Formatları: PNG (şeffaf arka plan), SVG (ölçeklenebilir vektör)",
+        "quality": "Kalite Seçenekleri: Baskı ve dijital kullanıma uygun yüksek çözünürlüklü çıktı",
+        "browsers": "Tarayıcı Desteği: Chrome, Firefox, Safari, Edge - tüm modern tarayıcılar",
+        "devices": "Cihaz Uyumluluğu: Masaüstü, tablet ve mobil uyumlu tasarım",
+        "note": "Ticari kullanım için ücretsizdir. Filigran yok, kayıt gerekmez. Gizlilik için tamamen tarayıcınızda çalışır."
+      }
+    },
+    "professionalUse": {
+      "title": "Profesyonel Arapça Hat Sanatı Uygulamaları",
+      "business": {
+        "title": "İşletme ve Markalaşma",
+        "logo": {
+          "title": "Kurumsal Logolar ve Kimlik",
+          "description": "Geleneksel veya modern hat sanatı stilleriyle ayırt edici Arapça marka isimleri oluşturun"
+        },
+        "restaurant": {
+          "title": "Restoran ve Konaklama",
+          "description": "Otantik Arapça tabelalar, menüler ve tanıtım materyalleri tasarlayın"
+        },
+        "marketing": {
+          "title": "Pazarlama Materyalleri",
+          "description": "Broşürler, reklamlar ve dijital kampanyalar için profesyonel Arapça tipografi"
+        }
+      },
+      "personal": {
+        "title": "Kişisel ve Kültürel",
+        "wedding": {
+          "title": "Düğün ve Etkinlik Davetiyeleri",
+          "description": "Özel günler ve kutlamalar için zarif Arapça hat sanatı"
+        },
+        "islamic": {
+          "title": "İslami Sanat ve Dekorasyon",
+          "description": "Ev dekorasyonu için güzel Kuran ayetleri, Hadisler ve İslami ifadeler"
+        },
+        "social": {
+          "title": "Sosyal Medya İçeriği",
+          "description": "Instagram, Facebook ve diğer platformlar için göz alıcı Arapça gönderiler"
+        }
+      }
+    },
+    "detailedFaq": {
+      "title": "Arapça Hat Sanatı Jeneratörü SSS",
+      "viewAll": "Tüm SSS'leri Görüntüle",
+      "questions": [
+        {
+          "question": "Bu Arapça hat sanatı jeneratörü tamamen ücretsiz mi?",
+          "answer": "Evet! Arapça hat sanatı jeneratörümüz %100 ücretsizdir ve hiçbir gizli maliyet, abonelik veya kayıt gerektirmez. 13'ten fazla premium yazı tipi, özelleştirme özellikleri ve dışa aktarma seçenekleri ücretsiz olarak dahildir."
+        },
+        {
+          "question": "Hangi Arapça yazı tipleri ve hat sanatı stilleri mevcut?",
+          "answer": "Geleneksel hat sanatı stillerini (Kufi, Nesih, Divani, Nestalik) ve modern Arapça tipografisini kapsayan 13'ten fazla özenle seçilmiş Arapça yazı tipi sunuyoruz. Her yazı tipi sağdan sola metin yönünü, Arapça harekeleri (Harakat) ve otantik Arapça yazı oluşturmayı destekler."
+        },
+        {
+          "question": "Hangi dosya formatlarını ve hangi kalitede indirebilirim?",
+          "answer": "Arapça hat eserinizi yüksek çözünürlüklü PNG dosyaları (şeffaf arka planlı) veya ölçeklenebilir SVG vektör dosyaları olarak dışa aktarabilirsiniz. Her iki format da profesyonel baskı, dijital medya ve ticari uygulamalar için uygundur."
+        },
+        {
+          "question": "Oluşturulan hat sanatını ticari projeler için kullanabilir miyim?",
+          "answer": "Evet, oluşturduğunuz Arapça hat sanatı tasarımlarını herhangi bir kısıtlama olmaksızın hem kişisel hem de ticari projeler için kullanabilirsiniz. Buna işletme logoları, pazarlama materyalleri, düğün davetiyeleri ve diğer tüm ticari uygulamalar dahildir."
+        },
+        {
+          "question": "Bu Arapça hat sanatı jeneratörü mobil cihazlarda çalışıyor mu?",
+          "answer": "Kesinlikle! Arapça hat sanatı jeneratörümüz tamamen mobil uyumludur ve akıllı telefonlar, tabletler ve masaüstü bilgisayarlar için optimize edilmiştir. Arayüz, tam işlevselliği korurken ekran boyutunuza uyum sağlar."
+        },
+        {
+          "question": "Bu, mevcut en iyi ücretsiz online Arapça hat sanatı jeneratörü mü?",
+          "answer": "Ücretsiz online Arapça hat sanatı jeneratörümüz, 13'ten fazla premium online Arapça yazı tipi, anında PNG/SVG indirme ve kayıt gerektirmemesiyle öne çıkıyor. Abonelik gerektiren birçok Arapça metin oluşturucunun aksine, Arapça hat sanatı yapma uygulamamız profesyonel kalitede sonuçları tamamen ücretsiz olarak sunar."
+        },
+        {
+          "question": "Araç, harekeli (Harakat) Arapça metni destekliyor mu?",
+          "answer": "Evet, Arapça hat sanatı jeneratörümüz harekeli (Harakat/اعراب) Arapça metni destekler. Sesli harf işaretleri olan metinleri girebilirsiniz ve jeneratör bunları her yazı tipinin yeteneklerine göre oluşturacaktır. Bu, Kuran ayetleri ve resmi Arapça metinler için gereklidir."
+        },
+        {
+          "question": "Bu Arapça hat sanatı yapıcısı masaüstü yazılımlarla nasıl karşılaştırılır?",
+          "answer": "Ücretsiz online Arapça hat sanatı jeneratörümüz, masaüstü yazılımlara göre birçok avantaj sunar: indirme olmadan anında erişim, otomatik güncellemeler, platformlar arası uyumluluk ve bulut tabanlı kolaylık. Masaüstü yazılımlar daha gelişmiş özellikler sunabilse de, Arapça metin jeneratörümüz çoğu kullanıcının ihtiyacı için işlevsellik ve erişilebilirlik arasında mükemmel bir denge sağlar."
+        },
+        {
+          "question": "Logolar için Kufi hat oluşturabilir miyim?",
+          "answer": "Evet. Aracımızda modern ve geometrik logolar için ideal, özgün Kufi yazı tipleri bulunuyor. Bir Kufi fontu seçin, kalınlık ve renkleri markanıza göre ayarlayın ve tasarımı dışa aktarın."
+        },
+        {
+          "question": "Kişiye özel Arapça isim hattı nasıl hazırlarım?",
+          "answer": "Arapça ismi yazın veya yapıştırın, 17 yazı stilimizden dilediğinizi deneyin, renk ve arka planı ayarlayın ve dosyayı indirin. Davetiyeler, kişisel hediyeler ve sosyal medya görselleri için harika bir yöntemdir."
+        },
+        {
+          "question": "Oluşturduğum yazıyı Figma, Canva ya da Adobe uygulamalarına aktarabilir miyim?",
+          "answer": "Tabii ki. Tasarımınızı PNG veya SVG olarak dışa aktarın, ardından Figma, Canva, Adobe Illustrator, Photoshop veya InDesign’a aktarın. Özellikle SVG formatı kaliteyi bozmadan yeniden boyutlandırmaya uygundur."
+        }
+      ]
+    },
+    "generator": {
+      "title": "Arapça Hat Sanatı Jeneratörü Özellikleri",
+      "availableFonts": "Mevcut Arapça Yazı Tipleri:",
+      "toolFeatures": "Araç Özellikleri:",
+      "fonts": {
+        "amiri": "Amiri (Geleneksel Nesih)",
+        "scheherazade": "Scheherazade (Geleneksel)",
+        "reemKufi": "Reem Kufi (Modern Kufi)",
+        "arefRuqaa": "Aref Ruqaa (Divani Stili)",
+        "cairo": "Cairo (Modern Sans-serif)",
+        "moreFonts": "Ve 8'den fazla premium yazı tipi"
+      },
+      "features": {
+        "freeGenerator": "Ücretsiz online Arapça metin jeneratörü",
+        "instantDownload": "Anında PNG ve SVG indirme",
+        "colorCustomization": "Gradyan ve renk özelleştirme",
+        "backgroundPatterns": "Arka plan desenleri ve resimleri",
+        "mobileFriendly": "Mobil uyumlu arayüz",
+        "noRegistration": "Kayıt gerekmez"
+      },
+      "jsRequired": "Bu Arapça hat sanatı yapıcısının çalışması için JavaScript gereklidir. Etkileşimli aracı kullanmak için lütfen tarayıcınızda JavaScript'i etkinleştirin.",
+      "tabs": {
+        "text": "Metin",
+        "style": "Stil",
+        "advanced": "Gelişmiş"
+      },
+      "textTab": {
+        "arabicText": "Arapça Metin",
+        "hideKeyboard": "Klavyeyi Gizle",
+        "showKeyboard": "Klavyeyi Göster",
+        "placeholder": "Arapça metni buraya girin...",
+        "templates": "Şablonlar",
+        "font": "Yazı Tipi",
+        "preview": "Önizleme",
+        "selectFont": "Yazı tipi seçin",
+        "categories": "Kategoriler",
+        "fontSize": "Yazı Tipi Boyutu",
+        "resetText": "Metni Sıfırla"
+      },
+      "styleTab": {
+        "textColor": "Metin Rengi",
+        "useGradient": "Gradyan Kullan",
+        "gradientFrom": "Gradyan Başlangıç",
+        "gradientTo": "Gradyan Bitiş",
+        "backgroundColor": "Arka Plan Rengi",
+        "backgroundImage": "Arka Plan Resmi",
+        "uploadImage": "Resim Yükle",
+        "backgroundPattern": "Arka Plan Deseni",
+        "alignment": "Metin Hizalama",
+        "left": "Sol",
+        "center": "Orta",
+        "right": "Sağ"
+      },
+      "advancedTab": {
+        "fontWeight": "Yazı Tipi Kalınlığı",
+        "fontStyle": "Yazı Tipi Stili",
+        "normal": "Normal",
+        "italic": "İtalik",
+        "letterSpacing": "Harf Aralığı",
+        "lineHeight": "Satır Yüksekliği",
+        "shadow": "Metin Gölgesi",
+        "shadowX": "Gölge X",
+        "shadowY": "Gölge Y",
+        "shadowBlur": "Gölge Bulanıklığı",
+        "shadowColor": "Gölge Rengi",
+        "border": "Kenarlık",
+        "borderColor": "Kenarlık Rengi",
+        "borderWidth": "Kenarlık Kalınlığı",
+        "borderRadius": "Kenarlık Yuvarlaklığı",
+        "padding": "İç Boşluk",
+        "kashida": "Kashida Uzantısı",
+        "kashidaLength": "Kashida Uzunluğu"
+      },
+      "preview": {
+        "title": "Önizleme",
+        "downloadPNG": "PNG İndir",
+        "downloadSVG": "SVG İndir",
+        "share": "Paylaş"
+      },
+      "featuredDesigns": {
+        "title": "Öne Çıkan Tasarımlar",
+        "topPicks": "En İyiler",
+        "viewAllTemplates": "Tüm Şablonları Görüntüle"
+      },
+      "quickLinks": {
+        "title": "Hızlı Bağlantılar",
+        "blog": "Blog",
+        "faq": "SSS"
+      },
+      "tooltips": {
+        "resetDefaults": "Varsayılanlara sıfırla",
+        "fullscreen": "Tam ekran önizleme",
+        "exitFullscreen": "Tam ekrandan çık"
+      },
+      "toasts": {
+        "downloadStarted": "İndirme Başlatıldı",
+        "preparingPNG": "Arapça hat eseriniz PNG olarak hazırlanıyor...",
+        "preparingSVG": "Arapça hat eseriniz SVG olarak hazırlanıyor...",
+        "downloadFailed": "İndirme Başarısız Oldu",
+        "downloadError": "Hat eserinizi indirirken bir hata oluştu. Lütfen tekrar deneyin.",
+        "preparingImage": "Resim Hazırlanıyor",
+        "generatingImage": "Paylaşım için resim oluşturuluyor...",
+        "designApplied": "Tasarım Uygulandı",
+        "designAppliedDesc": "Öne çıkan tasarım tuvalinize uygulandı.",
+        "shareTitle": "Arapça Hat Sanatı Tasarımı",
+        "shareText": "Oluşturduğum bu harika Arapça hat sanatına bir göz atın!"
+      },
+      "noScript": {
+        "title": "Arapça Hat Sanatı Oluşturucu",
+        "description": "Ücretsiz çevrimiçi oluşturucumuzla anında güzel Arapça hat sanatı oluşturun. 13+ profesyonel fonttan seçim yapın, renkleri ve arka planları özelleştirin, yüksek kaliteli PNG/SVG dosyalarını indirin.",
+        "useCases": {
+          "title": "Popüler Kullanım Alanları",
+          "weddingInvitations": "Düğün davetiyeleri",
+          "islamicArt": "İslami sanat projeleri",
+          "socialMedia": "Sosyal medya gönderileri",
+          "businessLogos": "İş logoları",
+          "educational": "Eğitim materyalleri",
+          "religious": "Dini süslemeler"
+        },
+        "keywords": "Anahtar kelimeler: Arapça hat sanatı oluşturucu, İslami sanat, Arapça fontlar, hat sanatı yapıcı, Arapça metin tasarımı, İslami hat sanatı, Arapça tipografi, ücretsiz hat sanatı aracı"
+      },
+      "fontTooltip": {
+        "textExamples": "Metin Örnekleri",
+        "tryFont": "Oluşturucuda {fontName} Deneyin"
+      },
+      "seoContent": {
+        "aboutTitle": "Arapça Hat Sanatı Oluşturucu Hakkında",
+        "professionalTypography": {
+          "title": "Profesyonel Arapça Tipografi",
+          "description1": "Arapça hat sanatı oluşturucumuz, çarpıcı İslami sanat, düğün davetiyeleri, iş logoları ve eğitim materyalleri oluşturmak için profesyonel düzeyde tipografi araçları sunar. 13'ten fazla özenle seçilmiş Arapça fontla, geleneksel Arapça yazı estetiğine saygı duyan otantik hat sanatı oluşturabilirsiniz.",
+          "description2": "Koleksiyonumuzdaki her font farklı kaligrafi stillerini temsil eder: klasik Nesih ve Sülüs'ten modern Kufi ve çağdaş sans-serif tasarımlara kadar. Geleneksel İslami sanat projeleri ve modern grafik tasarım ihtiyaçları için mükemmel."
+        },
+        "featuresTitle": "Ücretsiz Çevrimiçi Araç Özellikleri",
+        "keywordsTitle": "Popüler Anahtar Kelimeler",
+        "keywordsList": "Arapça hat sanatı oluşturucu, İslami sanat yapıcı, Arapça font oluşturucu, kaligrafi tasarım aracı, Arapça tipografi, İslami kaligrafi oluşturucu, Arapça metin tasarımı, ücretsiz kaligrafi yapıcı, Arapça yazı oluşturucu, İslami sanat oluşturucu, Arapça logo yapıcı, düğün davetiyeleri için Arapça metin"
+      }
+    },
+    "useCasesSection": {
+      "title": "Neler Yaratabilirsiniz?",
+      "socialMedia": {
+        "title": "Sosyal Medya",
+        "subtitle": "Sosyal Medya İçin Mükemmel",
+        "description": "Güzel Arapça tipografi ile göz alıcı gönderiler, hikayeler ve profil grafikleri oluşturun.",
+        "instagram": "Instagram gönderileri ve hikayeleri",
+        "facebook": "Facebook kapak fotoğrafları",
+        "twitter": "Twitter grafikleri",
+        "profiles": "Arapça monogramlı profil resimleri",
+        "imageAlt": "Sosyal medya örnekleri"
+      },
+      "print": {
+        "title": "Baskı",
+        "subtitle": "Baskı Materyalleri",
+        "description": "Yüksek kaliteli Arapça hat sanatı ile profesyonel baskı materyalleri tasarlayın.",
+        "invitations": "Düğün ve etkinlik davetiyeleri",
+        "business": "Kartvizitler ve antetli kağıtlar",
+        "posters": "Afişler ve pankartlar",
+        "certificates": "Sertifikalar ve ödüller"
+      },
+      "web": {
+        "title": "Web",
+        "subtitle": "Web Grafikleri",
+        "description": "Arapça tipografi ile çarpıcı web grafikleri ve dijital içerikler oluşturun.",
+        "logos": "Web sitesi logoları ve başlıkları",
+        "banners": "Web bannerları ve reklamları",
+        "icons": "Özel Arapça ikonlar",
+        "graphics": "Dijital grafikler ve illüstrasyonlar"
+      },
+      "art": {
+        "title": "Sanat",
+        "subtitle": "Sanatsal Eserler",
+        "description": "Sanatsal Arapça hat sanatı tasarımlarıyla yaratıcılığınızı ifade edin.",
+        "wallArt": "Duvar sanatı ve dekorasyonları",
+        "islamic": "İslami sanat ve ayetler",
+        "modern": "Modern hat sanatı",
+        "traditional": "Geleneksel Arapça yazılar"
+      },
+      "description": "Arap kaligrafi üreticimizin çeşitli endüstrilerde ve kişisel projelerde farklı yaratıcı ihtiyaçlara nasıl hizmet ettiğini keşfedin"
+    }
+  },
+  "generator": {
+    "title": "Arapça Hat Sanatı Jeneratörü Özellikleri",
+    "availableFonts": "Mevcut Arapça Yazı Tipleri:",
+    "toolFeatures": "Araç Özellikleri:",
+    "jsRequired": "Arapça hat sanatı jeneratörünü kullanmak için JavaScript gereklidir. Lütfen tarayıcınızda JavaScript'i etkinleştirin.",
+    "fonts": {
+      "amiri": "Amiri (Geleneksel Nesih)",
+      "scheherazade": "Scheherazade (Geleneksel)",
+      "reemKufi": "Reem Kufi (Geometrik)",
+      "arefRuqaa": "Aref Ruqaa (Divani Stili)",
+      "cairo": "Cairo (Modern Sans-serif)",
+      "moreFonts": "Ve 8'den fazla premium yazı tipi"
+    },
+    "features": {
+      "freeGenerator": "Ücretsiz online Arapça metin jeneratörü",
+      "instantDownload": "Anında PNG ve SVG indirme",
+      "colorCustomization": "Gradyan ve renk özelleştirme",
+      "backgroundPatterns": "Arka plan desenleri ve resimleri",
+      "mobileFriendly": "Mobil uyumlu arayüz",
+      "noRegistration": "Kayıt gerekmez"
+    },
+    "tabs": {
+      "text": "Metin",
+      "style": "Stil",
+      "advanced": "Gelişmiş"
+    },
+    "textTab": {
+      "arabicText": "Arapça Metin",
+      "hideKeyboard": "Klavyeyi Gizle",
+      "showKeyboard": "Klavyeyi Göster",
+      "placeholder": "Arapça metni buraya girin...",
+      "templates": "Şablonlar",
+      "font": "Yazı Tipi",
+      "preview": "Önizleme",
+      "selectFont": "Yazı tipi seçin",
+      "categories": "Kategoriler",
+      "fontSize": "Yazı Tipi Boyutu",
+      "resetText": "Metni Sıfırla"
+    },
+    "styleTab": {
+      "textColor": "Metin Rengi",
+      "useGradient": "Gradyan Kullan",
+      "gradientFrom": "Gradyan Başlangıç",
+      "gradientTo": "Gradyan Bitiş",
+      "backgroundColor": "Arka Plan Rengi",
+      "backgroundImage": "Arka Plan Resmi",
+      "uploadImage": "Resim Yükle",
+      "backgroundPattern": "Arka Plan Deseni",
+      "alignment": "Metin Hizalama",
+      "left": "Sol",
+      "center": "Orta",
+      "right": "Sağ"
+    },
+    "advancedTab": {
+      "fontWeight": "Yazı Tipi Kalınlığı",
+      "fontStyle": "Yazı Tipi Stili",
+      "normal": "Normal",
+      "italic": "İtalik",
+      "letterSpacing": "Harf Aralığı",
+      "lineHeight": "Satır Yüksekliği",
+      "shadow": "Metin Gölgesi",
+      "shadowX": "Gölge X",
+      "shadowY": "Gölge Y",
+      "shadowBlur": "Gölge Bulanıklığı",
+      "shadowColor": "Gölge Rengi",
+      "border": "Kenarlık",
+      "borderColor": "Kenarlık Rengi",
+      "borderWidth": "Kenarlık Kalınlığı",
+      "borderRadius": "Kenarlık Yuvarlaklığı",
+      "padding": "İç Boşluk",
+      "kashida": "Kashida (Uzatma)",
+      "kashidaLength": "Kashida Uzunluğu"
+    },
+    "preview": {
+      "title": "Önizleme",
+      "downloadPNG": "PNG İndir",
+      "downloadSVG": "SVG İndir",
+      "share": "Paylaş"
+    },
+    "featuredDesigns": {
+      "title": "Öne Çıkan Tasarımlar",
+      "topPicks": "En İyiler",
+      "viewAllTemplates": "Tüm Şablonları Görüntüle"
+    },
+    "quickLinks": {
+      "title": "Hızlı Bağlantılar",
+      "blog": "Blog",
+      "faq": "SSS"
+    },
+    "tooltips": {
+      "resetDefaults": "Varsayılanlara sıfırla",
+      "fullscreen": "Tam ekran önizleme",
+      "exitFullscreen": "Tam ekrandan çık"
+    },
+    "toasts": {
+      "downloadStarted": "İndirme Başlatıldı",
+      "preparingPNG": "Arapça hat eseriniz PNG olarak hazırlanıyor...",
+      "preparingSVG": "Arapça hat eseriniz SVG olarak hazırlanıyor...",
+      "downloadFailed": "İndirme Başarısız Oldu",
+      "downloadError": "Hat eserinizi indirirken bir hata oluştu. Lütfen tekrar deneyin.",
+      "preparingImage": "Resim Hazırlanıyor",
+      "generatingImage": "Paylaşım için resim oluşturuluyor...",
+      "designApplied": "Tasarım Uygulandı",
+      "designAppliedDesc": "Seçilen tasarım tuvalinize uygulandı.",
+      "shareTitle": "Arapça Hat Sanatı Tasarımı",
+      "shareText": "Oluşturduğum bu harika Arapça hat sanatına bir göz atın!",
+      "templateApplied": "Şablon Uygulandı",
+      "templateAppliedDesc": "Seçilen şablon tuvalinize uygulandı.",
+      "downloadComplete": "İndirme Tamamlandı",
+      "downloadCompletePNG": "Arapça hat eseriniz PNG olarak indirildi.",
+      "downloadCompleteSVG": "Arapça hat eseriniz SVG olarak indirildi.",
+      "imageGenerationFailed": "Resim Oluşturma Başarısız Oldu",
+      "imageGenerationFailedDesc": "Resim oluşturulamadı. Lütfen tekrar deneyin.",
+      "copyingImage": "Resim Kopyalanıyor",
+      "copyingImageDesc": "Resim panoya kopyalanmak üzere hazırlanıyor...",
+      "imageCopied": "Resim Kopyalandı",
+      "imageCopiedDesc": "Hat sanatı resmi panonuza kopyalandı.",
+      "copyFailed": "Kopyalama Başarısız Oldu",
+      "copyFailedDesc": "Resim kopyalanamadı. Tarayıcınız bu özelliği desteklemiyor veya izin reddedilmiş olabilir.",
+      "copyError": "Kopyalama Hatası",
+      "copyErrorDesc": "Kopyalamak için resim blobu oluşturulamadı.",
+      "copyErrorUnexpected": "Resmi kopyalamaya çalışırken beklenmedik bir hata oluştu.",
+      "copiedToClipboard": "Panoya Kopyalandı",
+      "copiedToClipboardDesc": "Metniniz panoya kopyalandı.",
+      "copyFailedText": "Panoya kopyalanırken bir hata oluştu.",
+      "error": "Hata",
+      "previewNotFound": "Önizleme öğesi bulunamadı.",
+      "previewNotFoundShare": "Önizleme öğesi bulunamadı. Paylaşım için resim hazırlanamıyor.",
+      "sharingNotAvailable": "Paylaşım Mevcut Değil",
+      "sharingNotAvailableDesc": "Tarayıcınız Web Paylaşım API'sini desteklemiyor. Paylaşmak için resmi indirmeyi deneyin.",
+      "imageShareNotSupported": "Resim Paylaşımı Tam Desteklenmiyor",
+      "imageShareNotSupportedDesc": "Tarayıcınız veya seçilen paylaşım hedefi, resimleri doğrudan paylaşmayı desteklemeyebilir. Bunun yerine metin içeriği paylaşılıyor.",
+      "sharedSuccessfully": "Başarıyla Paylaşıldı",
+      "sharedSuccessfullyDesc": "Hat eseriniz paylaşıldı.",
+      "shareFailed": "Paylaşım Başarısız Oldu",
+      "shareFailedDesc": "Hat eserinizi paylaşırken bir hata oluştu. Lütfen tekrar deneyin veya resmi indirin.",
+      "resetComplete": "Sıfırlama Tamamlandı",
+      "resetCompleteDesc": "Tüm ayarlar varsayılanlara sıfırlandı."
+    },
+    "fontCategories": {
+      "Traditional": "Geleneksel",
+      "Diwani": "Divani",
+      "Kufi": "Kufi",
+      "Nastaliq": "Nestalik",
+      "Modern": "Modern",
+      "Display": "Gösterişli"
+    },
+    "backgroundPatterns": {
+      "None": "Yok",
+      "Geometric": "Geometrik",
+      "Arabesque": "Arabesk",
+      "Islamic Patterns": "İslami Desenler",
+      "Dots": "Noktalar"
+    },
+    "commonPhrases": {
+      "bismillah": "Rahman ve Rahim olan Allah'ın adıyla",
+      "alhamdulillah": "Allah'a hamd olsun",
+      "mashallah": "Maşallah",
+      "subhanallah": "Sübhanallah",
+      "allahuakbar": "Allahu Ekber",
+      "lailahaillallah": "Allah'tan başka ilah yoktur",
+      "astaghfirullah": "Allah'tan af dilerim",
+      "allahummasalli": "Allah'ım, Muhammed'e salat ve selam eyle"
+    },
+    "ui": {
+      "calligraphyControls": "Hat Sanatı Kontrolleri",
+      "text": "Metin",
+      "style": "Stil",
+      "advanced": "Gelişmiş",
+      "textColor": "Metin Rengi",
+      "gradient": "Gradyan",
+      "from": "Başlangıç",
+      "to": "Bitiş",
+      "background": "Arka Plan",
+      "color": "Renk",
+      "image": "Resim",
+      "pattern": "Desen",
+      "upload": "Yükle",
+      "backgroundPattern": "Arka Plan Deseni",
+      "selectPattern": "Desen seçin",
+      "textShadow": "Metin Gölgesi",
+      "horizontal": "Yatay",
+      "vertical": "Dikey",
+      "blur": "Bulanıklık",
+      "opacity": "Opaklık",
+      "fontWeight": "Yazı Tipi Kalınlığı",
+      "fontStyle": "Yazı Tipi Stili",
+      "selectWeight": "Kalınlık seçin",
+      "selectStyle": "Stil seçin",
+      "light": "İnce",
+      "regular": "Normal",
+      "medium": "Orta",
+      "bold": "Kalın",
+      "normal": "Normal",
+      "italic": "İtalik",
+      "alignment": "Hizalama",
+      "letterSpacing": "Harf Aralığı",
+      "lineHeight": "Satır Yüksekliği",
+      "kashida": "Kashida (Uzatma)",
+      "kashidaDesc": "Kashida, belirli Arapça harflere uzatma ekleyerek metnin estetik kalitesini artırır.",
+      "length": "Uzunluk",
+      "border": "Kenarlık",
+      "borderColor": "Kenarlık Rengi",
+      "borderWidth": "Kenarlık Kalınlığı",
+      "borderRadius": "Kenarlık Yuvarlaklığı",
+      "padding": "İç Boşluk",
+      "featuredTemplates": "Öne Çıkan Şablonlar",
+      "favorites": "Favoriler",
+      "aboutArabicCalligraphy": "Arapça Hat Sanatı Hakkında",
+      "aboutArabicCalligraphyDesc": "Arapça hat sanatı (خط عربي), Arap alfabesine dayanan el yazısı ve kaligrafi sanatıdır. Arapçada 'çizgi', 'tasarım' veya 'inşa' kelimelerinden türeyen 'khatt' olarak bilinir.",
+      "readMoreHistory": "Arapça hat sanatının tarihi hakkında daha fazla bilgi edinin",
+      "exploreFonts": "Yazı tipi koleksiyonumuzu keşfedin",
+      "viewAllTemplates": "Tüm Şablonları Görüntüle"
+    },
+    "sponsor": {
+      "supportButton": "☕ Bizi Destekle ($3)"
+    }
+  },
+  "seo": {
+    "structuredData": {
+      "featureList": [
+        "Kufi, Nesih, Divani stilleri dahil 13+ Arapça yazı tipi",
+        "Gerçek zamanlı Arapça metin oluşturma",
+        "Gradyan ve renk özelleştirme",
+        "Arka plan desenleri ve resimleri",
+        "PNG ve SVG olarak dışa aktarma",
+        "Mobil uyumlu arayüz",
+        "Kayıt gerekmez"
+      ],
+      "applicationCategory": "TasarımUygulaması",
+      "operatingSystem": "Web Tarayıcısı",
+      "browserRequirements": "JavaScript'in etkinleştirilmesini gerektirir",
+      "authorName": "Arapça Hat Sanatı Jeneratörü"
+    }
+  }
 }

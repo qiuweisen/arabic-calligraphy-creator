@@ -1,9 +1,9 @@
 {
 	"metadata": {
-		"title": "Arabic Calligraphy Generator - Free Online Tool & Premium Fonts",
-		"title_desktop": "Arabic Calligraphy Generator - Professional Online Design Tool",
-		"description": "Professional Arabic calligraphy creator. 17+ fonts with commercial license. Instant PNG/SVG download, no watermarks. Join 100,000+ designers. Free tool, no signup required.",
-		"description_desktop": "Professional Arabic calligraphy creator. 17+ fonts with commercial license. Instant PNG/SVG download, no watermarks. Join 100,000+ designers. Free tool, no signup required.",
+		"title": "Arabic Calligraphy Generator – Create Stunning Designs Online",
+		"title_desktop": "Arabic Calligraphy Generator – Professional Design Tool",
+		"description": "Create professional Arabic calligraphy with 17 curated fonts, AI-powered design suggestions, and instant PNG/SVG export. Free, no registration required.",
+		"description_desktop": "Create professional Arabic calligraphy with 17 curated fonts, AI-powered design suggestions, and instant PNG/SVG export. Free, no registration required.",
 		"keywords": "Arabic calligraphy generator, Arabic fonts, Islamic calligraphy, Arabic text generator, free Arabic fonts, online calligraphy maker, Arabic calligraphy design, Arabic typography, Islamic art generator"
 	},
 	"common": {
@@ -59,7 +59,7 @@
 		"dontShowAgain": "Don't show again"
 	},
 	"footer": {
-		"description": "Create beautiful Arabic calligraphy with our free online Arabic calligraphy generator.",
+		"description": "The best free Arabic calligraphy generator online. Create beautiful Arabic calligraphy designs, logos, and text art with our professional Arabic calligraphy font generator.",
 		"arabicCalligraphy": "Arabic Calligraphy",
 		"generator": "Arabic Calligraphy Generator",
 		"features": "Generator Features",
@@ -87,6 +87,33 @@
 			"businessLogos": "Business Logos",
 			"privacyPolicy": "Privacy Policy",
 			"termsOfService": "Terms of Service"
+		},
+		"generatorTools": {
+			"title": "Generator Tools",
+			"arabicCalligraphy": {
+				"title": "Arabic Calligraphy Generator",
+				"desc": "Create stunning Arabic calligraphy designs"
+			},
+			"arabicFont": {
+				"title": "Arabic Font Generator",
+				"desc": "17+ authentic Arabic fonts online"
+			},
+			"arabicLogo": {
+				"title": "Arabic Logo Generator",
+				"desc": "Design professional Arabic logos"
+			},
+			"arabicName": {
+				"title": "Arabic Name Generator",
+				"desc": "Personalized Arabic name calligraphy"
+			},
+			"kuficScript": {
+				"title": "Kufic Script Generator",
+				"desc": "Geometric Kufic calligraphy styles"
+			},
+			"kuficCalligraphy": {
+				"title": "Kufic Calligraphy Generator",
+				"desc": "Traditional Kufic script designs"
+			}
 		}
 	},
 	"homepage": {
@@ -364,6 +391,18 @@
 				{
 					"question": "Why choose this online Arabic calligraphy generator over desktop software?",
 					"answer": "Our online Arabic calligraphy generator eliminates all the hassles of desktop software: no downloads, no installations, no compatibility issues, and no expensive licenses. Access from any device, automatic updates, instant sharing capabilities, and cloud-based convenience. Plus, our tool is specifically optimized for Arabic calligraphy, unlike generic design software that struggles with RTL text and Arabic fonts."
+				},
+				{
+					"question": "Can I create Kufic calligraphy for logos?",
+					"answer": "Absolutely! Our generator includes authentic Kufic fonts perfect for creating bold, geometric logos. Kufic script is ideal for modern branding, architectural designs, and minimalist aesthetics. Simply select a Kufic font and customize the design to match your brand."
+				},
+				{
+					"question": "How do I make personalized Arabic name calligraphy?",
+					"answer": "Type or paste the Arabic name into our generator, choose from 17 calligraphy styles, customize colors and backgrounds, then download. It's perfect for personalized gifts, wedding decorations, baby announcements, or social media posts."
+				},
+				{
+					"question": "Can I import the calligraphy into Figma, Canva, or Adobe apps?",
+					"answer": "Yes! Export your design as PNG or SVG, then import it into Figma, Canva, Adobe Illustrator, Photoshop, InDesign, or any design software. SVG format is especially useful for maintaining quality when resizing in professional design tools."
 				}
 			]
 		},
