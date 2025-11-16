@@ -1,785 +1,824 @@
 {
-	"metadata": {
-		"title": "Arabische Kalligraphie Generator - Kostenloses Online-Tool",
-		"title_desktop": "Professionelles Arabische Kalligraphie Tool | 17+ Premium Schriftarten | Design-Plattform",
-		"description": "🎨 KOSTENLOSER Arabische Kalligraphie Generator | Erstellen Sie sofort atemberaubende islamische Kunst online! 13+ Schriftarten, sofortiger PNG/SVG-Download. Keine Anmeldung erforderlich ✨",
-		"description_desktop": "Professionelles Arabische Kalligraphie Design-Tool | Erstellen Sie atemberaubende islamische Kunst mit 17+ Premium-Schriftarten. Vertraut von 50K+ Designern & Unternehmen. Hochwertige PNG/SVG-Exporte. Erweiterte Typografie-Features.",
-		"keywords": "Arabische Kalligraphie Generator, arabische Schriftarten, islamische Kalligraphie, arabischer Textgenerator, kostenlose arabische Schriftarten, Online-Kalligraphie-Ersteller"
-	},
-	"common": {
-		"loading": "Laden...",
-		"error": "Fehler",
-		"close": "Schließen",
-		"continue": "Weiter",
-		"cancel": "Abbrechen",
-		"confirm": "Bestätigen",
-		"save": "Speichern",
-		"download": "Herunterladen",
-		"share": "Teilen",
-		"copy": "Kopieren",
-		"copied": "Kopiert!",
-		"yes": "Ja",
-		"no": "Nein"
-	},
-	"ads": {
-		"sponsored": "Gesponsert",
-		"supportUs": "Unterstützen"
-	},
-	"navigation": {
-		"generator": "Generator",
-		"arabicFonts": "Arabische Schriftarten",
-		"learningGuides": "Lernanleitungen",
-		"howToTutorials": "Anleitungen",
-		"freeResources": "Kostenlose Ressourcen",
-		"useCases": "Anwendungsfälle",
-		"blog": "Blog",
-		"faq": "FAQ",
-		"contact": "Kontakt",
-		"dropdown": {
-			"completeBeginner": "Vollständiger Anfängerleitfaden",
-			"fontComparison": "Leitfaden zum Schriftartenvergleich",
-			"bestFonts2025": "Beste arabische Schriftarten 2025",
-			"typographyTrends": "Typografie-Trends 2025",
-			"createOnline": "Kalligraphie online erstellen",
-			"fontSelection": "Anleitung zur Schriftartenauswahl",
-			"designTips": "Design-Tipps",
-			"downloadFonts": "Schriftarten herunterladen & verwenden",
-			"freeArabicFonts": "Kostenlose arabische Schriftarten"
-		}
-	},
-	"languageSwitcher": {
-		"selectLanguage": "Sprache auswählen",
-		"currentLanguage": "Aktuelle Sprache"
-	},
-	"languagePrompt": {
-		"title": "Willkommen! Wir bieten unsere Seite in Ihrer Sprache an",
-		"subtitle": "Möchten Sie zu {language} wechseln?",
-		"useLanguage": "{language} verwenden",
-		"continueEnglish": "Auf Englisch fortfahren",
-		"dontShowAgain": "Nicht erneut anzeigen"
-	},
-	"footer": {
-		"description": "Erstellen Sie wunderschöne arabische Kalligraphie mit unserem kostenlosen Online-Generator für arabische Kalligraphie.",
-		"arabicCalligraphy": "Arabische Kalligraphie",
-		"generator": "Arabische Kalligraphie Generator",
-		"features": "Generator-Funktionen",
-		"blog": "Kalligraphie-Blog",
-		"faq": "Generator-FAQ",
-		"contact": "Kontaktieren Sie uns",
-		"fonts": "Arabische Schriftarten",
-		"fontLibrary": "Schriftartenbibliothek",
-		"fontComparison": "Schriftartenvergleich",
-		"fontDownloads": "Schriftarten-Downloads",
-		"learning": "Lernressourcen",
-		"beginnerGuide": "Anfängerleitfaden",
-		"tutorials": "Anleitungen",
-		"designTips": "Design-Tipps",
-		"company": "Unternehmen",
-		"about": "Über uns",
-		"privacy": "Datenschutzrichtlinie",
-		"terms": "Nutzungsbedingungen",
-		"copyright": "© 2010-{year} Arabische Kalligraphie Generator. Alle Rechte vorbehalten.",
-		"popular": {
-			"title": "Beliebt",
-			"amiriFont": "Amiri Schriftart",
-			"cairoFont": "Cairo Schriftart",
-			"weddingCalligraphy": "Hochzeitskalligraphie",
-			"businessLogos": "Firmenlogos",
-			"privacyPolicy": "Datenschutzrichtlinie",
-			"termsOfService": "Nutzungsbedingungen"
-		}
-	},
-	"homepage": {
-		"title": "Arabische Kalligraphie Generator",
-		"subtitle": "Schöne Designs Erstellen",
-		"description": "Erstellen Sie sofort atemberaubende arabische Schriftkunst",
-		"intro": "Verwandeln Sie jeden arabischen Text in wunderschöne Kalligraphie mit unserem kostenlosen Online-Generator für arabische Kalligraphie. Dieser leistungsstarke arabische Textgenerator bietet über 13 Premium-Schriftarten online. Erstellen Sie sofort atemberaubende Designs – keine Registrierung erforderlich!",
-		"hero": {
-			"badge": "#1 Kostenloser Arabischer Kalligraphie Generator Online",
-			"subtitle": "Erstellen Sie wunderschöne Designs",
-			"description": "Verwandeln Sie Ihren arabischen Text in atemberaubende Kalligraphie mit unserem kostenlosen Online-Arabischen Kalligraphie-Schriftgenerator. Erstellen Sie professionelle arabische Kalligraphie-Designs, Logos und Textkunst sofort mit Premium-Schriftarten und Anpassungsoptionen.",
-			"value1": "100% Kostenloser Arabischer Kalligraphie Generator",
-			"value2": "Keine Registrierung erforderlich",
-			"value3": "Sofortiger Download",
-			"cta": "Jetzt Arabische Kalligraphie erstellen"
-		},
-		"socialProof": {
-			"designsCreated": "Über 100.000 erstellte Designs",
-			"premiumFonts": "13+ Premium-Schriftarten",
-			"freeForever": "Für immer kostenlos"
-		},
-		"features": {
-			"title": "Funktionen für professionelle arabische Kalligraphie",
-			"description": "Unser kostenloser arabischer Kalligraphie-Generator bietet alles, was Sie brauchen, um professionelle arabische Kalligraphie-Designs, Logos und Kunstwerke zu erstellen.",
-			"fontLibrary": {
-				"title": "Umfangreiche Bibliothek arabischer Schriftarten",
-				"description": "Unser kostenloser Ersteller für arabische Kalligraphie bietet über 13 Premium-Schriftarten online, die von traditionellen Schriften (Kufi, Naskh, Diwani) bis hin zu moderner Typografie reichen. Dieser umfassende arabische Textgenerator enthält eine visuelle Vorschau für eine einfache Schriftartenauswahl.",
-				"items": [
-					"Traditionelle Kalligraphie-Stile",
-					"Moderne arabische Schriftarten",
-					"Dekorative und Display-Optionen"
-				]
-			},
-			"customization": {
-				"title": "Erweiterte Anpassungsoptionen",
-				"description": "Dieses kostenlose Online-Tool für arabische Kalligraphie bietet professionelle Gestaltungsoptionen, einschließlich Farbverlaufseffekten für Text, benutzerdefinierten Hintergründen, Schatten und präzisen Typografie-Steuerungen für perfekte Ergebnisse.",
-				"items": [
-					"Farbverlaufseffekte für Text",
-					"Benutzerdefinierte Hintergrundmuster",
-					"Schatten- und Leuchteffekte"
-				]
-			},
-			"export": {
-				"title": "Professionelle Exportoptionen",
-				"description": "Laden Sie Ihre arabische Kalligraphie in mehreren hochwertigen Formaten herunter. Unser arabischer Textgenerator unterstützt PNG für die Webnutzung und SVG für Druckanwendungen, um sicherzustellen, dass Ihre Designs in jeder Größe perfekt aussehen.",
-				"items": [
-					"Hochauflösender PNG-Export",
-					"Skalierbares SVG-Format",
-					"Druckfertige Qualität"
-				]
-			},
-			"preview": {
-				"title": "Echtzeit-Vorschau der arabischen Kalligraphie",
-				"description": "Sehen Sie Ihre Änderungen sofort mit Live-Vorschau während Sie Schriftarten, Farben und Effekte anpassen."
-			},
-			"mobile": {
-				"title": "Mobil-responsiver arabischer Generator",
-				"description": "Erstellen Sie arabische Kalligraphie auf jedem Gerät - Desktop, Tablet oder Smartphone mit voller responsiver Funktionalität."
-			},
-			"free": {
-				"title": "100% kostenloser arabischer Kalligraphie-Generator",
-				"description": "Keine Registrierung, keine Wasserzeichen, keine versteckten Kosten - völlig kostenloser arabischer Kalligraphie-Generator für immer."
-			},
-			"sharing": {
-				"title": "Einfaches Teilen arabischer Kalligraphie",
-				"description": "Teilen Sie Ihre arabischen Kalligraphie-Designs direkt auf sozialen Medienplattformen oder kopieren Sie sie sofort in die Zwischenablage."
-			},
-			"privacy": {
-				"title": "Datenschutz-geschützter arabischer Generator",
-				"description": "Ihr arabischer Text bleibt völlig privat - wir speichern Ihre Inhalte nicht und benötigen keine persönlichen Informationen."
-			}
-		},
-		"quickStart": {
-			"title": "Schnellstart:",
-			"steps": "Arabischen Text eingeben → Schriftart wählen → Sofort herunterladen"
-		},
-		"howToUse": {
-			"title": "So verwenden Sie unseren arabischen Kalligraphie-Generator",
-			"description": "Erstellen Sie wunderschöne arabische Kalligraphie-Designs in drei einfachen Schritten mit unserem kostenlosen Online-Kalligraphie-Generator. Keine Erfahrung erforderlich!",
-			"step1": {
-				"title": "Arabischen Text eingeben",
-				"description": "Geben Sie Ihren arabischen Text in unseren Kalligraphie-Generator ein. Verwenden Sie bei Bedarf unsere virtuelle arabische Tastatur für eine einfache Texteingabe."
-			},
-			"step2": {
-				"title": "Design anpassen",
-				"description": "Wählen Sie aus Premium-Kalligraphie-Schriftarten, passen Sie Farben, Größe und Ausrichtung an, um Ihr perfektes arabisches Kalligraphie-Design zu erstellen."
-			},
-			"step3": {
-				"title": "Exportieren & Teilen",
-				"description": "Laden Sie Ihre arabische Kalligraphie in hochwertigen PNG- oder SVG-Formaten herunter oder teilen Sie sie direkt auf Social-Media-Plattformen."
-			},
-			"cta": {
-				"title": "Bereit, atemberaubende arabische Kalligraphie zu erstellen?",
-				"description": "Schließen Sie sich Tausenden von Benutzern an, die unserem arabischen Kalligraphie-Generator für ihre Designbedürfnisse vertrauen",
-				"button": "Jetzt arabische Kalligraphie erstellen"
-			}
-		},
-		"useCases": {
-			"title": "Perfekt für jeden Anlass",
-			"wedding": {
-				"title": "Hochzeitseinladungen",
-				"description": "Erstellen Sie elegante arabische Kalligraphie für Hochzeitskarten und Einladungen"
-			},
-			"business": {
-				"title": "Markenbildung für Unternehmen",
-				"description": "Entwerfen Sie professionelle Logos und Markenmaterialien mit arabischer Typografie"
-			},
-			"social": {
-				"title": "Soziale Medien",
-				"description": "Erstellen Sie wunderschöne arabische Zitate und Beiträge für Instagram, Facebook und mehr"
-			},
-			"religious": {
-				"title": "Religiöse Kunst",
-				"description": "Erstellen Sie atemberaubende islamische Kalligraphie für Koranverse und religiöse Texte"
-			}
-		},
-		"faq": {
-			"title": "FAQ zum Arabische Kalligraphie Generator",
-			"q1": {
-				"question": "Ist dieser Arabische Kalligraphie Generator komplett kostenlos?",
-				"answer": "Ja! Unser Arabische Kalligraphie Generator ist zu 100 % kostenlos, ohne versteckte Kosten, Abonnements oder Registrierung. Alle 13+ Premium-Schriftarten, Anpassungsfunktionen und Exportoptionen sind kostenlos enthalten."
-			},
-			"q2": {
-				"question": "Welche Dateiformate kann ich herunterladen?",
-				"answer": "Sie können Ihre arabische Kalligraphie in zwei Formaten herunterladen: PNG (für Fotos und soziale Medien) und SVG (für Druck und skalierbare Grafiken). Beide Formate behalten eine hohe Qualität bei."
-			},
-			"q3": {
-				"question": "Wie viele arabische Schriftarten sind verfügbar?",
-				"answer": "Wir bieten über 13 sorgfältig ausgewählte arabische Schriftarten, darunter traditionelle Stile wie Naskh und Thuluth sowie moderne Schriftarten wie Kufi und dekorative Optionen. Jede Schriftart ist professionell für optimale Lesbarkeit gestaltet."
-			},
-			"q4": {
-				"question": "Kann ich die erstellte Kalligraphie kommerziell nutzen?",
-				"answer": "Ja, Sie können die von Ihnen erstellte arabische Kalligraphie sowohl für private als auch für kommerzielle Zwecke verwenden. Die von uns verwendeten Schriftarten sind entweder Open Source oder für die kommerzielle Nutzung ordnungsgemäß lizenziert."
-			},
-			"q5": {
-				"question": "Funktioniert der Generator auf mobilen Geräten?",
-				"answer": "Absolut! Unser Arabische Kalligraphie Generator ist vollständig responsiv und funktioniert perfekt auf Smartphones, Tablets und Desktop-Computern. Die Benutzeroberfläche passt sich Ihrer Bildschirmgröße an, um das beste Erlebnis zu bieten."
-			}
-		},
-		"testimonials": {
-			"title": "Was unsere Nutzer sagen",
-			"description": "Schließen Sie sich Tausenden zufriedener Nutzer an, die mit unserem kostenlosen Generator beeindruckende arabische Kalligraphie-Designs erstellt haben.",
-			"reviews": [
-				{
-					"name": "Sarah Ahmed",
-					"title": "Grafikdesignerin & Kreativstudio",
-					"content": "Dieser arabische Kalligraphie-Generator hat meinen Design-Workflow revolutioniert. Die Schriftqualität ist außergewöhnlich und die Anpassungsoptionen sind perfekt für professionelle Projekte. Meine Kunden lieben die authentische arabische Typografie!",
-					"date": "Dezember 2024"
-				},
-				{
-					"name": "Mohammed Ali",
-					"title": "Student der Arabistik",
-					"content": "Als Student, der Arabisch lernt, hilft mir dieses Tool, verschiedene Kalligraphie-Stile zu verstehen. Es ist unglaublich benutzerfreundlich und die Vielfalt der Schriftarten macht es perfekt für Bildungsprojekte und Präsentationen.",
-					"date": "November 2024"
-				},
-				{
-					"name": "Fatima Hassan",
-					"title": "Restaurantbesitzerin",
-					"content": "Ich verwende diesen Generator für alle arabischen Beschilderungen und Menüs meines Restaurants. Die professionelle Qualität und Benutzerfreundlichkeit haben mir Hunderte von Euro an Designkosten gespart. Sehr empfehlenswert für jedes Unternehmen!",
-					"date": "November 2024"
-				},
-				{
-					"name": "Ahmad Khalil",
-					"title": "Hochzeitsplaner",
-					"content": "Perfekt für die Erstellung schöner Hochzeitseinladungen und dekorativer Elemente. Die arabischen Kalligraphie-Stile sind authentisch und elegant. Das Beste daran? Es ist völlig kostenlos ohne Wasserzeichen!",
-					"date": "Oktober 2024"
-				},
-				{
-					"name": "Dr. Amina Rashid",
-					"title": "Arabischlehrerin",
-					"content": "Ich verwende dieses Tool regelmäßig zur Erstellung von Lernmaterialien und Klassenausstellungen. Meine Schüler lieben es, ihre Namen in schöner arabischer Kalligraphie zu sehen. Es macht das Lernen engagierter und unterhaltsamer!",
-					"date": "Oktober 2024"
-				},
-				{
-					"name": "Omar Zaid",
-					"title": "Freelance-Designer",
-					"content": "Dieser Generator ist zu einem wesentlichen Bestandteil meines Design-Toolkits geworden. Die Exportqualität ist ausgezeichnet und Kunden sind immer von der authentischen arabischen Kalligraphie beeindruckt. Es hat mein Geschäft erheblich gesteigert!",
-					"date": "September 2024"
-				}
-			]
-		},
-		"cta": {
-			"title": "Beste kostenlose Online-App für arabische Kalligraphie",
-			"description": "Erleben Sie das umfassendste kostenlose Online-Tool für arabische Kalligraphie. Schließen Sie sich Tausenden von Benutzern an, die mit unserem arabischen Textgenerator atemberaubende arabische Designs erstellen. Starten Sie jetzt - es ist völlig kostenlos!",
-			"button": "Jetzt mit dem Erstellen beginnen",
-			"features": {
-				"noRegistration": "Keine Registrierung",
-				"free": "100 % kostenlos",
-				"instantDownload": "Sofortiger Download"
-			}
-		},
-		"technicalFeatures": {
-			"title": "Erweiterte arabische Typografie-Funktionen",
-			"fontCollection": {
-				"title": "Schriftsammlung & Stile",
-				"traditional": "Traditionelle Schriften: Amiri (Naskh), Scheherazade, Lateef, Markazi Text",
-				"decorative": "Dekorative Stile: Aref Ruqaa (Diwani), Jomhuria, Rakkas, Lemonada",
-				"modern": "Moderne Typografie: Cairo, Harmattan, Mada, Tajawal, El Messiri",
-				"specialized": "Spezialisierte Schriften: Reem Kufi (Geometrisch), Mirza (Nastaliq), Marhey (Display)",
-				"note": "Alle Schriftarten unterstützen die RTL-Textrichtung, arabische Diakritika (Harakat) und die Kashida-Dehnung für authentische Kalligraphie."
-			},
-			"export": {
-				"title": "Export & Kompatibilität",
-				"formats": "Ausgabeformate: PNG (transparenter Hintergrund), SVG (skalierbarer Vektor)",
-				"quality": "Qualitätsoptionen: Hochauflösender Export, geeignet für Druck und digitale Nutzung",
-				"browsers": "Browser-Unterstützung: Chrome, Firefox, Safari, Edge - alle modernen Browser",
-				"devices": "Gerätekompatibilität: Desktop, Tablet und mobil-responsives Design",
-				"note": "Kostenlos für die kommerzielle Nutzung. Keine Wasserzeichen, keine Registrierung erforderlich. Funktioniert vollständig in Ihrem Browser für den Datenschutz."
-			}
-		},
-		"professionalUse": {
-			"title": "Professionelle Anwendungen für arabische Kalligraphie",
-			"business": {
-				"title": "Geschäft & Markenbildung",
-				"logo": {
-					"title": "Firmenlogos & Identität",
-					"description": "Erstellen Sie unverwechselbare arabische Markennamen mit traditionellen oder modernen Kalligraphie-Stilen"
-				},
-				"restaurant": {
-					"title": "Restaurant & Gastgewerbe",
-					"description": "Entwerfen Sie authentische arabische Beschilderungen, Menüs und Werbematerialien"
-				},
-				"marketing": {
-					"title": "Marketingmaterialien",
-					"description": "Professionelle arabische Typografie für Broschüren, Anzeigen und digitale Kampagnen"
-				}
-			},
-			"personal": {
-				"title": "Persönlich & Kulturell",
-				"wedding": {
-					"title": "Hochzeits- & Veranstaltungseinladungen",
-					"description": "Elegante arabische Kalligraphie für besondere Anlässe und Feiern"
-				},
-				"islamic": {
-					"title": "Islamische Kunst & Dekoration",
-					"description": "Wunderschöne Koranverse, Hadithe und islamische Phrasen für die Heimdekoration"
-				},
-				"social": {
-					"title": "Inhalte für soziale Medien",
-					"description": "Auffällige arabische Beiträge für Instagram, Facebook und andere Plattformen"
-				}
-			}
-		},
-		"detailedFaq": {
-			"title": "FAQ zum Arabische Kalligraphie Generator",
-			"viewAll": "Alle FAQs anzeigen",
-			"questions": [
-				{
-					"question": "Ist dieser Arabische Kalligraphie Generator komplett kostenlos?",
-					"answer": "Ja! Unser Arabische Kalligraphie Generator ist zu 100 % kostenlos, ohne versteckte Kosten, Abonnements oder Registrierung. Alle 13+ Premium-Schriftarten, Anpassungsfunktionen und Exportoptionen sind kostenlos enthalten."
-				},
-				{
-					"question": "Welche arabischen Schriftarten und Kalligraphie-Stile sind verfügbar?",
-					"answer": "Wir bieten über 13 sorgfältig ausgewählte arabische Schriftarten, die traditionelle Kalligraphie-Stile (Kufi, Naskh, Diwani, Nastaliq) und moderne arabische Typografie abdecken. Jede Schriftart unterstützt die RTL-Textrichtung, arabische Diakritika (Harakat) und eine authentische Wiedergabe der arabischen Schrift."
-				},
-				{
-					"question": "Welche Dateiformate und welche Qualität kann ich herunterladen?",
-					"answer": "Sie können Ihre arabische Kalligraphie als hochauflösende PNG-Dateien (mit transparentem Hintergrund) oder skalierbare SVG-Vektordateien exportieren. Beide Formate eignen sich für professionellen Druck, digitale Medien und kommerzielle Anwendungen."
-				},
-				{
-					"question": "Kann ich die erstellte Kalligraphie für kommerzielle Projekte verwenden?",
-					"answer": "Ja, Sie können Ihre erstellten arabischen Kalligraphie-Designs ohne Einschränkungen sowohl für persönliche als auch für kommerzielle Projekte verwenden. Dies umfasst Firmenlogos, Marketingmaterialien, Hochzeitseinladungen und alle anderen kommerziellen Anwendungen."
-				},
-				{
-					"question": "Funktioniert dieser Arabische Kalligraphie Generator auf mobilen Geräten?",
-					"answer": "Absolut! Unser Arabische Kalligraphie Generator ist vollständig responsiv und für Smartphones, Tablets und Desktop-Computer optimiert. Die Benutzeroberfläche passt sich Ihrer Bildschirmgröße an und behält dabei die volle Funktionalität."
-				},
-				{
-					"question": "Ist dies der beste kostenlose Online-Generator für arabische Kalligraphie, der verfügbar ist?",
-					"answer": "Unser kostenloser Online-Generator für arabische Kalligraphie zeichnet sich durch über 13 Premium-Schriftarten, sofortige PNG/SVG-Downloads und keine Registrierungsanforderungen aus. Im Gegensatz zu vielen arabischen Textgeneratoren, die Abonnements erfordern, liefert unser Kalligraphie-Ersteller professionelle Ergebnisse völlig kostenlos."
-				},
-				{
-					"question": "Unterstützt das Tool arabischen Text mit Diakritika (Harakat)?",
-					"answer": "Ja, unser Arabische Kalligraphie Generator unterstützt arabischen Text mit Diakritika (Harakat/اعراب). Sie können Text mit Vokalzeichen eingeben, und der Generator rendert diese entsprechend den Fähigkeiten jeder Schriftart. Dies ist unerlässlich für Koranverse und formellen arabischen Text."
-				},
-				{
-					"question": "Wie schneidet dieser Kalligraphie-Ersteller im Vergleich zu Desktop-Software ab?",
-					"answer": "Unser kostenloses Online-Tool für arabische Kalligraphie bietet mehrere Vorteile gegenüber Desktop-Software: sofortiger Zugriff ohne Downloads, automatische Updates, plattformübergreifende Kompatibilität und Cloud-basierter Komfort. Während Desktop-Software möglicherweise erweiterte Funktionen bietet, bietet unser arabischer Textgenerator die perfekte Balance aus Funktionalität und Zugänglichkeit für die Bedürfnisse der meisten Benutzer."
-				}
-			]
-		},
-		"generator": {
-			"title": "Funktionen des Arabische Kalligraphie Generators",
-			"availableFonts": "Verfügbare arabische Schriftarten:",
-			"toolFeatures": "Tool-Funktionen:",
-			"fonts": {
-				"amiri": "Amiri (Traditionelles Naskh)",
-				"scheherazade": "Scheherazade (Traditionell)",
-				"reemKufi": "Reem Kufi (Modernes Kufi)",
-				"arefRuqaa": "Aref Ruqaa (Diwani-Stil)",
-				"cairo": "Cairo (Moderne Sans-serif)",
-				"moreFonts": "Und 8+ weitere Premium-Schriftarten"
-			},
-			"features": {
-				"freeGenerator": "Kostenloser Online-Generator für arabischen Text",
-				"instantDownload": "Sofortiger PNG- und SVG-Download",
-				"colorCustomization": "Farbverlaufs- und Farbanpassung",
-				"backgroundPatterns": "Hintergrundmuster und -bilder",
-				"mobileFriendly": "Mobilfreundliche Oberfläche",
-				"noRegistration": "Keine Registrierung erforderlich"
-			},
-			"jsRequired": "Dieser Kalligraphie-Ersteller benötigt JavaScript, um zu funktionieren. Bitte aktivieren Sie JavaScript in Ihrem Browser, um das interaktive Tool zu verwenden.",
-			"tabs": {
-				"text": "Text",
-				"style": "Stil",
-				"advanced": "Erweitert"
-			},
-			"textTab": {
-				"arabicText": "Arabischer Text",
-				"hideKeyboard": "Tastatur ausblenden",
-				"showKeyboard": "Tastatur einblenden",
-				"placeholder": "Geben Sie hier arabischen Text ein...",
-				"templates": "Vorlagen",
-				"font": "Schriftart",
-				"preview": "Vorschau",
-				"selectFont": "Schriftart auswählen",
-				"categories": "Kategorien",
-				"fontSize": "Schriftgröße",
-				"resetText": "Text zurücksetzen"
-			},
-			"styleTab": {
-				"textColor": "Textfarbe",
-				"useGradient": "Farbverlauf verwenden",
-				"gradientFrom": "Farbverlauf von",
-				"gradientTo": "Farbverlauf bis",
-				"backgroundColor": "Hintergrundfarbe",
-				"backgroundImage": "Hintergrundbild",
-				"uploadImage": "Bild hochladen",
-				"backgroundPattern": "Hintergrundmuster",
-				"alignment": "Textausrichtung",
-				"left": "Links",
-				"center": "Zentriert",
-				"right": "Rechts"
-			},
-			"advancedTab": {
-				"fontWeight": "Schriftstärke",
-				"fontStyle": "Schriftstil",
-				"normal": "Normal",
-				"italic": "Kursiv",
-				"letterSpacing": "Zeichenabstand",
-				"lineHeight": "Zeilenhöhe",
-				"shadow": "Textschatten",
-				"shadowX": "Schatten X",
-				"shadowY": "Schatten Y",
-				"shadowBlur": "Schatten-Unschärfe",
-				"shadowColor": "Schattenfarbe",
-				"border": "Rahmen",
-				"borderColor": "Rahmenfarbe",
-				"borderWidth": "Rahmenbreite",
-				"borderRadius": "Rahmenradius",
-				"padding": "Innenabstand",
-				"kashida": "Kashida-Erweiterung",
-				"kashidaLength": "Kashida-Länge"
-			},
-			"preview": {
-				"title": "Vorschau",
-				"downloadPNG": "PNG herunterladen",
-				"downloadSVG": "SVG herunterladen",
-				"share": "Teilen"
-			},
-			"featuredDesigns": {
-				"title": "Vorgestellte Designs",
-				"topPicks": "Top-Auswahl",
-				"viewAllTemplates": "Alle Vorlagen anzeigen"
-			},
-			"quickLinks": {
-				"title": "Schnellinks",
-				"blog": "Blog",
-				"faq": "FAQ"
-			},
-			"tooltips": {
-				"resetDefaults": "Auf Standard zurücksetzen",
-				"fullscreen": "Vollbildvorschau",
-				"exitFullscreen": "Vollbild verlassen"
-			},
-			"toasts": {
-				"downloadStarted": "Download gestartet",
-				"preparingPNG": "Ihre arabische Kalligraphie wird als PNG vorbereitet...",
-				"preparingSVG": "Ihre arabische Kalligraphie wird als SVG vorbereitet...",
-				"downloadFailed": "Download fehlgeschlagen",
-				"downloadError": "Beim Herunterladen Ihrer Kalligraphie ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
-				"preparingImage": "Bild wird vorbereitet",
-				"generatingImage": "Bild zum Teilen wird erstellt...",
-				"designApplied": "Design angewendet",
-				"designAppliedDesc": "Das vorgestellte Design wurde auf Ihre Leinwand angewendet.",
-				"shareTitle": "Arabisches Kalligraphie-Design",
-				"shareText": "Schauen Sie sich diese wunderschöne arabische Kalligraphie an, die ich erstellt habe!"
-			},
-			"noScript": {
-				"title": "Arabischer Kalligraphie-Generator",
-				"description": "Erstellen Sie sofort wunderschöne arabische Kalligraphie mit unserem kostenlosen Online-Generator. Wählen Sie aus 13+ professionellen Schriftarten, passen Sie Farben und Hintergründe an und laden Sie hochwertige PNG/SVG-Dateien herunter.",
-				"useCases": {
-					"title": "Beliebte Anwendungsfälle",
-					"weddingInvitations": "Hochzeitseinladungen",
-					"islamicArt": "Islamische Kunstprojekte",
-					"socialMedia": "Social Media Beiträge",
-					"businessLogos": "Firmenlogos",
-					"educational": "Bildungsmaterialien",
-					"religious": "Religiöse Dekorationen"
-				},
-				"keywords": "Schlüsselwörter: Arabischer Kalligraphie-Generator, Islamische Kunst, Arabische Schriftarten, Kalligraphie-Generator, Arabisches Textdesign, Islamische Kalligraphie, Arabische Typographie, Kostenloses Kalligraphie-Tool"
-			},
-			"fontTooltip": {
-				"textExamples": "Textbeispiele",
-				"tryFont": "{fontName} im Generator ausprobieren"
-			},
-			"seoContent": {
-				"aboutTitle": "Über den Arabischen Kalligraphie-Generator",
-				"professionalTypography": {
-					"title": "Professionelle Arabische Typographie",
-					"description1": "Unser arabischer Kalligraphie-Generator bietet professionelle Typographie-Tools zur Erstellung beeindruckender islamischer Kunst, Hochzeitseinladungen, Firmenlogos und Bildungsmaterialien. Mit über 13 sorgfältig ausgewählten arabischen Schriftarten können Sie authentische Kalligraphie erstellen, die die traditionelle Ästhetik der arabischen Schrift respektiert.",
-					"description2": "Jede Schriftart in unserer Sammlung repräsentiert verschiedene kalligraphische Stile: von klassischem Naskh und Thuluth bis hin zu modernem Kufi und zeitgenössischen Sans-Serif-Designs. Perfekt für traditionelle islamische Kunstprojekte und moderne Grafikdesign-Bedürfnisse."
-				},
-				"featuresTitle": "Kostenlose Online-Tool-Funktionen",
-				"keywordsTitle": "Beliebte Schlüsselwörter",
-				"keywordsList": "Arabischer Kalligraphie-Generator, Islamischer Kunst-Generator, Arabischer Schriftarten-Generator, Kalligraphie-Design-Tool, Arabische Typographie, Islamischer Kalligraphie-Ersteller, Arabisches Textdesign, Kostenloser Kalligraphie-Generator, Arabischer Schrift-Generator, Islamischer Kunst-Generator, Arabischer Logo-Generator, Arabischer Text für Hochzeitseinladungen"
-			}
-		},
-		"useCasesSection": {
-			"title": "Was Sie erstellen können",
-			"socialMedia": {
-				"title": "Soziale Medien",
-				"subtitle": "Perfekt für soziale Medien",
-				"description": "Erstellen Sie auffällige Beiträge, Stories und Profilgrafiken mit wunderschöner arabischer Typografie.",
-				"instagram": "Instagram-Beiträge und -Stories",
-				"facebook": "Facebook-Titelbilder",
-				"twitter": "Twitter-Grafiken",
-				"profiles": "Profilbilder mit arabischen Monogrammen",
-				"imageAlt": "Social Media Beispiele"
-			},
-			"print": {
-				"title": "Druck",
-				"subtitle": "Druckmaterialien",
-				"description": "Entwerfen Sie professionelle Druckmaterialien mit hochwertiger arabischer Kalligraphie.",
-				"invitations": "Hochzeits- und Veranstaltungseinladungen",
-				"business": "Visitenkarten und Briefköpfe",
-				"posters": "Poster und Banner",
-				"certificates": "Zertifikate und Auszeichnungen"
-			},
-			"web": {
-				"title": "Web",
-				"subtitle": "Web-Grafiken",
-				"description": "Erstellen Sie beeindruckende Web-Grafiken und digitale Inhalte mit arabischer Typografie.",
-				"logos": "Website-Logos und -Header",
-				"banners": "Web-Banner und -Anzeigen",
-				"icons": "Benutzerdefinierte arabische Icons",
-				"graphics": "Digitale Grafiken und Illustrationen"
-			},
-			"art": {
-				"title": "Kunst",
-				"subtitle": "Künstlerische Kreationen",
-				"description": "Drücken Sie Ihre Kreativität mit künstlerischen arabischen Kalligraphie-Designs aus.",
-				"wallArt": "Wandkunst und Dekorationen",
-				"islamic": "Islamische Kunst und Verse",
-				"modern": "Moderne Kalligraphiekunst",
-				"traditional": "Traditionelle arabische Schriften"
-			},
-			"description": "Entdecken Sie, wie unser arabischer Kalligrafie-Generator verschiedene kreative Bedürfnisse in verschiedenen Branchen und persönlichen Projekten erfüllt"
-		}
-	},
-	"generator": {
-		"title": "Funktionen des Arabische Kalligraphie Generators",
-		"availableFonts": "Verfügbare arabische Schriftarten:",
-		"toolFeatures": "Tool-Funktionen:",
-		"jsRequired": "JavaScript wird benötigt, um den Arabische Kalligraphie Generator zu verwenden. Bitte aktivieren Sie JavaScript in Ihrem Browser.",
-		"fonts": {
-			"amiri": "Amiri (Traditionelles Naskh)",
-			"scheherazade": "Scheherazade (Traditionell)",
-			"reemKufi": "Reem Kufi (Geometrisch)",
-			"arefRuqaa": "Aref Ruqaa (Diwani-Stil)",
-			"cairo": "Cairo (Moderne Sans-serif)",
-			"moreFonts": "Und 8+ weitere Premium-Schriftarten"
-		},
-		"features": {
-			"freeGenerator": "Kostenloser Online-Generator für arabischen Text",
-			"instantDownload": "Sofortiger PNG- und SVG-Download",
-			"colorCustomization": "Farbverlaufs- und Farbanpassung",
-			"backgroundPatterns": "Hintergrundmuster und -bilder",
-			"mobileFriendly": "Mobilfreundliche Oberfläche",
-			"noRegistration": "Keine Registrierung erforderlich"
-		},
-		"tabs": {
-			"text": "Text",
-			"style": "Stil",
-			"advanced": "Erweitert"
-		},
-		"textTab": {
-			"arabicText": "Arabischer Text",
-			"hideKeyboard": "Tastatur ausblenden",
-			"showKeyboard": "Tastatur einblenden",
-			"placeholder": "Geben Sie hier arabischen Text ein...",
-			"templates": "Vorlagen",
-			"font": "Schriftart",
-			"preview": "Vorschau",
-			"selectFont": "Schriftart auswählen",
-			"categories": "Kategorien",
-			"fontSize": "Schriftgröße",
-			"resetText": "Text zurücksetzen"
-		},
-		"styleTab": {
-			"textColor": "Textfarbe",
-			"useGradient": "Farbverlauf verwenden",
-			"gradientFrom": "Von",
-			"gradientTo": "Bis",
-			"backgroundColor": "Hintergrundfarbe",
-			"backgroundImage": "Hintergrundbild",
-			"uploadImage": "Bild hochladen",
-			"backgroundPattern": "Hintergrundmuster",
-			"alignment": "Textausrichtung",
-			"left": "Links",
-			"center": "Zentriert",
-			"right": "Rechts"
-		},
-		"advancedTab": {
-			"fontWeight": "Schriftstärke",
-			"fontStyle": "Schriftstil",
-			"normal": "Normal",
-			"italic": "Kursiv",
-			"letterSpacing": "Zeichenabstand",
-			"lineHeight": "Zeilenhöhe",
-			"shadow": "Textschatten",
-			"shadowX": "Schatten X",
-			"shadowY": "Schatten Y",
-			"shadowBlur": "Unschärfe",
-			"shadowColor": "Schattenfarbe",
-			"border": "Rahmen",
-			"borderColor": "Rahmenfarbe",
-			"borderWidth": "Rahmenbreite",
-			"borderRadius": "Rahmenradius",
-			"padding": "Innenabstand",
-			"kashida": "Kashida-Erweiterung",
-			"kashidaLength": "Kashida-Länge"
-		},
-		"preview": {
-			"title": "Vorschau",
-			"downloadPNG": "PNG herunterladen",
-			"downloadSVG": "SVG herunterladen",
-			"share": "Teilen"
-		},
-		"featuredDesigns": {
-			"title": "Vorgestellte Designs",
-			"topPicks": "Top-Auswahl",
-			"viewAllTemplates": "Alle Vorlagen anzeigen"
-		},
-		"quickLinks": {
-			"title": "Schnellinks",
-			"blog": "Blog",
-			"faq": "FAQ"
-		},
-		"tooltips": {
-			"resetDefaults": "Auf Standard zurücksetzen",
-			"fullscreen": "Vollbildvorschau",
-			"exitFullscreen": "Vollbild verlassen"
-		},
-		"toasts": {
-			"downloadStarted": "Download gestartet",
-			"preparingPNG": "Ihre arabische Kalligraphie wird als PNG vorbereitet...",
-			"preparingSVG": "Ihre arabische Kalligraphie wird als SVG vorbereitet...",
-			"downloadFailed": "Download fehlgeschlagen",
-			"downloadError": "Beim Herunterladen Ihrer Kalligraphie ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
-			"preparingImage": "Bild wird vorbereitet",
-			"generatingImage": "Bild zum Teilen wird erstellt...",
-			"designApplied": "Design angewendet",
-			"designAppliedDesc": "Das vorgestellte Design wurde auf Ihre Leinwand angewendet.",
-			"shareTitle": "Arabisches Kalligraphie-Design",
-			"shareText": "Schauen Sie sich diese wunderschöne arabische Kalligraphie an, die ich erstellt habe!",
-			"templateApplied": "Vorlage angewendet",
-			"templateAppliedDesc": "Die ausgewählte Vorlage wurde auf Ihre Leinwand angewendet.",
-			"downloadComplete": "Download abgeschlossen",
-			"downloadCompletePNG": "Ihre arabische Kalligraphie wurde als PNG heruntergeladen.",
-			"downloadCompleteSVG": "Ihre arabische Kalligraphie wurde als SVG heruntergeladen.",
-			"imageGenerationFailed": "Bilderstellung fehlgeschlagen",
-			"imageGenerationFailedDesc": "Das Bild konnte nicht erstellt werden. Bitte versuchen Sie es erneut.",
-			"copyingImage": "Bild wird kopiert",
-			"copyingImageDesc": "Bild wird für die Zwischenablage vorbereitet...",
-			"imageCopied": "Bild kopiert",
-			"imageCopiedDesc": "Das Kalligraphie-Bild wurde in Ihre Zwischenablage kopiert.",
-			"copyFailed": "Kopieren fehlgeschlagen",
-			"copyFailedDesc": "Das Bild konnte nicht kopiert werden. Ihr Browser unterstützt diese Funktion möglicherweise nicht oder die Berechtigung wurde verweigert.",
-			"copyError": "Kopierfehler",
-			"copyErrorDesc": "Fehler beim Erstellen des Bild-Blobs zum Kopieren.",
-			"copyErrorUnexpected": "Beim Versuch, das Bild zu kopieren, ist ein unerwarteter Fehler aufgetreten.",
-			"copiedToClipboard": "In die Zwischenablage kopiert",
-			"copiedToClipboardDesc": "Ihr Text wurde in die Zwischenablage kopiert.",
-			"copyFailedText": "Beim Kopieren in die Zwischenablage ist ein Fehler aufgetreten.",
-			"error": "Fehler",
-			"previewNotFound": "Vorschauelement nicht gefunden.",
-			"previewNotFoundShare": "Vorschauelement nicht gefunden. Bild kann nicht zum Teilen vorbereitet werden.",
-			"sharingNotAvailable": "Teilen nicht verfügbar",
-			"sharingNotAvailableDesc": "Ihr Browser unterstützt die Web Share API nicht. Versuchen Sie, das Bild herunterzuladen, um es zu teilen.",
-			"imageShareNotSupported": "Teilen von Bildern nicht vollständig unterstützt",
-			"imageShareNotSupportedDesc": "Ihr Browser oder das ausgewählte Ziel unterstützt möglicherweise das direkte Teilen von Bildern nicht. Stattdessen wird der Textinhalt geteilt.",
-			"sharedSuccessfully": "Erfolgreich geteilt",
-			"sharedSuccessfullyDesc": "Ihre Kalligraphie wurde geteilt.",
-			"shareFailed": "Teilen fehlgeschlagen",
-			"shareFailedDesc": "Beim Teilen Ihrer Kalligraphie ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder laden Sie das Bild herunter.",
-			"resetComplete": "Zurücksetzen abgeschlossen",
-			"resetCompleteDesc": "Alle Einstellungen wurden auf die Standardwerte zurückgesetzt."
-		},
-		"fontCategories": {
-			"Traditional": "Traditionell",
-			"Diwani": "Diwani",
-			"Kufi": "Kufi",
-			"Nastaliq": "Nastaliq",
-			"Modern": "Modern",
-			"Display": "Display"
-		},
-		"backgroundPatterns": {
-			"None": "Keines",
-			"Geometric": "Geometrisch",
-			"Arabesque": "Arabeske",
-			"Islamic Patterns": "Islamische Muster",
-			"Dots": "Punkte"
-		},
-		"commonPhrases": {
-			"bismillah": "Im Namen Gottes, des Gnädigen, des Barmherzigen",
-			"alhamdulillah": "Gelobt sei Gott",
-			"mashallah": "Wie Gott es gewollt hat",
-			"subhanallah": "Gepriesen sei Gott",
-			"allahuakbar": "Gott ist größer",
-			"lailahaillallah": "Es gibt keine Gottheit außer Gott",
-			"astaghfirullah": "Ich bitte Gott um Vergebung",
-			"allahummasalli": "O Gott, segne Mohammed"
-		},
-		"ui": {
-			"calligraphyControls": "Kalligraphie-Steuerung",
-			"text": "Text",
-			"style": "Stil",
-			"advanced": "Erweitert",
-			"textColor": "Textfarbe",
-			"gradient": "Farbverlauf",
-			"from": "Von",
-			"to": "Bis",
-			"background": "Hintergrund",
-			"color": "Farbe",
-			"image": "Bild",
-			"pattern": "Muster",
-			"upload": "Hochladen",
-			"backgroundPattern": "Hintergrundmuster",
-			"selectPattern": "Muster auswählen",
-			"textShadow": "Textschatten",
-			"horizontal": "Horizontal",
-			"vertical": "Vertikal",
-			"blur": "Unschärfe",
-			"opacity": "Deckkraft",
-			"fontWeight": "Schriftstärke",
-			"fontStyle": "Schriftstil",
-			"selectWeight": "Stärke auswählen",
-			"selectStyle": "Stil auswählen",
-			"light": "Leicht",
-			"regular": "Normal",
-			"medium": "Mittel",
-			"bold": "Fett",
-			"normal": "Normal",
-			"italic": "Kursiv",
-			"alignment": "Ausrichtung",
-			"letterSpacing": "Zeichenabstand",
-			"lineHeight": "Zeilenhöhe",
-			"kashida": "Kashida (Dehnung)",
-			"kashidaDesc": "Kashida fügt bestimmten arabischen Buchstaben eine Dehnung hinzu und verbessert so die ästhetische Qualität des Textes.",
-			"length": "Länge",
-			"border": "Rahmen",
-			"borderColor": "Rahmenfarbe",
-			"borderWidth": "Rahmenbreite",
-			"borderRadius": "Rahmenradius",
-			"padding": "Innenabstand",
-			"featuredTemplates": "Vorgestellte Vorlagen",
-			"favorites": "Favoriten",
-			"aboutArabicCalligraphy": "Über arabische Kalligraphie",
-			"aboutArabicCalligraphyDesc": "Arabische Kalligraphie (خط عربي) ist die künstlerische Praxis des Handschreibens und der Kalligraphie, die auf dem arabischen Alphabet basiert. Auf Arabisch ist sie als Khatt bekannt, abgeleitet vom Wort für 'Linie', 'Design' oder 'Konstruktion'.",
-			"readMoreHistory": "Lesen Sie mehr über die Geschichte der arabischen Kalligraphie",
-			"exploreFonts": "Entdecken Sie unsere Schriftartensammlung",
-			"viewAllTemplates": "Alle Vorlagen anzeigen"
-		},
-		"sponsor": {
-			"supportButton": "☕ Unterstützen ($3)"
-		}
-	},
-	"seo": {
-		"structuredData": {
-			"featureList": [
-				"13+ arabische Schriftarten, einschließlich Kufi-, Naskh-, Diwani-Stilen",
-				"Echtzeit-Erstellung von arabischem Text",
-				"Farbverlaufs- und Farbanpassung",
-				"Hintergrundmuster und -bilder",
-				"PNG- und SVG-Export",
-				"Mobil-responsive Oberfläche",
-				"Keine Registrierung erforderlich"
-			],
-			"applicationCategory": "DesignApplication",
-			"operatingSystem": "Webbrowser",
-			"browserRequirements": "Benötigt aktiviertes JavaScript",
-			"authorName": "Arabische Kalligraphie Generator"
-		}
-	}
+  "metadata": {
+    "title": "Arabische Kalligraphie Generator - Kostenloses Online-Tool",
+    "title_desktop": "Professionelles Arabische Kalligraphie Tool | 17+ Premium Schriftarten | Design-Plattform",
+    "description": "🎨 KOSTENLOSER Arabische Kalligraphie Generator | Erstellen Sie sofort atemberaubende islamische Kunst online! 13+ Schriftarten, sofortiger PNG/SVG-Download. Keine Anmeldung erforderlich ✨",
+    "description_desktop": "Professionelles Arabische Kalligraphie Design-Tool | Erstellen Sie atemberaubende islamische Kunst mit 17+ Premium-Schriftarten. Vertraut von 50K+ Designern & Unternehmen. Hochwertige PNG/SVG-Exporte. Erweiterte Typografie-Features.",
+    "keywords": "Arabische Kalligraphie Generator, arabische Schriftarten, islamische Kalligraphie, arabischer Textgenerator, kostenlose arabische Schriftarten, Online-Kalligraphie-Ersteller"
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Fehler",
+    "close": "Schließen",
+    "continue": "Weiter",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen",
+    "save": "Speichern",
+    "download": "Herunterladen",
+    "share": "Teilen",
+    "copy": "Kopieren",
+    "copied": "Kopiert!",
+    "yes": "Ja",
+    "no": "Nein"
+  },
+  "ads": {
+    "sponsored": "Gesponsert",
+    "supportUs": "Unterstützen"
+  },
+  "navigation": {
+    "generator": "Generator",
+    "arabicFonts": "Arabische Schriftarten",
+    "learningGuides": "Lernanleitungen",
+    "howToTutorials": "Anleitungen",
+    "freeResources": "Kostenlose Ressourcen",
+    "useCases": "Anwendungsfälle",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "dropdown": {
+      "completeBeginner": "Vollständiger Anfängerleitfaden",
+      "fontComparison": "Leitfaden zum Schriftartenvergleich",
+      "bestFonts2025": "Beste arabische Schriftarten 2025",
+      "typographyTrends": "Typografie-Trends 2025",
+      "createOnline": "Kalligraphie online erstellen",
+      "fontSelection": "Anleitung zur Schriftartenauswahl",
+      "designTips": "Design-Tipps",
+      "downloadFonts": "Schriftarten herunterladen & verwenden",
+      "freeArabicFonts": "Kostenlose arabische Schriftarten"
+    }
+  },
+  "languageSwitcher": {
+    "selectLanguage": "Sprache auswählen",
+    "currentLanguage": "Aktuelle Sprache"
+  },
+  "languagePrompt": {
+    "title": "Willkommen! Wir bieten unsere Seite in Ihrer Sprache an",
+    "subtitle": "Möchten Sie zu {language} wechseln?",
+    "useLanguage": "{language} verwenden",
+    "continueEnglish": "Auf Englisch fortfahren",
+    "dontShowAgain": "Nicht erneut anzeigen"
+  },
+  "footer": {
+    "description": "Erstellen Sie wunderschöne arabische Kalligraphie mit unserem kostenlosen Online-Generator für arabische Kalligraphie.",
+    "arabicCalligraphy": "Arabische Kalligraphie",
+    "generator": "Arabische Kalligraphie Generator",
+    "features": "Generator-Funktionen",
+    "blog": "Kalligraphie-Blog",
+    "faq": "Generator-FAQ",
+    "contact": "Kontaktieren Sie uns",
+    "fonts": "Arabische Schriftarten",
+    "fontLibrary": "Schriftartenbibliothek",
+    "fontComparison": "Schriftartenvergleich",
+    "fontDownloads": "Schriftarten-Downloads",
+    "learning": "Lernressourcen",
+    "beginnerGuide": "Anfängerleitfaden",
+    "tutorials": "Anleitungen",
+    "designTips": "Design-Tipps",
+    "company": "Unternehmen",
+    "about": "Über uns",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen",
+    "copyright": "© 2010-{year} Arabische Kalligraphie Generator. Alle Rechte vorbehalten.",
+    "popular": {
+      "title": "Beliebt",
+      "amiriFont": "Amiri Schriftart",
+      "cairoFont": "Cairo Schriftart",
+      "weddingCalligraphy": "Hochzeitskalligraphie",
+      "businessLogos": "Firmenlogos",
+      "privacyPolicy": "Datenschutzrichtlinie",
+      "termsOfService": "Nutzungsbedingungen"
+    },
+    "generatorTools": {
+      "title": "Generator-Tools",
+      "arabicCalligraphy": {
+        "title": "Arabische Kalligraphie Generator",
+        "desc": "Erstellen Sie atemberaubende arabische Kalligraphie"
+      },
+      "arabicFont": {
+        "title": "Arabische Schriftart Generator",
+        "desc": "17+ authentische arabische Schriftarten online"
+      },
+      "arabicLogo": {
+        "title": "Arabisches Logo Generator",
+        "desc": "Professionelle arabische Logos entwerfen"
+      },
+      "arabicName": {
+        "title": "Arabischer Name Generator",
+        "desc": "Personalisierte arabische Namenskalligraphie"
+      },
+      "kuficScript": {
+        "title": "Kufische Schrift Generator",
+        "desc": "Geometrische Kufische Kalligraphie-Stile"
+      },
+      "kuficCalligraphy": {
+        "title": "Kufische Kalligraphie Generator",
+        "desc": "Traditionelle Kufische Schriftdesigns"
+      }
+    }
+  },
+  "homepage": {
+    "title": "Arabische Kalligraphie Generator",
+    "subtitle": "Schöne Designs Erstellen",
+    "description": "Erstellen Sie sofort atemberaubende arabische Schriftkunst",
+    "intro": "Verwandeln Sie jeden arabischen Text in wunderschöne Kalligraphie mit unserem kostenlosen Online-Generator für arabische Kalligraphie. Dieser leistungsstarke arabische Textgenerator bietet über 13 Premium-Schriftarten online. Erstellen Sie sofort atemberaubende Designs – keine Registrierung erforderlich!",
+    "hero": {
+      "badge": "#1 Kostenloser Arabischer Kalligraphie Generator Online",
+      "subtitle": "Erstellen Sie wunderschöne Designs",
+      "description": "Verwandeln Sie Ihren arabischen Text in atemberaubende Kalligraphie mit unserem kostenlosen Online-Arabischen Kalligraphie-Schriftgenerator. Erstellen Sie professionelle arabische Kalligraphie-Designs, Logos und Textkunst sofort mit Premium-Schriftarten und Anpassungsoptionen.",
+      "value1": "100% Kostenloser Arabischer Kalligraphie Generator",
+      "value2": "Keine Registrierung erforderlich",
+      "value3": "Sofortiger Download",
+      "cta": "Jetzt Arabische Kalligraphie erstellen"
+    },
+    "socialProof": {
+      "designsCreated": "Über 100.000 erstellte Designs",
+      "premiumFonts": "13+ Premium-Schriftarten",
+      "freeForever": "Für immer kostenlos"
+    },
+    "features": {
+      "title": "Funktionen für professionelle arabische Kalligraphie",
+      "description": "Unser kostenloser arabischer Kalligraphie-Generator bietet alles, was Sie brauchen, um professionelle arabische Kalligraphie-Designs, Logos und Kunstwerke zu erstellen.",
+      "fontLibrary": {
+        "title": "Umfangreiche Bibliothek arabischer Schriftarten",
+        "description": "Unser kostenloser Ersteller für arabische Kalligraphie bietet über 13 Premium-Schriftarten online, die von traditionellen Schriften (Kufi, Naskh, Diwani) bis hin zu moderner Typografie reichen. Dieser umfassende arabische Textgenerator enthält eine visuelle Vorschau für eine einfache Schriftartenauswahl.",
+        "items": [
+          "Traditionelle Kalligraphie-Stile",
+          "Moderne arabische Schriftarten",
+          "Dekorative und Display-Optionen"
+        ]
+      },
+      "customization": {
+        "title": "Erweiterte Anpassungsoptionen",
+        "description": "Dieses kostenlose Online-Tool für arabische Kalligraphie bietet professionelle Gestaltungsoptionen, einschließlich Farbverlaufseffekten für Text, benutzerdefinierten Hintergründen, Schatten und präzisen Typografie-Steuerungen für perfekte Ergebnisse.",
+        "items": [
+          "Farbverlaufseffekte für Text",
+          "Benutzerdefinierte Hintergrundmuster",
+          "Schatten- und Leuchteffekte"
+        ]
+      },
+      "export": {
+        "title": "Professionelle Exportoptionen",
+        "description": "Laden Sie Ihre arabische Kalligraphie in mehreren hochwertigen Formaten herunter. Unser arabischer Textgenerator unterstützt PNG für die Webnutzung und SVG für Druckanwendungen, um sicherzustellen, dass Ihre Designs in jeder Größe perfekt aussehen.",
+        "items": [
+          "Hochauflösender PNG-Export",
+          "Skalierbares SVG-Format",
+          "Druckfertige Qualität"
+        ]
+      },
+      "preview": {
+        "title": "Echtzeit-Vorschau der arabischen Kalligraphie",
+        "description": "Sehen Sie Ihre Änderungen sofort mit Live-Vorschau während Sie Schriftarten, Farben und Effekte anpassen."
+      },
+      "mobile": {
+        "title": "Mobil-responsiver arabischer Generator",
+        "description": "Erstellen Sie arabische Kalligraphie auf jedem Gerät - Desktop, Tablet oder Smartphone mit voller responsiver Funktionalität."
+      },
+      "free": {
+        "title": "100% kostenloser arabischer Kalligraphie-Generator",
+        "description": "Keine Registrierung, keine Wasserzeichen, keine versteckten Kosten - völlig kostenloser arabischer Kalligraphie-Generator für immer."
+      },
+      "sharing": {
+        "title": "Einfaches Teilen arabischer Kalligraphie",
+        "description": "Teilen Sie Ihre arabischen Kalligraphie-Designs direkt auf sozialen Medienplattformen oder kopieren Sie sie sofort in die Zwischenablage."
+      },
+      "privacy": {
+        "title": "Datenschutz-geschützter arabischer Generator",
+        "description": "Ihr arabischer Text bleibt völlig privat - wir speichern Ihre Inhalte nicht und benötigen keine persönlichen Informationen."
+      }
+    },
+    "quickStart": {
+      "title": "Schnellstart:",
+      "steps": "Arabischen Text eingeben → Schriftart wählen → Sofort herunterladen"
+    },
+    "howToUse": {
+      "title": "So verwenden Sie unseren arabischen Kalligraphie-Generator",
+      "description": "Erstellen Sie wunderschöne arabische Kalligraphie-Designs in drei einfachen Schritten mit unserem kostenlosen Online-Kalligraphie-Generator. Keine Erfahrung erforderlich!",
+      "step1": {
+        "title": "Arabischen Text eingeben",
+        "description": "Geben Sie Ihren arabischen Text in unseren Kalligraphie-Generator ein. Verwenden Sie bei Bedarf unsere virtuelle arabische Tastatur für eine einfache Texteingabe."
+      },
+      "step2": {
+        "title": "Design anpassen",
+        "description": "Wählen Sie aus Premium-Kalligraphie-Schriftarten, passen Sie Farben, Größe und Ausrichtung an, um Ihr perfektes arabisches Kalligraphie-Design zu erstellen."
+      },
+      "step3": {
+        "title": "Exportieren & Teilen",
+        "description": "Laden Sie Ihre arabische Kalligraphie in hochwertigen PNG- oder SVG-Formaten herunter oder teilen Sie sie direkt auf Social-Media-Plattformen."
+      },
+      "cta": {
+        "title": "Bereit, atemberaubende arabische Kalligraphie zu erstellen?",
+        "description": "Schließen Sie sich Tausenden von Benutzern an, die unserem arabischen Kalligraphie-Generator für ihre Designbedürfnisse vertrauen",
+        "button": "Jetzt arabische Kalligraphie erstellen"
+      }
+    },
+    "useCases": {
+      "title": "Perfekt für jeden Anlass",
+      "wedding": {
+        "title": "Hochzeitseinladungen",
+        "description": "Erstellen Sie elegante arabische Kalligraphie für Hochzeitskarten und Einladungen"
+      },
+      "business": {
+        "title": "Markenbildung für Unternehmen",
+        "description": "Entwerfen Sie professionelle Logos und Markenmaterialien mit arabischer Typografie"
+      },
+      "social": {
+        "title": "Soziale Medien",
+        "description": "Erstellen Sie wunderschöne arabische Zitate und Beiträge für Instagram, Facebook und mehr"
+      },
+      "religious": {
+        "title": "Religiöse Kunst",
+        "description": "Erstellen Sie atemberaubende islamische Kalligraphie für Koranverse und religiöse Texte"
+      }
+    },
+    "faq": {
+      "title": "FAQ zum Arabische Kalligraphie Generator",
+      "q1": {
+        "question": "Ist dieser Arabische Kalligraphie Generator komplett kostenlos?",
+        "answer": "Ja! Unser Arabische Kalligraphie Generator ist zu 100 % kostenlos, ohne versteckte Kosten, Abonnements oder Registrierung. Alle 13+ Premium-Schriftarten, Anpassungsfunktionen und Exportoptionen sind kostenlos enthalten."
+      },
+      "q2": {
+        "question": "Welche Dateiformate kann ich herunterladen?",
+        "answer": "Sie können Ihre arabische Kalligraphie in zwei Formaten herunterladen: PNG (für Fotos und soziale Medien) und SVG (für Druck und skalierbare Grafiken). Beide Formate behalten eine hohe Qualität bei."
+      },
+      "q3": {
+        "question": "Wie viele arabische Schriftarten sind verfügbar?",
+        "answer": "Wir bieten über 13 sorgfältig ausgewählte arabische Schriftarten, darunter traditionelle Stile wie Naskh und Thuluth sowie moderne Schriftarten wie Kufi und dekorative Optionen. Jede Schriftart ist professionell für optimale Lesbarkeit gestaltet."
+      },
+      "q4": {
+        "question": "Kann ich die erstellte Kalligraphie kommerziell nutzen?",
+        "answer": "Ja, Sie können die von Ihnen erstellte arabische Kalligraphie sowohl für private als auch für kommerzielle Zwecke verwenden. Die von uns verwendeten Schriftarten sind entweder Open Source oder für die kommerzielle Nutzung ordnungsgemäß lizenziert."
+      },
+      "q5": {
+        "question": "Funktioniert der Generator auf mobilen Geräten?",
+        "answer": "Absolut! Unser Arabische Kalligraphie Generator ist vollständig responsiv und funktioniert perfekt auf Smartphones, Tablets und Desktop-Computern. Die Benutzeroberfläche passt sich Ihrer Bildschirmgröße an, um das beste Erlebnis zu bieten."
+      }
+    },
+    "testimonials": {
+      "title": "Was unsere Nutzer sagen",
+      "description": "Schließen Sie sich Tausenden zufriedener Nutzer an, die mit unserem kostenlosen Generator beeindruckende arabische Kalligraphie-Designs erstellt haben.",
+      "reviews": [
+        {
+          "name": "Sarah Ahmed",
+          "title": "Grafikdesignerin & Kreativstudio",
+          "content": "Dieser arabische Kalligraphie-Generator hat meinen Design-Workflow revolutioniert. Die Schriftqualität ist außergewöhnlich und die Anpassungsoptionen sind perfekt für professionelle Projekte. Meine Kunden lieben die authentische arabische Typografie!",
+          "date": "Dezember 2024"
+        },
+        {
+          "name": "Mohammed Ali",
+          "title": "Student der Arabistik",
+          "content": "Als Student, der Arabisch lernt, hilft mir dieses Tool, verschiedene Kalligraphie-Stile zu verstehen. Es ist unglaublich benutzerfreundlich und die Vielfalt der Schriftarten macht es perfekt für Bildungsprojekte und Präsentationen.",
+          "date": "November 2024"
+        },
+        {
+          "name": "Fatima Hassan",
+          "title": "Restaurantbesitzerin",
+          "content": "Ich verwende diesen Generator für alle arabischen Beschilderungen und Menüs meines Restaurants. Die professionelle Qualität und Benutzerfreundlichkeit haben mir Hunderte von Euro an Designkosten gespart. Sehr empfehlenswert für jedes Unternehmen!",
+          "date": "November 2024"
+        },
+        {
+          "name": "Ahmad Khalil",
+          "title": "Hochzeitsplaner",
+          "content": "Perfekt für die Erstellung schöner Hochzeitseinladungen und dekorativer Elemente. Die arabischen Kalligraphie-Stile sind authentisch und elegant. Das Beste daran? Es ist völlig kostenlos ohne Wasserzeichen!",
+          "date": "Oktober 2024"
+        },
+        {
+          "name": "Dr. Amina Rashid",
+          "title": "Arabischlehrerin",
+          "content": "Ich verwende dieses Tool regelmäßig zur Erstellung von Lernmaterialien und Klassenausstellungen. Meine Schüler lieben es, ihre Namen in schöner arabischer Kalligraphie zu sehen. Es macht das Lernen engagierter und unterhaltsamer!",
+          "date": "Oktober 2024"
+        },
+        {
+          "name": "Omar Zaid",
+          "title": "Freelance-Designer",
+          "content": "Dieser Generator ist zu einem wesentlichen Bestandteil meines Design-Toolkits geworden. Die Exportqualität ist ausgezeichnet und Kunden sind immer von der authentischen arabischen Kalligraphie beeindruckt. Es hat mein Geschäft erheblich gesteigert!",
+          "date": "September 2024"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Beste kostenlose Online-App für arabische Kalligraphie",
+      "description": "Erleben Sie das umfassendste kostenlose Online-Tool für arabische Kalligraphie. Schließen Sie sich Tausenden von Benutzern an, die mit unserem arabischen Textgenerator atemberaubende arabische Designs erstellen. Starten Sie jetzt - es ist völlig kostenlos!",
+      "button": "Jetzt mit dem Erstellen beginnen",
+      "features": {
+        "noRegistration": "Keine Registrierung",
+        "free": "100 % kostenlos",
+        "instantDownload": "Sofortiger Download"
+      }
+    },
+    "technicalFeatures": {
+      "title": "Erweiterte arabische Typografie-Funktionen",
+      "fontCollection": {
+        "title": "Schriftsammlung & Stile",
+        "traditional": "Traditionelle Schriften: Amiri (Naskh), Scheherazade, Lateef, Markazi Text",
+        "decorative": "Dekorative Stile: Aref Ruqaa (Diwani), Jomhuria, Rakkas, Lemonada",
+        "modern": "Moderne Typografie: Cairo, Harmattan, Mada, Tajawal, El Messiri",
+        "specialized": "Spezialisierte Schriften: Reem Kufi (Geometrisch), Mirza (Nastaliq), Marhey (Display)",
+        "note": "Alle Schriftarten unterstützen die RTL-Textrichtung, arabische Diakritika (Harakat) und die Kashida-Dehnung für authentische Kalligraphie."
+      },
+      "export": {
+        "title": "Export & Kompatibilität",
+        "formats": "Ausgabeformate: PNG (transparenter Hintergrund), SVG (skalierbarer Vektor)",
+        "quality": "Qualitätsoptionen: Hochauflösender Export, geeignet für Druck und digitale Nutzung",
+        "browsers": "Browser-Unterstützung: Chrome, Firefox, Safari, Edge - alle modernen Browser",
+        "devices": "Gerätekompatibilität: Desktop, Tablet und mobil-responsives Design",
+        "note": "Kostenlos für die kommerzielle Nutzung. Keine Wasserzeichen, keine Registrierung erforderlich. Funktioniert vollständig in Ihrem Browser für den Datenschutz."
+      }
+    },
+    "professionalUse": {
+      "title": "Professionelle Anwendungen für arabische Kalligraphie",
+      "business": {
+        "title": "Geschäft & Markenbildung",
+        "logo": {
+          "title": "Firmenlogos & Identität",
+          "description": "Erstellen Sie unverwechselbare arabische Markennamen mit traditionellen oder modernen Kalligraphie-Stilen"
+        },
+        "restaurant": {
+          "title": "Restaurant & Gastgewerbe",
+          "description": "Entwerfen Sie authentische arabische Beschilderungen, Menüs und Werbematerialien"
+        },
+        "marketing": {
+          "title": "Marketingmaterialien",
+          "description": "Professionelle arabische Typografie für Broschüren, Anzeigen und digitale Kampagnen"
+        }
+      },
+      "personal": {
+        "title": "Persönlich & Kulturell",
+        "wedding": {
+          "title": "Hochzeits- & Veranstaltungseinladungen",
+          "description": "Elegante arabische Kalligraphie für besondere Anlässe und Feiern"
+        },
+        "islamic": {
+          "title": "Islamische Kunst & Dekoration",
+          "description": "Wunderschöne Koranverse, Hadithe und islamische Phrasen für die Heimdekoration"
+        },
+        "social": {
+          "title": "Inhalte für soziale Medien",
+          "description": "Auffällige arabische Beiträge für Instagram, Facebook und andere Plattformen"
+        }
+      }
+    },
+    "detailedFaq": {
+      "title": "FAQ zum Arabische Kalligraphie Generator",
+      "viewAll": "Alle FAQs anzeigen",
+      "questions": [
+        {
+          "question": "Ist dieser Arabische Kalligraphie Generator komplett kostenlos?",
+          "answer": "Ja! Unser Arabische Kalligraphie Generator ist zu 100 % kostenlos, ohne versteckte Kosten, Abonnements oder Registrierung. Alle 13+ Premium-Schriftarten, Anpassungsfunktionen und Exportoptionen sind kostenlos enthalten."
+        },
+        {
+          "question": "Welche arabischen Schriftarten und Kalligraphie-Stile sind verfügbar?",
+          "answer": "Wir bieten über 13 sorgfältig ausgewählte arabische Schriftarten, die traditionelle Kalligraphie-Stile (Kufi, Naskh, Diwani, Nastaliq) und moderne arabische Typografie abdecken. Jede Schriftart unterstützt die RTL-Textrichtung, arabische Diakritika (Harakat) und eine authentische Wiedergabe der arabischen Schrift."
+        },
+        {
+          "question": "Welche Dateiformate und welche Qualität kann ich herunterladen?",
+          "answer": "Sie können Ihre arabische Kalligraphie als hochauflösende PNG-Dateien (mit transparentem Hintergrund) oder skalierbare SVG-Vektordateien exportieren. Beide Formate eignen sich für professionellen Druck, digitale Medien und kommerzielle Anwendungen."
+        },
+        {
+          "question": "Kann ich die erstellte Kalligraphie für kommerzielle Projekte verwenden?",
+          "answer": "Ja, Sie können Ihre erstellten arabischen Kalligraphie-Designs ohne Einschränkungen sowohl für persönliche als auch für kommerzielle Projekte verwenden. Dies umfasst Firmenlogos, Marketingmaterialien, Hochzeitseinladungen und alle anderen kommerziellen Anwendungen."
+        },
+        {
+          "question": "Funktioniert dieser Arabische Kalligraphie Generator auf mobilen Geräten?",
+          "answer": "Absolut! Unser Arabische Kalligraphie Generator ist vollständig responsiv und für Smartphones, Tablets und Desktop-Computer optimiert. Die Benutzeroberfläche passt sich Ihrer Bildschirmgröße an und behält dabei die volle Funktionalität."
+        },
+        {
+          "question": "Ist dies der beste kostenlose Online-Generator für arabische Kalligraphie, der verfügbar ist?",
+          "answer": "Unser kostenloser Online-Generator für arabische Kalligraphie zeichnet sich durch über 13 Premium-Schriftarten, sofortige PNG/SVG-Downloads und keine Registrierungsanforderungen aus. Im Gegensatz zu vielen arabischen Textgeneratoren, die Abonnements erfordern, liefert unser Kalligraphie-Ersteller professionelle Ergebnisse völlig kostenlos."
+        },
+        {
+          "question": "Unterstützt das Tool arabischen Text mit Diakritika (Harakat)?",
+          "answer": "Ja, unser Arabische Kalligraphie Generator unterstützt arabischen Text mit Diakritika (Harakat/اعراب). Sie können Text mit Vokalzeichen eingeben, und der Generator rendert diese entsprechend den Fähigkeiten jeder Schriftart. Dies ist unerlässlich für Koranverse und formellen arabischen Text."
+        },
+        {
+          "question": "Wie schneidet dieser Kalligraphie-Ersteller im Vergleich zu Desktop-Software ab?",
+          "answer": "Unser kostenloses Online-Tool für arabische Kalligraphie bietet mehrere Vorteile gegenüber Desktop-Software: sofortiger Zugriff ohne Downloads, automatische Updates, plattformübergreifende Kompatibilität und Cloud-basierter Komfort. Während Desktop-Software möglicherweise erweiterte Funktionen bietet, bietet unser arabischer Textgenerator die perfekte Balance aus Funktionalität und Zugänglichkeit für die Bedürfnisse der meisten Benutzer."
+        },
+        {
+          "question": "Kann ich kufische Kalligraphie für Logos erstellen?",
+          "answer": "Ja. Unser Generator enthält originale Kufi-Schriften, die sich hervorragend für klare, geometrische Logos eignen. Wählen Sie einen Kufi-Font, passen Sie Strichstärke sowie Farben an und exportieren Sie anschließend das fertige Branding."
+        },
+        {
+          "question": "Wie gestalte ich personalisierte arabische Namens-Kalligraphie?",
+          "answer": "Geben Sie den arabischen Namen ein oder fügen Sie ihn ein, probieren Sie unsere 17 Schriftstile aus, justieren Sie Farben und Hintergrund und laden Sie dann die Datei herunter. Perfekt für Geschenke, Hochzeitspapeterie oder Social-Media-Grafiken."
+        },
+        {
+          "question": "Kann ich die Kalligraphie in Figma, Canva oder Adobe importieren?",
+          "answer": "Natürlich. Exportieren Sie Ihr Design als PNG oder SVG und importieren Sie es anschließend in Figma, Canva, Adobe Illustrator, Photoshop oder InDesign. Vor allem SVG bleibt beim Skalieren oder Weiterbearbeiten gestochen scharf."
+        }
+      ]
+    },
+    "generator": {
+      "title": "Funktionen des Arabische Kalligraphie Generators",
+      "availableFonts": "Verfügbare arabische Schriftarten:",
+      "toolFeatures": "Tool-Funktionen:",
+      "fonts": {
+        "amiri": "Amiri (Traditionelles Naskh)",
+        "scheherazade": "Scheherazade (Traditionell)",
+        "reemKufi": "Reem Kufi (Modernes Kufi)",
+        "arefRuqaa": "Aref Ruqaa (Diwani-Stil)",
+        "cairo": "Cairo (Moderne Sans-serif)",
+        "moreFonts": "Und 8+ weitere Premium-Schriftarten"
+      },
+      "features": {
+        "freeGenerator": "Kostenloser Online-Generator für arabischen Text",
+        "instantDownload": "Sofortiger PNG- und SVG-Download",
+        "colorCustomization": "Farbverlaufs- und Farbanpassung",
+        "backgroundPatterns": "Hintergrundmuster und -bilder",
+        "mobileFriendly": "Mobilfreundliche Oberfläche",
+        "noRegistration": "Keine Registrierung erforderlich"
+      },
+      "jsRequired": "Dieser Kalligraphie-Ersteller benötigt JavaScript, um zu funktionieren. Bitte aktivieren Sie JavaScript in Ihrem Browser, um das interaktive Tool zu verwenden.",
+      "tabs": {
+        "text": "Text",
+        "style": "Stil",
+        "advanced": "Erweitert"
+      },
+      "textTab": {
+        "arabicText": "Arabischer Text",
+        "hideKeyboard": "Tastatur ausblenden",
+        "showKeyboard": "Tastatur einblenden",
+        "placeholder": "Geben Sie hier arabischen Text ein...",
+        "templates": "Vorlagen",
+        "font": "Schriftart",
+        "preview": "Vorschau",
+        "selectFont": "Schriftart auswählen",
+        "categories": "Kategorien",
+        "fontSize": "Schriftgröße",
+        "resetText": "Text zurücksetzen"
+      },
+      "styleTab": {
+        "textColor": "Textfarbe",
+        "useGradient": "Farbverlauf verwenden",
+        "gradientFrom": "Farbverlauf von",
+        "gradientTo": "Farbverlauf bis",
+        "backgroundColor": "Hintergrundfarbe",
+        "backgroundImage": "Hintergrundbild",
+        "uploadImage": "Bild hochladen",
+        "backgroundPattern": "Hintergrundmuster",
+        "alignment": "Textausrichtung",
+        "left": "Links",
+        "center": "Zentriert",
+        "right": "Rechts"
+      },
+      "advancedTab": {
+        "fontWeight": "Schriftstärke",
+        "fontStyle": "Schriftstil",
+        "normal": "Normal",
+        "italic": "Kursiv",
+        "letterSpacing": "Zeichenabstand",
+        "lineHeight": "Zeilenhöhe",
+        "shadow": "Textschatten",
+        "shadowX": "Schatten X",
+        "shadowY": "Schatten Y",
+        "shadowBlur": "Schatten-Unschärfe",
+        "shadowColor": "Schattenfarbe",
+        "border": "Rahmen",
+        "borderColor": "Rahmenfarbe",
+        "borderWidth": "Rahmenbreite",
+        "borderRadius": "Rahmenradius",
+        "padding": "Innenabstand",
+        "kashida": "Kashida-Erweiterung",
+        "kashidaLength": "Kashida-Länge"
+      },
+      "preview": {
+        "title": "Vorschau",
+        "downloadPNG": "PNG herunterladen",
+        "downloadSVG": "SVG herunterladen",
+        "share": "Teilen"
+      },
+      "featuredDesigns": {
+        "title": "Vorgestellte Designs",
+        "topPicks": "Top-Auswahl",
+        "viewAllTemplates": "Alle Vorlagen anzeigen"
+      },
+      "quickLinks": {
+        "title": "Schnellinks",
+        "blog": "Blog",
+        "faq": "FAQ"
+      },
+      "tooltips": {
+        "resetDefaults": "Auf Standard zurücksetzen",
+        "fullscreen": "Vollbildvorschau",
+        "exitFullscreen": "Vollbild verlassen"
+      },
+      "toasts": {
+        "downloadStarted": "Download gestartet",
+        "preparingPNG": "Ihre arabische Kalligraphie wird als PNG vorbereitet...",
+        "preparingSVG": "Ihre arabische Kalligraphie wird als SVG vorbereitet...",
+        "downloadFailed": "Download fehlgeschlagen",
+        "downloadError": "Beim Herunterladen Ihrer Kalligraphie ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+        "preparingImage": "Bild wird vorbereitet",
+        "generatingImage": "Bild zum Teilen wird erstellt...",
+        "designApplied": "Design angewendet",
+        "designAppliedDesc": "Das vorgestellte Design wurde auf Ihre Leinwand angewendet.",
+        "shareTitle": "Arabisches Kalligraphie-Design",
+        "shareText": "Schauen Sie sich diese wunderschöne arabische Kalligraphie an, die ich erstellt habe!"
+      },
+      "noScript": {
+        "title": "Arabischer Kalligraphie-Generator",
+        "description": "Erstellen Sie sofort wunderschöne arabische Kalligraphie mit unserem kostenlosen Online-Generator. Wählen Sie aus 13+ professionellen Schriftarten, passen Sie Farben und Hintergründe an und laden Sie hochwertige PNG/SVG-Dateien herunter.",
+        "useCases": {
+          "title": "Beliebte Anwendungsfälle",
+          "weddingInvitations": "Hochzeitseinladungen",
+          "islamicArt": "Islamische Kunstprojekte",
+          "socialMedia": "Social Media Beiträge",
+          "businessLogos": "Firmenlogos",
+          "educational": "Bildungsmaterialien",
+          "religious": "Religiöse Dekorationen"
+        },
+        "keywords": "Schlüsselwörter: Arabischer Kalligraphie-Generator, Islamische Kunst, Arabische Schriftarten, Kalligraphie-Generator, Arabisches Textdesign, Islamische Kalligraphie, Arabische Typographie, Kostenloses Kalligraphie-Tool"
+      },
+      "fontTooltip": {
+        "textExamples": "Textbeispiele",
+        "tryFont": "{fontName} im Generator ausprobieren"
+      },
+      "seoContent": {
+        "aboutTitle": "Über den Arabischen Kalligraphie-Generator",
+        "professionalTypography": {
+          "title": "Professionelle Arabische Typographie",
+          "description1": "Unser arabischer Kalligraphie-Generator bietet professionelle Typographie-Tools zur Erstellung beeindruckender islamischer Kunst, Hochzeitseinladungen, Firmenlogos und Bildungsmaterialien. Mit über 13 sorgfältig ausgewählten arabischen Schriftarten können Sie authentische Kalligraphie erstellen, die die traditionelle Ästhetik der arabischen Schrift respektiert.",
+          "description2": "Jede Schriftart in unserer Sammlung repräsentiert verschiedene kalligraphische Stile: von klassischem Naskh und Thuluth bis hin zu modernem Kufi und zeitgenössischen Sans-Serif-Designs. Perfekt für traditionelle islamische Kunstprojekte und moderne Grafikdesign-Bedürfnisse."
+        },
+        "featuresTitle": "Kostenlose Online-Tool-Funktionen",
+        "keywordsTitle": "Beliebte Schlüsselwörter",
+        "keywordsList": "Arabischer Kalligraphie-Generator, Islamischer Kunst-Generator, Arabischer Schriftarten-Generator, Kalligraphie-Design-Tool, Arabische Typographie, Islamischer Kalligraphie-Ersteller, Arabisches Textdesign, Kostenloser Kalligraphie-Generator, Arabischer Schrift-Generator, Islamischer Kunst-Generator, Arabischer Logo-Generator, Arabischer Text für Hochzeitseinladungen"
+      }
+    },
+    "useCasesSection": {
+      "title": "Was Sie erstellen können",
+      "socialMedia": {
+        "title": "Soziale Medien",
+        "subtitle": "Perfekt für soziale Medien",
+        "description": "Erstellen Sie auffällige Beiträge, Stories und Profilgrafiken mit wunderschöner arabischer Typografie.",
+        "instagram": "Instagram-Beiträge und -Stories",
+        "facebook": "Facebook-Titelbilder",
+        "twitter": "Twitter-Grafiken",
+        "profiles": "Profilbilder mit arabischen Monogrammen",
+        "imageAlt": "Social Media Beispiele"
+      },
+      "print": {
+        "title": "Druck",
+        "subtitle": "Druckmaterialien",
+        "description": "Entwerfen Sie professionelle Druckmaterialien mit hochwertiger arabischer Kalligraphie.",
+        "invitations": "Hochzeits- und Veranstaltungseinladungen",
+        "business": "Visitenkarten und Briefköpfe",
+        "posters": "Poster und Banner",
+        "certificates": "Zertifikate und Auszeichnungen"
+      },
+      "web": {
+        "title": "Web",
+        "subtitle": "Web-Grafiken",
+        "description": "Erstellen Sie beeindruckende Web-Grafiken und digitale Inhalte mit arabischer Typografie.",
+        "logos": "Website-Logos und -Header",
+        "banners": "Web-Banner und -Anzeigen",
+        "icons": "Benutzerdefinierte arabische Icons",
+        "graphics": "Digitale Grafiken und Illustrationen"
+      },
+      "art": {
+        "title": "Kunst",
+        "subtitle": "Künstlerische Kreationen",
+        "description": "Drücken Sie Ihre Kreativität mit künstlerischen arabischen Kalligraphie-Designs aus.",
+        "wallArt": "Wandkunst und Dekorationen",
+        "islamic": "Islamische Kunst und Verse",
+        "modern": "Moderne Kalligraphiekunst",
+        "traditional": "Traditionelle arabische Schriften"
+      },
+      "description": "Entdecken Sie, wie unser arabischer Kalligrafie-Generator verschiedene kreative Bedürfnisse in verschiedenen Branchen und persönlichen Projekten erfüllt"
+    }
+  },
+  "generator": {
+    "title": "Funktionen des Arabische Kalligraphie Generators",
+    "availableFonts": "Verfügbare arabische Schriftarten:",
+    "toolFeatures": "Tool-Funktionen:",
+    "jsRequired": "JavaScript wird benötigt, um den Arabische Kalligraphie Generator zu verwenden. Bitte aktivieren Sie JavaScript in Ihrem Browser.",
+    "fonts": {
+      "amiri": "Amiri (Traditionelles Naskh)",
+      "scheherazade": "Scheherazade (Traditionell)",
+      "reemKufi": "Reem Kufi (Geometrisch)",
+      "arefRuqaa": "Aref Ruqaa (Diwani-Stil)",
+      "cairo": "Cairo (Moderne Sans-serif)",
+      "moreFonts": "Und 8+ weitere Premium-Schriftarten"
+    },
+    "features": {
+      "freeGenerator": "Kostenloser Online-Generator für arabischen Text",
+      "instantDownload": "Sofortiger PNG- und SVG-Download",
+      "colorCustomization": "Farbverlaufs- und Farbanpassung",
+      "backgroundPatterns": "Hintergrundmuster und -bilder",
+      "mobileFriendly": "Mobilfreundliche Oberfläche",
+      "noRegistration": "Keine Registrierung erforderlich"
+    },
+    "tabs": {
+      "text": "Text",
+      "style": "Stil",
+      "advanced": "Erweitert"
+    },
+    "textTab": {
+      "arabicText": "Arabischer Text",
+      "hideKeyboard": "Tastatur ausblenden",
+      "showKeyboard": "Tastatur einblenden",
+      "placeholder": "Geben Sie hier arabischen Text ein...",
+      "templates": "Vorlagen",
+      "font": "Schriftart",
+      "preview": "Vorschau",
+      "selectFont": "Schriftart auswählen",
+      "categories": "Kategorien",
+      "fontSize": "Schriftgröße",
+      "resetText": "Text zurücksetzen"
+    },
+    "styleTab": {
+      "textColor": "Textfarbe",
+      "useGradient": "Farbverlauf verwenden",
+      "gradientFrom": "Von",
+      "gradientTo": "Bis",
+      "backgroundColor": "Hintergrundfarbe",
+      "backgroundImage": "Hintergrundbild",
+      "uploadImage": "Bild hochladen",
+      "backgroundPattern": "Hintergrundmuster",
+      "alignment": "Textausrichtung",
+      "left": "Links",
+      "center": "Zentriert",
+      "right": "Rechts"
+    },
+    "advancedTab": {
+      "fontWeight": "Schriftstärke",
+      "fontStyle": "Schriftstil",
+      "normal": "Normal",
+      "italic": "Kursiv",
+      "letterSpacing": "Zeichenabstand",
+      "lineHeight": "Zeilenhöhe",
+      "shadow": "Textschatten",
+      "shadowX": "Schatten X",
+      "shadowY": "Schatten Y",
+      "shadowBlur": "Unschärfe",
+      "shadowColor": "Schattenfarbe",
+      "border": "Rahmen",
+      "borderColor": "Rahmenfarbe",
+      "borderWidth": "Rahmenbreite",
+      "borderRadius": "Rahmenradius",
+      "padding": "Innenabstand",
+      "kashida": "Kashida-Erweiterung",
+      "kashidaLength": "Kashida-Länge"
+    },
+    "preview": {
+      "title": "Vorschau",
+      "downloadPNG": "PNG herunterladen",
+      "downloadSVG": "SVG herunterladen",
+      "share": "Teilen"
+    },
+    "featuredDesigns": {
+      "title": "Vorgestellte Designs",
+      "topPicks": "Top-Auswahl",
+      "viewAllTemplates": "Alle Vorlagen anzeigen"
+    },
+    "quickLinks": {
+      "title": "Schnellinks",
+      "blog": "Blog",
+      "faq": "FAQ"
+    },
+    "tooltips": {
+      "resetDefaults": "Auf Standard zurücksetzen",
+      "fullscreen": "Vollbildvorschau",
+      "exitFullscreen": "Vollbild verlassen"
+    },
+    "toasts": {
+      "downloadStarted": "Download gestartet",
+      "preparingPNG": "Ihre arabische Kalligraphie wird als PNG vorbereitet...",
+      "preparingSVG": "Ihre arabische Kalligraphie wird als SVG vorbereitet...",
+      "downloadFailed": "Download fehlgeschlagen",
+      "downloadError": "Beim Herunterladen Ihrer Kalligraphie ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+      "preparingImage": "Bild wird vorbereitet",
+      "generatingImage": "Bild zum Teilen wird erstellt...",
+      "designApplied": "Design angewendet",
+      "designAppliedDesc": "Das vorgestellte Design wurde auf Ihre Leinwand angewendet.",
+      "shareTitle": "Arabisches Kalligraphie-Design",
+      "shareText": "Schauen Sie sich diese wunderschöne arabische Kalligraphie an, die ich erstellt habe!",
+      "templateApplied": "Vorlage angewendet",
+      "templateAppliedDesc": "Die ausgewählte Vorlage wurde auf Ihre Leinwand angewendet.",
+      "downloadComplete": "Download abgeschlossen",
+      "downloadCompletePNG": "Ihre arabische Kalligraphie wurde als PNG heruntergeladen.",
+      "downloadCompleteSVG": "Ihre arabische Kalligraphie wurde als SVG heruntergeladen.",
+      "imageGenerationFailed": "Bilderstellung fehlgeschlagen",
+      "imageGenerationFailedDesc": "Das Bild konnte nicht erstellt werden. Bitte versuchen Sie es erneut.",
+      "copyingImage": "Bild wird kopiert",
+      "copyingImageDesc": "Bild wird für die Zwischenablage vorbereitet...",
+      "imageCopied": "Bild kopiert",
+      "imageCopiedDesc": "Das Kalligraphie-Bild wurde in Ihre Zwischenablage kopiert.",
+      "copyFailed": "Kopieren fehlgeschlagen",
+      "copyFailedDesc": "Das Bild konnte nicht kopiert werden. Ihr Browser unterstützt diese Funktion möglicherweise nicht oder die Berechtigung wurde verweigert.",
+      "copyError": "Kopierfehler",
+      "copyErrorDesc": "Fehler beim Erstellen des Bild-Blobs zum Kopieren.",
+      "copyErrorUnexpected": "Beim Versuch, das Bild zu kopieren, ist ein unerwarteter Fehler aufgetreten.",
+      "copiedToClipboard": "In die Zwischenablage kopiert",
+      "copiedToClipboardDesc": "Ihr Text wurde in die Zwischenablage kopiert.",
+      "copyFailedText": "Beim Kopieren in die Zwischenablage ist ein Fehler aufgetreten.",
+      "error": "Fehler",
+      "previewNotFound": "Vorschauelement nicht gefunden.",
+      "previewNotFoundShare": "Vorschauelement nicht gefunden. Bild kann nicht zum Teilen vorbereitet werden.",
+      "sharingNotAvailable": "Teilen nicht verfügbar",
+      "sharingNotAvailableDesc": "Ihr Browser unterstützt die Web Share API nicht. Versuchen Sie, das Bild herunterzuladen, um es zu teilen.",
+      "imageShareNotSupported": "Teilen von Bildern nicht vollständig unterstützt",
+      "imageShareNotSupportedDesc": "Ihr Browser oder das ausgewählte Ziel unterstützt möglicherweise das direkte Teilen von Bildern nicht. Stattdessen wird der Textinhalt geteilt.",
+      "sharedSuccessfully": "Erfolgreich geteilt",
+      "sharedSuccessfullyDesc": "Ihre Kalligraphie wurde geteilt.",
+      "shareFailed": "Teilen fehlgeschlagen",
+      "shareFailedDesc": "Beim Teilen Ihrer Kalligraphie ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder laden Sie das Bild herunter.",
+      "resetComplete": "Zurücksetzen abgeschlossen",
+      "resetCompleteDesc": "Alle Einstellungen wurden auf die Standardwerte zurückgesetzt."
+    },
+    "fontCategories": {
+      "Traditional": "Traditionell",
+      "Diwani": "Diwani",
+      "Kufi": "Kufi",
+      "Nastaliq": "Nastaliq",
+      "Modern": "Modern",
+      "Display": "Display"
+    },
+    "backgroundPatterns": {
+      "None": "Keines",
+      "Geometric": "Geometrisch",
+      "Arabesque": "Arabeske",
+      "Islamic Patterns": "Islamische Muster",
+      "Dots": "Punkte"
+    },
+    "commonPhrases": {
+      "bismillah": "Im Namen Gottes, des Gnädigen, des Barmherzigen",
+      "alhamdulillah": "Gelobt sei Gott",
+      "mashallah": "Wie Gott es gewollt hat",
+      "subhanallah": "Gepriesen sei Gott",
+      "allahuakbar": "Gott ist größer",
+      "lailahaillallah": "Es gibt keine Gottheit außer Gott",
+      "astaghfirullah": "Ich bitte Gott um Vergebung",
+      "allahummasalli": "O Gott, segne Mohammed"
+    },
+    "ui": {
+      "calligraphyControls": "Kalligraphie-Steuerung",
+      "text": "Text",
+      "style": "Stil",
+      "advanced": "Erweitert",
+      "textColor": "Textfarbe",
+      "gradient": "Farbverlauf",
+      "from": "Von",
+      "to": "Bis",
+      "background": "Hintergrund",
+      "color": "Farbe",
+      "image": "Bild",
+      "pattern": "Muster",
+      "upload": "Hochladen",
+      "backgroundPattern": "Hintergrundmuster",
+      "selectPattern": "Muster auswählen",
+      "textShadow": "Textschatten",
+      "horizontal": "Horizontal",
+      "vertical": "Vertikal",
+      "blur": "Unschärfe",
+      "opacity": "Deckkraft",
+      "fontWeight": "Schriftstärke",
+      "fontStyle": "Schriftstil",
+      "selectWeight": "Stärke auswählen",
+      "selectStyle": "Stil auswählen",
+      "light": "Leicht",
+      "regular": "Normal",
+      "medium": "Mittel",
+      "bold": "Fett",
+      "normal": "Normal",
+      "italic": "Kursiv",
+      "alignment": "Ausrichtung",
+      "letterSpacing": "Zeichenabstand",
+      "lineHeight": "Zeilenhöhe",
+      "kashida": "Kashida (Dehnung)",
+      "kashidaDesc": "Kashida fügt bestimmten arabischen Buchstaben eine Dehnung hinzu und verbessert so die ästhetische Qualität des Textes.",
+      "length": "Länge",
+      "border": "Rahmen",
+      "borderColor": "Rahmenfarbe",
+      "borderWidth": "Rahmenbreite",
+      "borderRadius": "Rahmenradius",
+      "padding": "Innenabstand",
+      "featuredTemplates": "Vorgestellte Vorlagen",
+      "favorites": "Favoriten",
+      "aboutArabicCalligraphy": "Über arabische Kalligraphie",
+      "aboutArabicCalligraphyDesc": "Arabische Kalligraphie (خط عربي) ist die künstlerische Praxis des Handschreibens und der Kalligraphie, die auf dem arabischen Alphabet basiert. Auf Arabisch ist sie als Khatt bekannt, abgeleitet vom Wort für 'Linie', 'Design' oder 'Konstruktion'.",
+      "readMoreHistory": "Lesen Sie mehr über die Geschichte der arabischen Kalligraphie",
+      "exploreFonts": "Entdecken Sie unsere Schriftartensammlung",
+      "viewAllTemplates": "Alle Vorlagen anzeigen"
+    },
+    "sponsor": {
+      "supportButton": "☕ Unterstützen ($3)"
+    }
+  },
+  "seo": {
+    "structuredData": {
+      "featureList": [
+        "13+ arabische Schriftarten, einschließlich Kufi-, Naskh-, Diwani-Stilen",
+        "Echtzeit-Erstellung von arabischem Text",
+        "Farbverlaufs- und Farbanpassung",
+        "Hintergrundmuster und -bilder",
+        "PNG- und SVG-Export",
+        "Mobil-responsive Oberfläche",
+        "Keine Registrierung erforderlich"
+      ],
+      "applicationCategory": "DesignApplication",
+      "operatingSystem": "Webbrowser",
+      "browserRequirements": "Benötigt aktiviertes JavaScript",
+      "authorName": "Arabische Kalligraphie Generator"
+    }
+  }
 }

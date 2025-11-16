@@ -23,6 +23,26 @@ export function StaticNavbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    if (typeof document === "undefined") return
+    const previousDir = document.documentElement.getAttribute('dir')
+    const previousLang = document.documentElement.getAttribute('lang')
+    document.documentElement.setAttribute('dir', 'ltr')
+    document.documentElement.setAttribute('lang', 'en')
+    return () => {
+      if (previousDir) {
+        document.documentElement.setAttribute('dir', previousDir)
+      } else {
+        document.documentElement.removeAttribute('dir')
+      }
+      if (previousLang) {
+        document.documentElement.setAttribute('lang', previousLang)
+      } else {
+        document.documentElement.removeAttribute('lang')
+      }
+    }
+  }, [])
+
   // 使用共享的导航数据，保持与多语言页面一致
   const navigationItems = NAVIGATION_ITEMS.en.map(item => ({
     name: item.label,
