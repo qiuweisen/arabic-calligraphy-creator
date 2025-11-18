@@ -46,7 +46,6 @@ import { Drawer, DrawerContent, DrawerHeader, DrawerTitle } from "@/components/u
 import { TemplateBrowser } from "@/components/template-browser"
 import { FontPreview } from "@/components/font-preview"
 import { MobileFab } from "@/components/mobile-fab"
-import { AdSlotCard } from "@/components/ads/ad-slot-card"
 import { useTranslations } from 'next-intl'
 
 // Helper function to generate canvas from preview
@@ -1893,9 +1892,6 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                 </div>
               </CardContent>
             </Card>
-
-            {/* Ad Card - Between Preview and Templates */}
-            <AdSlotCard slotId="6388230820" format="multiplex" />
 
             {/* Templates Card */}
             <Card className="overflow-hidden border-amber-200 bg-white/80 backdrop-blur-sm">
