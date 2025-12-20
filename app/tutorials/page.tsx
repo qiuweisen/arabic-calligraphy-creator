@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Arabic Calligraphy How-to Tutorials | Step-by-Step Instructions",
   description: "Step-by-step tutorials for creating Arabic calligraphy. Practical instructions for font selection, design techniques, and using our generator tool effectively.",
   keywords: "how to create arabic calligraphy, arabic calligraphy tutorial, step by step calligraphy guide, arabic font selection tutorial, calligraphy design tips",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/tutorials",
+  },
 }
 
 const BEGINNER_TUTORIALS = [

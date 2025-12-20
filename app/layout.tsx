@@ -20,22 +20,6 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Arabic Calligraphy Generator – Create Stunning Designs Online",
   description: "Create professional Arabic calligraphy with 17 curated fonts, AI-powered design suggestions, and instant PNG/SVG export. Free, no registration required.",
-  alternates: {
-    canonical: '/',
-    languages: {
-      'en': '/',
-      'ar': '/ar',
-      'ur': '/ur',
-      'bn': '/bn',
-      'ms': '/ms',
-      'id': '/id',
-      'de': '/de',
-      'hi': '/hi',
-      'fr': '/fr',
-      'tr': '/tr',
-      'x-default': '/',
-    },
-  },
   openGraph: {
     title: "Arabic Calligraphy Generator – Create Stunning Designs Online",
     description: "Create professional Arabic calligraphy with 17 curated fonts, AI-powered design suggestions, and instant PNG/SVG export. Free, no registration required.",

@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Arabic Calligraphy Generator Features | Tool Capabilities",
   description: "Discover the powerful features of our Arabic calligraphy generator: 17+ fonts, customization options, instant downloads, and professional-quality output.",
   keywords: "arabic calligraphy generator features, calligraphy tool capabilities, arabic font features, generator specifications, calligraphy tool functions",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/features",
+  },
 }
 
 const FEATURES = [

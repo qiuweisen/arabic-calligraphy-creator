@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   title: "Contact Us | Arabic Calligraphy Generator - Support & Feedback",
   description: "Get in touch with our team for questions, feedback, or support related to our Arabic Calligraphy Generator. We're here to help with technical support and general inquiries.",
   keywords: "contact, Arabic calligraphy support, feedback, calligraphy questions, Arabic typography help, customer service",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/contact",
+  },
 }
 
 export default function ContactPage() {

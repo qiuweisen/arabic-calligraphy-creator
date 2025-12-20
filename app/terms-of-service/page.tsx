@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Terms of Service | Arabic Calligraphy Generator",
   description: "Our Terms of Service outline the rules, guidelines, and legal terms that govern your use of the Arabic Calligraphy Generator website and tools.",
   keywords: "terms of service, terms and conditions, user agreement, legal terms, Arabic calligraphy generator terms",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/terms-of-service",
+  },
 }
 
 export default function TermsOfServicePage() {

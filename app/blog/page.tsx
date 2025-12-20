@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   description:
     "Explore the rich cultural heritage of Arabic calligraphy through our articles about history, traditional styles, famous calligraphers, and cultural significance.",
   keywords: "Arabic calligraphy history, Islamic calligraphy culture, Arabic script heritage, calligraphy styles, famous calligraphers, Arabic typography culture",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/blog",
+  },
 }
 
 const blogPosts = [

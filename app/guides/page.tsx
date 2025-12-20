@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Arabic Calligraphy Learning Guides | Comprehensive Study Path",
   description: "Comprehensive learning guides for mastering Arabic calligraphy, understanding font characteristics, typography trends, and design principles. Structured learning path from beginner to advanced.",
   keywords: "arabic calligraphy learning, calligraphy study guide, arabic typography learning, font comparison guide, calligraphy education resources",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/guides",
+  },
 }
 
 const GUIDES = [

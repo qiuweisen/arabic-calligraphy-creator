@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Free Arabic Calligraphy Resources | Templates & Design Assets",
   description: "Download free Arabic calligraphy resources including design templates, font collections, and creative assets for your typography projects.",
   keywords: "free arabic calligraphy resources, free arabic fonts download, calligraphy templates, arabic design assets, free typography resources",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/resources",
+  },
 }
 
 const RESOURCES = [

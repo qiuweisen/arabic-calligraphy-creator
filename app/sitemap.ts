@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { statSync } from 'node:fs'
 import { join } from 'node:path'
+import { locales, defaultLocale } from '@/i18n'
 
 const PROJECT_ROOT = process.cwd()
 const DEFAULT_LAST_MODIFIED = new Date('2025-01-01T00:00:00Z')
@@ -88,45 +89,25 @@ const USE_CASES_PAGES = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://arabic-calligraphy-generator.com'
 
-  // Core pages - only include pages that have been fully internationalized
+  const localeHomePages = locales
+    .filter(locale => locale !== defaultLocale)
+    .map(locale => ({
+      url: `${baseUrl}/${locale}`,
+      file: 'app/[locale]/page.tsx',
+      changeFrequency: 'monthly' as const,
+      priority: 1.0,
+    }))
+
+  // Core pages
   const staticPages = [
-    // Homepage - fully internationalized
+    // Homepage (default locale)
     {
       url: baseUrl,
       file: 'app/[locale]/page.tsx',
       changeFrequency: 'monthly' as const,
       priority: 1.0,
     },
-    {
-      url: `${baseUrl}/ar`,
-      file: 'app/[locale]/page.tsx',
-      changeFrequency: 'monthly' as const,
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/ur`,
-      file: 'app/[locale]/page.tsx',
-      changeFrequency: 'monthly' as const,
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/bn`,
-      file: 'app/[locale]/page.tsx',
-      changeFrequency: 'monthly' as const,
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/ms`,
-      file: 'app/[locale]/page.tsx',
-      changeFrequency: 'monthly' as const,
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/id`,
-      file: 'app/[locale]/page.tsx',
-      changeFrequency: 'monthly' as const,
-      priority: 1.0,
-    },
+    ...localeHomePages,
     // Other pages - keep original English-only URLs until they are internationalized
     {
       url: `${baseUrl}/fonts`,
@@ -149,6 +130,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/resources`,
       file: 'app/resources/page.tsx',
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/templates`,
+      file: 'app/templates/page.tsx',
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },

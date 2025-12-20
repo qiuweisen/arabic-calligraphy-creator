@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Arabic Calligraphy Ideas - Wedding, Business, Social Media Examples",
   description: "Discover amazing Arabic calligraphy ideas! Perfect for weddings, business logos, Instagram posts & religious art. Free examples & templates.",
   keywords: "Arabic calligraphy ideas, wedding Arabic fonts, business Arabic logos, Instagram Arabic posts, Arabic calligraphy examples, free Arabic designs",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/use-cases",
+  },
 }
 
 const USE_CASES = [

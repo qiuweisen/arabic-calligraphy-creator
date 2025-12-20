@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "About Us | Arabic Calligraphy Generator",
   description: "Learn about our mission to create the best online Arabic calligraphy generator, blending art, technology, and user experience.",
   keywords: "about Arabic calligraphy generator, our mission, Arabic art tool, calligraphy technology, online design tool",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/about-us",
+  },
 };
 
 export default function AboutUsPage() {

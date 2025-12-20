@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Arabic Calligraphy Generator",
   description: "Our privacy policy outlines how we collect, use, and protect your personal information when you use the Arabic Calligraphy Generator.",
   keywords: "privacy policy, data protection, user privacy, Arabic calligraphy generator terms",
+  alternates: {
+    canonical: "https://arabic-calligraphy-generator.com/privacy-policy",
+  },
 }
 
 export default function PrivacyPolicyPage() {

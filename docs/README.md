@@ -12,6 +12,7 @@
 - **`seo-improve-todo.md`** - SEO改进计划（已完成）
 - **`keyword-focus-audit.md`** - 关键词聚焦审计
 - **`seo-keyword-focus-strategy.md`** - 关键词策略
+- **`seo-product-iteration-strategy-2025-12-20.md`** - 产品 × SEO 系统性迭代方案（基于最新GSC）
 
 ### 桌面端优化
 - **`desktop-optimization-monitoring.md`** - 桌面端CTR优化监控方案
