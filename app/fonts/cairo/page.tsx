@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Smartphone, Layers, Type, HelpCircle, CheckCircle, FileText, Globe, Download } from "lucide-react"
 import { StaticNavbar } from "@/components/static-navbar"
-import { Footer } from "@/components/footer"
+import { StaticFooter } from "@/components/static-footer"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
@@ -521,7 +521,7 @@ export default function CairoPage() {
           </div>
         </div>
       </main>
-      <Footer />
+      <StaticFooter />
     </>
   )
 }

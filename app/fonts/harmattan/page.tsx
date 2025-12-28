@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, BookOpen, Globe, Languages, Type, Users, Zap } from "lucide-react"
 import { StaticNavbar } from "@/components/static-navbar"
-import { Footer } from "@/components/footer"
+import { StaticFooter } from "@/components/static-footer"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RelatedContent } from "@/components/related-content"
@@ -335,7 +335,7 @@ export default function HarmattanFontPage() {
           </div>
         </div>
       </main>
-      <Footer />
+      <StaticFooter />
     </>
   )
 } 

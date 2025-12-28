@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { StaticNavbar } from "@/components/static-navbar"
-import { Footer } from "@/components/footer"
+import { StaticFooter } from "@/components/static-footer"
 import { Breadcrumb } from '@/components/breadcrumb'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -376,7 +376,7 @@ export default function FreeArabicFontsPage() {
           </div>
         </div>
       </div>
-          <Footer />
+          <StaticFooter />
     </>
   )
 }

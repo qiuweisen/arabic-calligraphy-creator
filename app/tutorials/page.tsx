@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { StaticNavbar } from "@/components/static-navbar"
-import { Footer } from "@/components/footer"
+import { StaticFooter } from "@/components/static-footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { PlayCircle, Book, Lightbulb, Palette, ArrowRight } from "lucide-react"
@@ -276,7 +276,7 @@ export default function TutorialsPage() {
           </div>
         </div>
       </main>
-      <Footer />
+      <StaticFooter />
     </>
   )
 } 

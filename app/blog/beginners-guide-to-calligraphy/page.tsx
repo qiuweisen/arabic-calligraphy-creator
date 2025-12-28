@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 import { StaticNavbar } from "@/components/static-navbar"
-import { Footer } from "@/components/footer"
+import { StaticFooter } from "@/components/static-footer"
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 import { RelatedContent } from "@/components/related-content"
@@ -291,7 +291,7 @@ export default function BeginnersGuideToCalligraphyPage() {
           </div>
         </div>
       </main>
-      <Footer />
+      <StaticFooter />
     </>
   )
 } 

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Sparkles, Palette, Zap, Users, Target } from "lucide-react";
 import { StaticNavbar } from "@/components/static-navbar";
-import { Footer } from "@/components/footer";
+import { StaticFooter } from "@/components/static-footer";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -140,7 +140,7 @@ export default function AboutUsPage() {
           </div>
         </div>
       </main>
-      <Footer />
+      <StaticFooter />
     </>
   );
 } 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { StaticNavbar } from "@/components/static-navbar"
-import { Footer } from "@/components/footer"
+import { StaticFooter } from "@/components/static-footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { BookOpen, ArrowRight, Star, Clock, Users, GraduationCap, Target } from "lucide-react"
@@ -296,7 +296,7 @@ export default function GuidesPage() {
           </Card>
         </div>
       </main>
-      <Footer />
+      <StaticFooter />
     </>
   )
 }

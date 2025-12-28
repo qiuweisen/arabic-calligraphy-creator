@@ -6,7 +6,7 @@ import { ArrowRight, Calendar, Tag, BookOpen, TrendingUp } from "lucide-react"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { GeneratorCTA } from "@/components/generator-cta"
 import { StaticNavbar } from "@/components/static-navbar"
-import { Footer } from "@/components/footer"
+import { StaticFooter } from "@/components/static-footer"
 
 export const metadata: Metadata = {
   title: "Arabic Calligraphy Knowledge Base | History & Cultural Insights",
@@ -315,7 +315,7 @@ export default function BlogPage() {
           </Card>
         </div>
       </main>
-      <Footer />
+      <StaticFooter />
     </>
   )
 }
