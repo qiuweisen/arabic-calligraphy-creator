@@ -202,9 +202,9 @@
   英语市场通常更值钱，但竞争更激烈；策略是“英文意图页 + 更强的产品化 Snippet + 内链集群”稳步推进，同时保持印尼侧的低成本增量。
 
 实现上（重要）：当前你的多语言路由只覆盖首页（`middleware.ts` 的 `MULTILINGUAL_PATHS` 仅包含 `'/'`）。  
-因此“印尼深耕”有两种可选路径：
-1) **不扩 i18n 路由**：直接新增印尼语落地页（无 `/id` 前缀，例如 `/kaligrafi-online`），用印尼语内容承接本地 query。  
-2) **扩 i18n 路由**：把某些“工具路径”加入 `MULTILINGUAL_PATHS`（比如 `/tools/*`），再做 `/id/tools/...`。这更系统，但工程量更大。  
+因此“印尼深耕”采用 **统一的多语言工具路径**（固定 `/tools/` 结构）：
+- **扩 i18n 路由（确定方案）**：把“工具路径”加入 `MULTILINGUAL_PATHS`（`/tools/*`），再做 `/{locale}/tools/...`（如 `/id/tools/kaligrafi-online`）。  
+这样 URL 结构统一、hreflang 清晰，未来扩阿语/土语不会混乱，避免后期重构成本。
 
 ---
 
@@ -242,6 +242,8 @@ Spokes（辐射页）：
 内链的“硬规则”：
 - 每个 Spoke 至少链接回一个 Hub（避免孤岛）
 - 每个 Hub 至少链接到 8–12 个 Spoke（分发权重）
+- **所有工具页首屏必须有“指向首页”的锚文本链接**（锚文本使用 “Arabic Calligraphy Generator”），确保首页继续承接主词权重。
+- **首页建议在 Hero/Feature 中显式出现 “Free Online Arabic Calligraphy Generator”**（可用 H2/H3），强化主词相关性。
 
 ---
 
@@ -314,6 +316,27 @@ Spokes（辐射页）：
 - `url`、`name`、`description` 与页面内容一致
 - `license` 真实可追溯（字体页已展示 license，可复用）
 
+### 7.5 Technical Vitals（CWV）检查项（必须加入执行）
+> 原则：意图页如果在移动端 LCP > 2.5s，将显著削弱排名与 CTR 的提升效果。
+
+建议动作：
+- Week 1 即加入移动端 LCP 检测（PageSpeed 或 Lighthouse），优先监测：首页 + 新工具页。
+- 若 LCP 超标：  
+  1) 生成器首屏用静态占位（或 skeleton），点击后再加载重 JS；  
+  2) 延迟加载非关键组件（Use Cases、模板、图表）；  
+  3) 减少首屏字体/图片阻塞（预加载关键资源）。  
+
+目标线：移动端 LCP < 2.5s，CLS < 0.1。
+
+### 7.6 商业化补充（低风险、可并行试验）
+> 目标：不影响 SEO 与主转化的前提下，提升字体页的收益效率。
+
+建议做法：
+- 在 font 详情页的 “Free Download” 旁边 **低调**加入 “Premium Fonts / Get Premium Version” 的 Affiliate 推荐（不遮挡主 CTA）。
+- 明确标注为推荐/赞助链接，并加 `rel="sponsored"`（避免 SEO 风险）。
+- 仅在流量较高的 font 页试点（如 `/fonts/amiri`、`/fonts/noto-naskh-arabic`），先测 2–4 周再扩展。
+- 维持“免费可用”的主承诺不变，避免降低转化与信任。
+
 ---
 
 ## 8. 指标体系与实验方法（把增长变成工程）
@@ -352,6 +375,10 @@ SEO 层（结果）：
 4) 不要破坏“首屏即工具”：  
 任何新增内容都应该放在生成器之后（你现有体验是优势）。
 
+5) 多语言 URL 结构不要分裂：  
+若同时存在 `/id/...` 和无前缀的印尼页，将导致 hreflang 混乱、权重分散、维护成本上升。  
+建议统一走 `/locale/`，工具路径通过 `MULTILINGUAL_PATHS` 放行。
+
 ---
 
 ## 10. 建议的“下一步选择题”（你来定方向）
@@ -376,13 +403,14 @@ SEO 层（结果）：
 ### Week 1–2：工具页优先（Quick Wins，先把“承接”做对）
 - 目标：先用 2 个“高意图工具页”把核心需求承接住（并把内链/结构化数据打通），再回头处理“零点击页面”的定位问题。
 - 交付（建议 P0 两个）：
-  - `/arabic-text-generator`（解决 `arabic text generator` CTR 异常低的问题）
-  - `/arabic-font-generator`（承接“font generator / font style”意图，并反哺 `/fonts`）
+  - `/tools/arabic-text-generator`（解决 `arabic text generator` CTR 异常低的问题）
+  - `/tools/arabic-font-generator`（承接“font generator / font style”意图，并反哺 `/fonts`）
 - 同步小修（只做与工具流量强相关的页面）：
   - `/guides/best-arabic-fonts-2025`（pos `4.90` 但 CTR `0.88%`，优先改 title/description + 补面包屑/FAQ）
   - 低 CTR font 页（如 `/fonts/tajawal`、`/fonts/cairo`）：标题中强化“Free Download / Formats / Use case”
 - `/faq`、`/blog`、`/use-cases`：只做“最低成本的重定位”
   - 确认它们在 GSC 触发的 queries；在页面正文显著位置加“去工具页”的内链（把流量导走），不把它们当作主增长引擎。
+  - 若 4–8 周后依然为 0 clicks，可考虑拆散 FAQ 到工具页或首页底部，`/faq` 转为 Help Center/Support；必要时评估 noindex（需基于 query 明细）。
 - 验收建议（2–4 周内）：
   - 新工具页开始获得 impressions（即便初期 clicks 不高也正常）
   - `arabic text generator` 的 CTR/落点更符合预期（从 1.66% 往 3%+ 走）
@@ -390,18 +418,17 @@ SEO 层（结果）：
 
 ### Week 3–4：印尼并行（高 ROI 增长轨）
 - 基于你已强势的印尼 query 簇（如 `kaligrafi online`、`buat kaligrafi arab online`、`kaligrafi nama sendiri online`）
-- 两条实现路线二选一（见 5.5）：
-  1) 新增无前缀的印尼落地页（`/kaligrafi-online`、`/kaligrafi-nama` 等）
-  2) 扩 i18n 路由后做 `/id/...`
+- 统一路径：使用 `/id/tools/...` 承接（示例：`/id/tools/kaligrafi-online`、`/id/tools/kaligrafi-nama`）
 - 重点不是“翻译英文”，而是：用印尼语直接命中意图，并强导入生成器（预填 + CTA）
 
 ### Week 5–6：核心意图页建设（英文主战）
-- 建议优先 4 个：`/arabic-text-generator`、`/arabic-font-generator`、`/write-your-name-in-arabic-calligraphy`、`/arabic-calligraphy-logo-generator`
+- 建议优先 4 个：`/tools/arabic-text-generator`、`/tools/arabic-font-generator`、`/tools/write-your-name-in-arabic-calligraphy`、`/tools/arabic-calligraphy-logo-generator`
 - 每页按第 6.1 的产品化模板做全（示例/步骤/推荐字体/FAQ/内链）
 
 ### Week 7–8：下载意图强化（Fonts × Download）
 - 强化 `/resources/free-arabic-fonts`：增加安装/授权/格式/推荐组合，并把它从“文章页”变成“下载中心”
 - 统一 font 页的“下载/授权”区块表达：格式、License、适用场景、与生成器的联动 CTA
+- （可选试点）在 2–3 个高流量 font 页加入 Affiliate 推荐位，观察点击与 RPM 的变化
 
 ---
 
@@ -417,14 +444,14 @@ SEO 层（结果）：
 | 优先级 | 建议 URL | 主关键词 | 目的 | 主要内链到 |
 |---:|---|---|---|---|
 | P0 | `/arabic-calligraphy-generator`（可选，或保持首页） | arabic calligraphy generator | 推排名 9→5 | `/` `/fonts` |
-| P0 | `/arabic-text-generator` | arabic text generator | 抢明确工具意图 | `/` `/fonts` |
-| P0 | `/arabic-font-generator` | arabic font generator | 连接 fonts 与工具 | `/fonts` |
-| P0 | `/khat-converter` | khat converter | 抢近义词流量 | `/` |
-| P0 | `/write-your-name-in-arabic-calligraphy` | write name in arabic calligraphy | 强转化意图 | `/templates` `/use-cases/*` |
-| P1 | `/arabic-calligraphy-logo-generator` | arabic calligraphy logo generator | 场景落地 | `/use-cases/business-logo-arabic-fonts` |
-| P1 | `/arabic-text-to-svg` | arabic text to svg | 导出意图 | `/` |
-| P1 | `/arabic-text-png-generator` | arabic text png generator | 导出意图 | `/` |
-| P1 | `/free-arabic-fonts-download`（或强化 `/resources/free-arabic-fonts`） | free arabic fonts | 下载意图 | `/fonts` |
+| P0 | `/tools/arabic-text-generator` | arabic text generator | 抢明确工具意图 | `/` `/fonts` |
+| P0 | `/tools/arabic-font-generator` | arabic font generator | 连接 fonts 与工具 | `/fonts` |
+| P0 | `/tools/khat-converter` | khat converter | 抢近义词流量 | `/` |
+| P0 | `/tools/write-your-name-in-arabic-calligraphy` | write name in arabic calligraphy | 强转化意图 | `/templates` `/use-cases/*` |
+| P1 | `/tools/arabic-calligraphy-logo-generator` | arabic calligraphy logo generator | 场景落地 | `/use-cases/business-logo-arabic-fonts` |
+| P1 | `/tools/arabic-text-to-svg` | arabic text to svg | 导出意图 | `/` |
+| P1 | `/tools/arabic-text-png-generator` | arabic text png generator | 导出意图 | `/` |
+| P1 | `/tools/free-arabic-fonts-download`（或强化 `/resources/free-arabic-fonts`） | free arabic fonts | 下载意图 | `/fonts` |
 
 > 注：URL 命名可以再统一风格，但先用“直白可读”的英文短横线，避免过度优化。
 

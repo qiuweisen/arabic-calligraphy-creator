@@ -141,6 +141,15 @@ export default function FAQPage() {
             </p>
           </header>
 
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
+            <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
+              <Link href="/tools/arabic-text-generator">Arabic Text Generator</Link>
+            </Button>
+            <Button asChild variant="outline" className="border-amber-600 text-amber-700 hover:bg-amber-50">
+              <Link href="/tools/arabic-font-generator">Arabic Font Generator</Link>
+            </Button>
+          </div>
+
           {/* Quick Action Cards */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <Card className="text-center p-6 bg-gradient-to-b from-blue-50 to-blue-100 border-blue-200 hover:shadow-lg transition-shadow group">
@@ -148,7 +157,7 @@ export default function FAQPage() {
               <h3 className="font-semibold text-blue-900 mb-2">Quick Start</h3>
               <p className="text-sm text-blue-700 mb-4">Create your first calligraphy instantly</p>
               <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-md">
-                <Link href="/">Start Now</Link>
+                <Link href="/tools/arabic-text-generator">Start Now</Link>
               </Button>
             </Card>
             <Card className="text-center p-6 bg-gradient-to-b from-green-50 to-green-100 border-green-200 hover:shadow-lg transition-shadow group">

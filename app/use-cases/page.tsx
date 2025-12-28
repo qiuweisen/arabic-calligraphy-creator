@@ -171,10 +171,13 @@ export default function UseCasesPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button asChild className="bg-gray-900 hover:bg-gray-800 text-white">
-                  <Link href="/">Start Creating Now</Link>
+                  <Link href="/tools/arabic-text-generator">Start Creating Now</Link>
                 </Button>
                 <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
                   <Link href="/tutorials">View Tutorials</Link>
+                </Button>
+                <Button asChild variant="outline" className="border-gray-900 text-gray-900 hover:bg-gray-50">
+                  <Link href="/tools/arabic-font-generator">Preview Fonts</Link>
                 </Button>
               </div>
             </div>

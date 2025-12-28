@@ -5,10 +5,10 @@ import { locales, defaultLocale, getSuggestedLocale } from './i18n';
 // 定义需要多语言支持的路径（使用Set提高查找效率）
 const MULTILINGUAL_PATHS = new Set([
   '/', // 主页
-  // 未来可以添加更多页面，如：
-  // '/contact',
-  // '/about',
 ]);
+
+// 多语言路径前缀（用于工具页等可扩展路径）
+const MULTILINGUAL_PREFIXES = ['/tools'];
 
 // 语言代码Set，避免每次循环查找
 const LOCALE_SET = new Set(locales);
@@ -17,6 +17,9 @@ const LOCALE_SET = new Set(locales);
 function isMultilingualPath(pathname: string): boolean {
   // 快速检查：根路径
   if (pathname === '/') return true;
+
+  const matchesPrefix = (path: string) =>
+    MULTILINGUAL_PREFIXES.some(prefix => path === prefix || path.startsWith(`${prefix}/`));
 
   // 对于带语言前缀的路径，使用更高效的解析
   if (pathname.length > 1 && pathname[1] !== '/') {
@@ -28,12 +31,12 @@ function isMultilingualPath(pathname: string): boolean {
     if (LOCALE_SET.has(localeCandidate as any)) {
       // 提取去掉语言前缀的路径
       const pathWithoutLocale = firstSlash === -1 ? '/' : pathname.slice(firstSlash) || '/';
-      return MULTILINGUAL_PATHS.has(pathWithoutLocale);
+      return MULTILINGUAL_PATHS.has(pathWithoutLocale) || matchesPrefix(pathWithoutLocale);
     }
   }
 
   // 检查是否在多语言路径列表中
-  return MULTILINGUAL_PATHS.has(pathname);
+  return MULTILINGUAL_PATHS.has(pathname) || matchesPrefix(pathname);
 }
 
 // 创建 next-intl 中间件

@@ -14,15 +14,15 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Tajawal Arabic Font Download - Modern Geometric Sans-Serif for UI Design | Free Typography",
-  description: "Download Tajawal Arabic font free - clean geometric sans-serif perfect for modern websites, mobile apps, and corporate branding. Bilingual Arabic-Latin support with multiple weights. Create professional Arabic typography instantly.",
+  title: "Tajawal Arabic Font - Free Download (TTF) | Modern UI & Branding",
+  description: "Download Tajawal Arabic font for free (TTF). A modern geometric sans-serif for UI/UX, web apps, and brand identity with bilingual Arabic-Latin support.",
   keywords: "tajawal arabic font download, geometric arabic fonts, modern arabic typography, arabic ui fonts, bilingual fonts arabic, corporate arabic fonts, geometric sans serif arabic, contemporary arabic design",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/fonts/tajawal",
   },
   openGraph: {
-    title: "Tajawal Arabic Font Download - Modern Geometric Sans-Serif for UI Design | Free Typography",
-    description: "Download Tajawal Arabic font free - clean geometric sans-serif perfect for modern websites, mobile apps, and corporate branding. Bilingual Arabic-Latin support with multiple weights. Create professional Arabic typography instantly.",
+    title: "Tajawal Arabic Font - Free Download (TTF) | Modern UI & Branding",
+    description: "Download Tajawal Arabic font for free (TTF). A modern geometric sans-serif for UI/UX, web apps, and brand identity with bilingual Arabic-Latin support.",
     url: "https://arabic-calligraphy-generator.com/fonts/tajawal",
     siteName: "Arabic Calligraphy Generator",
     type: "article",

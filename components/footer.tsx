@@ -8,10 +8,13 @@ import { defaultLocale } from '@/i18n'
 export function Footer() {
   const t = useTranslations('footer')
   const locale = useLocale()
+  const toolBase = locale === defaultLocale ? '' : `/${locale}`
   const anchorHref =
     locale === defaultLocale
       ? '/#calligraphy-tool-section'
       : `/${locale}#calligraphy-tool-section`
+  const textToolHref = `${toolBase}/tools/arabic-text-generator`
+  const fontToolHref = `${toolBase}/tools/arabic-font-generator`
   return (
     <footer className="bg-amber-900 text-amber-100 py-8">
       <div className="container mx-auto px-4">
@@ -46,13 +49,13 @@ export function Footer() {
             <h3 className="font-bold text-white mb-4 text-sm uppercase">{t('generatorTools.title')}</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href={anchorHref} className="text-amber-200 hover:text-white transition-colors block">
+                <Link href={textToolHref} className="text-amber-200 hover:text-white transition-colors block">
                   <div className="font-medium">{t('generatorTools.arabicCalligraphy.title')}</div>
                   <div className="text-xs text-amber-300 mt-0.5">{t('generatorTools.arabicCalligraphy.desc')}</div>
                 </Link>
               </li>
               <li>
-                <Link href={anchorHref} className="text-amber-200 hover:text-white transition-colors block">
+                <Link href={fontToolHref} className="text-amber-200 hover:text-white transition-colors block">
                   <div className="font-medium">{t('generatorTools.arabicFont.title')}</div>
                   <div className="text-xs text-amber-300 mt-0.5">{t('generatorTools.arabicFont.desc')}</div>
                 </Link>

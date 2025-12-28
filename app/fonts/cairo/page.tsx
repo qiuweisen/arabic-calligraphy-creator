@@ -14,15 +14,15 @@ import { DownloadButton } from "@/components/download-button"
 import { Breadcrumb } from "@/components/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Cairo Font Download Free - TTF Files | Modern Arabic Sans-Serif",
-  description: "Download Cairo Arabic font instantly. Free TTF files, 9 weights included (Thin to Black). Perfect for web & UI design. 100% free for commercial use. Works on Windows, Mac, Linux.",
+  title: "Cairo Arabic Font - Free Download (TTF) | UI/UX Sans-Serif",
+  description: "Download Cairo Arabic font for free (TTF). Includes 9 weights for UI/UX, web, and branding. Commercial use allowed on Windows, Mac, and Linux.",
   keywords: "cairo font download, cairo font free, cairo ttf, arabic sans serif download, free arabic fonts, modern arabic typography, arabic web font, google fonts cairo",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/fonts/cairo",
   },
   openGraph: {
-    title: "Cairo Font Download Free - Modern Arabic Sans-Serif",
-    description: "Download Cairo Arabic font instantly. 9 weights, 100% free for commercial use. Perfect for web & UI design.",
+    title: "Cairo Arabic Font - Free Download (TTF) | UI/UX Sans-Serif",
+    description: "Download Cairo Arabic font for free (TTF). Includes 9 weights for UI/UX, web, and branding.",
     url: "https://arabic-calligraphy-generator.com/fonts/cairo",
     siteName: "Arabic Calligraphy Generator",
     type: "website",

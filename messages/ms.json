@@ -188,6 +188,10 @@
       "title": "Mula Pantas:",
       "steps": "Taip teks Arab → Pilih fon → Muat turun serta-merta"
     },
+    "toolsSection": {
+      "title": "Alat Popular",
+      "description": "Alat berfokus untuk tugas tertentu, disokong oleh Penjana Kaligrafi Arab utama."
+    },
     "howToUse": {
       "title": "Cara Mencipta Kaligrafi Arab",
       "step1": {
@@ -800,6 +804,112 @@
     },
     "sponsor": {
       "supportButton": "☕ Sokong Kami ($3)"
+    }
+  },
+  "tools": {
+    "arabicTextGenerator": {
+      "meta": {
+        "title": "Penjana Teks Arab - Kaligrafi Arab Online | PNG & SVG",
+        "description": "Hasilkan teks Arab bergaya kaligrafi dengan 17 fon pilihan. Percuma tanpa daftar. Eksport PNG atau SVG untuk reka bentuk.",
+        "keywords": "kaligrafi arab online, penjana teks arab, penjana kaligrafi arab, nama arab kaligrafi, fon arab online, teks arab png, teks arab svg"
+      },
+      "hero": {
+        "eyebrow": "Mencari <link>Penjana Kaligrafi Arab</link> utama?",
+        "title": "Penjana Teks Arab",
+        "description": "Taip teks Arab, pilih gaya kaligrafi, dan eksport PNG atau SVG. Percuma tanpa akaun, sesuai untuk nama dan logo.",
+        "cta": "Mula Cipta"
+      },
+      "features": [
+        {
+          "title": "Untuk Nama dan Frasa Pendek",
+          "description": "Sesuai untuk nama Arab, ucapan ringkas, dan petikan pendek."
+        },
+        {
+          "title": "Kawalan Gaya Secara Langsung",
+          "description": "Laraskan fon, saiz, jarak, warna, dan latar belakang secara masa nyata."
+        },
+        {
+          "title": "Sedia untuk Reka Bentuk",
+          "description": "Muat turun PNG atau SVG untuk jemputan, logo, dan media sosial."
+        }
+      ],
+      "howTo": {
+        "title": "Cara menggunakan Penjana Teks Arab",
+        "steps": [
+          "Taip atau tampal teks Arab anda.",
+          "Pilih fon kaligrafi dan laraskan saiz, jarak, serta warna.",
+          "Eksport PNG atau SVG dan gunakan dalam reka bentuk anda."
+        ]
+      },
+      "faq": {
+        "title": "Soalan Lazim",
+        "items": [
+          {
+            "question": "Boleh saya menulis nama Arab?",
+            "answer": "Boleh. Alat ini dioptimumkan untuk nama Arab dan frasa pendek."
+          },
+          {
+            "question": "Adakah percuma tanpa akaun?",
+            "answer": "Ya. Percuma digunakan tanpa pendaftaran atau watermark."
+          },
+          {
+            "question": "Di mana boleh guna hasil eksport?",
+            "answer": "Gunakan PNG atau SVG untuk jemputan, logo, cetakan, dan media sosial."
+          }
+        ]
+      }
+    },
+    "arabicFontGenerator": {
+      "meta": {
+        "title": "Penjana Fon Arab Online - Pratonton 17+ Fon",
+        "description": "Pratonton dan bandingkan fon Arab dalam talian. Pilih 17 gaya kaligrafi dan eksport PNG atau SVG secara percuma.",
+        "keywords": "penjana fon arab, pratonton fon arab, fon kaligrafi arab, fon arab online, gaya fon arab"
+      },
+      "hero": {
+        "eyebrow": "Perlukan <link>Penjana Kaligrafi Arab</link> penuh?",
+        "title": "Penjana Fon Arab",
+        "description": "Bandingkan fon Arab dengan pantas, lihat pratonton segera, dan eksport PNG atau SVG percuma.",
+        "cta": "Mula Pratonton"
+      },
+      "features": [
+        {
+          "title": "Bandingkan Fon dengan Pantas",
+          "description": "Tukar antara 17 fon terpilih dan lihat pratonton segera."
+        },
+        {
+          "title": "Gaya untuk Setiap Keperluan",
+          "description": "Terokai Naskh, Kufi, Diwani, Nastaliq, dan gaya moden."
+        },
+        {
+          "title": "Eksport Sampel Fon",
+          "description": "Muat turun sampel PNG atau SVG untuk pembentangan atau mockup."
+        }
+      ],
+      "howTo": {
+        "title": "Cara menggunakan Penjana Fon Arab",
+        "steps": [
+          "Masukkan perkataan atau frasa contoh.",
+          "Cuba fon berbeza dan laraskan saiz atau jarak.",
+          "Eksport sampel PNG atau SVG dan teruskan kerja reka bentuk."
+        ]
+      },
+      "faq": {
+        "title": "Soalan Lazim",
+        "items": [
+          {
+            "question": "Bolehkah saya membandingkan beberapa fon Arab?",
+            "answer": "Ya. Tukar fon secara segera untuk membandingkan gaya."
+          },
+          {
+            "question": "Adakah pratonton percuma?",
+            "answer": "Ya. Anda boleh pratonton dan mengeksport sampel tanpa pendaftaran."
+          },
+          {
+            "question": "Di mana saya boleh memuat turun fon?",
+            "answer": "Anda boleh melayari dan memuat turun fon di halaman Fon Arab."
+          }
+        ]
+      }
     }
   },
   "seo": {

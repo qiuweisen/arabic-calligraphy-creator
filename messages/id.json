@@ -188,6 +188,10 @@
       "title": "Mulai Cepat:",
       "steps": "Ketik teks Arab → Pilih font → Unduh instan"
     },
+    "toolsSection": {
+      "title": "Alat Populer",
+      "description": "Alat terfokus untuk tugas tertentu, didukung oleh Generator Kaligrafi Arab utama."
+    },
     "howToUse": {
       "title": "Cara Membuat Kaligrafi Arab",
       "step1": {
@@ -800,6 +804,120 @@
     },
     "sponsor": {
       "supportButton": "☕ Dukung Kami ($3)"
+    }
+  },
+  "tools": {
+    "arabicTextGenerator": {
+      "meta": {
+        "title": "Kaligrafi Arab Online - Teks Arab Gratis | PNG & SVG",
+        "description": "Buat teks Arab bergaya kaligrafi dengan 17 font pilihan. Gratis tanpa daftar. Ekspor PNG atau SVG untuk desain, undangan, dan logo.",
+        "keywords": "kaligrafi arab online, generator teks arab, pembuat kaligrafi arab, kaligrafi nama arab, font arab online, teks arab png, teks arab svg"
+      },
+      "hero": {
+        "eyebrow": "Mencari <link>Generator Kaligrafi Arab</link> utama?",
+        "title": "Kaligrafi Arab Online",
+        "description": "Tulis teks Arab, pilih gaya kaligrafi, lalu ekspor PNG atau SVG. Gratis tanpa akun, cocok untuk nama dan logo.",
+        "cta": "Mulai Buat Kaligrafi"
+      },
+      "features": [
+        {
+          "title": "Untuk Nama dan Frasa Pendek",
+          "description": "Cocok untuk nama Arab, ucapan, dan kutipan singkat."
+        },
+        {
+          "title": "Kontrol Gaya Langsung",
+          "description": "Atur font, ukuran, spasi, warna, dan latar belakang secara langsung."
+        },
+        {
+          "title": "Siap untuk Desain",
+          "description": "Unduh PNG atau SVG untuk undangan, logo, dan media sosial."
+        }
+      ],
+      "howTo": {
+        "title": "Cara menggunakan Kaligrafi Arab Online",
+        "steps": [
+          "Ketik atau tempel teks Arab Anda.",
+          "Pilih font kaligrafi, atur ukuran, spasi, dan warna.",
+          "Ekspor PNG atau SVG dan gunakan dalam desain Anda."
+        ]
+      },
+      "faq": {
+        "title": "FAQ",
+        "items": [
+          {
+            "question": "Bisakah saya menulis nama Arab?",
+            "answer": "Bisa. Alat ini dioptimalkan untuk nama Arab dan frasa pendek."
+          },
+          {
+            "question": "Apakah gratis tanpa akun?",
+            "answer": "Ya. Gratis tanpa registrasi atau watermark."
+          },
+          {
+            "question": "Di mana hasil ekspor bisa digunakan?",
+            "answer": "Gunakan PNG atau SVG untuk undangan, logo, cetak, dan konten media sosial."
+          },
+          {
+            "question": "Apa itu kaligrafi Arab online?",
+            "answer": "Kaligrafi Arab online adalah alat berbasis web untuk membuat tulisan Arab bergaya kaligrafi tanpa perlu instalasi."
+          },
+          {
+            "question": "Apakah saya bisa membuat kaligrafi nama Arab untuk undangan?",
+            "answer": "Bisa. Ketik nama Anda, pilih font kaligrafi, lalu ekspor PNG atau SVG untuk undangan atau desain."
+          }
+        ]
+      }
+    },
+    "arabicFontGenerator": {
+      "meta": {
+        "title": "Font Kaligrafi Arab Online - Pratinjau 17+ Font",
+        "description": "Pratinjau dan bandingkan font Arab online. Pilih 17 gaya kaligrafi dan ekspor PNG atau SVG secara gratis.",
+        "keywords": "font kaligrafi arab, preview font arab, font arab online, generator font arab, gaya font arab"
+      },
+      "hero": {
+        "eyebrow": "Butuh <link>Generator Kaligrafi Arab</link> lengkap?",
+        "title": "Font Kaligrafi Arab Online",
+        "description": "Bandingkan font Arab dengan cepat, lihat pratinjau instan, lalu ekspor PNG atau SVG gratis.",
+        "cta": "Mulai Pratinjau"
+      },
+      "features": [
+        {
+          "title": "Bandingkan Font dengan Cepat",
+          "description": "Ganti di antara 17 font pilihan dan lihat pratinjau instan."
+        },
+        {
+          "title": "Gaya untuk Setiap Kebutuhan",
+          "description": "Jelajahi Naskh, Kufi, Diwani, Nastaliq, dan gaya modern."
+        },
+        {
+          "title": "Ekspor Sampel Font",
+          "description": "Unduh sampel PNG atau SVG untuk presentasi atau mockup."
+        }
+      ],
+      "howTo": {
+        "title": "Cara menggunakan Font Kaligrafi Arab Online",
+        "steps": [
+          "Masukkan kata atau frasa contoh.",
+          "Coba font berbeda dan sesuaikan ukuran atau spasi.",
+          "Ekspor sampel PNG atau SVG dan lanjutkan proses desain Anda."
+        ]
+      },
+      "faq": {
+        "title": "FAQ",
+        "items": [
+          {
+            "question": "Bisakah saya membandingkan beberapa font Arab?",
+            "answer": "Bisa. Ganti font secara instan untuk membandingkan gaya."
+          },
+          {
+            "question": "Apakah pratinjau gratis?",
+            "answer": "Ya. Anda bisa mempratinjau dan mengekspor sampel tanpa pendaftaran."
+          },
+          {
+            "question": "Di mana saya bisa mengunduh font?",
+            "answer": "Anda bisa menelusuri dan mengunduh font di halaman Font Arab."
+          }
+        ]
+      }
     }
   },
   "seo": {

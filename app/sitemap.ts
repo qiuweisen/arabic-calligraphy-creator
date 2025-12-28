@@ -84,6 +84,12 @@ const USE_CASES_PAGES = [
   'religious-arabic-calligraphy'
 ]
 
+// Tools pages data (i18n)
+const TOOL_PAGES = [
+  'arabic-text-generator',
+  'arabic-font-generator'
+]
+
 
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -250,6 +256,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
+  // Tools pages (default locale)
+  const toolPages = TOOL_PAGES.map(slug => ({
+    url: `${baseUrl}/tools/${slug}`,
+    lastModified: getLastModified(`app/[locale]/tools/${slug}/page.tsx`),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
+
+  // Tools pages (localized)
+  const localizedToolPages = locales
+    .filter(locale => locale !== defaultLocale)
+    .flatMap(locale =>
+      TOOL_PAGES.map(slug => ({
+        url: `${baseUrl}/${locale}/tools/${slug}`,
+        lastModified: getLastModified(`app/[locale]/tools/${slug}/page.tsx`),
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+      }))
+    )
+
 
 
   return [
@@ -259,6 +285,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...guidesPages,
     ...tutorialsPages,
     ...resourcesPages,
-    ...useCasesPages
+    ...useCasesPages,
+    ...toolPages,
+    ...localizedToolPages
   ]
 } 

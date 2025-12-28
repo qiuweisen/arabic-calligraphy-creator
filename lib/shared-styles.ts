@@ -59,6 +59,14 @@ export const NAVIGATION_ITEMS = {
   // 英语导航项（用于单语言页面）
   en: [
     { label: "Generator", href: "/" },
+    {
+      label: "Generator Tools",
+      href: "/tools/arabic-text-generator",
+      dropdown: [
+        { label: "Arabic Text Generator", href: "/tools/arabic-text-generator" },
+        { label: "Arabic Font Generator", href: "/tools/arabic-font-generator" },
+      ],
+    },
     { label: "Arabic Fonts", href: "/fonts" },
     { 
       label: "Learning Guides", 

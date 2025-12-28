@@ -9,10 +9,16 @@ import { Menu, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { SharedLogo } from "@/components/shared/logo"
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
+import { defaultLocale } from '@/i18n'
 
 export function Navbar() {
   const t = useTranslations('navigation')
+  const toolsNavT = useTranslations('footer.generatorTools')
+  const textToolT = useTranslations('tools.arabicTextGenerator')
+  const fontToolT = useTranslations('tools.arabicFontGenerator')
+  const locale = useLocale()
+  const toolBase = locale === defaultLocale ? '' : `/${locale}`
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isClient, setIsClient] = useState(false)
@@ -28,6 +34,14 @@ export function Navbar() {
 
   const navItems = [
     { label: t('generator'), href: "/" },
+    {
+      label: toolsNavT('title'),
+      href: `${toolBase}/tools/arabic-text-generator`,
+      dropdown: [
+        { label: textToolT('hero.title'), href: `${toolBase}/tools/arabic-text-generator` },
+        { label: fontToolT('hero.title'), href: `${toolBase}/tools/arabic-font-generator` },
+      ],
+    },
     { label: t('arabicFonts'), href: "/fonts" },
     {
       label: t('learningGuides'),

@@ -190,6 +190,10 @@
       "title": "Démarrage Rapide :",
       "steps": "Saisissez du texte arabe → Choisissez une police → Téléchargez instantanément"
     },
+    "toolsSection": {
+      "title": "Outils populaires",
+      "description": "Des outils ciblés pour des tâches spécifiques, propulsés par le générateur principal de calligraphie arabe."
+    },
     "howToUse": {
       "title": "Comment utiliser notre générateur de calligraphie arabe",
       "description": "Créez de magnifiques designs de calligraphie arabe en trois étapes simples avec notre générateur de polices de calligraphie arabe gratuit en ligne. Aucune expérience requise !",
@@ -802,6 +806,112 @@
     },
     "sponsor": {
       "supportButton": "☕ Nous Soutenir ($3)"
+    }
+  },
+  "tools": {
+    "arabicTextGenerator": {
+      "meta": {
+        "title": "Générateur de texte arabe - Calligraphie en ligne | PNG & SVG",
+        "description": "Créez du texte arabe en calligraphie avec 17 polices. Gratuit sans inscription. Exportez en PNG ou SVG.",
+        "keywords": "générateur de texte arabe, calligraphie arabe en ligne, prénom arabe calligraphie, générateur de police arabe, texte arabe png, texte arabe svg"
+      },
+      "hero": {
+        "eyebrow": "Vous cherchez le <link>Générateur de calligraphie arabe</link> principal ?",
+        "title": "Générateur de texte arabe",
+        "description": "Saisissez votre texte arabe, choisissez une police et exportez en PNG ou SVG. Gratuit, sans compte.",
+        "cta": "Commencer maintenant"
+      },
+      "features": [
+        {
+          "title": "Pour les prénoms et phrases courtes",
+          "description": "Idéal pour prénoms arabes, salutations et citations courtes."
+        },
+        {
+          "title": "Contrôles de style en direct",
+          "description": "Ajustez police, taille, espacement, couleurs et fond en temps réel."
+        },
+        {
+          "title": "Export prêt pour le design",
+          "description": "Téléchargez PNG ou SVG pour invitations, logos et réseaux sociaux."
+        }
+      ],
+      "howTo": {
+        "title": "Comment utiliser le générateur de texte arabe",
+        "steps": [
+          "Saisissez ou collez votre texte arabe.",
+          "Choisissez une police et ajustez taille, espacement et couleurs.",
+          "Exportez en PNG ou SVG et utilisez dans vos créations."
+        ]
+      },
+      "faq": {
+        "title": "FAQ",
+        "items": [
+          {
+            "question": "Puis-je écrire mon prénom en arabe ?",
+            "answer": "Oui. L'outil est optimisé pour les prénoms et les phrases courtes."
+          },
+          {
+            "question": "C'est gratuit sans compte ?",
+            "answer": "Oui. Aucun compte ni filigrane n'est requis."
+          },
+          {
+            "question": "Où utiliser les exports ?",
+            "answer": "PNG ou SVG pour invitations, logos, impressions et réseaux sociaux."
+          }
+        ]
+      }
+    },
+    "arabicFontGenerator": {
+      "meta": {
+        "title": "Générateur de police arabe - 17+ polices en ligne",
+        "description": "Prévisualisez et comparez des polices arabes en ligne. 17 styles de calligraphie, export PNG/SVG gratuit.",
+        "keywords": "générateur de police arabe, aperçu police arabe, polices de calligraphie arabe, police arabe en ligne, style police arabe"
+      },
+      "hero": {
+        "eyebrow": "Besoin du <link>Générateur de calligraphie arabe</link> complet ?",
+        "title": "Générateur de police arabe",
+        "description": "Comparez rapidement les polices arabes, voyez l'aperçu et exportez en PNG ou SVG.",
+        "cta": "Lancer l'aperçu"
+      },
+      "features": [
+        {
+          "title": "Comparer les polices rapidement",
+          "description": "Passez entre 17 polices sélectionnées et voyez des aperçus instantanés."
+        },
+        {
+          "title": "Des styles pour chaque usage",
+          "description": "Découvrez Naskh, Kufi, Diwani, Nastaliq et des styles modernes."
+        },
+        {
+          "title": "Exporter des échantillons",
+          "description": "Téléchargez des échantillons PNG ou SVG pour vos présentations ou mockups."
+        }
+      ],
+      "howTo": {
+        "title": "Comment utiliser le générateur de police arabe",
+        "steps": [
+          "Saisissez un mot ou une phrase d'exemple.",
+          "Essayez différentes polices et ajustez taille ou espacement.",
+          "Exportez un échantillon PNG ou SVG et continuez votre design."
+        ]
+      },
+      "faq": {
+        "title": "FAQ",
+        "items": [
+          {
+            "question": "Puis-je comparer plusieurs polices arabes ?",
+            "answer": "Oui. Changez de police rapidement pour comparer les styles."
+          },
+          {
+            "question": "L'aperçu est-il gratuit ?",
+            "answer": "Oui. Prévisualisation et export gratuits sans inscription."
+          },
+          {
+            "question": "Où puis-je télécharger les polices ?",
+            "answer": "Vous pouvez parcourir et télécharger les polices sur la page des polices arabes."
+          }
+        ]
+      }
     }
   },
   "seo": {

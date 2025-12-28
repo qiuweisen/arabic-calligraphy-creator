@@ -189,6 +189,10 @@
       "title": "Hızlı Başlangıç:",
       "steps": "Arapça metin yaz → Yazı tipi seç → Anında indir"
     },
+    "toolsSection": {
+      "title": "Popüler Araçlar",
+      "description": "Belirli görevler için odaklanmış araçlar, ana Arapça Kaligrafi Oluşturucu tarafından desteklenir."
+    },
     "howToUse": {
       "title": "Arapça Hat Sanatı Nasıl Oluşturulur",
       "step1": {
@@ -801,6 +805,112 @@
     },
     "sponsor": {
       "supportButton": "☕ Bizi Destekle ($3)"
+    }
+  },
+  "tools": {
+    "arabicTextGenerator": {
+      "meta": {
+        "title": "Arapça Metin Oluşturucu - Online Hat | PNG & SVG",
+        "description": "17 seçilmiş yazı tipiyle Arapça kaligrafi metni oluşturun. Ücretsiz, kayıt gerekmez. PNG veya SVG dışa aktarın.",
+        "keywords": "arapça metin oluşturucu, arapça kaligrafi online, arapça isim kaligrafi, arapça font oluşturucu, arapça metin png, arapça metin svg"
+      },
+      "hero": {
+        "eyebrow": "Ana <link>Arapça Kaligrafi Oluşturucu</link> sayfasını mı arıyorsunuz?",
+        "title": "Arapça Metin Oluşturucu",
+        "description": "Arapça metni yazın, yazı tipini seçin ve PNG veya SVG olarak anında dışa aktarın. Ücretsiz ve hesap gerekmez.",
+        "cta": "Hemen Başla"
+      },
+      "features": [
+        {
+          "title": "İsimler ve kısa ifadeler için",
+          "description": "Arapça isimler, selamlar ve kısa alıntılar için ideal."
+        },
+        {
+          "title": "Canlı stil kontrolü",
+          "description": "Yazı tipi, boyut, boşluk, renk ve arka planı anında ayarlayın."
+        },
+        {
+          "title": "Tasarıma hazır dışa aktarım",
+          "description": "Davetiyeler, logolar ve sosyal medya için PNG veya SVG indirin."
+        }
+      ],
+      "howTo": {
+        "title": "Arapça Metin Oluşturucu nasıl kullanılır",
+        "steps": [
+          "Arapça metni yazın veya yapıştırın.",
+          "Kaligrafi yazı tipini seçin ve boyut, boşluk, renkleri ayarlayın.",
+          "PNG veya SVG dışa aktarıp tasarımda kullanın."
+        ]
+      },
+      "faq": {
+        "title": "SSS",
+        "items": [
+          {
+            "question": "Arapça adımı yazabilir miyim?",
+            "answer": "Evet. Bu araç isimler ve kısa ifadeler için optimize edilmiştir."
+          },
+          {
+            "question": "Ücretsiz mi, hesap gerekmez mi?",
+            "answer": "Evet. Ücretsizdir ve kayıt gerekmez."
+          },
+          {
+            "question": "Dışa aktarımları nerede kullanabilirim?",
+            "answer": "PNG veya SVG'yi davetiye, logo, baskı ve sosyal medyada kullanın."
+          }
+        ]
+      }
+    },
+    "arabicFontGenerator": {
+      "meta": {
+        "title": "Arapça Font Oluşturucu - 17+ Font Online",
+        "description": "Arapça fontları çevrimiçi önizleyin ve karşılaştırın. 17 stil, ücretsiz PNG/SVG dışa aktarım.",
+        "keywords": "arapça font oluşturucu, arapça font önizleme, arapça kaligrafi fontları, arapça font online, arapça font stili"
+      },
+      "hero": {
+        "eyebrow": "Tam <link>Arapça Kaligrafi Oluşturucu</link> mu arıyorsunuz?",
+        "title": "Arapça Font Oluşturucu",
+        "description": "Fontları hızlıca karşılaştırın, önizlemeyi görün ve PNG veya SVG dışa aktarın.",
+        "cta": "Önizlemeye Başla"
+      },
+      "features": [
+        {
+          "title": "Fontları hızlı karşılaştırın",
+          "description": "17 seçilmiş font arasında geçiş yapın ve anlık önizleme görün."
+        },
+        {
+          "title": "Her kullanım için stiller",
+          "description": "Naskh, Kufi, Diwani, Nastaliq ve modern stilleri keşfedin."
+        },
+        {
+          "title": "Font örneklerini dışa aktarın",
+          "description": "Sunum veya mockup için PNG ya da SVG örnekleri indirin."
+        }
+      ],
+      "howTo": {
+        "title": "Arapça Font Oluşturucu nasıl kullanılır",
+        "steps": [
+          "Örnek bir kelime veya ifade girin.",
+          "Farklı fontları deneyin ve boyut veya boşluğu ayarlayın.",
+          "PNG veya SVG örneği dışa aktarın ve tasarıma devam edin."
+        ]
+      },
+      "faq": {
+        "title": "SSS",
+        "items": [
+          {
+            "question": "Birden fazla Arapça fontu karşılaştırabilir miyim?",
+            "answer": "Evet. Fontları anında değiştirerek stilleri karşılaştırabilirsiniz."
+          },
+          {
+            "question": "Önizleme ücretsiz mi?",
+            "answer": "Evet. Kayıt olmadan önizleyip dışa aktarabilirsiniz."
+          },
+          {
+            "question": "Fontları nereden indirebilirim?",
+            "answer": "Arapça Fontlar sayfasından fontları inceleyip indirebilirsiniz."
+          }
+        ]
+      }
     }
   },
   "seo": {

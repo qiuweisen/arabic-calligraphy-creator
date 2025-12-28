@@ -190,6 +190,10 @@
 			"title": "Quick Start:",
 			"steps": "Type Arabic text → Choose font → Download instantly"
 		},
+		"toolsSection": {
+			"title": "Popular Tools",
+			"description": "Focused tools for specific tasks, powered by the main Arabic Calligraphy Generator."
+		},
 		"howToUse": {
 			"title": "How to Use Our Arabic Calligraphy Generator",
 			"description": "Create beautiful Arabic calligraphy designs in three simple steps with our free online Arabic calligraphy font generator. No experience required!",
@@ -801,6 +805,112 @@
 		},
 		"sponsor": {
 			"supportButton": "☕ Support Us ($3)"
+		}
+	},
+	"tools": {
+		"arabicTextGenerator": {
+			"meta": {
+				"title": "Arabic Text Generator - Write Names, PNG & SVG Export",
+				"description": "Type or paste Arabic text and create calligraphy with 17 fonts. Free, no signup. Export PNG or SVG for logos, invitations, and social posts.",
+				"keywords": "arabic text generator, write your name in arabic, arabic calligraphy text, arabic name generator, arabic text png, arabic text svg"
+			},
+			"hero": {
+				"eyebrow": "Looking for the main <link>Arabic Calligraphy Generator</link>?",
+				"title": "Arabic Text Generator",
+				"description": "Write your name or phrase in Arabic calligraphy, customize colors and spacing, then export PNG or SVG.",
+				"cta": "Start Writing"
+			},
+			"features": [
+				{
+					"title": "Made for Names and Short Phrases",
+					"description": "Ideal for Arabic names, greetings, and short quotes."
+				},
+				{
+					"title": "Live Styling Controls",
+					"description": "Adjust font, size, spacing, colors, and background in real time."
+				},
+				{
+					"title": "Export Ready for Design",
+					"description": "Download PNG or SVG for print, logos, and social media."
+				}
+			],
+			"howTo": {
+				"title": "How to use the Arabic Text Generator",
+				"steps": [
+					"Type or paste your Arabic text.",
+					"Choose a calligraphy font and tune size, spacing, and colors.",
+					"Export PNG or SVG and use it in your design."
+				]
+			},
+			"faq": {
+				"title": "FAQ",
+				"items": [
+					{
+						"question": "Can I write my name in Arabic?",
+						"answer": "Yes. The tool is optimized for names and short phrases in Arabic calligraphy."
+					},
+					{
+						"question": "Is it free and without signup?",
+						"answer": "Yes. It is free to use with no account or watermark required."
+					},
+					{
+						"question": "Where can I use the exports?",
+						"answer": "Use PNG or SVG for invitations, logos, prints, and social media graphics."
+					}
+				]
+			}
+		},
+		"arabicFontGenerator": {
+			"meta": {
+				"title": "Arabic Font Generator - Compare 17+ Fonts Online",
+				"description": "Preview and compare Arabic fonts in one place. Switch styles, see live samples, and export PNG or SVG for your project.",
+				"keywords": "arabic font generator, arabic font preview, compare arabic fonts, arabic calligraphy fonts, arabic typeface"
+			},
+			"hero": {
+				"eyebrow": "Need the full <link>Arabic Calligraphy Generator</link>?",
+				"title": "Arabic Font Generator",
+				"description": "Compare Arabic fonts side by side, preview styles, and export sample images.",
+				"cta": "Start Comparing"
+			},
+			"features": [
+				{
+					"title": "Quick Font Comparison",
+					"description": "Switch between 17 curated Arabic fonts and see instant previews."
+				},
+				{
+					"title": "Styles for Every Look",
+					"description": "Explore Naskh, Kufi, Diwani, Nastaliq, and modern styles."
+				},
+				{
+					"title": "Export Font Samples",
+					"description": "Download PNG or SVG samples to share or add to mockups."
+				}
+			],
+			"howTo": {
+				"title": "How to use the Arabic Font Generator",
+				"steps": [
+					"Enter a sample word or phrase.",
+					"Try different fonts and adjust size or spacing.",
+					"Export a PNG or SVG sample and continue your design workflow."
+				]
+			},
+			"faq": {
+				"title": "FAQ",
+				"items": [
+					{
+						"question": "Can I compare multiple Arabic fonts?",
+						"answer": "Yes. Switch fonts instantly to compare styles side by side."
+					},
+					{
+						"question": "Is the preview free?",
+						"answer": "Yes. You can preview and export samples for free without registration."
+					},
+					{
+						"question": "Where can I download the fonts?",
+						"answer": "You can browse and download fonts on the Arabic Fonts page."
+					}
+				]
+			}
 		}
 	},
 	"seo": {

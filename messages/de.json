@@ -190,6 +190,10 @@
       "title": "Schnellstart:",
       "steps": "Arabischen Text eingeben → Schriftart wählen → Sofort herunterladen"
     },
+    "toolsSection": {
+      "title": "Beliebte Tools",
+      "description": "Fokussierte Tools für bestimmte Aufgaben, unterstützt vom Haupt-Arabischen Kalligrafie-Generator."
+    },
     "howToUse": {
       "title": "So verwenden Sie unseren arabischen Kalligraphie-Generator",
       "description": "Erstellen Sie wunderschöne arabische Kalligraphie-Designs in drei einfachen Schritten mit unserem kostenlosen Online-Kalligraphie-Generator. Keine Erfahrung erforderlich!",
@@ -802,6 +806,112 @@
     },
     "sponsor": {
       "supportButton": "☕ Unterstützen ($3)"
+    }
+  },
+  "tools": {
+    "arabicTextGenerator": {
+      "meta": {
+        "title": "Arabischer Text-Generator - Online-Kalligrafie | PNG & SVG",
+        "description": "Erstelle arabische Kalligrafie mit 17 Schriften. Kostenlos ohne Anmeldung. Export als PNG oder SVG für Design und Druck.",
+        "keywords": "arabischer text generator, arabische kalligrafie online, arabische namen kalligrafie, arabischer font generator, arabischer text png, arabischer text svg"
+      },
+      "hero": {
+        "eyebrow": "Suchst du den <link>Arabischen Kalligrafie-Generator</link>?",
+        "title": "Arabischer Text-Generator",
+        "description": "Arabischen Text eingeben, Schrift wählen, PNG oder SVG exportieren - kostenlos und ohne Konto.",
+        "cta": "Jetzt starten"
+      },
+      "features": [
+        {
+          "title": "Für Namen und kurze Phrasen",
+          "description": "Ideal für arabische Namen, Grüße und kurze Zitate."
+        },
+        {
+          "title": "Live-Styling",
+          "description": "Schrift, Größe, Abstand, Farben und Hintergrund in Echtzeit anpassen."
+        },
+        {
+          "title": "Exportfertig",
+          "description": "PNG oder SVG für Einladungen, Logos und Social Media herunterladen."
+        }
+      ],
+      "howTo": {
+        "title": "So verwendest du den arabischen Textgenerator",
+        "steps": [
+          "Arabischen Text eingeben oder einfügen.",
+          "Kalligrafie-Schrift wählen und Größe, Abstand, Farben anpassen.",
+          "PNG oder SVG exportieren und im Design verwenden."
+        ]
+      },
+      "faq": {
+        "title": "FAQ",
+        "items": [
+          {
+            "question": "Kann ich meinen Namen auf Arabisch schreiben?",
+            "answer": "Ja. Das Tool ist für Namen und kurze Phrasen optimiert."
+          },
+          {
+            "question": "Ist es kostenlos ohne Konto?",
+            "answer": "Ja. Kostenlos ohne Registrierung oder Wasserzeichen."
+          },
+          {
+            "question": "Wofür kann ich den Export nutzen?",
+            "answer": "PNG oder SVG für Einladungen, Logos, Druck und Social Media."
+          }
+        ]
+      }
+    },
+    "arabicFontGenerator": {
+      "meta": {
+        "title": "Arabischer Font-Generator - 17+ Schriften online",
+        "description": "Arabische Schriften online ansehen und vergleichen. 17 Kalligrafie-Stile, kostenloser PNG/SVG-Export.",
+        "keywords": "arabischer font generator, arabische schrift vorschau, arabische kalligrafie schriftarten, arabische schrift online, arabischer font stil"
+      },
+      "hero": {
+        "eyebrow": "Brauchst du den vollständigen <link>Arabischen Kalligrafie-Generator</link>?",
+        "title": "Arabischer Font-Generator",
+        "description": "Schriften schnell vergleichen, Vorschau ansehen und PNG oder SVG gratis exportieren.",
+        "cta": "Vorschau starten"
+      },
+      "features": [
+        {
+          "title": "Schriften schnell vergleichen",
+          "description": "Zwischen 17 kuratierten Schriften wechseln und sofortige Vorschauen sehen."
+        },
+        {
+          "title": "Stile für jeden Look",
+          "description": "Entdecke Naskh, Kufi, Diwani, Nastaliq und moderne Stile."
+        },
+        {
+          "title": "Schriftmuster exportieren",
+          "description": "PNG- oder SVG-Muster für Präsentationen oder Mockups herunterladen."
+        }
+      ],
+      "howTo": {
+        "title": "So verwendest du den arabischen Font-Generator",
+        "steps": [
+          "Ein Beispielwort oder eine Phrase eingeben.",
+          "Verschiedene Schriften testen und Größe oder Abstand anpassen.",
+          "PNG- oder SVG-Muster exportieren und weiterarbeiten."
+        ]
+      },
+      "faq": {
+        "title": "FAQ",
+        "items": [
+          {
+            "question": "Kann ich mehrere arabische Schriften vergleichen?",
+            "answer": "Ja. Schriften schnell wechseln, um Stile zu vergleichen."
+          },
+          {
+            "question": "Ist die Vorschau kostenlos?",
+            "answer": "Ja. Vorschau und Export sind kostenlos ohne Registrierung."
+          },
+          {
+            "question": "Wo kann ich die Schriften herunterladen?",
+            "answer": "Du kannst die Schriften auf der Seite Arabische Schriftarten ansehen und herunterladen."
+          }
+        ]
+      }
     }
   },
   "seo": {

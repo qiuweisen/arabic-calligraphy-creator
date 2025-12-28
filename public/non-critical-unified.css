@@ -1,0 +1,2 @@
+/* Back-compat alias for old non-critical CSS references. */
+@import url("/non-critical.css");

@@ -8,19 +8,19 @@ import { ArrowRight, Star, Award, TrendingUp, Users, Crown, Zap } from 'lucide-r
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Best Arabic Fonts 2025 - Top Rated Typography for Professional Design | Expert Recommendations',
-  description: 'Discover the best Arabic fonts of 2025 chosen by design professionals. Compare top-rated Arabic typography for web, print, branding, and digital design with expert reviews and recommendations.',
+  title: 'Best Arabic Fonts 2025 - Free Download Picks & Usage Guide',
+  description: 'Compare the best Arabic fonts for UI, branding, and print in 2025. Includes previews, use cases, and links to download top free fonts like Cairo and Amiri.',
   keywords: 'best arabic fonts 2025,top arabic typography,professional arabic fonts,arabic font recommendations,best islamic fonts,modern arabic typefaces,arabic design fonts',
   openGraph: {
-    title: 'Best Arabic Fonts 2025 - Top Rated Typography for Professional Design',
-    description: 'Discover the best Arabic fonts of 2025 chosen by design professionals. Compare top-rated Arabic typography for web, print, and branding.',
+    title: 'Best Arabic Fonts 2025 - Free Download Picks & Usage Guide',
+    description: 'Compare the best Arabic fonts for UI, branding, and print in 2025. Includes previews, use cases, and links to download top free fonts.',
     type: 'article',
     url: 'https://arabic-calligraphy-generator.com/guides/best-arabic-fonts-2025',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Arabic Fonts 2025 - Top Rated Typography for Professional Design',
-    description: 'Discover the best Arabic fonts of 2025 chosen by design professionals. Compare top-rated Arabic typography for web, print, and branding.',
+    title: 'Best Arabic Fonts 2025 - Free Download Picks & Usage Guide',
+    description: 'Compare the best Arabic fonts for UI, branding, and print in 2025. Includes previews, use cases, and links to download top free fonts.',
   },
   alternates: {
     canonical: 'https://arabic-calligraphy-generator.com/guides/best-arabic-fonts-2025',
@@ -33,12 +33,31 @@ const breadcrumbItems = [
   { name: 'Best Arabic Fonts 2025', href: '/guides/best-arabic-fonts-2025' },
 ]
 
-export default function BestArabicFonts2024Page() {
+const FAQ_ITEMS = [
+  {
+    question: "Which Arabic fonts work best for UI and app design?",
+    answer: "Cairo and Tajawal are top choices for UI/UX because they balance clarity, modern geometry, and bilingual Arabic-Latin support."
+  },
+  {
+    question: "Are these Arabic fonts free for commercial use?",
+    answer: "Most fonts featured here are released under the SIL Open Font License, which allows free commercial use. Always verify the license on the font page before distribution."
+  },
+  {
+    question: "Can I preview Arabic fonts before downloading?",
+    answer: "Yes. Use our Arabic Font Generator to preview styles online before downloading or installing."
+  },
+  {
+    question: "What font formats should I expect?",
+    answer: "Most Arabic fonts come in TTF or OTF, and some also include WOFF/WOFF2 for web use."
+  }
+]
+
+export default function BestArabicFonts2025Page() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Best Arabic Fonts 2024 - Top Rated Typography for Professional Design",
-    "description": "Expert-curated list of the best Arabic fonts for 2024, featuring professional recommendations for web, print, and digital design applications",
+    "headline": "Best Arabic Fonts 2025 - Free Download Picks & Usage Guide",
+    "description": "Expert-curated list of the best Arabic fonts for 2025, featuring professional recommendations for web, print, and digital design applications",
     "image": "https://arabic-calligraphy-generator.com/best-fonts-2024-og.png",
     "author": {
       "@type": "Organization",
@@ -52,12 +71,25 @@ export default function BestArabicFonts2024Page() {
         "url": "https://arabic-calligraphy-generator.com/logo.png"
       }
     },
-    "datePublished": "2024-01-01",
-    "dateModified": "2024-01-01",
+    "datePublished": "2025-01-01",
+    "dateModified": "2025-12-20",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://arabic-calligraphy-generator.com/guides/best-arabic-fonts-2024"
+      "@id": "https://arabic-calligraphy-generator.com/guides/best-arabic-fonts-2025"
     }
+  }
+
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQ_ITEMS.map((item) => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
   }
 
   return (
@@ -66,6 +98,10 @@ export default function BestArabicFonts2024Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
       />
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
         <div className="container mx-auto px-4 py-8">
@@ -82,7 +118,7 @@ export default function BestArabicFonts2024Page() {
               design projects, from web applications to print materials in 2025.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/">
+              <Link href="/tools/arabic-font-generator">
                 <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3">
                   Try These Fonts <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -129,7 +165,7 @@ export default function BestArabicFonts2024Page() {
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <TrendingUp className="h-8 w-8 text-amber-700" />
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">2024 Trends</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">2025 Trends</h3>
                   <p className="text-sm text-gray-600">Alignment with current design trends and preferences</p>
                 </div>
               </div>
@@ -457,17 +493,17 @@ export default function BestArabicFonts2024Page() {
               </CardContent>
             </Card>
 
-            {/* 2024 Trends Analysis */}
+          {/* 2025 Trends Analysis */}
             <Card className="border-indigo-200 shadow-lg">
               <CardHeader>
                 <CardTitle className="text-2xl text-amber-800">
-                  📈 2024 Arabic Typography Trends
+                  📈 2025 Arabic Typography Trends
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="prose max-w-none">
                   <p className="text-gray-600 mb-6">
-                    The Arabic typography landscape in 2024 is characterized by a balance between tradition and innovation.
+                    The Arabic typography landscape in 2025 is characterized by a balance between tradition and innovation.
                     Here are the key trends shaping font selection and usage this year.
                   </p>
 
@@ -504,7 +540,7 @@ export default function BestArabicFonts2024Page() {
                   </div>
 
                   <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-gray-900 mb-4">📊 Usage Statistics 2024</h4>
+                    <h4 className="font-semibold text-gray-900 mb-4">📊 Usage Statistics 2025</h4>
                     <div className="grid md:grid-cols-4 gap-6">
                       <div className="text-center">
                         <div className="text-2xl font-bold text-gray-600 mb-1">45%</div>
@@ -529,6 +565,23 @@ export default function BestArabicFonts2024Page() {
             </Card>
           </div>
 
+          {/* FAQ */}
+          <div className="mt-12 mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+              Arabic Font FAQ
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {FAQ_ITEMS.map((item) => (
+                <Card key={item.question} className="border-blue-200">
+                  <CardContent className="pt-6">
+                    <h3 className="font-semibold text-gray-900 mb-2">{item.question}</h3>
+                    <p className="text-sm text-gray-600">{item.answer}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
           {/* CTA Section */}
           <div className="text-center mt-16 mb-12">
             <Card className="bg-gradient-to-r from-blue-100 to-indigo-100 border-blue-200">
@@ -537,10 +590,10 @@ export default function BestArabicFonts2024Page() {
                   Try These Award-Winning Fonts
                 </h2>
                 <p className="text-amber-700 mb-6 max-w-2xl mx-auto">
-                  Experience the best Arabic fonts of 2024 with our free online generator. 
+                  Experience the best Arabic fonts of 2025 with our free online generator. 
                   Create professional designs using these expert-recommended typefaces.
                 </p>
-                <Link href="/">
+                <Link href="/tools/arabic-font-generator">
                   <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
                     Start Creating <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
@@ -579,7 +632,7 @@ export default function BestArabicFonts2024Page() {
               <CardContent className="pt-6">
                 <h3 className="font-semibold text-gray-900 mb-2">Design Trends</h3>
                 <p className="text-sm text-gray-600 mb-4">Explore the latest Arabic typography trends</p>
-                <Link href="/guides/arabic-typography-trends-2024">
+                <Link href="/guides/arabic-typography-trends-2025">
                   <Button variant="outline" size="sm" className="border-blue-600 text-amber-700 hover:bg-blue-50">
                     View Trends <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>

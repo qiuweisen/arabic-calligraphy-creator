@@ -130,6 +130,15 @@ export default function BlogPage() {
             </p>
           </header>
 
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
+            <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
+              <Link href="/tools/arabic-text-generator">Arabic Text Generator</Link>
+            </Button>
+            <Button asChild variant="outline" className="border-amber-600 text-amber-700 hover:bg-amber-50">
+              <Link href="/tools/arabic-font-generator">Arabic Font Generator</Link>
+            </Button>
+          </div>
+
           {/* Blog Stats */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <Card className="text-center p-6 bg-gradient-to-b from-blue-50 to-blue-100 border-blue-200 hover:shadow-lg transition-shadow">
