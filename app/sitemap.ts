@@ -87,7 +87,10 @@ const USE_CASES_PAGES = [
 // Tools pages data (i18n)
 const TOOL_PAGES = [
   'arabic-text-generator',
-  'arabic-font-generator'
+  'arabic-font-generator',
+  'arabic-name-generator',
+  'arabic-logo-generator',
+  'arabic-signature-generator'
 ]
 
 

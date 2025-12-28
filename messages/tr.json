@@ -105,6 +105,10 @@
         "title": "Arapça İsim Jeneratörü",
         "desc": "Kişiselleştirilmiş Arapça isim hat sanatı"
       },
+      "arabicSignature": {
+        "title": "Arapça İmza Oluşturucu",
+        "desc": "Zarif imza tarzı hatlar"
+      },
       "kuficScript": {
         "title": "Kufi Yazı Jeneratörü",
         "desc": "Geometrik Kufi hat sanatı stilleri"
@@ -190,8 +194,16 @@
       "steps": "Arapça metin yaz → Yazı tipi seç → Anında indir"
     },
     "toolsSection": {
-      "title": "Popüler Araçlar",
-      "description": "Belirli görevler için odaklanmış araçlar, ana Arapça Kaligrafi Oluşturucu tarafından desteklenir."
+      "title": "Sonraki adımda ne yapacağınıza karar veremediniz mi?",
+      "description": "Amacınıza göre odaklı bir araç seçin.",
+      "recommendedBadge": "Önerilen",
+      "items": {
+        "arabicTextGenerator": "İsim veya kısa bir ifade hızlıca yazın. Sosyal gönderiler ve posterler için iyi.",
+        "arabicFontGenerator": "Karar vermeden önce yazı tiplerini yan yana karşılaştırın.",
+        "arabicNameGenerator": "Hediyeler, profiller ve hatıralar için kişiselleştirilmiş isimler.",
+        "arabicLogoGenerator": "Markalar için logo hazır hat çalışmaları.",
+        "arabicSignatureGenerator": "Belgeler ve profiller için imza tarzı yazım."
+      }
     },
     "howToUse": {
       "title": "Arapça Hat Sanatı Nasıl Oluşturulur",
@@ -908,6 +920,291 @@
           {
             "question": "Fontları nereden indirebilirim?",
             "answer": "Arapça Fontlar sayfasından fontları inceleyip indirebilirsiniz."
+          }
+        ]
+      }
+    },
+    "arabicNameGenerator": {
+      "meta": {
+        "title": "Arapça İsim Oluşturucu - İsminizi Arapça Hat ile Yazın",
+        "description": "İsminizi saniyeler içinde Arapça hat sanatına dönüştürün. Yazı tipini seçin, aralık ve renkleri ayarlayın, hediye, profil ve logo için PNG veya SVG dışa aktarın.",
+        "keywords": "arapça isim oluşturucu, arapçada isim yazma, arapça isim hat, arapça isim png, arapça isim svg"
+      },
+      "hero": {
+        "eyebrow": "Ana <link>Arabic Calligraphy Generator</link> mı arıyorsunuz?",
+        "title": "Arapça İsim Oluşturucu",
+        "description": "Hediyeler, profiller ve marka için kişiselleştirilmiş Arapça isim hatları oluşturun. Yazı tipini ve renkleri ayarlayıp PNG veya SVG dışa aktarın.",
+        "cta": "İsim Oluştur"
+      },
+      "features": [
+        {
+          "title": "İsme özel şablonlar",
+          "description": "Popüler Arapça isim stilleriyle başlayın ve saniyeler içinde düzenleyin."
+        },
+        {
+          "title": "Güzel isim stilleri",
+          "description": "Kısa isimler için klasik ve modern yazı tipleri."
+        },
+        {
+          "title": "Hediye için hazır dışa aktarım",
+          "description": "Baskı, takı ve hatıralar için PNG veya SVG indirin."
+        }
+      ],
+      "useCases": {
+        "title": "İsim kaligrafisinin parladığı yerler",
+        "items": [
+          {
+            "title": "Hediyeler ve hatıralar",
+            "description": "Baskı veya takı için kişiselleştirilmiş sanat."
+          },
+          {
+            "title": "Sosyal profiller",
+            "description": "Avatarlar ve bannerlar için benzersiz isim işareti."
+          },
+          {
+            "title": "Etkinlik dekoru",
+            "description": "Masa kartları, davetiyeler ve yönlendirmeler."
+          }
+        ]
+      },
+      "layoutIdeas": {
+        "title": "İsim yerleşimi fikirleri",
+        "items": [
+          {
+            "title": "Tek satır imza",
+            "description": "Kısa isimler için ideal, harf aralığını artırın."
+          },
+          {
+            "title": "İki satırlı isim levhası",
+            "description": "Uzun isimleri iki satıra bölerek dengeleyin."
+          },
+          {
+            "title": "Çerçeveli hatıra",
+            "description": "Yumuşak bir çerçeveyle ismi hediye hazır hale getirin."
+          }
+        ]
+      },
+      "stylingTips": {
+        "title": "İsim stil ipuçları",
+        "items": [
+          "Kısa isimler kalın stillerle daha iyi görünür.",
+          "Zarif isimler için daha hafif fontlar deneyin.",
+          "Harf çakışmalarını önlemek için aralığı ayarlayın.",
+          "Hızlı paylaşım için PNG, baskı için SVG kullanın."
+        ]
+      },
+      "howTo": {
+        "title": "Arapça İsim Oluşturucu nasıl kullanılır",
+        "steps": [
+          "İsminizi Arapça yazın veya bir transliterasyon yapıştırın.",
+          "Hat stilini seçip boyut, aralık ve renkleri ayarlayın.",
+          "PNG veya SVG dışa aktarın ve hediye/marka amaçlı kullanın."
+        ]
+      },
+      "faq": {
+        "title": "SSS",
+        "items": [
+          {
+            "question": "Arapça bilmiyorsam ismimi yazabilir miyim?",
+            "answer": "Evet. Arapça metin yapıştırın veya çeviri kullanıp stilleri deneyin."
+          },
+          {
+            "question": "Arapça isim oluşturucu ücretsiz mi?",
+            "answer": "Evet, kayıt gerektirmeden ücretsiz."
+          },
+          {
+            "question": "Bu tasarımı nerede kullanabilirim?",
+            "answer": "Hediyeler, sosyal profiller, logo taslakları veya özel baskılar."
+          }
+        ]
+      }
+    },
+    "arabicLogoGenerator": {
+      "meta": {
+        "title": "Arapça Hat Logo Oluşturucu - Ücretsiz Arapça Logo Yapıcı",
+        "description": "Çevrimiçi Arapça hat logosu oluşturun. Yazı tiplerini, renkleri ve düzeni özelleştirin; PNG veya SVG dışa aktarın.",
+        "keywords": "arapça logo oluşturucu, arapça hat logo, arapça logo yapıcı, arapça logo tasarım, arapça logo svg"
+      },
+      "hero": {
+        "eyebrow": "Ana <link>Arabic Calligraphy Generator</link> mı arıyorsunuz?",
+        "title": "Arapça Hat Logo Oluşturucu",
+        "description": "Zarif hat yazı tipleriyle Arapça logo tasarlayın, renk ve aralıkları ayarlayıp marka için PNG veya SVG dışa aktarın.",
+        "cta": "Logo Tasarla"
+      },
+      "features": [
+        {
+          "title": "Marka hazır stiller",
+          "description": "Logolarda güçlü duran seçilmiş hat yazı tipleri."
+        },
+        {
+          "title": "Renk ve düzen kontrolü",
+          "description": "Aralık, hizalama ve paleti ince ayar yapın."
+        },
+        {
+          "title": "Vektör dostu dışa aktarım",
+          "description": "Baskı ve dijital için PNG veya SVG."
+        }
+      ],
+      "showcase": {
+        "title": "Logo için hazır stiller",
+        "items": [
+          {
+            "title": "Minimal wordmark'lar",
+            "description": "Modern markalar için temiz ve okunaklı logolar."
+          },
+          {
+            "title": "Kalın Kufi işaretleri",
+            "description": "Güçlü marka etkisi için geometrik ağırlık."
+          },
+          {
+            "title": "Şık imza logoları",
+            "description": "Butik/lifestyle markalar için yumuşak kıvrımlar."
+          }
+        ]
+      },
+      "applications": {
+        "title": "Logonun en iyi göründüğü yerler",
+        "items": [
+          {
+            "title": "Kartvizit ve kırtasiye",
+            "description": "Küçük boyutta net kalması için yatay düzen kullanın."
+          },
+          {
+            "title": "Sosyal profil",
+            "description": "Avatar boyutunda okunması için kalın çizgiler seçin."
+          },
+          {
+            "title": "Ambalaj ve etiket",
+            "description": "Baskı için tek renkli bir sürüm hazırlayın."
+          }
+        ]
+      },
+      "checklist": {
+        "title": "Logo kontrol listesi",
+        "items": [
+          "Küçük boyutta okunabilirlik için adı kısa tutun.",
+          "Metin ve arka plan arasında yüksek kontrast kullanın.",
+          "Baskı ve kabartma için monokrom test edin.",
+          "Ölçeklenebilir varlıklar için SVG dışa aktarın."
+        ]
+      },
+      "howTo": {
+        "title": "Arapça Logo Oluşturucu nasıl kullanılır",
+        "steps": [
+          "Marka adını veya sloganı girin.",
+          "Hat yazı tipini seçin, aralık ve renkleri ayarlayın.",
+          "PNG veya SVG dışa aktarın ve markada kullanın."
+        ]
+      },
+      "faq": {
+        "title": "SSS",
+        "items": [
+          {
+            "question": "Logoyu ticari kullanabilir miyim?",
+            "answer": "Evet, ancak gerekiyorsa yazı tipi lisansını kontrol edin."
+          },
+          {
+            "question": "SVG dışa aktarım var mı?",
+            "answer": "Evet, ölçeklenebilir logo için SVG."
+          },
+          {
+            "question": "Basit ikon tarzı logo yapabilir miyim?",
+            "answer": "Evet, kısa kelimeler veya baş harfler kullanın."
+          }
+        ]
+      }
+    },
+    "arabicSignatureGenerator": {
+      "meta": {
+        "title": "Arapça İmza Oluşturucu - Zarif Hat İmzalar",
+        "description": "Saniyeler içinde zarif bir Arapça imza oluşturun. İmza tarzı yazı tiplerini seçin, aralıkları ayarlayın ve PNG veya SVG dışa aktarın.",
+        "keywords": "arapça imza oluşturucu, arapça hat imza, arapça imza fontu, arapça imza png, arapça imza svg"
+      },
+      "hero": {
+        "eyebrow": "Ana <link>Arabic Calligraphy Generator</link> mı arıyorsunuz?",
+        "title": "Arapça İmza Oluşturucu",
+        "description": "Belgeler, profiller veya marka için şık Arapça imza oluşturun. Yazı tipi, aralık ve renkleri ayarlayıp dışa aktarın.",
+        "cta": "İmza Oluştur"
+      },
+      "features": [
+        {
+          "title": "İmza tarzı yazı tipleri",
+          "description": "Akıcı ve zarif imza çizgileri için seçilmiş fontlar."
+        },
+        {
+          "title": "Hassas aralık kontrolü",
+          "description": "Dengeli imza için harf aralığı ve temel çizgiyi ayarlayın."
+        },
+        {
+          "title": "Belgeye hazır dışa aktarım",
+          "description": "Belgeler ve dijital profiller için PNG veya SVG."
+        }
+      ],
+      "styleGallery": {
+        "title": "Denenecek imza stilleri",
+        "items": [
+          {
+            "title": "Klasik Ruqaa",
+            "description": "Resmi imza için kompakt çizgiler."
+          },
+          {
+            "title": "Akıcı Diwani",
+            "description": "El yazısı hissi veren zarif kıvrımlar."
+          },
+          {
+            "title": "Modern minimal",
+            "description": "Dijital imzalar için temiz çizgiler."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "İmzanı nerede kullanırsın",
+        "items": [
+          {
+            "title": "E-posta ve belgeler",
+            "description": "Temiz yerleşim için şeffaf PNG dışa aktarın."
+          },
+          {
+            "title": "Sertifikalar ve teklif dosyaları",
+            "description": "Resmi görünüm için boşluğu artırın."
+          },
+          {
+            "title": "Filigranlar ve başlıklar",
+            "description": "Daha açık renk ve minimal çizgi kullanın."
+          }
+        ]
+      },
+      "guidelines": {
+        "title": "İmza rehberi",
+        "items": [
+          "Kısa isimler veya baş harfler daha dengelidir.",
+          "Okunabilirlik için harf aralığını artırın.",
+          "Belgeler için şeffaf arka plan kullanın.",
+          "Dışa aktarmadan önce küçük boyutta kontrol edin."
+        ]
+      },
+      "howTo": {
+        "title": "Arapça İmza Oluşturucu nasıl kullanılır",
+        "steps": [
+          "Adınızı veya baş harflerinizi yazın.",
+          "İmza dostu bir hat yazı tipi seçip aralıkları ayarlayın.",
+          "PNG veya SVG dışa aktarın ve belgeye ekleyin."
+        ]
+      },
+      "faq": {
+        "title": "SSS",
+        "items": [
+          {
+            "question": "Çevrimiçi Arapça imza oluşturabilir miyim?",
+            "answer": "Evet. Adınızı yazın ve imza fontlarıyla stil verin."
+          },
+          {
+            "question": "Bu yasal bir imza mı?",
+            "answer": "Üretilen imzalar tasarım/sunum içindir. Yerel gereksinimleri kontrol edin."
+          },
+          {
+            "question": "İmzayı belgelerde kullanabilir miyim?",
+            "answer": "Evet. PDF, e-posta veya slaytlara ekleyin."
           }
         ]
       }

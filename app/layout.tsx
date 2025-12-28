@@ -8,6 +8,8 @@ import { ScrollToTop } from "@/components/scroll-to-top"
 import { CssLoader } from "@/components/css-loader"
 import { localeConfig } from "@/i18n"
 import { headers } from "next/headers"
+import { NextIntlClientProvider } from "next-intl"
+import { getMessages } from "next-intl/server"
 import type { Metadata } from 'next'
 
 // 字体配置 - 只保留Inter，阿拉伯字体使用CDN
@@ -79,6 +81,7 @@ export default async function RootLayout({
 
   // 获取当前语言的文本方向
   const dir = localeConfig[locale]?.dir || 'ltr';
+  const messages = await getMessages({ locale });
 
   return (
     <html className={`${inter.variable}`} dir={dir} suppressHydrationWarning>
@@ -100,12 +103,14 @@ export default async function RootLayout({
         />
       </head>
       <body className={`${inter.className} font-sans`}>
-        <ThemeProvider attribute="class" defaultTheme="system">
-          {children}
-          <Toaster />
-          <ScrollToTop />
-          <CssLoader />
-        </ThemeProvider>
+        <NextIntlClientProvider messages={messages} locale={locale}>
+          <ThemeProvider attribute="class" defaultTheme="system">
+            {children}
+            <Toaster />
+            <ScrollToTop />
+            <CssLoader />
+          </ThemeProvider>
+        </NextIntlClientProvider>
 
         {isProduction && (
           <>

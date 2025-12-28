@@ -104,6 +104,10 @@
         "title": "Penjana Nama Arab",
         "desc": "Kaligrafi nama Arab yang diperibadikan"
       },
+      "arabicSignature": {
+        "title": "Penjana Tandatangan Arab",
+        "desc": "Kaligrafi tandatangan yang elegan"
+      },
       "kuficScript": {
         "title": "Penjana Skrip Kufi",
         "desc": "Gaya kaligrafi Kufi geometri"
@@ -189,8 +193,16 @@
       "steps": "Taip teks Arab → Pilih fon → Muat turun serta-merta"
     },
     "toolsSection": {
-      "title": "Alat Popular",
-      "description": "Alat berfokus untuk tugas tertentu, disokong oleh Penjana Kaligrafi Arab utama."
+      "title": "Belum pasti apa langkah seterusnya?",
+      "description": "Pilih alat yang fokus mengikut tujuan anda.",
+      "recommendedBadge": "Disyorkan",
+      "items": {
+        "arabicTextGenerator": "Tulis nama atau frasa pendek dengan cepat. Sesuai untuk pos sosial dan poster.",
+        "arabicFontGenerator": "Bandingkan fon sebelah menyebelah sebelum membuat pilihan.",
+        "arabicNameGenerator": "Nama diperibadikan untuk hadiah, profil, dan kenangan.",
+        "arabicLogoGenerator": "Kaligrafi sedia logo untuk jenama dan tanda perniagaan.",
+        "arabicSignatureGenerator": "Gaya tandatangan untuk dokumen dan profil."
+      }
     },
     "howToUse": {
       "title": "Cara Mencipta Kaligrafi Arab",
@@ -907,6 +919,291 @@
           {
             "question": "Di mana saya boleh memuat turun fon?",
             "answer": "Anda boleh melayari dan memuat turun fon di halaman Fon Arab."
+          }
+        ]
+      }
+    },
+    "arabicNameGenerator": {
+      "meta": {
+        "title": "Penjana Nama Arab - Tulis Nama Anda dalam Kaligrafi Arab",
+        "description": "Tukar nama anda kepada kaligrafi Arab dalam beberapa saat. Pilih fon, laraskan jarak dan warna, kemudian eksport PNG atau SVG untuk hadiah, profil, dan logo.",
+        "keywords": "penjana nama arab, tulis nama dalam arab, kaligrafi nama arab, nama arab png, nama arab svg"
+      },
+      "hero": {
+        "eyebrow": "Mencari <link>Arabic Calligraphy Generator</link> utama?",
+        "title": "Penjana Nama Arab",
+        "description": "Hasilkan kaligrafi nama Arab yang diperibadikan untuk hadiah, profil, dan penjenamaan. Sesuaikan fon, warna, dan eksport PNG atau SVG.",
+        "cta": "Cipta Nama"
+      },
+      "features": [
+        {
+          "title": "Templat khusus nama",
+          "description": "Mulakan dengan gaya nama Arab popular dan kemaskan dalam beberapa saat."
+        },
+        {
+          "title": "Gaya nama yang cantik",
+          "description": "Pilih fon klasik dan moden untuk nama pendek."
+        },
+        {
+          "title": "Eksport sedia hadiah",
+          "description": "Muat turun PNG atau SVG untuk cetakan, barang kemas, dan kenangan."
+        }
+      ],
+      "useCases": {
+        "title": "Tempat nama kaligrafi paling sesuai",
+        "items": [
+          {
+            "title": "Hadiah dan kenangan",
+            "description": "Seni peribadi untuk cetakan atau barang kemas."
+          },
+          {
+            "title": "Profil sosial",
+            "description": "Tanda nama unik untuk avatar dan banner."
+          },
+          {
+            "title": "Dekor acara",
+            "description": "Kad tempat duduk, jemputan dan papan tanda."
+          }
+        ]
+      },
+      "layoutIdeas": {
+        "title": "Idea susun atur nama",
+        "items": [
+          {
+            "title": "Tandatangan satu baris",
+            "description": "Sesuai untuk nama pendek, jarakkan huruf lebih luas."
+          },
+          {
+            "title": "Papan nama bertingkat",
+            "description": "Bahagikan nama panjang kepada dua baris untuk seimbang."
+          },
+          {
+            "title": "Bingkai kenangan",
+            "description": "Tambah bingkai lembut untuk jadikan nama hadiah-ready."
+          }
+        ]
+      },
+      "stylingTips": {
+        "title": "Tip gaya nama",
+        "items": [
+          "Nama pendek lebih baik dengan gaya tebal.",
+          "Cuba fon ringan untuk nama yang elegan.",
+          "Laraskan jarak untuk elak huruf bertindih.",
+          "Guna PNG untuk kongsi cepat, SVG untuk cetak."
+        ]
+      },
+      "howTo": {
+        "title": "Cara menggunakan Penjana Nama Arab",
+        "steps": [
+          "Taip nama anda dalam Arab atau tampal transliterasi.",
+          "Pilih gaya kaligrafi dan laraskan saiz, jarak, dan warna.",
+          "Eksport PNG atau SVG untuk hadiah atau penjenamaan."
+        ]
+      },
+      "faq": {
+        "title": "Soalan Lazim",
+        "items": [
+          {
+            "question": "Bolehkah saya menulis nama saya dalam Arab jika tidak tahu Arab?",
+            "answer": "Boleh. Tampal teks Arab atau gunakan terjemahan dan cuba beberapa gaya."
+          },
+          {
+            "question": "Adakah penjana nama Arab percuma?",
+            "answer": "Ya, percuma tanpa pendaftaran."
+          },
+          {
+            "question": "Untuk apa reka bentuk nama ini?",
+            "answer": "Hadiah, profil sosial, draf logo, atau cetakan khas."
+          }
+        ]
+      }
+    },
+    "arabicLogoGenerator": {
+      "meta": {
+        "title": "Penjana Logo Kaligrafi Arab - Pembuat Logo Arab Percuma",
+        "description": "Reka logo kaligrafi Arab secara dalam talian. Sesuaikan fon, warna, dan susun atur, kemudian eksport PNG atau SVG untuk penjenamaan.",
+        "keywords": "penjana logo arab, logo kaligrafi arab, pembuat logo arab, reka logo arab, logo arab svg"
+      },
+      "hero": {
+        "eyebrow": "Mencari <link>Arabic Calligraphy Generator</link> utama?",
+        "title": "Penjana Logo Kaligrafi Arab",
+        "description": "Hasilkan logo Arab dengan fon kaligrafi elegan, laraskan warna dan jarak, kemudian eksport PNG atau SVG untuk penjenamaan.",
+        "cta": "Reka Logo"
+      },
+      "features": [
+        {
+          "title": "Gaya siap jenama",
+          "description": "Fon kaligrafi terpilih yang menyerlah dalam logo."
+        },
+        {
+          "title": "Kawalan warna & susun atur",
+          "description": "Laraskan jarak, penjajaran, dan palet warna."
+        },
+        {
+          "title": "Eksport mesra vektor",
+          "description": "Muat turun PNG atau SVG untuk cetak dan digital."
+        }
+      ],
+      "showcase": {
+        "title": "Gaya siap logo",
+        "items": [
+          {
+            "title": "Wordmark minimal",
+            "description": "Logo yang bersih dan mudah dibaca untuk jenama moden."
+          },
+          {
+            "title": "Tanda Kufi tebal",
+            "description": "Berat geometri untuk kehadiran jenama yang kuat."
+          },
+          {
+            "title": "Logo tandatangan elegan",
+            "description": "Lengkung lembut untuk jenama butik atau gaya hidup."
+          }
+        ]
+      },
+      "applications": {
+        "title": "Tempat logo paling sesuai",
+        "items": [
+          {
+            "title": "Kad nama & alat tulis",
+            "description": "Gunakan susun atur mendatar supaya jelas pada saiz kecil."
+          },
+          {
+            "title": "Profil sosial",
+            "description": "Pilih strok tebal agar terbaca di avatar."
+          },
+          {
+            "title": "Pembungkusan & label",
+            "description": "Simpan versi monokrom untuk cetakan dan emboss."
+          }
+        ]
+      },
+      "checklist": {
+        "title": "Senarai semak logo",
+        "items": [
+          "Pastikan nama pendek agar jelas pada saiz kecil.",
+          "Gunakan kontras tinggi antara teks dan latar.",
+          "Uji dalam monokrom untuk cetak dan emboss.",
+          "Eksport SVG untuk aset jenama berskala."
+        ]
+      },
+      "howTo": {
+        "title": "Cara menggunakan Penjana Logo Arab",
+        "steps": [
+          "Masukkan nama jenama atau slogan.",
+          "Pilih fon kaligrafi dan laraskan jarak serta warna.",
+          "Eksport PNG atau SVG dan gunakan untuk penjenamaan."
+        ]
+      },
+      "faq": {
+        "title": "Soalan Lazim",
+        "items": [
+          {
+            "question": "Boleh guna secara komersial?",
+            "answer": "Ya, tetapi semak lesen fon jika perlu."
+          },
+          {
+            "question": "Ada eksport SVG?",
+            "answer": "Ya, eksport SVG untuk logo boleh skala."
+          },
+          {
+            "question": "Boleh buat logo ikon ringkas?",
+            "answer": "Boleh, guna perkataan pendek atau inisial."
+          }
+        ]
+      }
+    },
+    "arabicSignatureGenerator": {
+      "meta": {
+        "title": "Penjana Tandatangan Arab - Tandatangan Kaligrafi Elegan",
+        "description": "Cipta tandatangan Arab yang kemas dalam beberapa saat. Pilih fon gaya tandatangan, laraskan jarak, dan eksport PNG atau SVG.",
+        "keywords": "penjana tandatangan arab, tandatangan kaligrafi arab, fon tandatangan arab, tandatangan arab png, tandatangan arab svg"
+      },
+      "hero": {
+        "eyebrow": "Mencari <link>Arabic Calligraphy Generator</link> utama?",
+        "title": "Penjana Tandatangan Arab",
+        "description": "Cipta tandatangan Arab bergaya untuk dokumen, profil atau penjenamaan. Sesuaikan fon, jarak dan warna, kemudian eksport.",
+        "cta": "Cipta Tandatangan"
+      },
+      "features": [
+        {
+          "title": "Fon gaya tandatangan",
+          "description": "Fon dipilih untuk garisan tandatangan yang halus."
+        },
+        {
+          "title": "Kawalan jarak yang kemas",
+          "description": "Laraskan jarak huruf dan garis dasar untuk imbangan."
+        },
+        {
+          "title": "Eksport sedia dokumen",
+          "description": "PNG atau SVG untuk dokumen atau profil digital."
+        }
+      ],
+      "styleGallery": {
+        "title": "Gaya tandatangan untuk dicuba",
+        "items": [
+          {
+            "title": "Ruqaa klasik",
+            "description": "Strok padat untuk tandatangan formal."
+          },
+          {
+            "title": "Diwani mengalir",
+            "description": "Lengkung elegan dengan rasa tulisan tangan."
+          },
+          {
+            "title": "Moden minimal",
+            "description": "Garis bersih untuk tandatangan digital."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Di mana guna tandatangan",
+        "items": [
+          {
+            "title": "E-mel & dokumen",
+            "description": "Eksport PNG lutsinar untuk letak dengan kemas."
+          },
+          {
+            "title": "Sijil & cadangan",
+            "description": "Gunakan jarak lebih luas untuk gaya formal."
+          },
+          {
+            "title": "Tera air & pengepala",
+            "description": "Guna warna lebih ringan dan strok minimum."
+          }
+        ]
+      },
+      "guidelines": {
+        "title": "Panduan tandatangan",
+        "items": [
+          "Nama pendek atau inisial lebih seimbang.",
+          "Tambah jarak huruf untuk kejelasan.",
+          "Kekalkan latar telus untuk dokumen.",
+          "Pratonton pada saiz kecil sebelum eksport."
+        ]
+      },
+      "howTo": {
+        "title": "Cara menggunakan Penjana Tandatangan Arab",
+        "steps": [
+          "Taip nama atau inisial.",
+          "Pilih fon mesra tandatangan dan laraskan jarak.",
+          "Eksport PNG atau SVG dan masukkan ke dokumen."
+        ]
+      },
+      "faq": {
+        "title": "Soalan Lazim",
+        "items": [
+          {
+            "question": "Bolehkah saya cipta tandatangan Arab dalam talian?",
+            "answer": "Boleh. Taip nama dan gayakan dengan fon tandatangan."
+          },
+          {
+            "question": "Adakah ini tandatangan sah?",
+            "answer": "Untuk reka bentuk/paparan. Semak keperluan undang-undang setempat."
+          },
+          {
+            "question": "Boleh guna pada dokumen?",
+            "answer": "Ya. Eksport dan masukkan ke PDF, e-mel atau slaid."
           }
         ]
       }

@@ -17,6 +17,9 @@ export function Navbar() {
   const toolsNavT = useTranslations('footer.generatorTools')
   const textToolT = useTranslations('tools.arabicTextGenerator')
   const fontToolT = useTranslations('tools.arabicFontGenerator')
+  const nameToolT = useTranslations('tools.arabicNameGenerator')
+  const logoToolT = useTranslations('tools.arabicLogoGenerator')
+  const signatureToolT = useTranslations('tools.arabicSignatureGenerator')
   const locale = useLocale()
   const toolBase = locale === defaultLocale ? '' : `/${locale}`
   const [isScrolled, setIsScrolled] = useState(false)
@@ -40,6 +43,9 @@ export function Navbar() {
       dropdown: [
         { label: textToolT('hero.title'), href: `${toolBase}/tools/arabic-text-generator` },
         { label: fontToolT('hero.title'), href: `${toolBase}/tools/arabic-font-generator` },
+        { label: nameToolT('hero.title'), href: `${toolBase}/tools/arabic-name-generator` },
+        { label: logoToolT('hero.title'), href: `${toolBase}/tools/arabic-logo-generator` },
+        { label: signatureToolT('hero.title'), href: `${toolBase}/tools/arabic-signature-generator` },
       ],
     },
     { label: t('arabicFonts'), href: "/fonts" },

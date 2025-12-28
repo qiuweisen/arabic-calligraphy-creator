@@ -106,6 +106,10 @@
 				"title": "Arabic Name Generator",
 				"desc": "Personalized Arabic name calligraphy"
 			},
+			"arabicSignature": {
+				"title": "Arabic Signature Generator",
+				"desc": "Elegant signature-style calligraphy"
+			},
 			"kuficScript": {
 				"title": "Kufic Script Generator",
 				"desc": "Geometric Kufic calligraphy styles"
@@ -191,8 +195,16 @@
 			"steps": "Type Arabic text → Choose font → Download instantly"
 		},
 		"toolsSection": {
-			"title": "Popular Tools",
-			"description": "Focused tools for specific tasks, powered by the main Arabic Calligraphy Generator."
+			"title": "Not sure what to create next?",
+			"description": "Pick a focused tool based on your goal.",
+			"recommendedBadge": "Recommended",
+			"items": {
+				"arabicTextGenerator": "Write a name or short phrase fast. Great for social posts and posters.",
+				"arabicFontGenerator": "Compare fonts side by side before you decide.",
+				"arabicNameGenerator": "Personalized names for gifts, profiles, and keepsakes.",
+				"arabicLogoGenerator": "Logo-ready calligraphy for brands and business marks.",
+				"arabicSignatureGenerator": "Signature-style lettering for documents and profiles."
+			}
 		},
 		"howToUse": {
 			"title": "How to Use Our Arabic Calligraphy Generator",
@@ -908,6 +920,291 @@
 					{
 						"question": "Where can I download the fonts?",
 						"answer": "You can browse and download fonts on the Arabic Fonts page."
+					}
+				]
+			}
+		},
+		"arabicNameGenerator": {
+			"meta": {
+				"title": "Arabic Name Generator - Write Your Name in Arabic Calligraphy",
+				"description": "Turn your name into Arabic calligraphy in seconds. Pick a font, adjust spacing and colors, and export PNG or SVG for gifts, profiles, and logos.",
+				"keywords": "arabic name generator, write your name in arabic, arabic name calligraphy, arabic calligraphy name, arabic name png, arabic name svg"
+			},
+			"hero": {
+				"eyebrow": "Looking for the main <link>Arabic Calligraphy Generator</link>?",
+				"title": "Arabic Name Generator",
+				"description": "Create personalized Arabic name calligraphy for gifts, profiles, and branding. Customize fonts, colors, and export PNG or SVG.",
+				"cta": "Create Your Name"
+			},
+			"features": [
+				{
+					"title": "Name-First Templates",
+					"description": "Start with popular Arabic name styles and refine the look in seconds."
+				},
+				{
+					"title": "Beautiful Name Styles",
+					"description": "Choose classic and modern fonts optimized for short names."
+				},
+				{
+					"title": "Gift-Ready Exports",
+					"description": "Download PNG or SVG for prints, jewelry, and keepsakes."
+				}
+			],
+			"useCases": {
+				"title": "Where name calligraphy shines",
+				"items": [
+					{
+						"title": "Gifts & Keepsakes",
+						"description": "Personalized art for prints, jewelry, or framed gifts."
+					},
+					{
+						"title": "Social Profiles",
+						"description": "A unique name mark for avatars, headers, and banners."
+					},
+					{
+						"title": "Event Decor",
+						"description": "Place cards, invitations, and signage for special moments."
+					}
+				]
+			},
+			"layoutIdeas": {
+				"title": "Name layout ideas",
+				"items": [
+					{
+						"title": "Single-line signature",
+						"description": "Ideal for short names with wider letter spacing."
+					},
+					{
+						"title": "Stacked nameplate",
+						"description": "Split long names into two lines for balance."
+					},
+					{
+						"title": "Framed keepsake",
+						"description": "Add a soft frame to turn the name into a gift-ready emblem."
+					}
+				]
+			},
+			"stylingTips": {
+				"title": "Name styling tips",
+				"items": [
+					"Shorter names look best with bold styles.",
+					"Try lighter fonts for elegant name treatments.",
+					"Adjust spacing to prevent letters from colliding.",
+					"Use PNG for quick sharing and SVG for print."
+				]
+			},
+			"howTo": {
+				"title": "How to use the Arabic Name Generator",
+				"steps": [
+					"Type your name in Arabic or paste a transliteration.",
+					"Pick a calligraphy style and adjust size, spacing, and colors.",
+					"Export PNG or SVG and use it for gifts or branding."
+				]
+			},
+			"faq": {
+				"title": "FAQ",
+				"items": [
+					{
+						"question": "Can I write my name in Arabic if I don't know Arabic?",
+						"answer": "Yes. Paste Arabic text or use a translation and preview multiple calligraphy styles."
+					},
+					{
+						"question": "Is the Arabic name generator free?",
+						"answer": "Yes, it's free to use with no signup required."
+					},
+					{
+						"question": "What can I use the name design for?",
+						"answer": "Use it for gifts, social profiles, logo drafts, or custom prints."
+					}
+				]
+			}
+		},
+		"arabicLogoGenerator": {
+			"meta": {
+				"title": "Arabic Calligraphy Logo Generator - Free Arabic Logo Maker",
+				"description": "Design an Arabic calligraphy logo online. Customize fonts, colors, and layout, then export PNG or SVG for branding.",
+				"keywords": "arabic logo generator, arabic calligraphy logo, arabic logo maker, arabic logo design, arabic logo svg"
+			},
+			"hero": {
+				"eyebrow": "Looking for the main <link>Arabic Calligraphy Generator</link>?",
+				"title": "Arabic Calligraphy Logo Generator",
+				"description": "Create an Arabic logo with elegant calligraphy fonts, adjust colors and spacing, and export brand-ready PNG or SVG.",
+				"cta": "Design a Logo"
+			},
+			"features": [
+				{
+					"title": "Brand-Ready Styles",
+					"description": "Curated calligraphy fonts that look sharp in logos."
+				},
+				{
+					"title": "Color & Layout Control",
+					"description": "Fine-tune spacing, alignment, and palette for your brand."
+				},
+				{
+					"title": "Vector-Friendly Export",
+					"description": "Download PNG or SVG for print and digital use."
+				}
+			],
+			"showcase": {
+				"title": "Logo-ready styles",
+				"items": [
+					{
+						"title": "Minimal Wordmarks",
+						"description": "Clean, readable logos for modern brands."
+					},
+					{
+						"title": "Bold Kufi Marks",
+						"description": "Geometric weight for a strong brand presence."
+					},
+					{
+						"title": "Elegant Signature Logos",
+						"description": "Soft curves for boutique or lifestyle brands."
+					}
+				]
+			},
+			"applications": {
+				"title": "Where this logo works best",
+				"items": [
+					{
+						"title": "Business cards & stationery",
+						"description": "Use a horizontal layout that stays clear at small sizes."
+					},
+					{
+						"title": "Social profiles",
+						"description": "Pick bold strokes so the logo reads in avatars."
+					},
+					{
+						"title": "Packaging & labels",
+						"description": "Keep a monochrome version for print and embossing."
+					}
+				]
+			},
+			"checklist": {
+				"title": "Logo checklist",
+				"items": [
+					"Keep the name short for small-size legibility.",
+					"Use high contrast between text and background.",
+					"Test in monochrome for print and embossing.",
+					"Export SVG for scalable brand assets."
+				]
+			},
+			"howTo": {
+				"title": "How to use the Arabic Logo Generator",
+				"steps": [
+					"Enter your brand name or tagline.",
+					"Choose a calligraphy font and adjust spacing and colors.",
+					"Export PNG or SVG and apply to your branding."
+				]
+			},
+			"faq": {
+				"title": "FAQ",
+				"items": [
+					{
+						"question": "Can I use the logo commercially?",
+						"answer": "Yes. You can use exported designs in commercial projects, but confirm font licensing if needed."
+					},
+					{
+						"question": "Is SVG export available?",
+						"answer": "Yes. Export SVG for scalable logo files."
+					},
+					{
+						"question": "Can I make simple icon-style logos?",
+						"answer": "Yes. Use short words or initials for clean, minimal marks."
+					}
+				]
+			}
+		},
+		"arabicSignatureGenerator": {
+			"meta": {
+				"title": "Arabic Signature Generator - Elegant Calligraphy Signatures",
+				"description": "Create a refined Arabic signature in seconds. Choose signature-style fonts, adjust spacing, and export PNG or SVG.",
+				"keywords": "arabic signature generator, arabic calligraphy signature, arabic signature font, arabic signature png, arabic signature svg"
+			},
+			"hero": {
+				"eyebrow": "Looking for the main <link>Arabic Calligraphy Generator</link>?",
+				"title": "Arabic Signature Generator",
+				"description": "Craft a stylish Arabic signature for documents, profiles, or branding. Customize fonts, spacing, and colors, then export.",
+				"cta": "Create a Signature"
+			},
+			"features": [
+				{
+					"title": "Signature-Style Fonts",
+					"description": "Fonts picked for smooth, elegant signature lines."
+				},
+				{
+					"title": "Refined Spacing Control",
+					"description": "Adjust letter spacing and baseline for a balanced signature."
+				},
+				{
+					"title": "Document-Ready Export",
+					"description": "Export PNG or SVG to use in documents or digital profiles."
+				}
+			],
+			"styleGallery": {
+				"title": "Signature styles to try",
+				"items": [
+					{
+						"title": "Classic Ruqaa",
+						"description": "Compact strokes for a formal signature."
+					},
+					{
+						"title": "Flowing Diwani",
+						"description": "Elegant curves with a handwritten feel."
+					},
+					{
+						"title": "Modern Minimal",
+						"description": "Clean lines for digital signatures."
+					}
+				]
+			},
+			"useCases": {
+				"title": "Where to use your signature",
+				"items": [
+					{
+						"title": "Email & documents",
+						"description": "Export a transparent PNG for clean placement."
+					},
+					{
+						"title": "Certificates & proposals",
+						"description": "Keep spacing wider for a formal look."
+					},
+					{
+						"title": "Watermarks & headers",
+						"description": "Use lighter color and minimal strokes."
+					}
+				]
+			},
+			"guidelines": {
+				"title": "Signature guidelines",
+				"items": [
+					"Use shorter names or initials for better balance.",
+					"Increase letter spacing for clarity.",
+					"Keep the background transparent for documents.",
+					"Preview at small sizes before exporting."
+				]
+			},
+			"howTo": {
+				"title": "How to use the Arabic Signature Generator",
+				"steps": [
+					"Type your name or initials.",
+					"Select a signature-friendly calligraphy font and adjust spacing.",
+					"Export PNG or SVG and place it in your document."
+				]
+			},
+			"faq": {
+				"title": "FAQ",
+				"items": [
+					{
+						"question": "Can I create an Arabic signature online?",
+						"answer": "Yes. Type your name and style it with signature-ready fonts."
+					},
+					{
+						"question": "Is this a legal signature?",
+						"answer": "Generated signatures are for design and presentation. Check local requirements for legal use."
+					},
+					{
+						"question": "Can I use the signature on documents?",
+						"answer": "Yes. Export and insert it into PDFs, emails, or slides."
 					}
 				]
 			}

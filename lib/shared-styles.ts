@@ -65,6 +65,9 @@ export const NAVIGATION_ITEMS = {
       dropdown: [
         { label: "Arabic Text Generator", href: "/tools/arabic-text-generator" },
         { label: "Arabic Font Generator", href: "/tools/arabic-font-generator" },
+        { label: "Arabic Name Generator", href: "/tools/arabic-name-generator" },
+        { label: "Arabic Logo Generator", href: "/tools/arabic-logo-generator" },
+        { label: "Arabic Signature Generator", href: "/tools/arabic-signature-generator" },
       ],
     },
     { label: "Arabic Fonts", href: "/fonts" },

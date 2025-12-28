@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import dynamic from "next/dynamic"
 import { useState, useEffect } from "react"
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { LanguagePrompt } from "@/components/language-prompt"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -14,6 +14,7 @@ import { Footer } from "@/components/footer"
 import { getFeaturedFonts, FONT_CATEGORIES } from "@/lib/content-links"
 import { CalligraphyGenerator } from "@/components/calligraphy-generator"
 import { trackLandingFromURL } from "@/lib/analytics"
+import { defaultLocale } from "@/i18n"
 
 // Dynamic import for CalligraphyGenerator to avoid hydration issues
 const DynamicCalligraphyGenerator = dynamic(
@@ -67,7 +68,47 @@ const FONT_SLUG_TO_NAME: Record<string, string> = {
 
 export default function Home() {
   const t = useTranslations('homepage');
+  const textToolT = useTranslations('tools.arabicTextGenerator')
+  const fontToolT = useTranslations('tools.arabicFontGenerator')
+  const nameToolT = useTranslations('tools.arabicNameGenerator')
+  const logoToolT = useTranslations('tools.arabicLogoGenerator')
+  const signatureToolT = useTranslations('tools.arabicSignatureGenerator')
   const seoT = useTranslations('seo.structuredData');
+  const locale = useLocale()
+  const toolBase = locale === defaultLocale ? '' : `/${locale}`
+
+  const toolCards = [
+    {
+      href: `${toolBase}/tools/arabic-text-generator`,
+      title: textToolT('hero.title'),
+      description: t('toolsSection.items.arabicTextGenerator'),
+      isPrimary: true,
+    },
+    {
+      href: `${toolBase}/tools/arabic-font-generator`,
+      title: fontToolT('hero.title'),
+      description: t('toolsSection.items.arabicFontGenerator'),
+      isPrimary: false,
+    },
+    {
+      href: `${toolBase}/tools/arabic-name-generator`,
+      title: nameToolT('hero.title'),
+      description: t('toolsSection.items.arabicNameGenerator'),
+      isPrimary: false,
+    },
+    {
+      href: `${toolBase}/tools/arabic-logo-generator`,
+      title: logoToolT('hero.title'),
+      description: t('toolsSection.items.arabicLogoGenerator'),
+      isPrimary: false,
+    },
+    {
+      href: `${toolBase}/tools/arabic-signature-generator`,
+      title: signatureToolT('hero.title'),
+      description: t('toolsSection.items.arabicSignatureGenerator'),
+      isPrimary: false,
+    },
+  ]
 
   const [selectedFont, setSelectedFont] = useState<string | undefined>(undefined)
   const [showAllFeaturedFonts, setShowAllFeaturedFonts] = useState(false)
@@ -318,7 +359,6 @@ export default function Home() {
             </button>
           </header>
 
-
           {/* Trust Bar - Desktop Only */}
           <div className="hidden md:block bg-white border-y border-gray-200 py-8 mb-12">
             <div className="container mx-auto px-4">
@@ -415,12 +455,46 @@ export default function Home() {
               </div>
             </noscript>
 
-            <DynamicCalligraphyGenerator
-              initialFont={isClient ? selectedFont : undefined}
-              onFontChange={handleGeneratorFontChange}
-            />
+          <DynamicCalligraphyGenerator
+            initialFont={isClient ? selectedFont : undefined}
+            onFontChange={handleGeneratorFontChange}
+          />
 
           </div>
+
+          <section className="mb-16">
+            <div className="bg-white border border-amber-100 rounded-2xl p-6 md:p-8 shadow-sm">
+              <div className="text-center mb-6">
+                <h2 className="text-2xl md:text-3xl font-bold text-amber-800 mb-2">
+                  {t('toolsSection.title')}
+                </h2>
+                <p className="text-sm text-gray-600 max-w-2xl mx-auto">
+                  {t('toolsSection.description')}
+                </p>
+              </div>
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {toolCards.map((tool) => (
+                  <Link key={tool.href} href={tool.href} className="block">
+                    <Card
+                      className={`border-amber-100 hover:shadow-md transition-shadow h-full ${
+                        tool.isPrimary ? "border-amber-200 bg-amber-50/40" : ""
+                      }`}
+                    >
+                      <CardContent className="p-5">
+                        {tool.isPrimary ? (
+                          <div className="mb-3 text-xs font-semibold uppercase tracking-wide text-amber-700">
+                            {t('toolsSection.recommendedBadge')}
+                          </div>
+                        ) : null}
+                        <h3 className="text-lg font-semibold text-amber-800 mb-2">{tool.title}</h3>
+                        <p className="text-sm text-gray-600">{tool.description}</p>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
 
           {/* How to Use - Visual Guide */}
           <section className="mb-16 bg-gradient-to-b from-amber-50 to-white py-16">

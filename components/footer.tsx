@@ -15,6 +15,9 @@ export function Footer() {
       : `/${locale}#calligraphy-tool-section`
   const textToolHref = `${toolBase}/tools/arabic-text-generator`
   const fontToolHref = `${toolBase}/tools/arabic-font-generator`
+  const nameToolHref = `${toolBase}/tools/arabic-name-generator`
+  const logoToolHref = `${toolBase}/tools/arabic-logo-generator`
+  const signatureToolHref = `${toolBase}/tools/arabic-signature-generator`
   return (
     <footer className="bg-amber-900 text-amber-100 py-8">
       <div className="container mx-auto px-4">
@@ -61,15 +64,21 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href={anchorHref} className="text-amber-200 hover:text-white transition-colors block">
+                <Link href={logoToolHref} className="text-amber-200 hover:text-white transition-colors block">
                   <div className="font-medium">{t('generatorTools.arabicLogo.title')}</div>
                   <div className="text-xs text-amber-300 mt-0.5">{t('generatorTools.arabicLogo.desc')}</div>
                 </Link>
               </li>
               <li>
-                <Link href={anchorHref} className="text-amber-200 hover:text-white transition-colors block">
+                <Link href={nameToolHref} className="text-amber-200 hover:text-white transition-colors block">
                   <div className="font-medium">{t('generatorTools.arabicName.title')}</div>
                   <div className="text-xs text-amber-300 mt-0.5">{t('generatorTools.arabicName.desc')}</div>
+                </Link>
+              </li>
+              <li>
+                <Link href={signatureToolHref} className="text-amber-200 hover:text-white transition-colors block">
+                  <div className="font-medium">{t('generatorTools.arabicSignature.title')}</div>
+                  <div className="text-xs text-amber-300 mt-0.5">{t('generatorTools.arabicSignature.desc')}</div>
                 </Link>
               </li>
               <li>
