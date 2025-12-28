@@ -9,7 +9,7 @@ export const SHARED_STYLES = {
     inner: "container mx-auto px-4",
     content: "flex items-center justify-between h-16",
   },
-  
+
   // Logo样式
   logo: {
     container: "flex items-center space-x-2",
@@ -17,7 +17,7 @@ export const SHARED_STYLES = {
     iconText: "text-white font-bold text-sm",
     text: "font-bold text-xl text-gray-900",
   },
-  
+
   // 导航项样式
   navigation: {
     desktop: "hidden md:flex items-center space-x-8",
@@ -25,7 +25,7 @@ export const SHARED_STYLES = {
     dropdown: "flex items-center space-x-1",
     dropdownContent: "w-64",
   },
-  
+
   // Footer样式
   footer: {
     container: "bg-amber-900 text-amber-100 py-8",
@@ -41,7 +41,7 @@ export const SHARED_STYLES = {
     divider: "border-t border-amber-800 mt-8 pt-8 text-center",
     copyright: "text-amber-200 text-sm",
   },
-  
+
   // 移动端菜单样式
   mobile: {
     trigger: "md:hidden",
@@ -60,8 +60,8 @@ export const NAVIGATION_ITEMS = {
   en: [
     { label: "Generator", href: "/" },
     { label: "Arabic Fonts", href: "/fonts" },
-    { 
-      label: "Learning Guides", 
+    {
+      label: "Learning Guides",
       href: "/guides",
       dropdown: [
         { label: "Beginner's Guide to Arabic Calligraphy", href: "/guides/arabic-calligraphy-beginner-guide" },
@@ -70,8 +70,8 @@ export const NAVIGATION_ITEMS = {
         { label: "Arabic Typography Trends 2025", href: "/guides/arabic-typography-trends-2025" },
       ]
     },
-    { 
-      label: "Tutorials", 
+    {
+      label: "Tutorials",
       href: "/tutorials",
       dropdown: [
         { label: "How to Create Arabic Calligraphy Online", href: "/tutorials/how-to-create-arabic-calligraphy-online" },
@@ -80,8 +80,8 @@ export const NAVIGATION_ITEMS = {
         { label: "Download and Use Arabic Fonts", href: "/tutorials/download-and-use-arabic-fonts" },
       ]
     },
-    { 
-      label: "Use Cases", 
+    {
+      label: "Use Cases",
       href: "/use-cases",
       dropdown: [
         { label: "Business Logo with Arabic Fonts", href: "/use-cases/business-logo-arabic-fonts" },
@@ -126,6 +126,12 @@ export const FOOTER_DATA = {
       links: [
         { label: "Privacy Policy", href: "/privacy-policy" },
         { label: "Terms of Service", href: "/terms-of-service" },
+      ]
+    },
+    {
+      title: "More Tools",
+      links: [
+        { label: "AI Image Enhancer", href: "https://imgenhance.com" },
       ]
     }
   ],
