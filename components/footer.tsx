@@ -176,6 +176,17 @@ export function Footer() {
               </li>
             </ul>
           </div>
+
+          <div>
+            <h3 className="font-bold text-white mb-4 text-sm uppercase">More Tools</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="https://imgenhance.com" className="text-amber-200 hover:text-white transition-colors" target="_blank" rel="noopener">
+                  AI Image Enhancer
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="mt-8 pt-4 border-t border-amber-800 text-center text-sm text-amber-300">
