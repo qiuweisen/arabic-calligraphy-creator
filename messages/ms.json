@@ -598,6 +598,27 @@
     "whatIsSection": {
       "title": "Apakah Penjana Kaligrafi Arab?",
       "content": "Penjana Kaligrafi Arab kami ialah alat dalam talian percuma yang menukar sebarang teks Arab kepada reka bentuk kaligrafi yang indah serta-merta. Sama ada anda perlu mencipta seni Islam yang menakjubkan, mereka bentuk jemputan perkahwinan, atau menjana logo perniagaan profesional, penjana kami menyediakan 17+ fon Arab premium dengan pratonton masa nyata. Hanya taip teks anda, pilih gaya kaligrafi, sesuaikan warna dan kesan, kemudian salin atau muat turun sebagai PNG/SVG. Alat ini menyokong sepenuhnya tanda baca Arab (Harakat) untuk ayat Al-Quran yang tulen dan kaligrafi Islam tradisional. Tiada pendaftaran diperlukan, percuma selamanya."
+    },
+    "intentSection": {
+      "title": "Pilih Tujuan Anda",
+      "subtitle": "Pilih tujuan yang sesuai, kemudian terus ke penjana.",
+      "items": {
+        "copyText": {
+          "title": "Salin & Tampal Teks Arab",
+          "description": "Hasilkan teks Arab yang jelas untuk bio, kapsyen, sari kata dan chat.",
+          "cta": "Jana Teks"
+        },
+        "khatStyles": {
+          "title": "Gaya Khat Tradisional",
+          "description": "Cuba Thuluth, Diwani dan Kufi untuk kegunaan formal, budaya dan agama.",
+          "cta": "Cuba Khat"
+        },
+        "arabicName": {
+          "title": "Kaligrafi Nama Arab",
+          "description": "Cipta kaligrafi nama untuk hadiah, profil atau dekorasi dengan cepat.",
+          "cta": "Tulis Nama"
+        }
+      }
     }
   },
   "generator": {

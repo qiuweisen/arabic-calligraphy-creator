@@ -600,6 +600,27 @@
     "whatIsSection": {
       "title": "Was ist der arabische Kalligraphie-Generator?",
       "content": "Unser arabischer Kalligraphie-Generator ist ein kostenloses Online-Tool, das jeden arabischen Text sofort in wunderschöne Kalligraphie-Designs verwandelt. Ob Sie atemberaubende islamische Kunst erstellen, Hochzeitseinladungen entwerfen oder professionelle Logos generieren möchten – unser Generator bietet über 17 Premium-arabische Schriftarten mit Echtzeit-Vorschau. Geben Sie einfach Ihren Text ein, wählen Sie einen Kalligraphie-Stil, passen Sie Farben und Effekte an und kopieren oder laden Sie als PNG/SVG herunter. Das Tool unterstützt vollständig arabische Diakritika (Harakat) für authentische Koranverse und traditionelle islamische Kalligraphie. Keine Registrierung erforderlich, für immer kostenlos."
+    },
+    "intentSection": {
+      "title": "Wählen Sie Ihr Ziel",
+      "subtitle": "Wählen Sie das passende Ziel und springen Sie direkt zum Generator.",
+      "items": {
+        "copyText": {
+          "title": "Arabischen Text kopieren & einfügen",
+          "description": "Erstellen Sie klaren arabischen Text für Bio, Untertitel, Captions und Chat.",
+          "cta": "Text erzeugen"
+        },
+        "khatStyles": {
+          "title": "Traditionelle Khat-Stile",
+          "description": "Thuluth, Diwani und Kufi für formelle, kulturelle und religiöse Zwecke.",
+          "cta": "Khat testen"
+        },
+        "arabicName": {
+          "title": "Arabische Namenskalligrafie",
+          "description": "Erstellen Sie Namenskalligrafie für Geschenke, Profile oder Dekor.",
+          "cta": "Namen schreiben"
+        }
+      }
     }
   },
   "generator": {

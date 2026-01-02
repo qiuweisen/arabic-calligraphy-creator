@@ -599,6 +599,27 @@
     "whatIsSection": {
       "title": "Arap Kaligrafi Üreteci Nedir?",
       "content": "Arap Kaligrafi Üreticimiz, herhangi bir Arapça metni anında güzel kaligrafi tasarımlarına dönüştüren ücretsiz bir çevrimiçi araçtır. İster çarpıcı İslami sanat oluşturun, ister düğün davetiyeleri tasarlayın veya profesyonel logolar oluşturun, üreticimiz gerçek zamanlı önizleme ile 17+ premium Arapça yazı tipi sağlar. Sadece metninizi yazın, bir kaligrafi stili seçin, renkleri ve efektleri özelleştirin, ardından PNG/SVG olarak kopyalayın veya indirin. Araç, otantik Kuran ayetleri ve geleneksel İslami kaligrafi için Arapça işaretleri (Harakat) tam olarak destekler. Kayıt gerekmez, sonsuza kadar ücretsiz."
+    },
+    "intentSection": {
+      "title": "Amacını Seç",
+      "subtitle": "Kullanım amacına göre seç ve doğrudan oluşturucuya geç.",
+      "items": {
+        "copyText": {
+          "title": "Arapça Metni Kopyala & Yapıştır",
+          "description": "Biyografi, altyazı, başlık ve sohbet için net Arapça metin üret.",
+          "cta": "Metin Oluştur"
+        },
+        "khatStyles": {
+          "title": "Geleneksel Hat Stilleri",
+          "description": "Thuluth, Diwani ve Kufi stillerini dene; resmi, kültürel ve dini kullanım için.",
+          "cta": "Hat Dene"
+        },
+        "arabicName": {
+          "title": "Arapça İsim Hat Sanatı",
+          "description": "Hediye, profil veya dekor için kişiselleştirilmiş isim yazısı oluştur.",
+          "cta": "İsim Yaz"
+        }
+      }
     }
   },
   "generator": {

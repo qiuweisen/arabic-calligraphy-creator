@@ -600,6 +600,27 @@
     "whatIsSection": {
       "title": "Qu'est-ce que le générateur de calligraphie arabe ?",
       "content": "Notre générateur de calligraphie arabe est un outil en ligne gratuit qui transforme instantanément n'importe quel texte arabe en magnifiques designs calligraphiques. Que vous ayez besoin de créer de l'art islamique époustouflant, de concevoir des invitations de mariage ou de générer des logos professionnels, notre générateur propose plus de 17 polices arabes premium avec aperçu en temps réel. Tapez simplement votre texte, choisissez un style de calligraphie, personnalisez les couleurs et les effets, puis copiez ou téléchargez en PNG/SVG. L'outil prend entièrement en charge les signes diacritiques arabes (Harakat) pour les versets coraniques authentiques et la calligraphie islamique traditionnelle. Aucune inscription requise, gratuit pour toujours."
+    },
+    "intentSection": {
+      "title": "Choisissez votre intention",
+      "subtitle": "Choisissez l’objectif qui correspond à votre usage, puis lancez le générateur.",
+      "items": {
+        "copyText": {
+          "title": "Copier & coller du texte arabe",
+          "description": "Générez un texte arabe lisible pour bio, sous-titres, légendes et chat.",
+          "cta": "Générer le texte"
+        },
+        "khatStyles": {
+          "title": "Styles de khat traditionnels",
+          "description": "Essayez Thuluth, Diwani et Kufi pour des usages formels, culturels ou religieux.",
+          "cta": "Essayer le khat"
+        },
+        "arabicName": {
+          "title": "Calligraphie de nom arabe",
+          "description": "Créez une calligraphie de nom pour cadeaux, profils ou décoration.",
+          "cta": "Écrire un nom"
+        }
+      }
     }
   },
   "generator": {

@@ -598,6 +598,27 @@
     "whatIsSection": {
       "title": "Apa itu Generator Kaligrafi Arab?",
       "content": "Generator Kaligrafi Arab kami adalah alat online gratis yang mengubah teks Arab apa pun menjadi desain kaligrafi yang indah secara instan. Baik Anda perlu membuat seni Islam yang menakjubkan, mendesain undangan pernikahan, atau membuat logo bisnis profesional, generator kami menyediakan 17+ font Arab premium dengan pratinjau real-time. Cukup ketik teks Anda, pilih gaya kaligrafi, sesuaikan warna dan efek, lalu salin atau unduh sebagai PNG/SVG. Alat ini sepenuhnya mendukung tanda baca Arab (Harakat) untuk ayat Al-Qur'an yang autentik dan kaligrafi Islam tradisional. Tidak perlu registrasi, gratis selamanya."
+    },
+    "intentSection": {
+      "title": "Pilih Tujuan Anda",
+      "subtitle": "Pilih tujuan yang sesuai lalu langsung ke generator.",
+      "items": {
+        "copyText": {
+          "title": "Salin & Tempel Teks Arab",
+          "description": "Buat teks Arab yang jelas untuk bio, caption, subtitle, dan chat.",
+          "cta": "Buat Teks"
+        },
+        "khatStyles": {
+          "title": "Gaya Khat Tradisional",
+          "description": "Coba Thuluth, Diwani, dan Kufi untuk kebutuhan formal, budaya, dan religi.",
+          "cta": "Coba Khat"
+        },
+        "arabicName": {
+          "title": "Kaligrafi Nama Arab",
+          "description": "Buat kaligrafi nama untuk hadiah, profil, atau dekorasi dengan cepat.",
+          "cta": "Tulis Nama"
+        }
+      }
     }
   },
   "generator": {

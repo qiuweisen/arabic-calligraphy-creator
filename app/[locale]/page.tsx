@@ -434,6 +434,49 @@ export default function Home() {
 
           </div>
 
+          {/* Intent Sections */}
+          <section className="mb-16" id="intent-section">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-bold text-amber-800 mb-3">
+                {t('intentSection.title')}
+              </h2>
+              <p className="text-amber-700 max-w-3xl mx-auto">
+                {t('intentSection.subtitle')}
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                { key: 'copyText', icon: '✍️' },
+                { key: 'khatStyles', icon: '✒️' },
+                { key: 'arabicName', icon: '🪶' },
+              ].map((item) => (
+                <div
+                  key={item.key}
+                  id={`intent-${item.key}`}
+                  className="bg-white border border-amber-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <div className="w-12 h-12 rounded-lg bg-amber-50 border border-amber-200 flex items-center justify-center text-xl mb-4">
+                    <span aria-hidden="true">{item.icon}</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-amber-800 mb-2">
+                    {t(`intentSection.items.${item.key}.title`)}
+                  </h3>
+                  <p className="text-amber-700 text-sm mb-4">
+                    {t(`intentSection.items.${item.key}.description`)}
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => document.getElementById('calligraphy-tool-section')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="text-amber-700 font-semibold inline-flex items-center gap-2 hover:text-amber-900"
+                  >
+                    {t(`intentSection.items.${item.key}.cta`)}
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              ))}
+            </div>
+          </section>
+
           {/* What is Arabic Calligraphy Generator - Phase 1 */}
           <section className="mb-16">
             <div className="bg-white/80 backdrop-blur-sm border border-amber-200 rounded-2xl p-8 md:p-10 shadow-sm">

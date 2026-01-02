@@ -139,6 +139,27 @@
       "title": "What is Arabic Calligraphy Generator?",
       "content": "Our Arabic Calligraphy Generator is a free online tool that transforms any Arabic text into beautiful calligraphy designs instantly. Whether you need to create stunning Islamic art, design wedding invitations, or generate professional business logos, our generator provides 17+ premium Arabic fonts with real-time preview. Simply type your text, choose a calligraphy style, customize colors and effects, then copy or download as PNG/SVG. The tool fully supports Arabic diacritics (Harakat) for authentic Quranic verses and traditional Islamic calligraphy. No registration required, completely free forever."
     },
+    "intentSection": {
+      "title": "Choose Your Intent",
+      "subtitle": "Pick the goal that matches your use case, then jump into the generator.",
+      "items": {
+        "copyText": {
+          "title": "Copy & Paste Arabic Text",
+          "description": "Generate clean, readable Arabic text for bios, captions, subtitles, and chat. Focus on clarity and quick copy.",
+          "cta": "Generate Text"
+        },
+        "khatStyles": {
+          "title": "Traditional Khat Styles",
+          "description": "Explore Thuluth, Diwani, and Kufi looks for formal, cultural, and religious design needs.",
+          "cta": "Try Khat Styles"
+        },
+        "arabicName": {
+          "title": "Arabic Name Calligraphy",
+          "description": "Create personalized name calligraphy for gifts, profiles, or event decor in minutes.",
+          "cta": "Write a Name"
+        }
+      }
+    },
     "features": {
       "title": "Our Free Arabic Calligraphy Generator Features",
       "description": "Our free Arabic calligraphy font generator provides everything you need to create stunning Arabic calligraphy designs, logos, and text art with professional quality results.",
