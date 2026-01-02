@@ -25,7 +25,7 @@ export function DesktopSEOTracker({ locale }: DesktopSEOTrackerProps) {
         const trackEvent = (window as any).trackCalligraphyEvent
         if (typeof trackEvent === 'function') {
           trackEvent('Desktop_SEO_Optimization_Applied', {
-            original_description: "🎨 FREE Arabic Calligraphy Generator | Create stunning Islamic art online instantly! 13+ fonts, instant download PNG/SVG. No signup required ✨",
+            original_description: "🎨 FREE Arabic Calligraphy Generator | Create stunning Islamic art online instantly! 17+ fonts, instant download PNG/SVG. No signup required ✨",
             optimized_description: metaDescription,
             viewport_width: window.innerWidth,
             viewport_height: window.innerHeight,

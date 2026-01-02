@@ -3,12 +3,12 @@
 import Link from "next/link"
 import Image from "next/image"
 import dynamic from "next/dynamic"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo } from "react"
 import { useTranslations } from 'next-intl'
 import { LanguagePrompt } from "@/components/language-prompt"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Check, Download, Palette, Type, ChevronRight, Laptop, Smartphone, Tablet, ArrowRight, Info, Edit3, Settings, Share2 } from "lucide-react"
+import { Check, Download, Palette, Type, Laptop, Smartphone, Tablet, ArrowRight, Info, Edit3, Settings, Share2 } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { getFeaturedFonts, FONT_CATEGORIES } from "@/lib/content-links"
@@ -72,14 +72,23 @@ export default function Home() {
   const [selectedFont, setSelectedFont] = useState<string | undefined>(undefined)
   const [showAllFeaturedFonts, setShowAllFeaturedFonts] = useState(false)
   const [isClient, setIsClient] = useState(false)
+  const whatIsContent = t('whatIsSection.content')
+  const whatIsParagraphs = useMemo(() => {
+    const content = whatIsContent.trim()
+    const match = content.match(/^(.*?[.!?。！？؟۔])\s+(.*)$/)
+    if (match) {
+      return [match[1], match[2]]
+    }
+    return [content]
+  }, [whatIsContent])
 
   // Handle URL parameter for font selection
   useEffect(() => {
     setIsClient(true)
-    
+
     // Track landing page conversion from URL parameters
     trackLandingFromURL()
-    
+
     if (typeof window !== 'undefined') {
       const urlParams = new URLSearchParams(window.location.search)
       const fontParam = urlParams.get('font')
@@ -106,7 +115,7 @@ export default function Home() {
       }
 
       document.addEventListener('click', handleTryFontClick)
-      
+
       return () => {
         document.removeEventListener('click', handleTryFontClick)
       }
@@ -116,18 +125,18 @@ export default function Home() {
   // Font switching function
   const handleFontSwitch = (fontSlug: string | undefined) => {
     if (!fontSlug) return
-    
+
     const fontName = FONT_SLUG_TO_NAME[fontSlug]
-    
+
     if (fontName) {
       setSelectedFont(fontName)
-      
+
       // Smooth scroll to the top creation area
       const calligraphySection = document.getElementById('calligraphy-tool-section')
       if (calligraphySection) {
         calligraphySection.scrollIntoView({ behavior: 'smooth' })
       }
-      
+
       // Update URL without reloading page
       const newUrl = new URL(window.location.href)
       newUrl.searchParams.set('font', fontName)
@@ -151,7 +160,7 @@ export default function Home() {
     "name": t('title'),
     "description": t('intro'),
     "url": "https://arabic-calligraphy-generator.com",
-    
+
     // 1. 解决严重问题：添加 "image" 字段
     // Merchant Listings 要求用 "image" 而不是 "screenshot"。我们直接用您现有的图片。
     "image": "https://pub-7c6b2100167a48b5877d4c2ab2aa4e3a.r2.dev/og-image.png",
@@ -166,10 +175,10 @@ export default function Home() {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD",
-      
+
       // 2. 解决非严重问题：添加 "priceValidUntil"
       // 因为是长期免费，可以设置一个未来的日期，比如明年年底。
-      "priceValidUntil": "2030-12-31" 
+      "priceValidUntil": "2030-12-31"
     },
     // Note: aggregateRating 已移除，待收集真实评分数据后再添加
     // "screenshot" 字段可以保留，因为它对 SoftwareApplication 类型是有效的。
@@ -181,11 +190,14 @@ export default function Home() {
   };
 
   // FAQ结构化数据 - 使用多语言翻译
-  const faqT = useTranslations('homepage.detailedFaq');
+  const homepageFaqKeys = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8'];
+  const homepageFaqs = homepageFaqKeys.map((key) =>
+    t.raw(`faq.${key}`) as { question: string; answer: string }
+  );
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqT.raw('questions').slice(0, 3).map((faq: any) => ({
+    "mainEntity": homepageFaqs.map((faq) => ({
       "@type": "Question",
       "name": faq.question,
       "acceptedAnswer": {
@@ -200,7 +212,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Arabic Calligraphy Generator",
-    "description": "Free online Arabic calligraphy generator with 13+ premium fonts. Create stunning Islamic art, logos, and designs instantly. No registration required, commercial use allowed.",
+    "description": "Free online Arabic calligraphy generator with 17+ premium fonts. Create stunning Islamic art, logos, and designs instantly. No registration required, commercial use allowed.",
     "url": "https://arabic-calligraphy-generator.com",
     "applicationCategory": "DesignApplication",
     "operatingSystem": "Any",
@@ -213,7 +225,7 @@ export default function Home() {
       "availability": "https://schema.org/InStock"
     },
     "featureList": [
-      "13+ Premium Arabic Fonts",
+      "17+ Premium Arabic Fonts",
       "PNG and SVG Export",
       "Real-time Preview",
       "Color Customization",
@@ -274,22 +286,22 @@ export default function Home() {
               <span className="text-amber-500">⭐</span>
               {t('hero.badge')}
             </div>
-            
+
             {/* 主标题 */}
             <h1 className="text-4xl md:text-6xl font-bold text-amber-800 mb-4">
               {t('title')}
             </h1>
-            
+
             {/* 副标题 - 突出核心价值 */}
             <h2 className="text-2xl md:text-4xl font-bold text-amber-700 mb-6">
               {t('hero.subtitle')}
             </h2>
-            
+
             {/* 简洁描述 */}
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
               {t('hero.description')}
             </p>
-            
+
             {/* 核心价值主张 - 三个勾选项 */}
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 mb-8">
               <div className="flex items-center gap-2 text-amber-700">
@@ -305,9 +317,9 @@ export default function Home() {
                 <span className="font-semibold">{t('hero.value3')}</span>
               </div>
             </div>
-            
+
             {/* 主要CTA按钮 */}
-            <button 
+            <button
               onClick={() => document.getElementById('calligraphy-tool-section')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105 mb-4"
             >
@@ -331,7 +343,7 @@ export default function Home() {
                     Designers Worldwide
                   </p>
                 </div>
-                
+
                 <div className="text-center border-x border-gray-200">
                   <div className="flex items-center justify-center gap-1 mb-2">
                     <span className="text-amber-500 text-2xl">★★★★★</span>
@@ -340,7 +352,7 @@ export default function Home() {
                     4.8/5 User Rating
                   </p>
                 </div>
-                
+
                 <div className="text-center">
                   <div className="text-3xl font-bold text-amber-600 mb-2">
                     100% Free
@@ -422,6 +434,24 @@ export default function Home() {
 
           </div>
 
+          {/* What is Arabic Calligraphy Generator - Phase 1 */}
+          <section className="mb-16">
+            <div className="bg-white/80 backdrop-blur-sm border border-amber-200 rounded-2xl p-8 md:p-10 shadow-sm">
+              <div className="max-w-5xl mx-auto">
+                <h2 className="text-2xl md:text-3xl font-bold text-amber-800 mb-4">
+                  {t('whatIsSection.title')}
+                </h2>
+                <div className="space-y-4">
+                  {whatIsParagraphs.map((paragraph, index) => (
+                    <p key={index} className="text-amber-700 leading-relaxed">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* How to Use - Visual Guide */}
           <section className="mb-16 bg-gradient-to-b from-amber-50 to-white py-16">
             <div className="max-w-6xl mx-auto px-4">
@@ -439,7 +469,7 @@ export default function Home() {
               <div className="mb-12">
                 {/* Desktop Layout */}
                 <div className="hidden md:flex items-center justify-between max-w-5xl mx-auto">
-                  
+
                   {/* Step 1: Enter Arabic Text */}
                   <div className="text-center flex-1">
                     {/* Step Number Circle */}
@@ -465,7 +495,7 @@ export default function Home() {
                     <ArrowRight className="w-8 h-8 text-amber-400" />
                   </div>
 
-                    {/* Step 2: Customize Design */}
+                  {/* Step 2: Customize Design */}
                   <div className="text-center flex-1">
                     {/* Step Number Circle */}
                     <div className="w-20 h-20 bg-amber-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
@@ -514,7 +544,7 @@ export default function Home() {
 
                 {/* Mobile Layout */}
                 <div className="md:hidden space-y-8">
-                  
+
                   {/* Step 1: Enter Arabic Text */}
                   <div className="text-center">
                     {/* Step Number Circle */}
@@ -590,7 +620,7 @@ export default function Home() {
               <p className="text-amber-700 mb-6 max-w-2xl mx-auto">
                 {t('howToUse.cta.description')}
               </p>
-              <button 
+              <button
                 onClick={() => document.getElementById('calligraphy-tool-section')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
@@ -614,10 +644,10 @@ export default function Home() {
             <p className="text-amber-700 text-center mb-8 max-w-3xl mx-auto">
               {t('features.description')}
             </p>
-            
+
             {/* 8个核心功能卡片 - 采用我们自己的设计风格 */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              
+
               {/* 字体库 */}
               <div className="bg-white border border-amber-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                 <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mb-4 mx-auto">
@@ -727,13 +757,13 @@ export default function Home() {
                   const [imageError, setImageError] = useState(false);
                   const [imageLoaded, setImageLoaded] = useState(false);
                   const [clientReady, setClientReady] = useState(false);
-                  
+
                   useEffect(() => {
                     // 延迟一点时间再切换到真实头像，避免闪烁
                     const timer = setTimeout(() => setClientReady(true), 100);
                     return () => clearTimeout(timer);
                   }, []);
-                  
+
                   // 使用可靠的真人头像源
                   const avatars = [
                     'https://randomuser.me/api/portraits/women/44.jpg',
@@ -744,7 +774,7 @@ export default function Home() {
                     'https://randomuser.me/api/portraits/men/73.jpg'
                   ];
                   const avatarUrl = avatars[index % avatars.length];
-                  
+
                   // 显示首字母头像的情况：未就绪、加载错误、或图片未加载完成
                   if (!clientReady || imageError || !imageLoaded) {
                     return (
@@ -752,7 +782,7 @@ export default function Home() {
                         <span className="text-amber-600 font-bold text-lg">{review.name.charAt(0)}</span>
                         {/* 隐藏预加载图片 */}
                         {clientReady && !imageError && (
-                          <img 
+                          <img
                             src={avatarUrl}
                             alt=""
                             className="hidden"
@@ -763,10 +793,10 @@ export default function Home() {
                       </div>
                     );
                   }
-                  
+
                   return (
                     <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-200 bg-gray-100">
-                      <img 
+                      <img
                         src={avatarUrl}
                         alt={`${review.name} avatar`}
                         className="w-full h-full object-cover"
@@ -776,35 +806,35 @@ export default function Home() {
                     </div>
                   );
                 };
-                
+
                 return (
-                <Card key={index} className="border-amber-200 bg-white/80 backdrop-blur-sm hover:shadow-md transition-shadow">
-                  <CardContent className="p-6">
-                    {/* 用户头像和信息 */}
-                    <div className="flex items-center gap-3 mb-4">
-                      <AvatarComponent />
-                      <div>
-                        <h3 className="font-bold text-amber-900">{review.name}</h3>
-                        <p className="text-sm text-amber-600">{review.title}</p>
+                  <Card key={index} className="border-amber-200 bg-white/80 backdrop-blur-sm hover:shadow-md transition-shadow">
+                    <CardContent className="p-6">
+                      {/* 用户头像和信息 */}
+                      <div className="flex items-center gap-3 mb-4">
+                        <AvatarComponent />
+                        <div>
+                          <h3 className="font-bold text-amber-900">{review.name}</h3>
+                          <p className="text-sm text-amber-600">{review.title}</p>
+                        </div>
                       </div>
-                    </div>
 
-                    {/* 星级评分 */}
-                    <div className="flex gap-1 mb-3">
-                      {[...Array(5)].map((_, i) => (
-                        <span key={i} className="text-yellow-400">⭐</span>
-                      ))}
-                    </div>
+                      {/* 星级评分 */}
+                      <div className="flex gap-1 mb-3">
+                        {[...Array(5)].map((_, i) => (
+                          <span key={i} className="text-yellow-400">⭐</span>
+                        ))}
+                      </div>
 
-                    {/* 评价内容 */}
-                    <p className="text-amber-700 leading-relaxed mb-3">
-                      "{review.content}"
-                    </p>
+                      {/* 评价内容 */}
+                      <p className="text-amber-700 leading-relaxed mb-3">
+                        "{review.content}"
+                      </p>
 
-                    {/* 日期 */}
-                    <p className="text-xs text-amber-500">{review.date}</p>
-                  </CardContent>
-                </Card>
+                      {/* 日期 */}
+                      <p className="text-xs text-amber-500">{review.date}</p>
+                    </CardContent>
+                  </Card>
                 );
               })}
             </div>
@@ -812,9 +842,9 @@ export default function Home() {
 
           {/* FAQ Section - 平铺展示 */}
           <section id="faq" className="mb-12">
-            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">{t('detailedFaq.title')}</h2>
+            <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">{t('faq.title')}</h2>
             <div className="space-y-6">
-              {t.raw('detailedFaq.questions').map((faq: any, index: number) => (
+              {homepageFaqs.map((faq, index) => (
                 <Card key={index} className="border-amber-200 bg-white/80 backdrop-blur-sm">
                   <CardContent className="p-6">
                     <h3 className="text-lg font-bold text-amber-900 mb-3">{faq.question}</h3>

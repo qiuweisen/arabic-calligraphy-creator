@@ -12,12 +12,12 @@
 ### 1. **Meta描述桌面端优化**
 **优化前**：
 ```
-"🎨 FREE Arabic Calligraphy Generator | Create stunning Islamic art online instantly! 13+ fonts, instant download PNG/SVG. No signup required ✨"
+"🎨 FREE Arabic Calligraphy Generator | Create stunning Islamic art online instantly! 17+ fonts, instant download PNG/SVG. No signup required ✨"
 ```
 
 **优化后**（仅桌面端）：
 ```
-"Professional Arabic Calligraphy Generator - Create Islamic Art with 13+ Premium Fonts. Free online tool for designers, students & businesses. Instant PNG/SVG download."
+"Professional Arabic Calligraphy Generator - Create Islamic Art with 17+ Premium Fonts. Free online tool for designers, students & businesses. Instant PNG/SVG download."
 ```
 
 **优化策略**：

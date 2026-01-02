@@ -60,7 +60,7 @@
 │  Transform Arabic text into stunning calligraphy   │
 │     with our professional design platform          │
 │                                                     │
-│   📊 100,000+     ⚡ 13+ Premium    🌍 Used in     │
+│   📊 100,000+     ⚡ 17+ Premium    🌍 Used in     │
 │   Designs Created    Fonts           50+ Countries │
 │                                                     │
 │           [Start Creating Now - Free]               │
@@ -112,7 +112,7 @@
 #### 具体优化细节
 - **布局**：50/50左右分栏，响应式适配
 - **输入区域**：大尺寸文本框，支持RTL
-- **字体选择**：可视化预览，突出"13+ Premium Fonts"
+- **字体选择**：可视化预览，突出"17+ Premium Fonts"
 - **导出选项**：技术规格详细说明
 - **专业标识**：300 DPI、透明背景、商用许可
 
@@ -130,7 +130,7 @@ H2: Professional Arabic Calligraphy Generator Features
 │ 🎨 Premium  │ ⚡ Advanced │ 🌍 Global   │
 │ Font Library│ Customization│ Standards  │
 │             │             │             │
-│ • 13+ Fonts │ • Color     │ • PNG/SVG   │
+│ • 17+ Fonts │ • Color     │ • PNG/SVG   │
 │ • Traditional│   Control   │ • 300 DPI   │
 │ • Modern    │ • Size      │ • Commercial│
 │ • Decorative│   Adjust    │   License   │
@@ -155,7 +155,7 @@ H2: How to Create Arabic Calligraphy in 3 Steps
 ┌─────────────────────────────────────────────────────┐
 │  1️⃣ Enter Text    →    2️⃣ Choose Style    →    3️⃣ Download │
 │  ─────────────         ─────────────────         ──────────── │
-│  Type Arabic text      Select from 13+          Export in    │
+│  Type Arabic text      Select from 17+          Export in    │
 │  or paste from         premium fonts and        PNG/SVG      │
 │  any source           customize colors          format       │
 │                                                              │
@@ -240,7 +240,7 @@ H2: Everything You Need to Know About Our Arabic Calligraphy Generator
 ##### 🔥 用户最关心的问题（必须解决的顾虑）
 
 **Q1: Is your Arabic calligraphy generator completely free to use?**
-A: Yes! Our Arabic calligraphy generator is 100% free with no hidden costs, subscriptions, or watermarks. You can create unlimited designs, access all 13+ premium fonts, and download high-quality PNG/SVG files without any restrictions. No registration required.
+A: Yes! Our Arabic calligraphy generator is 100% free with no hidden costs, subscriptions, or watermarks. You can create unlimited designs, access all 17+ premium fonts, and download high-quality PNG/SVG files without any restrictions. No registration required.
 
 **Q2: What file formats can I download and what quality do I get?**
 A: You can download your Arabic calligraphy in two professional formats:
@@ -259,7 +259,7 @@ No additional licensing fees required.
 ##### 💡 功能和使用相关问题
 
 **Q4: How many Arabic fonts are available in your generator?**
-A: We offer 13+ carefully curated Arabic fonts covering different calligraphy styles:
+A: We offer 17+ carefully curated Arabic fonts covering different calligraphy styles:
 • Traditional fonts: Amiri, Scheherazade (perfect for formal documents)
 • Modern fonts: Cairo, Tajawal (great for contemporary designs)  
 • Decorative fonts: Reem Kufi, Aref Ruqaa (ideal for artistic projects)
@@ -268,7 +268,7 @@ Each font is professionally optimized for both digital and print use.
 **Q5: How do I use your Arabic calligraphy generator?**
 A: Creating Arabic calligraphy is simple:
 1. Type or paste your Arabic text in the input field
-2. Choose from 13+ fonts and customize colors/size
+2. Choose from 17+ fonts and customize colors/size
 3. Preview your design in real-time
 4. Download instantly as PNG or SVG
 No technical skills required - the whole process takes under 2 minutes!
@@ -293,7 +293,7 @@ Our generator automatically handles right-to-left (RTL) text formatting.
 
 **Q8: What makes your Arabic calligraphy generator different from others?**
 A: Our generator stands out with:
-• 13+ premium fonts vs. competitors' 3-5 basic fonts
+• 17+ premium fonts vs. competitors' 3-5 basic fonts
 • High-resolution export (300 DPI) vs. low-quality outputs
 • Both PNG and SVG formats vs. PNG-only options
 • Commercial license included vs. restricted usage
@@ -317,7 +317,7 @@ A: Our generator stands out with:
 │    Join 100,000+ users who trust our platform      │
 │         for their Arabic design needs              │
 │                                                     │
-│  🎨 13+ Premium Fonts  |  ⚡ Instant Download       │
+│  🎨 17+ Premium Fonts  |  ⚡ Instant Download       │
 │  🌍 100% Free Forever |  ✓ No Registration         │
 │                                                     │
 │           [Start Creating Now]                      │
@@ -1991,7 +1991,7 @@ A: Our generator stands out with:
   <div class="card__body">
     <p class="feature-description">Create stunning Arabic calligraphy with our premium font collection.</p>
     <ul class="feature-list">
-      <li class="feature-list-item">13+ Premium Fonts</li>
+      <li class="feature-list-item">17+ Premium Fonts</li>
       <li class="feature-list-item">High Resolution Output</li>
       <li class="feature-list-item">Commercial License</li>
     </ul>
@@ -2055,10 +2055,10 @@ A: Our generator stands out with:
 ### Meta标签优化
 ```html
 <!-- 页面标题 -->
-<title>Arabic Calligraphy Generator - Professional Online Design Tool | 13+ Premium Fonts</title>
+<title>Arabic Calligraphy Generator - Professional Online Design Tool | 17+ Premium Fonts</title>
 
 <!-- Meta描述 -->
-<meta name="description" content="Create stunning Arabic calligraphy online with our professional generator. 13+ premium fonts, high-resolution PNG/SVG export, commercial license included. 100% free, no registration required.">
+<meta name="description" content="Create stunning Arabic calligraphy online with our professional generator. 17+ premium fonts, high-resolution PNG/SVG export, commercial license included. 100% free, no registration required.">
 
 <!-- 关键词（仅用于内容规划） -->
 <!-- arabic calligraphy generator, arabic fonts online, islamic calligraphy maker, free arabic text generator -->
@@ -2070,7 +2070,7 @@ A: Our generator stands out with:
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Arabic Calligraphy Generator",
-  "description": "Professional online tool for creating Arabic calligraphy with 13+ premium fonts",
+  "description": "Professional online tool for creating Arabic calligraphy with 17+ premium fonts",
   "url": "https://arabic-calligraphy-generator.com",
   "applicationCategory": "DesignApplication",
   "operatingSystem": "Web Browser",

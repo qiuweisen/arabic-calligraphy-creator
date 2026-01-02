@@ -37,7 +37,7 @@
 
 **改进后**：
 ```html
-"🎨 FREE Arabic Calligraphy Generator | Create stunning Islamic art online instantly! 13+ fonts, instant download PNG/SVG. No signup required ✨"
+"🎨 FREE Arabic Calligraphy Generator | Create stunning Islamic art online instantly! 17+ fonts, instant download PNG/SVG. No signup required ✨"
 ```
 
 #### 1.2 增强结构化数据 ✅

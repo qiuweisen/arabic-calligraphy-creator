@@ -42,7 +42,7 @@
 
 2. **创建GitHub仓库**
    - 仓库名称：`arabic-calligraphy-generator`
-   - 描述：Free online Arabic calligraphy generator with 13+ fonts
+   - 描述：Free online Arabic calligraphy generator with 17+ fonts
    - 主题标签：`arabic`, `calligraphy`, `generator`, `nextjs`, `typescript`
 
 3. **推送代码**

@@ -219,7 +219,7 @@ export default function TemplatesPage() {
               </h2>
               <p className="text-amber-700 mb-6 max-w-2xl mx-auto">
                 While we prepare our template collection, start creating beautiful Arabic calligraphy 
-                with our advanced generator tool. Choose from 13+ fonts and unlimited customization options.
+                with our advanced generator tool. Choose from 17+ fonts and unlimited customization options.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">

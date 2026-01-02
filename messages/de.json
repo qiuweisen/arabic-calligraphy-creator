@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Arabische Kalligraphie Generator - Kostenloses Online-Tool",
     "title_desktop": "Professionelles Arabische Kalligraphie Tool | 17+ Premium Schriftarten | Design-Plattform",
-    "description": "🎨 KOSTENLOSER Arabische Kalligraphie Generator | Erstellen Sie sofort atemberaubende islamische Kunst online! 13+ Schriftarten, sofortiger PNG/SVG-Download. Keine Anmeldung erforderlich ✨",
+    "description": "🎨 KOSTENLOSER Arabische Kalligraphie Generator | Erstellen Sie sofort atemberaubende islamische Kunst online! 17+ Schriftarten, sofortiger PNG/SVG-Download. Keine Anmeldung erforderlich ✨",
     "description_desktop": "Professionelles Arabische Kalligraphie Design-Tool | Erstellen Sie atemberaubende islamische Kunst mit 17+ Premium-Schriftarten. Vertraut von 50K+ Designern & Unternehmen. Hochwertige PNG/SVG-Exporte. Erweiterte Typografie-Features.",
     "keywords": "Arabische Kalligraphie Generator, arabische Schriftarten, islamische Kalligraphie, arabischer Textgenerator, kostenlose arabische Schriftarten, Online-Kalligraphie-Ersteller"
   },
@@ -132,7 +132,7 @@
     },
     "socialProof": {
       "designsCreated": "Über 100.000 erstellte Designs",
-      "premiumFonts": "13+ Premium-Schriftarten",
+      "premiumFonts": "17+ Premium-Schriftarten",
       "freeForever": "Für immer kostenlos"
     },
     "features": {
@@ -234,7 +234,7 @@
       "title": "FAQ zum Arabische Kalligraphie Generator",
       "q1": {
         "question": "Ist dieser Arabische Kalligraphie Generator komplett kostenlos?",
-        "answer": "Ja! Unser Arabische Kalligraphie Generator ist zu 100 % kostenlos, ohne versteckte Kosten, Abonnements oder Registrierung. Alle 13+ Premium-Schriftarten, Anpassungsfunktionen und Exportoptionen sind kostenlos enthalten."
+        "answer": "Ja! Unser Arabische Kalligraphie Generator ist zu 100 % kostenlos, ohne versteckte Kosten, Abonnements oder Registrierung. Alle 17+ Premium-Schriftarten, Anpassungsfunktionen und Exportoptionen sind kostenlos enthalten."
       },
       "q2": {
         "question": "Welche Dateiformate kann ich herunterladen?",
@@ -251,6 +251,18 @@
       "q5": {
         "question": "Funktioniert der Generator auf mobilen Geräten?",
         "answer": "Absolut! Unser Arabische Kalligraphie Generator ist vollständig responsiv und funktioniert perfekt auf Smartphones, Tablets und Desktop-Computern. Die Benutzeroberfläche passt sich Ihrer Bildschirmgröße an, um das beste Erlebnis zu bieten."
+      },
+      "q6": {
+        "question": "Kann ich arabische Kalligraphie direkt kopieren und einfügen?",
+        "answer": "Ja! Sie können Ihre generierte arabische Kalligraphie mit einem Klick direkt in die Zwischenablage kopieren und dann in jedes Dokument oder jede Anwendung einfügen. Sie können sie auch als PNG oder SVG für professionellere Verwendungen herunterladen."
+      },
+      "q7": {
+        "question": "Unterstützt der Generator arabischen Text mit Harakat (Diakritika)?",
+        "answer": "Ja, unser arabischer Kalligraphie-Generator unterstützt Harakat/Diakritika (اعراب) vollständig. Sie können arabischen Text mit Vokalzeichen eingeben, und der Generator zeigt sie entsprechend den Fähigkeiten jeder Schriftart an. Dies ist essentiell für Koranverse und formalen arabischen Text."
+      },
+      "q8": {
+        "question": "Kann ich Kalligraphie mit transparentem Hintergrund herunterladen?",
+        "answer": "Absolut! Wenn Sie Ihre arabische Kalligraphie als PNG herunterladen, enthält sie automatisch einen transparenten Hintergrund, was sie perfekt zum Überlagern auf verschiedene Hintergründe, Logos oder Designprojekte macht."
       }
     },
     "testimonials": {
@@ -363,7 +375,7 @@
       "questions": [
         {
           "question": "Ist dieser Arabische Kalligraphie Generator komplett kostenlos?",
-          "answer": "Ja! Unser Arabische Kalligraphie Generator ist zu 100 % kostenlos, ohne versteckte Kosten, Abonnements oder Registrierung. Alle 13+ Premium-Schriftarten, Anpassungsfunktionen und Exportoptionen sind kostenlos enthalten."
+          "answer": "Ja! Unser Arabische Kalligraphie Generator ist zu 100 % kostenlos, ohne versteckte Kosten, Abonnements oder Registrierung. Alle 17+ Premium-Schriftarten, Anpassungsfunktionen und Exportoptionen sind kostenlos enthalten."
         },
         {
           "question": "Welche arabischen Schriftarten und Kalligraphie-Stile sind verfügbar?",
@@ -516,7 +528,7 @@
       },
       "noScript": {
         "title": "Arabischer Kalligraphie-Generator",
-        "description": "Erstellen Sie sofort wunderschöne arabische Kalligraphie mit unserem kostenlosen Online-Generator. Wählen Sie aus 13+ professionellen Schriftarten, passen Sie Farben und Hintergründe an und laden Sie hochwertige PNG/SVG-Dateien herunter.",
+        "description": "Erstellen Sie sofort wunderschöne arabische Kalligraphie mit unserem kostenlosen Online-Generator. Wählen Sie aus 17+ professionellen Schriftarten, passen Sie Farben und Hintergründe an und laden Sie hochwertige PNG/SVG-Dateien herunter.",
         "useCases": {
           "title": "Beliebte Anwendungsfälle",
           "weddingInvitations": "Hochzeitseinladungen",
@@ -584,6 +596,10 @@
         "traditional": "Traditionelle arabische Schriften"
       },
       "description": "Entdecken Sie, wie unser arabischer Kalligrafie-Generator verschiedene kreative Bedürfnisse in verschiedenen Branchen und persönlichen Projekten erfüllt"
+    },
+    "whatIsSection": {
+      "title": "Was ist der arabische Kalligraphie-Generator?",
+      "content": "Unser arabischer Kalligraphie-Generator ist ein kostenloses Online-Tool, das jeden arabischen Text sofort in wunderschöne Kalligraphie-Designs verwandelt. Ob Sie atemberaubende islamische Kunst erstellen, Hochzeitseinladungen entwerfen oder professionelle Logos generieren möchten – unser Generator bietet über 17 Premium-arabische Schriftarten mit Echtzeit-Vorschau. Geben Sie einfach Ihren Text ein, wählen Sie einen Kalligraphie-Stil, passen Sie Farben und Effekte an und kopieren oder laden Sie als PNG/SVG herunter. Das Tool unterstützt vollständig arabische Diakritika (Harakat) für authentische Koranverse und traditionelle islamische Kalligraphie. Keine Registrierung erforderlich, für immer kostenlos."
     }
   },
   "generator": {
@@ -668,7 +684,14 @@
     "featuredDesigns": {
       "title": "Vorgestellte Designs",
       "topPicks": "Top-Auswahl",
-      "viewAllTemplates": "Alle Vorlagen anzeigen"
+      "viewAllTemplates": "Alle Vorlagen anzeigen",
+      "supportedStyles": "Unterstützte Stile:",
+      "styleLabels": {
+        "thuluth": "Thuluth",
+        "kufi": "Kufi",
+        "diwani": "Diwani",
+        "naskh": "Naskh"
+      }
     },
     "quickLinks": {
       "title": "Schnellinks",
@@ -807,7 +830,7 @@
   "seo": {
     "structuredData": {
       "featureList": [
-        "13+ arabische Schriftarten, einschließlich Kufi-, Naskh-, Diwani-Stilen",
+        "17+ arabische Schriftarten, einschließlich Kufi-, Naskh-, Diwani-Stilen",
         "Echtzeit-Erstellung von arabischem Text",
         "Farbverlaufs- und Farbanpassung",
         "Hintergrundmuster und -bilder",

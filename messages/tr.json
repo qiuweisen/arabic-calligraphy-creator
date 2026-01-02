@@ -1,8 +1,8 @@
 {
   "metadata": {
     "title": "Arapça Hat Sanatı Jeneratörü - Ücretsiz Çevrimiçi Araç",
-    "description": "🎨 ÜCRETSİZ Arapça Hat Sanatı Jeneratörü | Anında göz alıcı İslami sanat eserleri yaratın! 13+ yazı tipi, anında PNG/SVG indirme. Kayıt gerekmez ✨",
-    "description_desktop": "Profesyonel Arapça Hat Sanatı Jeneratörü - 13+ Premium Yazı Tipiyle İslami Sanat Yaratın. Tasarımcılar, öğrenciler ve işletmeler için ücretsiz online araç. Anında PNG/SVG indirme.",
+    "description": "🎨 ÜCRETSİZ Arapça Hat Sanatı Jeneratörü | Anında göz alıcı İslami sanat eserleri yaratın! 17+ yazı tipi, anında PNG/SVG indirme. Kayıt gerekmez ✨",
+    "description_desktop": "Profesyonel Arapça Hat Sanatı Jeneratörü - 17+ Premium Yazı Tipiyle İslami Sanat Yaratın. Tasarımcılar, öğrenciler ve işletmeler için ücretsiz online araç. Anında PNG/SVG indirme.",
     "keywords": "Arapça hat sanatı jeneratörü, Arapça yazı tipleri, İslami hat sanatı, Arapça metin oluşturucu, ücretsiz Arapça yazı tipleri, online hat sanatı yapıcı"
   },
   "common": {
@@ -131,7 +131,7 @@
     },
     "socialProof": {
       "designsCreated": "100.000+ Tasarım Oluşturuldu",
-      "premiumFonts": "13+ Premium Yazı Tipi",
+      "premiumFonts": "17+ Premium Yazı Tipi",
       "freeForever": "Sonsuza Dek Ücretsiz"
     },
     "features": {
@@ -250,6 +250,18 @@
       "q5": {
         "question": "Jeneratör mobil cihazlarda çalışıyor mu?",
         "answer": "Kesinlikle! Arapça hat sanatı jeneratörümüz tamamen mobil uyumludur ve akıllı telefonlarda, tabletlerde ve masaüstü bilgisayarlarda sorunsuz çalışır. Arayüz, en iyi deneyim için ekran boyutunuza uyum sağlar."
+      },
+      "q6": {
+        "question": "Arap kaligrafisini doğrudan kopyalayıp yapıştırabilir miyim?",
+        "answer": "Evet! Oluşturulan Arap kaligrafisini tek tıklamayla doğrudan panoya kopyalayabilir, ardından herhangi bir belgeye veya uygulamaya yapıştırabilirsiniz. Daha profesyonel kullanımlar için PNG veya SVG olarak da indirebilirsiniz."
+      },
+      "q7": {
+        "question": "Üretici Harakat (sesli harf işaretleri) içeren Arapça metni destekliyor mu?",
+        "answer": "Evet, Arap kaligrafi üreticimiz Harakat/sesli harf işaretlerini (اعراب) tam olarak destekler. Sesli harf işaretleriyle Arapça metin girebilirsiniz ve üretici bunları her yazı tipinin yeteneklerine göre görüntüler. Bu, Kuran ayetleri ve resmi Arapça metinler için gereklidir."
+      },
+      "q8": {
+        "question": "Şeffaf arka planlı kaligrafi indirebilir miyim?",
+        "answer": "Kesinlikle! Arap kaligrafisini PNG olarak indirdiğinizde, otomatik olarak şeffaf bir arka plan içerir, bu da onu farklı arka planlar, logolar veya tasarım projeleri üzerine yerleştirmek için mükemmel hale getirir."
       }
     },
     "cta": {
@@ -515,7 +527,7 @@
       },
       "noScript": {
         "title": "Arapça Hat Sanatı Oluşturucu",
-        "description": "Ücretsiz çevrimiçi oluşturucumuzla anında güzel Arapça hat sanatı oluşturun. 13+ profesyonel fonttan seçim yapın, renkleri ve arka planları özelleştirin, yüksek kaliteli PNG/SVG dosyalarını indirin.",
+        "description": "Ücretsiz çevrimiçi oluşturucumuzla anında güzel Arapça hat sanatı oluşturun. 17+ profesyonel fonttan seçim yapın, renkleri ve arka planları özelleştirin, yüksek kaliteli PNG/SVG dosyalarını indirin.",
         "useCases": {
           "title": "Popüler Kullanım Alanları",
           "weddingInvitations": "Düğün davetiyeleri",
@@ -583,6 +595,10 @@
         "traditional": "Geleneksel Arapça yazılar"
       },
       "description": "Arap kaligrafi üreticimizin çeşitli endüstrilerde ve kişisel projelerde farklı yaratıcı ihtiyaçlara nasıl hizmet ettiğini keşfedin"
+    },
+    "whatIsSection": {
+      "title": "Arap Kaligrafi Üreteci Nedir?",
+      "content": "Arap Kaligrafi Üreticimiz, herhangi bir Arapça metni anında güzel kaligrafi tasarımlarına dönüştüren ücretsiz bir çevrimiçi araçtır. İster çarpıcı İslami sanat oluşturun, ister düğün davetiyeleri tasarlayın veya profesyonel logolar oluşturun, üreticimiz gerçek zamanlı önizleme ile 17+ premium Arapça yazı tipi sağlar. Sadece metninizi yazın, bir kaligrafi stili seçin, renkleri ve efektleri özelleştirin, ardından PNG/SVG olarak kopyalayın veya indirin. Araç, otantik Kuran ayetleri ve geleneksel İslami kaligrafi için Arapça işaretleri (Harakat) tam olarak destekler. Kayıt gerekmez, sonsuza kadar ücretsiz."
     }
   },
   "generator": {
@@ -667,7 +683,14 @@
     "featuredDesigns": {
       "title": "Öne Çıkan Tasarımlar",
       "topPicks": "En İyiler",
-      "viewAllTemplates": "Tüm Şablonları Görüntüle"
+      "viewAllTemplates": "Tüm Şablonları Görüntüle",
+      "supportedStyles": "Desteklenen stiller:",
+      "styleLabels": {
+        "thuluth": "Sülüs",
+        "kufi": "Kufi",
+        "diwani": "Dîvânî",
+        "naskh": "Nesih"
+      }
     },
     "quickLinks": {
       "title": "Hızlı Bağlantılar",
@@ -806,7 +829,7 @@
   "seo": {
     "structuredData": {
       "featureList": [
-        "Kufi, Nesih, Divani stilleri dahil 13+ Arapça yazı tipi",
+        "Kufi, Nesih, Divani stilleri dahil 17+ Arapça yazı tipi",
         "Gerçek zamanlı Arapça metin oluşturma",
         "Gradyan ve renk özelleştirme",
         "Arka plan desenleri ve resimleri",

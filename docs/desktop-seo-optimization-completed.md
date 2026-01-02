@@ -11,7 +11,7 @@
 - 桌面端标题：`Professional Arabic Calligraphy Generator | 17+ Premium Fonts | Free Tool`
 
 **描述优化：**
-- 原描述：`Professional Arabic Calligraphy Generator - Create Islamic Art with 13+ Premium Fonts...`
+- 原描述：`Professional Arabic Calligraphy Generator - Create Islamic Art with 17+ Premium Fonts...`
 - 桌面端描述：`🎨 Professional Arabic Calligraphy Generator | Create stunning Islamic art with 17+ premium fonts. Trusted by 50K+ designers & businesses worldwide. High-quality PNG/SVG export. 100% Free ✨`
 
 ### 2. 法语桌面端SEO优化

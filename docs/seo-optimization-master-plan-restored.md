@@ -88,10 +88,10 @@
 #### 具体优化方案：
 ```html
 <!-- 当前主页描述 -->
-"🎨 FREE Arabic Calligraphy Generator | Create stunning Islamic art online instantly! 13+ fonts, instant download PNG/SVG. No signup required ✨"
+"🎨 FREE Arabic Calligraphy Generator | Create stunning Islamic art online instantly! 17+ fonts, instant download PNG/SVG. No signup required ✨"
 
 <!-- 桌面端优化建议 -->
-"Professional Arabic Calligraphy Generator - Create stunning Islamic art with 13+ premium fonts. Free online tool with instant PNG/SVG download. Perfect for designers, students & businesses."
+"Professional Arabic Calligraphy Generator - Create stunning Islamic art with 17+ premium fonts. Free online tool with instant PNG/SVG download. Perfect for designers, students & businesses."
 ```
 
 ### 🎯 阶段三：高价值市场攻坚（待实施）

@@ -442,7 +442,7 @@ export function getFontsByCategory(category: keyof typeof FONT_CATEGORIES): Cont
   return FONT_CATEGORIES[category]?.fonts || []
 }
 
-// 获取热门/推荐字体 - 用于主页展示（13个字体，符合"13+字体"描述）
+// 获取热门/推荐字体 - 用于主页展示（17个字体，符合"17+字体"描述）
 export function getFeaturedFonts(): ContentLink[] {
   return [
     FONT_LINKS.amiri,

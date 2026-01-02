@@ -3,7 +3,7 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
-An Arabic Calligraphy Generator web application built with Next.js 15, featuring 13+ premium Arabic fonts, real-time preview, and high-quality downloads.
+An Arabic Calligraphy Generator web application built with Next.js 15, featuring 17+ premium Arabic fonts, real-time preview, and high-quality downloads.
 
 ## Development Commands
 
@@ -60,7 +60,7 @@ An Arabic Calligraphy Generator web application built with Next.js 15, featuring
 
 ## Key Features
 - Real-time Arabic calligraphy preview
-- 13+ premium Arabic fonts (Amiri, Aref Ruqaa, Cairo, etc.)
+- 17+ premium Arabic fonts (Amiri, Aref Ruqaa, Cairo, etc.)
 - Customization options (color, size, spacing, alignment)
 - PNG/SVG export with transparency
 - Virtual Arabic keyboard
@@ -75,7 +75,7 @@ An Arabic Calligraphy Generator web application built with Next.js 15, featuring
 - Environment variables managed in `vars` section of config
 
 ### Other
-- **Fonts**: Defined in `lib/fonts/` with metadata and import logic (13+ Arabic fonts)
+- **Fonts**: Defined in `lib/fonts/` with metadata and import logic (17+ Arabic fonts)
 - **Tailwind**: Configured in `tailwind.config.ts` with RTL support and custom color palette
 - **i18n**: Supported languages defined in `i18n.ts` with direction (LTR/RTL) info
 

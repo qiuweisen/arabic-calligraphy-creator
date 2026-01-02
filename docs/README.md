@@ -13,6 +13,7 @@
 - **`keyword-focus-audit.md`** - 关键词聚焦审计
 - **`seo-keyword-focus-strategy.md`** - 关键词策略
 - **`seo-product-iteration-strategy-2025-12-20.md`** - 产品 × SEO 系统性迭代方案（基于最新GSC）
+- **`traffic-growth-master-plan-2026-01-02.md`** - Global plan for existing page optimization and new tool landing pages (based on latest GSC)
 
 ### 桌面端优化
 - **`desktop-optimization-monitoring.md`** - 桌面端CTR优化监控方案

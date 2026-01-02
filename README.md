@@ -17,9 +17,9 @@
 
 **🔗 Try it now: [arabic-calligraphy-generator.com](https://arabic-calligraphy-generator.com)**
 
-Experience our free online Arabic calligraphy generator with 13+ authentic fonts, real-time preview, and high-quality downloads. Create beautiful Arabic script art for personal or commercial use.
+Experience our free online Arabic calligraphy generator with 17+ authentic fonts, real-time preview, and high-quality downloads. Create beautiful Arabic script art for personal or commercial use.
 
-体验我们的免费在线阿拉伯书法生成器，提供13+种正宗字体、实时预览和高质量下载。为个人或商业用途创建精美的阿拉伯书法艺术。
+体验我们的免费在线阿拉伯书法生成器，提供17+种正宗字体、实时预览和高质量下载。为个人或商业用途创建精美的阿拉伯书法艺术。
 
 ## 📋 Table of Contents | 目录
 
@@ -37,7 +37,7 @@ Experience our free online Arabic calligraphy generator with 13+ authentic fonts
 ## ✨ Features | 功能特点
 
 ### 🎯 Core Features | 核心功能
-- **🔤 13+ Premium Arabic Fonts** - Traditional Kufic, Naskh, Thuluth, and modern styles
+- **🔤 17+ Premium Arabic Fonts** - Traditional Kufic, Naskh, Thuluth, and modern styles
 - **🎨 Advanced Customization** - Colors, gradients, sizes, alignment, and spacing
 - **📱 Responsive Design** - Works seamlessly on desktop, tablet, and mobile
 - **💾 High-Quality Export** - PNG and SVG downloads with transparency support
@@ -103,7 +103,7 @@ cp .env.example .env.local
 
 ## 📚 Font Collection | 字体集合
 
-Our generator includes **13+ premium Arabic fonts**:
+Our generator includes **17+ premium Arabic fonts**:
 
 ### Traditional Styles | 传统风格
 - **Amiri** - Classical Naskh style
@@ -134,7 +134,7 @@ Our generator includes **13+ premium Arabic fonts**:
    - Select from template phrases
 
 2. **Font Selection | 字体选择**
-   - Browse 13+ available fonts
+   - Browse 17+ available fonts
    - Preview each font style
    - Consider text length and purpose
 

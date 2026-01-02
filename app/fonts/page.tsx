@@ -11,15 +11,15 @@ import { FontCard } from "@/components/font-card"
 import { BLOG_LINKS } from "@/lib/content-links"
 
 export const metadata: Metadata = {
-  title: "Arabic Font Collection | Browse 17+ Calligraphy Fonts",
-  description: "Browse our curated Arabic font collection featuring Traditional Naskh, Kufi, Diwani, Modern & Display fonts. Complete font library for your calligraphy projects.",
-  keywords: "Arabic font collection, Arabic fonts library, calligraphy fonts, Naskh fonts, Kufi fonts, Diwani fonts, Arabic typography fonts",
+  title: "Free Arabic Fonts Download | 17+ Premium Calligraphy Fonts Library",
+  description: "Download free Arabic calligraphy fonts - Naskh, Kufi, Diwani, Thuluth styles. Complete font library with TTF/OTF formats for commercial use. No attribution required.",
+  keywords: "arabic fonts download, free arabic fonts, arabic calligraphy fonts, Naskh fonts, Kufi fonts, Diwani fonts, arabic typography fonts, free fonts library",
   alternates: {
     canonical: "https://arabic-calligraphy-generator.com/fonts",
   },
   openGraph: {
-    title: "Explore Arabic Calligraphy Fonts: Naskh, Kufi, Diwani & More",
-    description: "Your ultimate library of Arabic fonts for calligraphy, Islamic art, and modern typography. Find usage guides and inspiration.",
+    title: "Free Arabic Calligraphy Fonts Download: Naskh, Kufi, Diwani & More",
+    description: "Your ultimate library of free Arabic fonts for download. Professional calligraphy styles in TTF/OTF formats for commercial use.",
     url: "https://arabic-calligraphy-generator.com/fonts",
     siteName: "Arabic Calligraphy Generator",
     locale: "en_US",
@@ -195,15 +195,15 @@ export default function FontsPage() {
   return (
     <>
       {/* 结构化数据 */}
-      <script 
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <script 
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
       />
-      
+
       <StaticNavbar />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-8 md:py-16">
         <div className="container mx-auto px-4">
@@ -213,6 +213,9 @@ export default function FontsPage() {
               <h1 className="text-3xl md:text-4xl font-bold text-amber-800 mb-4">Explore the World of Arabic Calligraphy Fonts</h1>
               <p className="text-lg text-amber-700 leading-relaxed max-w-3xl mx-auto">
                 Welcome to our Arabic font library! Discover and download instantly - over 17+ premium Arabic fonts for your creative projects. 100% free, no signup required.
+              </p>
+              <p className="text-md text-amber-600 mt-4">
+                Want to create calligraphy online? Try our <Link href="/" className="text-amber-700 font-semibold hover:text-amber-800 underline">Arabic Calligraphy Generator</Link> for instant design.
               </p>
             </div>
 
@@ -230,7 +233,7 @@ export default function FontsPage() {
                   { name: "Reem Kufi", slug: "reem-kufi", tag: "Bold & Geometric" },
                   { name: "Scheherazade", slug: "scheherazade", tag: "Classic Naskh" }
                 ].map(font => (
-                  <Link 
+                  <Link
                     key={font.slug}
                     href={`/fonts/${font.slug}`}
                     className="bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/30 rounded-lg p-4 text-center transition-all hover:scale-105"
@@ -319,7 +322,7 @@ export default function FontsPage() {
             {/* Section for "Tips for Using Arabic Fonts Effectively" - Kept from previous changes */}
             <section className="mt-16 mb-12 p-6 bg-green-100/40 border border-green-200 rounded-lg shadow">
               <h2 className="text-2xl font-bold text-emerald-600 mb-4 flex items-center">
-                <BookOpen className="h-6 w-6 mr-3 text-emerald-600" /> 
+                <BookOpen className="h-6 w-6 mr-3 text-emerald-600" />
                 Diving Deeper into Arabic Typography
               </h2>
               <div className="space-y-3 text-emerald-600">

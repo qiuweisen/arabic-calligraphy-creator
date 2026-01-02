@@ -1896,16 +1896,23 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
             {/* Templates Card */}
             <Card className="overflow-hidden border-amber-200 bg-white/80 backdrop-blur-sm">
               <CardContent className="p-6">
-                <div className="flex justify-between items-center mb-4">
+                <div className="flex justify-between items-center">
                   <h2 className="text-xl font-semibold text-amber-800">{t('featuredDesigns.title')}</h2>
                   <Badge variant="outline" className="border-amber-200 text-amber-800">
                     {t('featuredDesigns.topPicks')}
                   </Badge>
                 </div>
+                <p className="text-xs text-amber-600 mb-4">
+                  {t('featuredDesigns.supportedStyles')}{' '}
+                  {['thuluth', 'kufi', 'diwani', 'naskh']
+                    .map((styleKey) => t(`featuredDesigns.styleLabels.${styleKey}`))
+                    .join(' · ')}
+                </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
                     {
                       text: "بسم الله الرحمن الرحيم",
+                      styleKey: "thuluth",
                       font: ARABIC_FONTS[0].value, // Amiri (Traditional)
                       color: "#8B4513",
                       bg: "#FFF8E1",
@@ -1913,6 +1920,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                     },
                     {
                       text: "الحمد لله",
+                      styleKey: "naskh",
                       font: ARABIC_FONTS[7].value, // Cairo (Modern)
                       color: "#006400",
                       bg: "#F0FFF0",
@@ -1920,6 +1928,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                     },
                     {
                       text: "سبحان الله",
+                      styleKey: "kufi",
                       font: ARABIC_FONTS[4].value, // Reem Kufi (Kufi)
                       color: "#4B0082",
                       bg: "#F8F4FF",
@@ -1927,6 +1936,7 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                     },
                     {
                       text: "الله أكبر",
+                      styleKey: "diwani",
                       font: ARABIC_FONTS[3].value, // Aref Ruqaa (Diwani)
                       color: "#800000",
                       bg: "#FFF0F0",
@@ -1952,10 +1962,13 @@ export function CalligraphyGenerator({ initialFont, onFontChange }: CalligraphyG
                       {/* 使用静态SVG图片替代动态渲染 */}
                       <img 
                         src={design.svg} 
-                        alt={design.text}
+                        alt={`${design.text} - ${t(`featuredDesigns.styleLabels.${design.styleKey}`)}`}
                         className="w-full h-auto"
                         loading="lazy"
                       />
+                      <div className="px-3 py-2 text-xs text-amber-700 bg-white/80 border-t border-amber-100">
+                        {t(`featuredDesigns.styleLabels.${design.styleKey}`)}
+                      </div>
                     </div>
                   ))}
                 </div>
