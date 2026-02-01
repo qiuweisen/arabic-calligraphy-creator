@@ -14,6 +14,7 @@ import { Footer } from "@/components/footer"
 import { getFeaturedFonts, FONT_CATEGORIES } from "@/lib/content-links"
 import { CalligraphyGenerator } from "@/components/calligraphy-generator"
 import { trackLandingFromURL } from "@/lib/analytics"
+import { AdSlot } from "@/components/ads/ad-slot"
 
 // Dynamic import for CalligraphyGenerator to avoid hydration issues
 const DynamicCalligraphyGenerator = dynamic(
@@ -365,6 +366,19 @@ export default function Home() {
             </div>
           </div>
 
+          {/* 📍 手动广告位 A (HomeTool_ABOVE)：工具上方 - 仅桌面端可见
+              安全策略：desktopOnly 防止推挤移动端首屏，mb-12 确保间距
+          */}
+          <div className="container mx-auto px-4 mb-12 hidden lg:block">
+            <div className="max-w-[970px] mx-auto border border-gray-100 rounded-lg overflow-hidden bg-white shadow-sm">
+              <AdSlot
+                slotId="1396374895"
+                format="display"
+                className="w-full"
+              />
+            </div>
+          </div>
+
           {/* Main Tool Section */}
           <div className="mb-12" id="calligraphy-tool-section">
 
@@ -432,6 +446,19 @@ export default function Home() {
               onFontChange={handleGeneratorFontChange}
             />
 
+          </div>
+
+          {/* 📍 手动广告位 B (HomeTool_Below)：工具下方
+              安全策略：mt-16 (64px) 确保与"下载"按钮有巨大安全缓冲区
+          */}
+          <div className="container mx-auto px-4 mt-16 mb-16">
+            <div className="max-w-4xl mx-auto border border-gray-100 rounded-lg overflow-hidden bg-white shadow-sm">
+              <AdSlot
+                slotId="8396897519"
+                format="display"
+                className="w-full"
+              />
+            </div>
           </div>
 
           {/* Intent Sections */}

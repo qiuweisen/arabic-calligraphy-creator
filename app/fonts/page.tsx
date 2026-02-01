@@ -9,6 +9,7 @@ import { getFontInfoBySlug } from "@/app/lib/font-data"
 import { downloadFont } from "@/app/lib/font-download"
 import { FontCard } from "@/components/font-card"
 import { BLOG_LINKS } from "@/lib/content-links"
+import { AdSlot } from "@/components/ads/ad-slot"
 
 export const metadata: Metadata = {
   title: "Free Arabic Fonts Download | 17+ Premium Calligraphy Fonts Library",
@@ -259,6 +260,19 @@ export default function FontsPage() {
               </div>
             </div>
 
+            {/* 📍 手动广告位 C (Mid-Page)：Quick Download 之后
+                安全策略：my-12 (48px) 间距，使用 Display 格式
+            */}
+            <div className="my-12">
+              <div className="max-w-[970px] mx-auto border border-gray-100 rounded-lg overflow-hidden bg-white shadow-sm">
+                <AdSlot
+                  slotId="4948192732"
+                  format="display"
+                  className="w-full"
+                />
+              </div>
+            </div>
+
             <section className="mb-12 p-6 bg-sky-100/30 border border-sky-200 rounded-lg shadow">
               <h2 className="text-2xl font-semibold text-amber-800 mb-4 flex items-center">
                 <Info className="h-6 w-6 mr-3 text-amber-700" />
@@ -361,6 +375,20 @@ export default function FontsPage() {
                 </p>
               </div>
             </section>
+
+            {/* 📍 手动广告位 D (Bottom)：Tips 之后
+                格式：Multiplex (适合放在内容结尾，像推荐阅读)
+                安全策略：my-16 间距，边框隔离
+            */}
+            <div className="my-16">
+              <div className="max-w-4xl mx-auto border border-gray-100 rounded-lg overflow-hidden bg-white shadow-sm">
+                <AdSlot
+                  slotId="6388230820"
+                  format="multiplex"
+                  className="w-full"
+                />
+              </div>
+            </div>
 
             {/* Related Blog Articles Section */}
             <section className="mt-16 mb-12">
