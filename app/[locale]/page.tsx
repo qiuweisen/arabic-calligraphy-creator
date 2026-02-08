@@ -366,10 +366,10 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 📍 手动广告位 A (HomeTool_ABOVE)：工具上方 - 仅桌面端可见
-              安全策略：desktopOnly 防止推挤移动端首屏，mb-12 确保间距
+          {/* 📍 手动广告位 A (HomeTool_ABOVE)：工具上方 - 全端可见
+              安全策略：mb-8(移动)/mb-12(桌面) 确保与工具区按钮间距
           */}
-          <div className="container mx-auto px-4 mb-12 hidden lg:block">
+          <div className="container mx-auto px-4 mb-8 md:mb-12">
             <div className="max-w-[970px] mx-auto border border-gray-100 rounded-lg overflow-hidden bg-white shadow-sm">
               <AdSlot
                 slotId="1396374895"
