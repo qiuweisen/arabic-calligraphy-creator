@@ -448,19 +448,6 @@ export default function Home() {
 
           </div>
 
-          {/* 📍 手动广告位 B (HomeTool_Below)：工具下方
-              安全策略：mt-16 (64px) 确保与"下载"按钮有巨大安全缓冲区
-          */}
-          <div className="container mx-auto px-4 mt-16 mb-16">
-            <div className="max-w-4xl mx-auto border border-gray-100 rounded-lg overflow-hidden bg-white shadow-sm">
-              <AdSlot
-                slotId="8396897519"
-                format="display"
-                className="w-full"
-              />
-            </div>
-          </div>
-
           {/* Intent Sections */}
           <section className="mb-16" id="intent-section">
             <div className="text-center mb-10">

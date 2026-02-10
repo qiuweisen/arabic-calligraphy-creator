@@ -290,45 +290,73 @@ export default function FontsPage() {
 
             {/* Font Categories Display */}
             <div className="space-y-16">
-              {Object.entries(FONT_DATA).map(([categoryName, categoryData]) => (
-                <div key={categoryName} className="space-y-6">
-                  {/* Category Header and Description */}
-                  <div className="p-4 border-l-4 border-amber-500 bg-amber-50/50 rounded-r-lg">
-                    <h2 className="text-3xl font-bold text-amber-800 mb-3">
-                      {categoryName} Styles
-                    </h2>
-                    <p className="text-amber-700 text-base leading-relaxed mb-3">
-                      {categoryData.categoryDescription}
-                    </p>
-                    {categoryData.categoryApplications && categoryData.categoryApplications.length > 0 && (
-                      <div className="mb-2">
-                        <h4 className="font-semibold text-amber-700 mb-1.5 text-md flex items-center">
-                          <CheckCircle className="h-5 w-5 mr-2 text-emerald-600" />
-                          Common Applications:
-                        </h4>
-                        <ul className="list-disc list-inside text-amber-600 text-sm space-y-1 pl-5">
-                          {categoryData.categoryApplications.map(app => <li key={app}>{app}</li>)}
-                        </ul>
-                      </div>
-                    )}
+              {Object.entries(FONT_DATA).map(([categoryName, categoryData], categoryIndex) => (
+                <div key={categoryName}>
+                  <div className="space-y-6">
+                    {/* Category Header and Description */}
+                    <div className="p-4 border-l-4 border-amber-500 bg-amber-50/50 rounded-r-lg">
+                      <h2 className="text-3xl font-bold text-amber-800 mb-3">
+                        {categoryName} Styles
+                      </h2>
+                      <p className="text-amber-700 text-base leading-relaxed mb-3">
+                        {categoryData.categoryDescription}
+                      </p>
+                      {categoryData.categoryApplications && categoryData.categoryApplications.length > 0 && (
+                        <div className="mb-2">
+                          <h4 className="font-semibold text-amber-700 mb-1.5 text-md flex items-center">
+                            <CheckCircle className="h-5 w-5 mr-2 text-emerald-600" />
+                            Common Applications:
+                          </h4>
+                          <ul className="list-disc list-inside text-amber-600 text-sm space-y-1 pl-5">
+                            {categoryData.categoryApplications.map(app => <li key={app}>{app}</li>)}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Fonts within this category */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {categoryData.fonts.map((font) => {
+                        const fontInfo = getFontInfoBySlug(font.slug);
+                        return (
+                          <FontCard
+                            key={font.slug}
+                            name={font.name}
+                            slug={font.slug}
+                            description={createTagline(font.description, 75)}
+                            zipFileName={fontInfo?.zipFileName}
+                            displayName={fontInfo?.displayName}
+                          />
+                        );
+                      })}
+                    </div>
                   </div>
 
-                  {/* Fonts within this category */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {categoryData.fonts.map((font) => {
-                      const fontInfo = getFontInfoBySlug(font.slug);
-                      return (
-                        <FontCard
-                          key={font.slug}
-                          name={font.name}
-                          slug={font.slug}
-                          description={createTagline(font.description, 75)}
-                          zipFileName={fontInfo?.zipFileName}
-                          displayName={fontInfo?.displayName}
+                  {/* Ad slot between font categories — placed after 3rd category (Diwani) */}
+                  {categoryIndex === 2 && (
+                    <div className="my-12">
+                      <div className="max-w-[970px] mx-auto border border-gray-100 rounded-lg overflow-hidden bg-white shadow-sm">
+                        <AdSlot
+                          slotId="8396897519"
+                          format="display"
+                          className="w-full"
                         />
-                      );
-                    })}
-                  </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Ad slot between font categories — placed after 5th category (Modern) */}
+                  {categoryIndex === 4 && (
+                    <div className="my-12">
+                      <div className="max-w-[970px] mx-auto border border-gray-100 rounded-lg overflow-hidden bg-white shadow-sm">
+                        <AdSlot
+                          slotId="6388230820"
+                          format="display"
+                          className="w-full"
+                        />
+                      </div>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -376,19 +404,7 @@ export default function FontsPage() {
               </div>
             </section>
 
-            {/* 📍 手动广告位 D (Bottom)：Tips 之后
-                格式：Multiplex (适合放在内容结尾，像推荐阅读)
-                安全策略：my-16 间距，边框隔离
-            */}
-            <div className="my-16">
-              <div className="max-w-4xl mx-auto border border-gray-100 rounded-lg overflow-hidden bg-white shadow-sm">
-                <AdSlot
-                  slotId="6388230820"
-                  format="multiplex"
-                  className="w-full"
-                />
-              </div>
-            </div>
+
 
             {/* Related Blog Articles Section */}
             <section className="mt-16 mb-12">
